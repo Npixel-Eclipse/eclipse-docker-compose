@@ -244,31 +244,43 @@ async def lifespan(app: FastAPI):
         registry = get_registry()
         
         # [FORCED TRIGGER] Check for explicit Code Review request pattern
-        # User requested unconditional code enforcement for reviews
         import re
-        review_pattern = r"(?:code\s*review|리뷰).*(?:cl|change)?\s*(\d+)|(?:cl|change)\s*(\d+).*(?:code\s*review|리뷰)"
-        if re.search(review_pattern, clean_text, re.IGNORECASE):
-            logger.info(f"Forced Code Review Trigger detected for text: {clean_text}")
+        # Patterns: 
+        # 1. "review/리뷰/코드리뷰...12345" (non-greedy match for CL)
+        # 2. "cl...12345...review"
+        # 3. "12345...review/리뷰/코드리뷰" (digits first)
+        review_pattern = r"(?:code\s*review|코드\s*리뷰|리뷰).*?(?:cl|change)?\s*(\d+)|(?:cl|change)\s*(\d+).*(?:code\s*review|코드\s*리뷰|리뷰)|(\d+)\s*.*(?:code\s*review|코드\s*리뷰|리뷰)"
+        match = re.search(review_pattern, clean_text, re.IGNORECASE)
+        if match:
+            # Extract CL number from whichever group matched
+            # groups() returns ('123', None, None) or (None, '123', None) etc.
+            cl_number = next((g for g in match.groups() if g), None)
+            logger.info(f"Forced Code Review Trigger detected for CL {cl_number} in text: {clean_text}")
             
             # Execute Code Review Workflow directly
             try:
                 # Notify user that review is starting (since it might take a moment)
-                await say(text=f"🔍 CL 분석 및 리뷰를 시작합니다...", thread_ts=thread_ts)
+                # This message ensures the user knows we are bypassing the chat
+                await say(text=f"🔍 CL {cl_number} 분석 및 리뷰를 시작합니다...", thread_ts=thread_ts)
                 
                 review_args = {
                     "text": clean_text,
-                    "channel_id": channel,
-                    "thread_ts": thread_ts
+                    "channel": channel,           # Correct key for workflow
+                    "trigger_ts": event.get("ts"),# Message to react to
+                    "thread_ts": thread_ts        # Thread to reply in
                 }
                 
                 run = await registry.execute("code_review", review_args)
-                result_content = run.result if run.status == "completed" else f"리뷰 실패: {run.error}"
                 
-                # Send Result
-                if is_mention or channel.startswith("D"):
-                    await say(text=result_content, thread_ts=thread_ts)
-                else:
-                    await say(text=result_content)
+                # CodeReviewWorkflow sends its own detailed report via slack.send_message
+                # The prompt returns a status dict. We don't need to echo it unless it failed.
+                if run.status != "completed":
+                    error_msg = f"리뷰 워크플로우 실패: {run.error}"
+                    if is_mention or channel.startswith("D"):
+                        await say(text=error_msg, thread_ts=thread_ts)
+                    else:
+                        await say(text=error_msg)
+                
                 return  # Exit function after forced review
             except Exception as e:
                 logger.error(f"Forced review execution failed: {e}")

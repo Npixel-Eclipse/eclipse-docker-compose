@@ -42,19 +42,23 @@ class CodeReviewWorkflow(BaseWorkflow):
     async def execute(self, input_data: dict) -> dict:
         """
         Main execution entry point.
-        input_data expected keys: "text", "channel", "ts"
+        input_data expected keys: "text", "channel", "trigger_ts", "thread_ts"
         """
         text = input_data.get("text", "")
         channel = input_data.get("channel")
-        ts = input_data.get("ts")
+        # trigger_ts: Message to react to (e.g. user command)
+        # thread_ts: Thread to reply in (e.g. parent session)
+        trigger_ts = input_data.get("trigger_ts") or input_data.get("ts")
+        thread_ts = input_data.get("thread_ts") or input_data.get("ts")
         
         # 1. Parse Change Lists
         cls = self._parse_changelists(text)
         if not cls:
             return {"status": "skipped", "reason": "No CLs found"}
 
-        # 2. Mark Processing
-        await self.slack.add_reaction(channel, ts, "loading")
+        # 2. Mark Processing (Reaction on Trigger Message)
+        if trigger_ts:
+            await self.slack.add_reaction(channel, trigger_ts, "loading")
         
         try:
             reports = []
@@ -62,25 +66,30 @@ class CodeReviewWorkflow(BaseWorkflow):
 
             # 3. Process each CL
             for cl in cls:
-                cl_report = await self._process_cl(cl, channel, ts)
+                cl_report = await self._process_cl(cl, channel, thread_ts)
                 if cl_report:
                     reports.append(cl_report)
                     total_issues += cl_report.get("issues", 0)
 
             # 4. Final Report
             if reports:
-                await self._send_report(channel, ts, reports, total_issues)
-                await self.slack.add_reaction(channel, ts, "heavy_check_mark")
+                await self._send_report(channel, thread_ts, reports, total_issues)
+                if trigger_ts:
+                    await self.slack.add_reaction(channel, trigger_ts, "heavy_check_mark")
             else:
-                 await self.slack.add_reaction(channel, ts, "white_check_mark") # Processed but no review generated (e.g. no strategy matched)
+                 if trigger_ts:
+                    await self.slack.add_reaction(channel, trigger_ts, "white_check_mark") # Processed but no review generated
 
         except Exception as e:
             logger.error(f"Code review failed: {e}", exc_info=True)
-            await self.slack.add_reaction(channel, ts, "ai") # Fail emoji
-            await self.slack.send_message(channel, f"❌ 코드 리뷰 중 오류가 발생했습니다: {str(e)}", thread_ts=ts)
+            if trigger_ts:
+                await self.slack.add_reaction(channel, trigger_ts, "ai") # Fail emoji
+            # Error message should go to thread
+            await self.slack.send_message(channel, f"❌ 코드 리뷰 중 오류가 발생했습니다: {str(e)}", thread_ts=thread_ts)
             return {"status": "error", "error": str(e)}
         finally:
-            await self.slack.remove_reaction(channel, ts, "loading")
+            if trigger_ts:
+                await self.slack.remove_reaction(channel, trigger_ts, "loading")
 
         return {"status": "success", "total_issues": total_issues}
 
