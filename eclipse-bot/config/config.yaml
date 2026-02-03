@@ -2,7 +2,7 @@
 # Code Review Configuration
 code_review:
   # The channel where code review requests are monitored
-  target_channel_id: "C07R7FHV8SX"
+  target_channel_id: "C0ACHFP6BU6"
   
   # Emojis that indicate a review is in progress or completed (bot will ignore these threads)
   trigger_emojis: 
