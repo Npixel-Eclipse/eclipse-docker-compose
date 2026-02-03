@@ -20,7 +20,7 @@ class LLMChatWorkflow(BaseWorkflow):
     allowed_tools = [
         "p4_changes", "p4_describe", "p4_filelog", 
         "p4_annotate", "p4_print", "p4_grep",
-        "reset_session", "llm_chat", "echo"
+        "reset_session", "llm_chat"
     ]
     
     async def execute(self, input_data: dict) -> dict:
