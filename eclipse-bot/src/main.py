@@ -181,8 +181,9 @@ async def lifespan(app: FastAPI):
             limit=20,
         )
 
-        # Automatic Session Start for DMs (if history is empty)
-        if channel.startswith("D") and not history:
+        # Automatic Session Start for DMs (if history is empty of assistant messages)
+        # Note: 'history' might contain the user's current message, so we check for prior assistant responses.
+        if channel.startswith("D") and not any(m.role == "assistant" for m in history):
              import uuid
              new_session_id = str(uuid.uuid4())
              start_msg = f"🔄 [SESSION_START] ID: {new_session_id}\n새로운 세션이 시작되었습니다."
@@ -384,6 +385,12 @@ async def lifespan(app: FastAPI):
                 for tool_call in response.tool_calls:
                     tool_name = tool_call["function"]["name"]
                     tool_args = json.loads(tool_call["function"]["arguments"])
+                    
+                    # Context Injection: Automatically add channel_id/thread_ts if missing
+                    if "channel_id" not in tool_args:
+                         tool_args["channel_id"] = channel
+                    if "thread_ts" not in tool_args and thread_ts:
+                         tool_args["thread_ts"] = thread_ts
                     
                     logger.info(f"Agent calling tool: {tool_name} with args: {tool_args}")
                     

@@ -12,10 +12,10 @@ class ResetSessionTool(BaseWorkflow):
     parameters = {
         "type": "object",
         "properties": {
-            "channel_id": {"type": "string", "description": "The Slack channel ID"},
+            "channel_id": {"type": "string", "description": "The Slack channel ID (optional if called in context)"},
             "thread_ts": {"type": "string", "description": "The thread timestamp (optional)"},
         },
-        "required": ["channel_id"],
+        "required": [],
     }
     
     async def execute(self, input_data: dict) -> dict:
