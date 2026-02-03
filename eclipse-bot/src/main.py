@@ -48,10 +48,12 @@ async def lifespan(app: FastAPI):
     await conversation_store.initialize()
     logger.info("Conversation store initialized")
 
-    # Register example workflows
-    from .workflows.examples import register_examples
-    register_examples()
-    logger.info("Example workflows registered")
+    # Register workflows and tools
+    from .workflows import register_all_workflows
+    from .tools import register_all_tools
+    register_all_workflows()
+    register_all_tools()
+    logger.info("Workflows and tools registered")
 
     # Initialize Slack Integration
     slack_integration = SlackIntegration(
