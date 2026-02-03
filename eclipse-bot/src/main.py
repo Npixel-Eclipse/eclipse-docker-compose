@@ -413,10 +413,15 @@ async def lifespan(app: FastAPI):
                     )
                     
                     # Special Handling: If reset_session was called, suppress LLM's follow-up text
-                    # The tool itself posts markers ([SESSION_START]), which is sufficient.
+                    # Only if the tool succeeded (which means it posted markers).
+                    # If it failed, let the LLM explain the error.
                     if tool_name == "reset_session":
-                        response_sent = True
-                        break
+                        if "error" not in tool_result:
+                            response_sent = True
+                            break
+                        else:
+                            # Let LLM see the error and respond
+                            response_sent = False
             
             if not response_text and not response_sent:
                 response_text = "워크플로우 실행을 완료했습니다."
