@@ -82,7 +82,15 @@ async def lifespan(app: FastAPI):
         user = event.get("user", "unknown")
         text = event.get("text", "")
         channel = event.get("channel", "")
-        thread_ts = event.get("thread_ts") or event.get("ts")
+        
+        # Determine thread_ts based on context
+        if channel.startswith("D"):
+            # DMs should (usually) be treated as flat conversations, so no thread_ts
+            thread_ts = None
+        else:
+            # In channels: use existing thread_ts (reply) or current ts (top-level)
+            # This allows top-level mentions to start threads, and replies to stay in threads
+            thread_ts = event.get("thread_ts") or event.get("ts")
         
         # Clean text (remove bot mention if present)
         if is_mention:
@@ -115,7 +123,8 @@ async def lifespan(app: FastAPI):
             should_respond = True
         # 3. 멘션 없는 스레드 답글인 경우 (AI 의도 분석 수행)
         elif thread_ts and history:
-            logger.info(f"Analyzing intent for threaded message: {clean_text[:50]}...")
+            logger.info(f"Analyzing intent for threaded message. History len: {len(history)}")
+            logger.info(f"Checking text: {clean_text[:50]}...")
             intent_prompt_template = load_prompt("intent_check")
             intent_prompt = intent_prompt_template.replace("{{text}}", clean_text)
             
