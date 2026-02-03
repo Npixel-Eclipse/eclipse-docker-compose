@@ -207,27 +207,13 @@ async def lifespan(app: FastAPI):
                 should_respond = True
                 is_mention = True # Treat as mention for streaming purposes
             else:
-                # 봇에게 한 말이 아니더라도 문맥 보존을 위해 DB에는 저장
-                await conversation_store.add_message(
-                    channel_id=channel,
-                    thread_ts=thread_ts,
-                    user_id=user,
-                    role="user",
-                    content=clean_text,
-                )
+                # 봇에게 한 말이 아니면 무시 (Slack에 이미 저장되어 있음)
                 return
 
         if not should_respond:
             return
 
-        # Save the current user message to database for future context
-        await conversation_store.add_message(
-            channel_id=channel,
-            thread_ts=thread_ts,
-            user_id=user,
-            role="user",
-            content=clean_text,
-        )
+        # (User message is already in Slack, no need to 'save' to DB explicitly)
 
         # Build messages for LLM
         system_prompt = load_prompt("llm_chat")
@@ -331,23 +317,14 @@ async def lifespan(app: FastAPI):
                             )
                             response_sent = True
                     else:
-                        # Should rarely be reached if logic covers all cases, but fallback to say
+                        # Should rarely be reached if logic covers all cases
                         response_text = response.content or ""
                         await say(text=response_text)
                         response_sent = True
                     
-                    # Add completed assistant response to history
+                    # Add completed assistant response to history (for current session context only)
                     assistant_msg = Message(role="assistant", content=response_text)
                     messages.append(assistant_msg)
-                    
-                    # Save to database
-                    await conversation_store.add_message(
-                        channel_id=channel,
-                        thread_ts=thread_ts if is_mention else None,
-                        user_id="assistant",
-                        role="assistant",
-                        content=response_text,
-                    )
                     break
                 
                 # If there ARE tool calls, save the assistant's tool_call message and continue
@@ -357,16 +334,6 @@ async def lifespan(app: FastAPI):
                     tool_calls=response.tool_calls
                 )
                 messages.append(assistant_msg)
-                
-                # Save assistant response/tool_call to database
-                await conversation_store.add_message(
-                    channel_id=channel,
-                    thread_ts=thread_ts if is_mention else None,
-                    user_id="assistant",
-                    role="assistant",
-                    content=response.content,
-                    tool_calls=response.tool_calls,
-                )
                     
                 # Execute tool calls
                 for tool_call in response.tool_calls:
@@ -387,17 +354,13 @@ async def lifespan(app: FastAPI):
                     except Exception as e:
                         tool_result = {"error": str(e)}
                     
-                    # Add tool result to history
+                    # Add tool result to history (local loop context)
                     tool_msg = Message(
                         role="tool",
                         tool_call_id=tool_call["id"],
                         content=json.dumps(tool_result, ensure_ascii=False)
                     )
                     messages.append(tool_msg)
-                    
-                    # Save tool result to database
-                        tool_call_id=tool_call["id"],
-                    )
                     
                     # Special Handling: If reset_session was called, suppress LLM's follow-up text
                     # Only if the tool succeeded (which means it posted markers).
@@ -419,10 +382,11 @@ async def lifespan(app: FastAPI):
 
         # Send response (only if not already sent via streaming)
         if not response_sent and response_text:
-            if is_mention:
+            if is_mention or channel.startswith("D"):
                 await say(text=response_text, thread_ts=thread_ts)
             else:
-                await say(text=response_text)  # DM은 스레드 없이 응답
+                 # Fallback
+                await say(text=response_text)
 
     # Start Slack Socket Mode
     await slack_integration.start()
