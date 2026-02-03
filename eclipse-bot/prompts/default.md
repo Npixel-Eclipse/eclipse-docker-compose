@@ -14,6 +14,12 @@ You have access to the following tools for code exploration and modification:
 - `run_command`: Execute shell commands
 - `list_directory`: List directory contents
 - `p4_sync`: Sync files from Perforce
+- `p4_status`: Check opened files
+- `p4_filelog`: View file history
+- `p4_describe`: View changelist details
+- `p4_changes`: List changelists
+- `p4_print`: Read file from depot
+- `p4_annotate`: Blame/annotate file lines
 
 Use these tools when the user asks you to explore, search, or modify code.
 
