@@ -1,6 +1,7 @@
 """LLM Chat workflow - direct LLM interaction."""
 
 from src.core.registry import BaseWorkflow
+from src.core.config import load_config
 
 
 class LLMChatWorkflow(BaseWorkflow):
@@ -17,15 +18,17 @@ class LLMChatWorkflow(BaseWorkflow):
         "required": ["message"],
     }
     
-    allowed_tools = [
-        "p4_changes", "p4_describe", "p4_filelog", 
-        "p4_annotate", "p4_print", "p4_grep",
-        "reset_session", "llm_chat"
-    ]
+    @property
+    def allowed_tools(self) -> list[str]:
+        """Load allowed tools from config.yaml."""
+        config = load_config()
+        return config.get("workflows", {}).get("llm_chat", {}).get("allowed_tools", [])
     
-    allowed_workflows = [
-        "code_review"
-    ]
+    @property
+    def allowed_workflows(self) -> list[str]:
+        """Load allowed workflows from config.yaml."""
+        config = load_config()
+        return config.get("workflows", {}).get("llm_chat", {}).get("allowed_workflows", [])
     
     async def execute(self, input_data: dict) -> dict:
         from src.main import get_llm_client

@@ -77,6 +77,10 @@ class PerforceClient:
             raise RuntimeError(f"P4 command failed: {result.stderr}")
         
         return result.stdout
+
+    def run(self, *args: str, check: bool = True) -> str:
+        """Public alias for _run."""
+        return self._run(*args, check=check)
     
     def sync(self, path: str = "//...") -> str:
         """Sync files from depot.

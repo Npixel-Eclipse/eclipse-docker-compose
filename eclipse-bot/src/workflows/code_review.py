@@ -39,6 +39,13 @@ class CodeReviewWorkflow(BaseWorkflow):
         from src.main import get_slack_integration
         self.slack = get_slack_integration()
 
+    @property
+    def allowed_tools(self) -> list[str]:
+        """Load allowed tools from config.yaml for dynamic tool calling during review."""
+        from src.core.config import load_config
+        config = load_config()
+        return config.get("workflows", {}).get("code_review", {}).get("allowed_tools", [])
+
     async def execute(self, input_data: dict) -> dict:
         """
         Main execution entry point.
@@ -52,13 +59,24 @@ class CodeReviewWorkflow(BaseWorkflow):
         thread_ts = input_data.get("thread_ts") or input_data.get("ts")
         
         # 1. Parse Change Lists
-        cls = self._parse_changelists(text)
+        explicit_cls = input_data.get("cl_numbers", [])
+        if explicit_cls:
+            if isinstance(explicit_cls, str):
+                cls = [explicit_cls]
+            else:
+                cls = explicit_cls
+        else:
+            cls = self._parse_changelists(text)
+            
         if not cls:
             return {"status": "skipped", "reason": "No CLs found"}
 
         # 2. Mark Processing (Reaction on Trigger Message)
         if trigger_ts:
+            logger.info(f"[CodeReview] Adding reaction 'loading' to {channel}/{trigger_ts}")
             await self.slack.add_reaction(channel, trigger_ts, "loading")
+        else:
+            logger.warning(f"[CodeReview] No trigger_ts provided for reaction. input_data keys: {input_data.keys()}")
         
         try:
             reports = []
@@ -75,21 +93,24 @@ class CodeReviewWorkflow(BaseWorkflow):
             if reports:
                 await self._send_report(channel, thread_ts, reports, total_issues)
                 if trigger_ts:
+                    await self.slack.remove_reaction(channel, trigger_ts, "loading")
                     await self.slack.add_reaction(channel, trigger_ts, "heavy_check_mark")
             else:
                  if trigger_ts:
+                    await self.slack.remove_reaction(channel, trigger_ts, "loading")
                     await self.slack.add_reaction(channel, trigger_ts, "white_check_mark") # Processed but no review generated
 
         except Exception as e:
             logger.error(f"Code review failed: {e}", exc_info=True)
             if trigger_ts:
+                await self.slack.remove_reaction(channel, trigger_ts, "loading")
                 await self.slack.add_reaction(channel, trigger_ts, "ai") # Fail emoji
             # Error message should go to thread
             await self.slack.send_message(channel, f"❌ 코드 리뷰 중 오류가 발생했습니다: {str(e)}", thread_ts=thread_ts)
             return {"status": "error", "error": str(e)}
         finally:
-            if trigger_ts:
-                await self.slack.remove_reaction(channel, trigger_ts, "loading")
+             # Ensure cleanup if somehow missed above (though handled explicitly now for replace)
+             pass
 
         return {"status": "success", "total_issues": total_issues}
 
@@ -118,14 +139,15 @@ class CodeReviewWorkflow(BaseWorkflow):
         
         # 1. Get Description & Files
         try:
-            describe_output = await self.p4.run("describe", "-s", cl)
+            # PerforceClient.run is blocking, so offload to thread
+            describe_output = await asyncio.to_thread(self.p4.run, "describe", "-s", cl)
             if not describe_output:
                 logger.warning(f"CL {cl} not found or empty.")
                 return None
             
             # P4 output format parsing is needed if using raw command
             # But let's assume raw string for now and regex match files
-            full_desc = describe_output[0] if isinstance(describe_output, list) else str(describe_output)
+            full_desc = describe_output if isinstance(describe_output, str) else str(describe_output)
             
         except Exception as e:
             logger.error(f"Failed to fetch CL {cl}: {e}")
@@ -149,26 +171,95 @@ class CodeReviewWorkflow(BaseWorkflow):
         if not matched_tasks:
             return None
 
-        # 4. Execute LLM Reviews in Parallel
-        results = await asyncio.gather(*matched_tasks)
+        # 4. Execute LLM Reviews in Parallel with Progressive Updates
+        # Create an initial message to update
+        initial_msg = f"⏳ **Code Review Started**\nAnalyzing {len(matched_tasks)} strategies..."
+        resp = await self.slack.send_message(channel, initial_msg, thread_ts=thread_ts)
+        report_ts = resp.get("ts") if resp else None
         
-        # 5. Aggregate
-        issues_count = 0
-        outputs = []
+        results = []
+        completed_count = 0
+        total_tasks = len(matched_tasks)
         
-        for res in results:
-            if res:
-                outputs.append(res)
-                # Parse issue count from LLM output: "[Issues Found]: N issues"
-                match = re.search(r'\[Issues Found\]:\s*(\d+)', res)
-                if match:
-                    issues_count += int(match.group(1))
+        # Track partial results for display
+        partial_reports = []
 
+        for coro in asyncio.as_completed(matched_tasks):
+            res = await coro
+            completed_count += 1
+            if res:
+                results.append(res)
+                partial_reports.append(res)
+                
+                # Update Message with Progress
+                # Format: 
+                # ⏳ Analyzing... (1/3)
+                # ✅ Rust: Pass
+                # ...
+                
+                current_text = f"⏳ **Code Review in Progress ({completed_count}/{total_tasks})**\n\n"
+                
+                # Append finished results
+                for r in partial_reports:
+                    status_icon = "✅" if r["status"] == "PASS" else "⚠️" if r["status"] == "REQUEST_CHANGES" else "❌"
+                    current_text += f"{status_icon} **{r['name']}**: {r['status']}\n"
+                    
+                if report_ts:
+                    await self.slack.update_message(channel, report_ts, current_text)
+        
+        # 5. Finalize Report (Replace progressive message with final format)
+        # Use _send_report logic but targeting the EXISTING message (update) logic?
+        # Actually _send_report sends a NEW message in original code.
+        # Let's refactor _send_report to return text, then we update 'report_ts'.
+        
+        # Aggregate
+        issues_count = 0
+        for res in results:
+             match = re.search(r'\[Issues Found\]:\s*(\d+)', res.get("raw", ""))
+             if match:
+                 issues_count += int(match.group(1))
+             # Also count explicit issues list if available (structured)
+             issues_count += len(res.get("issues", []))
+
+        # We construct the final text here manually to allow 'update_message'
+        # Or we can delete the progress message and let _send_report send a fresh one? 
+        # Update is better to reduce clutter.
+        
+        final_text = self._build_final_report_text(results, issues_count)
+        if report_ts:
+            await self.slack.update_message(channel, report_ts, final_text)
+        else:
+            await self.slack.send_message(channel, final_text, thread_ts=thread_ts)
+            
         return {
             "cl": cl,
-            "outputs": outputs,
+            "outputs": results,
             "issues": issues_count
         }
+
+    def _build_final_report_text(self, outputs: List[dict], total_issues: int) -> str:
+        """Build final report text."""
+        relevant_reports = [out for out in outputs if out["status"] == "REQUEST_CHANGES" and out.get("issues")]
+        pass_reports = [out for out in outputs if out["status"] == "PASS"]
+        
+        if not relevant_reports:
+             return f"✅ **Code Review Passed** (Checked by {len(pass_reports)} experts)"
+
+        real_issue_count = sum(len(out["issues"]) for out in relevant_reports)
+        final_text = "## 🔍 AI 코드 리뷰 결과\n\n"
+        final_text += f"🚨 **발견된 중요 이슈: {real_issue_count}건**\n\n"
+        
+        for out in relevant_reports:
+            final_text += f"{out['emoji']} **{out['name']}**\n"
+            for issue in out["issues"]:
+                file_info = f"(`{issue.get('file')}`)" if issue.get('file') else ""
+                final_text += f"- **[{issue.get('category', 'Issue')}]** {issue.get('description')} {file_info}\n"
+            final_text += "\n"
+            
+        if pass_reports:
+             final_text += f"\n--- \n✅ **Pass**: {', '.join([r['name'] for r in pass_reports])}"
+             
+        return final_text
 
     def _is_strategy_applicable(self, strategy: dict, files: List[str], full_desc: str) -> bool:
         """Check if strategy applies based on extensions and keywords."""

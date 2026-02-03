@@ -10,6 +10,10 @@ from .p4_tools import (
     P4FilelogTool, P4DescribeTool, P4ChangesTool,
     P4PrintTool, P4AnnotateTool, P4FstatTool,
 )
+from .slack_tools import (
+    ReadSlackFileTool, SetReminderTool, ListRemindersTool,
+    CreateCanvasTool, ReadCanvasTool, UpdateCanvasTool,
+)
 
 
 def register_all_tools():
@@ -43,6 +47,14 @@ def register_all_tools():
     registry.register(P4PrintTool())
     registry.register(P4AnnotateTool())
     registry.register(P4FstatTool())
+    
+    # Slack tools
+    registry.register(ReadSlackFileTool())
+    registry.register(SetReminderTool())
+    registry.register(ListRemindersTool())
+    registry.register(CreateCanvasTool())
+    registry.register(ReadCanvasTool())
+    registry.register(UpdateCanvasTool())
 
 
 __all__ = [
@@ -53,5 +65,7 @@ __all__ = [
     "P4RevertTool", "P4EditTool", "P4StatusTool",
     "P4FilelogTool", "P4DescribeTool", "P4ChangesTool",
     "P4PrintTool", "P4AnnotateTool", "P4FstatTool",
+    "ReadSlackFileTool", "SetReminderTool", "ListRemindersTool",
+    "CreateCanvasTool", "ReadCanvasTool", "UpdateCanvasTool",
     "register_all_tools",
 ]

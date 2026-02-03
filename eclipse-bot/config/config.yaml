@@ -1,4 +1,38 @@
 
+# Workflow Configuration
+workflows:
+  llm_chat:
+    allowed_tools:
+      # P4 Version Control
+      - "p4_changes"
+      - "p4_describe"
+      - "p4_filelog"
+      - "p4_annotate"
+      - "p4_print"
+      - "p4_grep"
+      # Slack Integration
+      - "read_slack_file"
+      - "set_reminder"
+      - "list_reminders"
+      - "create_canvas"
+      - "read_canvas"
+      - "update_canvas"
+      # Session Management
+      - "reset_session"
+      - "llm_chat"
+    allowed_workflows:
+      - "code_review"
+
+  code_review:
+    allowed_tools:
+      # P4 for deep analysis during review
+      - "p4_describe"
+      - "p4_filelog"
+      - "p4_annotate"
+      - "p4_print"
+      - "p4_grep"
+
+
 # Code Review Configuration
 code_review:
   # The channel where code review requests are monitored
@@ -10,7 +44,6 @@ code_review:
     - "ai"
     - "loading"
 
-  # Review Strategies: Mapping file patterns to specific review prompts
   # Review Strategies: Mapping file patterns to specific review prompts
   strategies:
     - name: "Kotlin Backend"

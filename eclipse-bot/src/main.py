@@ -27,6 +27,14 @@ slack_integration: SlackIntegration | None = None
 conversation_store: ConversationStore | None = None
 
 
+def get_slack_integration() -> SlackIntegration:
+    """Get the global Slack integration instance."""
+    if slack_integration is None:
+        raise RuntimeError("Slack integration not initialized")
+    return slack_integration
+
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan handler for startup/shutdown."""
@@ -259,15 +267,15 @@ async def lifespan(app: FastAPI):
             
             # Execute Code Review Workflow directly
             try:
-                # Notify user that review is starting (since it might take a moment)
-                # This message ensures the user knows we are bypassing the chat
-                await say(text=f"🔍 CL {cl_number} 분석 및 리뷰를 시작합니다...", thread_ts=thread_ts)
+                # User requested: ONLY Emoji reaction, NO text confirmation ("이모지만 달리게 바꿔줘")
+                # The workflow itself will add :loading: emoji via trigger_ts
                 
                 review_args = {
                     "text": clean_text,
                     "channel": channel,           # Correct key for workflow
                     "trigger_ts": event.get("ts"),# Message to react to
-                    "thread_ts": thread_ts        # Thread to reply in
+                    "thread_ts": thread_ts,       # Thread to reply in
+                    "cl_numbers": [cl_number]     # Explicit CL to bypass parsing noise filter
                 }
                 
                 run = await registry.execute("code_review", review_args)

@@ -147,18 +147,133 @@ class SlackIntegration:
 
         return await self.app.client.chat_postMessage(**kwargs)
 
-    async def update_message(
-        self,
-        channel: str,
-        ts: str,
-        text: str,
-        blocks: Optional[list[dict]] = None,
-    ) -> dict:
-        """Update an existing message."""
         kwargs: dict[str, Any] = {"channel": channel, "ts": ts, "text": text}
         if blocks:
             kwargs["blocks"] = blocks
         return await self.app.client.chat_update(**kwargs)
+
+    async def add_reaction(self, channel: str, timestamp: str, name: str):
+        """Add a reaction to a message."""
+        try:
+            logger.info(f"SlaskIntegration.add_reaction called: ch={channel}, ts={timestamp}, name={name}")
+            await self.app.client.reactions_add(
+                channel=channel,
+                timestamp=timestamp,
+                name=name
+            )
+            logger.info(f"SlaskIntegration.add_reaction success: {name}")
+        except Exception as e:
+            logger.warning(f"Failed to add reaction {name}: {e}")
+            # Raising exception to let workflow know (or log error there too)
+            # CodeReviewWorkflow catches it now, so exposing it is better for debug
+            # But let's keep warning to not crash critical path if not essential.
+
+    async def remove_reaction(self, channel: str, timestamp: str, name: str):
+        """Remove a reaction from a message."""
+        try:
+            logger.info(f"SlaskIntegration.remove_reaction called: ch={channel}, ts={timestamp}, name={name}")
+            await self.app.client.reactions_remove(
+                channel=channel,
+                timestamp=timestamp,
+                name=name
+            )
+        except Exception as e:
+            logger.warning(f"Failed to remove reaction {name}: {e}")
+
+    async def get_file_info(self, file_id: str) -> dict:
+        """Get information about a Slack file."""
+        try:
+            return await self.app.client.files_info(file=file_id)
+        except Exception as e:
+            logger.error(f"Failed to get file info: {e}")
+            return {"ok": False, "error": str(e)}
+
+    async def download_file(self, file_id: str) -> Optional[str]:
+        """Download file content from Slack."""
+        try:
+            file_info = await self.get_file_info(file_id)
+            if not file_info.get("ok"):
+                return None
+                
+            file_data = file_info.get("file", {})
+            url_private = file_data.get("url_private_download") or file_data.get("url_private")
+            
+            if not url_private:
+                return None
+            
+            # Download using bot token for auth
+            import httpx
+            headers = {"Authorization": f"Bearer {self.bot_token}"}
+            async with httpx.AsyncClient() as client:
+                response = await client.get(url_private, headers=headers)
+                response.raise_for_status()
+                return response.text
+                
+        except Exception as e:
+            logger.error(f"Failed to download file: {e}")
+            return None
+
+    async def add_reminder(self, text: str, time: str, user: Optional[str] = None) -> dict:
+        """Create a Slack reminder."""
+        try:
+            return await self.app.client.reminders_add(
+                text=text,
+                time=time,
+                user=user
+            )
+        except Exception as e:
+            logger.error(f"Failed to add reminder: {e}")
+            return {"ok": False, "error": str(e)}
+
+    async def list_reminders(self) -> dict:
+        """List active reminders."""
+        try:
+            return await self.app.client.reminders_list()
+        except Exception as e:
+            logger.error(f"Failed to list reminders: {e}")
+            return {"ok": False, "error": str(e)}
+
+    async def create_canvas(self, title: str, content: str, channel_id: Optional[str] = None) -> dict:
+        """Create a new Slack Canvas."""
+        try:
+            # Note: Canvas API might use canvases.create or similar
+            # This is a placeholder - actual API endpoint may vary
+            return await self.app.client.canvases_create(
+                title=title,
+                document_content={
+                    "type": "markdown",
+                    "markdown": content
+                },
+                channel_id=channel_id
+            )
+        except Exception as e:
+            logger.error(f"Failed to create canvas: {e}")
+            return {"ok": False, "error": str(e)}
+
+    async def get_canvas(self, canvas_id: str) -> dict:
+        """Read a Slack Canvas."""
+        try:
+            return await self.app.client.canvases_access(canvas_id=canvas_id)
+        except Exception as e:
+            logger.error(f"Failed to get canvas: {e}")
+            return {"ok": False, "error": str(e)}
+
+    async def update_canvas(self, canvas_id: str, content: str) -> dict:
+        """Update an existing Slack Canvas."""
+        try:
+            return await self.app.client.canvases_edit(
+                canvas_id=canvas_id,
+                changes=[{
+                    "operation": "replace",
+                    "document_content": {
+                        "type": "markdown",
+                        "markdown": content
+                    }
+                }]
+            )
+        except Exception as e:
+            logger.error(f"Failed to update canvas: {e}")
+            return {"ok": False, "error": str(e)}
 
     async def get_streamer(
         self,
