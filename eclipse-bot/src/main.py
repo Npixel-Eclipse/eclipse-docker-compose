@@ -207,7 +207,7 @@ async def lifespan(app: FastAPI):
         )
 
         # Build messages for LLM
-        system_prompt = load_prompt("default")
+        system_prompt = load_prompt("llm_chat")
         messages = [
             Message(role="system", content=system_prompt)
         ]
@@ -228,6 +228,8 @@ async def lifespan(app: FastAPI):
         # Agentic Loop (Function Calling)
         import json
         from .workflows import get_registry
+        from .workflows.llm_chat import LLMChatWorkflow
+        
         registry = get_registry()
         
         max_iterations = 5
@@ -238,8 +240,8 @@ async def lifespan(app: FastAPI):
             while iteration < max_iterations:
                 iteration += 1
                 
-                # Get registered tools
-                tools = registry.get_all_tool_specs()
+                # Get registered tools (RESTRICTED to LLMChatWorkflow allowed tools)
+                tools = registry.get_tool_specs(LLMChatWorkflow.allowed_tools)
                 
                 # Get LLM response with tool support
                 response = await llm_client.chat(messages, tools=tools)
