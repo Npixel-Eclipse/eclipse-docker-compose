@@ -17,9 +17,16 @@ class LLMChatWorkflow(BaseWorkflow):
         "required": ["message"],
     }
     
+    allowed_tools = [
+        "p4_changes", "p4_describe", "p4_filelog", 
+        "p4_annotate", "p4_print", "p4_grep",
+        "reset_session", "llm_chat", "echo"
+    ]
+    
     async def execute(self, input_data: dict) -> dict:
         from src.main import get_llm_client
         from src.models import Message
+        from src.core.registry import registry
         
         message = input_data.get("message", "")
         system_prompt = input_data.get("system_prompt", "You are a helpful assistant.")
@@ -31,10 +38,14 @@ class LLMChatWorkflow(BaseWorkflow):
             Message(role="user", content=message),
         ]
         
-        response = await client.chat(messages)
+        # Get allowed tools specs
+        tools = registry.get_tool_specs(self.allowed_tools)
+        
+        response = await client.chat(messages, tools=tools)
         
         return {
             "response": response.content,
             "model": response.model,
             "usage": response.usage,
+            "tool_calls": response.tool_calls or [],
         }

@@ -55,7 +55,7 @@ class BaseWorkflow(ABC):
     
     name: str = "base_workflow"
     description: str = "Base workflow"
-    parameters: dict[str, Any] = {"type": "object", "properties": {}}
+    allowed_tools: Optional[list[str]] = None  # None means all tools allowed, empty list means no tools
     
     def get_tool_spec(self) -> dict[str, Any]:
         """Generate OpenAI/OpenRouter tool specification for this workflow.
@@ -98,7 +98,7 @@ class WorkflowRegistry:
         workflows = registry.list_workflows()
         
         # Get tool specs for LLM
-        tools = registry.get_all_tool_specs()
+        tools = registry.get_tool_specs()
         
         # Execute a workflow
         run = await registry.execute("my_workflow", {"key": "value"})
@@ -157,13 +157,27 @@ class WorkflowRegistry:
             for w in self._workflows.values()
         ]
     
-    def get_all_tool_specs(self) -> list[dict[str, Any]]:
-        """Get tool specifications for all registered workflows.
+    def get_tool_specs(self, allowed_tools: Optional[list[str]] = None) -> list[dict[str, Any]]:
+        """Get tool specifications for workflows.
         
+        Args:
+            allowed_tools: List of allowed tool names. If None, return all.
+            
         Returns:
             List of tool specs for use with LLM
         """
-        return [w.get_tool_spec() for w in self._workflows.values()]
+        if allowed_tools is None:
+            return [w.get_tool_spec() for w in self._workflows.values()]
+            
+        return [
+            w.get_tool_spec() 
+            for name, w in self._workflows.items() 
+            if name in allowed_tools
+        ]
+    
+    # Deprecated alias for backward compatibility
+    def get_all_tool_specs(self) -> list[dict[str, Any]]:
+        return self.get_tool_specs()
     
     async def execute(
         self,
