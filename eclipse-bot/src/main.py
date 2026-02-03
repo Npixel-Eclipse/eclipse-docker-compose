@@ -386,10 +386,10 @@ async def lifespan(app: FastAPI):
                     tool_name = tool_call["function"]["name"]
                     tool_args = json.loads(tool_call["function"]["arguments"])
                     
-                    # Context Injection: Automatically add channel_id/thread_ts if missing
-                    if "channel_id" not in tool_args:
+                    # Context Injection: Automatically add channel_id/thread_ts if missing or empty
+                    if not tool_args.get("channel_id"):
                          tool_args["channel_id"] = channel
-                    if "thread_ts" not in tool_args and thread_ts:
+                    if not tool_args.get("thread_ts") and thread_ts:
                          tool_args["thread_ts"] = thread_ts
                     
                     logger.info(f"Agent calling tool: {tool_name} with args: {tool_args}")
