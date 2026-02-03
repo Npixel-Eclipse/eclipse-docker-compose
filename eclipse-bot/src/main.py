@@ -153,6 +153,7 @@ async def lifespan(app: FastAPI):
         # Enforce Threading for ALL channels (including DMs)
         # If it's a reply, use thread_ts. If top-level, treat it as parent of new thread (use ts).
         thread_ts = event.get("thread_ts") or event.get("ts")
+        logger.info(f"DEBUG: Context for {channel} - user_ts={event.get('ts')}, thread_ts(in)={event.get('thread_ts')} => Using thread_ts={thread_ts}")
         
         # Clean text (remove bot mention if present)
         if is_mention:
