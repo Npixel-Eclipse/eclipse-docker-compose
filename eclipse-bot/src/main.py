@@ -131,19 +131,17 @@ async def lifespan(app: FastAPI):
         # ---------------------------------
         
         # 1. DM 처리
+        # -> DM도 일반 메시지처럼 처리 (스레드 강제화는 handle_message_with_context 내에서 수행)
         if channel.startswith("D"):
             await handle_message_with_context(event, say, is_mention=False)
-        # 2. 채널 내 메시지 (스레드 포함)
+        # 2. 채널 내 메시지
         else:
-            # 봇이 명시적으로 멘션된 경우 app_mention 핸들러에서 처리하므로 
-            # 일반 message 핸들러에서는 중복 응답 방지를 위해 무시합니다.
-            bot_id = await slack_integration.get_bot_user_id()
-            if f"<@{bot_id}>" in event.get("text", ""):
-                return 
-
-            # 멘션 이벤트가 아닌 일반 메시지 이벤트이므로 is_mention=False로 시작
-            # (나중에 스레드/이력 분석을 통해 응답 여부 결정)
-            await handle_message_with_context(event, say, is_mention=False)
+             # 봇이 명시적으로 멘션된 경우 app_mention 핸들러에서 처리하므로 중복 응답 방지
+             bot_id = await slack_integration.get_bot_user_id()
+             if f"<@{bot_id}>" in event.get("text", ""):
+                 return
+             
+             await handle_message_with_context(event, say, is_mention=False)
 
     async def handle_message_with_context(event: dict, say, is_mention: bool):
         """Handle message with conversation context from database."""
@@ -152,13 +150,9 @@ async def lifespan(app: FastAPI):
         channel = event.get("channel", "")
         
         # Determine thread_ts based on context
-        if channel.startswith("D"):
-            # DMs should (usually) be treated as flat conversations, so no thread_ts
-            thread_ts = None
-        else:
-            # In channels: use existing thread_ts (reply) or current ts (top-level)
-            # This allows top-level mentions to start threads, and replies to stay in threads
-            thread_ts = event.get("thread_ts") or event.get("ts")
+        # Enforce Threading for ALL channels (including DMs)
+        # If it's a reply, use thread_ts. If top-level, treat it as parent of new thread (use ts).
+        thread_ts = event.get("thread_ts") or event.get("ts")
         
         # Clean text (remove bot mention if present)
         if is_mention:
@@ -177,20 +171,11 @@ async def lifespan(app: FastAPI):
         # Get conversation history from database
         history = await conversation_store.get_conversation(
             channel_id=channel,
-            thread_ts=thread_ts if (is_mention or thread_ts) else None,
+            thread_ts=thread_ts,
             limit=20,
         )
 
-        # Automatic Session Start for DMs (if history is empty of assistant messages)
-        # Note: 'history' might contain the user's current message, so we check for prior assistant responses.
-        if channel.startswith("D") and not any(m.role == "assistant" for m in history):
-             import uuid
-             new_session_id = str(uuid.uuid4())
-             start_msg = f"🔄 [SESSION_START] ID: {new_session_id}\n새로운 세션이 시작되었습니다."
-             await say(start_msg)
-             # Add to history so LLM sees it immediately (context consistency)
-             history.append(Message(role="assistant", content=start_msg))
-             logger.info(f"Auto-started new session {new_session_id} for DM {channel}")
+        # [REMOVED] Automatic Session Start for DMs (User requested removal)
 
         # 응답 여부 판단 (Decision Logic)
         should_respond = False
@@ -219,7 +204,7 @@ async def lifespan(app: FastAPI):
             
             if "YES" in intent_decision:
                 should_respond = True
-                is_mention = True
+                is_mention = True # Treat as mention for streaming purposes
             else:
                 # 봇에게 한 말이 아니더라도 문맥 보존을 위해 DB에는 저장
                 await conversation_store.add_message(
@@ -237,7 +222,7 @@ async def lifespan(app: FastAPI):
         # Save the current user message to database for future context
         await conversation_store.add_message(
             channel_id=channel,
-            thread_ts=thread_ts if (is_mention or channel.startswith("C")) else None, # DM은 thread_ts 없이 저장
+            thread_ts=thread_ts,
             user_id=user,
             role="user",
             content=clean_text,
@@ -285,8 +270,9 @@ async def lifespan(app: FastAPI):
                 
                 if not response.tool_calls:
                     # Final response logic
-                    if is_mention:
-                        # Mentions/Threads: Real-time streaming
+                    # Use Streaming for BOTH Mentions and DMs (Universal Streaming as requested)
+                    if is_mention or channel.startswith("D"):
+                        # Mentions/Threads/DMs: Real-time streaming
                         response_text = ""
                         # 공식 SDK chat_stream은 thread_ts를 필수(required)로 요구합니다.
                         # DM 등에서 thread_ts가 None인 경우, 현재 메시지의 ts를 사용합니다.
@@ -340,11 +326,11 @@ async def lifespan(app: FastAPI):
                             await slack_integration.send_message(
                                 channel=channel,
                                 text=response_text,
-                                thread_ts=thread_ts
+                                thread_ts=thread_ts 
                             )
                             response_sent = True
                     else:
-                        # DMs: Standard text output
+                        # Should rarely be reached if logic covers all cases, but fallback to say
                         response_text = response.content or ""
                         await say(text=response_text)
                         response_sent = True
