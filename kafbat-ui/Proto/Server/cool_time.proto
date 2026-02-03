@@ -1,0 +1,42 @@
+syntax = "proto3";
+package cooltime;
+import "Common/property.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/empty.proto";
+
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.cooltime";
+option java_outer_classname = "CoolTimeServiceProto";
+
+enum CoolTimeCommandCode{
+  LOAD = 0;
+  UPDATE = 1;
+  SAVE = 2;
+}
+message CoolTimeEvent {
+  repeated CoolTimeDetail cool_time = 1;
+
+  message CoolTimeDetail{
+    string cool_time_name = 1; // 스킬 이름 + 스킬 그룹 이름
+    google.protobuf.Timestamp valid_until = 2;
+    google.protobuf.Duration duration = 3;
+  }
+}
+
+message CoolTimeCommand{
+  CoolTimeCommandCode code = 1;
+  optional string topic = 2;
+  string character_uuid = 3;
+  oneof Event{
+    CoolTimeEvent cool_time_event = 4;
+    google.protobuf.Empty no_event_on_load = 5;
+  };
+}
+
+message CoolTimeStatus {
+  int64 account_id = 4;
+  string character_uuid = 2;
+  CoolTimeEvent cool_time_event = 3;
+}

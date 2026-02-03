@@ -1,0 +1,35 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "LobbyLogServiceProto";
+
+message GameLogin {}
+
+message GameLogout {}
+
+message GameGuidRegister {}
+
+message GameCuidRegister {
+  string name = 1;
+  int64 class_id = 2;
+  string server = 3;
+}
+
+message EnterCharacter {
+  string server = 1;
+}
+
+message ReserveCharacterDeletion {
+  string delete_at = 1;
+}
+
+message CancelDeleteCharacter {
+  string delete_at = 1;
+}
+
+message ExpandCharacterSlot {
+  int64 slot_count_before = 1;
+  int64 slot_count_after = 2;
+}

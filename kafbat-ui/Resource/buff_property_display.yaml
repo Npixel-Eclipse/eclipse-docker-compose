@@ -1,0 +1,5381 @@
+- Id: 71
+  Name: SpecialHitStun
+  DescriptionName: StatNameSpecialHitStun
+  OrderIndex: 105
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 기절 적중
+- Id: 1
+  Name: LoopingEffect
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: EntireStat
+  GroupType: None
+- Id: 2
+  Name: ChangeModel
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: EntireStat
+  GroupType: None
+- Id: 80
+  Name: SpecialResistanceStun
+  DescriptionName: StatNameSpecialResistanceStun
+  OrderIndex: 106
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 기절 저항
+- Id: 7586
+  Name: SpecialHitStunBuff
+  DescriptionName: StatNameSpecialHitStun
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3
+  Name: IsMatchDuration
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: EntireStat
+  GroupType: None
+- Id: 25621
+  Name: SpecialResistanceStunBuff
+  DescriptionName: StatNameSpecialResistanceStun
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5
+  Name: AddedDamage
+  DescriptionName: StatNameAddedDamage
+  OrderIndex: 1
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 공격력
+- Id: 6
+  Name: ArmorClass
+  DescriptionName: StatNameArmorClass
+  OrderIndex: 41
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 방어력
+- Id: 5983
+  Name: SpecialHitStunResult
+  DescriptionName: StatNameSpecialHitStun
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 22825
+  Name: SpecialResistanceStunResult
+  DescriptionName: StatNameSpecialResistanceStun
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7
+  Name: AttackSpeedBonus
+  DescriptionName: StatNameAttackSpeedBonus
+  OrderIndex: 37
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 공격 속도
+- Id: 8
+  Name: CastSpeedBonus
+  DescriptionName: StatNameCastSpeedBonus
+  OrderIndex: 38
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 시전 속도
+- Id: 10
+  Name: Con
+  DescriptionName: StatNameCon
+  OrderIndex: 11
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 건강
+- Id: 11
+  Name: CriticalDamage
+  DescriptionName: StatNameCriticalDamage
+  OrderIndex: 29
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 치명타 피해
+- Id: 12
+  Name: CriticalProbability
+  DescriptionName: StatNameCriticalProbability
+  OrderIndex: 25
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 치명타
+- Id: 13
+  Name: DamageReduceScale
+  DescriptionName: StatNameDamageReduceScale
+  OrderIndex: 53
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 피해 증폭 저항
+- Id: 14
+  Name: DamageReduction
+  DescriptionName: StatNameDamageReduction
+  OrderIndex: 47
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 피해 감소
+- Id: 15
+  Name: DamageReductionIgnore
+  DescriptionName: StatNameDamageReductionIgnore
+  OrderIndex: 7
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 피해 감소 무시
+- Id: 16
+  Name: DamageScale
+  DescriptionName: StatNameDamageScale
+  OrderIndex: 13
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 피해 증폭
+- Id: 17
+  Name: Dex
+  DescriptionName: StatNameDex
+  OrderIndex: 9
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 민첩
+- Id: 20
+  Name: Hp
+  DescriptionName: StatNameHp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: HP
+- Id: 21
+  Name: HpRegen
+  DescriptionName: StatNameHpRegen
+  OrderIndex: 126
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: HP 회복
+- Id: 22
+  Name: Int
+  DescriptionName: StatNameInt
+  OrderIndex: 10
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 지능
+- Id: 23
+  Name: MagicCriticalDamage
+  DescriptionName: StatNameMagicCriticalDamage
+  OrderIndex: 32
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 치명타 피해
+- Id: 24
+  Name: MagicCriticalProbability
+  DescriptionName: StatNameMagicCriticalProbability
+  OrderIndex: 28
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 치명타
+- Id: 25
+  Name: MagicDamage
+  DescriptionName: StatNameMagicDamage
+  OrderIndex: 4
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 공격력
+- Id: 26
+  Name: MagicDamageReduceScale
+  DescriptionName: StatNameMagicDamageReduceScale
+  OrderIndex: 56
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 피해 증폭 저항
+- Id: 27
+  Name: MagicDamageReduction
+  DescriptionName: StatNameMagicDamageReduction
+  OrderIndex: 50
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 피해 감소
+- Id: 28
+  Name: MagicDamageScale
+  DescriptionName: StatNameMagicDamageScale
+  OrderIndex: 16
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 피해 증폭
+- Id: 29
+  Name: MagicHit
+  DescriptionName: StatNameMagicHit
+  OrderIndex: 22
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 명중
+- Id: 34
+  Name: MaxHp
+  DescriptionName: StatNameMaxHp
+  OrderIndex: 125
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 최대 HP(변경 예정)
+- Id: 35
+  Name: MaxMp
+  DescriptionName: StatNameMaxMp
+  OrderIndex: 130
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 최대 MP(변경 예정)
+- Id: 36
+  Name: MeleeCriticalDamage
+  DescriptionName: StatNameMeleeCriticalDamage
+  OrderIndex: 30
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 치명타 피해
+- Id: 37
+  Name: MeleeCriticalProbability
+  DescriptionName: StatNameMeleeCriticalProbability
+  OrderIndex: 26
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 치명타
+- Id: 38
+  Name: MeleeDamage
+  DescriptionName: StatNameMeleeDamage
+  OrderIndex: 2
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 공격력
+- Id: 39
+  Name: MeleeDamageReduceScale
+  DescriptionName: StatNameMeleeDamageReduceScale
+  OrderIndex: 54
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 피해 증폭 저항
+- Id: 40
+  Name: MeleeDamageScale
+  DescriptionName: StatNameMeleeDamageScale
+  OrderIndex: 14
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 피해 증폭
+- Id: 41
+  Name: MeleeHit
+  DescriptionName: StatNameMeleeHit
+  OrderIndex: 20
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 명중
+- Id: 43
+  Name: MoveSpeedBonus
+  DescriptionName: StatNameMoveSpeedBonus
+  OrderIndex: 39
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 이동 속도
+- Id: 44
+  Name: Mp
+  DescriptionName: StatNameMp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: MP
+- Id: 45
+  Name: MpRegen
+  DescriptionName: StatNameMpRegen
+  OrderIndex: 131
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: MP 회복
+- Id: 50
+  Name: PvPAddedDamage
+  DescriptionName: StatNamePvPAddedDamage
+  OrderIndex: 89
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 공격력
+- Id: 51
+  Name: PvPDamageReduction
+  DescriptionName: StatNamePvPDamageReduction
+  OrderIndex: 97
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 피해 감소
+- Id: 52
+  Name: PvPDamageReductionIgnore
+  DescriptionName: StatNamePvPDamageReductionIgnore
+  OrderIndex: 90
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 피해 감소 무시
+- Id: 56
+  Name: RangeCriticalDamage
+  DescriptionName: StatNameRangeCriticalDamage
+  OrderIndex: 31
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 치명타 피해
+- Id: 57
+  Name: RangeCriticalProbability
+  DescriptionName: StatNameRangeCriticalProbability
+  OrderIndex: 27
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 치명타
+- Id: 58
+  Name: RangeDamage
+  DescriptionName: StatNameRangeDamage
+  OrderIndex: 3
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 공격력
+- Id: 59
+  Name: RangeDamageReduceScale
+  DescriptionName: StatNameRangeDamageReduceScale
+  OrderIndex: 55
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 피해 증폭 저항
+- Id: 60
+  Name: RangeDamageScale
+  DescriptionName: StatNameRangeDamageScale
+  OrderIndex: 15
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 피해 증폭
+- Id: 61
+  Name: RangeHit
+  DescriptionName: StatNameRangeHit
+  OrderIndex: 21
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 명중
+- Id: 63
+  Name: SiegeDamageMultiplier
+  DescriptionName: StatNameSiegeDamageMultiplier
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 공성 추가 피해 배율
+- Id: 64
+  Name: SpecialHitMute
+  DescriptionName: StatNameSpecialHitMute
+  OrderIndex: 117
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 침묵 적중
+- Id: 67
+  Name: SpecialHitFear
+  DescriptionName: StatNameSpecialHitFear
+  OrderIndex: 107
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 공포 적중
+- Id: 69
+  Name: SpecialHitHold
+  DescriptionName: StatNameSpecialHitHold
+  OrderIndex: 113
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 속박 적중
+- Id: 70
+  Name: SpecialHitSlow
+  DescriptionName: StatNameSpecialHitSlow
+  OrderIndex: 115
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 감속 적중
+- Id: 73
+  Name: SpecialResistanceMute
+  DescriptionName: StatNameSpecialResistanceMute
+  OrderIndex: 118
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 침묵 저항
+- Id: 76
+  Name: SpecialResistanceFear
+  DescriptionName: StatNameSpecialResistanceFear
+  OrderIndex: 108
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 공포 저항
+- Id: 78
+  Name: SpecialResistanceHold
+  DescriptionName: StatNameSpecialResistanceHold
+  OrderIndex: 114
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 속박 저항
+- Id: 79
+  Name: SpecialResistanceSlow
+  DescriptionName: StatNameSpecialResistanceSlow
+  OrderIndex: 116
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 감속 저항
+- Id: 82
+  Name: Str
+  DescriptionName: StatNameStr
+  OrderIndex: 8
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 힘
+- Id: 83
+  Name: WeaponMaxDamage
+  DescriptionName: StatNameWeaponMaxDamage
+  OrderIndex: 1
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 무기 최대 피해
+- Id: 84
+  Name: WeaponMinDamage
+  DescriptionName: StatNameWeaponMinDamage
+  OrderIndex: 2
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 무기 최소 피해
+- Id: 85
+  Name: Wis
+  DescriptionName: StatNameWis
+  OrderIndex: 12
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 지혜
+- Id: 86
+  Name: Level
+  DescriptionName: StatNameLevel
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 레벨
+- Id: 87
+  Name: Experience
+  DescriptionName: StatNameExperience
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 경험치
+- Id: 88
+  Name: DrainHp
+  DescriptionName: StatNameDrainHp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: HP 흡수
+- Id: 89
+  Name: DrainMp
+  DescriptionName: StatNameDrainMp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: MP 흡수
+- Id: 90
+  Name: ExtractHp
+  DescriptionName: StatNameExtractHp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: Hp 추출
+- Id: 91
+  Name: ExtractMp
+  DescriptionName: StatNameExtractMp
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: Mp 추출
+- Id: 92
+  Name: CombatPoint
+  DescriptionName: UIWordCombatPoint
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 전투력
+- Id: 5356
+  Name: SpecialResistanceTaunt
+  DescriptionName: StatNameSpecialResistanceTaunt
+  OrderIndex: 110
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 도발 저항
+- Id: 8930
+  Name: SpecialResistanceDarkness
+  DescriptionName: StatNameSpecialResistanceDarkness
+  OrderIndex: 120
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 암흑 저항
+- Id: 96
+  Name: HitChance
+  DescriptionName: StatNameHitChance
+  OrderIndex: 19
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 명중
+- Id: 97
+  Name: PvEHit
+  DescriptionName: StatNamePvEHit
+  OrderIndex: 81
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 명중
+- Id: 98
+  Name: PvEDamageReduction
+  DescriptionName: StatNamePvEDamageReduction
+  OrderIndex: 86
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 피해 감소
+- Id: 99
+  Name: PvEAddedDamage
+  DescriptionName: StatNamePvEAddedDamage
+  OrderIndex: 78
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 공격력
+- Id: 101
+  Name: PvEArmorClass
+  DescriptionName: StatNamePvEArmorClass
+  OrderIndex: 85
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 방어력
+- Id: 102
+  Name: ExperienceBonus
+  DescriptionName: StatNameExperienceBonus
+  OrderIndex: 134
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 경험치 획득량 증가
+- Id: 103
+  Name: HealAdditionalPercent
+  DescriptionName: StatNameHealAdditionalPercent
+  OrderIndex: 999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 치유량 증가율
+- Id: 10945
+  Name: GetHealAdditionalPercent
+  DescriptionName: StatNameGetHealAdditionalPercent
+  OrderIndex: 999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 받는 치유량 증가율
+- Id: 8397
+  Name: MpCostReducePercentBase
+  DescriptionName: StatNameMpCostReducePercent
+  OrderIndex: 132
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: MP 소모량 감소
+- Id: 2897
+  Name: CoolTimeReducePercentBase
+  DescriptionName: StatNameCoolTimeReducePercent
+  OrderIndex: 133
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 스킬 쿨타임 감소
+- Id: 21897
+  Name: GoldBonus
+  DescriptionName: StatNameCurrencyGoldBonus
+  OrderIndex: 135
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 골드 획득량 증가
+- Id: 21977
+  Name: Item_HealthPotion_MaxCarryAmount
+  DescriptionName: StatNameItem_HealthPotion_MaxCarryAmount
+  OrderIndex: 129
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7837
+  Name: PerfectDamageProbability
+  DescriptionName: StatNamePerfectDamageProbability
+  OrderIndex: 40
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 퍼펙트
+- Id: 72837
+  Name: MeleeDamageReduction
+  DescriptionName: StatNameMeleeDamageReduction
+  OrderIndex: 48
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 피해 감소
+- Id: 72841
+  Name: RangeDamageReduction
+  DescriptionName: StatNameRangeDamageReduction
+  OrderIndex: 49
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 피해 감소
+- Id: 72842
+  Name: MeleeDamageReductionIgnore
+  DescriptionName: StatNameMeleeDamageReductionIgnore
+  OrderIndex: 8
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 피해 감소 무시
+- Id: 72843
+  Name: RangeDamageReductionIgnore
+  DescriptionName: StatNameRangeDamageReductionIgnore
+  OrderIndex: 9
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 피해 감소 무시
+- Id: 72844
+  Name: MagicDamageReductionIgnore
+  DescriptionName: StatNameMagicDamageReductionIgnore
+  OrderIndex: 10
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 피해 감소 무시
+- Id: 72845
+  Name: MeleeArmorClass
+  DescriptionName: StatNameMeleeArmorClass
+  OrderIndex: 42
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 방어력
+- Id: 72846
+  Name: RangeArmorClass
+  DescriptionName: StatNameRangeArmorClass
+  OrderIndex: 43
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 방어력
+- Id: 72847
+  Name: MagicArmorClass
+  DescriptionName: StatNameMagicArmorClass
+  OrderIndex: 44
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 방어력
+- Id: 72848
+  Name: PvPArmorClass
+  DescriptionName: StatNamePvPArmorClass
+  OrderIndex: 96
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 방어력
+- Id: 72849
+  Name: PvPHit
+  DescriptionName: StatNamePvPHit
+  OrderIndex: 92
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 명중
+- Id: 12140
+  Name: PvEDamageReductionIgnore
+  DescriptionName: StatNamePvEDamageReductionIgnore
+  OrderIndex: 79
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 피해 감소 무시
+- Id: 20680
+  Name: SpecialHitTaunt
+  DescriptionName: StatNameSpecialHitTaunt
+  OrderIndex: 109
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 도발 적중
+- Id: 19759
+  Name: SpecialHitDarkness
+  DescriptionName: StatNameSpecialHitDarkness
+  OrderIndex: 119
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 암흑 적중
+- Id: 63332
+  Name: SpecialHitAll
+  DescriptionName: StatNameSpecialHitAll
+  OrderIndex: 103
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 상태 이상 적중
+- Id: 63644
+  Name: SpecialResistanceAll
+  DescriptionName: StatNameSpecialResistanceAll
+  OrderIndex: 104
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 상태 이상 저항
+- Id: 34413
+  Name: CriticalResistance
+  DescriptionName: StatNameCriticalResistance
+  OrderIndex: 65
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 치명타 저항
+- Id: 34410
+  Name: MeleeCriticalResistance
+  DescriptionName: StatNameMeleeCriticalResistance
+  OrderIndex: 66
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 치명타 저항
+- Id: 34419
+  Name: RangeCriticalResistance
+  DescriptionName: StatNameRangeCriticalResistance
+  OrderIndex: 67
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 치명타 저항
+- Id: 34418
+  Name: MagicCriticalResistance
+  DescriptionName: StatNameMagicCriticalResistance
+  OrderIndex: 68
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 치명타 저항
+- Id: 34417
+  Name: CriticalDamageReduction
+  DescriptionName: StatNameCriticalDamageReduction
+  OrderIndex: 69
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 치명타 피해 감소
+- Id: 34416
+  Name: MeleeCriticalDamageReduction
+  DescriptionName: StatNameMeleeCriticalDamageReduction
+  OrderIndex: 70
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 치명타 피해 감소
+- Id: 34415
+  Name: RangeCriticalDamageReduction
+  DescriptionName: StatNameRangeCriticalDamageReduction
+  OrderIndex: 71
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 치명타 피해 감소
+- Id: 34414
+  Name: MagicCriticalDamageReduction
+  DescriptionName: StatNameMagicCriticalDamageReduction
+  OrderIndex: 72
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 치명타 피해 감소
+- Id: 31004
+  Name: PvPCriticalProbability
+  DescriptionName: StatNamePvPCriticalProbability
+  OrderIndex: 93
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 치명타
+- Id: 31005
+  Name: PvPCriticalResistance
+  DescriptionName: StatNamePvPCriticalResistance
+  OrderIndex: 99
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 치명타 저항
+- Id: 31006
+  Name: PvPCriticalDamage
+  DescriptionName: StatNamePvPCriticalDamage
+  OrderIndex: 94
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 치명타 피해
+- Id: 31007
+  Name: PvPCriticalDamageReduction
+  DescriptionName: StatNamePvPCriticalDamageReduction
+  OrderIndex: 100
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 치명타 피해 감소
+- Id: 31008
+  Name: PvECriticalProbability
+  DescriptionName: StatNamePvECriticalProbability
+  OrderIndex: 82
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 치명타
+- Id: 31009
+  Name: PvECriticalResistance
+  DescriptionName: StatNamePvECriticalResistance
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: PVE 치명타 저항
+- Id: 31001
+  Name: PvECriticalDamage
+  DescriptionName: StatNamePvECriticalDamage
+  OrderIndex: 83
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 치명타 피해
+- Id: 31002
+  Name: PvECriticalDamageReduction
+  DescriptionName: StatNamePvECriticalDamageReduction
+  OrderIndex: 999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: PVE 치명타 피해 감소
+- Id: 31640
+  Name: PvEDamageScale
+  DescriptionName: StatNamePvEDamageScale
+  OrderIndex: 80
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 피해 증폭
+- Id: 31641
+  Name: PvPDamageScale
+  DescriptionName: StatNamePvPDamageScale
+  OrderIndex: 91
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 피해 증폭
+- Id: 10911
+  Name: HealthPotionScale
+  DescriptionName: StatNameHealthPotionScale
+  OrderIndex: 128
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 물약 회복률
+- Id: 37899
+  Name: HealthPotionIncrease
+  DescriptionName: StatNameHealthPotionIncrease
+  OrderIndex: 127
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 물약 회복량
+- Id: 109119
+  Name: HealthPotionDecrease
+  DescriptionName: StatNameHealthPotionDecrease
+  OrderIndex: 999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: "물약 회복률 감소 체력 물약 패널티에서만 사용(%)"
+- Id: 131119
+  Name: HealDecrease
+  DescriptionName: StatNameHealDecrease
+  OrderIndex: 999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: "모든 회복량 감소 스킬에서만 사용(%)"
+- Id: 10710
+  Name: PerfectDamageProbResistance
+  DescriptionName: StatNamePerfectDamageProbResistance
+  OrderIndex: 77
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 퍼펙트 저항
+- Id: 30091
+  Name: SkillAttackDamage
+  DescriptionName: StatNameSkillAttackDamage
+  OrderIndex: 6
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 스킬 공격력
+- Id: 10351
+  Name: SkillDamageScale
+  DescriptionName: StatNameSkillDamageScale
+  OrderIndex: 18
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 스킬 피해 증폭
+- Id: 10352
+  Name: SkillDamageReduceScale
+  DescriptionName: StatNameSkillDamageReduceScale
+  OrderIndex: 58
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 스킬 피해 증폭 저항
+- Id: 10347
+  Name: NormalAttackDamage
+  DescriptionName: StatNameNormalAttackDamage
+  OrderIndex: 5
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 일반 공격력
+- Id: 10349
+  Name: NormalAttackDamageScale
+  DescriptionName: StatNameNormalAttackDamageScale
+  OrderIndex: 17
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 일반 공격 피해 증폭
+- Id: 10350
+  Name: NormalAttackDamageReduceScale
+  DescriptionName: StatNameNormalAttackDamageReduceScale
+  OrderIndex: 57
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 일반 공격 피해 증폭 저항
+- Id: 30093
+  Name: NormalAttackHit
+  DescriptionName: StatNameNormalAttackHit
+  OrderIndex: 23
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 일반 공격 명중
+- Id: 30094
+  Name: NormalAttackArmorClass
+  DescriptionName: StatNameNormalAttackArmorClass
+  OrderIndex: 45
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 일반 방어력
+- Id: 30095
+  Name: NormalAttackDamageReduction
+  DescriptionName: StatNameNormalAttackDamageReduction
+  OrderIndex: 51
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 일반 공격 피해 감소
+- Id: 37091
+  Name: SkillHit
+  DescriptionName: StatNameSkillHit
+  OrderIndex: 24
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 스킬 명중
+- Id: 37092
+  Name: SkillArmorClass
+  DescriptionName: StatNameSkillArmorClass
+  OrderIndex: 46
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 스킬 방어력
+- Id: 37093
+  Name: SkillDamageReduction
+  DescriptionName: StatNameSkillDamageReduction
+  OrderIndex: 52
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 스킬 피해 감소
+- Id: 10354
+  Name: PvEDamageReduceScale
+  DescriptionName: StatNamePvEDamageReduceScale
+  OrderIndex: 87
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 피해 증폭 저항
+- Id: 10355
+  Name: PvPDamageReduceScale
+  DescriptionName: StatNamePvPDamageReduceScale
+  OrderIndex: 98
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 피해 증폭 저항
+- Id: 30100
+  Name: IsMonster
+  OrderIndex: 999
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 몬스터 여부
+- Id: 30101
+  Name: IsNotIncludeTargetSearching
+  OrderIndex: 999
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 자동 사냥 시 타겟팅하지 않는 플래그
+- Id: 40001
+  Name: CharStr
+  DescriptionName: StatNameStr
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 힘 스탯 저장용
+- Id: 11713
+  Name: CharLuk
+  DescriptionName: StatNameLuk
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 운 스탯 저장용
+- Id: 27490
+  Name: Luk
+  DescriptionName: StatNameLuk
+  OrderIndex: 13
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Etc
+  Comment: 운
+- Id: 40002
+  Name: CharDex
+  DescriptionName: StatNameDex
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 민첩 스탯 저장용
+- Id: 40003
+  Name: CharInt
+  DescriptionName: StatNameInt
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 지능 스탯 저장용
+- Id: 40005
+  Name: CharCon
+  DescriptionName: StatNameCon
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 건강 스탯 저장용
+- Id: 40006
+  Name: CharWis
+  DescriptionName: StatNameWis
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 지혜 스탯 저장용
+- Id: 60001
+  Name: SightRange
+  OrderIndex: 999
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 사야 범위
+- Id: 18199
+  Name: MightInvokeProb
+  DescriptionName: MightPropertyNameProb
+  OrderIndex: 2000
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 권능 발동 확률 출력용
+- Id: 2102
+  Name: BaseCastRange
+  DescriptionName: SkillPropertyNameBaseCastRange
+  OrderIndex: 1000
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 955
+  Name: DmgDiceSpot
+  DescriptionName: SkillPropertyNameDmgDiceSpot
+  OrderIndex: 1002
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 18486
+  Name: ProbAdd
+  DescriptionName: SkillPropertyNameProbAdd
+  OrderIndex: 1003
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 6342
+  Name: HealBase
+  DescriptionName: SkillPropertyNameHealBase
+  OrderIndex: 1004
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 1935
+  Name: HpCost
+  DescriptionName: SkillPropertyNameHpCost
+  OrderIndex: 1005
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 4006
+  Name: MpCost
+  DescriptionName: SkillPropertyNameMpCost
+  OrderIndex: 1006
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 18213
+  Name: MaxTarget
+  DescriptionName: SkillPropertyNameMaxTarget
+  OrderIndex: 1007
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 11448
+  Name: MotionDelay
+  DescriptionName: SkillPropertyNameMotionDelay
+  OrderIndex: 1008
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 4773
+  Name: Radius
+  DescriptionName: SkillPropertyNameRadius
+  OrderIndex: 1009
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 21448
+  Name: SkillDrainHp
+  DescriptionName: SkillPropertyNameSkillDrainHp
+  OrderIndex: 1010
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 1277
+  Name: SkillDrainMp
+  DescriptionName: SkillPropertyNameSkillDrainMp
+  OrderIndex: 1011
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 8338
+  Name: Critical
+  DescriptionName: SkillPropertyNameCritical
+  OrderIndex: 1012
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 4641
+  Name: BuffDuration
+  DescriptionName: SkillPropertyNameBuffDuration
+  OrderIndex: 1013
+  ValueDivide: 1000
+  SuffixText: UIWordSec
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 8338977
+  Name: AddedCoolTimeReduce
+  DescriptionName: SkillPropertyNameAddedCoolTimeReduce
+  OrderIndex: 1014
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 22046
+  Name: DodgeChance
+  DescriptionName: StatNameDodgeChance
+  OrderIndex: 59
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 회피
+- Id: 1892
+  Name: MeleeDodge
+  DescriptionName: StatNameMeleeDodge
+  OrderIndex: 60
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 회피
+- Id: 19635
+  Name: RangeDodge
+  DescriptionName: StatNameRangeDodge
+  OrderIndex: 61
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 회피
+- Id: 18399
+  Name: MagicDodge
+  DescriptionName: StatNameMagicDodge
+  OrderIndex: 62
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 회피
+- Id: 25186
+  Name: PvEDodge
+  DescriptionName: StatNamePvEDodge
+  OrderIndex: 88
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 회피
+- Id: 1330
+  Name: PvPDodge
+  DescriptionName: StatNamePvPDodge
+  OrderIndex: 102
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 회피
+- Id: 12723
+  Name: NormalAttackDodge
+  DescriptionName: StatNameNormalAttackDodge
+  OrderIndex: 63
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 일반 공격 회피
+- Id: 23739
+  Name: SkillDodge
+  DescriptionName: StatNameSkillDodge
+  OrderIndex: 64
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 스킬 회피
+- Id: 5038
+  Name: DoubleProbability
+  DescriptionName: StatNameDoubleProbability
+  OrderIndex: 33
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 더블
+- Id: 10951
+  Name: MeleeDoubleProbability
+  DescriptionName: StatNameMeleeDoubleProbability
+  OrderIndex: 34
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 더블
+- Id: 14927
+  Name: RangeDoubleProbability
+  DescriptionName: StatNameRangeDoubleProbability
+  OrderIndex: 35
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 더블
+- Id: 22660
+  Name: MagicDoubleProbability
+  DescriptionName: StatNameMagicDoubleProbability
+  OrderIndex: 36
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 더블
+- Id: 11553
+  Name: PvEDoubleProbability
+  DescriptionName: StatNamePvEDoubleProbability
+  OrderIndex: 84
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 더블
+- Id: 7322
+  Name: PvPDoubleProbability
+  DescriptionName: StatNamePvPDoubleProbability
+  OrderIndex: 95
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 더블
+- Id: 21895
+  Name: DoubleResistance
+  DescriptionName: StatNameDoubleResistance
+  OrderIndex: 73
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 더블 저항
+- Id: 11949
+  Name: MeleeDoubleResistance
+  DescriptionName: StatNameMeleeDoubleResistance
+  OrderIndex: 74
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 더블 저항
+- Id: 13090
+  Name: RangeDoubleResistance
+  DescriptionName: StatNameRangeDoubleResistance
+  OrderIndex: 75
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 더블 저항
+- Id: 12038
+  Name: MagicDoubleResistance
+  DescriptionName: StatNameMagicDoubleResistance
+  OrderIndex: 76
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 더블 저항
+- Id: 5487
+  Name: PvEDoubleResistance
+  DescriptionName: StatNamePvEDoubleResistance
+  OrderIndex: 999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: PVE 더블 저항
+- Id: 26190
+  Name: PvPDoubleResistance
+  DescriptionName: StatNamePvPDoubleResistance
+  OrderIndex: 101
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 더블 저항
+- Id: 57781
+  Name: AddedAttackRange
+  DescriptionName: StatNameAddedAttackRange
+  OrderIndex: 2
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 공격 사거리
+- Id: 82772
+  Name: MightProperty
+  DescriptionName: Item_Name_Misc_Consume_Scroll_Buff_War_ForHuntingZoneMerchant
+  OrderIndex: 999
+  ValueDivide: 1000
+  SuffixText: UIWordSec
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 받는 기절 시간 증가
+- Id: 25557
+  Name: NormalAttackDamageReductionIgnore
+  DescriptionName: StatNameNormalAttackDamageReductionIgnore
+  OrderIndex: 11
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 일반 공격 피해 감소 무시
+- Id: 9463
+  Name: SkillDamageReductionIgnore
+  DescriptionName: StatNameSkillDamageReductionIgnore
+  OrderIndex: 12
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 스킬 피해 감소 무시
+- Id: 30873
+  Name: AddDmgScale
+  DescriptionName: SkillPropertyNameAddDmgScale
+  OrderIndex: 1000
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: None
+  GroupType: None
+- Id: 13145
+  Name: TotalDamageScale
+  DescriptionName: StatNameTotalDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  GroupType: None
+  Comment: 최종 피해 증폭
+- Id: 15254
+  Name: TotalDamageReduceScale
+  DescriptionName: StatNameTotalDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  GroupType: None
+  Comment: 최종 피해 증폭 저항
+- Id: 15251
+  Name: HealthPotionAmount
+  DescriptionName: StatNameItem_HealthPotion_MaxCarryAmount
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 물약 최대 소지량
+- Id: 14022
+  Name: HitChanceBuff
+  DescriptionName: StatNameHitChance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10189
+  Name: MeleeHitBuff
+  DescriptionName: StatNameMeleeHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15947
+  Name: RangeHitBuff
+  DescriptionName: StatNameRangeHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 18902
+  Name: MagicHitBuff
+  DescriptionName: StatNameMagicHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 9544
+  Name: PvEHitBuff
+  DescriptionName: StatNamePvEHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 9657
+  Name: PvPHitBuff
+  DescriptionName: StatNamePvPHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14574
+  Name: NormalAttackHitBuff
+  DescriptionName: StatNameNormalAttackHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10876
+  Name: SkillHitBuff
+  DescriptionName: StatNameSkillHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 12457
+  Name: DodgeChanceBuff
+  DescriptionName: StatNameDodgeChance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3721
+  Name: MeleeDodgeBuff
+  DescriptionName: StatNameMeleeDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15541
+  Name: RangeDodgeBuff
+  DescriptionName: StatNameRangeDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10486
+  Name: MagicDodgeBuff
+  DescriptionName: StatNameMagicDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 13797
+  Name: PvEDodgeBuff
+  DescriptionName: StatNamePvEDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 338
+  Name: PvPDodgeBuff
+  DescriptionName: StatNamePvPDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 19579
+  Name: NormalAttackDodgeBuff
+  DescriptionName: StatNameNormalAttackDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3266
+  Name: SkillDodgeBuff
+  DescriptionName: StatNameSkillDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20334
+  Name: DoubleProbabilityBuff
+  DescriptionName: StatNameDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1450
+  Name: MeleeDoubleProbabilityBuff
+  DescriptionName: StatNameMeleeDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 17782
+  Name: RangeDoubleProbabilityBuff
+  DescriptionName: StatNameRangeDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8088
+  Name: MagicDoubleProbabilityBuff
+  DescriptionName: StatNameMagicDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6015
+  Name: PvEDoubleProbabilityBuff
+  DescriptionName: StatNamePvEDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15284
+  Name: PvPDoubleProbabilityBuff
+  DescriptionName: StatNamePvPDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7281
+  Name: DoubleResistanceBuff
+  DescriptionName: StatNameDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 16298
+  Name: MeleeDoubleResistanceBuff
+  DescriptionName: StatNameMeleeDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7937
+  Name: RangeDoubleResistanceBuff
+  DescriptionName: StatNameRangeDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 11221
+  Name: MagicDoubleResistanceBuff
+  DescriptionName: StatNameMagicDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 21256
+  Name: PvEDoubleResistanceBuff
+  DescriptionName: StatNamePvEDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5200
+  Name: PvPDoubleResistanceBuff
+  DescriptionName: StatNamePvPDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1168
+  Name: CriticalProbabilityBuff
+  DescriptionName: StatNameCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1904
+  Name: MeleeCriticalProbabilityBuff
+  DescriptionName: StatNameMeleeCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 13614
+  Name: RangeCriticalProbabilityBuff
+  DescriptionName: StatNameRangeCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 11823
+  Name: MagicCriticalProbabilityBuff
+  DescriptionName: StatNameMagicCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6024
+  Name: PvECriticalProbabilityBuff
+  DescriptionName: StatNamePvECriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10144
+  Name: PvPCriticalProbabilityBuff
+  DescriptionName: StatNamePvPCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6208
+  Name: CriticalResistanceBuff
+  DescriptionName: StatNameCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 16134
+  Name: MeleeCriticalResistanceBuff
+  DescriptionName: StatNameMeleeCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20238
+  Name: RangeCriticalResistanceBuff
+  DescriptionName: StatNameRangeCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8977
+  Name: MagicCriticalResistanceBuff
+  DescriptionName: StatNameMagicCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 17954
+  Name: PvECriticalResistanceBuff
+  DescriptionName: StatNamePvECriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14910
+  Name: PvPCriticalResistanceBuff
+  DescriptionName: StatNamePvPCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3646
+  Name: CriticalDamageBuff
+  DescriptionName: StatNameCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 4229
+  Name: MeleeCriticalDamageBuff
+  DescriptionName: StatNameMeleeCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 4835
+  Name: RangeCriticalDamageBuff
+  DescriptionName: StatNameRangeCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6381
+  Name: MagicCriticalDamageBuff
+  DescriptionName: StatNameMagicCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 23657
+  Name: PvECriticalDamageBuff
+  DescriptionName: StatNamePvECriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 12308
+  Name: PvPCriticalDamageBuff
+  DescriptionName: StatNamePvPCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14346
+  Name: CriticalDamageReductionBuff
+  DescriptionName: StatNameCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 22821
+  Name: MeleeCriticalDamageReductionBuff
+  DescriptionName: StatNameMeleeCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 16162
+  Name: RangeCriticalDamageReductionBuff
+  DescriptionName: StatNameRangeCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1663
+  Name: MagicCriticalDamageReductionBuff
+  DescriptionName: StatNameMagicCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3635
+  Name: PvECriticalDamageReductionBuff
+  DescriptionName: StatNamePvECriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15968
+  Name: PvPCriticalDamageReductionBuff
+  DescriptionName: StatNamePvPCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2514
+  Name: AddedDamageBuff
+  DescriptionName: StatNameAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 12788
+  Name: MeleeDamageBuff
+  DescriptionName: StatNameMeleeDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20536
+  Name: RangeDamageBuff
+  DescriptionName: StatNameRangeDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14038
+  Name: MagicDamageBuff
+  DescriptionName: StatNameMagicDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1713
+  Name: PvEAddedDamageBuff
+  DescriptionName: StatNamePvEAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5872
+  Name: PvPAddedDamageBuff
+  DescriptionName: StatNamePvPAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20275
+  Name: NormalAttackDamageBuff
+  DescriptionName: StatNameNormalAttackDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 23113
+  Name: SkillAttackDamageBuff
+  DescriptionName: StatNameSkillAttackDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 19483
+  Name: WeaponMaxDamageBuff
+  DescriptionName: StatNameWeaponMaxDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6066
+  Name: WeaponMinDamageBuff
+  DescriptionName: StatNameWeaponMinDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1381
+  Name: ArmorClassBuff
+  DescriptionName: StatNameArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 25088
+  Name: MeleeArmorClassBuff
+  DescriptionName: StatNameMeleeArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 11916
+  Name: RangeArmorClassBuff
+  DescriptionName: StatNameRangeArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3767
+  Name: MagicArmorClassBuff
+  DescriptionName: StatNameMagicArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8286
+  Name: PvEArmorClassBuff
+  DescriptionName: StatNamePvEArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8501
+  Name: PvPArmorClassBuff
+  DescriptionName: StatNamePvPArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14378
+  Name: NormalAttackArmorClassBuff
+  DescriptionName: StatNameNormalAttackArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 19096
+  Name: SkillArmorClassBuff
+  DescriptionName: StatNameSkillArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 12384
+  Name: DamageScaleBuff
+  DescriptionName: StatNameDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 21824
+  Name: MeleeDamageScaleBuff
+  DescriptionName: StatNameMeleeDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 22765
+  Name: RangeDamageScaleBuff
+  DescriptionName: StatNameRangeDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1844
+  Name: MagicDamageScaleBuff
+  DescriptionName: StatNameMagicDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6539
+  Name: PvEDamageScaleBuff
+  DescriptionName: StatNamePvEDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8284
+  Name: PvPDamageScaleBuff
+  DescriptionName: StatNamePvPDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5596
+  Name: NormalAttackDamageScaleBuff
+  DescriptionName: StatNameNormalAttackDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 25332
+  Name: SkillDamageScaleBuff
+  DescriptionName: StatNameSkillDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6812
+  Name: DamageReduceScaleBuff
+  DescriptionName: StatNameDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1446
+  Name: MeleeDamageReduceScaleBuff
+  DescriptionName: StatNameMeleeDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 3109
+  Name: RangeDamageReduceScaleBuff
+  DescriptionName: StatNameRangeDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5080
+  Name: MagicDamageReduceScaleBuff
+  DescriptionName: StatNameMagicDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7403
+  Name: PvEDamageReduceScaleBuff
+  DescriptionName: StatNamePvEDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2281
+  Name: PvPDamageReduceScaleBuff
+  DescriptionName: StatNamePvPDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 25666
+  Name: NormalAttackDamageReduceScaleBuff
+  DescriptionName: StatNameNormalAttackDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 9552
+  Name: SkillDamageReduceScaleBuff
+  DescriptionName: StatNameSkillDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 18315
+  Name: DamageReductionIgnoreBuff
+  DescriptionName: StatNameDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1985
+  Name: MeleeDamageReductionIgnoreBuff
+  DescriptionName: StatNameMeleeDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1087
+  Name: RangeDamageReductionIgnoreBuff
+  DescriptionName: StatNameRangeDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14480
+  Name: MagicDamageReductionIgnoreBuff
+  DescriptionName: StatNameMagicDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 22851
+  Name: PvEDamageReductionIgnoreBuff
+  DescriptionName: StatNamePvEDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5629
+  Name: PvPDamageReductionIgnoreBuff
+  DescriptionName: StatNamePvPDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14013
+  Name: NormalAttackDamageReductionIgnoreBuff
+  DescriptionName: StatNameNormalAttackDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 24262
+  Name: SkillDamageReductionIgnoreBuff
+  DescriptionName: StatNameSkillDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2909
+  Name: DamageReductionBuff
+  DescriptionName: StatNameDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20543
+  Name: MeleeDamageReductionBuff
+  DescriptionName: StatNameMeleeDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 17650
+  Name: RangeDamageReductionBuff
+  DescriptionName: StatNameRangeDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 24420
+  Name: MagicDamageReductionBuff
+  DescriptionName: StatNameMagicDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 494
+  Name: PvEDamageReductionBuff
+  DescriptionName: StatNamePvEDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 17180
+  Name: PvPDamageReductionBuff
+  DescriptionName: StatNamePvPDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2452
+  Name: NormalAttackDamageReductionBuff
+  DescriptionName: StatNameNormalAttackDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7498
+  Name: SkillDamageReductionBuff
+  DescriptionName: StatNameSkillDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14753
+  Name: SpecialHitAllBuff
+  DescriptionName: StatNameSpecialHitAll
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8828
+  Name: SpecialResistanceAllBuff
+  DescriptionName: StatNameSpecialResistanceAll
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 18218
+  Name: SpecialHitHoldBuff
+  DescriptionName: StatNameSpecialHitHold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6998
+  Name: SpecialResistanceHoldBuff
+  DescriptionName: StatNameSpecialResistanceHold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 29975
+  Name: SpecialHitFearBuff
+  DescriptionName: StatNameSpecialHitFear
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10996
+  Name: SpecialResistanceFearBuff
+  DescriptionName: StatNameSpecialResistanceFear
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 20074
+  Name: SpecialHitSlowBuff
+  DescriptionName: StatNameSpecialHitSlow
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 26829
+  Name: SpecialResistanceSlowBuff
+  DescriptionName: StatNameSpecialResistanceSlow
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 4991
+  Name: SpecialHitMuteBuff
+  DescriptionName: StatNameSpecialHitMute
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 5858
+  Name: SpecialResistanceMuteBuff
+  DescriptionName: StatNameSpecialResistanceMute
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 27251
+  Name: SpecialHitTauntBuff
+  DescriptionName: StatNameSpecialHitTaunt
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7241
+  Name: SpecialResistanceTauntBuff
+  DescriptionName: StatNameSpecialResistanceTaunt
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 23172
+  Name: SpecialHitDarknessBuff
+  DescriptionName: StatNameSpecialHitDarkness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 9081
+  Name: SpecialResistanceDarknessBuff
+  DescriptionName: StatNameSpecialResistanceDarkness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 19819
+  Name: MaxHpBuff
+  DescriptionName: StatNameMaxHp
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 버프용 스탯
+- Id: 1594
+  Name: HpRegenBuff
+  DescriptionName: StatNameHpRegen
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15639
+  Name: HealthPotionIncreaseBuff
+  DescriptionName: StatNameHealthPotionIncrease
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 13666
+  Name: HealthPotionScaleBuff
+  DescriptionName: StatNameHealthPotionScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7167
+  Name: HealthPotionAmountBuff
+  DescriptionName: StatNameItem_HealthPotion_MaxCarryAmount
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 28828
+  Name: MaxMpBuff
+  DescriptionName: StatNameMaxMp
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 버프용 스탯
+- Id: 7001
+  Name: MpRegenBuff
+  DescriptionName: StatNameMpRegen
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 28912
+  Name: MpCostReducePercentBuff
+  DescriptionName: StatNameMpCostReducePercent
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2123
+  Name: CoolTimeReducePercentBuff
+  DescriptionName: StatNameCoolTimeReducePercent
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14528
+  Name: AttackSpeedBonusBuff
+  DescriptionName: StatNameAttackSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14908
+  Name: MoveSpeedBonusBuff
+  DescriptionName: StatNameMoveSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 13132
+  Name: CastSpeedBonusBuff
+  DescriptionName: StatNameCastSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 30218
+  Name: PerfectDamageProbabilityBuff
+  DescriptionName: StatNamePerfectDamageProbability
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 27379
+  Name: PerfectDamageProbResistanceBuff
+  DescriptionName: StatNamePerfectDamageProbResistance
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 14799
+  Name: ExperienceBonusBuff
+  DescriptionName: StatNameExperienceBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 16882
+  Name: GoldBonusBuff
+  DescriptionName: StatNameCurrencyGoldBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1532
+  Name: HitChanceResult
+  DescriptionName: StatNameHitChance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7068
+  Name: MeleeHitResult
+  DescriptionName: StatNameMeleeHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 28428
+  Name: RangeHitResult
+  DescriptionName: StatNameRangeHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 31596
+  Name: MagicHitResult
+  DescriptionName: StatNameMagicHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 17603
+  Name: PvEHitResult
+  DescriptionName: StatNamePvEHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 14000
+  Name: PvPHitResult
+  DescriptionName: StatNamePvPHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 32048
+  Name: NormalAttackHitResult
+  DescriptionName: StatNameNormalAttackHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 12864
+  Name: SkillHitResult
+  DescriptionName: StatNameSkillHit
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 27989
+  Name: DodgeChanceResult
+  DescriptionName: StatNameDodgeChance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25637
+  Name: MeleeDodgeResult
+  DescriptionName: StatNameMeleeDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 26335
+  Name: RangeDodgeResult
+  DescriptionName: StatNameRangeDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 18518
+  Name: MagicDodgeResult
+  DescriptionName: StatNameMagicDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15346
+  Name: PvEDodgeResult
+  DescriptionName: StatNamePvEDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 20452
+  Name: PvPDodgeResult
+  DescriptionName: StatNamePvPDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15138
+  Name: NormalAttackDodgeResult
+  DescriptionName: StatNameNormalAttackDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 20630
+  Name: SkillDodgeResult
+  DescriptionName: StatNameSkillDodge
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 21519
+  Name: DoubleProbabilityResult
+  DescriptionName: StatNameDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 5475
+  Name: MeleeDoubleProbabilityResult
+  DescriptionName: StatNameMeleeDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 1538
+  Name: RangeDoubleProbabilityResult
+  DescriptionName: StatNameRangeDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 1239
+  Name: MagicDoubleProbabilityResult
+  DescriptionName: StatNameMagicDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3127
+  Name: PvEDoubleProbabilityResult
+  DescriptionName: StatNamePvEDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 13510
+  Name: PvPDoubleProbabilityResult
+  DescriptionName: StatNamePvPDoubleProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 22625
+  Name: DoubleResistanceResult
+  DescriptionName: StatNameDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 31500
+  Name: MeleeDoubleResistanceResult
+  DescriptionName: StatNameMeleeDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10392
+  Name: RangeDoubleResistanceResult
+  DescriptionName: StatNameRangeDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 29805
+  Name: MagicDoubleResistanceResult
+  DescriptionName: StatNameMagicDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 29170
+  Name: PvEDoubleResistanceResult
+  DescriptionName: StatNamePvEDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10296
+  Name: PvPDoubleResistanceResult
+  DescriptionName: StatNamePvPDoubleResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 6178
+  Name: CriticalProbabilityResult
+  DescriptionName: StatNameCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 35637
+  Name: MeleeCriticalProbabilityResult
+  DescriptionName: StatNameMeleeCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 16279
+  Name: RangeCriticalProbabilityResult
+  DescriptionName: StatNameRangeCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25047
+  Name: MagicCriticalProbabilityResult
+  DescriptionName: StatNameMagicCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 13591
+  Name: PvECriticalProbabilityResult
+  DescriptionName: StatNamePvECriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 31065
+  Name: PvPCriticalProbabilityResult
+  DescriptionName: StatNamePvPCriticalProbability
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 20071
+  Name: CriticalResistanceResult
+  DescriptionName: StatNameCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24195
+  Name: MeleeCriticalResistanceResult
+  DescriptionName: StatNameMeleeCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10932
+  Name: RangeCriticalResistanceResult
+  DescriptionName: StatNameRangeCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 35431
+  Name: MagicCriticalResistanceResult
+  DescriptionName: StatNameMagicCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 6903
+  Name: PvECriticalResistanceResult
+  DescriptionName: StatNamePvECriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 32078
+  Name: PvPCriticalResistanceResult
+  DescriptionName: StatNamePvPCriticalResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 9511
+  Name: CriticalDamageResult
+  DescriptionName: StatNameCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 26423
+  Name: MeleeCriticalDamageResult
+  DescriptionName: StatNameMeleeCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24310
+  Name: RangeCriticalDamageResult
+  DescriptionName: StatNameRangeCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 5533
+  Name: MagicCriticalDamageResult
+  DescriptionName: StatNameMagicCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15247
+  Name: PvECriticalDamageResult
+  DescriptionName: StatNamePvECriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7847
+  Name: PvPCriticalDamageResult
+  DescriptionName: StatNamePvPCriticalDamage
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 27584
+  Name: CriticalDamageReductionResult
+  DescriptionName: StatNameCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 19746
+  Name: MeleeCriticalDamageReductionResult
+  DescriptionName: StatNameMeleeCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 19430
+  Name: RangeCriticalDamageReductionResult
+  DescriptionName: StatNameRangeCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 4411
+  Name: MagicCriticalDamageReductionResult
+  DescriptionName: StatNameMagicCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 26380
+  Name: PvECriticalDamageReductionResult
+  DescriptionName: StatNamePvECriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3725
+  Name: PvPCriticalDamageReductionResult
+  DescriptionName: StatNamePvPCriticalDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7149
+  Name: AddedDamageResult
+  DescriptionName: StatNameAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 11147
+  Name: MeleeDamageResult
+  DescriptionName: StatNameMeleeDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 4356
+  Name: RangeDamageResult
+  DescriptionName: StatNameRangeDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 9499
+  Name: MagicDamageResult
+  DescriptionName: StatNameMagicDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 28799
+  Name: PvEAddedDamageResult
+  DescriptionName: StatNamePvEAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 2789
+  Name: PvPAddedDamageResult
+  DescriptionName: StatNamePvPAddedDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37642
+  Name: NormalAttackDamageResult
+  DescriptionName: StatNameNormalAttackDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 17687
+  Name: SkillAttackDamageResult
+  DescriptionName: StatNameSkillAttackDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24117
+  Name: WeaponMaxDamageResult
+  DescriptionName: StatNameWeaponMaxDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3551
+  Name: WeaponMinDamageResult
+  DescriptionName: StatNameWeaponMinDamage
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25173
+  Name: ArmorClassResult
+  DescriptionName: StatNameArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3219
+  Name: MeleeArmorClassResult
+  DescriptionName: StatNameMeleeArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25547
+  Name: RangeArmorClassResult
+  DescriptionName: StatNameRangeArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24962
+  Name: MagicArmorClassResult
+  DescriptionName: StatNameMagicArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 36426
+  Name: PvEArmorClassResult
+  DescriptionName: StatNamePvEArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 2865
+  Name: PvPArmorClassResult
+  DescriptionName: StatNamePvPArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 16680
+  Name: NormalAttackArmorClassResult
+  DescriptionName: StatNameNormalAttackArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37099
+  Name: SkillArmorClassResult
+  DescriptionName: StatNameSkillArmorClass
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 1481
+  Name: DamageScaleResult
+  DescriptionName: StatNameDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 40243
+  Name: MeleeDamageScaleResult
+  DescriptionName: StatNameMeleeDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 2820
+  Name: RangeDamageScaleResult
+  DescriptionName: StatNameRangeDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 33647
+  Name: MagicDamageScaleResult
+  DescriptionName: StatNameMagicDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 35382
+  Name: PvEDamageScaleResult
+  DescriptionName: StatNamePvEDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 4733
+  Name: PvPDamageScaleResult
+  DescriptionName: StatNamePvPDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10776
+  Name: NormalAttackDamageScaleResult
+  DescriptionName: StatNameNormalAttackDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37970
+  Name: SkillDamageScaleResult
+  DescriptionName: StatNameSkillDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 17700
+  Name: DamageReduceScaleResult
+  DescriptionName: StatNameDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 17464
+  Name: MeleeDamageReduceScaleResult
+  DescriptionName: StatNameMeleeDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 17764
+  Name: RangeDamageReduceScaleResult
+  DescriptionName: StatNameRangeDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 31112
+  Name: MagicDamageReduceScaleResult
+  DescriptionName: StatNameMagicDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10703
+  Name: PvEDamageReduceScaleResult
+  DescriptionName: StatNamePvEDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 40017
+  Name: PvPDamageReduceScaleResult
+  DescriptionName: StatNamePvPDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 270
+  Name: NormalAttackDamageReduceScaleResult
+  DescriptionName: StatNameNormalAttackDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 13908
+  Name: SkillDamageReduceScaleResult
+  DescriptionName: StatNameSkillDamageReduceScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25999
+  Name: DamageReductionIgnoreResult
+  DescriptionName: StatNameDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 852
+  Name: MeleeDamageReductionIgnoreResult
+  DescriptionName: StatNameMeleeDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 36399
+  Name: RangeDamageReductionIgnoreResult
+  DescriptionName: StatNameRangeDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37324
+  Name: MagicDamageReductionIgnoreResult
+  DescriptionName: StatNameMagicDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 42475
+  Name: PvEDamageReductionIgnoreResult
+  DescriptionName: StatNamePvEDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25043
+  Name: PvPDamageReductionIgnoreResult
+  DescriptionName: StatNamePvPDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3748
+  Name: NormalAttackDamageReductionIgnoreResult
+  DescriptionName: StatNameNormalAttackDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 11748
+  Name: SkillDamageReductionIgnoreResult
+  DescriptionName: StatNameSkillDamageReductionIgnore
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10845
+  Name: DamageReductionResult
+  DescriptionName: StatNameDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 21486
+  Name: MeleeDamageReductionResult
+  DescriptionName: StatNameMeleeDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 23149
+  Name: RangeDamageReductionResult
+  DescriptionName: StatNameRangeDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 2567
+  Name: MagicDamageReductionResult
+  DescriptionName: StatNameMagicDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10312
+  Name: PvEDamageReductionResult
+  DescriptionName: StatNamePvEDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 13098
+  Name: PvPDamageReductionResult
+  DescriptionName: StatNamePvPDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 6122
+  Name: NormalAttackDamageReductionResult
+  DescriptionName: StatNameNormalAttackDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3750
+  Name: SkillDamageReductionResult
+  DescriptionName: StatNameSkillDamageReduction
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15001
+  Name: SpecialHitAllResult
+  DescriptionName: StatNameSpecialHitAll
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 38295
+  Name: SpecialResistanceAllResult
+  DescriptionName: StatNameSpecialResistanceAll
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 1402
+  Name: SpecialHitHoldResult
+  DescriptionName: StatNameSpecialHitHold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 30909
+  Name: SpecialResistanceHoldResult
+  DescriptionName: StatNameSpecialResistanceHold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 42190
+  Name: SpecialHitFearResult
+  DescriptionName: StatNameSpecialHitFear
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37541
+  Name: SpecialResistanceFearResult
+  DescriptionName: StatNameSpecialResistanceFear
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24904
+  Name: SpecialHitSlowResult
+  DescriptionName: StatNameSpecialHitSlow
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 30125
+  Name: SpecialResistanceSlowResult
+  DescriptionName: StatNameSpecialResistanceSlow
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 23990
+  Name: SpecialHitMuteResult
+  DescriptionName: StatNameSpecialHitMute
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15668
+  Name: SpecialResistanceMuteResult
+  DescriptionName: StatNameSpecialResistanceMute
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 26952
+  Name: SpecialHitTauntResult
+  DescriptionName: StatNameSpecialHitTaunt
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7687
+  Name: SpecialResistanceTauntResult
+  DescriptionName: StatNameSpecialResistanceTaunt
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 43583
+  Name: SpecialHitDarknessResult
+  DescriptionName: StatNameSpecialHitDarkness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37522
+  Name: SpecialResistanceDarknessResult
+  DescriptionName: StatNameSpecialResistanceDarkness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15181
+  Name: MaxHpResult
+  DescriptionName: StatNameMaxHp
+  OrderIndex: 125
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 합산 스탯(변경 예정)
+- Id: 5024
+  Name: HpRegenResult
+  DescriptionName: StatNameHpRegen
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 7721
+  Name: HealthPotionIncreaseResult
+  DescriptionName: StatNameHealthPotionIncrease
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 25667
+  Name: HealthPotionScaleResult
+  DescriptionName: StatNameHealthPotionScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 3997
+  Name: MaxMpResult
+  DescriptionName: StatNameMaxMp
+  OrderIndex: 130
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 합산 스탯(변경 예정)
+- Id: 30774
+  Name: MaxHpBase
+  DescriptionName: StatNameMaxHp
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 최대 HP(변경 예정)
+- Id: 17038
+  Name: MaxMpBase
+  DescriptionName: StatNameMaxMp
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Support
+  Comment: 최대 MP(변경 예정)
+- Id: 21469
+  Name: MpRegenResult
+  DescriptionName: StatNameMpRegen
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 2031
+  Name: MpCostReducePercent
+  DescriptionName: StatNameMpCostReducePercent
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 27747
+  Name: CoolTimeReducePercent
+  DescriptionName: StatNameCoolTimeReducePercent
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 35277
+  Name: AttackSpeedBonusResult
+  DescriptionName: StatNameAttackSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 24949
+  Name: MoveSpeedBonusResult
+  DescriptionName: StatNameMoveSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 29196
+  Name: CastSpeedBonusResult
+  DescriptionName: StatNameCastSpeedBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 33122
+  Name: PerfectDamageProbabilityResult
+  DescriptionName: StatNamePerfectDamageProbability
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 16281
+  Name: PerfectDamageProbResistanceResult
+  DescriptionName: StatNamePerfectDamageProbResistance
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 11225
+  Name: ExperienceBonusResult
+  DescriptionName: StatNameExperienceBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 6517
+  Name: CurrencyGoldBonus
+  DescriptionName: StatNameCurrencyGoldBonus
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 40124
+  Name: Penetration
+  DescriptionName: StatNamePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 관통
+- Id: 8527
+  Name: MeleePenetration
+  DescriptionName: StatNameMeleePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 근거리 관통
+- Id: 7446
+  Name: RangePenetration
+  DescriptionName: StatNameRangePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 원거리 관통
+- Id: 46906
+  Name: MagicPenetration
+  DescriptionName: StatNameMagicPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Attack
+  Comment: 마법 관통
+- Id: 37745
+  Name: PvEPenetration
+  DescriptionName: StatNamePvEPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 관통
+- Id: 33289
+  Name: PvPPenetration
+  DescriptionName: StatNamePvPPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 관통
+- Id: 28713
+  Name: PenetrationResistance
+  DescriptionName: StatNamePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 관통 저항
+- Id: 43235
+  Name: MeleePenetrationResistance
+  DescriptionName: StatNameMeleePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 근거리 관통 저항
+- Id: 47403
+  Name: RangePenetrationResistance
+  DescriptionName: StatNameRangePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 원거리 관통 저항
+- Id: 9256
+  Name: MagicPenetrationResistance
+  DescriptionName: StatNameMagicPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Defense
+  Comment: 마법 관통 저항
+- Id: 36283
+  Name: PvEPenetrationResistance
+  DescriptionName: StatNamePvEPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVE
+  Comment: PVE 관통 저항
+- Id: 33815
+  Name: PvPPenetrationResistance
+  DescriptionName: StatNamePvPPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: PVP
+  Comment: PVP 관통 저항
+- Id: 36288
+  Name: PenetrationBuff
+  DescriptionName: StatNamePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 12362
+  Name: MeleePenetrationBuff
+  DescriptionName: StatNameMeleePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1576
+  Name: RangePenetrationBuff
+  DescriptionName: StatNameRangePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 15775
+  Name: MagicPenetrationBuff
+  DescriptionName: StatNameMagicPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6527
+  Name: PvEPenetrationBuff
+  DescriptionName: StatNamePvEPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6283
+  Name: PvPPenetrationBuff
+  DescriptionName: StatNamePvPPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 10791
+  Name: PenetrationResistanceBuff
+  DescriptionName: StatNamePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 9445
+  Name: MeleePenetrationResistanceBuff
+  DescriptionName: StatNameMeleePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 43249
+  Name: RangePenetrationResistanceBuff
+  DescriptionName: StatNameRangePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 16649
+  Name: MagicPenetrationResistanceBuff
+  DescriptionName: StatNameMagicPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 41799
+  Name: PvEPenetrationResistanceBuff
+  DescriptionName: StatNamePvEPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 1861
+  Name: PvPPenetrationResistanceBuff
+  DescriptionName: StatNamePvPPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 35620
+  Name: PenetrationResult
+  DescriptionName: StatNamePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 925
+  Name: MeleePenetrationResult
+  DescriptionName: StatNameMeleePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 6043
+  Name: RangePenetrationResult
+  DescriptionName: StatNameRangePenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 31644
+  Name: MagicPenetrationResult
+  DescriptionName: StatNameMagicPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 19903
+  Name: PvEPenetrationResult
+  DescriptionName: StatNamePvEPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 14233
+  Name: PvPPenetrationResult
+  DescriptionName: StatNamePvPPenetration
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 9585
+  Name: PenetrationResistanceResult
+  DescriptionName: StatNamePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 18416
+  Name: MeleePenetrationResistanceResult
+  DescriptionName: StatNameMeleePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 48005
+  Name: RangePenetrationResistanceResult
+  DescriptionName: StatNameRangePenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 48648
+  Name: MagicPenetrationResistanceResult
+  DescriptionName: StatNameMagicPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 42329
+  Name: PvEPenetrationResistanceResult
+  DescriptionName: StatNamePvEPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 13965
+  Name: PvPPenetrationResistanceResult
+  DescriptionName: StatNamePvPPenetrationResistance
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10194
+  Name: SpecialHitPull
+  DescriptionName: StatNameSpecialHitPull
+  OrderIndex: 111
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 당겨짐 적중
+- Id: 11842
+  Name: SpecialResistancePull
+  DescriptionName: StatNameSpecialResistancePull
+  OrderIndex: 112
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 당겨짐 저항
+- Id: 5255
+  Name: SpecialHitPoison
+  DescriptionName: StatNameSpecialHitPoison
+  OrderIndex: 121
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 중독 적중
+- Id: 33780
+  Name: SpecialResistancePoison
+  DescriptionName: StatNameSpecialResistancePoison
+  OrderIndex: 122
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 중독 저항
+- Id: 31537
+  Name: SpecialHitBleeding
+  DescriptionName: StatNameSpecialHitBleeding
+  OrderIndex: 123
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 출혈 적중
+- Id: 37638
+  Name: SpecialResistanceBleeding
+  DescriptionName: StatNameSpecialResistanceBleeding
+  OrderIndex: 124
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 출혈 저항
+- Id: 35570
+  Name: SpecialHitBurn
+  DescriptionName: StatNameSpecialHitBurn
+  OrderIndex: 125
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 화상 적중
+- Id: 5040
+  Name: SpecialResistanceBurn
+  DescriptionName: StatNameSpecialResistanceBurn
+  OrderIndex: 126
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 화상 저항
+- Id: 6940
+  Name: SpecialHitPullBuff
+  DescriptionName: StatNameSpecialHitPull
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 26103
+  Name: SpecialResistancePullBuff
+  DescriptionName: StatNameSpecialResistancePull
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 8532
+  Name: SpecialHitPoisonBuff
+  DescriptionName: StatNameSpecialHitPoison
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 2400
+  Name: SpecialResistancePoisonBuff
+  DescriptionName: StatNameSpecialResistancePoison
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 15558
+  Name: SpecialHitBleedingBuff
+  DescriptionName: StatNameSpecialHitBleeding
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 11636
+  Name: SpecialResistanceBleedingBuff
+  DescriptionName: StatNameSpecialResistanceBleeding
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 23634
+  Name: SpecialHitBurnBuff
+  DescriptionName: StatNameSpecialHitBurn
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 47875
+  Name: SpecialResistanceBurnBuff
+  DescriptionName: StatNameSpecialResistanceBurn
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 버프용 스탯
+- Id: 46686
+  Name: SpecialHitPullResult
+  DescriptionName: StatNameSpecialHitPull
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 35221
+  Name: SpecialResistancePullResult
+  DescriptionName: StatNameSpecialResistancePull
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 31704
+  Name: SpecialHitPoisonResult
+  DescriptionName: StatNameSpecialHitPoison
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 12967
+  Name: SpecialResistancePoisonResult
+  DescriptionName: StatNameSpecialResistancePoison
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 29562
+  Name: SpecialHitBleedingResult
+  DescriptionName: StatNameSpecialHitBleeding
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 48405
+  Name: SpecialResistanceBleedingResult
+  DescriptionName: StatNameSpecialResistanceBleeding
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 35766
+  Name: SpecialHitBurnResult
+  DescriptionName: StatNameSpecialHitBurn
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 1006
+  Name: SpecialResistanceBurnResult
+  DescriptionName: StatNameSpecialResistanceBurn
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: StatusEffect
+  Comment: 합산 스탯
+- Id: 49294
+  Name: FortressConstructionQueueCount
+  DescriptionName: StatNameFortressConstructionQueueCount
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 건설 대기열 추가
+- Id: 40016
+  Name: FortressHelpMeCount
+  DescriptionName: StatNameFortressHelpMeCount
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 도움 요청 추가 횟수
+- Id: 44600
+  Name: FortressHelpFromGuildCount
+  DescriptionName: StatNameFortressHelpFromGuildCount
+  OrderIndex: 9999
+  ValueDivide: 1
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 길드 도움 수신 추가 횟수
+- Id: 35856
+  Name: FortressHarvestAcceleration
+  DescriptionName: StatNameFortressHarvestAcceleration
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: None
+  Comment: 수확 가속
+- Id: 41804
+  Name: FortressProductAmount_ALL
+  DescriptionName: StatNameFortressProductAmount_ALL
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 전체"
+- Id: 16977
+  Name: FortressProductAmount_Statue_Gold_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Gold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 황금성물"
+- Id: 13643
+  Name: FortressProductAmount_Statue_Exp_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Exp
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 경험의 성물"
+- Id: 49779
+  Name: FortressProductAmount_Statue_Polymorph_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Polymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 초월의 성물"
+- Id: 25826
+  Name: FortressProductAmount_Statue_WeaponPolymorph_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_WeaponPolymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 외형의 성물"
+- Id: 4504
+  Name: FortressProductAmount_Statue_Awakening_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Awakening
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 각성의 성물"
+- Id: 3793
+  Name: FortressProductAmount_Statue_Awareness_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Awareness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 자각의 성물"
+- Id: 764
+  Name: FortressProductAmount_Statue_BuffItem_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_BuffItem
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 소모품 성물"
+- Id: 4439
+  Name: FortressProductAmount_Statue_Time_Seongso
+  DescriptionName: StatNameFortressProductAmount_Statue_Time
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산량 증가 - 시간의 성물"
+- Id: 14968
+  Name: FortressProductionTime_ALL
+  DescriptionName: StatNameFortressProductionTime_ALL
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 전체"
+- Id: 46309
+  Name: FortressProductionTime_Statue_Gold_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Gold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 황금성물"
+- Id: 52850
+  Name: FortressProductionTime_Statue_Exp_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Exp
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 경험의 성물"
+- Id: 34804
+  Name: FortressProductionTime_Statue_Polymorph_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Polymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 초월의 성물"
+- Id: 13644
+  Name: FortressProductionTime_Statue_WeaponPolymorph_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_WeaponPolymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 외형의 성물"
+- Id: 26722
+  Name: FortressProductionTime_Statue_Awakening_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Awakening
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 각성의 성물"
+- Id: 27060
+  Name: FortressProductionTime_Statue_Awareness_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Awareness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 자각의 성물"
+- Id: 11691
+  Name: FortressProductionTime_Statue_BuffItem_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_BuffItem
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 소모품 성물"
+- Id: 51914
+  Name: FortressProductionTime_Statue_Time_Seongso
+  DescriptionName: StatNameFortressProductionTime_Statue_Time
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 생산시간 감소 - 시간의 성물"
+- Id: 16762
+  Name: FortressConstructionTime_ALL
+  DescriptionName: StatNameFortressConstructionTime_ALL
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 전체"
+- Id: 32155
+  Name: FortressConstructionTime_Statue_Gold_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Gold
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 황금성물"
+- Id: 17682
+  Name: FortressConstructionTime_Statue_Exp_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Exp
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 경험의 성물"
+- Id: 12040
+  Name: FortressConstructionTime_Statue_Polymorph_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Polymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 초월의 성물"
+- Id: 1877
+  Name: FortressConstructionTime_Statue_WeaponPolymorph_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_WeaponPolymorph
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 외형의 성물"
+- Id: 24981
+  Name: FortressConstructionTime_Statue_Awakening_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Awakening
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 각성의 성물"
+- Id: 15123
+  Name: FortressConstructionTime_Statue_Awareness_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Awareness
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 자각의 성물"
+- Id: 51119
+  Name: FortressConstructionTime_Statue_BuffItem_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_BuffItem
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 소모품 성물"
+- Id: 8096
+  Name: FortressConstructionTime_Statue_Time_Seongso
+  DescriptionName: StatNameFortressConstructionTime_Statue_Time
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  MaximumFractionalDigits: 2
+  Type: Stat
+  GroupType: Fortress
+  Comment: "[성소버프] 건설시간 감소 - 시간의 성물"
+- Id: 10034
+  Name: SpecialStunTargetDamageScale
+  DescriptionName: StatNameSpecialStunTargetDamageScale
+  OrderIndex: 127
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 기절 대상 피해 증폭
+- Id: 11194
+  Name: SpecialFearTargetDamageScale
+  DescriptionName: StatNameSpecialFearTargetDamageScale
+  OrderIndex: 128
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 공포 대상 피해 증폭
+- Id: 39854
+  Name: SpecialTauntTargetDamageScale
+  DescriptionName: StatNameSpecialTauntTargetDamageScale
+  OrderIndex: 129
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 도발 대상 피해 증폭
+- Id: 769
+  Name: SpecialPullTargetDamageScale
+  DescriptionName: StatNameSpecialPullTargetDamageScale
+  OrderIndex: 130
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 당겨짐 대상 피해 증폭
+- Id: 54070
+  Name: SpecialHoldTargetDamageScale
+  DescriptionName: StatNameSpecialHoldTargetDamageScale
+  OrderIndex: 131
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 속박 대상 피해 증폭
+- Id: 41600
+  Name: SpecialSlowTargetDamageScale
+  DescriptionName: StatNameSpecialSlowTargetDamageScale
+  OrderIndex: 132
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 감속 대상 피해 증폭
+- Id: 50300
+  Name: SpecialMuteTargetDamageScale
+  DescriptionName: StatNameSpecialMuteTargetDamageScale
+  OrderIndex: 133
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 침묵 대상 피해 증폭
+- Id: 43597
+  Name: SpecialDarknessTargetDamageScale
+  DescriptionName: StatNameSpecialDarknessTargetDamageScale
+  OrderIndex: 134
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 암흑 대상 피해 증폭
+- Id: 10749
+  Name: SpecialPoisonTargetDamageScale
+  DescriptionName: StatNameSpecialPoisonTargetDamageScale
+  OrderIndex: 135
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 중독 대상 피해 증폭
+- Id: 10663
+  Name: SpecialBleedingTargetDamageScale
+  DescriptionName: StatNameSpecialBleedingTargetDamageScale
+  OrderIndex: 136
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 출혈 대상 피해 증폭
+- Id: 37284
+  Name: SpecialBurnTargetDamageScale
+  DescriptionName: StatNameSpecialBurnTargetDamageScale
+  OrderIndex: 137
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: StatusEffect
+  Comment: 화상 대상 피해 증폭
+- Id: 24835
+  Name: SpecialStunTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialStunTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 13768
+  Name: SpecialFearTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialFearTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 47747
+  Name: SpecialTauntTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialTauntTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 8369
+  Name: SpecialPullTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialPullTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 2008
+  Name: SpecialHoldTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialHoldTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 51117
+  Name: SpecialSlowTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialSlowTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 35450
+  Name: SpecialMuteTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialMuteTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 7461
+  Name: SpecialDarknessTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialDarknessTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 29308
+  Name: SpecialPoisonTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialPoisonTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 6432
+  Name: SpecialBleedingTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialBleedingTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 56334
+  Name: SpecialBurnTargetDamageScaleBuff
+  DescriptionName: StatNameSpecialBurnTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 버프용 스탯
+- Id: 21358
+  Name: SpecialStunTargetDamageScaleResult
+  DescriptionName: StatNameSpecialStunTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 34120
+  Name: SpecialFearTargetDamageScaleResult
+  DescriptionName: StatNameSpecialFearTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 32503
+  Name: SpecialTauntTargetDamageScaleResult
+  DescriptionName: StatNameSpecialTauntTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 15956
+  Name: SpecialPullTargetDamageScaleResult
+  DescriptionName: StatNameSpecialPullTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 34175
+  Name: SpecialHoldTargetDamageScaleResult
+  DescriptionName: StatNameSpecialHoldTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 37774
+  Name: SpecialSlowTargetDamageScaleResult
+  DescriptionName: StatNameSpecialSlowTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 10489
+  Name: SpecialMuteTargetDamageScaleResult
+  DescriptionName: StatNameSpecialMuteTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 36503
+  Name: SpecialDarknessTargetDamageScaleResult
+  DescriptionName: StatNameSpecialDarknessTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 38715
+  Name: SpecialPoisonTargetDamageScaleResult
+  DescriptionName: StatNameSpecialPoisonTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 38949
+  Name: SpecialBleedingTargetDamageScaleResult
+  DescriptionName: StatNameSpecialBleedingTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯
+- Id: 48167
+  Name: SpecialBurnTargetDamageScaleResult
+  DescriptionName: StatNameSpecialBurnTargetDamageScale
+  OrderIndex: 9999
+  ValueDivide: 10000
+  SuffixText: UIWordPercent
+  GroupType: None
+  Comment: 합산 스탯

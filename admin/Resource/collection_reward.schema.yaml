@@ -1,0 +1,68 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ContentType
+    - CollectionType
+    - CollectionTarget
+    - Registration
+  properties: 
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    ContentType:
+      type: string
+      enum:
+        - Polymorph
+        - Awakening
+        - ItemSet
+        - Solidarity
+        - Divinity
+    CollectionType:
+      type: string
+      enum:
+        - Polymorph_Card # 초월체 외형
+        - Polymorph_Skin # 초월체 스킨 외형
+        - Polymorph_Weapon # 무기 외형
+        - Awakening_Expand # 각성 해방 효과
+        - Awakening_Level # 각성 단계 효과
+        - Awakening_Grade # 각성 등급 효과
+        - Polymorph_CardLevel # 초월체 외형 강화
+        - Polymorph_WeaponLevel # 무기 외형 강화
+        - ItemSet # 아이템 세트 효과
+        - Solidarity_Enchant_Level # 성물 결속 효과
+        - DivinitySet # 권능 효과
+    CollectionTarget: # 수집 대상. 레코드 마다 고유값(unique) 지정 필요.
+      type: string
+      ref: collection_target
+    Registration:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - CumulativeMaxAmount
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          CumulativeMaxAmount: # 등록에 필요한 재료 개수
+            type: integer
+            minimum: 1
+          RewardBuff:
+            type: string
+            ref: buff
+          RewardLearnedSkill:
+            type: string
+            ref: item

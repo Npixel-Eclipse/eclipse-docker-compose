@@ -1,0 +1,259 @@
+- Id: 1
+  Name: Guild
+  GuildCollectionBenefitCategory: Basic
+  Constants:
+    - Name: MaxMemberCount
+      Value: MaxGuildMemberCount
+    - Name: RequiredLevelOnCreate
+      Value: MinGuildCreateLevel
+    - Name: RequiredGoldOnCreate
+      Value: GoldForCreateGuild
+    - Name: MaxAllyCount
+      Value: MaxGuildAllianceCount
+    - Name: MaxHostileCount
+      Value: MaxGuildHostileCount
+    - Name: MaxAllyProposalCount
+      Value: MaxGuildAllyProposalCount
+    - Name: RedAlertRemainTimeSeconds
+      IntValue: 10800
+  Descriptions:
+    - Name: GuildRoleNormal
+      Value: UIWord_Guild_Role_Normal
+    - Name: GuildRoleMaster
+      Value: UIWord_Guild_Master
+    - Name: GuildRoleSubMaster
+      Value: UIWord_Guild_Role_SubMaster
+    - Name: GuildRoleRoyal
+      Value: UIWord_Guild_Role_Royal
+    - Name: Conncted
+      Value: UIWord_Connecting
+    - Name: DoNotConnected
+      Value: UIWord_Do_Not_Connect
+  GuildItem:
+    - Type: Exp
+      GuildItemID: Experience
+  GuildCollectionRewardFormat:
+    - Type: DecreaseContributeRechargeTime
+      FormatDescription: UIWord_GuildTech_EffectTimeValue
+  GuildStorageContentDescription:
+    - ContentType: HuntingZone
+      Description: UIWord_Menu_HuntingZone
+    - ContentType: Boss
+      Description: UIWord_Guild_Role_Royal
+    - ContentType: Auction
+      Description: UIWord_GuildStorageLog_List_Content_Auction
+  AdditionalContribute: AdditionalContribute
+  UITab:
+    - Group: Join
+      SubGroup: Create
+      Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+      Description: UIWord_Guild_Create
+      Comment: 길드 생성
+    - Group: Join
+      SubGroup: GuildList
+      TabIndex: 1
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/TabIconGuildRecommand_Sprite.TabIconGuildRecommand_Sprite
+      Description: UIWord_GUILD_List
+    - Group: Join
+      SubGroup: WaitApplyGuildList
+      TabIndex: 2
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/FIconGuildSignup_Sprite.FIconGuildSignup_Sprite
+      Description: UIWord_GuildJoin_Approval
+      Comment: 길드 신청 리스트
+    - Group: Main
+      SubGroup: Summary
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/TabIconGuildInfo_Sprite.TabIconGuildInfo_Sprite
+      Description: UIWord_Guild_Summary
+      Comment: 길드 개요
+    - Group: Main
+      SubGroup: MemberList
+      TabIndex: 1
+      Icon: /Game/UI/Guild_SP/TabIconGuildMember_Sprite.TabIconGuildMember_Sprite
+      Description: UIWord_Guild_Role_Normal
+      Comment: 길드 멤버 리스트
+    - Group: Main
+      SubGroup: Tech
+      TabIndex: 2
+      Icon: /Game/UI/Guild_SP/FIconGuildCharacteristic_Sprite.FIconGuildCharacteristic_Sprite
+      Description: UIWord_Guild_Characteristic
+      ContentLimit: GuildTrait
+      Comment: 길드 특성
+    - Group: Main
+      SubGroup: Quest
+      TabIndex: 3
+      Icon: /Game/UI/Guild_SP/TabIconGuildQuest_Sprite.TabIconGuildQuest_Sprite
+      Description: UIWord_Guild_Quest
+      ContentLimit: GuildQuest
+      Comment: 길드 퀘스트
+    - Group: Main
+      SubGroup: Shop
+      TabIndex: 4
+      Icon: /Game/UI/Guild_SP/FIconGuildShop_Sprite.FIconGuildShop_Sprite
+      Description: UIWord_Guild_Shop
+      Comment: 길드 상점
+    - Group: Main
+      SubGroup: Storage
+      TabIndex: 5
+      Icon: /Game/UI/Guild_SP/FIconGuildStorage_Sprite.FIconGuildStorage_Sprite
+      Description: UIWord_Guild_Storage
+      ContentLimit: GuildStorage
+      Comment: 길드 창고
+    - Group: Main
+      SubGroup: Auction
+      TabIndex: 6
+      Icon: /Game/UI/Guild_SP/FIconGuildAuction_Sprite.FIconGuildAuction_Sprite
+      Description: UIWord_Guild_Auction
+      Comment: 길드 경매
+    - Group: Proposal
+      SubGroup: Hostile
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/TabIconGuildDungeon_Sprite.TabIconGuildDungeon_Sprite
+      Description: UIWord_Guild_Hostile
+      Comment: 적대 리스트
+    - Group: Proposal
+      SubGroup: Ally
+      TabIndex: 1
+      Icon: /Game/UI/Guild_SP/TabIconGuildInfo_Sprite.TabIconGuildInfo_Sprite
+      Description: UIWord_Guild_Friendly
+      Comment: 우호 리스트
+    - Group: Proposal
+      SubGroup: Proposal
+      TabIndex: 2
+      Icon: /Game/UI/Guild_SP/TabIconGuildMember_Sprite.TabIconGuildMember_Sprite
+      Description: UIWord_Guild_Proposal_Status
+      Comment: 요청 현황
+    - Group: Mark
+      SubGroup: Symbol
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/TabIconGuildSymbolMark_png_Sprite.TabIconGuildSymbolMark_png_Sprite
+      Description: UIWord_Guild_Mark_Symbol
+      Comment: 마크 심볼
+    - Group: Mark
+      SubGroup: Frame
+      TabIndex: 1
+      Icon: /Game/UI/Guild_SP/TabIconGuildSymbolFrame_Sprite.TabIconGuildSymbolFrame_Sprite
+      Description: UIWord_Guild_Mark_Frame
+      Comment: 마크 프레임
+    - Group: Support
+      SubGroup: MemberSupport
+      DefaultTab: true
+      Description: Fortress_OtherSupport
+      Comment: 멤버 지원 요청 리스트
+    - Group: Support
+      SubGroup: MySupport
+      TabIndex: 1
+      Description: Fortress_MySupport
+      Comment: 나의 지원 요청 리스트
+    - Group: Tech
+      SubGroup: Tech_Guild
+      DefaultTab: true
+      Icon: /Game/UI/Guild_SP/FIconGuildTechType01_Sprite.FIconGuildTechType01_Sprite
+      GuildCollectionCategory: TechGuild
+      Description: UIWord_GuildTech_Guild
+      Comment: 길드 연구
+    - Group: Tech
+      SubGroup: Tech_Battle
+      TabIndex: 1
+      Icon: /Game/UI/Guild_SP/FIconGuildTechType02_Sprite.FIconGuildTechType02_Sprite
+      GuildCollectionCategory: TechBattle
+      Description: UIWord_GuildTech_Battle
+      Comment: 전투 연구
+    - Group: Tech
+      SubGroup: Tech_Tactics
+      TabIndex: 2
+      Icon: /Game/UI/Guild_SP/FIconGuildTechType03_Sprite.FIconGuildTechType03_Sprite
+      GuildCollectionCategory: TechTactics
+      Description: UIWord_GuildTech_Tactics
+      Comment: 전술 연구
+    - Group: Management
+      SubGroup: Management_Info
+      DefaultTab: true
+      Description: UIWord_Guild_Management_GuildInfo
+      Comment: 정보
+    - Group: Management
+      SubGroup: Management_Mark
+      TabIndex: 1
+      Description: UIWord_Guild_Management_GuildMark
+      Comment: 마크
+    - Group: Management
+      SubGroup: Management_Privilege
+      TabIndex: 2
+      Description: UIWord_Guild_Management_Privilege
+      Privilege: UpdatePrivilege
+      Comment: 권한
+    - Group: Storage
+      SubGroup: Storage_Storage
+      Description: UIWord_GuildStorage_Storage
+      Comment: 길드창고
+    - Group: Storage
+      SubGroup: Storage_Sell
+      TabIndex: 1
+      Description: UIWord_GuildStorage_Sell
+      Comment: 길드 판매
+    - Group: Storage
+      SubGroup: Storage_Share
+      TabIndex: 2
+      Description: UIWord_GuildStorage_Share
+      Comment: 길드 분배
+    - Group: Storage
+      SubGroup: Storage_Log
+      TabIndex: 3
+      Description: UIWord_GuildStorage_Log
+      Comment: 관리 내역
+    - Group: Log
+      SubGroup: Log_All
+      Description: UIWord_GuildLog_All
+      Comment: 로그 All
+    - Group: Log
+      SubGroup: Log_Guild
+      TabIndex: 1
+      Description: UIWord_GuildLog_Guild
+      Comment: 로그 길드
+    - Group: Log
+      SubGroup: Log_Relation
+      TabIndex: 2
+      Description: UIWord_GuildLog_Relation
+      Comment: 로그 관계
+    - Group: Log
+      SubGroup: Log_Tech
+      TabIndex: 3
+      Description: UIWord_GuildLog_Tech
+      Comment: 로그 연구
+    - Group: DistributionType
+      SubGroup: DistributionType_Genaral
+      Description: UIWord_GuildShare_Tab_Normal
+      Comment: 일반
+    - Group: DistributionType
+      SubGroup: DistributionType_HuntingZone
+      TabIndex: 1
+      Description: UIWord_GuildShare_Tab_HuntingZone
+      Comment: 사냥터소유
+    - Group: StorageDistribution
+      SubGroup: StorageDistribution_Equal
+      Description: UIWord_GuildShare_ShareType_Equal
+      SubDescription: UIWord_GuildShare_ShareType_Equal_Desc
+      Comment: 균등 분배
+    - Group: StorageDistribution
+      SubGroup: StorageDistribution_Point
+      TabIndex: 1
+      Description: UIWord_GuildShare_ShareType_Contribution
+      SubDescription: UIWord_GuildShare_ShareType_Contribution_Desc
+      Comment: 주간 기여도 분배
+    - Group: HuntingZoneDistribution
+      SubGroup: HuntingZoneDistribution_Point
+      Description: UIWord_GuildShare_ShareType_Auto
+      SubDescription: UIWord_GuildShare_ShareType_Auto_Desc
+      Comment: 사냥터 소유 분배
+    - Group: Auction
+      SubGroup: Auction_Main
+      DefaultTab: true
+      Description: UIWord_GuildAuction_Auction
+      Comment: 길드 경매
+    - Group: Auction
+      SubGroup: Auction_Log
+      Description: UIWord_GuildAuction_Log
+      Comment: 길드 경매 내역
+  Merchant: Merchant_Basic_Guild

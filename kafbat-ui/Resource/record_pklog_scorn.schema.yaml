@@ -1,0 +1,26 @@
+# 멸시 사용 시 부여하는 호칭
+# 정확히는 해당 대상에게 버프를 부여하는 것으로 동작
+# pk log uuid 와 이 테이블의 id 한 쌍이 유효한 요청 하나가 된다
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    comment:
+      type: string
+    Buff: # 멸시할 대상에게 부여할 버프 (CharacterTitle)
+      type: string
+      ref: buff
+    BuffDuration: # 버프 지속 시간
+      type: integer # 단위 : 초
+  required:
+    - Id
+    - Name
+    - Buff
+    - BuffDuration

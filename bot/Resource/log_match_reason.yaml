@@ -1,0 +1,6 @@
+- Name: FINISH
+  Value: 0
+  Description: 정상 종료
+- Name: UNKNOWN
+  Value: 1
+  Description: 비정상적으로 오래된 매치가 타이머에 의해 끝나는 경우

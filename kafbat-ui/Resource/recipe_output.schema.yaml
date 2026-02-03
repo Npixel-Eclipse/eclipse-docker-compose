@@ -1,0 +1,278 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - RecipeType
+    - Output
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    
+    #네이밍 규칙
+    #제작: Craft_Output_결과물아이템이름 (ex. Craft_Output_Accessory_Earring_GalanPearlEarrings)
+    #합성: Merge_Output_PolyG1toG2 (합성 재료/결과를 직관적으로 알기 위해 등급 숫자를 적어주는 형태)
+    #상자: Box_Output_상자아이템이름 (ex. Box_Output_Box_MeterialBox)
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Comment:
+      type: string
+
+    RecipeType:
+      type: string
+      enum: 
+        - LuckyBag
+        - Craft
+        - Merge
+        - Disassemble
+        - CardPack
+        - SkillLearn
+        - GuildQuestRewardBox
+        - DivinityCraft
+    #제작 화면에서 어떤 카테고리에 포함될 것인지 세팅하는 컬럼. Craft인 경우에만 설정하면 됨.
+    RecipeDisplay:
+      type: string
+      ref: recipe_display
+    
+    #제작 시스템에서 상세 제작 리스트의 정렬 우선순위 설정 컬럼. 값이 낮을수록 위쪽 정렬됨.
+    #정렬 규칙: 1) 제작 가능 아이템 2) 등급 내림차순 3) DisplayOrder 오름차순 4) Name 알파벳 순
+    DisplayOrder:
+      type: integer
+      default: 9999999
+
+    # 제작 횟수 제한 단위
+    LimitCountUnit:
+      type: string
+      enum:
+        - Character
+        - Server
+        - AllServer
+
+    # 제작 횟수 제한 초기화 시기
+    LimitCountRefresh:
+      type: string
+      enum:
+        - Daily
+        - Weekly
+        - Monthly
+    
+    # 제작 횟수 제한 수량
+    LimitCount:
+      type: integer
+
+    # 선착순 제작 단위
+    LimitOutputUnit:
+      type: string
+      enum:
+        - Server
+        - AllServer
+    
+    # 선착순 제작 초기화 시기
+    LimitOutputRefresh:
+      type: string
+      enum:
+        - Daily
+        - Weekly
+        - Monthly
+    
+    # 선착순 제작
+    LimitOutput:
+      type: integer
+
+    # 기간 제작 시작 일시
+    # ex) 2024년 1월 1일 오전 10시 0분 -> 2024-01-01T10:00:00
+    StartDateTime:
+      type: string
+      format: date-time
+
+    # 기간 제작 종료 일시
+    # ex) 2024년 1월 6일 오후 10시 0분 -> 2024-01-06T22:00:00
+    EndDateTime:
+      type: string
+      format: date-time
+
+    HideResultInfo:
+      type: boolean
+      default: false
+    
+    # 천장
+    SuccessCount:
+      type: integer
+    # 천장 기록 소유권
+    OwnerBoundSucessCount:
+      type: string
+      enum:
+        - Character
+        - Server
+        - Account
+    #테이블 셀
+    Output:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - ResultType
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          
+          #결과물의 그룹 설정
+            #그룹이 없는 경우, 각 데이터가 독립 확률로 처리
+            #그룹이 있는 경우, 동일 그룹 내 Probability에 따라 결과물 획득
+            #동일 그룹의 Probability 값의 합은 100%여야 함
+            ####합산 확률로 처리하려면 반드시 그룹 입력 필요
+          Group:
+            type: integer
+          
+          #제작 시스템에서의 결과 타입 설정
+          ResultType:
+            type: string
+            ref: recipe_result_type
+            default: Success
+            
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+            
+          #결과물의 아이템을 특정
+          #아이템 특정하는 경우 Category, Grade 컬럼은 입력 불필요
+          Item:
+            type: string
+            ref: item
+            
+          #-------------------------------------
+          # 아래 기재된 속성들이 모두 일치하는 아이템들 중 하나가 랜덤으로 선택된다.
+          # 위에서 Item이 특정된 경우, 이 영역의 설정은 무효.
+          
+          Category:
+            type: string
+            ref: item_category
+            
+          Grade:
+            type: string
+            ref: grade
+            
+          CanGainOnMerge:
+            type: boolean
+          #-------------------------------------
+          
+          # 결과물에 EnchantLevel이 설정되어 지급된다.
+          EnchantLevel:
+             type: integer
+
+          # 지급 수량
+          ## Amount가 0이면 지급되지 않는다.
+          Amount:
+            type: integer
+            minimum: 0
+            default: 1
+            visible: true
+
+          # 지급 대상 클래스
+          ## LuckyBag에서만 작성되어야 한다.
+          ## 지급 대상 클래스가 지정된 경우 Group과 Probability가 존재해서는 안된다.
+          ClassLimit:
+            type: array
+            items:
+              type: string
+              ref: class
+
+          # 선택 보상 여부
+          ## LuckyBag에서만 True로 설정해야 한다.
+          ## 선택 보상이 True인 경우 Group이 존재해서는 안된다.
+          Selectable:
+            type: boolean
+            default: false
+
+    # 페이백
+    Payback:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - ResultType
+          - PaybackTarget
+          - Item
+          - Amount
+          - Method
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          ResultType:
+            type: string
+            enum:
+              - Success
+              - Failure
+          PaybackTarget:
+            type: string
+            enum:
+              - Self
+              - Guild
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+            minimum: 1
+          # 페이백 지급 방법
+          ## Postbox: 우편함
+          ## Inventory: 인벤토리 (되도록 Invisible 아이템만 설정. 슬롯 검사하지 않음.)
+          Method:
+            type: string
+            enum:
+              - Postbox
+              - Inventory
+
+    # 선택 보상 선택 개수
+    ## LuckyBag에서만 설정되어야 한다.
+    ## SelectCount의 수치만큼 보상을 선택해야 한다.
+    SelectCount:
+      type: integer
+      minimum: 1
+      default: 0
+
+    # 다시뽑기 설정 테이블셀
+    ## 설정된 아이템, 카테고리, 그룹에 해당하는 아이템이 Output의 결과로 선택되면 다시뽑기 아이템으로 대체하여 지급한다.
+    Reroll:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - RerollItem
+        properties:
+          Id:
+            type: integer
+          Item:
+            type: string
+            ref: item
+          Category:
+            type: string
+            ref: item_category
+          Grade:
+            type: string
+            ref: grade
+          RerollItem:
+            type: string
+            ref: item
+    
+    # 트리에서 하위 재료를 펼칠 수 없도록 설정
+    NotExpand:
+      type: boolean
+      default: false

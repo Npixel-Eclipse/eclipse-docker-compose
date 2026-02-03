@@ -1,0 +1,18 @@
+- Id: 99999
+  Name: Simulation
+  Parent: World
+  NavSource: World
+  Comment: 시뮬레이션 테스트 Address
+  Land: Simulation
+  DistrictType: Realm
+  OfflineMode: Unavailable
+- Id: 99998
+  Name: SimulationTown
+  Parent: World
+  NavSource: World
+  Comment: 시뮬레이션 마을 Address (TownBuff 적용)
+  Land: SimulationTown
+  WelcomeSkill:
+    - Skill: IsTownBuff_Skill
+  DistrictType: Realm
+  OfflineMode: Unavailable

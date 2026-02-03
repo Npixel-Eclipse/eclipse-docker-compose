@@ -1,0 +1,261 @@
+- Id: 5
+  Name: Guild
+  Comment: 길드
+  TargetType: NONE
+- Id: 50
+  Name: Guild_Invited
+  Comment: 길드 초대 (길드 초대 UI 접근 시 종료)
+  Parent: Guild
+  TargetType: ID
+  TargetDescription: 길드 ID
+- Id: 51
+  Name: Guild_Manage
+  Comment: 길드 관리
+  Parent: Guild
+  TargetType: NONE
+- Id: 144
+  Name: Guild_Manage_Mark
+  Comment: 신규 길드 마크 (종료 조건 기획 필요)
+  Parent: Guild_Manage
+  TargetType: ID
+  TargetDescription: 길드 마크 ID
+- Id: 536
+  Name: Guild_Activity
+  Comment: 길드 활동
+  Parent: Guild
+  TargetType: NONE
+- Id: 983
+  Name: Guild_Activity_Reward
+  Comment: 기여도 보상
+  Parent: Guild_Activity
+  TargetType: NONE
+- Id: 425
+  Name: Guild_Activity_Reward_Weekly
+  Comment: 주간 기여도 보상 (보상을 받으면 종료)
+  Parent: Guild_Activity_Reward
+  TargetType: NONE
+- Id: 316
+  Name: Guild_Activity_Reward_Accumulated
+  Comment: 누적 기여도 보상 (보상을 받으면 종료)
+  Parent: Guild_Activity_Reward
+  TargetType: NONE
+- Id: 140
+  Name: Guild_Member
+  Comment: 길드 인원
+  Parent: Guild
+  TargetType: NONE
+- Id: 574
+  Name: Guild_Member_WaitList
+  Comment: 길드 가입 신청 인원 (가입 관리 UI 입장할때 종료)
+  Parent: Guild_Member
+  TargetType: UUID
+  TargetDescription: 길드 가입 신청 캐릭터 UUID
+- Id: 739
+  Name: Guild_Mission
+  Comment: 길드 미션
+  Parent: Guild
+  TargetType: NONE
+- Id: 1327
+  Name: Guild_Mission_Quest
+  Comment: 완료된 길드 임무 (완료 시 종료)
+  Parent: Guild_Mission
+  TargetType: ID
+  TargetDescription: 임무(퀘스트) ID
+- Id: 294
+  Name: Guild_Mission_Give
+  Comment: 길드 헌납
+  Parent: Guild_Mission
+  TargetType: NONE
+- Id: 1411
+  Name: Guild_Mission_Give_Reward
+  Comment: 헌납 보상 (보상을 받은 경우 종료)
+  Parent: Guild_Mission_Give
+  TargetType: NONE
+- Id: 1475
+  Name: Guild_Mission_Give_EndDate
+  Comment: 헌납 기간 종료 (헌납 UI 접근 시 종료)
+  Parent: Guild_Mission_Give
+  TargetType: NONE
+- Id: 2734
+  Name: Guild_Help
+  Comment: 길드 지원 요청
+  Parent: Guild
+  TargetType: NONE
+- Id: 3671
+  Name: Guild_Store
+  Comment: 길드 창고 보관
+  Parent: Guild
+  TargetType: NONE
+- Id: 3901
+  Name: Guild_Sell
+  Comment: 길드 판매
+  Parent: Guild
+  TargetType: NONE
+- Id: 973
+  Name: Guild_Acquirable_Trait
+  Comment: 길드 습득 가능 연구
+  Parent: Guild
+  TargetType: ID
+  TargetDescription: guild_collection ID
+- Id: 319
+  Name: DeadPenalty
+  Comment: 사망패널티
+  TargetType: NONE
+- Id: 1292
+  Name: DeadPenalty_Experience
+  Comment: 사망패널티 경험치 (탭 클릭시 종료)
+  Parent: DeadPenalty
+  TargetType: NONE
+- Id: 347
+  Name: DeadPenalty_Equipment
+  Comment: 사망패널티 장비 (탭 클릭시 종료)
+  Parent: DeadPenalty
+  TargetType: NONE
+- Id: 819
+  Name: Party
+  Comment: 파티
+  TargetType: NONE
+- Id: 345
+  Name: Party_Invited
+  Comment: 파티 초대
+  Parent: Party
+  TargetType: NONE
+- Id: 1240
+  Name: Trade
+  Comment: 거래소
+  TargetType: NONE
+- Id: 679
+  Name: Trade_Sell
+  Comment: 거래소 판매 (모든 정산 완료시 종료)
+  Parent: Trade
+  TargetType: NONE
+- Id: 2330
+  Name: Achievement
+  Comment: 업적 - 완료 업적 (보상 수령시 종료)
+  TargetType: ID
+  TargetDescription: 업적(퀘스트) ID
+- Id: 124
+  Name: Event
+  Comment: 이벤트 (보상 수령시 종료)
+  TargetType: ID
+  TargetDescription: 이벤트 ID
+- Id: 419
+  Name: Chat
+  Comment: 채팅
+  TargetType: NONE
+- Id: 2042
+  Name: Chat_Block
+  Comment: 채팅 차단 목록 갱신 (차단 목록 UI 접근시 종료))
+  Parent: Chat
+  TargetType: NONE
+- Id: 1156
+  Name: FieldBook
+  Comment: 도감
+  TargetType: NONE
+- Id: 2737
+  Name: FieldBook_Item
+  Comment: 아이템 도감
+  Parent: FieldBook
+  TargetType: NONE
+- Id: 1243
+  Name: FieldBook_Item_Registrable
+  Comment: 도감 등록 가능 아이템
+  Parent: FieldBook_Item
+  TargetType: UUID
+  TargetDescription: 아이템 UUID
+- Id: 927
+  Name: PostBox
+  Comment: 우편함
+  TargetType: NONE
+- Id: 2520
+  Name: PostBox_General
+  Comment: 우편함 일반
+  Parent: PostBox
+  TargetType: NONE
+- Id: 1176
+  Name: PostBox_Account
+  Comment: 우편함 계정
+  Parent: PostBox
+  TargetType: NONE
+- Id: 699
+  Name: PostBox_Personal
+  Comment: 우편함 개인
+  Parent: PostBox
+  TargetType: NONE
+- Id: 3366
+  Name: PostBox_Guild
+  Comment: 우편함 길드
+  Parent: PostBox
+  TargetType: NONE
+- Id: 818
+  Name: Record_Room
+  Comment: 기록실
+  TargetType: NONE
+- Id: 1839
+  Name: Record_Room_Ranking
+  Comment: 기록실 랭킹
+  Parent: Record_Room
+  TargetType: NONE
+- Id: 1841
+  Name: Record_Room_Ranking_Title
+  Comment: 기록실 랭킹 칭호
+  Parent: Record_Room_Ranking
+  ClientRedDotPath: Record_Room_Ranking_Title
+  TargetType: NONE
+- Id: 1847
+  Name: Record_Room_Pk_Log
+  Comment: 기록실 pk 로그
+  TargetType: NONE
+- Id: 1846
+  Name: Record_Room_Pk_Log_List
+  Comment: 기록실 pk 로그 리스트
+  Parent: Record_Room_Pk_Log
+  TargetType: BYTES_UUID
+- Id: 1840
+  Name: HuntingZone
+  Comment: 사냥터 소유
+  TargetType: NONE
+- Id: 1842
+  Name: HuntingZone_Specialty_Shop
+  Comment: 사냥터 소유 정산 후에 입찰 참여 길드들 특산품 상점 이용 가능 알림
+  Parent: HuntingZone
+  TargetType: NONE
+- Id: 1843
+  Name: HuntingZone_Bid_Request
+  Comment: 사냥터 소유 입찰 기간 시작 시 권한이 주어진 길드원에게 입찰 요청 레드닷
+  Parent: HuntingZone
+  TargetType: NONE
+- Id: 1844
+  Name: HuntingZone_Bid_Activate
+  Comment: 사냥터 소유 길드 마스터 등이 입찰 요청 완료하면 길드원들에게 입찰 활성화 알림
+  Parent: HuntingZone
+  TargetType: NONE
+- Id: 1845
+  Name: HuntingZone_Owner_Specialty_Shop
+  Comment: 사냥터 소유 정산 후에 영토 소유 길드들 특산품 상점 이용 가능 알림
+  Parent: HuntingZone
+  TargetType: NONE
+- Id: 1940
+  Name: Pk_Log
+  Comment: PVP 기록 시스템
+  TargetType: NONE
+- Id: 1941
+  Name: Pk_Log_List
+  Comment: PVP 기록 시스템 전체
+  Parent: Pk_Log
+  TargetType: BYTES_UUID
+- Id: 1942
+  Name: Pk_Log_List_Mine
+  Comment: PVP 기록 시스템 내 기록만
+  Parent: Pk_Log_List
+  TargetType: BYTES_UUID
+- Id: 1943
+  Name: Pk_Log_List_Guild
+  Comment: PVP 기록 시스템 길드 기록만
+  Parent: Pk_Log_List
+  TargetType: BYTES_UUID
+- Id: 1944
+  Name: Pk_Log_List_Wanted
+  Comment: PVP 기록 시스템 척살령 기록만
+  Parent: Pk_Log_List
+  TargetType: BYTES_UUID

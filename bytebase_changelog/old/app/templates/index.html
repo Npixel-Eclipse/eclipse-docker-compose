@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head><meta charset="UTF-8"><title>Bytebase Changelog Exporter</title></head>
+    <body>
+        <h2>기준 시간 이후의 Bytebase 변경사항(ChangeLog)을 추출합니다 (KST)</h2>
+        <h2>Total 파일은 현재 기준 스키마의 내용이 반영됩니다 (KST)</h2>
+        <h2>diff 파일은 변경내용이 없는 경우 해당 서버의 sql 파일은 생성되지 않습니다 (KST)</h2>
+        <h2>다운로드는 Eclipse Dev Instance의 데이터를 대상으로 합니다.</h2>
+        <h2>Daily 다운로드는 Eclipse Daily Instance의 데이터를 대상으로 합니다.</h2>
+        <form method="post">
+            기준 시간 (YYYY-MM-DD HH:MM:SS)[예>2025-04-24 00:00:00]: <input type="text" name="target_timestamp">
+            <input type="submit" name="download_type" value="다운로드">
+            <input type="submit" name="download_type" value="Daily 다운로드">
+        </form>
+    </body>
+    </html>
+

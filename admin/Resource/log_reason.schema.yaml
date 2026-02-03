@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Name
+  properties:
+    Name:
+      type: string
+      pattern: ^[A-Z0-9_]*$
+    Value:
+      type: integer
+      minimum: 0
+      visible: true
+    Description:
+      type:
+        - string
+        - number
+      visible: true

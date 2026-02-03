@@ -1,0 +1,66 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "FortressLogServiceProto";
+
+message UpgradeBuildingStarted {
+  int64 building_id = 1;
+  int64 level_before = 2;
+  int64 level = 3;
+  int64 construction_queue = 4;
+}
+
+message UpgradeBuildingFinished {
+  int64 building_id = 1;
+  int64 level_before = 2;
+  int64 level = 3;
+  int64 construction_queue = 4;
+}
+
+message ReduceBuildingUpgrade {
+  int64 building_id = 1;
+  int64 reduced_time = 2;
+  double actual_reduced_time = 3;
+}
+
+message HarvestBuilding {
+  int64 building_id = 1;
+  repeated Item items = 2;
+  int64 level = 3;
+
+  message Item {
+    int64 item_id = 1;
+    int64 amount = 2;
+  }
+}
+
+message ExpandConstructionQueue {
+  int64 construction_queue_before = 1;
+  int64 construction_queue = 2;
+}
+
+message HelpBuilding {
+  int64 guild_id = 1;
+  int64 building_id = 2;
+  int64 target_account_id = 3;
+  int64 help_count = 4;
+  int64 additional_help_count = 5;
+}
+
+// 즉시 수확 아이템 사용 로그
+message InstantHarvestBuildingUse {
+  string building_name = 1;  // 건물 이름
+  int64 building_level = 2;  // 건물 레벨
+}
+
+// 즉시 수확 보상 획득 로그
+message InstantHarvestBuildingReward {
+  repeated RewardItem items = 1;
+
+  message RewardItem {
+    string item_name = 1;    // 아이템 이름
+    int64 amount = 2;        // 수량
+  }
+}

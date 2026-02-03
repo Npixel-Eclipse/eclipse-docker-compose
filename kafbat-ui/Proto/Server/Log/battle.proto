@@ -1,0 +1,179 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "BattleLogServiceProto";
+
+message ReloadResource {
+  string service_name = 1;
+  string file_name = 2;
+}
+
+message Teleport {
+  int64 skill_id = 1;
+  string from_channel_id = 2;
+  int64 from_address_id = 3;
+  int64 from_x = 4;
+  int64 from_y = 5;
+  string to_channel_id = 6;
+  int64 to_address_id = 7;
+  int64 to_x = 8;
+  int64 to_y = 9;
+  string new_battle_name = 10;
+}
+
+message EnterLand {
+  string channel_id = 1;
+  int64 address_id = 2;
+  int64 x = 3;
+  int64 y = 4;
+  bool first_connect = 5;
+}
+
+message MoveLand {
+  string channel_id_before = 1;
+  int64 address_id_before = 2;
+  int64 x_before = 3;
+  int64 y_before = 4;
+  string channel_id = 5;
+  int64 address_id = 6;
+  int64 x = 7;
+  int64 y = 8;
+}
+
+message LeaveLand {
+  string channel_id = 1;
+  int64 address_id = 2;
+  int64 x = 3;
+  int64 y = 4;
+}
+
+message Die {
+  int64 skill_id = 1;
+  int64 killer_npc_id = 2;
+  string killer_pc_character_uuid = 3;
+  int64 address_id = 4;
+  int64 x = 5;
+  int64 y = 6;
+}
+
+message KillBoss {
+  int64 skill_id = 1;
+  int64 npc_id = 2;
+  string top_contribution_character_uuid = 3;
+  int64 top_contribution_party_id = 4;
+  int64 team_id = 5;
+}
+
+message DropItem {
+  int64 npc_id = 1;
+  int64 address_id = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+}
+
+message Revive {
+  int64 skill_id = 1;
+  int64 address_id = 2;
+  int32 x = 3;
+  int32 y = 4;
+}
+
+message GetExperience {
+  int64 experience_before = 1;
+  int64 experience = 2;
+  int64 level_before = 3;
+  int64 level = 4;
+}
+
+message LoseExperience {
+  int64 experience_before = 1;
+  int64 experience = 2;
+  int64 level_before = 3;
+  int64 level = 4;
+}
+
+message UpsertQuickSlot {
+  int64 quick_slot_index = 1;
+  int64 skill_id = 2;
+  int64 base_item_id = 3;
+  bool is_auto = 4;
+}
+
+message ClearQuickSlot {
+  int64 quick_slot_index = 1;
+}
+
+message ChangePkPoint {
+  int64 pk_point_before = 1;
+  int64 pk_point = 2;
+}
+
+message ChangeCombatPoint {
+  int64 skill_id = 1;
+  int64 combat_point_before = 2;
+  int64 combat_point = 3;
+  string property_name = 4;
+  int64 property_value_before = 5;
+  int64 property_value = 6;
+}
+
+message ScoreBattleground {
+  int64 battleground_id = 1;
+
+  int64 score_before = 11;
+  int64 score = 12;
+  int64 repeat_kill_count_before = 13;
+  int64 repeat_kill_count = 14;
+  int64 team_id = 15;
+  int64 team_score_before = 16;
+  int64 team_score = 17;
+
+  int64 opponent_score_before = 21;
+  int64 opponent_score = 22;
+  int64 opponent_repeat_kill_count_before = 23;
+  int64 opponent_repeat_kill_count = 24;
+  int64 opponent_team_id = 25;
+  int64 opponent_team_score_before = 26;
+  int64 opponent_team_score = 27;
+}
+
+message ChangePkScore {
+  message Assailant {
+    string character_uuid = 1;
+    int64 guild_id = 2;
+    int64 pk_score_before = 3;
+    int64 pk_score = 4;
+  }
+  string victim_character_uuid = 1;
+  int64 victim_guild_id = 2;
+  int64 victim_score_before = 3;
+  int64 victim_score = 4;
+  Assailant killer = 5;
+  repeated Assailant assistants = 6;
+}
+
+message AutoAttack {
+  int64 x = 1;
+  int64 y = 2;
+  int64 address_id = 3;
+  string channel_id = 4;
+}
+
+message CounterAttack {
+  int64 x = 1;
+  int64 y = 2;
+  int64 address_id = 3;
+  string channel_id = 4;
+  string target_character_uuid = 5;
+  int64 reaction_time_millis = 6;
+}
+
+message WorldBossContribute {
+  string character_name = 1;
+  string reward_time = 2;
+  int32 reward_ranking = 3;
+  string reward_product = 4;
+  int32 reward_amount = 5;
+}

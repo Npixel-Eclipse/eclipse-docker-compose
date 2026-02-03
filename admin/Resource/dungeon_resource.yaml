@@ -1,0 +1,155 @@
+- Id: 1
+  Name: FieldDun_Blood_Shed
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 블러드 쉐드
+- Id: 541
+  Name: FieldDungeon
+  RefreshDescription: UIWord_FieldDungeon_RefreshDesc
+  Comment: 필드 던전
+- Id: 2
+  Name: FieldDun_Kulika_Undying_Lands
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 구리가라 불멸지
+- Id: 134
+  Name: FieldDun_Abrion_Tower
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 아브리온 탑
+- Id: 866
+  Name: FieldDun_Holy_Patria_Lesbos_Sanctum
+  RefreshDescription: UIWord_WeeklyDungeon_RefreshDesc
+  Comment: 페트리아 성소
+- Id: 662
+  Name: FieldDun_Breath_of_Gaia_Ondor
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 가이아온도르의 숨결
+- Id: 733
+  Name: Challenge_Dungeon
+  Refresh: Daily
+  UseTime: 300
+  UseCount: 1
+  MaxRechargeCount: 2
+  ShowRemainTimeUI: false
+  ResetRemainTime: true
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 도전 던전
+- Id: 596
+  Name: Challenge_Dungeon_Polluted_Lake
+  Refresh: Daily
+  RefreshHour:
+    - 4
+  UseTime: 300
+  UseCount: 1
+  MaxRechargeCount: 5
+  ShowRemainTimeUI: false
+  ResetRemainTime: true
+  RefreshDescription: UIWord_ChallengeDungeon_RefreshDesc
+  TypeTitleDescription: Dungeon_Challenge_Type
+  TypeDescription: Dungeon_Challenge_Type_TimeAttack
+  Comment: 도전 던전 오염된 호숫가
+- Id: 759
+  Name: Challenge_Dungeon_Monkey_Playground
+  Refresh: Daily
+  RefreshHour:
+    - 4
+  UseTime: 300
+  UseCount: 1
+  MaxRechargeCount: 5
+  ShowRemainTimeUI: false
+  ResetRemainTime: true
+  RefreshDescription: UIWord_ChallengeDungeon_RefreshDesc
+  TypeTitleDescription: Dungeon_Challenge_Type
+  TypeDescription: Dungeon_Challenge_Type_TimeAttack
+  Comment: 도전 던전 원숭이 놀이터
+- Id: 778
+  Name: Challenge_Dungeon_Undead_Mine
+  Refresh: Daily
+  RefreshHour:
+    - 4
+  UseTime: 300
+  UseCount: 1
+  MaxRechargeCount: 5
+  ShowRemainTimeUI: false
+  ResetRemainTime: true
+  RefreshDescription: UIWord_ChallengeDungeon_RefreshDesc
+  TypeTitleDescription: Dungeon_Challenge_Type
+  TypeDescription: Dungeon_Challenge_Type_TimeAttack
+  Comment: 도전 던전 언데드 광산
+- Id: 3
+  Name: Daily_Dungeon_Lost_Plain
+  Refresh: Daily
+  UseTime: 600
+  MaxRechargeTime: 43200
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 잃어버린 평원
+- Id: 4
+  Name: Daily_Dungeon_Encroached_Castle
+  Refresh: Daily
+  UseTime: 600
+  MaxRechargeTime: 43200
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 잠식된 지하 성
+- Id: 129
+  Name: Daily_DailyDun_RuinedCastle
+  Refresh: Daily
+  UseTime: 3600
+  MaxRechargeTime: 43200
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 무법 성채
+- Id: 622
+  Name: Daily_DailyDun_MiningArea
+  Refresh: Daily
+  UseTime: 3600
+  MaxRechargeTime: 43200
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 버려진 채굴지
+- Id: 272
+  Name: Daily_DailyDun_UndeadTemple
+  Refresh: Daily
+  UseTime: 3600
+  MaxRechargeTime: 43200
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 언데드 신전
+- Id: 1241
+  Name: BattleGround_Faction_HighRiver
+  Refresh: Daily
+  UseCount: 5
+  ShowRemainTimeUI: false
+  ResetRemainTime: true
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  OpenTimeDescription: BattleField_OpenTime_EveryDay
+  TypeTitleDescription: UIWord_BattleField_BattleFieldType_Text
+  TypeDescription: UIWord_BattleField_BattleFieldType_Realm
+  Comment: "[전장] 하이리버 전투"
+- Id: 1242
+  Name: TEST_INTERVAL
+  Refresh: Daily
+  RefreshHour:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+  UseTime: 1800
+  MaxRechargeTime: 43200
+  ShowRemainTimeUI: false
+  RefreshDescription: UIWord_DailyDungeon_RefreshDesc
+  Comment: 인터벌 초기화 테스트

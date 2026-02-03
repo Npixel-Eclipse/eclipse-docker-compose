@@ -1,0 +1,110 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Event
+    - Action
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Event:
+      type: object
+      additionalProperties: false
+      dynamicProperties: true
+      properties:
+        Type:
+          type: string
+          enum:
+            - SkillEvent
+            - TeleportArrivalEvent
+            - UIAddToViewportEvent
+            - RuntimeDataChangedEvent
+            - HyperLinkEvent
+            - LandChangedEvent
+            - TerritoryOverlappedEvent #테리토리에 진입할 경우 발생(Territory설정 필요)
+        Skill:
+          type: string
+          ref: skill
+        UITypeName:
+          type: string
+        RuntimeDataPath:
+          type: string
+        HyperLinkEventName:
+          type: string
+        Land:
+          type: string
+          ref: land
+        Territory:
+          type: string
+          ref: territory
+    Condition:
+      type: object
+      additionalProperties: false
+      dynamicProperties: true
+      properties:
+        Type:
+          type: string
+          enum:
+            - None
+            - HasRemainStatPoint
+            - CasterIsMyEntity
+            - IsFalse
+            - ByFullScreenUI
+            - IsStatDetailPopupOpened
+        ContentLimit:
+          type: string
+          ref: content_limit
+        IgnoreAddress:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            dynamicProperties: true
+            properties:
+              Address:
+                type: string
+                ref: address
+        TriggerOnce: # 한번만 발동할지 여부 옵션.
+          type: boolean
+          default: false
+    Action:
+      type: object
+      additionalProperties: false
+      dynamicProperties: true
+      properties:
+        Type:
+          type: string
+          enum:
+            - ShowUI
+            - UnloadUI
+            - ResetWidgetLayer
+            - ShowSystemMessage
+            - DispatchUIEvent
+            - PlayQuestBehavior
+            - PlayLevelSequence #레벨시퀀스를 플레이(LevelSequence설정이 필요)
+        UITypeName:
+          type: string
+        WidgetLayerName:
+          type: string
+        Duration:
+          type: integer
+        SystemMessage:
+          type: string
+          ref: system_message
+        UIEvent:
+          type: string
+        QuestBehavior:
+          type: string
+          ref: quest_behavior
+        LevelSequence:
+          type: string
+          ref: client_levelsequence
+

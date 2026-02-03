@@ -1,0 +1,31 @@
+- Id: 1
+  Name: Solidarity
+  DefaultSlotGrade: Rare
+  BuildingUITabs:
+    - Type: CommonBuff
+      Comment: 효과 탭
+      Description: UIWord_Solidarity_Tab_Effect
+    - Type: PolymorphItem
+      Comment: 초월 카드 탭
+      Description: UIWordPolymorph
+    - Type: WeaponItem
+      Comment: 무기 카드 탭
+      Description: UIWordWeaponPolymorph
+  Pages:
+    - Type: PageA
+      WidgetAssetName: FortressSolidarityContents_TabA
+      Description: UIWord_Solidarity_Page_A
+  StatusFilterItems:
+    - Type: ALL
+      Description: UIWordAll
+    - Type: NotLink
+      Description: UIWord_NotLink
+    - Type: LinkBuildingAll
+      Description: UIWord_LinkBuildingAll
+  NoChangeAutoSolidarizeSystemMessage: NoChange_AutoSolidarize
+  ConnectableMinItemGrade: Rare
+  ConnectableMaxItemGrade: Myth
+  LackEnchantLevelTextStyle: Red00
+  DefaultEnchantLevelTextStyle: Text01
+  SolidarityContentLimit: Solidarity
+  CommonBuffReddotKey: CommonBuff

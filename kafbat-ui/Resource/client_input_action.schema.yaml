@@ -1,0 +1,104 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Asset
+    - DefaultKey
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:     # 연속적인 단축키들은 순서 고정할 것 (UseQuickSlot, TargetParty 등)
+        - MoveUp
+        - MoveDown
+        - MoveLeft
+        - MoveRight
+        - NavigateBack
+        - OneButtonSkip
+        - UseQuickSlot1  
+        - UseQuickSlot2
+        - UseQuickSlot3
+        - UseQuickSlot4
+        - UseQuickSlot5
+        - UseQuickSlot6
+        - UseQuickSlot7
+        - UseQuickSlot8
+        - QuickSlotPageUp
+        - QuickSlotPageDown
+        - TogglePowerSaving
+        - ToggleSkill
+        - ToggleWorldMap
+        - ToggleQuest
+        - ToggleCharacterInfo
+        - ToggleInventory
+        - ToggleBattleGroundScoreBoard
+        - ToggleAutoCombat
+        - ToggleDash
+        - Attack
+        - CounterAttack
+        - PickupItem
+        - OpenChat
+        - ActiveScan
+        - ChangeTarget
+        - ResetTarget
+        - SelectScanTarget1
+        - SelectScanTarget2
+        - SelectScanTarget3
+        - SelectScanTarget4
+        - SelectScanTarget5
+        - SelectScanTarget6
+        - SelectScanTarget7
+        - SelectScanTarget8
+        - TargetParty1
+        - TargetParty2
+        - TargetParty3
+        - TargetParty4
+        - TargetParty5
+        - RequestPartyTarget
+        - ApplyPreset1
+        - ApplyPreset2
+        - ApplyPreset3
+        - ApplyPreset4
+        - ApplyPreset5
+        - ReturnToHome
+        - ToggleBMShop
+        - ToggleBuffList
+        - ToggleCamera
+        - TogglePartyManagement
+        - SkinEmotion1
+    Description:
+      type: string
+      ref: description
+    Asset:
+      type: string
+    DefaultKey:
+      type: string
+      ref: input_key
+    ChordAction:
+      type: string
+      default: None
+      enum:
+        - None
+        - Ctrl
+        - Shift
+        - Alt
+    Modifier:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Swizzle
+              - Negate
+    Setting:
+      type: string
+      ref: setting

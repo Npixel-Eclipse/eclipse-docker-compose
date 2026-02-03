@@ -1,0 +1,37 @@
+- Id: 1
+  Name: Mail
+  Activate: true
+  UIMainTab:
+    - Comment: 캐릭터 단위로 받을 수 있는 우편
+      Type: Character
+      TabDescription: MailCategory_Character
+      Icon: /Game/UI/Mail_SP/MailTabIcon01.MailTabIcon01
+    - Comment: 서버 단위로 받을 수 있는 우편
+      Type: Server
+      TabDescription: MailCategory_Server
+      Icon: /Game/UI/Mail_SP/MailTabIcon02.MailTabIcon02
+    - Comment: 계정 단위로 받을 수 있는 우편
+      Type: Account
+      TabDescription: MailCategory_Account
+      Icon: /Game/UI/Mail_SP/MailTabIcon03.MailTabIcon03
+    - Comment: 편지 - 제목, 아이템 등 포함
+      Type: Letter
+      TabDescription: MailCategory_Letter
+      Icon: /Game/UI/Mail_SP/MailTabIcon04.MailTabIcon04
+      CanSendMail: true
+  UISubTab:
+    - Comment: 받을 수 있는 우편
+      Type: Default
+      TabDescription: MailSubCategory_Default
+    - Comment: 우편 이력
+      Type: History
+      TabDescription: MailSubCategory_History
+  UISendTab:
+    - Comment: 편지 발송 탭 - 친구
+      Type: Friend
+      TabDescription: UIWord_Friend
+      SenderPlaceDescription: UIWord_Mail_Send_Character_SenderPlaceHolder
+    - Comment: 편지 발송 탭 - 길드
+      Type: Guild
+      TabDescription: UIWord_Mail_Send_GuildButton
+      SenderPlaceDescription: UiWord_Mail_Send_Guild_SenderPlaceHolder

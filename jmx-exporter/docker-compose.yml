@@ -1,0 +1,110 @@
+version: '3.8'
+
+services:
+  # Kafka 브로커와 Kafka Connect는 위에서 정의된 상태로 유지
+
+  jmx-exporter-kafka-1:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9101:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-1", "9101", "kafka-1:9991"]
+    networks:
+      - kafka-network
+
+  jmx-exporter-kafka-2:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9102:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-2", "9101", "kafka-2:9992"]
+    networks:
+      - kafka-network
+
+  jmx-exporter-kafka-3:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9103:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-3", "9101", "kafka-3:9993"]
+    networks:
+      - kafka-network
+
+  jmx-exporter-connect-1:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9104:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-connect-1", "9101", "kafka-connect-1:9994"]
+    networks:
+      - kafka-network
+
+  jmx-exporter-connect-2:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9105:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-connect-2", "9101", "kafka-connect-2:9995"]
+    networks:
+      - kafka-network
+
+  jmx-exporter-connect-3:
+    image: bitnami/jmx-exporter:latest
+    ports:
+      - "9106:9101"
+    environment:
+      - CONFIG_YML=/opt/bitnami/jmx-exporter/config.yml
+    volumes:
+      - ./jmx-exporter-config.yml:/opt/bitnami/jmx-exporter/config.yml
+    command: ["-Djava.rmi.server.hostname=kafka-connect-3", "9101", "kafka-connect-3:9996"]
+    networks:
+      - kafka-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - kafka-network
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - kafka-network
+
+volumes:
+  kafka-1-data:
+  kafka-2-data:
+  kafka-3-data:
+  kafka-connect-1-data:
+  kafka-connect-2-data:
+  kafka-connect-3-data:
+  grafana-data:
+
+networks:
+  kafka-network:
+    driver: bridge

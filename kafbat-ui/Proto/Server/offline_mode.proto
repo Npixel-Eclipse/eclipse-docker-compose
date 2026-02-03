@@ -1,0 +1,58 @@
+syntax = "proto3";
+package offline_mode;
+
+import "Common/server_time.proto";
+import "google/protobuf/duration.proto";
+
+message OfflineModeCommand {
+    oneof message {
+        Load load = 1;
+        Refresh refresh = 2;
+        Start start = 3;
+        End end = 4;
+        Move move = 5;
+        Restart restart = 6;
+        TimeCheat time_cheat = 99;   
+    }
+
+    message Load {
+        int64 account_id = 1;
+        string server_name = 2;
+    }
+
+    message Refresh {
+        int64 account_id = 1;
+        google.protobuf.Duration refresh_consumed_time = 2;
+    }
+
+    message Start {
+        int64 account_id = 1;
+        string server_name = 2;
+        int64 start_experience = 3;
+        common.AtTime start_elapsed_time = 4;
+        google.protobuf.Duration refresh_consumed_time = 5;
+    }
+
+    message End {
+        int64 account_id = 1;
+        common.AtTime end_elapsed_time = 2;
+    }
+
+    message Move {
+        int64 account_id = 1;
+        string server_name = 2;
+        common.AtTime end_elapsed_time = 3;
+        int64 remain_time_on_move = 4;
+    }
+
+    message Restart {
+        int64 account_id = 1;
+        common.AtTime start_elapsed_time = 4;
+    }
+
+    message TimeCheat {
+        int64 account_id = 1;
+        string server_name = 2;
+        int64 consumed_time = 3;
+    }
+}

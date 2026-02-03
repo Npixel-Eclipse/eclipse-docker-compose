@@ -1,0 +1,96 @@
+- Id: 1
+  Name: HuntingZone
+  ClientConstants:
+    - Name: RequestDetailDelayTime
+      IntValue: 10
+    - Name: HuntingZonePointInfoReqInterval
+      IntValue: 5 # 5초 이상
+    - Name: MinIconScale
+      Value: "0.6"
+    - Name: MaxIconScale
+      Value: "1.2"
+    - Name: DefaultZoomLevelIndex
+      IntValue: 0
+    - Name: LimitContentGuildLevel
+      IntValue: 1
+    - Name: PreviousRankCut
+      IntValue: 10
+    - Name: ReddotHuntingZoneShop
+      Value: "HuntingZone_Owner_Specialty_Shop"
+    - Name: ReddotHuntingZoneGroupShop
+      Value: "HuntingZone_Specialty_Shop"
+    - Name: ReddotHuntingZoneBidRequest
+      Value: "HuntingZone_Bid_Request"
+    - Name: ReddotHuntingZoneBidActive
+      Value: "HuntingZone_Bid_Activate"
+  Constants:
+    - Name: HuntingZoneBlindTime
+      Value: HuntingZoneBlindTime
+    - Name: HuntingZonePointPerBidToken
+      Value: HuntingZonePointPerBidToken
+    - Name: HuntingZoneCurrencyPerBidToken
+      Value: HuntingZoneCurrencyPerBidToken
+    - Name: HuntingZoneTaxFee
+      Value: HuntingZoneTaxFee
+  SystemMessage:
+    - Name: SettlingPhase
+      Value: CalculateRank
+    - Name: DistributingPhase
+      Value: DistributeReward
+    - Name: NotBuyPermitNoOwnerGuild
+      Value: CanNotBuyPermitCertificate
+    - Name: NoJoinGuild
+      Value: JoinGuild
+    - Name: NoHasBidToken
+      Value: HuntingZoneNoHaveToken
+    - Name: NoJoinGuildByShop
+      Value: CanUseStoreJoinGuild
+    - Name: NotHavePermission
+      Value: NotHavePermission
+    - Name: NoJoinGuildInBidding
+      Value: HuntingZone_RequiredJoinGuild
+    - Name: NoBiddingMembers
+      Value: HuntingZone_NoBiddingMembers
+    - Name: CanNotBiddingArea
+      Value: HuntingZone_CannotUseHuntingZoneTap
+    - Name: EndSeason
+      Value: TestPeriodEndNoBidding
+    - Name: NextSeason
+      Value: PreparingNextSeason
+    - Name: NotBuyHuntingZonePermit
+      Value: CanNotBuyPermit
+    - Name: SuccessTaxRate
+      Value: HuntingZone_SuccessSetTaxRate
+    - Name: SuccessSetPermitCertificatePrice
+      Value: HuntingZone_SuccessSetPermitCertificatePrice
+    - Name: SuccessSetBuff
+      Value: HuntingZone_SuccessSetBuff
+    - Name: SuccessSetTaxRateAndPermitCertificatePrice
+      Value: HuntingZone_SuccessSetTaxRateAndPermitCertificatePrice
+    - Name: HuntingZone_MaxHuntingzone
+      Value: HuntingZone_MaxHuntingzone
+  UITab:
+    - Group: Main
+      SubGroup: Info
+      TabIndex: 0
+      DefaultTab: True
+      Description: UIWord_HuntingZone_WorldMapInfo
+    - Group: Main
+      SubGroup: Bidding
+      TabIndex: 1
+      Description: UIWord_Bid
+    - Group: Bidding
+      SubGroup: Guild
+      TabIndex: 0
+      DefaultTab: True
+      Description: UIWord_HuntingZone_GuildRank
+    - Group: Bidding
+      SubGroup: GuildMember
+      TabIndex: 1
+      Description: UIWord_Guild_Role_Normal
+  BidEndAlert: #초 단위
+    - Value: 300
+    - Value: 180
+    - Value: 120
+    - Value: 60
+  BidTokenCategory: Item_Misc_HuntingZoneJewl

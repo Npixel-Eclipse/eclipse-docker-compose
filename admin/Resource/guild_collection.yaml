@@ -1,0 +1,7022 @@
+- Id: 1
+  Name: Basic_Guild_Symbol_01
+  Comment: 길드 심볼
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 1
+  Rewards:
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Rabbit
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Sole
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Butterfly
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Rhino
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Pigeon
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Eagle
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Goat
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Unicorn
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Cheetah
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Dragon
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Horse
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Deer
+    - RewardType: GuildMark
+      GuildMark: GuildMark_Helm
+    - RewardType: GuildMark
+      GuildMark: GuildMark_DoubleSword
+    - RewardType: GuildMark
+      GuildMark: GuildMark_TwohandSword
+- Id: 1528
+  Name: Basic_Guild_Symbol_02
+  Comment: 길드 심볼
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 2
+  Rewards:
+    - GuildMark: GuildMark_Potion
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Bow
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Shuriken
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Trident
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Reaper
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Devil
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Skull
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Ghost
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Jewel
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Star
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Sun
+      RewardType: GuildMark
+    - GuildMark: GuildMark_ThumbsUp
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Wing
+      RewardType: GuildMark
+    - GuildMark: GuildMark_KoreanFlag
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Libra
+      RewardType: GuildMark
+- Id: 725
+  Name: Basic_Guild_Symbol_03
+  Comment: 길드 심볼
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 3
+  Rewards:
+    - GuildMark: GuildMark_TreasureBox
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Trophy
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Rose
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Sprout
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Tree
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Crown
+      RewardType: GuildMark
+    - GuildMark: GuildMark_BeerGlass
+      RewardType: GuildMark
+    - GuildMark: GuildMark_OpenBook
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Legend
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Hero
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Outlaw
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Family
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Vengeance
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Neutrality
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Devotion
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Force
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Imperishability
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Victory
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Rally
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Intrepidity
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Sortie
+      RewardType: GuildMark
+    - GuildMark: GuildMark_Battle
+      RewardType: GuildMark
+    - GuildMark: GuildMark_PK
+      RewardType: GuildMark
+    - GuildMark: GuildMark_LunarEclipse
+      RewardType: GuildMark
+    - GuildMark: GuildMark_SolarEclipse
+      RewardType: GuildMark
+- Id: 1396
+  Name: Basic_Guild_Frame_01
+  Comment: 길드 프레임
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 1
+  Rewards:
+    - GuildMark: Frame00
+      RewardType: GuildMark
+    - GuildMark: Frame01
+      RewardType: GuildMark
+    - GuildMark: Frame02
+      RewardType: GuildMark
+    - GuildMark: Frame03
+      RewardType: GuildMark
+- Id: 2436
+  Name: Basic_Guild_Frame_02
+  Comment: 길드 프레임
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 2
+  Rewards:
+    - GuildMark: Frame04
+      RewardType: GuildMark
+    - GuildMark: Frame05
+      RewardType: GuildMark
+- Id: 1160
+  Name: Basic_Guild_Frame_03
+  Comment: 길드 프레임
+  Icon: /Game/UI/Guild_SP/TabIconGuildAdd_Sprite.TabIconGuildAdd_Sprite
+  Category: Common
+  LimitGuildLevel: 3
+  Rewards:
+    - GuildMark: Frame06
+      RewardType: GuildMark
+    - GuildMark: Frame07
+      RewardType: GuildMark
+- Id: 400
+  Name: Basic_Quest1
+  Comment: 기본 길드 퀘스트
+  Icon: /Game/UI/Guild_SP/TabIconGuildMember_Sprite.TabIconGuildMember_Sprite
+  Category: GuildQuest
+  BuffDescription: Achievement_Item_EnchantEpicSubweapon_Desc
+  LimitGuildLevel: 1
+  Rewards:
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_Box_Reward_1
+    - RewardType: Quest
+      Quest: Guild_Daily_Mission_Box_1
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_1_Reward
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_2_Reward
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_3_Reward
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_4_Reward
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_6_Reward
+    - RewardType: Quest
+      Quest: Guild_Repeatable_Mission_7_Reward
+- Id: 5032
+  Name: Guild_TechGuild_AddMaxMember
+  Comment: 길드 최대 인원
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild01.Guild_Tech_Guild01
+  Title: Guild_TechGuild_AddMaxMember_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_AddMaxMember_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 3
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: AddMaxMember
+      Level: 1
+      AddMaxMember: 4
+    - RewardType: AddMaxMember
+      Level: 2
+      AddMaxMember: 8
+    - RewardType: AddMaxMember
+      Level: 3
+      AddMaxMember: 12
+    - RewardType: AddMaxMember
+      Level: 4
+      AddMaxMember: 16
+    - RewardType: AddMaxMember
+      Level: 5
+      AddMaxMember: 20
+- Id: 954
+  Name: Guild_TechGuild_Unlock
+  Comment: 길드 보스
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild01.Guild_Tech_Guild01
+  Title: Guild_TechGuild_UnlockBoss_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_UnlockBoss_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+  LimitGuildLevel: 3
+  Prerequisites:
+    - Collection: Guild_TechGuild_AddMaxMember
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: UnlockGuildRaid
+      Level: 1
+      GuildRaid: TEST_GUILD_RAID_2
+    - RewardType: UnlockGuildRaid
+      Level: 2
+      GuildRaid: TEST_GUILD_RAID_3
+    - RewardType: UnlockGuildRaid
+      Level: 3
+      GuildRaid: TEST_GUILD_RAID_4
+- Id: 3102
+  Name: Guild_TechGuild_UnlockMerchandise
+  Comment: 길드 상점 물품 해금
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild04.Guild_Tech_Guild04
+  Title: Guild_TechGuild_UnlockMerchandise_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_UnlockMerchandise_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 3
+  Prerequisites:
+    - Collection: Guild_TechGuild_Unlock
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: UnlockMerchandise
+      Level: 1
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_14
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 1
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_15
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 1
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_16
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 2
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_12
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 2
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_13
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 3
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_9
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 3
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_10
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 3
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_11
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 4
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_7
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 4
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_8
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_1
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_2
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_3
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_4
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_5
+      AddendBuyAmount: 0
+    - RewardType: UnlockMerchandise
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_6
+      AddendBuyAmount: 0
+- Id: 2898
+  Name: Guild_TechGuild_IncreasePurchaseLimit
+  Comment: 길드 상점 구매 횟수 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild05.Guild_Tech_Guild05
+  Title: Guild_TechGuild_IncreasePurchaseLimit_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreasePurchaseLimit_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 3
+  Prerequisites:
+    - Collection: Guild_TechGuild_Unlock
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: IncreasePurchaseLimit
+      Level: 1
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 5
+    - RewardType: IncreasePurchaseLimit
+      Level: 2
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 10
+    - RewardType: IncreasePurchaseLimit
+      Level: 3
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 15
+    - RewardType: IncreasePurchaseLimit
+      Level: 4
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 20
+    - RewardType: IncreasePurchaseLimit
+      Level: 5
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 25
+- Id: 3472
+  Name: Guild_TechGuild_IncreaseDailyMissionBox
+  Comment: 일일 보상 상자 단계 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild06.Guild_Tech_Guild06
+  Title: Guild_TechGuild_IncreaseDailyMissionBox_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseDailyMissionBox_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechGuild_UnlockMerchandise
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Quest
+      Level: 1
+      Quest: Guild_Daily_Mission_Box_2
+    - RewardType: Quest
+      Level: 2
+      Quest: Guild_Daily_Mission_Box_3
+    - RewardType: Quest
+      Level: 3
+      Quest: Guild_Daily_Mission_Box_4
+    - RewardType: Quest
+      Level: 4
+      Quest: Guild_Daily_Mission_Box_5
+- Id: 8132
+  Name: Guild_TechGuild_IncreaseRepeatMissionBox
+  Comment: 길드 공헌 상자 단계 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild07.Guild_Tech_Guild07
+  Title: Guild_TechGuild_IncreaseRepeatMissionBox_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseRepeatMissionBox_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreasePurchaseLimit
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Quest
+      Level: 1
+      Quest: Guild_Repeatable_Mission_Box_Reward_2
+    - RewardType: Quest
+      Level: 2
+      Quest: Guild_Repeatable_Mission_Box_Reward_3
+    - RewardType: Quest
+      Level: 3
+      Quest: Guild_Repeatable_Mission_Box_Reward_4
+    - RewardType: Quest
+      Level: 4
+      Quest: Guild_Repeatable_Mission_Box_Reward_5
+- Id: 2524
+  Name: Guild_TechGuild_DecreaseContributeRechargeTime
+  Comment: 연구 지원 충전 시간 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild09.Guild_Tech_Guild09
+  Title: Guild_TechGuild_DecreaseContributeRechargeTime_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_DecreaseContributeRechargeTime_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseDailyMissionBox
+      Level: 1
+    - Collection: Guild_TechGuild_IncreaseRepeatMissionBox
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: DecreaseContributeRechargeTime
+      Level: 1
+      DecreaseContributeRechargeTime: 120
+    - RewardType: DecreaseContributeRechargeTime
+      Level: 2
+      DecreaseContributeRechargeTime: 240
+    - RewardType: DecreaseContributeRechargeTime
+      Level: 3
+      DecreaseContributeRechargeTime: 360
+    - RewardType: DecreaseContributeRechargeTime
+      Level: 4
+      DecreaseContributeRechargeTime: 480
+    - RewardType: DecreaseContributeRechargeTime
+      Level: 5
+      DecreaseContributeRechargeTime: 600
+- Id: 1040
+  Name: Guild_TechGuild_DecreaseAcquireCollectionCost
+  Comment: 연구 소모 재화 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild11.Guild_Tech_Guild11
+  Title: Guild_TechGuild_DecreaseAcquireCollectionCost_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_DecreaseAcquireCollectionCost_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseDailyMissionBox
+      Level: 1
+    - Collection: Guild_TechGuild_IncreaseRepeatMissionBox
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: DecreaseAcquireCollectionCost
+      Level: 1
+      DecreaseAcquireCollectionCost: "5%"
+    - RewardType: DecreaseAcquireCollectionCost
+      Level: 2
+      DecreaseAcquireCollectionCost: "10%"
+    - RewardType: DecreaseAcquireCollectionCost
+      Level: 3
+      DecreaseAcquireCollectionCost: "15%"
+    - RewardType: DecreaseAcquireCollectionCost
+      Level: 4
+      DecreaseAcquireCollectionCost: "20%"
+    - RewardType: DecreaseAcquireCollectionCost
+      Level: 5
+      DecreaseAcquireCollectionCost: "25%"
+- Id: 4053
+  Name: Guild_TechGuild_IncreaseContributeMaxCount
+  Comment: 연구 지원 횟수 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild08.Guild_Tech_Guild08
+  Title: Guild_TechGuild_IncreaseContributeMaxCount_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseContributeMaxCount_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseDailyMissionBox
+      Level: 1
+    - Collection: Guild_TechGuild_IncreaseRepeatMissionBox
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: IncreaseContributeMaxCount
+      Level: 1
+      IncreaseContributeMaxCount: 2
+    - RewardType: IncreaseContributeMaxCount
+      Level: 2
+      IncreaseContributeMaxCount: 4
+    - RewardType: IncreaseContributeMaxCount
+      Level: 3
+      IncreaseContributeMaxCount: 6
+    - RewardType: IncreaseContributeMaxCount
+      Level: 4
+      IncreaseContributeMaxCount: 8
+    - RewardType: IncreaseContributeMaxCount
+      Level: 5
+      IncreaseContributeMaxCount: 10
+- Id: 3305
+  Name: Guild_TechGuild_IncreaseContributeRewards
+  Comment: 연구 지원 보상 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild10.Guild_Tech_Guild10
+  Title: Guild_TechGuild_IncreaseContributeRewards_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseContributeRewards_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 10
+  Prerequisites:
+    - Collection: Guild_TechGuild_DecreaseContributeRechargeTime
+      Level: 1
+    - Collection: Guild_TechGuild_DecreaseAcquireCollectionCost
+      Level: 1
+    - Collection: Guild_TechGuild_IncreaseContributeMaxCount
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: IncreaseContributeRewards
+      Level: 1
+      IncreaseContributeRewards: "10%"
+    - RewardType: IncreaseContributeRewards
+      Level: 2
+      IncreaseContributeRewards: "15%"
+    - RewardType: IncreaseContributeRewards
+      Level: 3
+      IncreaseContributeRewards: "20%"
+    - RewardType: IncreaseContributeRewards
+      Level: 4
+      IncreaseContributeRewards: "25%"
+    - RewardType: IncreaseContributeRewards
+      Level: 5
+      IncreaseContributeRewards: "30%"
+- Id: 1747
+  Name: Guild_TechGuild_IncreaseExp
+  Comment: 경험치 획득 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild04.Guild_Tech_Guild04
+  Title: Guild_TechGuild_IncreaseExp_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseExp_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseContributeRewards
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechGuild_ExpBuff01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechGuild_ExpBuff02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechGuild_ExpBuff03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechGuild_ExpBuff04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechGuild_ExpBuff05
+- Id: 1872
+  Name: Guild_TechGuild_IncreaseHostileCount
+  Comment: 적대 목록 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild02.Guild_Tech_Guild02
+  Title: Guild_TechGuild_IncreaseHostileCount_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseHostileCount_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 15
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseExp
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: IncreaseHostileCount
+      Level: 1
+      IncreaseHostileCount: 1
+    - RewardType: IncreaseHostileCount
+      Level: 2
+      IncreaseHostileCount: 2
+    - RewardType: IncreaseHostileCount
+      Level: 3
+      IncreaseHostileCount: 3
+    - RewardType: IncreaseHostileCount
+      Level: 4
+      IncreaseHostileCount: 4
+    - RewardType: IncreaseHostileCount
+      Level: 5
+      IncreaseHostileCount: 5
+- Id: 500
+  Name: Guild_TechGuild_IncreaseAllianceCount
+  Comment: 우호 목록 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild03.Guild_Tech_Guild03
+  Title: Guild_TechGuild_IncreaseAllianceCount_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseAllianceCount_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 15
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseExp
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: IncreaseAllianceCount
+      Level: 1
+      IncreaseAllianceCount: 1
+    - RewardType: IncreaseAllianceCount
+      Level: 2
+      IncreaseAllianceCount: 2
+    - RewardType: IncreaseAllianceCount
+      Level: 3
+      IncreaseAllianceCount: 3
+    - RewardType: IncreaseAllianceCount
+      Level: 4
+      IncreaseAllianceCount: 4
+    - RewardType: IncreaseAllianceCount
+      Level: 5
+      IncreaseAllianceCount: 5
+- Id: 1505
+  Name: Guild_TechGuild_IncreaseGold
+  Comment: 골드 획득 증가
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Guild05.Guild_Tech_Guild05
+  Title: Guild_TechGuild_IncreaseGold_Name
+  Category: TechGuild
+  BuffDescription: Guild_TechGuild_IncreaseGold_Desc
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechGuild_IncreaseHostileCount
+      Level: 1
+    - Collection: Guild_TechGuild_IncreaseAllianceCount
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechGuild_GoldBuff01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechGuild_GoldBuff02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechGuild_GoldBuff03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechGuild_GoldBuff04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechGuild_GoldBuff05
+- Id: 2235
+  Name: Guild_TechBattle_PvEHit
+  Comment: PVE 명중
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvEHit
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 4
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEAddedDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEHit01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEHit02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEHit03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEHit04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEHit05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEHit06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEHit07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEHit08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEHit09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEHit10
+- Id: 831
+  Name: Guild_TechBattle_PvEAddedDamage
+  Comment: PVE 공격력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvEAddedDamage
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 3
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEAddedDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEAddedDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEAddedDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEAddedDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEAddedDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEAddedDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEAddedDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEAddedDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEAddedDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEAddedDamage10
+- Id: 459
+  Name: Guild_TechBattle_PvEArmorClass
+  Comment: PVE 방어력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNamePvEArmorClass
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 3
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEArmorClass01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEArmorClass02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEArmorClass03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEArmorClass04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEArmorClass05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEArmorClass06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEArmorClass07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEArmorClass08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEArmorClass09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEArmorClass10
+- Id: 836
+  Name: Guild_TechBattle_PvEDodge
+  Comment: PVE 회피
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNamePvEDodge
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 4
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEArmorClass
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDodge01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDodge02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDodge03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDodge04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDodge05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDodge06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDodge07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDodge08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDodge09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDodge10
+- Id: 2086
+  Name: Guild_TechBattle_PvEDamageScale
+  Comment: PVE 피해 증폭
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvEDamageScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 8
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvECriticalDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDamageScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDamageScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDamageScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDamageScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDamageScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDamageScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDamageScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDamageScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDamageScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDamageScale10
+- Id: 3010
+  Name: Guild_TechBattle_PvEDamageReduction
+  Comment: PVE 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNamePvEDamageReduction
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 10
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDamageReduceScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDamageReduction10
+- Id: 3156
+  Name: Guild_TechBattle_PvEDamageReduceScale
+  Comment: PVE 피해 증폭 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNamePvEDamageReduceScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 8
+  Prerequisites:
+    - Collection: Guild_TechBattle_HealthPotionScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDamageReduceScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDamageReduceScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDamageReduceScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDamageReduceScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDamageReduceScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDamageReduceScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDamageReduceScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDamageReduceScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDamageReduceScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDamageReduceScale10
+- Id: 1529
+  Name: Guild_TechBattle_PvECriticalProbability
+  Comment: PVE 치명타
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvECriticalProbability
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 6
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDoubleProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvECriticalProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvECriticalProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvECriticalProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvECriticalProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvECriticalProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvECriticalProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvECriticalProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvECriticalProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvECriticalProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvECriticalProbability10
+- Id: 1519
+  Name: Guild_TechBattle_MeleeDamage
+  Comment: 근거리 공격력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameMeleeDamage
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDamageReductionIgnore
+      Level: 1
+    - Collection: Guild_TechBattle_PvEDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MeleeDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MeleeDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MeleeDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MeleeDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MeleeDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MeleeDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MeleeDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MeleeDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MeleeDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MeleeDamage10
+- Id: 2744
+  Name: Guild_TechBattle_RangeDamage
+  Comment: 원거리 공격력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameRangeDamage
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDamageReductionIgnore
+      Level: 1
+    - Collection: Guild_TechBattle_PvEDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_RangeDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_RangeDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_RangeDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_RangeDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_RangeDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_RangeDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_RangeDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_RangeDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_RangeDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_RangeDamage10
+- Id: 325
+  Name: Guild_TechBattle_MagicDamage
+  Comment: 마법 공격력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameMagicDamage
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDamageReductionIgnore
+      Level: 1
+    - Collection: Guild_TechBattle_PvEDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MagicDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MagicDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MagicDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MagicDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MagicDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MagicDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MagicDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MagicDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MagicDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MagicDamage10
+- Id: 3907
+  Name: Guild_TechBattle_PvEDoubleProbability
+  Comment: PVE 더블
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvEDoubleProbability
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEHit
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDoubleProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDoubleProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDoubleProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDoubleProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDoubleProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDoubleProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDoubleProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDoubleProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDoubleProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDoubleProbability10
+- Id: 4863
+  Name: Guild_TechBattle_HealthPotionAmount
+  Comment: 물약 최대 소지량
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameItem_HealthPotion_MaxCarryAmount
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDodge
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_HealthPotionAmount01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_HealthPotionAmount02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_HealthPotionAmount03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_HealthPotionAmount04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_HealthPotionAmount05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_HealthPotionAmount06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_HealthPotionAmount07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_HealthPotionAmount08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_HealthPotionAmount09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_HealthPotionAmount10
+- Id: 3730
+  Name: Guild_TechBattle_HealthPotionIncrease
+  Comment: 물약 회복량
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameHealthPotionIncrease
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 6
+  Prerequisites:
+    - Collection: Guild_TechBattle_HealthPotionAmount
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_HealthPotionIncrease01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_HealthPotionIncrease02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_HealthPotionIncrease03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_HealthPotionIncrease04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_HealthPotionIncrease05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_HealthPotionIncrease06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_HealthPotionIncrease07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_HealthPotionIncrease08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_HealthPotionIncrease09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_HealthPotionIncrease10
+- Id: 478
+  Name: Guild_TechBattle_PvECriticalDamage
+  Comment: PVE 치명타 피해
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvECriticalDamage
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvECriticalProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvECriticalDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvECriticalDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvECriticalDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvECriticalDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvECriticalDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvECriticalDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvECriticalDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvECriticalDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvECriticalDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvECriticalDamage10
+- Id: 3902
+  Name: Guild_TechBattle_HealthPotionScale
+  Comment: 물약 회복률
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameHealthPotionScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechBattle_HealthPotionIncrease
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_HealthPotionScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_HealthPotionScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_HealthPotionScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_HealthPotionScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_HealthPotionScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_HealthPotionScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_HealthPotionScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_HealthPotionScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_HealthPotionScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_HealthPotionScale10
+- Id: 3439
+  Name: Guild_TechBattle_PvEDamageReductionIgnore
+  Comment: PVE 피해 감소 무시
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNamePvEDamageReductionIgnore
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 10
+  Prerequisites:
+    - Collection: Guild_TechBattle_PvEDamageScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_PvEDamageReductionIgnore10
+- Id: 2732
+  Name: Guild_TechBattle_MeleeCriticalResistance
+  Comment: 근거리 치명타 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMeleeCriticalResistance
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechBattle_MeleeDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MeleeCriticalResistance01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MeleeCriticalResistance02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MeleeCriticalResistance03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MeleeCriticalResistance04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MeleeCriticalResistance05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MeleeCriticalResistance06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MeleeCriticalResistance07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MeleeCriticalResistance08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MeleeCriticalResistance09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MeleeCriticalResistance10
+- Id: 5385
+  Name: Guild_TechBattle_RangeCriticalResistance
+  Comment: 원거리 치명타 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameRangeCriticalResistance
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechBattle_RangeDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_RangeCriticalResistance01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_RangeCriticalResistance02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_RangeCriticalResistance03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_RangeCriticalResistance04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_RangeCriticalResistance05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_RangeCriticalResistance06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_RangeCriticalResistance07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_RangeCriticalResistance08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_RangeCriticalResistance09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_RangeCriticalResistance10
+- Id: 375
+  Name: Guild_TechBattle_MagicCriticalResistance
+  Comment: 마법 치명타 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMagicCriticalResistance
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechBattle_MagicDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MagicCriticalResistance01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MagicCriticalResistance02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MagicCriticalResistance03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MagicCriticalResistance04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MagicCriticalResistance05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MagicCriticalResistance06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MagicCriticalResistance07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MagicCriticalResistance08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MagicCriticalResistance09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MagicCriticalResistance10
+- Id: 1797
+  Name: Guild_TechBattle_MeleeCriticalDamageReduction
+  Comment: 근거리 치명타 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMeleeCriticalDamageReduction
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechBattle_MeleeCriticalResistance
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MeleeCriticalDamageReduction10
+- Id: 3244
+  Name: Guild_TechBattle_RangeCriticalDamageReduction
+  Comment: 원거리 치명타 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameRangeCriticalDamageReduction
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechBattle_RangeCriticalResistance
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_RangeCriticalDamageReduction10
+- Id: 4683
+  Name: Guild_TechBattle_MagicCriticalDamageReduction
+  Comment: 마법 치명타 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMagicCriticalDamageReduction
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechBattle_MagicCriticalResistance
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MagicCriticalDamageReduction10
+- Id: 3952
+  Name: Guild_TechBattle_MeleeDamageReductionIgnore
+  Comment: 근거리 피해 감소 무시
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameMeleeDamageReductionIgnore
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechBattle_MeleeCriticalDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MeleeDamageReductionIgnore10
+- Id: 6146
+  Name: Guild_TechBattle_RangeDamageReductionIgnore
+  Comment: 원거리 피해 감소 무시
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameRangeDamageReductionIgnore
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechBattle_RangeCriticalDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_RangeDamageReductionIgnore10
+- Id: 221
+  Name: Guild_TechBattle_MagicDamageReductionIgnore
+  Comment: 마법 피해 감소 무시
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle01.Guild_Tech_Battle01
+  Title: StatNameMagicDamageReductionIgnore
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechBattle_MagicCriticalDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MagicDamageReductionIgnore10
+- Id: 6095
+  Name: Guild_TechBattle_MeleeDamageReduceScale
+  Comment: 근거리 피해 증폭 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMeleeDamageReduceScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechBattle_MeleeDamageReductionIgnore
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MeleeDamageReduceScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MeleeDamageReduceScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MeleeDamageReduceScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MeleeDamageReduceScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MeleeDamageReduceScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MeleeDamageReduceScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MeleeDamageReduceScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MeleeDamageReduceScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MeleeDamageReduceScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MeleeDamageReduceScale10
+- Id: 186
+  Name: Guild_TechBattle_RangeDamageReduceScale
+  Comment: 원거리 피해 증폭 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameRangeDamageReduceScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechBattle_RangeDamageReductionIgnore
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_RangeDamageReduceScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_RangeDamageReduceScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_RangeDamageReduceScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_RangeDamageReduceScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_RangeDamageReduceScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_RangeDamageReduceScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_RangeDamageReduceScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_RangeDamageReduceScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_RangeDamageReduceScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_RangeDamageReduceScale10
+- Id: 3594
+  Name: Guild_TechBattle_MagicDamageReduceScale
+  Comment: 마법 피해 증폭 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Battle02.Guild_Tech_Battle02
+  Title: StatNameMagicDamageReduceScale
+  Category: TechBattle
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechBattle_MagicDamageReductionIgnore
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechBattle_MagicDamageReduceScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechBattle_MagicDamageReduceScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechBattle_MagicDamageReduceScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechBattle_MagicDamageReduceScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechBattle_MagicDamageReduceScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechBattle_MagicDamageReduceScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechBattle_MagicDamageReduceScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechBattle_MagicDamageReduceScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechBattle_MagicDamageReduceScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechBattle_MagicDamageReduceScale10
+- Id: 3108
+  Name: Guild_TechTactics_PvPHit
+  Comment: PvP 명중
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPHit
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 4
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPAddedDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPHit01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPHit02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPHit03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPHit04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPHit05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPHit06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPHit07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPHit08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPHit09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPHit10
+- Id: 859
+  Name: Guild_TechTactics_PvPAddedDamage
+  Comment: PvP 공격력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPAddedDamage
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 3
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPAddedDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPAddedDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPAddedDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPAddedDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPAddedDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPAddedDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPAddedDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPAddedDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPAddedDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPAddedDamage10
+- Id: 706
+  Name: Guild_TechTactics_PvPArmorClass
+  Comment: PvP 방어력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPArmorClass
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 3
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPArmorClass01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPArmorClass02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPArmorClass03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPArmorClass04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPArmorClass05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPArmorClass06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPArmorClass07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPArmorClass08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPArmorClass09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPArmorClass10
+- Id: 142
+  Name: Guild_TechTactics_PvPDodge
+  Comment: PvP 회피
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPDodge
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 4
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPArmorClass
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDodge01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDodge02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDodge03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDodge04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDodge05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDodge06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDodge07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDodge08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDodge09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDodge10
+- Id: 2384
+  Name: Guild_TechTactics_PvPDamageScale
+  Comment: PvP 피해 증폭
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPDamageScale
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 10
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDamageReductionIgnore
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDamageScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDamageScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDamageScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDamageScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDamageScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDamageScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDamageScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDamageScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDamageScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDamageScale10
+- Id: 2478
+  Name: Guild_TechTactics_PvPDamageReduction
+  Comment: PvP 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPDamageReduction
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 8
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDoubleResistance
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDamageReduction10
+- Id: 3668
+  Name: Guild_TechTactics_PvPDamageReduceScale
+  Comment: PvP 피해 증폭 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPDamageReduceScale
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 10
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDamageReduceScale01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDamageReduceScale02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDamageReduceScale03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDamageReduceScale04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDamageReduceScale05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDamageReduceScale06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDamageReduceScale07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDamageReduceScale08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDamageReduceScale09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDamageReduceScale10
+- Id: 4468
+  Name: Guild_TechTactics_PvPCriticalProbability
+  Comment: PvP 치명타
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPCriticalProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPHit
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPCriticalProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPCriticalProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPCriticalProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPCriticalProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPCriticalProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPCriticalProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPCriticalProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPCriticalProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPCriticalProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPCriticalProbability10
+- Id: 1507
+  Name: Guild_TechTactics_MeleeCriticalProbability
+  Comment: 근거리 치명타
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMeleeCriticalProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechTactics_MeleeDoubleProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MeleeCriticalProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MeleeCriticalProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MeleeCriticalProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MeleeCriticalProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MeleeCriticalProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MeleeCriticalProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MeleeCriticalProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MeleeCriticalProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MeleeCriticalProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MeleeCriticalProbability10
+- Id: 1162
+  Name: Guild_TechTactics_RangeCriticalProbability
+  Comment: 원거리 치명타
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameRangeCriticalProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechTactics_RangeDoubleProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_RangeCriticalProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_RangeCriticalProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_RangeCriticalProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_RangeCriticalProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_RangeCriticalProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_RangeCriticalProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_RangeCriticalProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_RangeCriticalProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_RangeCriticalProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_RangeCriticalProbability10
+- Id: 4056
+  Name: Guild_TechTactics_MagicCriticalProbability
+  Comment: 마법 치명타
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMagicCriticalProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 16
+  Prerequisites:
+    - Collection: Guild_TechTactics_MagicDoubleProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MagicCriticalProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MagicCriticalProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MagicCriticalProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MagicCriticalProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MagicCriticalProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MagicCriticalProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MagicCriticalProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MagicCriticalProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MagicCriticalProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MagicCriticalProbability10
+- Id: 4097
+  Name: Guild_TechTactics_PvPDoubleProbability
+  Comment: PvP 더블
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPDoubleProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPCriticalDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDoubleProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDoubleProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDoubleProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDoubleProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDoubleProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDoubleProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDoubleProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDoubleProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDoubleProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDoubleProbability10
+- Id: 2203
+  Name: Guild_TechTactics_PvPCriticalResistance
+  Comment: PvP 치명타 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPCriticalResistance
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 5
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDodge
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPCriticalResistance01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPCriticalResistance02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPCriticalResistance03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPCriticalResistance04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPCriticalResistance05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPCriticalResistance06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPCriticalResistance07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPCriticalResistance08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPCriticalResistance09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPCriticalResistance10
+- Id: 321
+  Name: Guild_TechTactics_PvPCriticalDamage
+  Comment: PvP 치명타 피해
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPCriticalDamage
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 6
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPCriticalProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPCriticalDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPCriticalDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPCriticalDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPCriticalDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPCriticalDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPCriticalDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPCriticalDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPCriticalDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPCriticalDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPCriticalDamage10
+- Id: 4623
+  Name: Guild_TechTactics_PvPCriticalDamageReduction
+  Comment: PvP 치명타 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPCriticalDamageReduction
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 6
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPCriticalResistance
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPCriticalDamageReduction10
+- Id: 4342
+  Name: Guild_TechTactics_PvPDoubleResistance
+  Comment: PvP 더블 저항
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNamePvPDoubleResistance
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 7
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPCriticalDamageReduction
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDoubleResistance01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDoubleResistance02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDoubleResistance03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDoubleResistance04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDoubleResistance05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDoubleResistance06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDoubleResistance07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDoubleResistance08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDoubleResistance09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDoubleResistance10
+- Id: 1975
+  Name: Guild_TechTactics_PvPDamageReductionIgnore
+  Comment: PvP 피해 감소 무시
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNamePvPDamageReductionIgnore
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 8
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDoubleProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_PvPDamageReductionIgnore10
+- Id: 2870
+  Name: Guild_TechTactics_MeleeArmorClass
+  Comment: 근거리 방어력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameMeleeArmorClass
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDamageScale
+      Level: 1
+    - Collection: Guild_TechTactics_PvPDamageReduceScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MeleeArmorClass01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MeleeArmorClass02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MeleeArmorClass03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MeleeArmorClass04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MeleeArmorClass05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MeleeArmorClass06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MeleeArmorClass07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MeleeArmorClass08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MeleeArmorClass09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MeleeArmorClass10
+- Id: 311
+  Name: Guild_TechTactics_RangeArmorClass
+  Comment: 원거리 방어력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameRangeArmorClass
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDamageScale
+      Level: 1
+    - Collection: Guild_TechTactics_PvPDamageReduceScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_RangeArmorClass01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_RangeArmorClass02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_RangeArmorClass03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_RangeArmorClass04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_RangeArmorClass05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_RangeArmorClass06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_RangeArmorClass07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_RangeArmorClass08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_RangeArmorClass09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_RangeArmorClass10
+- Id: 266
+  Name: Guild_TechTactics_MagicArmorClass
+  Comment: 마법 방어력
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameMagicArmorClass
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 12
+  Prerequisites:
+    - Collection: Guild_TechTactics_PvPDamageScale
+      Level: 1
+    - Collection: Guild_TechTactics_PvPDamageReduceScale
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MagicArmorClass01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MagicArmorClass02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MagicArmorClass03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MagicArmorClass04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MagicArmorClass05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MagicArmorClass06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MagicArmorClass07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MagicArmorClass08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MagicArmorClass09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MagicArmorClass10
+- Id: 7354
+  Name: Guild_TechTactics_MeleeDoubleProbability
+  Comment: 근거리 더블
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMeleeDoubleProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechTactics_MeleeArmorClass
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MeleeDoubleProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MeleeDoubleProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MeleeDoubleProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MeleeDoubleProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MeleeDoubleProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MeleeDoubleProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MeleeDoubleProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MeleeDoubleProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MeleeDoubleProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MeleeDoubleProbability10
+- Id: 2872
+  Name: Guild_TechTactics_RangeDoubleProbability
+  Comment: 원거리 더블
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameRangeDoubleProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechTactics_RangeArmorClass
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_RangeDoubleProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_RangeDoubleProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_RangeDoubleProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_RangeDoubleProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_RangeDoubleProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_RangeDoubleProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_RangeDoubleProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_RangeDoubleProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_RangeDoubleProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_RangeDoubleProbability10
+- Id: 832
+  Name: Guild_TechTactics_MagicDoubleProbability
+  Comment: 마법 더블
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMagicDoubleProbability
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 14
+  Prerequisites:
+    - Collection: Guild_TechTactics_MagicArmorClass
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MagicDoubleProbability01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MagicDoubleProbability02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MagicDoubleProbability03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MagicDoubleProbability04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MagicDoubleProbability05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MagicDoubleProbability06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MagicDoubleProbability07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MagicDoubleProbability08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MagicDoubleProbability09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MagicDoubleProbability10
+- Id: 436
+  Name: Guild_TechTactics_MeleeCriticalDamage
+  Comment: 근거리 치명타 피해
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMeleeCriticalDamage
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechTactics_MeleeCriticalProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MeleeCriticalDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MeleeCriticalDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MeleeCriticalDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MeleeCriticalDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MeleeCriticalDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MeleeCriticalDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MeleeCriticalDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MeleeCriticalDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MeleeCriticalDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MeleeCriticalDamage10
+- Id: 6080
+  Name: Guild_TechTactics_RangeCriticalDamage
+  Comment: 원거리 치명타 피해
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameRangeCriticalDamage
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechTactics_RangeCriticalProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_RangeCriticalDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_RangeCriticalDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_RangeCriticalDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_RangeCriticalDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_RangeCriticalDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_RangeCriticalDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_RangeCriticalDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_RangeCriticalDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_RangeCriticalDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_RangeCriticalDamage10
+- Id: 6962
+  Name: Guild_TechTactics_MagicCriticalDamage
+  Comment: 마법 치명타 피해
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics01.Guild_Tech_Tactics01
+  Title: StatNameMagicCriticalDamage
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 18
+  Prerequisites:
+    - Collection: Guild_TechTactics_MagicCriticalProbability
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MagicCriticalDamage01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MagicCriticalDamage02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MagicCriticalDamage03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MagicCriticalDamage04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MagicCriticalDamage05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MagicCriticalDamage06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MagicCriticalDamage07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MagicCriticalDamage08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MagicCriticalDamage09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MagicCriticalDamage10
+- Id: 3395
+  Name: Guild_TechTactics_MeleeDamageReduction
+  Comment: 근거리 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameMeleeDamageReduction
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechTactics_MeleeCriticalDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MeleeDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MeleeDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MeleeDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MeleeDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MeleeDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MeleeDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MeleeDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MeleeDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MeleeDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MeleeDamageReduction10
+- Id: 8139
+  Name: Guild_TechTactics_RangeDamageReduction
+  Comment: 원거리 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameRangeDamageReduction
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechTactics_RangeCriticalDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_RangeDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_RangeDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_RangeDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_RangeDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_RangeDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_RangeDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_RangeDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_RangeDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_RangeDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_RangeDamageReduction10
+- Id: 2759
+  Name: Guild_TechTactics_MagicDamageReduction
+  Comment: 마법 피해 감소
+  Icon: /Game/UIIcon/GuildTech/Guild_Tech_Tactics02.Guild_Tech_Tactics02
+  Title: StatNameMagicDamageReduction
+  Category: TechTactics
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+    - Level: 2
+      GuildItem: Point
+      Amount: 13000
+    - Level: 3
+      GuildItem: Point
+      Amount: 22000
+    - Level: 4
+      GuildItem: Point
+      Amount: 32000
+    - Level: 5
+      GuildItem: Point
+      Amount: 43000
+    - Level: 6
+      GuildItem: Point
+      Amount: 57000
+    - Level: 7
+      GuildItem: Point
+      Amount: 70000
+    - Level: 8
+      GuildItem: Point
+      Amount: 88000
+    - Level: 9
+      GuildItem: Point
+      Amount: 104000
+    - Level: 10
+      GuildItem: Point
+      Amount: 126000
+  LimitGuildLevel: 20
+  Prerequisites:
+    - Collection: Guild_TechTactics_MagicCriticalDamage
+      Level: 1
+  Progress:
+    - Level: 0
+      Amount: 200
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 800
+    - Level: 3
+      Amount: 1100
+    - Level: 4
+      Amount: 1500
+    - Level: 5
+      Amount: 1900
+    - Level: 6
+      Amount: 2300
+    - Level: 7
+      Amount: 2800
+    - Level: 8
+      Amount: 3300
+    - Level: 9
+      Amount: 3900
+  Contribute:
+    - ContributeType: Contribute
+      Contribute: Contribute
+    - ContributeType: AdditionalContribute
+      Contribute: AdditionalContribute
+  Rewards:
+    - RewardType: Buff
+      Level: 1
+      Buff: Guild_TechTactics_MagicDamageReduction01
+    - RewardType: Buff
+      Level: 2
+      Buff: Guild_TechTactics_MagicDamageReduction02
+    - RewardType: Buff
+      Level: 3
+      Buff: Guild_TechTactics_MagicDamageReduction03
+    - RewardType: Buff
+      Level: 4
+      Buff: Guild_TechTactics_MagicDamageReduction04
+    - RewardType: Buff
+      Level: 5
+      Buff: Guild_TechTactics_MagicDamageReduction05
+    - RewardType: Buff
+      Level: 6
+      Buff: Guild_TechTactics_MagicDamageReduction06
+    - RewardType: Buff
+      Level: 7
+      Buff: Guild_TechTactics_MagicDamageReduction07
+    - RewardType: Buff
+      Level: 8
+      Buff: Guild_TechTactics_MagicDamageReduction08
+    - RewardType: Buff
+      Level: 9
+      Buff: Guild_TechTactics_MagicDamageReduction09
+    - RewardType: Buff
+      Level: 10
+      Buff: Guild_TechTactics_MagicDamageReduction10
+- Id: 855
+  Name: Guild_Basic_Buff_01
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 1
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_01
+    - RewardType: ContentLimit
+      Content: GuildQuest
+    - RewardType: ContentLimit
+      Content: GuildMerchant
+    - RewardType: ContentLimit
+      Content: GuildStorage
+    - RewardType: UnlockMerchandise
+      Merchant: Merchant_Basic_Guild
+      Merchandise: NpcShop_Sell_Basic_Guild_Merchandises_17
+      AddendBuyAmount: 0
+- Id: 671
+  Name: Guild_Basic_Buff_02
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 2
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_02
+- Id: 1354
+  Name: Guild_Basic_Buff_03
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 3
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_03
+    - RewardType: ContentLimit
+      Content: GuildTrait
+    - RewardType: ContentLimit
+      Content: GuildFortress
+    - RewardType: UnlockGuildRaid
+      GuildRaid: TEST_GUILD_RAID_1
+- Id: 1377
+  Name: Guild_Basic_Buff_04
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 4
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_04
+- Id: 360
+  Name: Guild_Basic_Buff_05
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 5
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_05
+- Id: 1062
+  Name: Guild_Basic_Buff_06
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 6
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_06
+- Id: 2063
+  Name: Guild_Basic_Buff_07
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 7
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_07
+- Id: 793
+  Name: Guild_Basic_Buff_08
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 8
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_08
+- Id: 1879
+  Name: Guild_Basic_Buff_09
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 9
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_09
+- Id: 417
+  Name: Guild_Basic_Buff_10
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 10
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_10
+- Id: 504
+  Name: Guild_Basic_Buff_11
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 11
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_11
+- Id: 8092
+  Name: Guild_Basic_Buff_12
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 12
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_12
+- Id: 105
+  Name: Guild_Basic_Buff_13
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 13
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_13
+- Id: 6896
+  Name: Guild_Basic_Buff_14
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 14
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_14
+- Id: 7305
+  Name: Guild_Basic_Buff_15
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 15
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_15
+- Id: 1740
+  Name: Guild_Basic_Buff_16
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 16
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_16
+- Id: 7285
+  Name: Guild_Basic_Buff_17
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 17
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_17
+- Id: 6208
+  Name: Guild_Basic_Buff_18
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 18
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_18
+- Id: 8316
+  Name: Guild_Basic_Buff_19
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 19
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_19
+- Id: 6579
+  Name: Guild_Basic_Buff_20
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 20
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_20
+- Id: 1994
+  Name: Guild_Basic_Buff_21
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 21
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_21
+- Id: 302
+  Name: Guild_Basic_Buff_22
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 22
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_22
+- Id: 8956
+  Name: Guild_Basic_Buff_23
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 23
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_23
+- Id: 8580
+  Name: Guild_Basic_Buff_24
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 24
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_24
+- Id: 3982
+  Name: Guild_Basic_Buff_25
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 25
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_25
+- Id: 9002
+  Name: Guild_Basic_Buff_26
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 26
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_26
+- Id: 1721
+  Name: Guild_Basic_Buff_27
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 27
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_27
+- Id: 6882
+  Name: Guild_Basic_Buff_28
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 28
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_28
+- Id: 9766
+  Name: Guild_Basic_Buff_29
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 29
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_29
+- Id: 333
+  Name: Guild_Basic_Buff_30
+  Comment: 기본 버프 및 컨텐츠 해금
+  Category: Basic
+  LimitGuildLevel: 30
+  Rewards:
+    - RewardType: Buff
+      Buff: Guild_Basic_Buff_30
+- Id: 335
+  Name: Guild_Fortress_Enter
+  Comment: 길드 요새 입장 해금
+  Category: GuildFortress
+  Cost:
+    - Level: 1
+      GuildItem: Point
+      Amount: 5000
+  Rewards:
+    - Level: 1
+      RewardType: ContentLimit
+      Content: GuildFortressEnter

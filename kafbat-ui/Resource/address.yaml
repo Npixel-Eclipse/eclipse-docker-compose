@@ -1,0 +1,2909 @@
+- Id: 1
+  Name: World
+  Comment: 월드 전체
+  Land: Eldar
+  Description: Address_World
+  Color: "00000000"
+  DistrictType: Continent
+  OfflineMode: Unavailable
+- Id: 43
+  Name: Varitan
+  Parent: World
+  Comment: 바리탄
+  Land: Eldar
+  Server: 1
+  DistrictType: Realm
+  OfflineMode: Unavailable
+- Id: 134
+  Name: Eldar
+  Parent: World
+  Comment: 엘다르
+  Land: Eldar
+  Server: 2
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: Realm
+  OfflineMode: Unavailable
+- Id: 8215
+  Name: Castia
+  Parent: World
+  Comment: 카스티아
+  Land: Eldar
+  MaxDiedBreakEquipmentCount: 2
+  DistrictType: Realm
+  OfflineMode: Unavailable
+- Id: 72
+  Name: Varitan_Subjugate
+  Parent: Varitan
+  Comment: 바리탄 침탈지대
+  Land: Eldar
+  Description: UIWord_WorldMap_Var_Subjugate
+  Color: E7D86AFF
+  MaxDiedBreakEquipmentCount: 1
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 190
+  Name: Varitan_Wastes
+  Parent: Varitan
+  Comment: 바리탄 패전지대
+  Land: Eldar
+  Description: UIWord_WorldMap_SouthVaritan
+  Color: FAE600FF
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 468
+  Name: Varitan_Blightlands
+  Parent: Varitan
+  Comment: 바리탄 잠식지대
+  Land: Eldar
+  Description: UIWord_WorldMap_Var_Blightlands
+  Color: D58700FF
+  MaxDiedBreakEquipmentCount: 1
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 384
+  Name: Rainwood
+  Parent: Varitan
+  Comment: 레인우드
+  Land: Eldar
+  Description: UIWord_WorldMap_Rainwood
+  MaxDiedBreakEquipmentCount: 1
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 478
+  Name: Eldar_Dawnbough
+  Parent: Eldar
+  Comment: 엘다르 여명지대
+  Land: Eldar
+  Description: UIWord_WorldMap_Eldar_Dawnbough
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 464
+  Name: Eldar_Shadowbloom
+  Parent: Eldar
+  Comment: 엘다르 그늘지대
+  Land: Eldar
+  Description: UIWord_WorldMap_Eldar_Shadowbloom
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 1406
+  Name: Eldar_Heartwood
+  Parent: Eldar
+  Comment: 엘다르 중심지대
+  Land: Eldar
+  Description: UIWord_WorldMap_Eldar_Heartwood
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 4353
+  Name: East_Castia
+  Parent: Castia
+  Comment: 동부 카스티아
+  Land: Eldar
+  Description: UIWord_WorldMap_East_Castia
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 5173
+  Name: South_Castia
+  Parent: Castia
+  Comment: 남부 카스티아
+  Land: Eldar
+  Description: UIWord_WorldMap_South_Castia
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 688
+  Name: West_Castia
+  Parent: Castia
+  Comment: 서부 카스티아
+  Land: Eldar
+  Description: UIWord_WorldMap_West_Castia
+  DistrictType: Province
+  OfflineMode: Unavailable
+- Id: 2073
+  Name: Bloodshed
+  Parent: Varitan_Subjugate
+  Comment: 블러드쉐드
+  Land: Eldar
+  Description: Address_BloodShed_Enter
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: County
+  OfflineMode: Unavailable
+- Id: 1784
+  Name: Kulika_Undying
+  Parent: Eldar_Dawnbough
+  Comment: 구리 불멸지
+  Land: Eldar
+  Description: Address_Gurigara_Enter
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+- Id: 2529
+  Name: Abrion_Tower
+  Parent: East_Castia
+  Comment: 아브리온 탑
+  Land: Eldar
+  Description: Address_GodGift_Enter
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+- Id: 4215
+  Name: Breath_of_Gaia_Ondor
+  Parent: South_Castia
+  Comment: 가이아 온도르의 숨결
+  Land: Eldar
+  Description: Address_Gaia_Ondor_Enter
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: County
+  OfflineMode: Unavailable
+- Id: 10121
+  Name: Holy_Patria_Lesbos_Sanctum
+  Parent: South_Castia
+  Comment: 성녀 페트리아 신단
+  Land: Eldar
+  Description: Address_Holy_Patria_Lesbos_Sanctum_Enter
+  WelcomeSkill:
+    - Skill: RandomTeleport_Block_Skill
+  MaxDiedBreakEquipmentCount: 3
+  DistrictType: County
+  OfflineMode: Unavailable
+- Id: 348
+  Name: Var_Wastes_CliffofPurity
+  Parent: Varitan_Wastes
+  Comment: 순결의 절벽
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_CliffofPurity
+  Color: 919E32FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  OfflineMode: Available
+  LogAddress: true
+- Id: 961
+  Name: Var_Wastes_KarsaPlains
+  Parent: Varitan_Wastes
+  Comment: 카르사 평야
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_KarsaPlains
+  Color: AA6E0032
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1643
+  Name: Varitan_Wastes_Quest_Instance_CH02_09
+  Parent: Varitan_Wastes
+  NavSource: Var_Wastes_HolyOrderForwardBase
+  Comment: (인스턴스) 바리탄 전초기지
+  Land: Quest_Instance_CH02_09
+  Description: Address_Varitan_Outpost
+  Color: AA6E0032
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 30
+  Name: Var_Wastes_VaritanOuterWatchpost
+  Parent: Varitan_Wastes
+  Comment: 바리탄 외곽 감시대
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_VaritanOuterWatchpost
+  Color: AA500064
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 847
+  Name: Var_Wastes_LascanoFortress
+  Parent: Varitan_Wastes
+  Comment: 라스카노 저항군 요새
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_LascanoFortress
+  Color: AA3200FF
+  WelcomeSkill:
+    - Skill: IsTownBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaBlue
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 632
+  Name: Var_Wastes_CarmenoBanditDen
+  Parent: Varitan_Wastes
+  Comment: 카르메노 도적단 소굴
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_CarmenoBanditDen
+  Color: AA1E00FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1472
+  Name: Varitan_Wastes_Ruined_Village
+  Parent: Varitan_Wastes
+  Comment: 폐허가 된 마을
+  Land: Varitan_Wastes
+  Description: Address_Ruined_Village
+  Color: B4FF00FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaBlue
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 62
+  Name: Var_Wastes_MaregraWrecks
+  Parent: Varitan_Wastes
+  Comment: 마레그라 난파 해변
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_MaregraWrecks
+  Color: B4641EFF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4689
+  Name: Var_Wastes_HolyOrderForwardBase
+  Parent: Varitan_Wastes
+  Comment: 성위단 전초기지
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_HolyOrderForwardBase
+  Color: EB842AFF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3924
+  Name: Var_Wastes_PalleboRemnantsCamp
+  Parent: Varitan_Wastes
+  Comment: 팔레보 잔류지
+  Land: Varitan_Wastes
+  Description: Address_Var_Wastes_PalleboRemnantsCamp
+  Color: F89800FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1058
+  Name: Var_Subjugate_EvoFamilyRuins_Normal
+  Parent: Var_Subjugate_EvoFamilyRuins
+  Comment: 에보 가문의 폐허
+  Land: Eldar
+  Description: Address_The_Evoh_Bloodlines
+  Color: B4BE00FF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 18199
+  Name: Var_Subjugate_EvoFamilyRuins_Quest_Instance_CH04_10
+  Parent: Varitan_Subjugate
+  NavSource: Var_Subjugate_EvoFamilyRuins_Normal
+  Comment: (인스턴스) 에보 가문의 핏줄
+  Land: Quest_Instance_CH04_10
+  Description: Address_The_Evoh_Bloodlines
+  Color: B4BE00FF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 382
+  Name: Var_Subjugate_EvoFamilyRuins_Boss
+  Parent: Var_Subjugate_EvoFamilyRuins
+  Comment: 에보 가문의 폐허
+  Land: Eldar
+  Description: Address_The_Evoh_Bloodlines
+  Color: E4F000FF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 21189
+  Name: Var_Subjugate_EvoFamilyRuins
+  Parent: Varitan_Subjugate
+  Comment: 에보 가문의 폐허(부모)
+  Land: Eldar
+  Description: Address_The_Evoh_Bloodlines
+  Color: B4BE00FF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 7960
+  Name: Var_Subjugate_EvoFamilyRuins_Boss_Quest_Instance_CH04_10
+  Parent: Varitan_Subjugate
+  NavSource: Var_Subjugate_EvoFamilyRuins_Boss
+  Comment: (인스턴스) 에보 가문의 핏줄
+  Land: Quest_Instance_CH04_10
+  Description: Address_The_Evoh_Bloodlines
+  Color: B4BE00FF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 564
+  Name: Eld_Dawnbough_MirageVale
+  Parent: Eldar_Dawnbough
+  Comment: 신기루 계곡
+  Land: Eldar
+  Description: Address_Mirage_Valley
+  Color: 46AAFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1062
+  Name: Eld_Dawnbough_NasharOuterwardRuins
+  Parent: Eldar_Dawnbough
+  Comment: 나샤르 외벽 잔해지
+  Land: Eldar
+  Description: Address_Nasyars_Bastion
+  Color: 0087FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 671
+  Name: Eld_Dawnbough_NasharRefuge
+  Parent: Eldar_Dawnbough
+  Comment: 나샤르 피난처
+  Land: Eldar
+  Description: Address_House_of_Nasyar_Refuge
+  Color: 001EFFFF
+  WelcomeSkill:
+    - Skill: IsTownBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaBlue
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 639
+  Name: Eld_Dawnbough_EldarGarrison
+  Parent: Eldar_Dawnbough
+  Comment: 엘다르 군영지
+  Land: Eldar
+  Description: Address_Ellan_Border_Patrols
+  Color: 0050FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 732
+  Name: Eld_Dawnbough_LakeofEncroachment
+  Parent: Eldar_Dawnbough
+  Comment: 잠식의 호수
+  Land: Eldar
+  Description: Address_Hooked_Lake
+  Color: 821EDCFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 733
+  Name: Eld_Dawnbough_BelkarRockland
+  Parent: Eldar_Dawnbough
+  Comment: 벨카르 암석지
+  Land: Eldar
+  Description: Address_Balko_Rock
+  Color: 5A5AFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1254
+  Name: Eld_Dawnbough_LandofKarakan
+  Parent: Eldar_Dawnbough
+  Comment: 용족 카라칸의 땅
+  Land: Eldar
+  Description: Address_Draconian_Karakans_Lands
+  Color: 3C78FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2694
+  Name: Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters
+  Parent: Eldar_Dawnbough
+  Comment: 야만족장 토우렌 자매
+  Land: Eldar
+  Description: Address_Barbarian_Chief_Touren_Sisters
+  Color: 7846FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3969
+  Name: Eldar_Dawnbough_QuestInstance_Barbarian_Chief_Touren_Sisters
+  Parent: Eldar_Dawnbough
+  NavSource: Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters
+  Comment: (인스턴스) 야만족장 토우렌 자매
+  Land: Quest_Instance_007
+  Description: Address_Barbarian_Chief_Touren_Sisters
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 931
+  Name: Eld_Dawnbough_BelkarSedimentField
+  Parent: Eldar_Dawnbough
+  Comment: 벨카르 침전지
+  Land: Eldar
+  Description: Address_Traces_of_the_Black_Dragon
+  Color: 0014FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 11386
+  Name: Eld_Dawnbough_BelkarDeepstrata_Normal
+  Parent: Eld_Dawnbough_BelkarDeepstrata
+  Comment: 벨카르 중심지
+  Land: Eldar
+  Description: Address_BelkarDeepstrata
+  Color: 00FFE5FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+- Id: 17538
+  Name: Eld_Dawnbough_BelkarDeepstrata_Boss
+  Parent: Eld_Dawnbough_BelkarDeepstrata
+  Comment: 벨카르 중심지
+  Land: Eldar
+  Description: Address_BelkarDeepstrata
+  Color: 00C4E9FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+- Id: 1906
+  Name: Eld_Dawnbough_BelkarDeepstrata
+  Parent: Eldar_Dawnbough
+  Comment: 벨카르 중심지
+  Land: Eldar
+  Description: Address_BelkarDeepstrata
+  Color: 00FFE5FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  LogAddress: true
+- Id: 320
+  Name: Var_Subjugate_VigiliPlain
+  Parent: Varitan_Subjugate
+  Comment: 비질리 평원
+  Land: Eldar
+  Description: Address_Var_Subjugate_VigiliPlain
+  Color: FF7896FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 221
+  Name: Var_Subjugate_VigiliFarmlands
+  Parent: Varitan_Subjugate
+  Comment: 비질리 경작지
+  Land: Eldar
+  Description: Address_Var_Subjugate_VigiliFarmlands
+  Color: FF3CDCFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 172
+  Name: Var_Subjugate_RubroCartelPost
+  Parent: Varitan_Subjugate
+  Comment: 루브로회 밀약 거점
+  Land: Eldar
+  Description: Address_Var_Subjugate_RubroCartelPost
+  Color: FA0A50FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2431
+  Name: Var_Subjugate_MareliceHarbor_Normal
+  Parent: Var_Subjugate_MareliceHarbor
+  Comment: 마렐리체 정박지
+  Land: Eldar
+  Description: Address_Var_Subjugate_MareliceHarbor
+  Color: FF4646FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 12380
+  Name: Var_Subjugate_MareliceHarbor_Instance_Ch04_05
+  Parent: Var_Subjugate_MareliceHarbor
+  NavSource: Var_Subjugate_MareliceHarbor_Normal
+  Comment: (인스턴스) 자유항
+  Land: Quest_Instance_CH04_05
+  Description: Address_Free_Harbor
+  Color: FF4646FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 16484
+  Name: Var_Subjugate_MareliceHarbor_Boss
+  Parent: Var_Subjugate_MareliceHarbor
+  Comment: 마렐리체 정박지
+  Land: Eldar
+  Description: Address_Var_Subjugate_MareliceHarbor
+  Color: B12E2EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 3125
+  Name: Var_Subjugate_MareliceHarbor
+  Parent: Varitan_Subjugate
+  Comment: 마렐리체 정박지
+  Land: Eldar
+  Description: Address_Var_Subjugate_MareliceHarbor
+  Color: FF4646FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 17888
+  Name: Var_Subjugate_MareliceHarbor_Boss_Instance_Ch04_05
+  Parent: Var_Subjugate_MareliceHarbor
+  NavSource: Var_Subjugate_MareliceHarbor_Boss
+  Comment: (인스턴스) 자유항
+  Land: Quest_Instance_CH04_05
+  Description: Address_Free_Harbor
+  Color: FF4646FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 1476
+  Name: Var_Subjugate_TheForsakenBluffs
+  Parent: Varitan_Subjugate
+  Comment: 방치된 외곽 언덕
+  Land: Eldar
+  Description: Address_Var_Subjugate_TheForsakenBluffs
+  Color: 8000E7FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1697
+  Name: Var_Subjugate_ImperialQuarry
+  Parent: Varitan_Subjugate
+  Comment: 제국령 채석장
+  Land: Eldar
+  Description: Address_Var_Subjugate_ImperialQuarry
+  Color: FF3C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2838
+  Name: Varitan_Wastes_QuestInstance_Varitan_Guard_Post
+  Parent: Varitan_Wastes
+  NavSource: Var_Wastes_VaritanOuterWatchpost
+  Comment: (인스턴스) 바리탄 경비초소
+  Land: Quest_Instance_001
+  Description: Address_Varitan_Guard_Post
+  Color: AA500064
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 829
+  Name: Var_Subjugate_VaritanCitadel
+  Parent: Varitan_Subjugate
+  Comment: 바리탄 성채
+  Land: Eldar
+  Description: Address_Var_Subjugate_VaritanCitadel
+  Color: FF1E00FF
+  WelcomeSkill:
+    - Skill: IsTownBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaBlue
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 663
+  Name: Var_Subjugate_HolyOrderCheckpoint
+  Parent: Varitan_Subjugate
+  Comment: 성위단 검문소
+  Land: Eldar
+  Description: Address_Var_Subjugate_HolyOrderCheckpoint
+  Color: FF7878FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3035
+  Name: Var_Blightlands_ImperialLogging
+  Parent: Varitan_Blightlands
+  Comment: 제국령 벌채장
+  Land: Eldar
+  Description: Address_Var_Blightlands_ImperialLogging
+  Color: C85A1EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 960
+  Name: Var_Blightlands_EscaronExcavation
+  Parent: Varitan_Blightlands
+  Comment: 에스카론 학회 채광지
+  Land: Eldar
+  Description: Address_Var_Blightlands_EscaronExcavation
+  Color: FFB43CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3009
+  Name: Var_Blightlands_CastiaLuminaryII
+  Parent: Varitan_Blightlands
+  Comment: 카스티아 제2 성단
+  Land: Eldar
+  Description: Address_Var_Blightlands_CastiaLuminaryII
+  Color: B47814FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 10819
+  Name: Varitan_Subjugate_QuestInstance_Varitan_Castle
+  Parent: Varitan_Subjugate
+  NavSource: Var_Subjugate_VaritanCitadel
+  Comment: (인스턴스) 바리탄 성채 (마을)_퀘스트 인스턴스
+  Land: Quest_Instance_006
+  Description: Address_Var_Subjugate_VaritanCitadel
+  Color: FF1E00FF
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  GetPkScore: false
+- Id: 33
+  Name: Var_Blightlands_CastianMercenaryPost
+  Parent: Varitan_Blightlands
+  Comment: 카스티아 용병단 초소
+  Land: Eldar
+  Description: Address_Var_Blightlands_CastianMercenaryPost
+  Color: FFD20AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1314
+  Name: Var_Blightlands_BlackRindWoods_Normal
+  Parent: Var_Blightlands_BlackRindWoods
+  Comment: 검은 껍질의 숲
+  Land: Eldar
+  Description: Address_Var_Blightlands_BlackRindWoods
+  Color: FF9600FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 14989
+  Name: Var_Blightlands_BlackRindWoods_Boss
+  Parent: Var_Blightlands_BlackRindWoods
+  Comment: 검은 껍질의 숲
+  Land: Eldar
+  Description: Address_Var_Blightlands_BlackRindWoods
+  Color: E26400FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 21100
+  Name: Var_Blightlands_BlackRindWoods
+  Parent: Varitan_Blightlands
+  Comment: 검은 껍질의 숲
+  Land: Eldar
+  Description: Address_Var_Blightlands_BlackRindWoods
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  LogAddress: true
+- Id: 19097
+  Name: Var_Blightlands_SilentRotValley
+  Parent: Varitan_Blightlands
+  Comment: 죽은 나무 계곡
+  Land: Eldar
+  Description: Address_Var_Blightlands_SilentRotValley
+  Color: FFBF90FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  LogAddress: true
+- Id: 17774
+  Name: Varitan_Blightlands_Quest_Instance_CH03_04_01
+  Parent: Varitan_Blightlands
+  NavSource: Var_Blightlands_SilentRotValley
+  Comment: 나무 계곡
+  Land: Quest_Instance_CH03_04
+  Description: Address_Var_Blightlands_SilentRotValley
+  Color: FF9600FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 4496
+  Name: Varitan_Blightlands_Quest_Instance_CH03_04_02
+  Parent: Varitan_Blightlands
+  NavSource: Var_Blightlands_BlackRindWoods
+  Comment: 나무 계곡
+  Land: Quest_Instance_CH03_04
+  Description: Address_Var_Blightlands_BlackRindWoods
+  Color: FF9600FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 1064
+  Name: Var_Blightlands_CremisiMines
+  Parent: Varitan_Blightlands
+  Comment: 크레미시 광산
+  Land: Eldar
+  Description: Address_Var_Blightlands_CremisiMines
+  Color: FF5000FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5021
+  Name: Varitan_Blightlands_QuestInstance_Soy_Mountains_Mining_Town
+  Parent: Varitan_Blightlands
+  NavSource: Var_Blightlands_CremisiMines
+  Comment: (인스턴스) 소이산맥 광산촌
+  Land: Quest_Instance_004
+  Description: Address_Var_Blightlands_CremisiMines
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 4350
+  Name: Var_Blightlands_PortPalmir
+  Parent: Varitan_Blightlands
+  Comment: 팔미르 항구
+  Land: Eldar
+  Description: Address_Var_Blightlands_PortPalmir
+  Color: ED0021FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3477
+  Name: Var_Blightlands_MilanCitadel
+  Parent: Varitan_Blightlands
+  Comment: 밀란 성채
+  Land: Eldar
+  Description: Address_Var_Blightlands_MilanCitadel
+  Color: FFDC32FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1598
+  Name: Ele_Sacredforest_LakeOfRemembrance
+  Parent: Rainwood
+  Comment: 기억의 호수
+  Land: Eldar
+  Description: Address_Isah_Lake
+  Color: FF7878FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1077
+  Name: Ele_Sacredforest_ElessirHeartlands_Normal
+  Parent: Ele_Sacredforest_ElessirHeartlands
+  Comment: 엘레시르의 심장부
+  Land: Eldar
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 15074
+  Name: Ele_Sacredforest_ElessirHeartlands_Quest_Instance_CH05_18
+  Parent: Rainwood
+  NavSource: Ele_Sacredforest_ElessirHeartlands_Normal
+  Comment: 엘레시르의 심장부
+  Land: Quest_Instance_CH05_18
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 8794
+  Name: Ele_Sacredforest_ElessirHeartlands_Boss
+  Parent: Ele_Sacredforest_ElessirHeartlands
+  Comment: 엘레시르의 심장부
+  Land: Eldar
+  Description: Address_Hololu_Cavern
+  Color: B43D70FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 5438
+  Name: Ele_Sacredforest_ElessirHeartlands_Boss_Quest_Instance_CH05_18
+  Parent: Rainwood
+  NavSource: Ele_Sacredforest_ElessirHeartlands_Boss
+  Comment: 엘레시르의 심장부
+  Land: Quest_Instance_CH05_18
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 2562
+  Name: Ele_Sacredforest_ElessirHeartlands
+  Parent: Rainwood
+  Comment: 엘레시르의 심장부
+  Land: Eldar
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5984
+  Name: Rainwood_QuestInstance_Hololu_Cavern
+  Parent: Rainwood
+  NavSource: Ele_Sacredforest_ElessirHeartlands
+  Comment: (인스턴스) 홀룰루 동굴
+  Land: Quest_Instance_005
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 191
+  Name: Ele_Sacredforest_ArkesylOuterRim
+  Parent: Rainwood
+  Comment: 아르케실 성역 진입지
+  Land: Eldar
+  Description: Address_Stone_Head
+  Color: FF145AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4361
+  Name: Ele_Sacredforest_ArkesylMidlands
+  Parent: Rainwood
+  Comment: 아르케실 성역 중심지
+  Land: Eldar
+  Description: Address_Ele_Sacredforest_ArkesylMidlands
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  LogAddress: true
+- Id: 3632
+  Name: Ele_Sacredforest_ArkesylLowerRuins
+  Parent: Rainwood
+  Comment: 아르케실 성역 하부 잔존지
+  Land: Eldar
+  Description: Address_Dwarven_Gravediggers_Camp
+  Color: FF1E8CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3314
+  Name: Ele_Sacredforest_GardenOfTheOath
+  Parent: Rainwood
+  Comment: 서약의 정원
+  Land: Eldar
+  Description: Address_Isah_Garden
+  Color: FF3C5AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4104
+  Name: Ele_Sacredforest_ForestOutskirts
+  Parent: Rainwood
+  Comment: 숲의 경계지
+  Land: Eldar
+  Description: Address_Dragondog_Hunters_Camp
+  Color: FF32A0FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 9036
+  Name: Ele_Sacredforest_ErmaelOuterwoods
+  Parent: Rainwood
+  Comment: 에르마엘 외곽림
+  Land: Eldar
+  Description: Address_Ele_Sacredforest_ErmaelOuterwoods
+  Color: FF4A6CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  LogAddress: true
+- Id: 3497
+  Name: Ele_Sacredforest_CastiaSurveyPost
+  Parent: Rainwood
+  Comment: 카스티아 제국군 관측 초소
+  Land: Eldar
+  Description: Address_Castia_Imperial_Outpost
+  Color: FF88CBFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3570
+  Name: Eld_Heartwood_ForsakenElsarShrine
+  Parent: Eldar_Heartwood
+  Comment: 남겨진 엘사르 신전
+  Land: Eldar
+  Description: Address_Arkhandar_Order
+  Color: FFA1DDFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3419
+  Name: Eldar_Heartwood_QuestInstance_Arkhandar_Order
+  Parent: Eldar_Heartwood
+  NavSource: Eld_Heartwood_ForsakenElsarShrine
+  Comment: (인스턴스) 아르칸다르 교단
+  Land: Quest_Instance_008
+  Description: Address_Arkhandar_Order
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 1074
+  Name: Eld_Heartwood_BlackveilBasin_Normal
+  Parent: Eld_Heartwood_BlackveilBasin
+  Comment: 검은막 호수
+  Land: Eldar
+  Description: Address_Blackveil_Lake
+  Color: FF009DFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 13499
+  Name: Eld_Heartwood_BlackveilBasin_Boss
+  Parent: Eld_Heartwood_BlackveilBasin
+  Comment: 검은막 호수
+  Land: Eldar
+  Description: Address_Blackveil_Lake
+  Color: FF009DFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 5343
+  Name: Eld_Heartwood_BlackveilBasin
+  Parent: Eldar_Heartwood
+  Comment: 검은막 호수
+  Land: Eldar
+  Description: Address_Blackveil_Lake
+  Color: FF009DFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3063
+  Name: Eld_Heartwood_EverslumberMarsh
+  Parent: Eldar_Heartwood
+  Comment: 영원한 잠자리 습원
+  Land: Eldar
+  Description: Address_Wild_Boar_Forest
+  Color: CA00FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 8759
+  Name: Eld_Heartwood_SilentreachForest
+  Parent: Eldar_Heartwood
+  Comment: 침묵의 숲
+  Land: Eldar
+  Description: Address_SilentreachForest
+  Color: 8600FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5971
+  Name: Eld_Heartwood_SpiritCrossing
+  Parent: Eldar_Heartwood
+  Comment: 정령의 길목
+  Land: Eldar
+  Description: Address_Butterfly_Lump_Bunk
+  Color: FF007BFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3344
+  Name: Eld_Heartwood_ElsarVillage
+  Parent: Eldar_Heartwood
+  Comment: 엘사르
+  Land: Eldar
+  Description: Address_Elsar
+  Color: FF95AAFF
+  WelcomeSkill:
+    - Skill: IsTownBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaBlue
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 1288
+  Name: Eld_Heartwood_AshenForestofLoss
+  Parent: Eldar_Heartwood
+  Comment: 잿빛 상실의 숲
+  Land: Eldar
+  Description: Address_Labyrinthine_Forest
+  Color: DAAAFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3075
+  Name: Eldar_Heartwood_Slumbering_Sand_Beach
+  Parent: Eldar_Heartwood
+  Comment: 잠든모래 백사장
+  Land: Eldar
+  Description: Address_Slumbering_Sand_Beach
+  Color: FF7C7CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4223
+  Name: Eld_Heartwood_TheSlumberedShore
+  Parent: Eldar_Heartwood
+  Comment: 잠든 모래 해안
+  Land: Eldar
+  Description: Address_Slumbering_Sand_Dock
+  Color: EB71C3FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5063
+  Name: Eld_Shadowbloom_NasharSepulcher
+  Parent: Eldar_Shadowbloom
+  Comment: 나샤르 총묘
+  Land: Eldar
+  Description: Address_House_Rua_Grave_Mound
+  Color: FF80ABFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2294
+  Name: Eld_Shadowbloom_WeepingMarsh
+  Parent: Eldar_Shadowbloom
+  Comment: 울음의 습지
+  Land: Eldar
+  Description: Address_Harf_Wetlands
+  Color: FF0000FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 7075
+  Name: Eld_Shadowbloom_GorgeoftheLeftBehind
+  Parent: Eldar_Shadowbloom
+  Comment: 남겨잔 것들의 협곡
+  Land: Eldar
+  Description: Address_Valley_of_Corpses
+  Color: FF8C5EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 23
+  Name: Eldar_Shadowbloom_QuestInstance_Valley_of_Corpses
+  Parent: Eldar_Shadowbloom
+  NavSource: Eld_Shadowbloom_GorgeoftheLeftBehind
+  Comment: (인스턴스) 시체 협곡
+  Land: Quest_Instance_009
+  Description: Address_Valley_of_Corpses
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 6216
+  Name: Eld_Shadowbloom_RuachRiverbank
+  Parent: Eldar_Shadowbloom
+  Comment: 루아흐 강변
+  Land: Eldar
+  Description: Address_Ruah_Riverside_Sharans_Wall
+  Color: CB0000FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 485
+  Name: Eldar_Shadowbloom_QuestInstance_Ruah_Riverside_Sharans_Wall
+  Parent: Eldar_Shadowbloom
+  NavSource: Eld_Shadowbloom_RuachRiverbank
+  Comment: (인스턴스) 루아흐 강변
+  Land: Quest_Instance_010
+  Description: Address_Ruah_Riverside_Sharans_Wall
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 1544
+  Name: Eld_Shadowbloom_SnikraHideout
+  Parent: Eldar_Shadowbloom
+  Comment: 스니크라 은신처
+  Land: Eldar
+  Description: Address_Nest_of_the_Dwarven_King_Durunk
+  Color: FF4152FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 861
+  Name: Eld_Shadowbloom_LandofBrokenVows
+  Parent: Eldar_Shadowbloom
+  Comment: 버려진 맹세의 땅
+  Land: Eldar
+  Description: Address_Tail_of_the_Exiled
+  Color: FF6A2AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2753
+  Name: Eld_Shadowbloom_GrunzarRotlands_Normal
+  Parent: Eld_Shadowbloom_GrunzarRotlands
+  Comment: 그룬자르 부패한 땅
+  Land: Eldar
+  Description: Address_Muck_Kings_Land
+  Color: FFBEB4FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 8727
+  Name: Eld_Shadowbloom_GrunzarRotlands_Boss
+  Parent: Eld_Shadowbloom_GrunzarRotlands
+  Comment: 그룬자르 부패한 땅
+  Land: Eldar
+  Description: Address_Muck_Kings_Land
+  Color: FF006DFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 22519
+  Name: Eld_Shadowbloom_GrunzarRotlands
+  Parent: Eldar_Shadowbloom
+  Comment: 그룬자르 부패한 땅
+  Land: Eldar
+  Description: Address_Muck_Kings_Land
+  Color: FFBEB4FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5341
+  Name: Eld_Shadowbloom_SunkenLands
+  Parent: Eldar_Shadowbloom
+  Comment: 침잠의 땅
+  Land: Eldar
+  Description: Address_Mud_Kings_Land
+  Color: FFC06BFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 649
+  Name: East_Castia_The_House_Persister
+  Parent: East_Castia
+  Comment: 퍼시스터 가문
+  Land: Eldar
+  Description: Address_The_House_Persister
+  Color: B0CBFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2674
+  Name: East_Castia_Golden_Road
+  Parent: East_Castia
+  Comment: 골든 로드
+  Land: Eldar
+  Description: Address_Golden_Road
+  Color: 8500FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5904
+  Name: East_Castia_Castle_Hornhill
+  Parent: East_Castia
+  Comment: 호른힐 성채
+  Land: Eldar
+  Description: Address_Castle_Hornhill
+  Color: F19BFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 10802
+  Name: East_Castia_Castle_Hornhill_WorldBossSatyros
+  Parent: East_Castia
+  NavSource: East_Castia_Castle_Hornhill
+  Comment: 월드 보스 사티로스
+  Land: WorldBoss
+  Description: Address_Castle_Hornhill
+  Color: 00F2FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 4625
+  Name: East_Castia_Stone_Neck
+  Parent: East_Castia
+  Comment: 스톤 넥
+  Land: Eldar
+  Description: Address_Stone_Neck
+  Color: 7596FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2729
+  Name: East_Castia_The_Golden_Valley
+  Parent: East_Castia
+  Comment: 황금 계곡
+  Land: Eldar
+  Description: Address_The_Golden_Valley
+  Color: B39EFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1636
+  Name: East_Castia_QuestInstance_The_Golden_Valley
+  Parent: East_Castia
+  NavSource: East_Castia_The_Golden_Valley
+  Comment: (인스턴스) 황금 계곡
+  Land: Quest_Instance_012
+  Description: Address_The_Golden_Valley
+  Color: B39EFFFF
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 9837
+  Name: East_Castia_Kagurock_Mining_City_Normal
+  Parent: East_Castia_Kagurock_Mining_City
+  Comment: 카굴록 광산도시
+  Land: Eldar
+  Description: Address_Kagurock_Mining_City
+  Color: 843ED3FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 11431
+  Name: East_Castia_Kagurock_Mining_City_02
+  Parent: East_Castia
+  NavSource: East_Castia_Kagurock_Mining_City
+  Comment: 카굴록 광산도시 - 인스턴스용
+  Land: Challenge_Dungeon_Undead_Mine_1F
+  Description: Address_Kagurock_Mining_City
+  Color: 00FFC0FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 17265
+  Name: East_Castia_Kagurock_Mining_City_Boss
+  Parent: East_Castia_Kagurock_Mining_City
+  Comment: 카굴록 광산도시
+  Land: Eldar
+  Description: Address_Kagurock_Mining_City
+  Color: A14DFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 16290
+  Name: East_Castia_Kagurock_Mining_City
+  Parent: East_Castia
+  Comment: 카굴록 광산도시
+  Land: Eldar
+  Description: Address_Kagurock_Mining_City
+  Color: 843ED3FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 8335
+  Name: East_Castia_Faceless_Sisterhood
+  Parent: East_Castia
+  Comment: 얼굴 없는 자매단
+  Land: Eldar
+  Description: Address_Faceless_Sisterhood
+  Color: 3D4CFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1398
+  Name: East_Castia_Castia_Prison
+  Parent: East_Castia
+  Comment: 카스티아 형무소
+  Land: Eldar
+  Description: Address_Castia_Prison
+  Color: BDF8FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 322
+  Name: South_Castia_Vaellan_Parliament
+  Parent: South_Castia
+  Comment: 바엘란 의사당
+  Land: Eldar
+  Description: Address_Vaellan_Parliament
+  Color: 3AAC9EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 1806
+  Name: South_Castia_Castia_Imperial_Frontline_Outpost
+  Parent: South_Castia
+  Comment: 제국 전진초소
+  Land: Eldar
+  Description: Address_Castia_Imperial_Frontline_Outpost
+  Color: 235FB4FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 8610
+  Name: South_Castia_Castle_Astarote
+  Parent: South_Castia
+  Comment: 아스타로트 성채
+  Land: Eldar
+  Description: Address_Castle_Astaro
+  Color: 4B77FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 592
+  Name: South_Castia_QuestInstance_Castle_Astarote
+  Parent: South_Castia
+  NavSource: South_Castia_Castle_Astarote
+  Comment: (인스턴스) 아스타로트 성채
+  Land: Quest_Instance_013
+  Description: Address_Castle_Astaro
+  Color: 4B77FFFF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 6001
+  Name: Varitan_Blightlands_QuestInstance_Combustionists_Quarry
+  Parent: Varitan_Blightlands
+  NavSource: Var_Blightlands_EscaronExcavation
+  Comment: (인스턴스) 대발파회 채광지
+  Land: Quest_Instance_003
+  Description: Address_Var_Blightlands_EscaronExcavation
+  Color: AA500064
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 2878
+  Name: South_Castia_Combustionists_Directors_Associate
+  Parent: South_Castia
+  Comment: 대발파회 감독회
+  Land: Eldar
+  Description: Address_Combustionists_Directors_Associate
+  Color: 79C3FFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 3221
+  Name: South_Castia_Undead_Haksan
+  Parent: South_Castia
+  Comment: 언데드 학산
+  Land: Eldar
+  Description: Address_Undead_Haksan
+  Color: 009EFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 2742
+  Name: South_Castia_Dacaroon_Ruins
+  Parent: South_Castia
+  Comment: 다카룬 유적
+  Land: Eldar
+  Description: Address_Dacaroon_Ruins
+  Color: 00FFFBFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 8458
+  Name: South_Castia_Nest_of_the_Babil_Moth_Queen
+  Parent: South_Castia
+  Comment: 바빌 나방 여왕 둥지
+  Land: Eldar
+  Description: Address_Nest_of_the_Babil_Moth_Queen
+  Color: 002FAEFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 6081
+  Name: South_Castia_QuestInstance_Nest_of_the_Babil_Moth_Queen
+  Parent: South_Castia
+  NavSource: South_Castia_Nest_of_the_Babil_Moth_Queen
+  Comment: (인스턴스) 바빌 나방 여왕 둥지
+  Land: Quest_Instance_014
+  Description: Address_Nest_of_the_Babil_Moth_Queen
+  Color: 002FAEFF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 5390
+  Name: South_Castia_Gaia_Ondor_Normal
+  Parent: South_Castia_Gaia_Ondor
+  Comment: 가이아 온도르
+  Land: Eldar
+  Description: Address_Gaia_Ondor
+  Color: 56A3DAFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+- Id: 11182
+  Name: South_Castia_Gaia_Ondor_Boss
+  Parent: South_Castia_Gaia_Ondor
+  Comment: 가이아 온도르
+  Land: Eldar
+  Description: Address_Gaia_Ondor
+  Color: B5ECFFFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+- Id: 273
+  Name: South_Castia_Gaia_Ondor
+  Parent: South_Castia
+  Comment: 가이아 온도르
+  Land: Eldar
+  Description: Address_Gaia_Ondor
+  Color: 56A3DAFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 6573
+  Name: West_Castia_Blessed_Bastion
+  Parent: West_Castia
+  Comment: 축복 성채
+  Land: Eldar
+  Description: Address_Blessed_Bastion
+  Color: A2F777FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2971
+  Name: West_Castia_Bat_Forest
+  Parent: West_Castia
+  Comment: 박쥐 숲
+  Land: Eldar
+  Description: Address_Bat_Forest
+  Color: 9DFA00FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1205
+  Name: West_Castia_Bat_Forest_WorldBossKraka
+  Parent: West_Castia
+  NavSource: West_Castia_Bat_Forest
+  Comment: 월드 보스 백룡 융
+  Land: WorldBoss
+  Description: Address_Bat_Forest
+  Color: FF00F3FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 11300
+  Name: West_Castia_Anna_Mining_Town
+  Parent: West_Castia
+  Comment: 안나 광산촌
+  Land: Eldar
+  Description: Address_Anna_Mining_Town
+  Color: 56FF9DFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 6715
+  Name: West_Castia_Anna_Mining_Town_02
+  Parent: West_Castia
+  NavSource: West_Castia_Anna_Mining_Town
+  Comment: 안나 광산촌 - 인스턴스용
+  Land: Challenge_Dungeon_Monkey_Playground_1F
+  Description: Address_Anna_Mining_Town
+  Color: 0099FFFF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 5821
+  Name: West_Castia_Harpy_Hell
+  Parent: West_Castia
+  Comment: 하피 지옥
+  Land: Eldar
+  Description: Address_Harpy_Hell
+  Color: DDFF52FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 10299
+  Name: West_Castia_Harpy_Hell_02
+  Parent: West_Castia
+  NavSource: West_Castia_Harpy_Hell
+  Comment: 하피 지옥
+  Land: Challenge_Dungeon_Polluted_Lake_1F
+  Description: Address_Challenge_PollutedLake
+  Color: FF002BFF
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 7451
+  Name: West_Castia_Millenium_Well_Normal
+  Parent: West_Castia_Millenium_Well
+  Comment: 천년 우물
+  Land: Eldar
+  Description: Address_Millenium_Well
+  Color: DFD100FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 3057
+  Name: West_Castia_Millenium_Well_Boss
+  Parent: West_Castia_Millenium_Well
+  Comment: 천년 우물
+  Land: Eldar
+  Description: Address_Millenium_Well
+  Color: C79C00FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+- Id: 17055
+  Name: West_Castia_Millenium_Well
+  Parent: West_Castia
+  Comment: 천년 우물
+  Land: Eldar
+  Description: Address_Millenium_Well
+  Color: DFD100FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1647
+  Name: West_Castia_Sharans_Rift
+  Parent: West_Castia
+  Comment: 샤란의 균열
+  Land: Eldar
+  Description: Address_Sharans_Rift
+  Color: 5BFFB6FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5554
+  Name: West_Castia_Tower_of_Triumph
+  Parent: West_Castia
+  Comment: 승전의 탑
+  Land: Eldar
+  Description: Address_Tower_of_Triumph
+  Color: 7BA528FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 146
+  Name: West_Castia_QuestInstance_Tower_of_Triumph
+  Parent: West_Castia
+  NavSource: West_Castia_Tower_of_Triumph
+  Comment: (인스턴스) 승전의 탑
+  Land: Quest_Instance_011
+  Description: Address_Tower_of_Triumph
+  Color: 7BA528FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 7088
+  Name: West_Castia_Castia_First_Imperial_Legion_Mercenaries
+  Parent: West_Castia
+  Comment: 제국 1군 용병단
+  Land: Eldar
+  Description: Address_Castia_First_Imperial_Legion_Mercenaries
+  Color: 00F866FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4084
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+  Parent: Kulika_Undying
+  Comment: 구리 불멸지 1층
+  Land: FieldDun_Kulika_Undying_Lands_F1
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+  Color: AA3C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 364
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+  Parent: Kulika_Undying
+  Comment: 구리 불멸지 2층
+  Land: FieldDun_Kulika_Undying_Lands_F2
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+  Color: 8C3C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 539
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+  Parent: Kulika_Undying
+  Comment: 구리 불멸지 3층
+  Land: FieldDun_Kulika_Undying_Lands_F3
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+  Color: 6E3C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1324
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+  Parent: Kulika_Undying
+  Comment: 구리 불멸지 4층
+  Land: FieldDun_Kulika_Undying_Lands_F4
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+  Color: 503C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1905
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Parent: Kulika_Undying
+  Comment: 구리 불멸지 5층_그룹
+  Land: FieldDun_Kulika_Undying_Lands_F5
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  TeleportAroundAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  Traceable: true
+  LogAddress: true
+- Id: 1635
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_5F_Normal
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Comment: 구리 불멸지 5층_일반
+  Land: FieldDun_Kulika_Undying_Lands_F5
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Color: 323C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+- Id: 4
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_5F_Boss
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Comment: 구리 불멸지 5층_보스존
+  Land: FieldDun_Kulika_Undying_Lands_F5
+  Description: Address_Eld_Dawnbough_GorgeOfTheLeftBehind_5F_Boss
+  Color: 668A8AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+- Id: 2
+  Name: Var_Subjugate_BloodSoakedSealAltar_1F
+  Parent: Bloodshed
+  Comment: 피로 물든 봉인 제단 1층
+  Land: FieldDun_Blood_Shed_F1
+  Description: Address_BloodShed_Floor_01
+  Color: FF00CCFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DiedSkill: TestDiePenaltySkill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1600
+  Name: Var_Subjugate_BloodSoakedSealAltar_2F
+  Parent: Bloodshed
+  Comment: 피로 물든 봉인 제단 2층
+  Land: FieldDun_Blood_Shed_F2
+  Description: Address_BloodShed_Floor_02
+  Color: FF005CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1265
+  Name: Varitan_Wastes_QuestInstance_Bloodshed_01
+  Parent: Bloodshed
+  NavSource: Var_Subjugate_BloodSoakedSealAltar_1F
+  Comment: (인스턴스) 블러드쉐드_1층
+  Land: Quest_Instance_002
+  Description: Address_BloodShed_Floor_01
+  Color: FF00CCFF
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 12947
+  Name: Varitan_Wastes_QuestInstance_Bloodshed_02
+  Parent: Bloodshed
+  NavSource: Var_Subjugate_BloodSoakedSealAltar_2F
+  Comment: (인스턴스-스토리 전용) 블러드쉐드_2층
+  Land: Quest_Instance_002
+  Description: Address_BloodShed_Quest_Floor_02
+  Color: FF005CFF
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+- Id: 1512
+  Name: East_Castia_Abrion_Tower_01
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 1층
+  Land: FieldDun_Abrion_Tower_F1
+  Description: Address_Abrion_Tower_01
+  Color: FF002AFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 2675
+  Name: East_Castia_Abrion_Tower_02
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 2층
+  Land: FieldDun_Abrion_Tower_F2
+  Description: Address_Abrion_Tower_02
+  Color: FFB600FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 4903
+  Name: East_Castia_Abrion_Tower_03
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 3층
+  Land: FieldDun_Abrion_Tower_F3
+  Description: Address_Abrion_Tower_03
+  Color: FF7A00FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 3939
+  Name: East_Castia_Abrion_Tower_04
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 4층
+  Land: FieldDun_Abrion_Tower_F4
+  Description: Address_Abrion_Tower_04
+  Color: FF6700FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 1944
+  Name: East_Castia_Abrion_Tower_05
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 5층
+  Land: FieldDun_Abrion_Tower_F5
+  Description: Address_Abrion_Tower_05
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 934
+  Name: East_Castia_Abrion_Tower_06
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 6층
+  Land: FieldDun_Abrion_Tower_F6
+  Description: Address_Abrion_Tower_06
+  Color: FF007EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 8738
+  Name: East_Castia_Abrion_Tower_07
+  Parent: Abrion_Tower
+  Comment: 아브리온 탑 7층
+  Land: FieldDun_Abrion_Tower_F7
+  Description: Address_Abrion_Tower_07
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 9092
+  Name: South_Castia_Breath_of_Gaia_Ondor_01
+  Parent: Breath_of_Gaia_Ondor
+  Comment: 가이아 온도르의 숨결 1층
+  Land: FieldDun_Breath_of_Gaia_Ondor_F1
+  Description: Address_Breath_of_Gaia_Ondor_01
+  Color: FF3C3CFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 4962
+  Name: South_Castia_Breath_of_Gaia_Ondor_02
+  Parent: Breath_of_Gaia_Ondor
+  Comment: 가이아 온도르의 숨결 2층
+  Land: FieldDun_Breath_of_Gaia_Ondor_F2
+  Description: Address_Breath_of_Gaia_Ondor_02
+  Color: AA500064
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 11532
+  Name: South_Castia_Breath_of_Gaia_Ondor_03
+  Parent: Breath_of_Gaia_Ondor
+  Comment: 가이아 온도르의 숨결 3층
+  Land: FieldDun_Breath_of_Gaia_Ondor_F3
+  Description: Address_Breath_of_Gaia_Ondor_03
+  Color: FF1E00FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 11629
+  Name: South_Castia_Breath_of_Gaia_Ondor_04
+  Parent: Breath_of_Gaia_Ondor
+  Comment: 가이아 온도르의 숨결 4층
+  Land: FieldDun_Breath_of_Gaia_Ondor_F4
+  Description: Address_Breath_of_Gaia_Ondor_04
+  Color: FF7878FF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 5182
+  Name: South_Castia_Breath_of_Gaia_Ondor_05
+  Parent: Breath_of_Gaia_Ondor
+  Comment: 가이아 온도르의 숨결 5층
+  Land: FieldDun_Breath_of_Gaia_Ondor_F5
+  Description: Address_Breath_of_Gaia_Ondor_05
+  Color: C85A1EFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+    - Skill: PkPointBuff
+  DistrictType: County
+  OfflineMode: Available
+  LogAddress: true
+- Id: 7441
+  Name: South_Castia_Holy_Patria_Lesbos_Sanctum_01
+  Parent: Holy_Patria_Lesbos_Sanctum
+  Comment: 성녀 페트리아 신단 1층
+  Land: FieldDun_Holy_Patria_Lesbos_Sanctum_F1
+  Description: Address_Holy_Patria_Lesbos_Sanctum_01
+  Color: 7655CBFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+- Id: 12358
+  Name: Var_Subjugate_HolyOrderGarrison
+  Parent: Varitan_Subjugate
+  Comment: 성위단 주둔지
+  Land: Eldar
+  Description: Address_Var_Subjugate_HolyOrderGarrison
+  Color: F87DDEFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+  DistrictType: County
+  OfflineMode: Available
+  Traceable: true
+  LogAddress: true
+- Id: 5
+  Name: DailyDun_RuinedCastle
+  Parent: World
+  Comment: 데일리 던전_무법 성채
+  Land: Eldar
+  Description: Address_Ruined_Castle
+  Color: 691700FF
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 1898
+  Name: DailyDun_MiningArea
+  Parent: World
+  Comment: 데일리 던전_광산 지구
+  Land: Eldar
+  Description: Address_Mining_Area
+  Color: E696E6FF
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 12106
+  Name: DailyDun_UndeadTemple
+  Parent: World
+  Comment: 데일리 던전_언데드 신전
+  Land: Eldar
+  Description: Address_Undead_Temple
+  Color: FF7400FF
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 6
+  Name: TestFortress_01
+  Parent: World
+  Comment: 성소
+  Land: Fortress
+  Description: Fortress_AddressName
+  Color: FF0044FF
+  WelcomeSkill:
+    - Skill: Fortress_RandomTeleport_Block_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 1452
+  Name: TestAddress_Secured
+  Parent: World
+  Comment: 테스트 어드레스_안전
+  Land: Eldar
+  Description: Address_TestAddress_Secured
+  Color: 691700FF
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 10109
+  Name: TestAddress_Battle
+  Parent: World
+  Comment: 테스트 어드레스_전투
+  Land: Eldar
+  Description: Address_TestAddress_Battle
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: PeakTime_Buff_01
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 7
+  Name: BattleGround_Faction_HighRiver
+  Parent: World
+  Comment: 전장_원본 어드레스
+  Land: Eldar
+  Description: Address_Faction_HighRiver
+  Color: ED9BFFFF
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 13056
+  Name: BattleGround_Faction_HighRiver_RespawnArea
+  Parent: World
+  Comment: 전장_리스폰 원본 어드레스
+  Land: Eldar
+  Description: Address_Faction_HighRiver
+  Color: 5600E6FF
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 620
+  Name: BattleGround_Faction_HighRiver_Group1
+  Parent: World
+  Comment: 전장_그룹 1
+  Land: BattleGround_Faction_HighRiver_Group1
+  Description: Address_Faction_HighRiver
+  Color: ED9BFFFF
+  ScheduledWelcomeSkill:
+    - WelcomeSkill: Battleground_Enter
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 2790
+  Name: BattleGround_Faction_HighRiver_Group1_Main
+  Parent: BattleGround_Faction_HighRiver_Group1
+  NavSource: BattleGround_Faction_HighRiver
+  Comment: 전장_그룹 1
+  Land: BattleGround_Faction_HighRiver_Group1
+  Description: Address_Faction_HighRiver
+  Color: ED9BFFFF
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  GetPkScore: false
+- Id: 4030
+  Name: BattleGround_Faction_HighRiver_Group1_RespawnArea
+  Parent: BattleGround_Faction_HighRiver_Group1
+  NavSource: BattleGround_Faction_HighRiver_RespawnArea
+  Comment: 전장_그룹 1
+  Land: BattleGround_Faction_HighRiver_Group1
+  Description: Address_Faction_HighRiver
+  Color: ED9BFFFF
+  WelcomeSkill:
+    - Skill: Battleground_HighRiver_HealthPotionBuff
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  GetPkScore: false
+- Id: 8015
+  Name: Dungeon_Challenge_Undead_Mine
+  Parent: World
+  Comment: 도전 던전 - 언데드 광산
+  Land: Challenge_Dungeon_Undead_Mine_1F
+  Description: Dungeon_Name_Challenge_03
+  ShowSpaceAlert: false
+  Color: 9A3FDEFF
+  WelcomeSkill:
+    - Skill: Random_Location_EnterTeleport_Block_Skill
+  DistrictType: County
+  CanOpenWorldMap: false
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 7628
+  Name: Dungeon_Challenge_Monkey_Playground
+  Parent: World
+  Comment: 도전 던전 - 원숭이 놀이터
+  Land: Challenge_Dungeon_Monkey_Playground_1F
+  Description: Dungeon_Name_Challenge_02
+  ShowSpaceAlert: false
+  Color: 7E7FDEFF
+  WelcomeSkill:
+    - Skill: Random_Location_EnterTeleport_Block_Skill
+    - Skill: Dungeon_Challenge_Monkey_Playground_WelcomeSkill
+  DistrictType: County
+  CanOpenWorldMap: false
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 8373
+  Name: Dungeon_Challenge_Polluted_Lake
+  Parent: World
+  Comment: 도전 던전 - 오염된 호숫가
+  Land: Challenge_Dungeon_Polluted_Lake_1F
+  Description: Dungeon_Name_Challenge_01
+  ShowSpaceAlert: false
+  Color: 4446DEFF
+  WelcomeSkill:
+    - Skill: Random_Location_EnterTeleport_Block_Skill
+  DistrictType: County
+  CanOpenWorldMap: false
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Unavailable
+  LogAddress: true
+  GetPkScore: false
+- Id: 8
+  Name: Dungeon_WorldBossKraka
+  Parent: World
+  Comment: 월드 보스 크라카(원본)
+  Land: Eldar
+  Description: Address_WorldBossKraka
+  Color: 7E7FDEFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 11533
+  Name: Dungeon_WorldBossKraka_Spot
+  Parent: World
+  NavSource: Dungeon_WorldBossKraka
+  Comment: 월드 보스 크라카
+  Land: WorldBoss_Dungeon_Kraka
+  Description: Address_WorldBossKraka
+  Color: 7E7FDEFF
+  WelcomeSkill:
+    - Skill: DeathPenalty_Enable_Skill
+    - Skill: IsCanPKBuff_Skill
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 18266
+  Name: Tutorial_Instance01
+  Parent: World
+  NavSource: Var_Wastes_VaritanOuterWatchpost
+  Comment: 튜토리얼 인스턴스
+  Land: TutorialInstance
+  Description: Address_Varitan_Guard_Post
+  Color: AA500064
+  OfflineMode: Unavailable
+  LogAddress: true
+  TutorialSequence: true
+- Id: 5746
+  Name: Tutorial_Instance03
+  Parent: Rainwood
+  NavSource: Ele_Sacredforest_ElessirHeartlands
+  Comment: 튜토리얼 인스턴스
+  Land: TutorialInstance
+  Description: Address_Hololu_Cavern
+  Color: FF5AA0FF
+  OfflineMode: Unavailable
+  LogAddress: true
+  TutorialSequence: true
+- Id: 13714
+  Name: Tutorial_Instance_Bridge_01
+  Parent: Tutorial_Instance_Bridge
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 다리)
+  Land: TutorialInstance
+  Description: Address_Instance_Bridge
+  Color: FFDC32FF
+  WelcomeSkill:
+    - Skill: Tutorial_GutsBuff_Transform
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 16399
+  Name: Tutorial_Instance_Bridge_02
+  Parent: Tutorial_Instance_Bridge
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 다리)
+  Land: TutorialInstance
+  Description: Address_Instance_Bridge
+  ShowSpaceAlert: false
+  Color: FF9900FF
+  WelcomeSkill:
+    - Skill: Tutorial_GutsBuff_Transform
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 7930
+  Name: Tutorial_Instance_Bridge_03
+  Parent: Tutorial_Instance_Bridge
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 다리)
+  Land: TutorialInstance
+  Description: Address_Instance_Bridge
+  ShowSpaceAlert: false
+  Color: FF5300FF
+  WelcomeSkill:
+    - Skill: Tutorial_GutsBuff_Transform
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 1897
+  Name: Tutorial_Instance_Bridge_04
+  Parent: Tutorial_Instance_Bridge
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 다리)
+  Land: TutorialInstance
+  Description: Address_Instance_Bridge
+  ShowSpaceAlert: false
+  Color: FF1700FF
+  WelcomeSkill:
+    - Skill: Tutorial_GutsBuff_Transform
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 9493
+  Name: Tutorial_Instance_Bridge
+  Parent: World
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 다리)
+  Land: TutorialInstance
+  Color: FFDC32FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 8649
+  Name: BossSpawn_Charle_Entrails
+  Parent: Rainwood
+  Comment: 필드보스 샤를레 내부_껍데기
+  Land: Eldar
+  Description: Address_FieldBoss_Charle_Entrails
+  Color: E400FFFF
+  WelcomeSkill:
+    - Skill: Random_Location_EnterTeleport_Block_Skill
+  CanOpenWorldMap: false
+  OfflineMode: Unavailable
+  LogAddress: true
+- Id: 3738
+  Name: DailyDun_RuinedCastle_1F
+  Parent: World
+  NavSource: DailyDun_RuinedCastle
+  Comment: 데일리 던전_무법 성채
+  Land: Daily_DailyDun_RuinedCastle_1F
+  Description: Address_RuinedCastle_1F
+  Color: 691700FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 1763
+  Name: DailyDun_RuinedCastle_2F
+  Parent: World
+  NavSource: DailyDun_RuinedCastle
+  Comment: 데일리 던전_무법 성채
+  Land: Daily_DailyDun_RuinedCastle_2F
+  Description: Address_RuinedCastle_2F
+  Color: 691700FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 8725
+  Name: DailyDun_RuinedCastle_3F
+  Parent: World
+  NavSource: DailyDun_RuinedCastle
+  Comment: 데일리 던전_무법 성채
+  Land: Daily_DailyDun_RuinedCastle_3F
+  Description: Address_RuinedCastle_3F
+  Color: 691700FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 4931
+  Name: DailyDun_RuinedCastle_4F
+  Parent: World
+  NavSource: DailyDun_RuinedCastle
+  Comment: 데일리 던전_무법 성채
+  Land: Daily_DailyDun_RuinedCastle_4F
+  Description: Address_RuinedCastle_4F
+  Color: 691700FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 8310
+  Name: DailyDun_RuinedCastle_5F
+  Parent: World
+  NavSource: DailyDun_RuinedCastle
+  Comment: 데일리 던전_무법 성채
+  Land: Daily_DailyDun_RuinedCastle_5F
+  Description: Address_RuinedCastle_5F
+  Color: 691700FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 8317
+  Name: DailyDun_MiningArea_1F
+  Parent: World
+  NavSource: DailyDun_MiningArea
+  Comment: 데일리 던전_광산 지구
+  Land: Daily_DailyDun_MiningArea_1F
+  Description: Address_MiningArea_1F
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 2378
+  Name: DailyDun_MiningArea_2F
+  Parent: World
+  NavSource: DailyDun_MiningArea
+  Comment: 데일리 던전_광산 지구
+  Land: Daily_DailyDun_MiningArea_2F
+  Description: Address_MiningArea_2F
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 3042
+  Name: DailyDun_MiningArea_3F
+  Parent: World
+  NavSource: DailyDun_MiningArea
+  Comment: 데일리 던전_광산 지구
+  Land: Daily_DailyDun_MiningArea_3F
+  Description: Address_MiningArea_3F
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 5960
+  Name: DailyDun_MiningArea_4F
+  Parent: World
+  NavSource: DailyDun_MiningArea
+  Comment: 데일리 던전_광산 지구
+  Land: Daily_DailyDun_MiningArea_4F
+  Description: Address_MiningArea_4F
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 4889
+  Name: DailyDun_MiningArea_5F
+  Parent: World
+  NavSource: DailyDun_MiningArea
+  Comment: 데일리 던전_광산 지구
+  Land: Daily_DailyDun_MiningArea_5F
+  Description: Address_MiningArea_5F
+  Color: E696E6FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 923
+  Name: DailyDun_UndeadTemple_1F
+  Parent: World
+  NavSource: DailyDun_UndeadTemple
+  Comment: 데일리 던전_언데드 신전
+  Land: Daily_DailyDun_UndeadTemple_1F
+  Description: Address_UndeadTemple_1F
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 12327
+  Name: DailyDun_UndeadTemple_2F
+  Parent: World
+  NavSource: DailyDun_UndeadTemple
+  Comment: 데일리 던전_언데드 신전
+  Land: Daily_DailyDun_UndeadTemple_2F
+  Description: Address_UndeadTemple_2F
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 11996
+  Name: DailyDun_UndeadTemple_3F
+  Parent: World
+  NavSource: DailyDun_UndeadTemple
+  Comment: 데일리 던전_언데드 신전
+  Land: Daily_DailyDun_UndeadTemple_3F
+  Description: Address_UndeadTemple_3F
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 8702
+  Name: DailyDun_UndeadTemple_4F
+  Parent: World
+  NavSource: DailyDun_UndeadTemple
+  Comment: 데일리 던전_언데드 신전
+  Land: Daily_DailyDun_UndeadTemple_4F
+  Description: Address_UndeadTemple_4F
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 7069
+  Name: DailyDun_UndeadTemple_5F
+  Parent: World
+  NavSource: DailyDun_UndeadTemple
+  Comment: 데일리 던전_언데드 신전
+  Land: Daily_DailyDun_UndeadTemple_5F
+  Description: Address_UndeadTemple_5F
+  Color: FF7400FF
+  WelcomeSkill:
+    - Skill: IsPeaceBuff_Skill
+  DistrictType: County
+  TextStyleKey: WorldMapAreaPurple
+  OfflineMode: Available
+  LogAddress: true
+  GetPkScore: false
+- Id: 9
+  Name: Tutorial_Instance_Place_01
+  Parent: Tutorial_Instance_Place
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Description: Address_Instance_Place
+  Color: F6A400FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 10193
+  Name: Tutorial_Instance_Place_02
+  Parent: Tutorial_Instance_Place
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Description: Address_Instance_Place
+  ShowSpaceAlert: false
+  Color: FF6700FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 4278
+  Name: Tutorial_Instance_Place_03
+  Parent: Tutorial_Instance_Place
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Description: Address_Instance_Place
+  ShowSpaceAlert: false
+  Color: FFBE67FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 14599
+  Name: Tutorial_Instance_Place_04
+  Parent: Tutorial_Instance_Place
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Description: Address_Instance_Place
+  ShowSpaceAlert: false
+  Color: F6F000FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 17422
+  Name: Tutorial_Instance_Place_05
+  Parent: Tutorial_Instance_Place
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Description: Address_Instance_Place
+  ShowSpaceAlert: false
+  Color: F64300FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 19100
+  Name: Tutorial_Instance_Place
+  Parent: World
+  Comment: 튜토리얼 인스턴스 (캐릭터 생성 전투 존)
+  Land: TutorialInstance
+  Color: F6A400FF
+  DistrictType: County
+  OfflineMode: Unavailable
+  LogAddress: true
+  PopupMessageDescription: UIWord_QuestInstanceExit
+  TutorialSequence: true
+- Id: 12163
+  Name: Dungeon_SkyRuin
+  Parent: World
+  Comment: 주간(시간) 던전
+  Land: Eldar
+- Id: 10
+  Name: Dungeon_SkyRuin_01
+  Parent: Dungeon_SkyRuin
+  Comment: 주간(시간) 던전 1층
+  Land: Eldar
+  Color: 004CEBFF
+  LogAddress: true
+- Id: 11
+  Name: Dungeon_SkyRuin_02
+  Parent: Dungeon_SkyRuin
+  Comment: 주간(시간) 던전 2층
+  Land: Eldar
+  Color: 0033EBFF
+  LogAddress: true
+- Id: 11352
+  Name: Guild_Fortress
+  Parent: World
+  Comment: 길드
+  Land: GuildFortress
+  LogAddress: true
+  GetPkScore: false
+- Id: 12438
+  Name: Guild_Fortress_TrainingGround
+  Parent: Guild_Fortress
+  Comment: 길드 훈련장
+  Land: GuildFortress
+  Description: Address_Guild_Fortress_TrainingGround
+  Color: 0033EBFF
+  WelcomeSkill:
+    - Skill: IsCanPKBuff_Skill
+  GetPkScore: false
+- Id: 5846
+  Name: Guild_Fortress_Raid
+  Parent: Guild_Fortress
+  Comment: 길드 레이드
+  Land: GuildFortress
+  Description: Address_Guild_Fortress_Raid
+  Color: 0092EBFF
+  GetPkScore: false
+- Id: 15064
+  Name: Guild_Fortress_Lobby
+  Parent: Guild_Fortress
+  Comment: 길드 로비
+  Land: GuildFortress
+  Description: Address_Guild_Fortress_Lobby
+  Color: 4700F3FF
+  GetPkScore: false
+- Id: 2412
+  Name: Varitan_Wastes_Screaming_Canyon
+  Parent: World
+  Land: Eldar
+  LogAddress: true

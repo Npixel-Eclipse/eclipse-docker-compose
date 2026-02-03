@@ -1,0 +1,51 @@
+- Id: 1
+  Name: Main
+  DefaultTopBar: true
+  DisplayCurrency:
+    - CurrencyItem: CurrencyDiamond
+    - CurrencyItem: CurrencyGold
+- Id: 2
+  Name: ListDetails
+  PreviewCount: 3
+  DisplayCurrency:
+    - CurrencyItem: CurrencyDiamond
+    - CurrencyItem: CurrencyGold
+    - CurrencyItem: CurrencyMileage
+    - CurrencyItem: CurrencyChallengeToken
+    - CurrencyItem: CurrencyBattleGroundToken
+    - CurrencyItem: CurrencyAncient
+    - CurrencyItem: CurrencyGuildCoin
+    - CurrencyItem: Item_GachaTicket_Polymorph_01_Test
+    - CurrencyItem: Item_GachaTicket_WeaponPolymorph_01_Test
+- Id: 3
+  Name: Guild
+  UITypeName: GuildMain
+  DisplayCurrency:
+    - CurrencyItem: Guild_Point
+      HasGuild: true
+- Id: 4
+  Name: HuntingZone
+  UITypeName: HuntingZone
+- Id: 5
+  Name: InGameShop
+- Id: 6
+  Name: Awakening
+  UITypeName: Awakening
+- Id: 7
+  Name: Fortress
+  Address: Sanctum
+  DisplayCurrency:
+    - CurrencyItem: CurrencySeongsoQueue
+    - CurrencyItem: CurrencySupport
+      HasGuild: true
+- Id: 8
+  Name: FortressPreview
+  UITypeName: FortressPreviewMainHUD
+  DisplayCurrency:
+    - CurrencyItem: CurrencySeongsoQueue
+    - CurrencyItem: CurrencySupport
+      HasGuild: true
+- Id: 9
+  Name: BMShop
+  UITypeName: BMShop
+  DefaultTopBarVisible: false

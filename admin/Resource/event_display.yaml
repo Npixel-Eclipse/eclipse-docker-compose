@@ -1,0 +1,27 @@
+- Id: 105
+  Name: Event_GrowthEvent
+  Comment: 레벨 달성 이벤트
+  BGAsset: /Game/UIIcon/Banner/EventBanner001.EventBanner001
+  QuestCategory: Event_GrowthEvent
+  EventType: Mission
+  DisplayOrder: 5
+  SubTitle: Event_GrowthEvent_SubTitle
+  Description: Event_Growth_GuideDesc
+- Id: 151
+  Name: Event_Attend
+  Comment: 출석 이벤트
+  BGAsset: /Game/UIIcon/Banner/EventBanner001.EventBanner001
+  QuestCategory: Event_Attend
+  EventType: Attendance
+  DisplayOrder: 3
+  SubTitle: Event_Attend_SubTitle
+  Description: Event_Attend_GuideDesc
+- Id: 81
+  Name: Event_Quest_NewEclipseQuest
+  Comment: 이클립스 세계 이벤트
+  BGAsset: /Game/UIIcon/Banner/EventBanner001.EventBanner001
+  QuestCategory: Event_Quest_NewEclipseQuest
+  EventType: DailyMission
+  DisplayOrder: 1
+  SubTitle: Event_Quest_NewEclipseQuest_SubTitle
+  Description: Event_Eclipse_GuideDesc

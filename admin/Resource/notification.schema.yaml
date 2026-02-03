@@ -1,0 +1,56 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - TargetType
+  properties:
+    # 레드닷 ID
+    Id:
+      type: integer
+      minimum: 1
+
+    # 레드닷 이름
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+
+    # 설명
+    Comment:
+      type: string
+
+    # 부모 레드닷
+    Parent:
+      type: string
+      ref: notification
+      visible: true
+    
+    #클라이언트 레드닷 경로
+    ClientRedDotPath:
+      type: string
+
+    # 레드닷 특정 방법:
+    # ID   : 레드닷 대상이 ID만으로 특정이 가능한 경우 (숫자)
+    #        ex. 퀘스트 ID, 아이템 ID 등...
+    #
+    # UUID : 레드닷 대상이 고유한 경우 (서버 내 고유번호)
+    #        ex. 습득한 특정 아이템, 다른 캐릭터
+    #
+    # NONE : 대상을 특정하지 않아도 되는 경우
+    #        ex. 메뉴의 UI
+    TargetType:
+      type: string
+      enum:
+        - ID
+        - UUID
+        - BYTES_UUID
+        - NONE
+      visible: true
+
+    # 레드닷 특정 대상의 설명
+    TargetDescription:
+      type: string
+      visible: true

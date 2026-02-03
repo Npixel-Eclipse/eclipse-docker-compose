@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Quests
+    - Category
+    - Description
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Quests:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Name
+        properties:
+          Name:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            ref: quest
+    Category:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+      ref: quest_category
+    Description:
+      type: string
+      ref: description
+    Comment:
+      type: string

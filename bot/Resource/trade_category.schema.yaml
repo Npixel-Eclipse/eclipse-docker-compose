@@ -1,0 +1,99 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    MainTab:
+    # enum값 순서도 Priority 순서와 맞춰야함
+      type: string
+      enum:
+        - Favorite
+        - Weapon
+        - Armor
+        - Accessory
+        - SkillBook
+        - Resource
+        - Misc
+        - Collection
+    MainTabPriority:
+      type: integer
+    MainTabDesc:
+      type: string
+      ref: description
+    SubTab:
+      type: string
+      enum:
+        - All
+        - Weapon_Sword
+        - Weapon_TwohandSword
+        - Weapon_Bow
+        - Weapon_CrossBow
+        - Weapon_Staff
+        - Weapon_Orb
+        - Weapon_Katana
+        - Weapon_TwinDaggers
+        - SubWeapon_Sword
+        - SubWeapon_TwohandSword
+        - SubWeapon_Bow
+        - SubWeapon_CrossBow
+        - SubWeapon_Staff
+        - SubWeapon_Orb
+        - Armor_Helm
+        - Armor_Suit
+        - Armor_Pants
+        - Armor_Gloves
+        - Armor_Boots
+        - Armor_Cape
+        - Accessory_Necklace
+        - Accessory_Earring
+        - Accessory_Ring
+        - Accessory_Belt
+        - SkillBook_Fighter
+        - SkillBook_Ranger
+        - SkillBook_Sorcerer
+        - SkillBook_Assassin
+        - SkillBook_Public
+        - SkillEnchant_Melee
+        - SkillEnchant_Range
+        - SkillEnchant_Magic
+        - Consume_Portion
+        - Consume_Scroll
+        - Consume_Food
+        - Consume_LuckyBag
+        - Craft_Material
+        - Craft_Special
+        - Misc_Healing
+        - Misc_Upgrade
+        - Misc_Consume
+        - Misc_BidToken
+        - Misc_Skill_Enchant
+        - Misc_Collection
+        - Misc_Merge
+        - Misc_SlotOpen
+        - Misc_Empower
+        - Misc_TeleportScroll
+        - Misc_LuckyBag
+        - Misc_Cardpack
+        - Misc_Collection_Varitan
+        - Misc_Collection_Eldar
+        - Misc_Collection_Rockhed
+    SubTabPriority:
+      type: integer
+    SubTabDesc:
+      type: string
+      ref: description
+    ItemCategory:
+      type: string
+      ref: item_category
+  required:
+    - Id
+    - Name

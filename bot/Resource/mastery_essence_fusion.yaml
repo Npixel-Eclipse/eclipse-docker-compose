@@ -1,0 +1,108 @@
+- Id: 1
+  Name: Fusion_SlashWave
+  Comment: "[PC스킬] 파이터 파열 검기 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Fighter_Crash
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Fighter_BlowStrike
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Fighter_Essence_8_6
+  OutputItem: Learned_Skill_Fighter_SlashWave
+- Id: 31
+  Name: Fusion_Excalibur
+  Comment: "[PC스킬] 파이터 폭렬 강타 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Fighter_SpellCancle
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Fighter_GroundSlam
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Fighter_Essence_16_6
+  OutputItem: Learned_Skill_Fighter_Excalibur
+- Id: 79
+  Name: Fusion_SilentKill
+  Comment: "[PC스킬] 파이터 맹렬 강타 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Fighter_SpellCancle
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Fighter_GroundSlam
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Fighter_Essence_26_6
+  OutputItem: Learned_Skill_Fighter_SilentKill
+- Id: 199
+  Name: Fusion_DarknessTrap
+  Comment: "[PC스킬] 레인저 암흑 덫 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Ranger_BearTrap
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Ranger_FlashArrow
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Ranger_Essence_8_6
+  OutputItem: Learned_Skill_Ranger_DarknessTrap
+- Id: 80
+  Name: Fusion_DivineArcher
+  Comment: "[PC스킬] 레인저 광폭 화살 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Ranger_ChargeBind
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Ranger_Judgement
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Ranger_Essence_16_6
+  OutputItem: Learned_Skill_Ranger_DivineArcher
+- Id: 176
+  Name: Fusion_Annihilation
+  Comment: "[PC스킬] 레인저 극멸 화살 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Ranger_ChargeBind
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Ranger_Judgement
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Ranger_Essence_26_6
+  OutputItem: Learned_Skill_Ranger_Annihilation
+- Id: 51
+  Name: Fusion_SwiftHeal
+  Comment: "[PC스킬] 소서러 신속 치유 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Sorcerer_PerfectHeal
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Sorcerer_EnergyBolt
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Sorcerer_Essence_8_6
+  OutputItem: Learned_Skill_Sorcerer_SwiftHeal
+- Id: 2
+  Name: Fusion_VoidBloom
+  Comment: "[PC스킬] 소서러 차원 균열 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Sorcerer_DisHealth
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Sorcerer_Blackhole
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Sorcerer_Essence_16_6
+  OutputItem: Learned_Skill_Sorcerer_VoidBloom
+- Id: 3
+  Name: Fusion_Destruction
+  Comment: "[PC스킬] 소서러 종말 습득스킬"
+  InputSkill:
+    - MaterialItem: Learned_Skill_Sorcerer_DisHealth
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+    - MaterialItem: Learned_Skill_Sorcerer_Blackhole
+      Summary: UIWord_SystemMsg_Fusion_CanNotFusionSkill
+      SubSummary: UIWord_SystemMsg_Fusion_EmptySkillFusion
+  InputMasteryEssence: Sorcerer_Essence_26_6
+  OutputItem: Learned_Skill_Sorcerer_Destruction

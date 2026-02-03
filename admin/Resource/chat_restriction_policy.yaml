@@ -1,0 +1,8 @@
+- Id: 1
+  Name: default
+  Comment: 기본 채팅 도배 금지 정책
+  AppliedServerNames:
+    - default
+  ChatIntervalTime: 5
+  NumOfChatMessage: 10
+  ChatBanTime: 60

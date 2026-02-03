@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ItemCategory
+    - Grade
+    - EnchantLevel
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      minLength: 1
+    ItemCategory:
+      type: string
+      ref: item_category
+    Grade:
+      type: string
+      ref: grade
+    EnchantLevel:
+      type: integer
+      default: 0
+
+
+

@@ -1,0 +1,85 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "TradeLogServiceProto";
+
+message SellTrade {
+  string trade_uuid = 1;
+  string item_uuid = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+  int64 trade_price = 5;
+  string register_at = 6;
+  string buyer_character_uuid = 7;
+  int64 guild_id = 8;
+  int64 item_enchant_level = 9;
+  string week_average_price = 10;
+}
+
+message BuyTrade {
+  string trade_uuid = 1;
+  string item_uuid = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+  int64 trade_price = 5;
+  int64 settlement_price = 6;
+  int64 guild_id = 7;
+  int64 item_enchant_level = 8;
+  string week_average_price = 9;
+}
+
+// 참고: 길드 거래에서만 구매 거절이 가능함
+message RejectTrade {
+  string trade_uuid = 1;
+  string item_uuid = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+}
+
+// 참고: 개인거래는 재등록 기능이 없음
+message ReRegisterTrade {
+  message Trade {
+    string trade_uuid = 1;
+    string item_uuid = 2;
+    int64 item_id = 3;
+    int64 amount = 4;
+    int64 trade_price = 5;
+    string register_at = 6; 
+  }
+
+  int64 total_registration_fee = 1;
+  repeated Trade trades = 2;
+}
+
+message WithdrawTrade {
+  message Trade {
+    string trade_uuid = 1;
+    string item_uuid = 2;
+    int64 item_id = 3;
+    int64 amount = 4;
+  }
+
+  repeated Trade trades = 1;
+}
+
+// 참고: 취소는 단일 취소만 가능함
+message CancelTrade {
+  string trade_uuid = 1;
+  string item_uuid = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+}
+
+message SettleTrade {
+  message Trade {
+    string trade_uuid = 1;
+    string item_uuid = 2;
+    int64 item_id = 3;
+    int64 amount = 4;
+  }
+
+  int64 total_settlement_price = 1;
+  repeated Trade trades = 2;
+}

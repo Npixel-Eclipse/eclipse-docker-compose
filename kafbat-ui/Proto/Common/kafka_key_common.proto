@@ -1,0 +1,78 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.kafkaKey";
+option java_outer_classname = "CommonKafkaKeyProto";
+
+message KafkaKey {
+  oneof key {
+    int64 account = 1; // account_id
+    int64 guild = 2; // guild_id
+    string transaction_uuid = 3;
+    string character = 4; // character_uuid
+    RecipeLimitKey recipe_limit_key = 5;
+    string trade_uuid = 6;
+    int64 random = 7;
+    string battle_name = 8; // 배틀 이름
+    string match_uuid = 9;
+    int64 party = 10;
+    string lobby_name = 11;
+    string front_name = 12; // admin -> lobby
+    string bulk_mail_uuid = 13; // ?? -> mail
+    string pk_log_uuid = 14;
+    int64 item_id = 15; // trade -> trade
+    string server_name = 16; // 월드 이름, Home Battle 이름, world_name으로 변경 예정
+    int64 hunting_zone_group_id = 17;
+    int64 hunting_zone_id = 18;
+    bool dungeon_ranking_reward = 19; // 던전 랭킹 보상
+    bool guild_ranking_update = 20; // 길드 랭킹 업데이트
+    bool record_room_ranking = 21; // 기록실 랭킹 업데이트
+    bool record_room_reward = 22; // 기록실 보상
+    bool pvp_point_reset = 23; // 기록실 pvp 포인트 리셋
+    bool global_party_key = 24; // 전역 파티 키
+    MatchmakingQueueKey matchmaking_queue_key = 25;
+    string purchase_transaction_id = 26;
+    bool hunting_zone_new_season = 27;
+    string delete_channel = 28;
+    bool hunting_zone_create_new_season = 30;
+    bool broadcast = 31;
+    ServerItemIdKey server_item_id_key = 32;
+    string batch_transaction_id = 33; // 중복 메시지 처리를 방지하기 위한 키
+    string content_policy_name = 34;
+    string forbidden_word_key = 35; // format: "{type}:{word}"
+  }
+
+  message RecipeLimitKey {
+    int64 recipe_output_id = 1;
+    RecipeLimitBound recipe_limit_bound = 2;
+    string bound_key = 3;
+
+    enum RecipeLimitBound {
+      LIMIT_COUNT_BY_CHARACTER = 0;
+      LIMIT_COUNT_BY_SERVER = 1;
+      LIMIT_COUNT_BY_ALL_SERVER = 2;
+
+      LIMIT_OUTPUT_BY_SERVER = 10;
+      LIMIT_OUTPUT_BY_ALL_SERVER = 11;
+    }
+
+    // BoundKey는 RecipeLimitBound에 따라 결정됨.
+    // LIMIT_COUNT_BY_CHARACTER : 캐릭터 UUID
+    // LIMIT_COUNT_BY_SERVER : 서버 ID
+    // LIMIT_COUNT_BY_ALL_SERVER : 레시피 ID (전체 서버를 대상으로 하므로 아무 값(null, 0, 1...)을 대입해도 가능)
+    // LIMIT_OUTPUT_BY_SERVER : 서버 ID
+    // LIMIT_OUTPUT_BY_ALL_SERVER : 레시피 ID (전체 서버를 대상으로 하므로 아무 값(null, 0, 1...)을 대입해도 가능)
+  }
+
+  message MatchmakingQueueKey {
+    int64 matchmaking_id = 1;
+    optional string server_id = 2;
+    optional int64 dungeon_id = 3;
+  }
+
+  message ServerItemIdKey {
+    string server = 1;
+    int64 item_id = 2;
+  }
+}

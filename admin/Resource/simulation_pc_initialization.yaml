@@ -1,0 +1,62 @@
+- Id: 1
+  Name: FighterInit
+  StartX: -3
+  StartY: -507
+  Class: Simulation_Fighter
+  Hp: 2000
+  Mp: 2000
+  Item:
+    - Item_Equip_Weapon_Lsword_G4_T06_N1
+- Id: 2
+  Name: RangerInit
+  StartX: -1
+  StartY: -507
+  Class: Simulation_Ranger
+  Hp: 2000
+  Mp: 2000
+  Item:
+    - Item_Equip_Weapon_Cbow_G4_T06_N1
+- Id: 3
+  Name: PunchingBagInit
+  StartX: -2
+  StartY: -507
+  Class: Simulation_Fighter
+  Hp: 7000
+  Mp: 7000
+- Id: 100
+  Name: FighterPerformanceInit
+  StartX: -3
+  StartY: -507
+  Class: Fighter
+  Hp: 100000
+  Mp: 100000
+  Level: 50
+  Item:
+    - Item_Equip_Weapon_Lsword_G5_T06_U2
+  LearnedSkills:
+    - Fighter_PowerAttack_Level5
+    - Fighter_Crash_Level5
+    - Fighter_BlowStrike_Level5
+    - Fighter_SkinRoll_Level5
+    - Fighter_FinalBlow_Level5
+    - Fighter_SightCounter_Level5
+    - Fighter_Will
+    - Fighter_GroundSlam_Level5
+- Id: 101
+  Name: RangerPerformanceInit
+  StartX: -3
+  StartY: -507
+  Class: Ranger
+  Hp: 100000
+  Mp: 100000
+  Level: 50
+  Item:
+    - Item_Equip_Weapon_Bow_G5_T01_N1
+  LearnedSkills:
+    - Ranger_MultipleArrow_Level5
+    - Ranger_HoldTrap_Level5
+    - Ranger_FlashArrow_Level5
+    - Ranger_Marksman_Level5
+    - Ranger_RechargingFocus_Level5
+    - Ranger_CombatPenalty
+    - Ranger_Judgement_Level5

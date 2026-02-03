@@ -1,0 +1,87 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - CostPoint
+    - ResetCostItem
+    - ResetCost
+    - ItemCategory
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    DesignComment:
+      type: string
+    NameDescription:
+      type: string
+      ref: description
+    SummaryDescription: #기술의 근원 효과 -> "스킬A의 쿨타임이 7% 감소합니다." <- 해당 방식으로 직접 기입
+      type: string
+      ref: description
+    AbilityDescription: #기술의 근원 효과 -> [스킬명] + " : " + [AbilityDescription] 으로 출력됩니다.
+      type: string
+      ref: description
+    DisplayOrder: #기술의 근원 전체, n장 효과 페이지 출력 순서 - 정수값이 낮을 수록 좌측에 출력
+      type: integer
+    CostPoint:
+      type: integer
+      default : 1
+    ResetCostItem:
+      type: string
+      ref: item
+    ResetCost:
+      type: integer
+    DisplaySkill: #기술의 근원 적용 스킬 (표기용 - 임시)
+      type: string
+      ref: skill
+    Skill: #기술의 근원 적용 스킬 (버프 적용용)
+      type: string
+      ref: skill
+    FusionPermitItem: #융합의 근원 융합 재료 아이템(습득 스킬)
+      type: string
+      ref: item
+    Engrave: #근원 효과 입력 <- 세공 기능과 함꼐 사용 중
+      type: string
+      ref: item_engrave
+    Prerequisite:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Group
+          - Prerequisite
+        properties:
+          Group:
+            type: integer
+          Prerequisite:
+            type: string
+            ref: mastery_essence
+    Group: #그룹으로 묶인 정수는 얻는데 제약이 존재 (mastery_essence_group.yaml)
+      type: string
+      ref: mastery_essence_group
+    ItemCategory:
+      type: string
+      ref: item_category
+    CharacterLevel:
+      type: integer
+      minimum: 1
+    PreviousSpentPoints:
+      type: integer
+    GridViewPosX:
+      type: integer
+      minimum: 0
+      maximum: 100
+    GridViewPosY:
+      type: integer
+      minimum: 0
+      maximum: 100

@@ -1,0 +1,283 @@
+- Id: 1
+  Name: Enchant
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+        - FilterType: Filter6
+          GradeFilter: Myth
+- Id: 2
+  Name: Polymorph
+  Info:
+    - ListType: Category
+      DescriptionName: UIWordClass
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_PolymorphFilter_All
+        - FilterType: Filter1
+          DescriptionName: UIWord_PolymorphFilter_AllWeapon
+          CategoryFilter: Polymorph_Card_All
+        - FilterType: Filter2
+          DescriptionName: Fighter
+          CategoryFilter: Polymorph_Card_Fighter
+        - FilterType: Filter3
+          DescriptionName: Ranger
+          CategoryFilter: Polymorph_Card_Ranger
+        - FilterType: Filter4
+          DescriptionName: Sorcerer
+          CategoryFilter: Polymorph_Card_Sorcerer
+        - FilterType: Filter5
+          DescriptionName: Assassin
+          CategoryFilter: Polymorph_Card_Assassin
+    - ListType: SolidarityStatus
+      DescriptionName: UIWord_GuildQuest_State
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_PolymorphFilter_All
+        - FilterType: Filter1
+          DescriptionName: UIWord_InSolidarity
+        - FilterType: Filter2
+          DescriptionName: UIWord_NotLink
+- Id: 3
+  Name: WeaponPolymorph
+  Info:
+    - ListType: Category
+      DescriptionName: ItemCategory1Item_WeaponDesc
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_WeaponPolymorphFilter_All
+        - FilterType: Filter1
+          DescriptionName: UIWord_WeaponPolymorphFilter_Sword
+          CategoryFilter: WeaponPolymorph_Sword
+        - FilterType: Filter2
+          DescriptionName: UIWord_WeaponPolymorphFilter_LSword
+          CategoryFilter: WeaponPolymorph_LSword
+        - FilterType: Filter3
+          DescriptionName: UIWord_WeaponPolymorphFilter_Bow
+          CategoryFilter: WeaponPolymorph_Bow
+        - FilterType: Filter4
+          DescriptionName: UIWord_WeaponPolymorphFilter_CBow
+          CategoryFilter: WeaponPolymorph_Cbow
+        - FilterType: Filter5
+          DescriptionName: UIWord_WeaponPolymorphFilter_Staff
+          CategoryFilter: WeaponPolymorph_Staff
+        - FilterType: Filter6
+          DescriptionName: UIWord_WeaponPolymorphFilter_Orb
+          CategoryFilter: WeaponPolymorph_Orb
+        - FilterType: Filter7
+          DescriptionName: UIWord_WeaponPolymorphFilter_Katana
+          CategoryFilter: WeaponPolymorph_Katana
+        - FilterType: Filter8
+          DescriptionName: UIWord_WeaponPolymorphFilter_OrbTwinDaggers
+          CategoryFilter: WeaponPolymorph_TwinDaggers
+    - ListType: SolidarityStatus
+      DescriptionName: UIWord_GuildQuest_State
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_PolymorphFilter_All
+        - FilterType: Filter1
+          DescriptionName: UIWord_InSolidarity
+        - FilterType: Filter2
+          DescriptionName: UIWord_NotLink
+- Id: 4
+  Name: Engraving
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+        - FilterType: Filter6
+          GradeFilter: Myth
+- Id: 5
+  Name: Might
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+- Id: 6
+  Name: ItemGrade
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+- Id: 7
+  Name: PolymorphGrade
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+        - FilterType: Filter6
+          GradeFilter: Myth
+- Id: 8
+  Name: PolymorphMergeGrade
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+- Id: 9
+  Name: SkillGrade
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+- Id: 10
+  Name: TradePurchaseMain
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+    - ListType: Attribute
+      DescriptionName: UIWord_ItemFilter_Attribute
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          DescriptionName: UIWord_ItemFilter_Attribute_None
+        - FilterType: Filter2
+          DescriptionName: UIWord_ItemFilter_Attribute_Unique
+          TextStyleKey: SystemMsgAnnounce1
+        - FilterType: Filter3
+          DescriptionName: UIWord_ItemFilter_Attribute_Set
+          TextStyleKey: OptionAdd
+- Id: 11
+  Name: TradePurchaseDetail
+  Info:
+    - ListType: EnchantLevelRange
+      DescriptionName: Item_enchant_Preview
+      Range:
+        MinNum: 0
+        MaxNum: 9
+    - ListType: DetailStat
+      DescriptionName: UIWord_Option
+- Id: 12
+  Name: InventoryFilter
+  Info:
+    - ListType: Grade
+      DescriptionName: UIWord_ItemFiter_Grade
+      ItemFilterList:
+        - FilterType: AllFilters
+          DescriptionName: UIWord_ItemFiter_All
+        - FilterType: Filter1
+          GradeFilter: Common
+        - FilterType: Filter2
+          GradeFilter: Uncommon
+        - FilterType: Filter3
+          GradeFilter: Rare
+        - FilterType: Filter4
+          GradeFilter: Epic
+        - FilterType: Filter5
+          GradeFilter: Legendary
+        - FilterType: Filter6
+          GradeFilter: Myth
+    - ListType: EquipItemGroup
+      DescriptionName: ItemCategory1Equip
+    - ListType: Status
+      DescriptionName: UIWord_State
+      ItemFilterList:
+      - FilterType: Filter1
+        DescriptionName: UIWorld_CompletedCollection
+      - FilterType: Filter2
+        DescriptionName: UIWorld_InCompletedCollection
+      - FilterType: Filter3
+        DescriptionName: UIWorld_CollectableIfEnchanted
+      - FilterType: Filter4
+        DescriptionName: UIWord_Tradable
+      - FilterType: Filter5
+        DescriptionName: UIWorld_EnchantedItem
+      - FilterType: Filter6
+        DescriptionName: UIWord_Unique_Or_Set_Combined

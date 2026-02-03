@@ -1,0 +1,156 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Rule
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Comment:
+      type: string
+    RequiredProperty: # 세공 시 해당 아이템에 존재해야하는 property 명
+      type: string    # SlotCount와 같은 경우 -> 세공과 권능부여가 나뉘기 때문에 EngraveSlotCount와 MightSlotCount로 나뉠 것으로 보임
+    AdditionalMaterialItem: # 클라에서 보내주는 아이템 이외에 해당 Engrave가 소모시킬 material_item을 지정 -> 조합식에 필요
+      type: string
+      ref: item
+      visible: true
+    MaterialAmount: # 클라에서 보내주는 아이템인 material_item_id를 몇개나 소모시킬지
+      type: integer
+      minimum: 1 # 값을 적지 않으면 1개가 기본으로 소모
+    Combination:
+      type: string
+      ref: item_combination
+    LockCost: # lock 개수가 1개 이상 일 때
+      type: array
+      items:
+        type: object
+        properties:
+          LockCount:
+            type: integer
+            minimum: 1
+          Cost: 
+            type: integer
+    CostItem:
+      type: string
+      ref: item
+      visible: true
+    Cost:
+      type: integer
+      minimum: 1
+      visible: true
+    Reserve:
+      type: boolean
+    GroupSelectCount:
+      type: integer
+      visible: true
+    GroupRule: # 종속시행됨
+      visible: true
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - TargetGroup
+          - Group
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          TargetGroup:
+            type: integer
+            minimum: 1
+          Group:
+            type: integer
+            minimum: 1
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+    GroupSampleCount:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Count
+          - Group
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Count:
+            type: integer
+            minimum: 1
+          Group:
+            type: integer
+            minimum: 1
+            visible: true
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+    Rule:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - TargetProperty
+          - TargetValue
+          - TargetPropertyGrade
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          TargetProperty:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+          TargetValueType:
+            type: string
+            enum:
+              - buff
+          TargetValue:
+            type: 
+              - integer
+              - string
+            selectable_ref: true
+            ref_column: TargetValueType
+          TargetPropertyGrade:
+            type: string
+            ref: grade
+          TargetSymbol:
+            type: string
+            ref: symbol
+            visible: true
+          Group:
+            type: integer
+            minimum: 1
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+          PropertyType:
+            type: string
+            default: Engrave
+            enum:
+              - Engrave
+              - MasteryEssenceSkill
+              - MasteryEssenceBuff
+              - Might
+              - GivenOption

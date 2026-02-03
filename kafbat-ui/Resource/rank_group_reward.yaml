@@ -1,0 +1,128 @@
+- Id: 1001
+  Name: WorldBoss_Kraka_ContributionRank
+  Comment: "[월드보스] 크라카 기여도 보상"
+  RankType: Contribute
+  NpcName: Boss_Kraka
+  ParticipationReward:
+    - Item: CurrencyGold
+      Amount: 5
+  RankReward:
+    - RankGroupMin: 1
+      RankGroupMax: 1
+      Item: CurrencyGold
+      Amount: 500000
+    - RankGroupMin: 2
+      RankGroupMax: 5
+      Item: CurrencyGold
+      Amount: 300000
+    - RankGroupMin: 6
+      RankGroupMax: 10
+      Item: CurrencyGold
+      Amount: 200000
+    - RankGroupMin: 11
+      RankGroupMax: 50
+      Item: CurrencyGold
+      Amount: 100000
+- Id: 1002
+  Name: WorldBoss_Satyros_ContributionRank
+  Comment: "[월드보스] 사티로스 기여도 보상"
+  RankType: Contribute
+  NpcName: Boss_Satyros_01
+  ParticipationReward:
+    - Item: CurrencyGold
+      Amount: 10
+  RankReward:
+    - RankGroupMin: 1
+      RankGroupMax: 1
+      Item: CurrencyGold
+      Amount: 500000
+    - RankGroupMin: 2
+      RankGroupMax: 5
+      Item: CurrencyGold
+      Amount: 300000
+    - RankGroupMin: 6
+      RankGroupMax: 10
+      Item: CurrencyGold
+      Amount: 200000
+    - RankGroupMin: 11
+      RankGroupMax: 50
+      Item: CurrencyGold
+      Amount: 100000
+- Id: 95
+  Name: Challenge_Dungeon_Undead_Mine_ClearTimeRank
+  Comment: "[도전던전] 언데드 광산"
+  RankType: ClearTime
+  Dungeon: Challenge_Dungeon_Undead_Mine
+  RankReward:
+    - RankGroupMin: 1
+      RankGroupMax: 1
+      Item: CurrencyChallengeToken
+      Amount: 2500
+    - RankGroupMin: 2
+      RankGroupMax: 2
+      Item: CurrencyChallengeToken
+      Amount: 2300
+    - RankGroupMin: 3
+      RankGroupMax: 3
+      Item: CurrencyChallengeToken
+      Amount: 2200
+    - RankGroupMin: 4
+      RankGroupMax: 4
+      Item: CurrencyChallengeToken
+      Amount: 2100
+    - RankGroupMin: 5
+      RankGroupMax: 5
+      Item: CurrencyChallengeToken
+      Amount: 2000
+- Id: 238
+  Name: Challenge_Dungeon_Monkey_Playground_ClearTimeRank
+  Comment: "[도전던전] 원숭이 놀이터"
+  RankType: ClearTime
+  Dungeon: Challenge_Dungeon_Monkey_Playground
+  RankReward:
+    - RankGroupMin: 1
+      RankGroupMax: 1
+      Item: CurrencyChallengeToken
+      Amount: 1500
+    - RankGroupMin: 2
+      RankGroupMax: 2
+      Item: CurrencyChallengeToken
+      Amount: 1300
+    - RankGroupMin: 3
+      RankGroupMax: 3
+      Item: CurrencyChallengeToken
+      Amount: 1200
+    - RankGroupMin: 4
+      RankGroupMax: 4
+      Item: CurrencyChallengeToken
+      Amount: 1100
+    - RankGroupMin: 5
+      RankGroupMax: 5
+      Item: CurrencyChallengeToken
+      Amount: 1000
+- Id: 70
+  Name: Challenge_Dungeon_Polluted_Lake_ClearTimeRank
+  Comment: "[도전던전] 오염된 호숫가"
+  RankType: ClearTime
+  Dungeon: Challenge_Dungeon_Polluted_Lake
+  RankReward:
+    - RankGroupMin: 1
+      RankGroupMax: 1
+      Item: CurrencyChallengeToken
+      Amount: 1000
+    - RankGroupMin: 2
+      RankGroupMax: 2
+      Item: CurrencyChallengeToken
+      Amount: 800
+    - RankGroupMin: 3
+      RankGroupMax: 3
+      Item: CurrencyChallengeToken
+      Amount: 700
+    - RankGroupMin: 4
+      RankGroupMax: 4
+      Item: CurrencyChallengeToken
+      Amount: 600
+    - RankGroupMin: 5
+      RankGroupMax: 5
+      Item: CurrencyChallengeToken
+      Amount: 500

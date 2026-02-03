@@ -1,0 +1,61 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    MainTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - HUD
+              - ListAll
+          Description:
+            type: string
+            ref: description
+    SubTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Control
+              - Battle
+              - Menu
+              - QuickSlot
+              - Etc
+          Description:
+            type: string
+            ref: description
+          InputActionList:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                InputAction:
+                  type: string
+                  ref: client_input_action
+    AllowKeyList:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Key:
+            type: string
+            ref: input_key
+

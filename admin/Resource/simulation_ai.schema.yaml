@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Tree:
+      type:
+        - object
+        - string
+  required:
+    - Id
+    - Name
+    - Tree
+
+# AI 실행 주기
+# Pc: 50ms
+# 타겟이 있는 Npc: 50ms
+# 소환된 Npc: 100ms
+# 그 외 전체 엔티티: 300ms 

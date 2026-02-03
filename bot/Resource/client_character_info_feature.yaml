@@ -1,0 +1,29 @@
+- Id: 1
+  Name: CharacterInfo
+  EquipPage:
+    - Name: Page0
+      Icon: /Game/UI/CharInfo_SP/EquipPageBtn00_Sprite.EquipPageBtn00_Sprite
+      Page: 0
+    - Name: Page1
+      Icon: /Game/UI/CharInfo_SP/EquipPageBtn01_Sprite.EquipPageBtn01_Sprite
+      Page: 1
+    - Name: Page2
+      Icon: /Game/UI/CharInfo_SP/EquipPageBtn03_Sprite.EquipPageBtn03_Sprite
+      Page: 2
+  DefaultSelectedEquipPage: 0
+  SystemMessage_LockedEquipSlotSelected: CharacterInfo_LockedEquipSlotSelected
+  SystemMessage_StatBookmarkRegisterMax: StatBookmark_RegisterMax
+  ClassWeaponCategory:
+    - Class: Fighter
+      Category:
+        - Item_Equip_Weapon_Fighter_Lsword
+        - Item_Equip_Weapon_Fighter_Sword
+    - Class: Ranger
+      Category:
+        - Item_Equip_Weapon_Ranger_Bow
+        - Item_Equip_Weapon_Ranger_Cbow
+    - Class: Sorcerer
+      Category:
+        - Item_Equip_Weapon_Sorcerer_Staff
+        - Item_Equip_Weapon_Sorcerer_Orb
+  FavoriteID: Stat

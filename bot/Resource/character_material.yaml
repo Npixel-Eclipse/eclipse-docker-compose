@@ -1,0 +1,6 @@
+- Id: 1
+  Name: Normal
+- Id: 2
+  Name: Boss
+  MaterialEffectOnHit: false
+  MeshShakeOnHit: false

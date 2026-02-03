@@ -1,0 +1,29 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    Category:
+      type: string 
+      ref: item_category
+    Grade:
+      type: string 
+      ref: grade
+    MinCost:
+      type: integer
+    MaxCost:
+      type: integer
+  required:
+    - Id
+    - Name
+    - Category
+    - MinCost
+    - MaxCost

@@ -1,0 +1,46 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    HelpMeCount:
+      type: integer
+      minimum: 1
+      visible: true
+    HelpFromGuildCount:
+      type: integer
+      minimum: 1
+      visible: true
+    InstantConstructionCount:
+      type: integer
+      minimum: 1
+      visible: true
+    ConstructionQueueCount:
+      type: integer
+      minimum: 1
+      visible: true
+    HarvestAcceleration:
+      type: object
+      properties:
+        Percent:
+          type: integer
+          minimum: 1
+        Target:
+          type: string
+          enum:
+            - SINGLE
+            - ALL
+        TargetBuilding:
+          type: string
+          ref: building
+      visible: true

@@ -1,0 +1,86 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Job configuration
+model Job {
+  id          String   @id // e.g., "docker-all", "server-build"
+  name        String   // Jenkins job name
+  jenkinsPath String   // e.g., "job/Build-Server-Docker-All"
+  displayName String   // Display name in UI
+  type        String   // "docker" or "server"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("jobs")
+}
+
+// Legacy Build table renamed to DockerBuild
+model DockerBuild {
+  id         Int                    @id
+  status     String                 // SUCCESS, FAILURE, ABORTED, IN_PROGRESS
+  duration   Int?                   // milliseconds
+  timestamp  DateTime
+  url        String
+  userName   String?                // User who triggered the build
+  imageTag   String?                // Docker image tag (e.g., 0.1.347-arm)
+  parameters DockerBuildParameter[]
+  logs       String?                @db.Text
+  createdAt  DateTime               @default(now())
+  updatedAt  DateTime               @updatedAt
+
+  @@index([status])
+  @@index([timestamp])
+  @@map("docker_builds")
+}
+
+model DockerBuildParameter {
+  id           Int         @id @default(autoincrement())
+  dockerBuildId Int
+  name         String
+  value        String
+  dockerBuild  DockerBuild @relation(fields: [dockerBuildId], references: [id], onDelete: Cascade)
+
+  @@index([dockerBuildId])
+  @@index([name])
+  @@index([value])
+  @@map("docker_build_parameters")
+}
+
+// New ServerBuild table
+model ServerBuild {
+  id         Int                    @id
+  status     String                 // SUCCESS, FAILURE, ABORTED, IN_PROGRESS
+  duration   Int?                   // milliseconds
+  timestamp  DateTime
+  url        String
+  userName   String?                // User who triggered the build
+  parameters ServerBuildParameter[]
+  logs       String?                @db.Text
+  createdAt  DateTime               @default(now())
+  updatedAt  DateTime               @updatedAt
+
+  @@index([status])
+  @@index([timestamp])
+  @@map("server_builds")
+}
+
+model ServerBuildParameter {
+  id            Int         @id @default(autoincrement())
+  serverBuildId Int
+  name          String
+  value         String
+  serverBuild   ServerBuild @relation(fields: [serverBuildId], references: [id], onDelete: Cascade)
+
+  @@index([serverBuildId])
+  @@index([name])
+  @@index([value])
+  @@map("server_build_parameters")
+}

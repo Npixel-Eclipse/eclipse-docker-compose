@@ -1,0 +1,77 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Activate:
+      type: boolean
+    UIMainTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Comment:
+            type: string
+          Type:
+            type: string
+            enum:
+              - Character
+              - Server
+              - Account
+              - Letter
+          TabDescription:
+            type: string
+            ref: description
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          CanSendMail:
+            type: boolean
+            default: false
+          TabLocked:
+            type: boolean
+            default: false
+    UISubTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Comment:
+            type: string
+          Type:
+            type: string
+            enum:
+              - Default
+              - History
+          TabDescription:
+            type: string
+            ref: description
+    UISendTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Comment:
+            type: string
+          Type:
+            type: string
+            enum:
+              - Friend
+              - Guild
+          TabDescription:
+            type: string
+            ref: description
+          SenderPlaceDescription:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name

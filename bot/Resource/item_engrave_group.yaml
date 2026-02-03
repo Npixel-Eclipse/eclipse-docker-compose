@@ -1,0 +1,351 @@
+- Id: 1119
+  Name: Engrave_Weapon_Rare_Sword
+  Comment: 희귀 무기 세공 - 한손검
+- Id: 897
+  Name: Engrave_Weapon_Epic_Sword
+  Comment: 영웅 무기 세공 - 한손검
+- Id: 603
+  Name: Engrave_Weapon_Legendary_Sword
+  Comment: 전설 무기 세공 - 한손검
+- Id: 664
+  Name: Engrave_Weapon_Rare_Lsword
+  Comment: 희귀 무기 세공 - 대검
+- Id: 2885
+  Name: Engrave_Weapon_Epic_Lsword
+  Comment: 영웅 무기 세공 - 대검
+- Id: 61
+  Name: Engrave_Weapon_Legendary_Lsword
+  Comment: 전설 무기 세공 - 대검
+- Id: 2356
+  Name: Engrave_Weapon_Rare_Bow
+  Comment: 희귀 무기 세공 - 활
+- Id: 917
+  Name: Engrave_Weapon_Epic_Bow
+  Comment: 영웅 무기 세공 - 활
+- Id: 523
+  Name: Engrave_Weapon_Legendary_Bow
+  Comment: 전설 무기 세공 - 활
+- Id: 3211
+  Name: Engrave_Weapon_Rare_Cbow
+  Comment: 희귀 무기 세공 - 석궁
+- Id: 1176
+  Name: Engrave_Weapon_Epic_Cbow
+  Comment: 영웅 무기 세공 - 석궁
+- Id: 1546
+  Name: Engrave_Weapon_Legendary_Cbow
+  Comment: 전설 무기 세공 - 석궁
+- Id: 1976
+  Name: Engrave_Weapon_Rare_Orb
+  Comment: 희귀 무기 세공 - 오브
+- Id: 3539
+  Name: Engrave_Weapon_Epic_Orb
+  Comment: 영웅 무기 세공 - 오브
+- Id: 260
+  Name: Engrave_Weapon_Legendary_Orb
+  Comment: 전설 무기 세공 - 오브
+- Id: 3132
+  Name: Engrave_Weapon_Rare_Staff
+  Comment: 희귀 무기 세공 - 스태프
+- Id: 3680
+  Name: Engrave_Weapon_Epic_Staff
+  Comment: 영웅 무기 세공 - 스태프
+- Id: 539
+  Name: Engrave_Weapon_Legendary_Staff
+  Comment: 전설 무기 세공 - 스태프
+- Id: 8956
+  Name: Engrave_Weapon_Rare_Katana
+  Comment: 희귀 무기 세공 - 카타나
+- Id: 5029
+  Name: Engrave_Weapon_Epic_Katana
+  Comment: 영웅 무기 세공 - 카타나
+- Id: 7669
+  Name: Engrave_Weapon_Legendary_Katana
+  Comment: 전설 무기 세공 - 카타나
+- Id: 10105
+  Name: Engrave_Weapon_Rare_TwinDaggers
+  Comment: 희귀 무기 세공 - 쌍단검
+- Id: 6515
+  Name: Engrave_Weapon_Epic_TwinDaggers
+  Comment: 영웅 무기 세공 - 쌍단검
+- Id: 2618
+  Name: Engrave_Weapon_Legendary_TwinDaggers
+  Comment: 전설 무기 세공 - 쌍단검
+- Id: 573
+  Name: Engrave_Armor_Rare_Helm
+  Comment: 희귀 방어구 세공 - 투구
+- Id: 1050
+  Name: Engrave_Armor_Epic_Helm
+  Comment: 영웅 방어구 세공 - 투구
+- Id: 3781
+  Name: Engrave_Armor_Legendary_Helm
+  Comment: 전설 방어구 세공 - 투구
+- Id: 4237
+  Name: Engrave_Armor_Rare_Suit
+  Comment: 희귀 방어구 세공 - 상의
+- Id: 3410
+  Name: Engrave_Armor_Epic_Suit
+  Comment: 영웅 방어구 세공 - 상의
+- Id: 3622
+  Name: Engrave_Armor_Legendary_Suit
+  Comment: 전설 방어구 세공 - 상의
+- Id: 1485
+  Name: Engrave_Armor_Rare_Pants
+  Comment: 희귀 방어구 세공 - 하의
+- Id: 376
+  Name: Engrave_Armor_Epic_Pants
+  Comment: 영웅 방어구 세공 - 하의
+- Id: 2458
+  Name: Engrave_Armor_Legendary_Pants
+  Comment: 전설 방어구 세공 - 하의
+- Id: 1299
+  Name: Engrave_Armor_Rare_Gloves
+  Comment: 희귀 방어구 세공 - 장갑
+- Id: 4959
+  Name: Engrave_Armor_Epic_Gloves
+  Comment: 영웅 방어구 세공 - 장갑
+- Id: 2898
+  Name: Engrave_Armor_Legendary_Gloves
+  Comment: 전설 방어구 세공 - 장갑
+- Id: 5160
+  Name: Engrave_Armor_Rare_Boots
+  Comment: 희귀 방어구 세공 - 신발
+- Id: 4756
+  Name: Engrave_Armor_Epic_Boots
+  Comment: 영웅 방어구 세공 - 신발
+- Id: 127
+  Name: Engrave_Armor_Legendary_Boots
+  Comment: 전설 방어구 세공 - 신발
+- Id: 1021
+  Name: Engrave_Armor_Rare_Cape
+  Comment: 희귀 방어구 세공 - 망토
+- Id: 3507
+  Name: Engrave_Armor_Epic_Cape
+  Comment: 영웅 방어구 세공 - 망토
+- Id: 2294
+  Name: Engrave_Armor_Legendary_Cape
+  Comment: 전설 방어구 세공 - 망토
+- Id: 5010
+  Name: Engrave_Accessory_Rare_Earring
+  Comment: 희귀 악세서리 세공 - 귀걸이
+- Id: 4604
+  Name: Engrave_Accessory_Epic_Earring
+  Comment: 영웅 악세서리 세공 - 귀걸이
+- Id: 2808
+  Name: Engrave_Accessory_Legendary_Earring
+  Comment: 전설 악세서리 세공 - 귀걸이
+- Id: 5461
+  Name: Engrave_Accessory_Rare_Necklace
+  Comment: 희귀 악세서리 세공 - 목걸이
+- Id: 1908
+  Name: Engrave_Accessory_Epic_Necklace
+  Comment: 영웅 악세서리 세공 - 목걸이
+- Id: 1396
+  Name: Engrave_Accessory_Legendary_Necklace
+  Comment: 전설 악세서리 세공 - 목걸이
+- Id: 3515
+  Name: Engrave_Accessory_Rare_Ring
+  Comment: 희귀 악세서리 세공 - 반지
+- Id: 2313
+  Name: Engrave_Accessory_Epic_Ring
+  Comment: 영웅 악세서리 세공 - 반지
+- Id: 4923
+  Name: Engrave_Accessory_Legendary_Ring
+  Comment: 전설 악세서리 세공 - 반지
+- Id: 4763
+  Name: Engrave_Accessory_Rare_Belt
+  Comment: 희귀 악세서리 세공 - 벨트
+- Id: 6392
+  Name: Engrave_Accessory_Epic_Belt
+  Comment: 영웅 악세서리 세공 - 벨트
+- Id: 6814
+  Name: Engrave_Accessory_Legendary_Belt
+  Comment: 전설 악세서리 세공 - 벨트
+- Id: 2737
+  Name: Engrave_Weapon_Rare_Sword_Blessed
+  Comment: 축복 희귀 무기 세공 - 한손검
+- Id: 370
+  Name: Engrave_Weapon_Epic_Sword_Blessed
+  Comment: 축복 전설 무기 세공 - 한손검
+- Id: 3802
+  Name: Engrave_Weapon_Legendary_Sword_Blessed
+  Comment: 축복 영웅 무기 세공 - 한손검
+- Id: 4346
+  Name: Engrave_Weapon_Rare_Lsword_Blessed
+  Comment: 축복 희귀 무기 세공 - 대검
+- Id: 6047
+  Name: Engrave_Weapon_Epic_Lsword_Blessed
+  Comment: 축복 전설 무기 세공 - 대검
+- Id: 5118
+  Name: Engrave_Weapon_Legendary_Lsword_Blessed
+  Comment: 축복 영웅 무기 세공 - 대검
+- Id: 5466
+  Name: Engrave_Weapon_Rare_Bow_Blessed
+  Comment: 축복 희귀 무기 세공 - 활
+- Id: 5874
+  Name: Engrave_Weapon_Epic_Bow_Blessed
+  Comment: 축복 전설 무기 세공 - 활
+- Id: 311
+  Name: Engrave_Weapon_Legendary_Bow_Blessed
+  Comment: 축복 영웅 무기 세공 - 활
+- Id: 2391
+  Name: Engrave_Weapon_Rare_Cbow_Blessed
+  Comment: 축복 희귀 무기 세공 - 석궁
+- Id: 863
+  Name: Engrave_Weapon_Epic_Cbow_Blessed
+  Comment: 축복 전설 무기 세공 - 석궁
+- Id: 4771
+  Name: Engrave_Weapon_Legendary_Cbow_Blessed
+  Comment: 축복 영웅 무기 세공 - 석궁
+- Id: 5139
+  Name: Engrave_Weapon_Rare_Orb_Blessed
+  Comment: 축복 희귀 무기 세공 - 오브
+- Id: 3503
+  Name: Engrave_Weapon_Epic_Orb_Blessed
+  Comment: 축복 전설 무기 세공 - 오브
+- Id: 584
+  Name: Engrave_Weapon_Legendary_Orb_Blessed
+  Comment: 축복 영웅 무기 세공 - 오브
+- Id: 8975
+  Name: Engrave_Weapon_Rare_Staff_Blessed
+  Comment: 축복 희귀 무기 세공 - 스태프
+- Id: 9211
+  Name: Engrave_Weapon_Epic_Staff_Blessed
+  Comment: 축복 전설 무기 세공 - 스태프
+- Id: 1263
+  Name: Engrave_Weapon_Legendary_Staff_Blessed
+  Comment: 축복 영웅 무기 세공 - 스태프
+- Id: 2663
+  Name: Engrave_Armor_Rare_Helm_Blessed
+  Comment: 축복 희귀 방어구 세공 - 투구
+- Id: 861
+  Name: Engrave_Armor_Epic_Helm_Blessed
+  Comment: 축복 영웅 방어구 세공 - 투구
+- Id: 3477
+  Name: Engrave_Armor_Legendary_Helm_Blessed
+  Comment: 축복 전설 방어구 세공 - 투구
+- Id: 2578
+  Name: Engrave_Armor_Rare_Suit_Blessed
+  Comment: 축복 희귀 방어구 세공 - 상의
+- Id: 2551
+  Name: Engrave_Armor_Epic_Suit_Blessed
+  Comment: 축복 영웅 방어구 세공 - 상의
+- Id: 1116
+  Name: Engrave_Armor_Legendary_Suit_Blessed
+  Comment: 축복 전설 방어구 세공 - 상의
+- Id: 8481
+  Name: Engrave_Armor_Rare_Pants_Blessed
+  Comment: 축복 희귀 방어구 세공 - 하의
+- Id: 3338
+  Name: Engrave_Armor_Epic_Pants_Blessed
+  Comment: 축복 영웅 방어구 세공 - 하의
+- Id: 1274
+  Name: Engrave_Armor_Legendary_Pants_Blessed
+  Comment: 축복 전설 방어구 세공 - 하의
+- Id: 8127
+  Name: Engrave_Armor_Rare_Gloves_Blessed
+  Comment: 축복 희귀 방어구 세공 - 장갑
+- Id: 9040
+  Name: Engrave_Armor_Epic_Gloves_Blessed
+  Comment: 축복 영웅 방어구 세공 - 장갑
+- Id: 9254
+  Name: Engrave_Armor_Legendary_Gloves_Blessed
+  Comment: 축복 전설 방어구 세공 - 장갑
+- Id: 3453
+  Name: Engrave_Armor_Rare_Boots_Blessed
+  Comment: 축복 희귀 방어구 세공 - 신발
+- Id: 6708
+  Name: Engrave_Armor_Epic_Boots_Blessed
+  Comment: 축복 영웅 방어구 세공 - 신발
+- Id: 6662
+  Name: Engrave_Armor_Legendary_Boots_Blessed
+  Comment: 축복 전설 방어구 세공 - 신발
+- Id: 9141
+  Name: Engrave_Armor_Rare_Cape_Blessed
+  Comment: 축복 희귀 방어구 세공 - 망토
+- Id: 887
+  Name: Engrave_Armor_Epic_Cape_Blessed
+  Comment: 축복 영웅 방어구 세공 - 망토
+- Id: 8459
+  Name: Engrave_Armor_Legendary_Cape_Blessed
+  Comment: 축복 전설 방어구 세공 - 망토
+- Id: 2291
+  Name: Engrave_Accessory_Rare_Earring_Blessed
+  Comment: 축복 희귀 악세서리 세공 - 귀걸이
+- Id: 11465
+  Name: Engrave_Accessory_Epic_Earring_Blessed
+  Comment: 축복 영웅 악세서리 세공 - 귀걸이
+- Id: 2449
+  Name: Engrave_Accessory_Legendary_Earring_Blessed
+  Comment: 축복 전설 악세서리 세공 - 귀걸이
+- Id: 5249
+  Name: Engrave_Accessory_Rare_Necklace_Blessed
+  Comment: 축복 희귀 악세서리 세공 - 목걸이
+- Id: 9774
+  Name: Engrave_Accessory_Epic_Necklace_Blessed
+  Comment: 축복 영웅 악세서리 세공 - 목걸이
+- Id: 9826
+  Name: Engrave_Accessory_Legendary_Necklace_Blessed
+  Comment: 축복 전설 악세서리 세공 - 목걸이
+- Id: 1065
+  Name: Engrave_Accessory_Rare_Ring_Blessed
+  Comment: 축복 희귀 악세서리 세공 - 반지
+- Id: 8653
+  Name: Engrave_Accessory_Epic_Ring_Blessed
+  Comment: 축복 영웅 악세서리 세공 - 반지
+- Id: 9165
+  Name: Engrave_Accessory_Legendary_Ring_Blessed
+  Comment: 축복 전설 악세서리 세공 - 반지
+- Id: 2836
+  Name: Engrave_Accessory_Rare_Belt_Blessed
+  Comment: 축복 희귀 악세서리 세공 - 벨트
+- Id: 3552
+  Name: Engrave_Accessory_Epic_Belt_Blessed
+  Comment: 축복 영웅 악세서리 세공 - 벨트
+- Id: 2078
+  Name: Engrave_Accessory_Legendary_Belt_Blessed
+  Comment: 축복 전설 악세서리 세공 - 벨트
+- Id: 990
+  Name: MightWeaponEpic2TierGroup
+  Comment: "[권능 부여] 무기 영웅 2티어"
+- Id: 970
+  Name: MightWeaponEpic1TierGroup
+  Comment: "[권능 부여] 무기 영웅 1티어"
+- Id: 358
+  Name: MightWeaponLegendary3TierGroup
+  Comment: "[권능 부여] 무기 전설 3티어"
+- Id: 1060
+  Name: MightWeaponLegendary2TierGroup
+  Comment: "[권능 부여] 무기 전설 2티어"
+- Id: 920
+  Name: MightWeaponLegendary1TierGroup
+  Comment: "[권능 부여] 무기 전설 1티어"
+- Id: 1383
+  Name: MightArmorEpic2TierGroup
+  Comment: "[권능 부여] 방어구 영웅 2티어"
+- Id: 310
+  Name: MightArmorEpic1TierGroup
+  Comment: "[권능 부여] 방어구 영웅 1티어"
+- Id: 1454
+  Name: MightArmorLegendary3TierGroup
+  Comment: "[권능 부여] 방어구 전설 3티어"
+- Id: 627
+  Name: MightArmorLegendary2TierGroup
+  Comment: "[권능 부여] 방어구 전설 2티어"
+- Id: 1516
+  Name: MightArmorLegendary1TierGroup
+  Comment: "[권능 부여] 방어구 전설 1티어"
+- Id: 741
+  Name: MightAccessoryEpic2TierGroup
+  Comment: "[권능 부여] 장신구 영웅 2티어"
+- Id: 2486
+  Name: MightAccessoryEpic1TierGroup
+  Comment: "[권능 부여] 장신구 영웅 1티어"
+- Id: 2024
+  Name: MightAccessoryLegendary3TierGroup
+  Comment: "[권능 부여] 장신구 전설 3티어"
+- Id: 1444
+  Name: MightAccessoryLegendary2TierGroup
+  Comment: "[권능 부여] 장신구 전설 2티어"
+- Id: 302
+  Name: MightAccessoryLegendary1TierGroup
+  Comment: "[권능 부여] 장신구 전설 1티어"

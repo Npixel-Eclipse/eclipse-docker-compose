@@ -1,0 +1,138 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.item.recipe";
+option java_outer_classname = "ItemRecipeServiceProto";
+
+package recipe;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "Common/property.proto";
+import "Common/kafka_key_common.proto";
+
+enum RecipeResultType {
+  Success = 0;
+  GreatSuccess = 1;
+  Failure = 2;
+}
+
+message RecipeCommand {
+  oneof command {
+    GetRecipeLimitCountRequest get_recipe_limit_count_request = 1;
+    RunRecipeWithInputRequest run_recipe_with_input_request_for_limit_count = 2; // 제작 횟수 검증
+    RunRecipeWithInputRequest run_recipe_with_input_request_for_limit_output = 3; // 한정(선착순) 제작 검증
+    RunRecipeWithInputRequest rollback_recipe_with_input_request_for_limit_count = 4; // 제작 횟수 롤백
+
+    bool sync_to_database_and_unload_cache = 100; // DB로 동기화 (true: 캐시에서 삭제, false: 캐시 유지)
+
+    // [치트]
+    int32 upsert_recipe_limit_amount = 200; // 제작 제한 수량 강제 지정
+  }
+}
+
+// 레시피 제한 수량 조회 요청
+message GetRecipeLimitCountRequest {
+  int64 account_id = 6;
+  string character_uuid = 2;
+  repeated int64 recipe_output_ids = 3;
+  repeated common.KafkaKey.RecipeLimitKey request_recipe_limit_key = 4;
+  repeated Response response = 5;
+
+  message Response {
+    common.KafkaKey.RecipeLimitKey recipe_limit_key = 1;
+    int32 amount = 2;
+  }
+}
+
+// 레시피 실행 요청
+message RunRecipeWithInputRequest {
+  TransactionStep step = 1;
+  int32 last_item_result = 2;
+
+  int64 account_id = 12;
+  string server_name = 13;
+  string character_uuid = 11;
+
+  // 레시피 정보
+  int64 recipe_input_id = 20;
+  int64 recipe_output_id = 21;
+  int32 repeat_count = 22;
+
+  repeated RecipeInputItem recipe_input_items = 30; // 소모할 재료 정보
+  repeated string reserved_inventory_slot_uuids = 31; // 슬롯 선점 아이템 정보
+
+  // 레시피 상태
+  int32 failure_count = 40; // 확률에 의해 실패한 제작 횟수 (천장 보정 전, 천장 수치 롤백을 위해 사용)
+  int32 approved_limit_count = 41; // 제작 횟수 제한을 통해 승인된 제작 횟수
+  int32 approved_limit_output = 42; // 한정 제작 제한을 통해 승인된 제작 횟수
+
+  // 레시피 결과
+  repeated RecipeOutputItem output_items = 50;
+  int32 canceled_limit_count_repeat_count = 51; // 취소된 제작 횟수 제한
+  int32 canceled_limit_output_repeat_count = 52; // 취소된 한정 제작 제한
+  int32 after_limit_count_amount = 53; // 제작 횟수 제한의 제작 횟수 (롤백된 수량은 고려되지 않음)
+  int32 after_limit_output_amount = 54; // 한정 제작 제한의 제작 횟수
+  int32 after_failure_count = 55; // 확률에 의해 실패한 제작 누적 횟수 (천장 보정 후, 클라이언트 알림을 위해 사용)
+
+  optional string error_message = 60;
+
+  enum TransactionStep {
+    VERIFY_INPUT = 0; // 재료 검증 및 차감
+    CALCULATE = 1; // 확률 결과 집계 (천장)
+    VERIFY_LIMIT = 2; // 제한 검증 및 차감 (RecipeStreams)
+    COMPLETE = 3; // 지급 (취소분 포함)
+
+    ROLLBACK_INPUT = 10; // 논배틀아이템 롤백 (배틀아이템 롤백 후 진행되어야 함)
+    ROLLBACK_CALCULATE = 11; // 천장 롤백
+    ROLLBACK_LIMIT = 12; // 제작 제한 롤백
+    ROLLBACK_LIMIT_COUNT_FOR_CANCELED_LIMIT_OUTPUT = 13; // 한정 제작 취소분으로 인한 수치 롤백
+  }
+
+  message RecipeInputItem {
+    int64 input_item_id = 1; // 아이템의 ID가 아니라, Input의 ID
+    repeated UseItem use_items = 2;
+
+    message UseItem {
+      repeated CandidateItem candidate_items = 1; // 차감할 아이템 후보
+      int64 total_amount = 2; // 전체 차감 수량
+      int64 remain_amount = 3; // 잔여 차감 수량
+      bool is_battle_item = 4;
+      int64 base_item_id = 5;
+
+      message CandidateItem {
+        int64 item_id = 1;
+        string item_uuid = 2;
+
+        // 차감 이후 롤백을 위한 정보
+        int64 decreased_amount = 10;
+        repeated bytes properties = 11; // Item.Property
+        google.protobuf.Timestamp expire_time = 13;
+        google.protobuf.Timestamp delete_time = 14;
+      }
+    }
+  }
+
+  message RecipeOutputItem {
+    repeated Item items = 1;
+
+    message Item {
+      RecipeResultType result_type = 1;
+      int64 item_id = 10;
+      int64 amount = 11;
+      optional int64 group_id = 12;
+      repeated common.Property properties = 13;
+      int64 output_item_id = 14;
+      optional int64 re_roll_item_id = 15;
+    }
+  }
+}
+
+message RecipeLimitCache {
+  // internal
+  optional int64 database_id = 1;
+
+  // data
+  int32 amount = 10;
+  google.protobuf.Timestamp start_date = 11;
+}

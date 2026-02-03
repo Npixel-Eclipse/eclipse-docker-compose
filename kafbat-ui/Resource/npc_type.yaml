@@ -1,0 +1,107 @@
+- Id: 1
+  Name: Monster
+  Comment: 몬스터
+  IsMonster: true
+  DisplayTextStyle: NameNpcMonster
+- Id: 100
+  Name: Merchant
+  Comment: 상인 NPC
+  IsMerchant: true
+  IsInteractionNpc: true
+  TitleDisplayType: NamePlate
+- Id: 115
+  Name: Portal
+  Comment: 근처가면 이동하는 포탈
+  IsPortal: true
+  IsInteractionNpc: true
+  TitleDisplayType: NamePlate
+- Id: 168
+  Name: Quest
+  Comment: 퀘스트
+  IsQuest: true
+  IsInteractionNpc: true
+  TitleDisplayType: All
+- Id: 203
+  Name: Building
+  Comment: 성소
+  IsBuilding: true
+  IsInteractionNpc: true
+- Id: 61
+  Name: Battleground
+  Comment: 전장
+  IsNonSleepAi: true
+  IsBattleground: true
+- Id: 325
+  Name: Teleporter
+  Comment: 클릭으로 이동하는 포탈
+  IsTeleporter: true
+  IsInteractionNpc: true
+  TitleDisplayType: NamePlate
+- Id: 310
+  Name: NonMerchant
+  Comment: 상인이 아닌 NPC - 창고 같은
+  IsNonMerchant: true
+  TitleDisplayType: NamePlate
+- Id: 697
+  Name: NormalMonster
+  Comment: 일반 몬스터
+  IsMonster: true
+  DisplayTextStyle: NameNpcMonster
+- Id: 751
+  Name: NamedMonster
+  Comment: 네임드 몬스터
+  IsMonster: true
+  RepresentativeIconType: Named
+  TitleDisplayType: TargetInfo
+  DisplayTextStyle: NameNpcMonsterNamed
+- Id: 844
+  Name: AbyssMonster
+  Comment: 어비스
+  IsNonSleepAi: true
+  IsMonster: true
+  RepresentativeIconType: Abyss
+  TitleDisplayType: TargetInfo
+  DisplayTextStyle: NameNpcMonsterAbyss
+- Id: 398
+  Name: BossMonster
+  Comment: 보스 몬스터
+  IsNonSleepAi: true
+  IsMonster: true
+  RepresentativeIconType: Boss
+  TitleDisplayType: TargetInfo
+  DisplayTextStyle: NameNpcMonsterBoss
+- Id: 1145
+  Name: BossSummonMonster
+  Comment: 보스 소환 몬스터
+  IsNonSleepAi: true
+  IsMonster: true
+  DisplayTextStyle: NameNpcMonster
+- Id: 441
+  Name: SummonMonster
+  Comment: 소환 몬스터
+  IsNonSleepAi: true
+- Id: 433
+  Name: TestMonster
+  Comment: "테스트 용 몬스터 - 해당 카테고리는 작업 완료 후, 삭제 필요"
+  IsMonster: true
+- Id: 561
+  Name: NonSleepQuest
+  Comment: 퀘스트
+  IsNonSleepAi: true
+  IsQuest: true
+  IsInteractionNpc: true
+  TitleDisplayType: All
+- Id: 454
+  Name: NonSleepMonster
+  Comment: 몬스터
+  IsNonSleepAi: true
+  IsMonster: true
+  DisplayTextStyle: NameNpcMonster
+- Id: 954
+  Name: WorldBossMonster
+  Comment: 월드 보스 몬스터
+  IsNonSleepAi: true
+  IsMonster: true
+  RepresentativeIconType: Named
+  TitleDisplayType: TargetInfo
+  DisplayTextStyle: NameNpcMonsterBoss

@@ -1,0 +1,66 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Name
+  properties:
+    Name:
+      type: string
+      pattern: ^[a-z0-9_\.\[\]]*$
+    Description:
+      type:
+        - string
+        - number
+      visible: true
+    Type:
+      type: string
+      enum:
+        - int64
+        - string
+        - enum
+        - bool
+        - message
+        - object
+        - int64[]
+        - object[]
+        - string[]
+      visible: true
+    ArrayDescription:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - ColumnName
+        properties:
+          ColumnName:
+            type: string
+            pattern: ^[a-z0-9_\[\]]*$
+          Description:
+            type:
+              - string
+              - number
+            visible: true
+          ColumnType:
+            type: string
+            enum:
+              - int64
+              - string
+              - enum
+              - bool
+              - int64[]
+              - object[]
+            visible: true
+          Ref:
+            type: string
+            ref_column: Ref
+            selectable_ref: true
+            visible: true
+    Ref:
+      type: string
+      ref_column: Ref
+      selectable_ref: true
+      visible: true

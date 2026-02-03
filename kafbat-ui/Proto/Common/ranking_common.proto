@@ -1,0 +1,24 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.ranking";
+option java_outer_classname = "CommonRankingProto";
+
+enum RankingType {
+  reserved 2, 3;
+
+  COMBAT = 0;
+  PVP = 1;
+  DUNGEON = 4;
+  LEVEL = 5;
+  GUILD_LEVEL = 6;
+  GUILD_COMBAT = 7;
+}
+
+message ScoreUpdate{
+  common.RankingType ranking_type = 1;
+  string identifier = 2;
+  int64 score = 3;
+  repeated int64 extra_score = 4; // 정렬 기준을 위한 점수
+}

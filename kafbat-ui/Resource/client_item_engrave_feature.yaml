@@ -1,0 +1,90 @@
+- Id: 1
+  Name: ItemEngraveFeature
+  AutoPlayAnimationSpeed: 2.0
+  UITargetItemTabs:
+    - Type: Item_Equip
+      Comment: 전체 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAll_Sprite.TabIconAll_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Engrave_Weapon_Normal
+        - Item_Misc_Upgrade_Engrave_Weapon_Blessed
+        - Item_Misc_Upgrade_Engrave_Armor_Normal
+        - Item_Misc_Upgrade_Engrave_Armor_Blessed
+        - Item_Misc_Upgrade_Engrave_Accessory_Normal
+        - Item_Misc_Upgrade_Engrave_Accessory_Blessed
+    - Type: Item_Equip_WeaponBase
+      Comment: 무기 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Engrave_Weapon_Normal
+        - Item_Misc_Upgrade_Engrave_Weapon_Blessed
+    - Type: Item_Equip_Armor
+      Comment: 방어구 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconArmour_Sprite.TabIconArmour_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Engrave_Armor_Normal
+        - Item_Misc_Upgrade_Engrave_Armor_Blessed
+    - Type: Item_Equip_Accessory
+      Comment: 악세사리 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAcc_Sprite.TabIconAcc_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Engrave_Accessory_Normal
+        - Item_Misc_Upgrade_Engrave_Accessory_Blessed
+  ItemFilter: Engraving
+  DescriptionInfos:
+    - Type: Result_SlotOpenSuccess
+      Description: UIWord_Engrave_SlotOpenComplete
+    - Type: Result_EngraveSuccess
+      Description: UIWord_Engrave_CompleteText
+    - Type: Result_EngraveFail
+      Description: UIWord_Engrave_CompleteText
+    - Type: Result_SlotOpenFail
+      Description: UIWord_Engrave_SlotOpenFailIn
+    - Type: Engrave_Caution
+      Description: UIWord_SystemMsg_ChoiceEnchantRelatedItem
+    - Type: Engrave_NeedMoreMaterial
+      Description: UIWord_SystemMsg_NoMaterialItem
+    - Type: Engrave_NeedSelection
+      Description: UIWord_Engrave_IngredientDesc
+    - Type: Engrave_OptionGroup0
+      Description: UIWord_Engrave_OptionGroup0
+    - Type: Engrave_OptionGroupN
+      Description: UIWord_Engrave_OptionGroupN
+    - Type: Engrave_Notice_NeedSelection
+      Description: UIWord_SystemMsg_EngraveFailIngredient
+    - Type: Engrave_Notice_NeedMoreCost
+      Description: UIWord_SystemMsg_EngraveFailGold
+    - Type: Engrave_Notice_NeedOpenedSlot
+      Description: UIWord_SystemMsg_EngraveAllSlotLock
+    - Type: Engrave_ExistStat
+      Description: UIWord_Engrave_EngraveDesc
+    - Type: Engrave_EquipmentAcquire
+      Description: UIWord_Engrave_IngredientItemDesc
+    - Type: Engrave_Possible
+      Description: UIWord_Engrave_Desc
+    - Type: Engrave_MaterialListEmpty_WithTarget
+      Description: UIWordEquipEngrave_NoMaterialRegisteredItem
+    - Type: Engrave_MaterialListEmpty_NoTarget
+      Description: UIWord_Engrave_FailIngredient
+    - Type: Engrave_ModeTabName_Engraving
+      Description: UIWord_Engrave_Button
+    - Type: Engrave_ModeTabName_SlotOpen
+      Description: UIWord_SlotOpen
+    - Type: Engrave_NoLockedSlot
+      Description: UIWord_EngraveSlotOpen_SlotAllOpenDesc
+    - Type: Engrave_SlotOpenPossible
+      Description: UIWord_EngraveSlotOpen_SlotOpenDesc
+    - Type: Engrave_SlotOpenNeedTarget
+      Description: UIWord_EngraveSlotOpen_IngredientItemDesc
+    - Type: Engrave_SlotOpenNeedMaterial
+      Description: UIWord_EngraveSlotOpen_IngredientDesc
+    - Type: Engrave_Notice_SlotOpenNeedSelection
+      Description: UIWord_SystemMsg_Engrave_SlotOpenFailIngredient
+    - Type: Engrave_Notice_SlotOpenCompleted
+      Description: UIWord_SystemMsg_Engrave_AllSlotOpen
+    - Type: Engrave_ItemInfo_LockedSlot
+      Description: UIWord_Engrave_LockedSlot
+      TextStyleKey: EngraveLock
+    - Type: Engrave_ItemInfo_EmptySlot
+      Description: UIWord_Engrave_EmptySlot
+      TextStyleKey: EngraveEmpty

@@ -1,0 +1,27 @@
+- Id: 1
+  Culture:
+    - Name: Ko_KR
+      LocalizeInfos:
+        - Number: 1000000000000
+          Unit: "조"
+        - Number: 100000000
+          Unit: "억"
+        - Number: 10000
+          Unit: "만"
+    - Name: En_US
+      LocalizeInfos:
+        - Number: 1000000000000
+          Unit: "T"
+        - Number: 1000000000
+          Unit: "B"
+        - Number: 1000000
+          Unit: "M"
+        - Number: 1000
+          Unit: "K"
+  defaultLocalizeInfos:
+    - Number: 1000000000000
+      Unit: "조"
+    - Number: 100000000
+      Unit: "억"
+    - Number: 10000
+      Unit: "만"

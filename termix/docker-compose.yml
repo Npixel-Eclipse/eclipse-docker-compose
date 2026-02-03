@@ -1,0 +1,24 @@
+services:
+  termix:
+    image: ghcr.io/lukegus/termix:latest
+    container_name: termix-eclipse
+    restart: unless-stopped
+    ports:
+      - "8443:8080"
+    volumes:
+      - termix-data:/app/data
+    environment:
+      PORT: "8080"
+    labels:
+      description: "Eclipse Team Shared Termix Instance"
+      maintainer: "eclipse-server-team"
+    networks:
+      - termix-network
+
+volumes:
+  termix-data:
+    driver: local
+
+networks:
+  termix-network:
+    driver: bridge

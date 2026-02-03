@@ -1,0 +1,94 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    LevelUpItemCategory:
+      type: string
+      ref: item_category
+    ExpandItemCategory:
+      type: string
+      ref: item_category
+    PolymorphEnchantItemCategories: #초월체 강화/돌파 아이템 카테고리 (아이템 사용시 UI 연결용)
+            type: array
+            items:
+              type: string
+              ref: item_category  
+    WeaponPolymorphEnchantItemCategories: #무기외형 강화/돌파 아이템 카테고리 (아이템 사용시 UI 연결용)
+            type: array
+            items:
+              type: string
+              ref: item_category  
+    EnchantInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group: #from client_polymorph_feature.schema.yaml Group in UITab
+            type: string
+            enum:
+              - PolymorphCardList
+              - WeaponCardList
+          Grade:
+            type: string
+            ref: grade
+          MaterialItem: #인게임에선 보이지 않는 초월체 강화 주문서(패킷 교환용)
+            type: string
+            ref: item
+          LevelUpItem:
+            type: string
+            ref: item
+          LimitBreakItem:
+            type: string
+            ref: item
+          Comment:
+            type: string
+    SystemMessageInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - NotEnoughCurrency
+              - NoCardMaterial
+              - NoLimitBreakMaterial
+              - CannotRegisterCardMaterial
+              - NoCardMaterial_AutoSet 
+              - NotAcquiredCard
+              - CardMaxLevel
+              - NoneEnchantDataCard
+          Value:
+            type: string
+            ref: system_message
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - EnchantBtnDescription_Possible               # 성장 바로가기
+              - EnchantBtnDescription_Impossible             # 성장 불가
+              - EnchantModeTabName_Single                   # 성장 바로가기
+              - EnchantModeTabName_Multiple                 # 성장 불가
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+  required:
+    - Id
+    - Name
+    - EnchantInfo    

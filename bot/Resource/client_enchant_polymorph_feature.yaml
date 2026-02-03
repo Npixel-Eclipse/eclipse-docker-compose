@@ -1,0 +1,105 @@
+- Id: 1
+  Name: Polymorph
+  LevelUpItemCategory: Item_Misc_Upgrade_LevelUp
+  ExpandItemCategory: Item_Misc_Upgrade_LimitBreak
+  PolymorphEnchantItemCategories:
+    - Item_Misc_Upgrade_LevelUp_Polymorph
+    - Item_Misc_Upgrade_LimitBreak_Polymorph
+  WeaponPolymorphEnchantItemCategories:
+    - Item_Misc_Upgrade_LevelUp_WeaponPolymorph
+    - Item_Misc_Upgrade_LimitBreak_WeaponPolymorph
+  EnchantInfo:
+    - Group: PolymorphCardList
+      Grade: Common
+      MaterialItem: Enchant_CommonPolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G1_T1_01
+      LimitBreakItem: Item_Grown_Transcend_Pass_G1_T1_01
+      Comment: Common 등급 초월체
+    - Group: PolymorphCardList
+      Grade: Uncommon
+      MaterialItem: Enchant_UncommonPolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G2_T1_02
+      LimitBreakItem: Item_Grown_Transcend_Pass_G2_T1_02
+      Comment: Uncommon 등급 초월체
+    - Group: PolymorphCardList
+      Grade: Rare
+      MaterialItem: Enchant_RarePolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G3_T1_03
+      LimitBreakItem: Item_Grown_Transcend_Pass_G3_T1_03
+      Comment: Rare 등급 초월체
+    - Group: PolymorphCardList
+      Grade: Epic
+      MaterialItem: Enchant_EpicPolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G4_T1_04
+      LimitBreakItem: Item_Grown_Transcend_Pass_G4_T1_04
+      Comment: Epic 등급 초월체
+    - Group: PolymorphCardList
+      Grade: Legendary
+      MaterialItem: Enchant_LegendaryPolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G5_T1_05
+      LimitBreakItem: Item_Grown_Transcend_Pass_G5_T1_05
+      Comment: Legendary 등급 초월체
+    - Group: PolymorphCardList
+      Grade: Myth
+      MaterialItem: Enchant_MythPolymorph
+      LevelUpItem: Item_Grown_Transcend_Use_G6_T1_06
+      LimitBreakItem: Item_Grown_Transcend_Pass_G6_T1_06
+      Comment: Myth 등급 초월체
+    - Group: WeaponCardList
+      Grade: Common
+      MaterialItem: Enchant_CommonWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G1_T1_01
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G1_T1_01
+      Comment: Common 등급 무기외형
+    - Group: WeaponCardList
+      Grade: Uncommon
+      MaterialItem: Enchant_UncommonWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G2_T1_02
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G2_T1_02
+      Comment: Uncommon 등급 무기외형
+    - Group: WeaponCardList
+      Grade: Rare
+      MaterialItem: Enchant_RareWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+      Comment: Rare 등급 무기외형
+    - Group: WeaponCardList
+      Grade: Epic
+      MaterialItem: Enchant_EpicWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+      Comment: Epic 등급 무기외형
+    - Group: WeaponCardList
+      Grade: Legendary
+      MaterialItem: Enchant_LegendaryWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+      Comment: Legendary 등급 무기외형
+    - Group: WeaponCardList
+      Grade: Myth
+      MaterialItem: Enchant_MythWeaponPolymorph
+      LevelUpItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      LimitBreakItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+      Comment: Myth 등급 무기외형
+  SystemMessageInfo:
+    - Name: NotEnoughCurrency
+      Value: NoCurrency
+    - Name: NoCardMaterial
+      Value: NoCardMaterial
+    - Name: NoLimitBreakMaterial
+      Value: NoLimitBreakMaterial
+    - Name: CannotRegisterCardMaterial
+      Value: CannotRegisterCardMaterial
+    - Name: NoCardMaterial_AutoSet
+      Value: NoCardMaterial_AutoSet
+    - Name: NotAcquiredCard
+      Value: NotAcquiredCard
+    - Name: CardMaxLevel
+      Value: CardMaxLevel
+    - Name: NoneEnchantDataCard
+      Value: UIWord_SystemMsg_EnchantFail_Grade
+  DescriptionInfos:
+    - Type: EnchantBtnDescription_Possible
+      Description: UIWord_Shortcut_Enchant
+    - Type: EnchantBtnDescription_Impossible
+      Description: UIWord_CanNotEnchant

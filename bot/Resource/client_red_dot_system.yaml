@@ -1,0 +1,181 @@
+- Id: 1
+  Name: Menu
+  Path: 
+    PathName: Menu
+    Children:
+      - Achievement
+      - Polymorph
+      - Merge
+      - Mastery
+      - Trade
+      - Collection
+      - HuntingZone
+      - Mail
+      - SeasonPassMenu
+      - Fortress
+      - Request
+      - Dungeon
+      - Awakening
+      - Record_Room
+      - Record_Room_PvP
+      - Guild
+      - Potential
+- Id: 2
+  Name: Event
+  Rule: "Event.%QuestCategoryID%.(%Title%).%QuestID%"
+- Id: 3
+  Name: Achievement
+  Rule: "Achievement.%AchivementDisplayID%.%QuestCategoryID%.%QuestID%"
+- Id: 4
+  Name: AchievementFavorite
+  Rule: AchievementFavorite
+- Id: 6
+  Name: DeathPenalty
+  Rule: "DeathPenalty.%DeathPenaltyTabTypeIndex%"
+- Id: 7
+  Name: Polymorph
+  Rule: "Polymorph.%PolymorphMainTabIndex%.%PolymorpSubTabIndex%.%CardTID%"
+- Id: 8
+  Name: PartyInvite
+  Rule: PartyInvite
+- Id: 9
+  Name: Merge
+  Rule: "Merge.%MergeMainTabIndex%"
+- Id: 10
+  Name: MasteryPageOpen
+  Rule: "Mastery.%CategoryIndex%.%PageIndex%"
+- Id: 11
+  Name: MasteryCompleteEffectOpen
+  Rule: "Mastery.%CategoryIndex%.CompleteEffect"
+- Id: 12
+  Name: MasteryPointGet
+  Rule: Mastery.PointGet
+- Id: 13
+  Name: QuantityBonus
+  Rule: "Polymorph.%PolymorphMainTabIndex%.2.%CategoryTypeIndex%.%CollectionID%.%RegistrationID"
+- Id: 15
+  Name: CharacterInfo
+  Path:
+    PathName: CharacterInfo
+    Children:
+      - Awareness
+- Id: 16
+  Name: StatRemainPoint
+  Rule: StatRemainPoint
+- Id: 17
+  Name: Trade
+  Rule: Trade.%MainTabListSelectIndex%
+- Id: 18
+  Name: HuntingZone
+  Path: 
+    PathName: HuntingZone
+    Children:
+      - HuntingZone_Specialty_Shop
+      - HuntingZone_Bid_Request
+      - HuntingZone_Bid_Activate
+      - HuntingZone_Owner_Specialty_Shop
+  ContentLimitName: HuntingZone
+- Id: 19
+  Name: Mail
+  Rule: Mail.%MainTabListSelectIndex%
+- Id: 20
+  Name: SeasonPassMenu
+  Path:
+    PathName: SeasonPassMenu
+  ContentLimitName: SeasonPass
+- Id: 21
+  Name: MailList
+  Rule: MailList.%ListIndex%
+- Id: 24
+  Name: GuildApplyMember
+  Rule: Guild.%EXDTSchema_ClientGuildFeature_UITab_SubGroup%.%ApplyMemberUID%
+- Id: 26
+  Name: Dungeon
+  Rule: Dungeon.ChallengeDungeonWeekly.%QuestID%
+- Id: 27
+  Name: Combination
+  Rule: Combination.%CategoryIndex%
+- Id: 28
+  Name: Request
+  Rule: Request.%QuestCategoryID%.%QuestID%"
+- Id: 29
+  Name: CombinationOpen
+  Rule: CombinationOpen
+- Id: 30
+  Name: Awakening
+  Rule: Awakening
+- Id: 31
+  Name: Awareness
+  Rule: Awareness
+- Id: 32
+  Name: GuildDonation
+  Rule: Guild.Summary.GuildDonation.%QuestID%
+- Id: 33
+  Name: Record_Room
+  Rule: Record_Room.%MainTabListSelectIndex%
+- Id: 34
+  Name: HuntingZone_Specialty_Shop
+  Rule: HuntingZone_Specialty_Shop
+- Id: 35
+  Name: HuntingZone_Bid_Request
+  Rule: HuntingZone_Bid_Request
+- Id: 36
+  Name: HuntingZone_Bid_Activate
+  Rule: HuntingZone_Bid_Activate
+- Id: 37
+  Name: HuntingZone_Owner_Specialty_Shop
+  Rule: HuntingZone_Owner_Specialty_Shop
+- Id: 38
+  Name: Guild
+  Rule: Guild
+- Id: 39
+  Name: Collection
+  ContentLimitName: Collection
+  Path: 
+    PathName: Collection
+- Id: 40
+  Name: Fortress_Building_Upgrade_Start
+  Rule: Fortress.%BuildingID%.Upgrade.UpgradeStart
+- Id: 41
+  Name: Fortress_Building_Upgrade_Complete
+  Rule: Fortress.%BuildingID%.Upgrade.UpgradeComplete
+- Id: 42
+  Name: Fortress_Upgrade_Start_Building
+  Rule: Fortress.Upgrade.UpgradeStart.%BuildingID%
+- Id: 43
+  Name: Fortress_Upgrade_Complete_Building
+  Rule: Fortress.Upgrade.UpgradeComplete.%BuildingID%
+- Id: 44
+  Name: Fortress_Building_Upgrade
+  Path:
+    PathName: Fortress.%BuildingID%.Upgrade
+    Children:
+      - Fortress_Building_Upgrade_Start
+      - Fortress_Building_Upgrade_Complete
+- Id: 45
+  Name: Fortress_Upgrade
+  Path:
+    PathName: Fortress.Upgrade
+    Children:
+      - Fortress_Upgrade_Start_Building
+      - Fortress_Upgrade_Complete_Building
+
+- Id: 46
+  Name: Fortress
+  Path:
+    PathName: Fortress
+    Children:
+      - Fortress_Building_Upgrade
+      - Fortress_Upgrade
+- Id: 47
+  Name: Record_Room_PvP
+  Rule: Record_Room_PvP.%MainTabListSelectIndex%
+- Id: 48
+  Name: Potential
+  Rule: Potential
+- Id: 49
+  Name: Solidarity
+  Path:
+    PathName: Solidarity
+    Children:
+      - Solidarity_Building

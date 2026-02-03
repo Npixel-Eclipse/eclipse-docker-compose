@@ -1,0 +1,72 @@
+- Id: 3
+  Name: LevelUp
+  Trigger: "Level > B_Level"
+  Skills:
+    - LevelUp
+- Id: 4
+  Name: MaxLevelUp
+  Trigger: "MaxLevel > B_MaxLevel"
+  Skills:
+    - MaxLevelUp
+- Id: 1
+  Name: PcDead
+  Comment: Pc 사망 시
+  Trigger: "T_IsPc && TargetKilled"
+  Skills:
+    - PcDie
+- Id: 96
+  Name: PcDeadByPc
+  Comment: Pc가 Pc에 의해 사망 시
+  Trigger: "IsPc && T_IsPc && TargetKilled"
+  Skills:
+    - PcKill
+- Id: 243
+  Name: PcDeadByPcWithPvpRule
+  Comment: Pc가 Pc에 의해 사망 시 (PVP룰)
+  Trigger: "IsPc && T_PkPoint >= 0 && !T_Bora && T_IsPc && TargetKilled && !Battleground"
+  Skills:
+    - LosePkPoint
+- Id: 1095
+  Name: NpcDead
+  Comment: Npc 사망 시
+  Trigger: "T_IsMonster && TargetKilled"
+  Skills:
+    - NpcDie
+- Id: 2
+  Name: NpcDeadByPc
+  Comment: Npc가 Pc에 의해 사망 시
+  Trigger: "IsPc && T_IsMonster && TargetKilled"
+  Skills:
+    - AutoDistributeItem
+    - MonsterKill
+    - GetExperience
+- Id: 70
+  Name: NpcDeadByPcWithLevel
+  Comment: Npc가 Pc에 의해 사망 시 (레벨 차이)
+  Trigger: "IsPc && T_IsMonster && TargetKilled && ( Level - T_NPCLevel < 10 ) && !Battleground"
+  Skills:
+    - GainPkPoint
+- Id: 950
+  Name: BattlegroundBossDead
+  Comment: 전장 보스 사망 시
+  Trigger: "IsInBattleground && T_IsMonster && T_IsBoss && TargetKilled"
+  Skills:
+    - Battleground_SetBossKillTeam
+- Id: 666
+  Name: TriggerOnEnterSecuredZone
+  Comment: can pk 속성 변경 시
+  Trigger: "CanPk == 0 && B_CanPk == 1"
+  Skills:
+    - EnterSecuredZone
+- Id: 1096
+  Name: CharleGroggy_1
+  Comment: 샤를레 뱉기
+  Trigger: "T_IsCharle && T_CharleGroggyBuff > 0 && T_IsBoss"
+  Skills:
+    - Boss_Charle_SkillAttack_04_04
+- Id: 10961
+  Name: CharleGroggy_2
+  Comment: 샤를레 그로기
+  Trigger: "T_IsCharle && T_CharleGroggySecondBuff > 0 && T_IsBoss"
+  Skills:
+    - Boss_Charle_SkillAttack_04_05

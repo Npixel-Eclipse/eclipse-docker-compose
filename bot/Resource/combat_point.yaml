@@ -1,0 +1,1032 @@
+- Id: 1
+  PropertyName: HitChance
+  Numerator: 4.4
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 12
+  PropertyName: MeleeHit
+  Numerator: 4.4
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 86
+  PropertyName: RangeHit
+  Numerator: 4.4
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 140
+  PropertyName: MagicHit
+  Numerator: 4.4
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 327
+  PropertyName: PvEHit
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 29
+  PropertyName: PvPHit
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 53
+  PropertyName: NormalAttackHit
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 520
+  PropertyName: SkillHit
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 93
+  PropertyName: DodgeChance
+  Numerator: 4.4
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 223
+  PropertyName: MeleeDodge
+  Numerator: 1.4675
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 108
+  PropertyName: RangeDodge
+  Numerator: 1.4675
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 633
+  PropertyName: MagicDodge
+  Numerator: 1.4675
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 402
+  PropertyName: PvEDodge
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 491
+  PropertyName: PvPDodge
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 709
+  PropertyName: NormalAttackDodge
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1116
+  PropertyName: SkillDodge
+  Numerator: 2.2
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1969
+  PropertyName: CriticalProbability
+  Numerator: 0.9
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2583
+  PropertyName: MeleeCriticalProbability
+  Numerator: 0.9
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 2113
+  PropertyName: RangeCriticalProbability
+  Numerator: 0.9
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 2647
+  PropertyName: MagicCriticalProbability
+  Numerator: 0.9
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 993
+  PropertyName: PvECriticalProbability
+  Numerator: 0.45
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2599
+  PropertyName: PvPCriticalProbability
+  Numerator: 0.45
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1215
+  PropertyName: CriticalResistance
+  Numerator: 0.9
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1536
+  PropertyName: MeleeCriticalResistance
+  Numerator: 0.3
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 849
+  PropertyName: RangeCriticalResistance
+  Numerator: 0.3
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2319
+  PropertyName: MagicCriticalResistance
+  Numerator: 0.3
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2569
+  PropertyName: PvPCriticalResistance
+  Numerator: 0.45
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1429
+  PropertyName: CriticalDamage
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 169
+  PropertyName: MeleeCriticalDamage
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 2979
+  PropertyName: RangeCriticalDamage
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 937
+  PropertyName: MagicCriticalDamage
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 2656
+  PropertyName: PvECriticalDamage
+  Numerator: 0.00125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2088
+  PropertyName: PvPCriticalDamage
+  Numerator: 0.00125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 51
+  PropertyName: CriticalDamageReduction
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4131
+  PropertyName: MeleeCriticalDamageReduction
+  Numerator: 0.00075
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3034
+  PropertyName: RangeCriticalDamageReduction
+  Numerator: 0.00075
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1512
+  PropertyName: MagicCriticalDamageReduction
+  Numerator: 0.00075
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3726
+  PropertyName: PvPCriticalDamageReduction
+  Numerator: 0.00125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3217
+  PropertyName: AddedDamage
+  Numerator: 6.25
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3107
+  PropertyName: MeleeDamage
+  Numerator: 6.25
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 4312
+  PropertyName: RangeDamage
+  Numerator: 6.25
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 2300
+  PropertyName: MagicDamage
+  Numerator: 6.25
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 4200
+  PropertyName: PvEAddedDamage
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2932
+  PropertyName: PvPAddedDamage
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3838
+  PropertyName: NormalAttackDamage
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5387
+  PropertyName: SkillAttackDamage
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4522
+  PropertyName: ArmorClass
+  Numerator: 6.25
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1228
+  PropertyName: MeleeArmorClass
+  Numerator: 2.083333
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 393
+  PropertyName: RangeArmorClass
+  Numerator: 2.083333
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5907
+  PropertyName: MagicArmorClass
+  Numerator: 2.083333
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 33
+  PropertyName: PvEArmorClass
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4589
+  PropertyName: PvPArmorClass
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1258
+  PropertyName: NormalAttackArmorClass
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2780
+  PropertyName: SkillArmorClass
+  Numerator: 3.125
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1047
+  PropertyName: DamageScale
+  Numerator: 0.0325
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4989
+  PropertyName: MeleeDamageScale
+  Numerator: 0.0325
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 1874
+  PropertyName: RangeDamageScale
+  Numerator: 0.0325
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 1396
+  PropertyName: MagicDamageScale
+  Numerator: 0.0325
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 20
+  PropertyName: PvEDamageScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3057
+  PropertyName: PvPDamageScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6135
+  PropertyName: NormalAttackDamageScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1000
+  PropertyName: SkillDamageScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2777
+  PropertyName: DamageReduceScale
+  Numerator: 0.0325
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6940
+  PropertyName: MeleeDamageReduceScale
+  Numerator: 0.01
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 1771
+  PropertyName: RangeDamageReduceScale
+  Numerator: 0.01
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 662
+  PropertyName: MagicDamageReduceScale
+  Numerator: 0.01
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 485
+  PropertyName: PvEDamageReduceScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2781
+  PropertyName: PvPDamageReduceScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6658
+  PropertyName: NormalAttackDamageReduceScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7608
+  PropertyName: SkillDamageReduceScale
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7310
+  PropertyName: DamageReductionIgnore
+  Numerator: 4.2294
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6032
+  PropertyName: MeleeDamageReductionIgnore
+  Numerator: 4.2294
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 6499
+  PropertyName: RangeDamageReductionIgnore
+  Numerator: 4.2294
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 8101
+  PropertyName: MagicDamageReductionIgnore
+  Numerator: 4.2294
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 5541
+  PropertyName: PvEDamageReductionIgnore
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 371
+  PropertyName: PvPDamageReductionIgnore
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4467
+  PropertyName: NormalAttackDamageReductionIgnore
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4703
+  PropertyName: SkillDamageReductionIgnore
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7207
+  PropertyName: DamageReduction
+  Numerator: 4.2294
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6011
+  PropertyName: MeleeDamageReduction
+  Numerator: 1.4098
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5215
+  PropertyName: RangeDamageReduction
+  Numerator: 1.4098
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5864
+  PropertyName: MagicDamageReduction
+  Numerator: 1.4098
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4508
+  PropertyName: PvEDamageReduction
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8190
+  PropertyName: PvPDamageReduction
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8419
+  PropertyName: NormalAttackDamageReduction
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 543
+  PropertyName: SkillDamageReduction
+  Numerator: 2.1147
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2625
+  PropertyName: SpecialHitAll
+  Numerator: 0.0065
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7322
+  PropertyName: SpecialResistanceAll
+  Numerator: 0.0065
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3281
+  PropertyName: SpecialHitStun
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9608
+  PropertyName: SpecialResistanceStun
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7724
+  PropertyName: SpecialHitHold
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9010
+  PropertyName: SpecialResistanceHold
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1034
+  PropertyName: SpecialHitFear
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8355
+  PropertyName: SpecialResistanceFear
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4145
+  PropertyName: SpecialHitSlow
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10060
+  PropertyName: SpecialResistanceSlow
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8009
+  PropertyName: SpecialHitMute
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 203
+  PropertyName: SpecialResistanceMute
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9313
+  PropertyName: SpecialHitTaunt
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2143
+  PropertyName: SpecialResistanceTaunt
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10982
+  PropertyName: SpecialHitSleep
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1454
+  PropertyName: SpecialResistanceSleep
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5635
+  PropertyName: SpecialHitFrost
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4236
+  PropertyName: SpecialResistanceFrost
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 5883
+  PropertyName: SpecialHitDarkness
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9880
+  PropertyName: SpecialResistanceDarkness
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8343
+  PropertyName: SpecialHitCorruption
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10787
+  PropertyName: SpecialResistanceCorruption
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9968
+  PropertyName: TargetStunDamageScale
+  Numerator: 0
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 11424
+  PropertyName: MaxHp
+  Numerator: 0.116667
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 2589
+  PropertyName: HpRegen
+  Numerator: 7
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7006
+  PropertyName: HealthPotionIncrease
+  Numerator: 33.25
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 246
+  PropertyName: HealthPotionScale
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3358
+  PropertyName: HealthPotionAmount
+  Numerator: 0.75
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10361
+  PropertyName: MaxMp
+  Numerator: 0.42
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 9870
+  PropertyName: MpRegen
+  Numerator: 14
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 6348
+  PropertyName: MpCostReducePercentBase
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 7797
+  PropertyName: CoolTimeReducePercentBase
+  Numerator: 0.01625
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 8294
+  PropertyName: AttackSpeedBonus
+  Numerator: 0.002222
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4350
+  PropertyName: MoveSpeedBonus
+  Numerator: 0.002222
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 11594
+  PropertyName: CastSpeedBonus
+  Numerator: 0.001111
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 573
+  PropertyName: PerfectDamageProbability
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4992
+  PropertyName: PerfectDamageProbResistance
+  Numerator: 0.0025
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 1483
+  PropertyName: ExperienceBonus
+  Numerator: 0
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10398
+  PropertyName: GoldBonus
+  Numerator: 0
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4043
+  PropertyName: Penetration
+  Numerator: 2.55
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 4656
+  PropertyName: MeleePenetration
+  Numerator: 2.55
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Assassin
+- Id: 4861
+  PropertyName: RangePenetration
+  Numerator: 2.55
+  LimitTargetClass:
+    - Class: Ranger
+- Id: 8482
+  PropertyName: MagicPenetration
+  Numerator: 2.55
+  LimitTargetClass:
+    - Class: Sorcerer
+- Id: 9944
+  PropertyName: PvEPenetration
+  Numerator: 1.275
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 761
+  PropertyName: PvPPenetration
+  Numerator: 1.275
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 3997
+  PropertyName: PenetrationResistance
+  Numerator: 2.55
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 10786
+  PropertyName: MeleePenetrationResistance
+  Numerator: 0.85
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 362
+  PropertyName: RangePenetrationResistance
+  Numerator: 0.85
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 11704
+  PropertyName: MagicPenetrationResistance
+  Numerator: 0.85
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 11374
+  PropertyName: PvEPenetrationResistance
+  Numerator: 1.275
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin
+- Id: 11162
+  PropertyName: PvPPenetrationResistance
+  Numerator: 1.275
+  LimitTargetClass:
+    - Class: Fighter
+    - Class: Ranger
+    - Class: Sorcerer
+    - Class: Assassin

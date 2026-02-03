@@ -1,0 +1,84 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group: #from client_polymorph_feature.schema.yaml Group in UITab
+            type: string
+            enum:
+              - PolymorphCardList
+              - WeaponCardList
+          IsAllCollectionTypes:
+            type: boolean
+            default: false
+          CollectionType: #from collection_reward.schema.yaml CollectionType
+            type: string
+            enum:
+              - Polymorph_Card
+              - Polymorph_Weapon
+              - Polymorph_CardLevel
+              - Polymorph_WeaponLevel
+          Default:
+            type: boolean
+            default: false           
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+    CollectionInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          IsAllCollectionTypes:
+            type: boolean
+            default: false
+          CollectionType: #from collection_reward.schema.yaml CollectionType
+            type: string
+            enum:
+              - Polymorph_Card
+              - Polymorph_Weapon
+              - Polymorph_CardLevel
+              - Polymorph_WeaponLevel
+          TitleDescription:
+            type: string
+            ref: description
+          AlertTitleDescription:
+            type: string
+            ref: description
+          PropertyTitleDescription:
+            type: string
+            ref: description
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Comment:
+            type: string
+    GradeInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Grade:
+            type: string
+            ref: grade      
+          ProgressColor:
+            type: string
+  required:
+    - Id
+    - Name
+    - UITab

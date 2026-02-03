@@ -1,0 +1,87 @@
+- Id: 1
+  Name: BagFeature
+  UICategoryTabs:
+    - Type: All
+      Comment: 전체
+      Icon: /Game/UI/Enchant_SP/TabIconAll_Sprite.TabIconAll_Sprite
+      ItemCategories:
+        - Item
+    - Type: Equip
+      Comment: 장비
+      Icon: /Game/UI/Inventory_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+      ItemCategories:
+        - Item_Equip
+    - Type: ConsumeForBuff
+      Comment: 버프형 소비
+      Icon: /Game/UI/Inventory_SP/TabIconPotion_Sprite.TabIconPotion_Sprite
+      ItemCategories:
+        - Item_Misc_Healing
+        - Item_Misc_Empower
+        - Item_Misc_Food
+        - Item_Misc_TeleportScroll
+    - Type: Craft
+      Comment: 제작
+      Icon: /Game/UI/Inventory_SP/TabIconMaterialCraft_Sprite.TabIconMaterialCraft_Sprite
+      ItemCategories:
+        - Item_Craft
+        - Item_Misc_Collection
+    - Type: Etc
+      Comment: 기타
+      Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+      ItemCategories:
+        - Item_Currency
+        - Skill_Book
+        - Item_Misc_Upgrade_Skill_Enchant
+        - Item_Misc_Upgrade
+        - Item_Misc_Upgrade_Engrave_SlotOpen
+        - Item_Misc_Mastery
+        - Item_Misc_Upgrade_Awakening
+        - Item_Misc_Upgrade_Awareness
+        - Item_Misc_Combined
+        - Item_Misc_Upgrade_Merge
+        - Item_Misc_Recharge
+        - Item_Misc_Admission
+        - Item_Misc_SeongsoBuild
+        - Item_Misc_Timeacceleration
+        - Item_Misc_Consume
+        - Item_Misc_Instialize
+        - Item_Misc_HuntingZoneJewl
+        - Item_Misc_Cardpack
+        - Item_Misc_LuckyBag
+        - Item_Misc_SkillUse
+        - Mastery_Transfer
+        - Item_Misc_Exchange
+        - Item_Misc_Guild
+  EmptySlotIcon: /Game/UI/Inventory_SP/ItemSlotEmpty_Sprite.ItemSlotEmpty_Sprite
+  DescriptionInfos:
+    - Type: CancelSelected
+      Description: UIWordCancel
+    - Type: DeleteConfirmSelected
+      Description: UIWindowDelete
+    - Type: DeleteAlertPopupTitle
+      Description: UIWord_Delete
+    - Type: DeleteAlertPopupMain
+      Description: UIWord_Item_Delete_Desc02
+    - Type: DeleteAlertPopupDesc
+      Description: UIWord_Disassemble_DeletePopup
+    - Type: DisassembleConfirmSelected
+      Description: UIWord_Disassemble
+    - Type: DisassembleAlertPopupTitle
+      Description: UIWord_Disassemble
+    - Type: DisassembleAlertPopupMain
+      Description: UIWord_Item_Disassemble_Desc02
+    - Type: DisassembleAlertPopupDesc
+      Description: UIWord_Disassemble_DisassemblePopup
+  Constants:
+    - Name: MinGradeCarefully
+      Value: 3
+  InventoryItemFilter: InventoryFilter
+  EquipableItemCategories:
+    - ItemCategory: Item_Equip_WeaponBase
+      SubItemCategories:
+        - Item_Equip_Weapon_Fighter_Sword
+        - Item_Equip_Weapon_Fighter_Lsword
+        - Item_Equip_Weapon_Ranger_Bow
+        - Item_Equip_Weapon_Ranger_Cbow
+        - Item_Equip_Weapon_Sorcerer_Staff
+        - Item_Equip_Weapon_Sorcerer_Orb

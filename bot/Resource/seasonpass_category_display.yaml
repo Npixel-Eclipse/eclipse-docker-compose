@@ -1,0 +1,39 @@
+- Id: 1
+  Name: SeasonPass_Seongso
+  Description: SeasonPass_SanctumAssist_Title
+  SubTitle: SeasonPass_SanctumAssist_Title
+  SeasonPassDescription: UIWord_SeasonPass_premiumDesc
+  SeasonPassCategoryType: SeasonPass
+  SeasonPassLevelQuestCategory: SeasonPass_Seongso_Level
+  SeasonPassDiamondQuestCategory: SeasonPass_Seongso_Diamond
+  SeasonPassMissionQuestCategory: SeasonPass_Seongso_Mission
+  SeasonPassCommonQuestCategory: SeasonPass_Seongso_Common
+  SeasonPassPremiumQuestCategory: SeasonPass_Seongso_Premium
+  BackgroundIcon: /Game/UIIcon/SeasonPass/Seasonpass001.Seasonpass001
+  Comment: 시즌 패스 성소 지원
+- Id: 54
+  Name: SeasonPass_Growth
+  Description: SeasonPass_GrowthAssist_Title
+  SubTitle: SeasonPass_GrowthAssist_Title
+  SeasonPassDescription: UIWord_SeasonPass_premiumDesc
+  SeasonPassCategoryType: SeasonPass
+  SeasonPassLevelQuestCategory: SeasonPass_Growth_Level
+  SeasonPassDiamondQuestCategory: SeasonPass_Growth_Diamond
+  SeasonPassMissionQuestCategory: SeasonPass_Growth_Mission
+  SeasonPassCommonQuestCategory: SeasonPass_Growth_Common
+  SeasonPassPremiumQuestCategory: SeasonPass_Growth_Premium
+  BackgroundIcon: /Game/UIIcon/SeasonPass/Seasonpass001.Seasonpass001
+  Comment: 시즌 패스 성장 지원
+- Id: 65
+  Name: SeasonPass_Eclipse
+  Description: UIWord_SeasonPass_SubTitle_Eclipse
+  SubTitle: UIWord_SeasonPass_SubTitle_Eclipse
+  SeasonPassDescription: UIWord_SeasonPass_premiumDesc
+  SeasonPassCategoryType: SeasonPass
+  SeasonPassLevelQuestCategory: SeasonPass_Eclipse_Level
+  SeasonPassDiamondQuestCategory: SeasonPass_Eclipse_Diamond
+  SeasonPassMissionQuestCategory: SeasonPass_Eclipse_Mission
+  SeasonPassCommonQuestCategory: SeasonPass_Eclipse_Common
+  SeasonPassPremiumQuestCategory: SeasonPass_Eclipse_Premium
+  BackgroundIcon: /Game/UIIcon/SeasonPass/Seasonpass001.Seasonpass001
+  Comment: 이클립스 패스

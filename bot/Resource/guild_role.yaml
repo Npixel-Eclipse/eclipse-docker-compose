@@ -1,0 +1,74 @@
+- Id: 1
+  Name: MASTER
+  Order: 1
+  LimitMember: 1
+  Privileges:
+    - Privilege: UpdateInfo
+      Default: true
+    - Privilege: ApproveGuildJoin
+      Default: true
+    - Privilege: UpdateRole
+      Default: true
+    - Privilege: BanishGuild
+      Default: true
+    - Privilege: AcquireGuildTrait
+      Default: true
+    - Privilege: ManageGuildRelation
+      Default: true
+    - Privilege: StorageStore
+      Default: true
+    - Privilege: SellAndWithdraw
+      Default: true
+    - Privilege: Distribute
+      Default: true
+    - Privilege: AuctionRegister
+      Default: true
+- Id: 2
+  Name: SUB_MASTER
+  Order: 2
+  LimitMember: 1
+  Privileges:
+    - Privilege: UpdateInfo
+      Default: true
+    - Privilege: ApproveGuildJoin
+      Default: true
+    - Privilege: UpdateRole
+      Default: true
+    - Privilege: BanishGuild
+      Default: true
+    - Privilege: AcquireGuildTrait
+      Default: true
+    - Privilege: ManageGuildRelation
+      Default: true
+    - Privilege: SellAndWithdraw
+      Default: false
+    - Privilege: StorageStore
+      Default: true
+    - Privilege: Distribute
+      Default: false
+    - Privilege: AuctionRegister
+      Default: false
+- Id: 3
+  Name: ROYAL
+  Order: 3
+  LimitMember: 5
+  Privileges:
+    - Privilege: UpdateInfo
+      Default: false
+    - Privilege: ApproveGuildJoin
+      Default: false
+    - Privilege: BanishGuild
+      Default: true
+    - Privilege: AcquireGuildTrait
+      Default: false
+    - Privilege: ManageGuildRelation
+      Default: false
+    - Privilege: StorageStore
+      Default: true
+- Id: 4
+  Name: NORMAL
+  Order: 4
+  LimitMember: 0
+  Privileges:
+    - Privilege: StorageStore
+      Default: false

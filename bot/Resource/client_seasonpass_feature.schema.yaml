@@ -1,0 +1,77 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    SeasonPassUITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum: #RedDot과 탭순서 연결되어있음.
+              - SeasonPass
+              - DailyPass
+          DefaultTab:
+            type: boolean
+            default: false
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+        required:
+          - Group
+    SeasonPassMissionUITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum: 
+              - DailyMission
+              - WeeklyMission
+          DefaultTab:
+            type: boolean
+            default: false
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+        required:
+          - Group
+    SeasonPassLevelQuestCategoryName:
+      type: string
+      ref: quest_category
+    QuestHoldItemGoalTypeName:
+      type: string
+      ref: quest_goal_type
+    QuestConsumeItemGoalTypeName:
+      type: string
+      ref: quest_goal_type
+    QuestAttendElapsedDaysGoalTypeName:
+      type: string
+      ref: quest_goal_type
+    DailyPassSpecialRewardQuests:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Quest:
+            type: string
+            ref: quest
+  required:
+    - Id
+    - Name

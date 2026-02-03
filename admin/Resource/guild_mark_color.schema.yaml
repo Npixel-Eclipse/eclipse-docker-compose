@@ -1,0 +1,32 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Type
+    - Rgb
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Type:
+      type: string
+      enum:
+        - symbol
+        - frame
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    Rgb:
+      type:
+        - string
+        - integer
+      pattern: ^[0-9A-F]{8}$
+    DefaultSelect:
+      type: boolean
+      default: false
+    Comment:
+      type: string

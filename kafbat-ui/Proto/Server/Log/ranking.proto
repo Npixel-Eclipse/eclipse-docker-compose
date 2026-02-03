@@ -1,0 +1,37 @@
+syntax = "proto3";
+package log;
+
+import "Common/ranking_common.proto";
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "RankingLogServiceProto";
+
+message ChangeRanking {
+  reserved 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13;
+
+  string ranking_type = 12;
+  int64 ranking_before = 14;
+  int64 ranking = 15;
+  int64 score_before = 16;
+  int64 score = 17;
+  int64 guild_id = 11;
+}
+
+message ChangeRankingBuffs {
+  string ranking_type = 1;
+  int64 record_ranking_id_before = 2;
+  int64 record_ranking_id = 3;
+}
+
+message ChangeGuildRanking {
+  int64 ranking_before = 1;
+  int64 ranking = 2;
+  int64 point_before = 3;
+  int64 point = 4;
+  int64 guild_id = 5;
+}
+
+message ChangeRankingTitle {
+  int64 record_ranking_id_before = 1;
+  int64 record_ranking_id = 2;
+}

@@ -1,0 +1,151 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    SequenceInfo: #연출 정보 리스트
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum: 
+              - CharacterCreationStart #캐릭터 생성
+              # - CharacterCreationLoop              
+              - CharacterSelectionStart
+              - CharacterSelectionLoop
+              # - CharacterSelectionCancel
+              - CharacterSelectionConfirm
+              - CharacterSelectionConfirmEnd
+              - AdvanceIntro
+              - Opening              
+              - CardMergeSelect #합성
+              - CardMergeListView
+              - CardMergeTouch
+              - CardMergeResult
+              - CardMergeMax
+              - PolymorphCardGachaIntro #뽑기
+              - PolymorphCardGachaListView
+              - PolymorphCardGachaTouch
+              - PolymorphCardGachaResult
+              - WeaponCardGachaIntro
+              - WeaponCardGachaListView
+              - WeaponCardGachaTouch
+              - WeaponCardGachaResult
+              - PolymorphCardResultItem
+              - WeaponCardResultItem
+              - Login
+              - LoginToCharacterCreation
+              - SkinIntro
+              - SkinLoop
+          LevelSequence:
+            type: string
+            ref: client_levelsequence
+          Comment:
+            type: string
+          ConditionInputGrade:
+            type: string
+            ref: grade
+          ConditionInputGradeType:
+            type: string
+            enum:
+              - Equal # Equals
+              - Greater # Greater than
+              - GreaterEqual # Greater than or Equal to
+              - LessEqual # Less than or Equal to 
+              - Less # Less than
+            default: Equal
+          ConditionOutputGrade:
+            type: string
+            ref: grade
+          ConditionOutputGradeType:
+            type: string
+            enum:
+              - Equal # Equals
+              - Greater # Greater than
+              - GreaterEqual # Greater than or Equal to
+              - LessEqual # Less than or Equal to 
+              - Less # Less than
+            default: Equal
+          ConditionOutputAppearanceType:
+            type: string
+            enum:
+              - None
+              - Male
+              - Female
+            default: None
+          AnimSubState:
+            type: string
+    SequenceDataAsset:
+      type: string
+    TouchInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - None
+              - CardMergeTouch
+              - PolymorphCardGachaTouch
+              - WeaponCardGachaTouch
+          TouchType:
+            type: string
+            enum:
+              - Drag #드래그
+              - Hold #터치 타임
+          TouchCenterX: #터치 센터 X 위치(화면 전체 0-1기준)
+            type: number
+            default: 0.5
+          TouchCenterY: #터치 센터 Y 위치(화면 전체 0-1기준)
+            type: number
+            default: 0.5
+          TouchRadiusY: #터치 Y 기준 반경 (화면 전체 0-1기준)
+            type: number
+            default: 0.3
+          DragRange: #드래그 범위 (화면 전체 0-1기준)
+            type: number
+            default: 0.35
+          DragLeftToRight: #드래그 방향 왼쪽에서 오른쪽 유효 여부
+            type: boolean
+            default: true
+          DragRightToLeft: #드래그 방향 오른쪽에서 왼쪽 유효 여부
+            type: boolean
+            default: false
+          DragBottomToTop: #드래그 방향 아래에서 위 유효 여부
+            type: boolean
+            default: false
+          DragTopToBottom: #드래그 방향 위에서 아래 유효 여부
+            type: boolean
+            default: false
+          HoldTimeInSeconds: # 터치 타임
+            type: number
+            default: 1
+          ShowDebug: # 터치 디버그 정보 출력 여부. 
+            type: boolean
+            default: false
+    PolymorphInfo:
+      type: object
+      additionalProperties: false
+      properties:
+        ResultActorTag:  
+          type: string
+    LegendaryGrade:
+      type: string
+      ref: grade
+    EpicGrade:
+      type: string
+      ref: grade
+  required:
+    - Id
+    - Name

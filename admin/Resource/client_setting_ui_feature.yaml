@@ -1,0 +1,137 @@
+- Id: 1
+  Name: SettingUI
+  HideCanNotUseOption: false
+  TargetInfoList:
+    - Type: AttackTarget
+      Description: UIWord_Setting_Title_PriorityInstantlyAttack
+      TargetInfo:
+        - Type: ScanOnAttackTarget
+          DefaultPriority: 1
+          Description: UIWord_Setting_Priority_Content8
+        - Type: AttackingMePcOnAttackTarget
+          DefaultPriority: 2
+          Description: UIWord_Setting_Priority_Content1
+        - Type: HostilePcOnAttackTarget
+          DefaultPriority: 3
+          Description: UIWord_Setting_Priority_Content3
+        - Type: AroundPcAttackTarget
+          DefaultPriority: 4
+          Description: UIWord_Setting_Priority_Content4
+        - Type: AttackingMeMonsterOnAttackTarget
+          DefaultPriority: 5
+          Description: UIWord_Setting_Priority_Content2
+        - Type: QuestMonsterOnAttackTarget
+          DefaultPriority: 6
+          Description: UIWord_Setting_Priority_Content5
+        - Type: AggressiveMonsterOnAttackTarget
+          DefaultPriority: 7
+          Description: UIWord_Setting_Priority_Content6
+        - Type: NormalMonserOnAttackTarget
+          DefaultPriority: 8
+          Description: UIWord_Setting_Priority_Content7
+    - Type: AutoBattle
+      Description: QuestCategory_Day
+      TargetInfo:       
+        - Type: AttackingMeMonsterOnAutoBattle
+          DefaultPriority: 1
+          Description: UIWord_Setting_Priority_Content2
+        - Type: QuestMonsterOnAutoBattle
+          DefaultPriority: 2
+          Description: UIWord_Setting_Priority_Content5
+        - Type: AggressiveMonsterOnAutoBattle
+          DefaultPriority: 3
+          Description: UIWord_Setting_Priority_Content6
+        - Type: NormalMonsterOnAutoBattle
+          DefaultPriority: 4
+          Description: UIWord_Setting_Priority_Content7
+          DoNotModify: true
+    - Type: SearchTarget
+      Description: QuestCategory_Day
+      TargetInfo:
+        - Type: ScanOnSearchTarget
+          DefaultPriority: 1
+          Description: UIWord_Setting_Priority_Content8
+        - Type: AttackingMePcOnSearchTarget
+          DefaultPriority: 2
+          Description: UIWord_Setting_Priority_Content1
+        - Type: HostilePcOnSearchTarget
+          DefaultPriority: 3
+          Description: UIWord_Setting_Priority_Content3
+        - Type: AroundPcOnSearchTarget
+          DefaultPriority: 4
+          Description: UIWord_Setting_Priority_Content4
+        - Type: AttackingMeMonsterOnSearchTarget
+          DefaultPriority: 5
+          Description: UIWord_Setting_Priority_Content2
+        - Type: QuestMonsterOnSearchTarget
+          DefaultPriority: 6
+          Description: UIWord_Setting_Priority_Content5
+        - Type: AggressiveMonsterOnSearchTarget
+          DefaultPriority: 7
+          Description: UIWord_Setting_Priority_Content6
+        - Type: NormalMonsterOnSearchTarget
+          DefaultPriority: 8
+          Description: UIWord_Setting_Priority_Content7
+  UITab:
+    - Type: Base
+      TabIndex: 0
+      Enable : true
+      Description: UIWord_SortListItem0
+      Comment: 기본
+      DefaultTab: true
+      UISubTab:
+        - Type: Convenience
+          TabIndex: 0
+          Description: UIWordConvenience
+          Comment: 편의
+          DefaultTab: true
+        - Type: Notification
+          TabIndex: 1
+          Description: UIWord_SystemMsg_Notification
+          Comment: 알림
+    - Type: Battle
+      TabIndex: 1
+      Enable : true
+      Description: UIWordBattle
+      Comment: 전투
+      UISubTab:
+        - Type: Battle
+          TabIndex: 0
+          Description: UIWordBattle
+          Comment: 전투
+          DefaultTab: true
+        - Type: Acquisition
+          TabIndex: 1
+          Description: UIWordAcquisition
+          Comment: 획득
+        - Type: TargetPriority
+          TabIndex: 2
+          Description: UIWordTargetPriority
+          Comment: 대상 우선순위
+        - Type: Target
+          TabIndex: 3
+          Description: UIWord_Target
+          Comment: 대상
+    - Type: Environment
+      TabIndex: 2
+      Enable : true
+      Description: UIWordEnvironment
+      Comment: 환경
+      ShowAtLoginStage: true
+      UISubTab:
+        - Type: Environment
+          TabIndex: 0
+          Description: UIWordEnvironment
+          Comment: 전투
+          DefaultTab: true
+    - Type: Account
+      TabIndex: 3
+      Enable : true
+      Description: UIWordAccount
+      Comment: 계정
+      UISubTab:
+        - Type: Account
+          TabIndex: 0
+          Description: UIWordAccount
+          Comment: 전투
+          DefaultTab: true

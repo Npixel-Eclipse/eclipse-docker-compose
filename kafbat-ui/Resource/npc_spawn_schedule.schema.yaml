@@ -1,0 +1,51 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ScheduleTypeName
+    - NpcName
+    - NpcSpawnName
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    ScheduleTypeName:
+      type: string
+      enum:
+        - WorldBoss
+        - EventBoss
+        - RaidBoss
+    ScheduleTypeDescription:
+      type: string
+      ref: description
+    NpcName:
+      type: string
+      ref: npc
+    NpcSpawnName:
+      type: string
+      ref: npc_spawn
+    SortOrder:
+      type: integer
+      default: 0
+    DisplayImage:
+      type: string
+    WorldMapMoveIcon:
+      type: string
+    WorldmapName:
+      type: string
+      ref: worldmap_area
+    WorldMapDisplayTerritory:
+      type: string
+      ref: territory
+    DungeonID:
+      type: string
+      ref: dungeon

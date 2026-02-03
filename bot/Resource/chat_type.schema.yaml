@@ -1,0 +1,44 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - System
+        - World
+        - Party
+        - Whisper
+        - Guild
+        - Local
+    Comment:
+      type: string      
+    Description:
+      type: string
+      ref: description      
+    DelegateTopic:
+      type: string
+    UserNicknameTextStyle: #C 유저이름 텍스트 스타일
+      type: string
+      ref: richtext_display
+    MessageTextStyle: #C 메시지 텍스트 스타일
+      type: string
+      ref: richtext_display
+    ShowUserNickname: #C 유저이름 표시 여부
+      type: boolean
+      default: true
+    ContentLimit:
+      type: string
+      ref: content_limit
+    Shortcut: #C 단축어
+      type: array
+      items:
+        type: string
+  required:
+    - Id
+    - Name

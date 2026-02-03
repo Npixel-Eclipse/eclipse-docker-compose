@@ -1,0 +1,323 @@
+- Name: OTHER
+  Description: 알 수 없는 이유
+- Name: CONSUME
+  Value: 1
+  Description: 아이템 소모
+- Name: PICK_UP
+  Value: 2
+  Description: 아이템 루팅
+- Name: QUEST
+  Value: 3
+  Description: 퀘스트
+- Name: RECIPE_LUCKY_BAG
+  Value: 4
+  Description: 럭키백
+- Name: RECIPE_CRAFT
+  Value: 5
+  Description: 제작
+- Name: RECIPE_MERGE
+  Value: 6
+  Description: 합성
+- Name: RECIPE_DISASSEMBLE
+  Value: 7
+  Description: 분해
+- Name: MERCHANT_BUY
+  Value: 8
+  Description: NPC 상인 구매
+- Name: RECIPE_CARD_PACK
+  Value: 9
+  Description: 카드팩
+- Name: EVENT
+  Value: 10
+  Description: 이벤트 퀘스트
+- Name: ACHIEVEMENT
+  Value: 11
+  Description: 업적
+- Name: MERCHANT_SELL
+  Value: 12
+  Description: NPC 상인 판매
+- Name: RECIPE_PAYBACK
+  Value: 13
+  Description: 제작 추가 보상
+- Name: CHEAT
+  Value: 14
+  Description: 치트
+- Name: DEATH_PENALTY
+  Value: 16
+  Description: 사망 패널티
+- Name: USER_REQUESTED_REMOVAL
+  Value: 17
+  Description: 유저에 의한 아이템 삭제
+- Name: ENCHANT
+  Value: 18
+  Description: 강화
+- Name: ENGRAVE
+  Value: 19
+  Description: 세공
+- Name: TRADE
+  Value: 20
+  Description: 거래
+- Name: GUILD_CREATE
+  Value: 21
+  Description: 길드 생성
+- Name: TELEPORT_COST
+  Value: 22
+  Description: 텔레포트 비용
+- Name: PRE_DEDUCTION
+  Value: 24
+  Description: 배틀 아이템 차감 전 선 차감이 필요할 때 사용
+- Name: QUEST_CATEGORY_REFRESH
+  Value: 25
+  Description: 특정 퀘스트 카테고리 초기화
+- Name: TRANSFER
+  Value: 26
+  Description: 인벤토리 간 이동. 창고 보관/찾기 등
+- Name: LIST
+  Value: 27
+  Description: 조회 요청
+- Name: RECIPE_GUILD_BONUS
+  Value: 28
+  Description: 제작 길드 보상
+- Name: GUILD_QUEST
+  Value: 29
+  Description: 길드 퀘스트
+- Name: ROLLBACK
+  Value: 30
+  Description: 롤백 로직에 의한 변동
+- Name: FORTRESS_HARVEST
+  Value: 31
+  Description: 성소 수확
+- Name: FORTRESS_UPGRADE
+  Value: 32
+  Description: 성물 업그레이드
+- Name: FORTRESS_UPGRADE_REDUCE_TIME
+  Value: 34
+  Description: 성물 업그레이드 가속
+- Name: BATTLEGROUND_REWARD
+  Value: 35
+  Description: 전장 보상
+- Name: GUILD_ATTEND
+  Value: 36
+  Description: 길드 출석
+- Name: GUILD_DONATION
+  Value: 37
+  Description: 길드 기부
+- Name: GUILD_LEAVE
+  Value: 38
+  Description: 길드 탈퇴
+- Name: TRADE_CANCEL
+  Value: 40
+  Description: 거래소 물품 등록 취소
+- Name: TRADE_BUY
+  Value: 41
+  Description: 거래소 물품 구매
+- Name: TRADE_WITHDRAW
+  Value: 42
+  Description: 거래소 아이템 거래를 위한 인벤토리 슬롯 선점
+- Name: TRADE_SETTLE
+  Value: 43
+  Description: 거래소 정산
+- Name: HUNTING_ZONE_REWARD
+  Value: 50
+  Description: 영토 소유 보상
+- Name: HUNTING_ZONE_DISTRIBUTION
+  Value: 51
+  Description: 영토 소유 분배
+- Name: HUNTING_ZONE_BID
+  Value: 52
+  Description: 영토 소유 입찰
+- Name: HUNTING_ZONE_OWNER
+  Value: 53
+  Description: 영토 소유 길드원에게 버프를 주기 위해 영주 업데이트시에 아이템을 생성
+- Name: BM_SHOP_BUY
+  Value: 60
+  Description: BM 상점 구매
+- Name: REFRESH_REWARD
+  Value: 61
+  Description: 구독상품 재 구독
+- Name: BM_SHOP_COMPENSATION
+  Value: 62
+  Description: BM 상점 보상
+- Name: RECIPE_CONFIRM
+  Value: 80
+  Description: 다시뽑기 확정
+- Name: RECIPE_RE_ROLL
+  Value: 81
+  Description: 다시뽑기
+- Name: BASIC_GIVEN
+  Value: 82
+  Description: class.yaml에 의해 레벨 달성 시 아이템 지급
+- Name: GUILD_MERCHANT_BUY
+  Value: 83
+  Description: 길드 상인 구매
+- Name: EVENT_MERCHANT_BUY
+  Value: 84
+  Description: 이벤트 상인 구매
+- Name: HUNTING_ZONE_MERCHANT_BUY
+  Value: 85
+  Description: 특산품 상인 구매
+- Name: ADD_COMBINATION_COUNT
+  Value: 110
+  Description: 조합식 시도 횟수 증가
+- Name: RESET_COMBINATION
+  Value: 111
+  Description: 조합식 초기화
+- Name: UNLOCK_COMBINATION
+  Value: 112
+  Description: 조합식 봉인 해제
+- Name: AWAKEN
+  Value: 120
+  Description: 각성
+- Name: RESET_AWAKENING
+  Value: 122
+  Description: 각성 초기화
+- Name: EXPAND_AWAKENING
+  Value: 123
+  Description: 각성 레벨 확장
+- Name: NOT_APPLY_ENGRAVE
+  Value: 124
+  Description: 각성 등급 변경에서 등급 취소 (삭제 예정)
+- Name: HELP_REWARD
+  Value: 130
+  Description: 길드 지원 보상
+- Name: GIVE_BUILDING_BONUS
+  Value: 150
+  Description: 성소 보너스
+- Name: GUILD_ITEM
+  Value: 160
+  Description: 길드 아이템
+- Name: SEASON_PASS
+  Value: 161
+  Description: 시즌 패스
+- Name: DAILY_PASS
+  Value: 162
+  Description: 데일리 패스
+- Name: CHALLENGE_DUNGEON_WEEKLY
+  Value: 163
+  Description: 주간 도전 던전
+- Name: CONTENT_LIMIT_BY_QUEST
+  Value: 164
+  Description: 컨텐츠 제한
+- Name: MASTERY_ESSENCE_RESET
+  Value: 170
+  Description: 숙련도 초기화
+- Name: MASTERY_INCREASE_POINTS
+  Value: 171
+  Description: 숙련도 포인트 증가
+- Name: MASTERY_EXP_TRANSFER
+  Value: 172
+  Description: 숙련도 경험치 이전
+- Name: MASTERY_ESSENCE_ACTIVE
+  Value: 173
+  Description: 숙련도 정수 활성화
+- Name: MASTERY_PAGE_RESET
+  Value: 174
+  Description: 숙련도 페이지 초기화
+- Name: MASTERY_ALL_PAGE_RESET
+  Value: 175
+  Description: 숙련도 전체 페이지 초기화
+- Name: MASTERY_EXP_UPDATE
+  Value: 176
+  Description: 숙련도 경험치 업데이트 특정 경험치로 변경 할 때 사용됨
+- Name: MASTERY_EXP_INCREASE_BY_BATTLE
+  Value: 177
+  Description: 무기 사용에 따른 숙련도 경험치 증가
+- Name: MASTERY_EXP_INCREASE_BY_ITEM
+  Value: 178
+  Description: 아이템에 의한 숙련도 경험치 증가
+- Name: MASTERY_INITIALIZE
+  Value: 179
+  Description: 숙련도 아이템이 없을 때 아이템 지급
+- Name: MAIL_ATTACHMENT
+  Value: 180
+  Description: 우편 첨부
+- Name: LETTER_FEE
+  Value: 181
+  Description: 편지 발송 요금
+- Name: MASTERY_ESSENCE_FUSION
+  Value: 182
+  Description: 스킬 융합
+- Name: RECIPE_SKILL_LEARN
+  Value: 190
+  Description: 스킬 학습
+- Name: RECIPE_GUILD_QUEST_REWARD_BOX
+  Value: 191
+  Description: 길드 단위 퀘스트 박스
+- Name: GUILD_ACQUIRE_TRAIT
+  Value: 201
+  Description: 길드 최대원 수 증가
+- Name: GUILD_CONTRIBUTE
+  Value: 202
+  Description: 길드 연구 지원
+- Name: GUILD_STORAGE_STORE
+  Value: 203
+  Description: 길드 창고 아이템 보관
+- Name: GUILD_STORAGE_EXPAND
+  Value: 204
+  Description: 길드 창고 확장
+- Name: EQUIP
+  Value: 210
+  Description: 아이템 장착
+- Name: SEE_RED_DOT
+  Value: 211
+  Description: 아이템에 NEW ITEM 표시를 확인 후 제거
+- Name: WELCOME_ITEM_LIST
+  Value: 212
+  Description: 배틀에 접속 시 캐시 구성을 위한 아이템 리스트를 보내줄 때
+- Name: RESERVE_INVENTORY_SLOT
+  Value: 213
+  Description: "인벤토리 슬롯 예약 시 사용 -> ReservedInventorySlots 에서 reason을 추측할 방법이 없음 -> 방법이 생기면 다른 reason으로 대체 후 삭제"
+- Name: EXPAND_INVENTORY_SLOT
+  Value: 214
+  Description: 인벤토리 슬롯 확장
+- Name: AUTO_TRANSFER
+  Value: 215
+  Description: 자동으로 인벤토리 슬롯을 이동 시킬 때 사용
+- Name: ITEM_COLLECTION_REGISTER
+  Value: 230
+  Description: 아이템 수집 등록
+- Name: ADDITIONAL_REWARD_ITEM_LASTATTACKER
+  Value: 250
+  Description: 드롭 아이템 막타 보상
+- Name: ADDITIONAL_REWARD_ITEM_PARTICIPANT
+  Value: 251
+  Description: 드롭 아이템 막타 보상 참여
+- Name: FORTRESS_HARVEST_ALL
+  Value: 301
+  Description: 성물 일괄 수확
+- Name: FORTRESS_UPGRADE_ALL
+  Value: 302
+  Description: 성물 일괄 업그레이드
+- Name: DEPRIVE
+  Value: 310
+  Description: 장착된 아이템 삭제
+- Name: LOCK
+  Value: 320
+  Description: 아이템 잠금
+- Name: LOCK_PROPERTY
+  Value: 321
+  Description: 아이템 프로퍼티 잠금
+- Name: UNLOCK
+  Value: 322
+  Description: 아이템 잠금 해제
+- Name: UNLOCK_PROPERTY
+  Value: 323
+  Description: 아이템 프로퍼티 잠금 해제
+- Name: RESTORATION
+  Value: 400
+  Description: 사망 패널티 복구
+- Name: EXPAND_PRESET_SLOT
+  Value: 500
+  Description: 프리셋 슬롯 증가
+- Name: ENCHANT_DESTROYED
+  Value: 501
+  Description: 아이템 강화 실패로 인한 파괴
+- Name: EXPAND_ENCHANT
+  Value: 502
+  Description: 최대 강화 레벨 돌파(확장)
+- Name: GUILD_DISTRIBUTION
+  Value: 600
+  Description: 길드 분배
+- Name: GUILD_DISTRIBUTION_HUNTING_ZONE
+  Value: 601
+  Description: 길드 자동 분배

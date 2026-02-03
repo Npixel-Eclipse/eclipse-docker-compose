@@ -1,0 +1,131 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ItemCategories
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - None
+        - Bag
+        - AccountStorage
+        - Polymorph
+        - WeaponPolymorph
+        - Skill
+        - Independent
+        - ServerIndependent
+        - LostExperience
+        - LostItem
+        - Mastery
+        - Mastery_Essence
+        - RecipeReroll_Polymorph
+        - RecipeReroll_WeaponPolymorph
+        - MergePoint
+        - AccountWallet
+        - Combination
+        - Awakening
+        - Guild
+        - Awareness
+        - GuildStorage
+        - GuildHuntingZoneDistribution
+        - GuildQuestRewardBox
+        - Seasonpass
+        - Skin
+        - SubscribeCharacter
+        - SubscribeAccount
+        - DivinityEvaluationDropBag
+        - DivinityEvaluationCraftBag
+        - DivinityDropBag
+        - DivinityCraftBag
+        - Potential
+    Comment:
+      type: string
+      visible: true
+    OwnerType:
+      type: string
+      default: Character
+      enum:
+        - Character
+        - Account # 실제로는 Server임 (서버 별 계정 별). 전체 서버에서 공유하는 인벤토리를 만들려면 추가 개발 해야 함
+        - Guild
+    ItemCategories: # 저장할 수 있는 아이템 카테고리를 지정합니다
+      type: array
+      items:
+        type: string
+        ref: item_category
+    RegisterItem: # 등록하는 인벤토리 여부를 결정합니다 (ex: 초월카드)
+      type: boolean
+    DoNotDeleteItem: # 아이템의 개수가 0이 되어도 삭제되지 않는 인벤토리
+      type: boolean
+    AllowUseItem: # 아이템을 사용(소모)하는 것을 허용할지를 나타냅니다.
+      type: boolean
+    AllowDelete: # 삭제를 허용할지를 나타냅니다
+      type: boolean
+    Evict:
+      type: string
+      enum:
+        - Oldest
+    SpecialItem:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Item
+          - Type
+        properties:
+          Item:
+            type: string
+            ref: item
+          Type:
+            type: string
+            enum:
+              - DailyGoldRestorationCount
+              - DailyFreeRestorationCount
+              - DieCount
+              - MaxSlotCount
+          MaxCount: # 아이템의 amount 최대값
+            type: integer
+            visible: true
+    IsSortable:
+      type: boolean
+      visible: true
+      default: false
+    SlotCount: # 확장하지 않은 기본 인벤토리 슬롯 수
+      type: integer
+    SlotExpand: # 확장 단계별 슬롯 수, 재화 타입, 소모 재화
+      type: array
+      items:
+        type: object
+        required:
+          - Id
+          - ExpandLevel
+          - AdditionalSlot
+          - ExpandCurrency
+          - ExpandCost
+        properties:
+          Id:
+            type: integer
+          ExpandLevel:
+            type: integer
+          AdditionalSlot:
+            type: integer
+          ExpandCurrency:
+            type: string
+            ref: item
+          ExpandCost:
+            type: integer
+    BroadcastOnAcquire:
+      type: boolean
+    ClearPolicy:
+      type: string
+      enum:
+        - OnGuildLeave

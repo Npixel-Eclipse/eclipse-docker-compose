@@ -1,0 +1,132 @@
+- Id: 1
+  Name: CheckVersion
+  Ko_KR: 패치 데이터 항목을 불러오는 중
+  En_US: Loading patch data items
+- Id: 2
+  Name: DownloadConfirm_Title
+  Ko_KR: 리소스 다운로드
+  En_US: Download resources
+- Id: 3
+  Name: DownloadConfirm_Description
+  Ko_KR: "게임 플레이를 위한 추가 리소스가 필요합니다. 다운로드를 진행하시겠습니까?"
+  En_US: |-
+    Requires downloading additional resources to play the game.
+    Would you like to proceed with the download?
+- Id: 4
+  Name: DownloadConfirm_AddDownload
+  Ko_KR: 추가 리소스 용량
+  En_US: Additional resource capacity
+- Id: 5
+  Name: DownloadConfirm_Warn
+  Ko_KR: Wi-Fi에 연결되지 않은 경우 많은 데이터 사용료가 부과될 수 있습니다.
+  En_US: "If you're not connected to Wi-Fi, you may incur high data charges."
+- Id: 6
+  Name: DownloadConfirm_OkButton
+  Ko_KR: 다운로드
+  En_US: Download
+- Id: 7
+  Name: DownloadConfirm_CancelButton
+  Ko_KR: 취소
+  En_US: Cancel
+- Id: 8
+  Name: Downloading
+  Ko_KR: 다운로드 중
+  En_US: Downloading
+- Id: 9
+  Name: PakMount
+  Ko_KR: 리소스 적용 중
+  En_US: Applying resources
+- Id: 10
+  Name: ResourceOptimization
+  Ko_KR: 리소스 최적화 중
+  En_US: Optimizing resources
+- Id: 11
+  Name: NotEnoughSpace_Title
+  Ko_KR: 디스크 공간 부족
+  En_US: low disk space
+- Id: 12
+  Name: NotEnoughSpace_Description
+  Ko_KR: 정상적인 게임을 진행하기 위해서는 추가 다운로드 공간이 필요합니다.
+  En_US: Additional download space is required to play the game normally.
+- Id: 13
+  Name: NotEnoughSpace_RequiredText
+  Ko_KR: 필요한 공간
+  En_US: Required Space
+- Id: 14
+  Name: NotEnoughSpace_OkButton
+  Ko_KR: 재시도
+  En_US: Retry Space
+- Id: 15
+  Name: NotEnoughSpace_CancelButton
+  Ko_KR: 취소
+  En_US: Cancel
+- Id: 16
+  Name: NetworkError_Title
+  Ko_KR: 네트워크 오류
+  En_US: Network Error
+- Id: 17
+  Name: NetworkError_Description
+  Ko_KR: 기기의 연결 상태 및 네트워크 설정을 확인하고 다시 시도해 주세요.
+  En_US: Please check the device's connection status and network settings and try again.
+- Id: 18
+  Name: NetworkError_OkButton
+  Ko_KR: 확인
+  En_US: Ok
+- Id: 19
+  Name: EtcError_TitleText
+  Ko_KR: 오류
+  En_US: Error
+- Id: 20
+  Name: EtcError_DescriptionText
+  Ko_KR: 에러 코드
+  En_US: Error Code
+- Id: 21
+  Name: EtcError_OkText
+  Ko_KR: 확인
+  En_US: Ok
+- Id: 22
+  Name: EtcError_RetryText
+  Ko_KR: 게임을 다시 시작해 주세요.
+  En_US: Please restart the game.
+- Id: 23
+  Name: Check_LaucherStartApp
+  Ko_KR: 게임을 시작할 수 없습니다. 스토브 런처를 통해 재시작해주세요.
+  En_US: The game cannot be started. Please restart it using the STOVE Launcher.
+- Id: 24
+  Name: BaseSDK_InitializeFailed
+  Ko_KR: 게임 초기화에 실패하였습니다. 게임을 다시 시작해 주세요.
+  En_US: Failed to initialize the game. Please restart the game.
+- Id: 25
+  Name: CleanResources
+  Ko_KR: 사용 중인 리소스를 정리하는 중
+  En_US: Cleaning up the resources in use
+- Id: 26
+  Name: Config_InitializeFailed
+  Ko_KR: 서비스 환경에 대한 정보를 불러오는데 실패하였습니다. 게임을 다시 시작해 주세요.
+  En_US: Failed to retrieve information about the service environment. Please restart the game.
+- Id: 27
+  Name: EtcError_CodeText
+  Ko_KR: "99"
+  En_US: "99"
+- Id: 28
+  Name: ResourceVersionMismatch_Title
+  Ko_KR: 리소스 버전 불일치
+  En_US: Resource Version Mismatch
+- Id: 29
+  Name: ResourceVersionMismatch_OkButton
+  Ko_KR: 확인
+  En_US: Ok
+- Id: 30
+  Name: ResourceVersionMismatch_Description_ClientUpdate
+  Ko_KR: |-
+    새로운 버전의 클라이언트가 필요합니다. 
+    확인 후 게임을 재시작해 주세요.
+  En_US: A newer version of the client is required. Please update and restart the game.
+- Id: 31
+  Name: ResourceVersionMismatch_Description_NeedRecook
+  Ko_KR: 새로운 버전의 게임 리소스가 필요합니다. 확인 후 게임을 재시작해 주세요.
+  En_US: A newer version of the game data is required. Please update and restart the game.
+- Id: 32
+  Name: PakFileHashVerify
+  Ko_KR: 리소스를 검증하는 중
+  En_US: Verifying resources

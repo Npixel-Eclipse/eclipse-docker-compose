@@ -1,0 +1,160 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - RemainTimeRedAlertSeconds
+          Value:
+            type: string
+            ref: constants
+    Icons:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - ExpIcon
+          Icon:
+            type: string
+    Inventory:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - LostExpInventory
+              - LostEquipInventory
+          Index:
+            type: integer
+            minimum: 0
+          Value:
+            type: string
+          Restoration:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Index:
+                  type: integer
+                  minimum: 0
+                Type: 
+                  type: string
+                  enum:
+                    - Free
+                    - Gold
+                    - Diamond
+                    - Item
+                Description:
+                  type: string
+                  ref: description
+                NeedItem:
+                  type: string
+                  ref: item
+                SpecialItemType:
+                  type: string
+                RestorationBtnDescription:
+                  type: string
+                  ref: description
+    Description:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+          Value:
+            type: string
+            ref: description
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Exp
+              - Equip
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Locked:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          CountDescription:
+            type: string
+            ref: description
+          Comment:
+            type: string
+        required:
+          - TabIndex
+    DefaultTextStyleKey:
+            type: string
+    WarningTextStyleKey:
+            type: string
+    WarningPercentage: #경고 메세지 띄울 퍼센트
+      type: integer
+      minimum: 0
+      maximum: 100
+    FailedType:
+      type: string
+      enum:
+        - FailedGold         # 골드 부족
+        - FailedDiamond      # 다이아 부족
+        - FailedItem         # 복구권 부족
+        - FailedOverFreeRecoveryCount     # 무료 복구 횟수 부족
+        - FailedOverGoldRecoveryCount     # 골드 복구 횟수 부족
+        - FailedDonotSelectPenaltyList    # 복구 아이템 미선택
+    FailedGoldDescription:
+      type: string
+      ref: description
+    FailedDiamondDescription:
+      type: string
+      ref: description
+    FailedItemDescription:
+      type: string
+      ref: description
+    FailedOverGoldRecoveryCountDescription:
+      type: string
+      ref: description
+    FailedOverFreeRecoveryCountDescription:
+      type: string
+      ref: description
+    FailedDonotSelectPenaltyListDescription:
+      type: string
+      ref: description
+  required:
+    - Id
+    - Name

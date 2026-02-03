@@ -1,0 +1,97 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - DifficultyLevel
+    - MainBoss
+    - RolePlayer
+    - TimeLimitFailure
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$      
+    DifficultyLevel: # 난이도. 중복 값 설정 불가.
+      type: integer
+      minimum: 1      
+    Comment:
+      type: string
+    MainBoss: # 대표 보스(클라 UI 출력 용도)
+      # !! 반드시 RolePlayer 에 등록되어 있는 NPC 만 설정 가능
+      # 대표 보스 몬스터 이름: npc > DescriptionName
+      # 대표 보스 몬스터 레벨: npc > NpcProperties > PropertyName(NPCLevel)
+      type: string
+      ref: npc
+    DisplayImage:
+      type: string
+    RolePlayer:
+      # 레이드 시작 시 생성 될 NPC
+      # - SpawnDirection(스폰 방향): S
+      # - PreemptType(드랍 아이템 선점 기준): Participant
+      visible: true
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Npc
+          - Territory
+        properties:
+          Npc: # 소환할 NPC. RolePlayer 안에서 중복 설정 불가.
+            visible: true
+            type: string
+            ref: npc
+          Territory:
+            type: string
+            ref: territory
+            visible: true            
+          Role:
+            visible: true
+            type: string
+            default: Enemy
+            enum:
+              # - None  # 레이드 성공에 관련 없음
+              - Enemy # 모두 제거 되면 레이드 성공
+              # - Protectee
+          Amount:
+            visible: true
+            type: integer
+            default: 1
+          DropItemReward:
+            visible: true
+            type: string
+            ref: guild_raid_drop_item     
+    ParticipationRewards:
+      visible: true
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Item
+          - Amount
+        properties:
+          Item:
+            visible: true
+            type: string
+            ref: item
+          Amount:
+            visible: true
+            type: integer                  
+    TimeLimitFailure: # 제한 시간(sec)
+      visible: true
+      type: integer
+      default: 600
+      minimum: 0
+    MaxTryCount: # 최대 시도 가능 횟수
+      type: integer
+      minimum: 1
+    RecommendCombatPower: # 권장 전투력
+      type: integer
+      minimum: 1

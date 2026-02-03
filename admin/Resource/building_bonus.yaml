@@ -1,0 +1,20 @@
+- Id: 1
+  Name: Building_Bonus1
+  ConstructionQueueCount: 1
+- Id: 39
+  Name: Building_Bonus2
+  HelpMeCount: 2
+- Id: 118
+  Name: Building_Bonus3
+  HelpFromGuildCount: 2
+- Id: 286
+  Name: HarvestAccelerationAll
+  HarvestAcceleration:
+    Percent: 50000
+    Target: ALL
+- Id: 100
+  Name: HarvestAccelerationGroup
+  HarvestAcceleration:
+    Percent: 50000
+    Target: SINGLE
+    TargetBuilding: Statue_Gold_Seongso

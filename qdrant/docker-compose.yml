@@ -1,0 +1,17 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: eclipse-qdrant
+    restart: unless-stopped
+    ports:
+      # Nginx의 HTTP 프록시가 내부 접속용으로 사용할 포트
+      # 컨테이너의 HTTP(6333) 포트를 호스트의 6334 포트에 연결
+      - "0.0.0.0:6334:6333"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    networks:
+      - rag_network
+
+networks:
+  rag_network:
+    name: rag_network

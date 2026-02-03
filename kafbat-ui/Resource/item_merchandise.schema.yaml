@@ -1,0 +1,84 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  staticProperties: true
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    BaseItem:
+      type: string
+      ref: item
+    Amount:
+      type: integer
+    Currency: #Base 부모로 입력해야함
+      type: string
+      ref: item
+    BuyPrice:
+      type: integer
+      minimum: 1
+      visible: true
+    SellPrice:
+      type: integer
+      minimum: 1
+      visible: true
+    Limit:
+      type: object
+      additionalProperties: false
+      properties:
+        OwnerBound:
+          type: string
+          enum:
+            - Character
+            - AccountServer
+        MaxBuyAmount:
+          type: integer
+          # minimum: 1  <-- todo: 'MaxBuyAmount: 0' 데이터 제거 후 주석 제거 필요
+        NeedAddendBuyAmount: # 최대 구매 수량 계산 시 AddendBuyAmount 필요
+          type: boolean
+          default: false
+        Refresh: # 구매 횟수 초기화
+          type: string
+          default: None
+          enum:
+            - None
+            - Daily
+            - Weekly
+            - Monthly
+      required:
+        - OwnerBound
+    DisplayOrder: # 표시 순서로 작은 값일수록 이전에 표시되고 큰 값일수록 뒤에 표시
+      type: integer
+      default: 0
+    MerchandiseGroup:
+      type: string
+      ref: item_merchandise_group
+    Condition:
+      type: object
+      additionalProperties: false
+      properties:
+        Type:
+          type: string
+          enum:
+            - Level
+        Value:
+          type: integer
+      required:
+        - Type
+        - Value
+    AllowedTab:
+      type: string
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - BaseItem
+    - Amount
+    - Currency
+    - MerchandiseGroup

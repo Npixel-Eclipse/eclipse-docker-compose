@@ -1,0 +1,12 @@
+- Id: 1
+  Name: Storage
+  StoreItemText: UIWord_StoreItem
+  StoreItemDescText: UIWord_StoreItem_Desc
+  TakeItemText: UIWord_TakeItem
+  TakeItemDescText: UIWord_TakeItem_Desc
+  EmptySlotGrade: Common
+  AccountStorageID: AccountStorage
+  BagInventoryID: Bag
+  IgnoredAmountInventories:
+    - InventoryID: GuildStorage
+    - InventoryID: GuildHuntingZoneDistribution

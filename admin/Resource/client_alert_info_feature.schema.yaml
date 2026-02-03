@@ -1,0 +1,47 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Activate:                     # 동일한 종류의 UI 스택 여부
+      type: boolean
+    ManagedPopupType:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          UIType:                     # 관리할 UI Type - UI Event Name과 동일
+            type: string
+          HideAnimationType:          # UI의 닫기 방식 분류
+            type: string
+            enum:
+              - NoneHide                  # Show 애니메이션만 보유한 UI
+              - AutoHide                  # Show, Hide 애니메이션 보유한 UI
+          Unique:                 # 스택되지만, 동일한 종류의 팝업은 중복 스택되지 않음
+            type: boolean
+            default: false
+          AllowFromLock:
+            type: boolean
+            default: false
+    UIAnimations:                     # touch hide anim name, auto hide anim name
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - DefaultHideAnimation
+          Value:
+            type: string
+  required:
+    - Id
+    - Name

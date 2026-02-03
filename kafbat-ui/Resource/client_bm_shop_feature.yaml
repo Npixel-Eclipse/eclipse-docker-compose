@@ -1,0 +1,60 @@
+- Id: 1
+  Name: BMShop
+  ClientConstants:
+    - Name: BuyableMaxCount
+      IntValue: 999
+    - Name: BuyableMinCount
+      IntValue: 1
+    - Name: NotMeetLevelMessage
+      DescValue: UIWord_SystemMsg_BMShopLimitLevel
+    - Name: ShortageStepUpMessage
+      DescValue: UIWord_BMShop_NotEnougError_StepUp
+    - Name: NotBuyableStepUpMessage
+      DescValue: UIWord_SystemMsg_LimitLinkageBuy
+    - Name: PrevStepInStorageMessage
+      DescValue: UIWord_SystemMsg_LimitLinkageReceipt
+    - Name: ProposalTab
+      CategoryValue: Proposal
+    - Name: GoldTab
+      CategoryValue: Gold
+    - Name: GachaTab
+      CategoryValue: Gacha
+    - Name: BMShopGoldProductReddot
+      Value: BMShop_PurchasableGoldProduct
+  ShortCutTab:
+    - Item: DailyPass_Eclipse_Ticket
+      Category: SeasonPassSub
+    - Item: SeasonPass_Seongso_Ticket
+      Category: SeasonPassSub
+    - Item: SeasonPass_Equip_Ticket
+      Category: SeasonPassSub
+    - Item: SeasonPass_Growth_Ticket
+      Category: SeasonPassSub
+    - Item: Item_Grown_Guild_G1_T1_01
+      Category: Normal
+    - Item: CurrencyDiamond
+      Category: Product
+  BulkInBuyDisabedMessage:
+    - MessageType: EmptyList
+      Message: UIWord_BMShop_NoProduct_Bulk
+    - MessageType: NotAllChecked
+      Message: UIWord_BMShop_NotEnougError_Bulk2
+    - MessageType: Shortage
+      Message: UIWord_BMShop_NotEnougError_Bulk
+  UITab:
+    - Group: BuyPopup
+      SubGroup: StepUp
+      TabIndex: 0
+      DefaultTab: true
+      Description: UIWord_BMShop_StepUp
+    - Group: BuyPopup
+      SubGroup: Compare
+      TabIndex: 1
+      Description: UIWord_BMShop_Compare
+  CompareTab:
+    - Group: Item
+      Description: UIWord_BMShop_CompareItem
+    - Group: Product
+      Description: UIWord_BMShop_CompareProduct
+    - Group: Trade
+      Description: UIWord_BMShop_CompareTrade

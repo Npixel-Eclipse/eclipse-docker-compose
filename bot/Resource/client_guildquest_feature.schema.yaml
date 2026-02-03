@@ -1,0 +1,47 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    GuildQuestTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Daily
+              - Repeat
+          DefaultTab:
+            type: boolean
+            default: false
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+        required:
+          - Group
+    GuildAttendGoalType:
+      type: string
+      ref: quest_goal_type
+    GuildCollectionBuffCategory:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Category:
+            type: string
+            ref: guild_collection_category
+  required:
+    - Id
+    - Name

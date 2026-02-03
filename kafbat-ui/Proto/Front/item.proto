@@ -1,0 +1,1003 @@
+syntax = "proto3";
+package eclipse.client.item;
+
+import "Common/property.proto";
+import "Common/item_common.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.item";
+option java_outer_classname = "ClientItemProto";
+
+
+enum ItemResult {
+  FAIL = 0;
+  SUCCESS = 1;
+  FAIL_ENCHANT = 2;// deprecated
+  FAIL_CURRENCY_NOT_ENOUGH = 3;
+  FAIL_INVENTORY_SLOT_NOT_ENOUGH = 4;
+  FAIL_ACCOUNT_STORAGE_SLOT_NOT_ENOUGH = 5;
+  FAIL_EMPTY_ITEM_LIST = 6;
+
+  FAIL_LOCK_COUNT_LIMIT = 7;
+  FAIL_RESTORATION_TICKET_NOT_EXIST = 8;
+  FAIL_RESTORATION_TICKET_ALREADY_USED = 9;
+  FAIL_RESTORATION_TARGET_NOT_EXIST = 10;
+  FAIL_LEVEL = 11;
+  FAIL_CHARACTER_NOT_FOUND = 12;
+  FAIL_RESOURCE_NOT_FOUND = 13;
+  FAIL_INVALID_REQUEST_PARAMETER = 14;
+  FAIL_NOT_OPEN_TIME = 15;
+  FAIL_NOT_ENOUGH_ITEM = 16;
+  FAIL_MAX_CHARACTER_SLOT = 17; // 캐릭터 슬롯 최대치 도달
+
+  SUCCESS_WITH_INVENTORY_SLOT_NOT_ENOUGH = 101; // 인벤토리 슬롯이 부족해서 일부만 성공함.
+
+  SUCCESS_PRESET_SAVE = 201;
+  SUCCESS_PRESET_APPLY = 202;
+  SUCCESS_PRESET_EXPAND = 203;
+
+  SUCCESS_MASTER_PRESET_SAVE = 211;
+  SUCCESS_MASTER_PRESET_APPLY = 212;
+  SUCCESS_MASTER_PRESET_EXPAND = 213;
+
+  SUCCESS_ENGRAVE = 301;
+  SUCCESS_ENGRAVE_RESERVE = 302;
+  SUCCESS_ENGRAVE_COMBINATION = 303;
+
+  SUCCESS_MIGHT = 311;
+  SUCCESS_NO_CHANGE = 312; // 자동 결속시 아무 변경이 없는경우
+
+  // BM상점
+  FAIL_BM_PRODUCT_NOT_SALE = 401; // 판매중인 상품이 아님.
+  FAIL_BM_PRODUCT_LIMIT_EXCEED = 402; // 구매 제한 수량 초과.
+  FAIL_BM_PRODUCT_NOT_SALE_DATE = 403; // 판매중인 기간이 아님.
+  FAIL_BM_PRODUCT_INVALID_STEP = 404; // 스텝업 상품 구매 조건 미달성(이전 스텝 상품을 구매하지 않음)
+  FAIL_BM_PRODUCT_NOT_ENOUGH_LEVEL = 405; // 레벨 구매 조건 미달성
+  FAIL_BM_PRODUCT_CAN_NOT_BUY_MULTI_PRODUCTS = 406; // 묶음 구매 불가 상품이 포함됨
+  FAIL_BM_PRODUCT_CAN_NOT_BUY_SAME_PRODUCTS = 407; // 묶음에 동일한 상품이 포함됨
+  FAIL_BM_PRODUCT_PURCHASE_TERMS_LOCKED = 408; // 구매 조건 충족하지 않음
+  FAIL_BM_PRODUCT_NOT_SUBSCRIBE_EXTEND_DATE = 409; // 구독 연장 가능시간이 아님
+
+  // 서버 에러
+  FAIL_INTERNAL_SERVER_ERROR = 500;
+  FAIL_INTERNAL_SERVER_ERROR_CHARACTER_CLASS_NOT_FOUND = 501;
+}
+
+enum RecipeResultType {
+  RECIPE_SUCCESS = 0;
+  RECIPE_GREAT_SUCCESS = 1;
+  RECIPE_FAILURE = 2;
+}
+
+enum EnchantResultType {
+  ENCHANT_SUCCESS = 0;
+  ENCHANT_EXPAND_SUCCESS = 1;
+  ENCHANT_EXPAND_FAILURE = 2;
+  ENCHANT_FAILURE = 100;
+  ENCHANT_DESTROYED = 101;
+}
+
+enum AwakeningExpandResultType {
+  AWAKENING_EXPAND_SUCCESS = 0;
+  AWAKENING_EXPAND_FAILURE = 1;
+}
+
+enum SortMethod {
+  DEFAULT = 0;
+  GRADE = 1;
+  DELETE_TIME = 2;
+  ACQUIRE_TIME = 3;
+}
+
+enum CollectionEventType {
+  LISTING = 0;
+  UPDATE = 1;
+}
+
+message Collection {
+  message Registration {
+    int64 id = 1;
+    int64 amount = 2;
+    optional int64 replacement_id = 3;
+  }
+  int64 id = 1;
+  repeated Registration registration = 2;
+}
+
+message CollectionSummation {
+  int64 id = 1;
+  int64 amount = 2;
+}
+
+message ItemRequest {
+  reserved 40, 81, 201, 203, 101, 102, 103; // 2025.01.07 deprecated
+  oneof request {
+    List list = 1;
+
+    Consume consume = 10;
+    Delete delete = 11;
+    Equip equip = 12;
+    Unequip unequip = 13;
+    Engrave engrave = 16;
+
+    Lock lock = 17;
+    Unlock unlock = 18;
+    SeeRedDot see_red_dot = 19;
+
+    ApplyEngrave apply_engrave = 20; // 각성 등급 변경에서 등급 적용
+    NotApplyEngrave not_apply_engrave = 21; // 각성 등급 변경에서 등급 취소
+
+    UseRestorationTicket use_restoration_ticket = 22; // 복구권 사용item
+
+    QueryMerchant query_merchant = 200;
+    Buy buy = 202;
+    Sell sell = 204;
+
+    QueryBmShop query_bm_shop = 24;
+    BuyBmProduct buy_bm_product = 25;
+    TakeBmProduct take_bm_product = 26;
+    QueryBmProductStored query_bm_product_stored = 27;
+    QueryBmProductPurchasable query_bm_product_purchasable = 28;
+    CompensateBmProduct compensate_bm_product = 29;
+
+    GetRecipe get_recipe = 30;
+    ExecuteRecipe execute_recipe = 31;
+    Disassemble disassemble = 32;
+    GetRecipeLimitList get_recipe_limit_list = 33;
+    ReRollRecipe re_roll_recipe = 34;
+    ConfirmReRollRecipe confirm_re_roll_recipe = 35;
+
+    //Teleport teleport = 40; 2025.01.07 deprecated
+
+    Transfer transfer = 50;
+    AutoTransfer auto_transfer = 51;
+    Sort sort = 52;
+    Expand expand = 53;
+
+    RegisterItemCollection register_item_collection = 60;
+    QueryItemCollection query_item_collection = 61;
+    QueryCollectionReward query_collection_reward = 63;
+
+    ActivateMasteryEssence activate_mastery_essence = 70;
+    ResetMasteryEssence reset_mastery_essence = 71;
+    ResetMasteryPage reset_mastery_page = 72;
+    FusionMasteryEssence fusion_mastery_essence = 75;
+    UnFusionMasteryEssence un_fusion_mastery_essence = 76;
+
+    ApplyPreset apply_preset = 82;
+    ExpandPreset expand_preset = 83;
+
+    GetMasterPreset get_master_preset = 84;
+    ApplyMasterPreset apply_master_preset = 86;
+
+    AddCombinationCount add_combination_count = 91;
+    ResetCombination reset_combination = 92;
+    UnlockCombination unlock_combination = 93;
+
+    Enchant enchant = 110;
+    ExpandEnchant expand_enchant = 111;
+    ResetEnchant reset_enchant = 112;
+
+    ItemAcquisitionBroadcast item_acquisition_broadcast = 120;
+
+    // 결속
+    Solidarize solidarize = 130;
+    Unsolidarize unsolidarize = 131;
+    AutoSolidarize auto_solidarize = 132;
+    QuerySolidaritySlots query_solidarity_slots = 133;
+    UnsolidarizeAll unsolidarize_all = 134;
+  }
+
+  message List {
+    repeated int64 inventory_id = 1;
+  }
+
+  message Consume {
+    oneof item {
+      string uuid = 1;
+      int64 base_item_id = 3;
+    }
+    int64 repeat = 4;
+  }
+
+  message Delete {
+    message Item {
+      string uuid = 1;
+      int64 amount = 2;
+    }
+    repeated Item items = 1;
+  }
+
+  message Equip {
+    string uuid = 1;
+  }
+
+  message Unequip {
+    string uuid = 1;
+  }
+
+  message Enchant {
+    message SelectedMaterial {
+      int64 base_item_id = 1;
+      int64 amount = 2;
+    }
+    int64 material_item_id = 1;
+    repeated SelectedMaterial selected_materials = 4;
+    int64 to = 2;
+    repeated string target_item_uuids = 3;
+    int64 correlation_id = 5;
+    int64 potential_slot_id = 6; // 잠재력 근원 강화 시 사용
+  }
+
+  message ResetEnchant {
+    string target_item_uuid = 1;
+  }
+
+  message ExpandEnchant {
+    string target_item_uuid = 1;
+    int64 material_item_id = 2;
+  }
+
+  message Engrave {
+    string target_item_uuid = 1;
+    oneof condition {
+      int64 material_item_id = 2;
+      int64 mastery_essence_id = 3;
+    }
+  }
+
+  message ApplyEngrave {
+    string target_item_uuid = 1;
+  }
+
+  message NotApplyEngrave {
+    string target_item_uuid = 1;
+  }
+
+  message Lock {
+    string target_item_uuid = 1;
+    oneof property {
+      int64 group_id = 3;
+    }
+  }
+
+  message Unlock {
+    string target_item_uuid = 1;
+    oneof property {
+      int64 group_id = 3;
+    }
+  }
+
+  message SeeRedDot {
+    int64 inventory_id = 1;
+  }
+
+  message UseRestorationTicket {
+    repeated string item_uuids = 1;  // item.uuid -> item_uuids
+    optional int64 cost_item_id = 2; // target_item_uuid -> cost_item_id
+  }
+
+  message Transfer {
+    message Item {
+      string uuid = 1;
+      int64 amount = 2;
+    }
+    int64 inventory_id = 1;
+    repeated Item items = 2;
+  }
+
+  message QueryMerchant {
+    int64 merchant_id = 1;
+    int64 correlation_id = 2;
+  }
+
+  message Buy {
+    message Merchandise {
+      int64 merchandise_id = 1;
+      int64 amount = 2;
+    }
+    repeated Merchandise merchandises = 1;
+    int64 merchant_id = 2;
+  }
+
+  message Sell {
+    message Item {
+      string uuid = 1;
+      int64 amount = 2;
+    }
+    int64 merchant_id = 3;
+    repeated Item items = 1;
+  }
+
+  message QueryBmShop {}
+
+  message BuyBmProduct {
+    message Product {
+      int64 product_id = 1;
+      int64 filter_group_id = 3;
+      int64 amount = 2;
+    }
+    repeated Product products = 1;
+  }
+
+  message TakeBmProduct {
+    repeated string product_uuid = 1;
+  }
+
+  message QueryBmProductStored {}
+
+  message QueryBmProductPurchasable {
+    repeated Product products = 1;
+
+    message Product {
+      int64 product_id = 1;
+      int64 filter_group_id = 3;
+      int64 amount = 2;
+    }
+  }
+
+  message CompensateBmProduct {
+    int64 bm_shop_product_id = 1;
+    int64 target_count = 2;
+  }
+
+  message GetRecipe {
+    string material_item_uuid = 1;
+    int32 repeat = 2;
+    repeated int64 selected_output_item_id = 3; // 선택 보상의 선택 목록. (ItemId가 아니라, [recipe_output.yaml -> Output]의 Id를 의미)
+  }
+
+  message ExecuteRecipe {
+    message UseItem {
+      int64 amount = 2;
+      int64 item_id = 3; // FIXME: 4월 테스트 종료 후 필드 번호 변경 필요. (1번이 그동안 UUID여서 구버전 서버의 오류를 방지하기 위함)
+    }
+
+    message SelectedInputItem {
+      int64 input_item_id = 1;
+      repeated UseItem use_items = 2;
+    }
+
+    oneof recipe {
+      int64 recipe_input_id = 1;
+      int64 craft_level_id = 4;
+    }
+    repeated SelectedInputItem selected_input_items = 2;
+    int64 repeat = 3;
+  }
+
+  message Disassemble {
+    message Item {
+      string uuid = 1;
+      int64 amount = 2;
+    }
+
+    repeated Item items = 1;
+  }
+
+  message GetRecipeLimitList {
+    repeated int64 recipe_output_ids = 1;
+  }
+
+  // 다시뽑기 요청
+  message ReRollRecipe {
+    string item_uuid = 1;
+
+    bool confirm = 10; // [2024.12.05 deprecated] true: 확정, false: 다시뽑기
+    ReRollOption re_roll_option = 11; // 다시뽑기 옵션
+
+    message ReRollOption {
+      /*
+       * 다시뽑기 시 선택한 Recipe Output Id.
+       * Select : 미입력시 리소스에 순서상 첫 번째를 사용.
+       * Random : 비워두기, 있어도 값 무시함
+       */
+      optional int64 recipe_output_id = 1;
+      repeated int64 select_item_id = 2; // 선택 다시뽑기
+    }
+  }
+
+  // 다시뽑기 확정
+  message ConfirmReRollRecipe {
+    repeated ConfirmItem items = 1;
+    message ConfirmItem {
+      string item_uuid = 1;
+      // 선택할 PreviousItemId, 0일경우 마지막 PreviousItemId 사용.
+      int64 selected_item_id = 2;
+    }
+  }
+
+  message AutoTransfer {
+    int64 source_inventory_id = 1;
+    int64 destination_inventory_id = 2;
+  }
+
+  message Sort {
+    int64 inventory_id = 1;
+    SortMethod method = 2;
+  }
+
+  message Expand {
+    int64 inventory_id = 1;
+    int64 target_expand_level = 2;
+  }
+
+  message RegisterItemCollection {
+    repeated Collection collection = 1;
+  }
+
+  message QueryItemCollection {
+  }
+
+  message QueryCollectionReward {
+  }
+
+  message ActivateMasteryEssence {
+    int64 essence_id = 1;
+  }
+
+  message ResetMasteryEssence {
+    int64 essence_id = 1;
+  }
+
+  message ResetMasteryPage {
+    int64 item_category_id = 1;
+  }
+
+  message FusionMasteryEssence {
+    int64 mastery_essence_fusion_id = 1;
+  }
+
+  message UnFusionMasteryEssence {
+    int64 mastery_essence_fusion_id = 1;
+  }
+
+  message ApplyPreset {
+    int64 preset_num = 1;
+    int64 preset_id = 2;
+  }
+
+  message ExpandPreset {
+    int64 preset_id = 1;
+  }
+
+  message GetMasterPreset {}
+
+  message ApplyMasterPreset {
+    int64 preset_num = 1;
+  }
+
+  message AddCombinationCount {
+    int64 item_id = 1;
+  }
+
+  message ResetCombination {
+    string combination_item_uuid = 1;
+  }
+
+  message UnlockCombination {
+    int64 item_id = 1;
+  }
+
+  message ItemAcquisitionBroadcast {}
+
+  message QuerySolidaritySlots {}
+
+  message Solidarize {
+    string item_uuid = 1;
+    int64 equip_slot_id = 2;
+  }
+
+  message Unsolidarize {
+    int64 equip_slot_id = 1;
+  }
+
+  message AutoSolidarize {
+    int64 equip_slot_category_id = 1;
+    bool combination_priority = 2;
+  }
+
+  message UnsolidarizeAll {
+    int64 equip_slot_category_id = 1;
+  }
+
+}
+message ItemEvent {
+  reserved 40, 201, 204; // 2025.01.07 deprecated
+  oneof event {
+    Consume consume = 10;
+    Delete delete = 11;
+    Equip equip = 12;
+    Unequip unequip = 13;
+    Engrave engrave = 16;
+
+    ApplyEngrave apply_engrave = 20;
+    NotApplyEngrave not_apply_engrave = 21;
+
+    UseRestorationTicket use_restoration_ticket = 22;
+
+    QueryMerchant query_merchant = 200;
+    Buy buy = 202;
+    Sell sell = 203;
+
+    QueryBmShop query_bm_shop = 24;
+    BuyBmProduct buy_bm_product = 25;
+    TakeBmProduct take_bm_product = 26;
+    QueryBmProductStored query_bm_product_stored = 27;
+    QueryBmProductPurchasable query_bm_product_purchasable = 28;
+    HotDealBmProductUnlock hot_deal_bm_product_unlock = 29;
+
+    GetRecipe get_recipe = 30;
+    ExecuteRecipe execute_recipe = 31;
+    Disassemble disassemble = 32;
+    GetRecipeLimitList get_recipe_limit_list = 33;
+    ReRollRecipe re_roll_recipe = 34;
+    ConfirmReRollRecipe confirm_re_roll_recipe = 35;
+
+    //Teleport teleport = 40; 2025.01.07 deprecated
+
+    Sort sort = 50;
+    Expand expand = 51;
+    Transfer transfer = 52;
+
+    RegisterItemCollection register_item_collection = 60;
+    QueryItemCollection query_item_collection = 61;
+    QueryCollectionReward query_collection_reward = 63;
+
+    Preset preset = 70;
+    MasterPreset master_preset = 77;
+
+    FusionMasteryEssence fusion_mastery_essence = 75;
+    UnFusionMasteryEssence un_fusion_mastery_essence = 76;
+
+    AddCombinationCount add_combination_count = 91;
+    ResetCombination reset_combination = 92;
+    UnlockCombination unlock_combination = 93;
+
+    OfflineModeResult offline_mode = 110;
+    OfflineModeTime offline_mode_time = 111;
+
+    Enchant enchant = 120;
+    ExpandEnchant expand_enchant = 121;
+    ResetEnchant reset_enchant = 122;
+
+    Solidarize solidarize = 130;
+    Unsolidarize unsolidarize = 131;
+    AutoSolidarize auto_solidarize = 132;
+    QuerySolidaritySlots query_solidarity_slots = 133;
+    UnsolidarizeAll unsolidarize_all = 134;
+
+    ResetMasteryEssence reset_mastery_essence = 71;
+    ResetMasteryPage reset_mastery_page = 72;
+
+    Expired expired = 140;
+  }
+
+  message Consume {
+    ItemResult result = 1;
+    int64 level_limit = 2;
+  }
+
+  message Delete {
+    ItemResult result = 1;
+  }
+
+  message Equip {
+    string uuid = 1;
+    ItemResult result = 2;
+  }
+
+  message Unequip {
+    string uuid = 1;
+    ItemResult result = 2;
+  }
+
+  message Enchant {
+    message EnchantedItem {
+      string uuid = 1;
+      string key = 2;
+      int64 value = 3;
+      EnchantResultType enchant_result_type = 4;
+      int64 potential_slot_id = 5; // 잠재력 근원 강화 시 사용
+    }
+    ItemResult result = 1;
+    repeated EnchantedItem enchanted_item = 2;
+    int64 correlation_id = 3;
+  }
+
+  message ExpandEnchant {
+    string uuid = 1;
+    int64 expand_step = 2;
+    EnchantResultType enchant_result_type = 3;
+    ItemResult result = 4;
+  }
+
+  message ResetEnchant {
+    ItemResult result = 1;
+    string target_item_uuid = 2;
+  }
+
+  message Engrave {
+    string target_item_uuid = 1;
+    repeated common.Property engrave_result = 2;
+    ItemResult result = 3;
+  }
+
+  message ApplyEngrave {
+    string target_item_uuid = 1;
+    repeated common.Property engrave_result = 2;
+    ItemResult result = 3;
+  }
+
+  message NotApplyEngrave {
+    string target_item_uuid = 1;
+    repeated common.Property engrave_result = 2;
+    ItemResult result = 3;
+  }
+
+  message UseRestorationTicket {
+    repeated string restored_item_uuids = 1;
+    optional int64 restored_exp = 2;
+    ItemResult result = 3;
+  }
+
+  message QueryMerchant {
+    message Item {
+      int64 merchandise_id = 1;
+      int64 buy_amount = 2; // 구매 횟수
+      int64 max_buy_amount = 3; // 최대 구매 횟수
+      int64 bonus_buy_amount = 4;
+      int64 buy_price = 5;
+      int64 currency_id = 6;
+    }
+
+    int64 merchant_id = 3;
+    int64 correlation_id = 4;
+    repeated Item items = 5;
+  }
+
+  message Buy {
+    int64 merchant_id = 1;
+    ItemResult result = 3;
+  }
+
+  message Sell {
+    int64 merchant_id = 1;
+    ItemResult result = 3;
+  }
+
+  // QueryBmShop, QueryBmProductStored 공통 구조체
+  message ProductStored {
+    int64 product_id = 1;
+    string product_uuid = 2;
+    google.protobuf.Timestamp purchase_time = 4; // 상품 구매 일시
+    google.protobuf.Timestamp expire_time = 3; // 상품보관함 청약철회 만료 시점(at)
+  }
+
+  message QueryBmShop {
+    message Product {
+      int64 product_id = 1;
+      int64 purchased_amount = 2;
+      int64 server_purchased_amount = 3; // TODO : 서버 단위 구매 수량 (아직 구현체는 없음)
+      int64 taken_amount = 4; // 상품 수령 수량 (보관함에서 꺼낸 수량 OR 즉시 인벤토리로 지급된 수량)
+      repeated Cost cost = 5; // 가격
+      optional string billing = 6; // 빌링 서비스 제공자
+      optional HotDeal hot_deal = 7; // 핫딜 상품인 경우 핫딜 정보
+      bool recommend = 8; // 추천상품 여부
+      optional Subscribe subscribe = 9; // 구독 상품인 경우 구독 정보
+
+      message Cost {
+        int64 item_id = 1;
+        int64 filter_group_id = 3;
+        int64 amount = 2;
+      }
+
+      message HotDeal {
+        google.protobuf.Timestamp unlocked_at = 1; // 해금 일시
+        google.protobuf.Timestamp expired_at = 2; // 구매만료 일시
+      }
+
+      message Subscribe {
+        google.protobuf.Timestamp expired_at = 1; // 구독만료 일시
+      }
+    }
+
+    repeated Product product = 1;
+    repeated ProductStored product_stored = 2;
+  }
+
+  message QueryBmProductStored {
+    repeated ProductStored product_stored = 1;
+  }
+
+  message QueryBmProductPurchasable {
+    repeated Product products = 1;
+
+    message Product {
+      int64 product_id = 1;
+      ItemResult result = 2;
+      int64 amount = 3;
+      int64 filter_group_id = 4;
+    }
+  }
+
+  message BuyBmProduct {
+    message Product {
+      int64 product_id = 1;
+      int64 amount = 2;
+    }
+
+    ItemResult result = 1;
+    reserved 2; // repeated int64 bm_shop_product_id = 2; // 2025.12.30 deprecated.
+    repeated Product products = 3;
+  }
+
+  message TakeBmProduct {
+    message Product {
+      int64 product_id = 1;
+      int64 amount = 2;
+    }
+
+    ItemResult result = 1;
+    reserved 2; // repeated int64 bm_shop_product_id = 2; // 2025.12.30 deprecated.
+    repeated Product products = 3;
+  }
+
+  // 해금된 핫딜 상품 목록
+  // 처음 접속시: 전체 핫딜 상품 목록 전달
+  // 해금시: 해금된 핫딜 상품 목록 전달
+  message HotDealBmProductUnlock {
+    repeated Product products = 1;
+    bool unlocked = 2; // 처음 접속시 false, 해금시 true로 전달
+
+    message Product {
+      int64 product_id = 1;
+      google.protobuf.Timestamp unlocked_at = 2; // 해금 일시
+      google.protobuf.Timestamp expired_at = 3; // 구매만료 일시
+    }
+  }
+
+  // GetRecipe/ExecuteRecipe에서 사용하는 공통 구조체
+  message RecipeResult {
+    repeated RecipeResultItem items = 1;
+
+    message RecipeResultItem {
+      RecipeResultType result_type = 1;
+      int64 item_id = 2;
+      int64 amount = 3;
+      repeated common.Property properties = 4;
+      int64 output_id = 5; // recipe_output.yaml -> Output의 Id
+      optional int64 re_roll_item_id = 6; // 다시뽑기에 해당하는 경우 다시뽑기 아이템 ID
+      bool new_item = 7; // 신규 획득 여부
+    }
+  }
+
+  message GetRecipe {
+    string material_item_uuid = 1;
+    repeated RecipeResult results = 2; // repeat 기능 때문에 결과가 복수개
+    int64 recipe_output_id = 3;
+    ItemResult result = 100;
+  }
+
+  message ExecuteRecipe {
+    int64 recipe_input_id = 1;
+    repeated RecipeResult results = 2; // repeat 기능 때문에 결과가 복수개
+    ItemResult result = 3;
+
+    // NOTE : 아래 필드는 ItemResult가 SUCCESS인 경우에만 유효
+    int32 canceled_repeat_count = 10; // 제작 횟수 제한 및 선착순(한정) 제작이 마감되어 취소된 repeat 회수
+    int32 limit_count_amount = 11; // 제작 횟수 제한이 있는 경우, 제작된 횟수
+    int32 limit_output_amount = 12; // 선착순(한정) 제한이 있는 경우, 제작된 횟수
+    int32 failure_count = 13; // 천장이 있는 경우, 실패한 횟수
+    bool has_payback = 14; // 페이백 여부
+  }
+
+  message Disassemble {
+    ItemResult result = 1;
+  }
+
+  message GetRecipeLimitList {
+    repeated RecipeLimitData recipe_limit_data = 1;
+
+    message RecipeLimitData {
+      int64 recipe_output_id = 1;
+      int32 limit_count_amount = 2;
+      int32 limit_output_amount = 3;
+      int32 failure_count = 4;
+    }
+  }
+
+  // 다시뽑기 결과
+  message ReRollRecipe {
+    ItemResult result = 1;
+    string re_roll_item_uuid = 2;
+
+    // 아래 다시뽑기 결과 정보는 성공일때만 응답되며, 실패인 경우 빈 값으로 응답됨.
+    oneof re_roll {
+      ConfirmResult confirm_result = 10; // [2024.12.05 deprecated]
+      ReRollResult re_roll_result = 11;
+    }
+
+    message ConfirmResult {// [2024.12.05 deprecated]
+      int64 item_id = 1;
+      int64 recipe_output_id = 2;
+    }
+
+    message ReRollResult {
+      int64 item_id = 1;
+      int32 re_roll_count = 2;
+      int64 recipe_output_id = 3;
+    }
+  }
+
+  // 다시뽑기 확정 결과
+  message ConfirmReRollRecipe {
+    ItemResult result = 1;
+    repeated ConfirmResult confirm_result = 2;
+
+    message ConfirmResult {
+      string re_roll_item_uuid = 1; // 확정된 다시뽑기 아이템 UUID
+      int64 item_id = 2; // 확정을 통해 수령한 아이템 TID
+      int64 recipe_output_id = 3; // 마지막 다시뽑기에 사용된 RecipeOutput TID
+    }
+  }
+
+  message Transfer {
+    ItemResult result = 1; // 시스템메시지를 위해 사용
+    int64 inventory_id = 2; // 목적지 인벤토리 ID
+  }
+
+  message Sort {
+    ItemResult result = 1;
+    int64 inventory_id = 2;
+    repeated string item_uuid = 3;
+  }
+
+  message Expand {
+    ItemResult result = 1;
+    int64 inventory_id = 2;
+    int32 expand_level = 3;
+  }
+
+  message RegisterItemCollection {
+    ItemResult result = 1;
+  }
+
+  message QueryItemCollection {
+    CollectionEventType collection_event_type = 1;
+    repeated Collection collections = 2;
+  }
+
+  message QueryCollectionReward {
+    repeated CollectionSummation collections = 1;
+  }
+
+  message PresetInfo {
+    message Skill {
+      int64 skill_id = 1;
+      int32 index = 2; // 0=우선순위 등록 안된 상태
+      bool is_auto = 3;
+    }
+
+    int64 preset_id = 99;
+    int64 preset_num = 1;
+    repeated Skill skills = 6;
+  }
+
+  message Preset {
+    PresetInfo preset_info = 1;
+    ItemResult result = 100;
+  }
+
+  message MasterPreset {
+    int64 master_preset_num = 1;
+    repeated PresetInfo preset_infos = 2;
+    ItemResult result = 100;
+  }
+
+  message FusionMasteryEssence {
+    int64 item_id = 1;
+    int64 enchant_level = 2;
+    ItemResult result = 3;
+  }
+
+  message UnFusionMasteryEssence {
+    ItemResult result = 1;
+    int64 mastery_essence_fusion_id = 2;
+  }
+
+  message AddCombinationCount {
+    ItemResult result = 1;
+  }
+
+  message ResetCombination {
+    ItemResult result = 1;
+    string item_uuid = 2;
+  }
+
+  message UnlockCombination {
+    ItemResult result = 1;
+    string item_uuid = 2;
+  }
+
+  message OfflineModeResult {
+    message Item {
+      string item_uuid = 1;
+      int64 item_id = 2;
+      int64 changed_amount = 3;
+    }
+
+    repeated Item items = 1;
+    int64 experience_changed = 2;
+  }
+
+  message OfflineModeTime {
+    google.protobuf.Duration taken_time = 1;
+    google.protobuf.Duration remain_time = 2;
+    google.protobuf.Duration offline_mode_time = 3;
+  }
+
+  message Solidarize {
+    ItemResult result = 1;
+    SolidaritySlotInfo slot_info = 2;
+  }
+
+  message Unsolidarize {
+    ItemResult result = 1;
+    SolidaritySlotInfo slot_info = 2;
+  }
+
+  message UnsolidarizeAll {
+    ItemResult result = 1;
+    int64 equip_slot_category_id = 2;
+  }
+
+  message AutoSolidarize {
+    ItemResult result = 1;
+    repeated SolidaritySlotInfo slot_info = 2;
+    int64 equip_slot_category_id = 3;
+  }
+
+  message SolidaritySlotInfo {
+    int64 equip_slot_id = 1;
+    string item_uuid = 2;
+  }
+
+  message QuerySolidaritySlots {
+    repeated SolidaritySlotInfo slot_info = 1;
+  }
+
+  message ResetMasteryEssence {
+    ItemResult result = 1;
+  }
+
+  message ResetMasteryPage {
+    ItemResult result = 1;
+  }
+
+  message Expired {
+    message ExpiredItem {
+      string item_uuid = 1;
+      int64 item_id = 2;
+      int64 amount = 4;
+      repeated common.Property properties = 5;
+      google.protobuf.Timestamp expire_time = 3;// todo: rename expire_time -> delete_time
+    }
+
+    message ExpiredSubscribe {
+      int64 product_id = 1;
+      google.protobuf.Timestamp expire_time = 2;
+    }
+
+    message ExpiredCollection {
+      int64 collection_id = 1; // todo: rename item_collection_id
+      google.protobuf.Timestamp expire_time = 2;
+    }
+
+    repeated ExpiredItem expired_items = 1;
+    repeated ExpiredSubscribe expired_subscribes = 2;
+    repeated ExpiredCollection expired_collections = 3;
+  }
+}

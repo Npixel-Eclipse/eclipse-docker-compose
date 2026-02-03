@@ -1,0 +1,42 @@
+- Id: 326
+  Name: HuntingZone_Area_1
+  Comment: 바리탄 북부 - 나무 계곡
+  DisplayTerritory: WorldMap_North_Var_Field_Highwinguard_Logging_Area
+  DescriptionName: UIWord_HuntingZone_AreaName_North_Var_Field_Tree_Valley
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Main_Blue_Sprite.AreaMapIcon_Main_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_1
+- Id: 70
+  Name: HuntingZone_Area_2
+  Comment: 바리탄 북부 - 바리탄 성서 수도회
+  DisplayTerritory: WorldMap_East_Var_Field_Highwinguard_Eastern_Plains
+  DescriptionName: UIWord_HuntingZone_AreaName_North_Var_Varitan_Biblical_Order
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Blue_Sprite.AreaMapIcon_Sub_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_2
+- Id: 228
+  Name: HuntingZone_Area_3
+  Comment: 바리탄 북부 - 락헤드 국경 수비대
+  DisplayTerritory: WorldMap_North_Var_Field_Tree_Valley
+  DescriptionName: UIWord_HuntingZone_AreaName_North_Var_Field_Rockhed_Mercenary_Patrols
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Blue_Sprite.AreaMapIcon_Sub_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_3
+- Id: 389
+  Name: HuntingZone_Area_4
+  Comment: 레인우드 - 홀룰루 동굴
+  DisplayTerritory: WorldMap_Rainwood_Hololu_Cavern
+  DescriptionName: UIWord_HuntingZone_AreaName_Rainwood_Hololu_Cavern
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Main_Yellow_Sprite.AreaMapIcon_Main_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_4
+- Id: 328
+  Name: HuntingZone_Area_5
+  Comment: 레인우드 - 난쟁이 도굴꾼 소굴
+  DisplayTerritory: WorldMap_Rainwood_Dwarven_Gravediggers_Camp
+  DescriptionName: UIWord_HuntingZone_AreaName_Rainwood_Dwarven_Gravediggers_Camp
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Yellow_Sprite.AreaMapIcon_Sub_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_5
+- Id: 589
+  Name: HuntingZone_Area_6
+  Comment: 레인우드 - 제국 연구 초소
+  DisplayTerritory: WorldMap_Rainwood_Dragondog_Hunters_Camp
+  DescriptionName: UIWord_HuntingZone_AreaName_Rainwood_Rockhed_Imperial_Outpost
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Yellow_Sprite.AreaMapIcon_Sub_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_6

@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Ko_KR:
+      type:
+        - string
+        - number
+    En_US:
+      type:
+        - string
+        - number
+    Zh_TW:
+      type:
+        - string
+        - number
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - Ko_KR

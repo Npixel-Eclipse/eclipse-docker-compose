@@ -1,0 +1,7517 @@
+# 시뮬레이션 YAML 문서
+#
+# 특수 엔티티 이름 (예약어):
+#
+# ServantNpc_0, ServantNpc_1, ServantNpc_2, ...
+#   - N번째 소환된 하수인(servant)을 가리킴 (0부터 시작)
+#   - 하수인들은 EntityId 순서로 정렬되어 일관된 순서 보장
+#   - 예시: CastSkill: [ServantNpc_1, Attack, Enemy]  # 두 번째 하수인
+#
+# 사용 예시:
+#   - Command:
+#       CastSkill: [Self, Summon_Skill, Self]  # 하수인 소환
+#     Delay: 100
+#   - Command:
+#       CastSkill: [ServantNpc_0, Servant_Attack, Enemy]  # 첫 번째 하수인이 공격
+#     Delay: 100
+#   - Command:
+#       CastSkill: [ServantNpc_1, Servant_Attack, Enemy]  # 두 번째 하수인이 공격
+#     Delay: 100
+#
+# 참고사항:
+# - 요청한 하수인 인덱스가 존재하지 않으면 에러 로그가 남고 주인 PC가 대체로 사용됨
+# - 여러 하수인은 자동으로 EntityId 순서로 인덱싱됨
+#
+################################################################################
+
+- Id: 1
+  Name: FighterInit_Test
+  Comment: 파이터 초기화 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - Coordinate:
+      - Self
+      - -3
+      - -507
+    - ContextI64:
+      - Self
+      - ItemEquippedWeaponTwoHandSword
+      - 1
+    - ExistStringContext:
+      - Self
+      - NormalAttack
+      - Fighter_NormalAttack
+    - Not:
+        ExistStringContext:
+          - Self
+          - NormalAttack
+          - Ranger_NormalAttack
+    - Not:
+        ExistStringContext:
+          - Self
+          - NormalAttack
+          - Sorcerer_NormalAttack
+- Id: 2
+  Name: Basic_Move_Test
+  Comment: 기본 이동 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - -7
+      - -506
+    Delay: 5000
+    Check:
+    - Coordinate:
+      - Self
+      - -7
+      - -506
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - -9
+      - -502
+    Delay: 5000
+    Check:
+    - Coordinate:
+      - Self
+      - -9
+      - -502
+- Id: 3
+  Name: Collision_Test_1
+  Comment: pc끼리 충돌 체크
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  - Name: Other
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - -1
+      - -507
+    Delay: 3000
+    Check:
+    - Not:
+        Coordinate:
+          - Self
+          - -1
+          - -507
+    - Coordinate:
+      - Other
+      - -1
+      - -507
+- Id: 4
+  Name: Ghost_Test
+  Comment: 고스트 상태면 겹치기 가능
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  - Name: Other
+    Init: RangerInit
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Ghost
+      - Self
+      - Self
+    Delay: 500
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - -1
+      - -507
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Self
+      - -1
+      - -507
+    - Coordinate:
+      - Other
+      - -1
+      - -507
+- Id: 5
+  Name: TransformSkill_Test_1
+  Comment: 무기에 따른 TransformSkill 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Weapon_Transform_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_20_Skill
+      - Self
+      - Other
+- Id: 6
+  Name: Attack_Test_1
+  Comment: 타깃을 안잡고 공격 요청시 실패
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillFail:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+- Id: 7
+  Name: Radius_Skill_Test_1
+  Comment: 범위 내에 스킬을 맞은 타깃들은 PropertyBag에 TaxExperience가 설정되어야 한다.
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: -2
+    StartY: -507
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: -3
+    StartY: -507
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Radius_Tax_Buff_10_Skill
+      - Self
+      - Other1
+    Delay: 1000
+    Check:
+    - SkillSuccess:
+      - Simulation_Radius_Tax_Buff_10_Skill
+      - Self
+      - Other1
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 10
+- Id: 8
+  Name: Transform_Radius_Skill_Test_1
+  Comment: 무기에 따라 TransformSkill이 발동되고 Transform된 스킬은 Radius 스킬
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: -2
+    StartY: -507
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: -3
+    StartY: -507
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Transform_Tax_Buff_Skill
+      - Self
+      - Other1
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Transform_Tax_Buff_Skill
+      - Self
+      - Other1
+    - SkillSuccess:
+      - Simulation_Radius_Tax_Buff_20_Skill
+      - Self
+      - Other1
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 20
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 20
+- Id: 9
+  Name: Transform_Skill_Recursive_Test_1
+  Comment: TransformSkill이 다시 TransformSkill을 생성하는 경우
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Recursive_Transform_Skill_1
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Recursive_Transform_Skill_1
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Recursive_Transform_Skill_CrossBow_Middle
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Recursive_Transform_Skill_CrossBow_Leaf
+      - Self
+      - Other
+- Id: 10
+  Name: Transform_Skill_CastRange_Test
+  Comment: TransformSkill의 CastRange는 부모 + 첫번째 depth의 자식들 사거리중 가장 작은 값을 사용함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Transform_Skill_CastRange
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Transform_Skill_CastRange
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Transform_Skill_CastRange_CrossBow_Leaf
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 11
+  Name: TransformSkill_By_BattleItem_Test
+  Comment: 아이템으로 스킬 사용시 TransformSkill이 적용되는지
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 1
+    Delay: 1000
+  - Command:
+      UseBattleItem:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 1
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Transform_Skill_By_BattleItem
+      - Self
+      - Self
+    - SkillSuccess:
+      - Simulation_Self_Tax_Buff_10_Skill
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+- Id: 12
+  Name: TransformSkill_Only_Parent_Test
+  Comment: 자식 스킬이 모두 실패해도 부모 스킬이 성공했다면 부모 스킬은 나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_TwoHandSword_Transform_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Self_Tax_Buff_TwoHandSword_Transform_Skill
+      - Self
+      - Self
+    - SkillFail:
+      - Simulation_Self_Tax_Buff_10_Skill
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+- Id: 13
+  Name: Critical_Test
+  Comment: Critical 확률이 100이면 무조건 크리티컬이 나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - CriticalProbabilityResult
+      - 1000000
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Critical_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - Critical:
+      - Simulation_Critical_Skill
+      - Self
+      - Other
+- Id: 14
+  Name: Buff_Group_Test_1
+  Comment: 같은 BuffGroup이어도 우선 순위가 같거나 높으면 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_10_Priority_1_Skill
+      - Self
+      - Self
+    Delay: 1000
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_20_Priority_2_Skill
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+- Id: 15
+  Name: Buff_Group_Test_2
+  Comment: 같은 BuffGroup이면서 기존 Buff가 우선 순위가 더 높다면 나중 버프는 적용되지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_20_Priority_2_Skill
+      - Self
+      - Self
+    Delay: 1000
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_20_Priority_2_Skill
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+- Id: 16
+  Name: Block_Buff_Test
+  Comment: BlockBuffGroup에 속한 버프들은 적용되지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Immune_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+  - Command:
+      CastSkill:
+      - Simulation_Self_Tax_Buff_10_Priority_1_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - Not:
+        ExistContext:
+          - Self
+          - TaxExperience
+- Id: 17
+  Name: Rotate_Burst_Skill_Test_1
+  Comment: RotateBurst 스킬은 지정된 숫자만큼 타겟들을 번갈아가면서 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: -2
+    StartY: -503
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: -3
+    StartY: -504
+  - Name: Other3
+    Init: PunchingBagInit
+    StartX: -4
+    StartY: -505
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 3000
+  - Command:
+      CastSkill:
+      - Simulation_Rotate_Burst_Skill
+      - Self
+      - Other1
+    Delay: 6000
+    Check:
+    - SkillSuccess:
+      - Simulation_Rotate_Burst_Skill
+      - Self
+      - Other1
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other3
+      - TaxExperience
+      - 10
+- Id: 18
+  Name: Rotate_Burst_Skill_Test_2
+  Comment: RotateBurst 스킬은 첫 타겟 이후부터는 additional_range만큼 사거리 보정이 되어서 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -506
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -510
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 3000
+  - Command:
+      CastSkill:
+      - Simulation_Rotate_Burst_Skill
+      - Self
+      - Other1
+    Delay: 6000
+    Check:
+    - SkillSuccess:
+      - Simulation_Rotate_Burst_Skill
+      - Self
+      - Other1
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 10
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 19
+  Name: LowWall_Test_1
+  Comment: LowWall로는 이동할 수 없음
+  Layer:
+  - WallType: LowWall
+    X: 0
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -503
+    Delay: 1200
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 20
+  Name: HighWall_Test_1
+  Comment: HighWall로는 이동할 수 없음
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -503
+    Delay: 1200
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 21
+  Name: SightWall_Test_1
+  Comment: SightWall로는 이동할 수 없음
+  Layer:
+  - WallType: SightWall
+    X: 0
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -503
+    Delay: 1200
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 22
+  Name: LowWall_Test_2
+  Comment: 타겟이 LowWall 뒤에 있어도 원거리 공격이 가능해야함
+  Layer:
+  - WallType: LowWall
+    X: 0
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 23
+  Name: HighWall_Test_2
+  Comment: 타겟이 HighWall 뒤에 있으면 다른 곳으로 이동해서 때려야함
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 2200
+    Check:
+    - SkillSuccess:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    - Not:
+        Coordinate:
+          - Self
+          - 0
+          - -502
+- Id: 25
+  Name: LowWall_Test_3
+  Comment: 타겟이 LowWall에 둘러쌓여 있으면 근거리 공격 시도시 스킬 실패해야함
+  Layer:
+  - WallType: LowWall
+    X: 0
+    Y: -503
+  - WallType: LowWall
+    X: 1
+    Y: -503
+  - WallType: LowWall
+    X: 1
+    Y: -504
+  - WallType: LowWall
+    X: 1
+    Y: -505
+  - WallType: LowWall
+    X: 0
+    Y: -505
+  - WallType: LowWall
+    X: -1
+    Y: -505
+  - WallType: LowWall
+    X: -1
+    Y: -504
+  - WallType: LowWall
+    X: -1
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Fighter_NormalAttack
+      - Self
+      - Other
+    Delay: 2200
+    Check:
+    - SkillFail:
+      - Fighter_NormalAttack_TwoHandSword
+      - Self
+      - Other
+- Id: 26
+  Name: HighWall_Test_3
+  Comment: 타겟이 HighWall에 둘러쌓여 있으면 원거리 공격 시도시 스킬 실패해야함
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -505
+  - WallType: HighWall
+    X: 0
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -504
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 2200
+    Check:
+    - SkillFail:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+- Id: 27
+  Name: CoolTime_Test_1
+  Comment: 쿨타임이 지날 때까지 스킬이 안나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Tax_Buff_10_CoolTime_Skill
+      - Self
+      - Other
+    Delay: 2000
+  - Command:
+      CastSkill:
+      - Simulation_Tax_Buff_10_CoolTime_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccessCount:
+      - Simulation_Tax_Buff_10_CoolTime_Skill
+      - Self
+      - Other
+      - 1
+- Id: 28
+  Name: CastAsBoomerang_Test_1
+  Comment: CastAsBoomerang으로 인해 자신에게도 TaxExperience 10이 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Tax_Buff_10_Boomerang_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Tax_Buff_10_Boomerang_Skill
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Other
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+- Id: 29
+  Name: CastAsBoomerang_Test_2
+  Comment: CastAsBoomerang으로 돌아오는 스킬의 확률을 0으로 설정하면 돌아오지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Tax_Buff_10_Boomerang_NoHit_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Tax_Buff_10_Boomerang_NoHit_Skill
+      - Self
+      - Other
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Other
+      - Self
+    - Not:
+        ExistContext:
+          - Self
+          - TaxExperience
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+- Id: 32
+  Name: Skill_Category_Test_1
+  Comment: 스킬 카테고리 중에 CheckPolymorphWeapon이 true인 카테고리는 적절한 무기를 끼고 있어야 스킬이 나감
+  PcInit:
+  - Name: Self
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Target_Tax_Buff_10_AttackSkill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_10_AttackSkill
+      - Self
+      - Other
+- Id: 33
+  Name: Skill_Category_Test_2
+  Comment: UnaffectedSkillCategory 버프를 가지고 있는 경우 거기 정의된 스킬 카테고리는 맞지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Immune_AttackSkill_Buff
+      - Other
+      - Other
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Target_Tax_Buff_10_AttackSkill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - Not:
+        ExistContext:
+          - Other
+          - TaxExperience
+- Id: 34
+  Name: Potion_Test_1
+  Comment: 물약을 사용하면 체력 회복 상승시키는 스킬이 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 10
+    Delay: 500
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 3000
+  - Command:
+      UseBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Potion_Skill
+      - Self
+      - Self
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 0
+    - ContextI64:
+      - Self
+      - Hp
+      - 510
+- Id: 35
+  Name: Battle_Item_CoolTime_Test_1
+  Comment: 배틀 아이템 사용시에도 쿨타임이 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 10
+    Delay: 500
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 2
+    Delay: 1000
+  - Command:
+      UseBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 1500
+  - Command:
+      UseBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 1500
+    Check:
+    - SkillSuccessCount:
+      - Simulation_Potion_Skill
+      - Self
+      - Self
+      - 1
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+- Id: 36
+  Name: Bora_Test_1
+  Comment: 선빵치면 Bora 버프 생겨야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - ExistContext:
+      - Self
+      - Bora
+- Id: 37
+  Name: Invoke_Skill_Test_1
+  Comment: InvokeSkill을 사용하는 버프를 가지고 있는 경우 SkillCategory에 맞는 스킬을 사용하면 InvokeSkill이 나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_HuntingZone_InvokeSkill_Tax_10_Buff
+      - Self
+      - Self
+    Delay: 500
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Target_HuntingZone_Ticket_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_Target_HuntingZone_Ticket_Skill
+      - Self
+      - Other
+- Id: 38
+  Name: Invoke_Skill_Test_2
+  Comment: InvokeSkill을 사용하는 버프를 가지고 있어도 SkillCategory가 안맞으면 InvokeSkill이 나가지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_HuntingZone_InvokeSkill_Tax_10_Buff
+      - Self
+      - Self
+    Delay: 500
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Self
+      - Other
+- Id: 39
+  Name: NpcInit_Test_1
+  Comment: Npc 초기화 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Other
+      - Hp
+      - 20000
+    Delay: 300
+    Check:
+    - ContextI64:
+      - Other
+      - Hp
+      - 20000
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+- Id: 40
+  Name: Search_Target_Test_1
+  Comment: passive monster에게 데미지 0을 가해도 npc가 공격자를 타겟으로 잡아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Other
+      - NormalAttackDamageReduction
+      - 9999
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - MainTarget:
+      - Other
+      - Self
+- Id: 41
+  Name: Search_Target_Test_2
+  Comment: passive monster에게 스킬이 miss가 떠도 npc가 공격자를 타겟으로 잡아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Other
+      - ArmorClass
+      - 9999
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 4000
+    Check:
+    - MainTarget:
+      - Other
+      - Self
+- Id: 42
+  Name: Search_Target_Test_3
+  Comment: passive monster에게 데미지를 가하면 npc가 공격자를 타겟으로 잡아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 1000
+  - Command:
+      CastSkill:
+      - Simulation_Damage_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Damage_Skill
+      - Self
+      - Other
+    - ExistContext:
+      - Other
+      - Angry
+  - Command:
+      DoNothing: Other
+    Delay: 5000
+    Check:
+    - MainTarget:
+      - Other
+      - Self
+- Id: 43
+  Name: Drop_Item_Test_1
+  Comment: "Npc를 잡은 후 100% 확률인 드랍 아이템이 떨어지고 줍기 스킬로 먹은 후 인벤토리 체크 테스트"
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Other
+    Delay: 1500
+  - Command:
+      PickUpItem: Self
+    Delay: 4000
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+- Id: 44
+  Name: Drop_Item_Test_2
+  Comment: stackable인 아이템은 슬롯 하나로 여러개 주워 먹을 수 있어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      DropItem:
+      - DropPotion1
+      - Simulation_Potion_Item
+      - 0
+      - -504
+    Delay: 1000
+  - Command:
+      DropItem:
+      - DropPotion2
+      - Simulation_Potion_Item
+      - 0
+      - -505
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 2
+- Id: 45
+  Name: Drop_Item_Test_3
+  Comment: 슬롯이 부족하면 아이템을 주워 먹지 말아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      DropItem:
+      - DropPotion
+      - Simulation_Potion_Item
+      - 0
+      - -504
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+  - Command:
+      DropItem:
+      - DropTransformBattleItem
+      - Simulation_Transform_Skill_Battle_Item
+      - 0
+      - -505
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 0
+- Id: 46
+  Name: Immune_Target_Test_1
+  Comment: 타겟 면역 버프를 가지고 있으면 타겟되지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Immune_Targeted_Buff
+      - Other
+      - Other
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+    Check:
+    - Not:
+        SubTarget:
+          - Self
+          - Other
+- Id: 47
+  Name: Immune_Target_Test_2
+  Comment: 공격 타겟 면역 버프를 가지고 있으면 서브 타겟은 되지만 공격 타겟은 되지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Immune_Main_Targeted_Buff
+      - Other
+      - Other
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+    Check:
+    - SubTarget:
+      - Self
+      - Other
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+    Check:
+    - Not:
+        MainTarget:
+          - Self
+          - Other
+- Id: 48
+  Name: AutoCast_Test_1
+  Comment: 자동 사용에 스킬을 IsAuto 모드로 등록하면 공격 타겟 지정시에 해당 스킬이 자동으로 나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Passive_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      RegisterAutoCastSkill:
+      - Self
+      - Simulation_Target_Tax_Buff_10_AutoCast_Skill
+    Delay: 500
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - MainTarget:
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_10_AutoCast_Skill
+      - Self
+      - Other
+- Id: 49
+  Name: AutoCast_Test_2
+  Comment: 자동 사용에 아이템을 IsAuto 모드로 등록해놓으면 자동으로 사용해야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 1000
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 10
+    Delay: 300
+  - Command:
+      RegisterAutoCastItem:
+      - Self
+      - Simulation_Potion_Item
+    Delay: 1000
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -504
+    Delay: 3000
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 0
+    - SkillSuccess:
+      - Simulation_Potion_Skill
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - Hp
+      - 510
+- Id: 50
+  Name: Change_Target_Test_1
+  Comment: Pc는 서브타겟 상태에서 ChangeTarget을 해도 메인타겟으로 변경되지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+    Check:
+    - SubTarget:
+      - Self
+      - Other
+    - Not:
+        MainTarget:
+          - Self
+          - Other
+- Id: 51
+  Name: AutoCombat_Test_1
+  Comment: 자동 사냥 모드에서 떨어진 아이템을 먹어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      DropItem:
+      - DropPotion
+      - Simulation_Potion_Item
+      - 0
+      - -505
+    Delay: 1000
+  - Command:
+      ToggleAutoCombat: Self
+    Delay: 5000
+    Check:
+    - SkillSuccess:
+      - PickUpItem
+      - Self
+      - DropPotion
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+- Id: 52
+  Name: Performance_Test_Example
+  Comment: 성능 테스트 예제
+  Skip: true
+  Duplicate: 500
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Other1
+    Npc: Simulation_Passive_Monster_Spawn_Interval
+    StartX: 0
+    StartY: -504
+    SpawnByInterval: Simulation_Basic_Spawn
+  - Name: Other2
+    Npc: Simulation_Passive_Monster_Spawn_Interval
+    StartX: 0
+    StartY: -505
+    SpawnByInterval: Simulation_Basic_Spawn
+  - Name: Other3
+    Npc: Simulation_Passive_Monster_Spawn_Interval
+    StartX: 0
+    StartY: -506
+    SpawnByInterval: Simulation_Basic_Spawn
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 3
+    Delay: 100
+  - Command:
+      SetPropertyI64:
+      - Self
+      - NormalAttackDamage
+      - 9999
+    Delay: 100
+  - Command:
+      ToggleAutoCombat: Self
+    Delay: 15000
+- Id: 53
+  Name: Stack_Buff_Test_1
+  Comment: 스택형 버프는 특정 스택에 도달할 때마다 버프가 갈아끼워져야함 (현재 스킬로 적용되는 버프만 가능)
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+- Id: 54
+  Name: Item_Lock_Test_1
+  Comment: 잠금된 아이템은 스킬을 사용할 수 없음
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 1
+    Delay: 1000
+  - Command:
+      LockItem:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+    Delay: 1000
+  - Command:
+      UseBattleItem:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 1
+    Delay: 2000
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Transform_Skill_Battle_Item
+      - 1
+    - Not:
+        ExistContext:
+          - Self
+          - TaxExperience
+- Id: 55
+  Name: AutoCast_Test_3
+  Comment: 자동 사용에 잠금된 아이템은 IsAuto 모드로 등록해놓아도 사용되지 말아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 1000
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 10
+    Delay: 300
+  - Command:
+      LockItem:
+      - Self
+      - Simulation_Potion_Item
+    Delay: 1000
+  - Command:
+      RegisterAutoCastItem:
+      - Self
+      - Simulation_Potion_Item
+    Delay: 500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    - SkillFail:
+      - Simulation_Potion_Skill
+      - Self
+      - Self
+- Id: 56
+  Name: Drop_Item_Test_4
+  Comment: 캐릭터와 같은 셀에 떨어진 아이템도 먹을 수 있어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      DropItem:
+      - DropPotion
+      - Simulation_Potion_Item
+      - 0
+      - -504
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+- Id: 57
+  Name: Radius_Copy_Transform_Skill_Test_1
+  Comment: Radius + IndividualInRange + TransformSkill 조합이면 범위 내 타겟에게 개별 스킬들이 TransformSkill 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: -2
+    StartY: -507
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: -3
+    StartY: -507
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Other1
+      - Fire
+      - 1
+    Delay: 100
+  - Command:
+      SetPropertyI64:
+      - Other2
+      - Ice
+      - 1
+    Delay: 100
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Radius_Copy_Transform_Skill
+      - Self
+      - Other1
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Radius_Copy_Transform_Skill
+      - Self
+      - Other1
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Self
+      - Other1
+    - SkillSuccess:
+      - Simulation_Radius_Copy_Transform_Skill
+      - Self
+      - Other2
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_20_Skill
+      - Self
+      - Other2
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 10
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 20
+- Id: 58
+  Name: Pk_Point_Test_1
+  Comment: Pk를 하면 PkPoint가 1 이상 내려가야 함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Must_Kill
+      - Self
+      - Other
+    - LowerThanContextI64:
+      - Self
+      - PkPoint
+      - 0
+- Id: 59
+  Name: Pk_Point_Test_2
+  Comment: Bora 버프가 있는 애는 Pk를 해도 PkPoint가 내려가지 않아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Bora_Buff
+      - Other
+      - Other
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Other
+      - Bora
+      - 1
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Must_Kill
+      - Self
+      - Other
+    - Not:
+        ExistContext:
+          - Self
+          - PkPoint
+- Id: 60
+  Name: Dash_Skill_Test_1
+  Comment: Dash 스킬 사용시 상대방 주변 ArriveRadius 범위 이내로 상대방과 최대한 가깝게 이동해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -509
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -508
+- Id: 61
+  Name: Dash_Skill_Test_2
+  Comment: Dash 스킬 사용시 ArriveRadius가 1이고 상대방 주변이 다 막혀있으면 스킬 실패해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -509
+  - Name: Occupied1
+    Init: PunchingBagInit
+    StartX: -1
+    StartY: -508
+  - Name: Occupied2
+    Init: PunchingBagInit
+    StartX: -1
+    StartY: -509
+  - Name: Occupied3
+    Init: PunchingBagInit
+    StartX: -1
+    StartY: -510
+  - Name: Occupied4
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -510
+  - Name: Occupied5
+    Init: PunchingBagInit
+    StartX: 1
+    StartY: -510
+  - Name: Occupied6
+    Init: PunchingBagInit
+    StartX: 1
+    StartY: -509
+  - Name: Occupied7
+    Init: PunchingBagInit
+    StartX: 1
+    StartY: -508
+  - Name: Occupied8
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -508
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillFail:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+- Id: 62
+  Name: Dash_Skill_Test_3
+  Comment: Dash 스킬 사용시 상대방과 내 직선 경로에 상대방이 있어도 사용 가능해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -509
+  - Name: Someone
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -508
+- Id: 63
+  Name: Dash_Skill_Test_4
+  Comment: Dash 스킬 사용시 상대방과 내 직선 경로에 LowWall이 있어도 사용 가능해야함
+  Layer:
+  - WallType: LowWall
+    X: 0
+    Y: -504
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -509
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Dash_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -508
+- Id: 64
+  Name: Blink_Skill_Test_1
+  Comment: Blink 스킬 사용시 주변에 아무것도 없으면 내가 보는 방향으로 이동해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -499
+- Id: 65
+  Name: Blink_Skill_Test_2
+  Comment: Blink 스킬 사용시 몬스터나 pc는 뛰어넘고 내가 보는 방향으로 이동해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -499
+- Id: 66
+  Name: Blink_Skill_Test_3
+  Comment: Blink 스킬 사용시 스킬 최대 거리에 pc나 몬스터 있으면 그 앞까지만 이동해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -500
+  - Name: Other3
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -499
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 67
+  Name: Blink_Skill_Test_4
+  Comment: Blink 스킬 사용시 최대 거리까지 pc나 몬스터로 모두 막혀 있으면 이동 못함 (스킬은 쓴 것 처럼 취급해야함 제자리에 쓴거처럼)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other1
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -502
+  - Name: Other2
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  - Name: Other3
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -500
+  - Name: Other4
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -499
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    - Coordinate:
+      - Self
+      - 0
+      - -503
+- Id: 68
+  Name: Blink_Skill_Test_5
+  Comment: Blink 스킬 사용시 내 주변이 다 LowWall로 막혀있어도 뛰어넘을 수 있음
+  Layer:
+  - WallType: LowWall
+    X: -1
+    Y: -503
+  - WallType: LowWall
+    X: -1
+    Y: -504
+  - WallType: LowWall
+    X: 0
+    Y: -504
+  - WallType: LowWall
+    X: 1
+    Y: -504
+  - WallType: LowWall
+    X: 1
+    Y: -503
+  - WallType: LowWall
+    X: 1
+    Y: -502
+  - WallType: LowWall
+    X: 0
+    Y: -502
+  - WallType: LowWall
+    X: -1
+    Y: -502
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    - Coordinate:
+      - Self
+      - 0
+      - -499
+- Id: 69
+  Name: Blink_Skill_Test_6
+  Comment: Blink 스킬 사용시 내 주변이 다 HighWall로 막혀있으면 뛰어넘을 수 없음 (스킬은 사용한 것으로 처리)
+  Layer:
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  - WallType: HighWall
+    X: -1
+    Y: -504
+  - WallType: HighWall
+    X: 0
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -502
+  - WallType: HighWall
+    X: 0
+    Y: -502
+  - WallType: HighWall
+    X: -1
+    Y: -502
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    - Coordinate:
+      - Self
+      - 0
+      - -503
+- Id: 70
+  Name: Blink_Skill_Test_7
+  Comment: Blink 스킬 사용시 내 주변이 다 SightWall로 막혀있으면 뛰어넘을 수 없음 (스킬은 사용한 것으로 처리)
+  Layer:
+  - WallType: SightWall
+    X: -1
+    Y: -503
+  - WallType: SightWall
+    X: -1
+    Y: -504
+  - WallType: SightWall
+    X: 0
+    Y: -504
+  - WallType: SightWall
+    X: 1
+    Y: -504
+  - WallType: SightWall
+    X: 1
+    Y: -503
+  - WallType: SightWall
+    X: 1
+    Y: -502
+  - WallType: SightWall
+    X: 0
+    Y: -502
+  - WallType: SightWall
+    X: -1
+    Y: -502
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetDirection:
+      - Self
+      - Up
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Blink_Skill
+      - Self
+      - Self
+    - Coordinate:
+      - Self
+      - 0
+      - -503
+- Id: 71
+  Name: Ranger_NormalAttack_Cast_Range_Test_1
+  Comment: 레인저 사거리 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -506
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 1000
+  - Command:
+      CastSkill:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Ranger_NormalAttack
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 72
+  Name: Transform_Transform_Cast_Range_Test_1
+  Comment: TransformSkill의 자식의 자식이 있는 경우 첫번째 자식까지 계산된 최소 사거리가 하위 자식들에게 전달되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -502
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -506
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 1000
+  - Command:
+      CastSkill:
+      - Simulation_Transform_Transform_Cast_Range_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_Transform_Transform_Cast_Range_Skill
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_First_Child_Cast_Range_Skill
+      - Self
+      - Other
+    - SkillSuccess:
+      - Simulation_Last_Child_Cast_Range_Skill
+      - Self
+      - Other
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+    - Coordinate:
+      - Self
+      - 0
+      - -502
+- Id: 73
+  Name: Mp_Cost_Test_1
+  Comment: TransformSkill로 스킬 사용 시 MpCost는 자식 스킬 중 HasProperty가 True인 첫 번쨰 자식 스킬의 MpCost를 사용 해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Test_Fighter_Parent_skill_A
+      - Self
+      - Other
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - Mp
+      - 1990
+- Id: 74
+  Name: TransformSkill_Motion_Delay_Test_1
+  Comment: TransformSkill의 모션 딜레이는 부모 + 성공한 첫번째 자식들의 모션 딜레이 합산으로 적용되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other1
+    Init: PunchingBagInit
+  - Name: Other2
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Transform_Skill_Motion_Delay_Parent
+      - Self
+      - Other1
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Other1
+      - TaxExperience
+      - 10
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other2
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Target_Tax_Buff_20_Skill
+      - Self
+      - Other2
+    Delay: 1000
+    Check:
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_20_Skill
+      - Self
+      - Other2
+    - Not:
+        ExistContext:
+          - Other2
+          - TaxExperience
+  - Command:
+      DoNothing: Self
+    Delay: 7000
+    Check:
+    - ContextI64:
+      - Other2
+      - TaxExperience
+      - 20
+- Id: 75
+  Name: Pull_Skill_Test_1
+  Comment: Pull 스킬 사용시 상대방을 내 주변 ArrivalRadius 만큼 최소거리로 당겨와야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -507
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    Delay: 2000
+    Check:
+    - SkillSuccess:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -503
+    - Coordinate:
+      - Other
+      - 0
+      - -504
+- Id: 76
+  Name: History_Context_Target_Formula_Test_1
+  Comment: 타겟 공식에 history context 제대로 동작하는지
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_History_Skill
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - SkillFail:
+      - Simulation_History_Skill
+      - Self
+      - Self
+  - Command:
+      SetHistoryProperty:
+      - Self
+      - TaxAddressId
+      - 1
+    Delay: 500
+  - Command:
+      SetPropertyI64:
+      - Self
+      - CurrentAddressId
+      - 1
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_History_Skill
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_History_Skill
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+- Id: 77
+  Name: History_Context_Target_Formula_Test_2
+  Comment: 타겟 공식에 history context 제대로 동작하는지2
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_History_Skill2
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_History_Skill2
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      SetHistoryProperty:
+      - Self
+      - TaxAddressId
+      - 1
+    Delay: 500
+  - Command:
+      SetPropertyI64:
+      - Self
+      - CurrentAddressId
+      - 1
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_History_Skill2
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - SkillSuccessCount:
+      - Simulation_History_Skill2
+      - Self
+      - Self
+      - 1
+- Id: 78
+  Name: Dynamic_Property_Transform_Skill_Test_1
+  Comment: dynamic_property 조건으로 TransformSkill 동작 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Dynamic_Transform_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Self
+      - Other
+  - Command:
+      SetDynamicProperty:
+      - Self
+      - Simulation_Dynamic_Transform_Skill
+      - DmgDiceSpot
+      - 1
+    Delay: 500
+  - Command:
+      CastSkill:
+      - Simulation_Dynamic_Transform_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Self
+      - Other
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+- Id: 79
+  Name: Transform_Skill_IgnoreParentSkillTarget_Test_1
+  Comment: IgnoreParentSkillTarget가 true면 부모 스킬 타겟 따라가지 않고 자식 스킬의 타겟 공식을 평가해야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_IgnoreParentSkillTarget_Transform_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_IgnoreParentSkillTarget_Transform_Skill
+      - Self
+      - Other
+    - LowerThanContextI64:
+      - Other
+      - Hp
+      - 6901
+    - SkillSuccess:
+      - Simulation_Self_Tax_Buff_10_Ignore_ParentTarget_Skill
+      - Self
+      - Self
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+- Id: 80
+  Name: Transform_Skill_IgnoreParentSkillTarget_Test_2
+  Comment: IgnoreParentSkillTarget가 true가 아니라면 자식 타겟 공식 평가하지 않고 부모 스킬 타겟을 잡아야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_SkillTarget_Transform_Skill
+      - Self
+      - Other
+    Delay: 1500
+    Check:
+    - SkillSuccess:
+      - Simulation_SkillTarget_Transform_Skill
+      - Self
+      - Other
+    - LowerThanContextI64:
+      - Other
+      - Hp
+      - 6901
+    - SkillSuccess:
+      - Simulation_Self_Tax_Buff_10_ParentTarget_Skill
+      - Self
+      - Other
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+- Id: 81
+  Name: Party_Join_Test_1
+  Comment: "파티가 잘 생성, 가입, 탈퇴 되는지 테스트"
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      JoinParty:
+      - Self
+      - 1
+      - true
+    Delay: 1500
+  - Command:
+      JoinParty:
+      - Other
+      - 1
+      - false
+    Delay: 1500
+    Check:
+    - SameParty:
+      - Self
+      - Other
+    - PartyHost:
+      - Self
+      - 1
+  - Command:
+      LeaveParty:
+      - Other
+      - 1
+    Delay: 1500
+    Check:
+    - Not:
+        SameParty:
+          - Self
+          - Other
+- Id: 82
+  Name: Chained_Skill_Test_1
+  Comment: ChainedSkill은 첫번째 스킬의 모션 딜레이가 끝나고 나가야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  - Name: Other
+    Init: PunchingBagInit
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Hp_Tax_Buff_10_Chained_Skill
+      - Self
+      - Other
+    Delay: 4000
+    Check:
+    - SkillSuccess:
+      - Simulation_Hp_Tax_Buff_10_Chained_Skill
+      - Self
+      - Other
+    - ContextI64:
+      - Other
+      - TestHp
+      - 10
+    - SkillFail:
+      - Simulation_Target_Tax_Buff_10_Skill
+      - Self
+      - Other
+  - Command:
+      DoNothing: Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Other
+      - TaxExperience
+      - 10
+- Id: 84
+  Name: AutoCast_Test_4
+  Comment: 자동 사용에 잠김 아이템을 IsAuto 모드로 등록해놓으면 사용하지 말아야 함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      GiveBattleItem:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    Delay: 1000
+  - Command:
+      LockItem:
+      - Self
+      - Simulation_Potion_Item
+    Delay: 1000
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 10
+    Delay: 300
+  - Command:
+      RegisterAutoCastItem:
+      - Self
+      - Simulation_Potion_Item
+    Delay: 2000
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    - ContextI64:
+      - Self
+      - Hp
+      - 10
+- Id: 85
+  Name: Noclip_Test
+  Comment: NoClip이 true면 LowWall/HighWall/SightWall 뚫고 지나가야함
+  Skip: true
+  Layer:
+  - WallType: LowWall
+    X: 0
+    Y: -504
+  - WallType: HighWall
+    X: 0
+    Y: -505
+  - WallType: SightWall
+    X: 0
+    Y: -506
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      ApplyBuff:
+      - Simulation_Noclip
+      - Self
+      - Self
+    Delay: 500
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -504
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -504
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -505
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -505
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -506
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Self
+      - 0
+      - -506
+- Id: 87
+  Name: Pull_Skill_Test_3
+  Comment: Pull 스킬 사용시 내 주변이 대각선 한 칸 빼고 HighWall로 다 막혀있으면 대각선으로 이동한 뒤 상대를 끌고 와야함
+  Layer:
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  - WallType: HighWall
+    X: 0
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -502
+  - WallType: HighWall
+    X: 0
+    Y: -502
+  - WallType: HighWall
+    X: -1
+    Y: -502
+  - WallType: HighWall
+    X: 0
+    Y: -505
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -507
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    Delay: 3500
+    Check:
+    - SkillSuccess:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - -1
+      - -504
+    - Coordinate:
+      - Other
+      - -1
+      - -505
+- Id: 88
+  Name: EraseWhenHit_Test_1
+  Comment: EraseWhenHit에 의해 특정 스킬 카테고리 맞으면 버프가 사라져야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_HuntingZone_Ticket_Tax_Experience_10_Skill
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Erase_HuntingZone_Ticket_Skill
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 0
+- Id: 89
+  Name: Pull_Skill_Test_4
+  Comment: Pull 스킬 사용시 내 주변이 한 칸 빼고 전부 LowWall로 막혀있는 경우 사용자는 이동하지 않고 상대방을 막혀있지 않은 곳으로 끌고와야함
+  Layer:
+  - WallType: LowWall
+    X: -1
+    Y: -503
+  - WallType: LowWall
+    X: 0
+    Y: -504
+  - WallType: LowWall
+    X: 1
+    Y: -504
+  - WallType: LowWall
+    X: 1
+    Y: -503
+  - WallType: LowWall
+    X: 1
+    Y: -502
+  - WallType: LowWall
+    X: 0
+    Y: -502
+  - WallType: LowWall
+    X: -1
+    Y: -502
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -507
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    Delay: 3500
+    Check:
+    - SkillSuccess:
+      - Simulation_Pull_Skill
+      - Self
+      - Other
+    - Coordinate:
+      - Self
+      - 0
+      - -503
+    - Coordinate:
+      - Other
+      - -1
+      - -504
+- Id: 90
+  Name: Aggressive_Monster_Test_1
+  Comment: 선공 몬스터는 먼저 때리러 이동해야함
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_Performance_Aggressive_Monster_Spawn_Interval
+    StartX: 2
+    StartY: -501
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Other
+      - Self
+    Delay: 300
+  - Command:
+      DoNothing: Fighter
+    Delay: 10000
+    Check:
+    - MainTarget:
+      - Other
+      - Self
+    - SkillSuccess:
+      - Simulation_Monster_Melee_NormalAttack
+      - Other
+      - Self
+    - Not:
+        Coordinate:
+          - Other
+          - 2
+          - -501
+- Id: 92
+  Name: Collision_Test_2
+  Comment: pc npc 충돌 체크
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Other
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Self
+      - 0
+      - -504
+    Delay: 3000
+    Check:
+    - Not:
+        Coordinate:
+          - Self
+          - 0
+          - -504
+    - Coordinate:
+      - Other
+      - 0
+      - -504
+- Id: 9400
+  Name: Spawn_Skill_Test_0
+  Comment: SpawnSkillByRange 프로퍼티로 자기 주변 범위 1칸 내에 몬스터 소환 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_Skill
+      - Self
+      - Self
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -503
+      - 1
+      - 2
+- Id: 9401
+  Name: Spawn_Skill_Test_1
+  Comment: SpawnSkillByRange 프로퍼티로 메인 타겟 주변 범위 1칸 내에 몬스터 소환 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -510
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_On_Target_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -510
+      - 1
+      - 2
+- Id: 9402
+  Name: Spawn_Skill_Test_2
+  Comment: SpawnSkillByRange 프로퍼티로 자기 정면 2칸 앞에 npc 소환
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_Front_2_Skill
+      - Self
+      - Self
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 0
+      - 1
+- Id: 9403
+  Name: Spawn_Skill_Test_3
+  Comment: SpawnSkillByRange 프로퍼티로 자기 왼쪽 2칸 옆에 npc 소환
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_Left_2_Skill
+      - Self
+      - Self
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - -2
+      - -503
+      - 0
+      - 1
+- Id: 9404
+  Name: Spawn_Skill_Test_4
+  Comment: SpawnSkillByRange 프로퍼티로 타겟 왼쪽 2칸 옆에 npc 소환
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -510
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_Left_2_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - -2
+      - -510
+      - 0
+      - 1
+- Id: 9405
+  Name: Spawn_Skill_Test_5
+  Comment: SpawnSkillByRange 프로퍼티로 타겟 정면 2칸 앞에 npc 소환
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -510
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Spawn_Front_2_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -508
+      - 0
+      - 1
+- Id: 96
+  Name: DragIn_Skill_Test_1
+  Comment: DragIn 프로퍼티로 상대방을 2칸 끌어 당김
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -506
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_DragIn_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Other
+      - 0
+      - -504
+- Id: 97
+  Name: DragIn_Skill_Test_2
+  Comment: 사방이 막혀 있으면 DragIn 프로퍼티로 끌어당겨도 움직이지 않아야함
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -505
+  - WallType: HighWall
+    X: 0
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -504
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -506
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_DragIn_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Other
+      - 0
+      - -504
+- Id: 98
+  Name: DragIn_Skill_Test_3
+  Comment: "DragIn 프로퍼티는 타겟의 사방이 막혀있지 않아도 n칸 움직였을 때, 중심점으로 가까이 올 수 없으면 당겨오지 말아야함"
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  - WallType: HighWall
+    X: 2
+    Y: -503
+  - WallType: HighWall
+    X: -2
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -506
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_DragIn_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Other
+      - 0
+      - -502
+- Id: 99
+  Name: DragIn_Skill_Test_4
+  Comment: DragIn 스킬 시전자의 사방이 막혀있어도 타겟이 중심점으로 가까이 올 수 있으면 당겨와야함 (이 테스트는 PassTerrainCheck가 true)
+  Layer:
+  - WallType: HighWall
+    X: 0
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -503
+  - WallType: HighWall
+    X: 1
+    Y: -504
+  - WallType: HighWall
+    X: 1
+    Y: -505
+  - WallType: HighWall
+    X: 0
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -505
+  - WallType: HighWall
+    X: -1
+    Y: -504
+  - WallType: HighWall
+    X: -1
+    Y: -503
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -504
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -508
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_DragIn_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Other
+      - 0
+      - -506
+- Id: 100
+  Name: DragInWalk_Skill_Test_1
+  Comment: "DragInWalk 프로퍼티에 맞은 대상은 1칸 이동했을 때, 시전자와의 거리가 가깝도록 이동할 수 있는 곳이 있으면 강제로 이동함"
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -504
+  - Name: Other
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -508
+  Scenario:
+  - Command:
+      ChangeTarget:
+      - Self
+      - Other
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_DragInWalk_Skill
+      - Self
+      - Other
+    Delay: 3000
+    Check:
+    - Coordinate:
+      - Other
+      - 0
+      - -507
+- Id: 110
+  Name: Cast_On_Cast_Test_1
+  Comment: CastOnCast 버프가 있을 때 스킬을 쓰면 스킬이 하나 더 나가야 함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Cast_On_Cast_HuntingZone_Ticket_Tax_Experience_10_Skill
+      - Self
+      - Self
+    Delay: 1500
+  - Command:
+      CastSkill:
+      - Simulation_Erase_HuntingZone_Ticket_Skill
+      - Self
+      - Self
+    Delay: 1500
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+- Id: 111
+  Name: Drop_Item_Test_5
+  Comment: 아이템을 주워 먹었으면 아이템 엔티티가 사라져야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      DropItem:
+      - DropPotion1
+      - Simulation_Potion_Item
+      - 0
+      - -504
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 1
+    - EntityNotExist:
+      - DropPotion1
+      - DropItem
+- Id: 115
+  Name: Buff_Test_3
+  Comment: MaxStackable이 있으면 해당 값 만큼 같은 buffId여도 중첩이 되어야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Stackable_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+  - Command:
+      CastSkill:
+      - Simulation_Stackable_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+  - Command:
+      CastSkill:
+      - Simulation_Stackable_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 30
+  - Command:
+      CastSkill:
+      - Simulation_Stackable_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 30
+# - Id: 116
+#   Name: NonTargetSkill_Test_1
+#   Comment: "논타겟 스킬 투사체가 캐릭터가 보는 방향으로 발사되고, 충돌한 캐릭터에게 데미지와 버프를 주어야함"
+#   PcInit:
+#   - Name: Self
+#     Init: RangerInit
+#     StartX: 0
+#     StartY: -503
+#   - Name: Other
+#     Init: FighterInit
+#     StartX: 0
+#     StartY: -501
+#   Scenario:
+#   - Command:
+#       SetPropertyI64:
+#       - Other
+#       - Hp
+#       - 500
+#     Delay: 500
+#   - Command:
+#       CastSkill:
+#       - Simulation_Missile_Skill
+#       - Self
+#       - Self
+#     Delay: 4000
+#     Check:
+#     - SkillSuccess:
+#       - Simulation_Missile_Skill
+#       - Self
+#       - Self
+#     - ContextI64:
+#       - Other
+#       - Hp
+#       - 400
+#     - ContextI64:
+#       - Other
+#       - TaxExperience
+#       - 20
+- Id: 117
+  Name: FormulaStackBuff_Test_1
+  Comment: Formula를 이용한 버프 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccessCount:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+      - 1
+    - ContextI64:
+      - Self
+      - FormulaBuffResultProperty
+      - 5
+  - Command:
+      CastSkill:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccessCount:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+      - 2
+    - ContextI64:
+      - Self
+      - FormulaBuffResultProperty
+      - 14
+  - Command:
+      CastSkill:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - SkillSuccessCount:
+      - Simulation_Formula_Stack_Buff_Skill
+      - Self
+      - Self
+      - 3
+    - ContextI64:
+      - Self
+      - FormulaBuffResultProperty
+      - 20
+- Id: 118
+  Name: Stack_Buff_Test_2
+  Comment: 3가지 이상의 버프를 가진 스택 버프 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill_2
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill_2
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill_2
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill_2
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill_2
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+- Id: 119
+  Name: Stack_Buff_Test_MaxStack
+  Comment: MaxStack과 Duration 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+  - Delay: 4000
+    Command:
+      DoNothing: Other
+  - Command:
+      CastSkill:
+      - Simulation_Stack_Buff_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 10
+  - Delay: 2500
+    Command:
+      DoNothing: Other
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 0
+- Id: 120
+  Name: Cheat_Test_1
+  Comment: Simulation 치트 명령어 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+  Scenario:
+  - Command:
+      Cheat:
+      - Self
+      - addBuff Simulation_Tax_Buff_20 0
+    Delay: 200
+    Check:
+    - ContextI64:
+      - Self
+      - TaxExperience
+      - 20
+# - Id: 121
+#   Name: NonTargetSkill_Test_2
+#   Comment: "논타겟 스킬 투사체의 ChangeHp 공식을 계산할 때는, 스킬을 쏜 사람의 PropertyBag을 기반으로 계산해야함"
+#   PcInit:
+#   - Name: Self
+#     Init: RangerInit
+#     StartX: 0
+#     StartY: -503
+#   - Name: Other
+#     Init: FighterInit
+#     StartX: 0
+#     StartY: -501
+#   Scenario:
+#   - Command:
+#       SetPropertyI64:
+#       - Self
+#       - HolyMoly
+#       - 50
+#     Delay: 500
+#   - Command:
+#       SetPropertyI64:
+#       - Other
+#       - Hp
+#       - 500
+#     Delay: 500
+#   - Command:
+#       CastSkill:
+#       - Simulation_Missile_Skill_2
+#       - Self
+#       - Self
+#     Delay: 4000
+#     Check:
+#     - SkillSuccess:
+#       - Simulation_Missile_Skill_2
+#       - Self
+#       - Self
+#     - Dead: Other
+- Id: 122
+  Name: UpdateAutoCombatBase_ChangeWalk_Test
+  Comment: UpdateAutoCombatBase 이동 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 3
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - UpdateAutoCombatBase_ChangeWalk
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Self
+      - AutoCombatBaseX
+      - 3
+    - ContextI64:
+      - Self
+      - AutoCombatBaseY
+      - -503
+- Id: 123
+  Name: Drop_Item_Test_6
+  Comment: 아이템 Property Bag에 Category 이름과 Category Parent 이름이 존재해야함
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      DropItem:
+      - DropPotion1
+      - Simulation_Potion_Item
+      - 0
+      - -504
+    Delay: 1000
+  - Command:
+      PickUpItem: Self
+    Delay: 1500
+    Check:
+    - ContextI64:
+      - DropPotion1
+      - Item_Misc_Healing
+      - 1
+    - ContextI64:
+      - DropPotion1
+      - Item_Misc
+      - 1
+- Id: 9407
+  Name: CalcDropGoldAmount_With_50_Percent_Bonus_Test
+  Comment: CalcDropGoldAmount 테스트 - CurrencyGoldBonus 50% 적용시 150개 획득 (100 * 1.5)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Monster
+    Npc: Simulation_Bonus_Gold_Monster
+    StartX: 0
+    StartY: -504
+  Scenario:
+  - Command:
+      SetInventorySlot:
+      - Self
+      - Bag
+      - 1
+    Delay: 100
+  - Command:
+      SetPropertyI64:
+      - Self
+      - CurrencyGoldBonus
+      - 500000
+    Delay: 300
+  - Command:
+      ChangeTarget:
+      - Self
+      - Monster
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Monster
+    Delay: 1500
+  - Command:
+      PickUpItem: Self
+    Delay: 4000
+    Check:
+    - InventoryCount:
+      - Self
+      - Simulation_Potion_Item
+      - 150
+- Id: 124
+  Name: Servant_Master_Property_Reference_Test_1
+  Comment: Servant가 master의 AddedDamage 속성을 실시간으로 참조하는지 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 50
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_AI
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 850
+- Id: 125
+  Name: Servant_Master_Property_Reference_Test_2
+  Comment: Master의 AddedDamage가 바뀌면 Servant의 데미지도 실시간으로 바뀌는지 테스트 (AI-driven approach with trap pattern)
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 100
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_AI
+      - Self
+      - Self
+    Delay: 5000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 800
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 200
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_AI
+      - Self
+      - Self
+    Delay: 5000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 700
+# - Id: 126
+#   Name: Trap_EnemyTarget_Bora_Test
+#   Comment: 덫이 EnemyTarget을 사용하여 M_Bora가 있으면 타겟하고 없으면 타겟 안하는지 테스트
+#   PcInit:
+#   - Name: Self
+#     Init: RangerInit
+#     StartX: 0
+#     StartY: -503
+#   - Name: Target
+#     Init: PunchingBagInit
+#     StartX: 0
+#     StartY: -501
+#   Scenario:
+#   - Command:
+#       SetPropertyI64:
+#       - Target
+#       - Hp
+#       - 1000
+#     Delay: 300
+#   - Command:
+#       SetPropertyI64:
+#       - Target
+#       - CanPk
+#       - 1
+#     Delay: 100
+#   - Command:
+#       CastSkill:
+#       - Simulation_Trap_Spawn
+#       - Self
+#       - Target
+#     Delay: 300
+#     Check:
+#     - ContextI64:
+#       - Target
+#       - Hp
+#       - 1000
+#   - Command:
+#       CastCoordinateSkill:
+#       - ChangeWalk
+#       - Target
+#       - 1
+#       - -501
+#     Delay: 2000
+#     Check:
+#     - Coordinate:
+#       - Target
+#       - 1
+#       - -501
+#     - ContextI64:
+#       - Target
+#       - Hp
+#       - 1000
+#   - Command:
+#       ApplyBuff:
+#       - Simulation_Bora_Buff
+#       - Target
+#       - Target
+#     Delay: 500
+#   # NOTE: 버프 적용 후 좌표 이동을 통해 coordinate trigger를 강제로 발동시킴
+#   # 현재 구현은 좌표 변경 시에만 coordinate trigger를 체크하므로,
+#   # property 변경(버프 적용)만으로는 트랩이 발동하지 않음
+#   # 성능 영향이 갈지 모르므로 현재는 이 방식으로 이슈 안고 가고, 차후 최적화 예정
+#   # TODO: Property 변경 이벤트 기반 coordinate trigger 재평가로 개선 필요
+#   - Command:
+#       CastCoordinateSkill:
+#       - ChangeWalk
+#       - Target
+#       - 1
+#       - -501
+#     Delay: 100
+#   - Command:
+#       CastCoordinateSkill:
+#       - ChangeWalk
+#       - Target
+#       - 0
+#       - -501
+#     Delay: 2000
+#     Check:
+#     - Coordinate:
+#       - Target
+#       - 0
+#       - -501
+#     - ContextI64:
+#       - Target
+#       - Hp
+#       - 900
+- Id: 127
+  Name: Servant_Trigger_Mixed_Test
+  Comment: Servant가 Trigger Buff를 적용하고, Target 이동 시 Trigger 발동하여 Master AddedDamage 참조 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 50
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_Trigger_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 850
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Target
+      - 1
+      - -501
+    Delay: 1000
+    Check:
+    - Coordinate:
+      - Target
+      - 1
+      - -501
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Target
+      - 0
+      - -501
+    Delay: 2000
+    Check:
+    - Coordinate:
+      - Target
+      - 0
+      - -501
+    - ContextI64:
+      - Target
+      - Hp
+      - 750
+- Id: 128
+  Name: Servant_Trigger_OnHit_Mixed_Test
+  Comment: Servant가 CastOnHit Buff를 가지고 Target 공격 시 Trigger 발동하여 Master AddedDamage 참조 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 50
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_OnHit_Trigger_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 750
+- Id: 129
+  Name: Servant_Trigger_CastWhenHit_Mixed_Test
+  Comment: Servant가 CastWhenHit Buff를 가지고 피격 시 반격 Trigger 발동하여 Master AddedDamage 참조 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: RangerInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 50
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_With_CastWhenHit_Skill
+      - Self
+      - Self
+    Delay: 2000
+  - Command:
+      ChangeTarget:
+      - Target
+      - ServantNpc_0
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Missile_Skill_Damage
+      - Target
+      - ServantNpc_0
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 920
+- Id: 130
+  Name: Disposition_Buff_Test
+  Comment: PkPoint 얻거나 잃었을 때 disposition 범위가 제대로 전환되는지 확인하고 버프 변경을 AssertContextI64로 검증
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  Scenario:
+  - Command:
+      CastSkill:
+      - GainPkPoint
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ContextI64:
+      - Self
+      - PkPoint
+      - 501
+    - ContextI64:
+      - Self
+      - DispositionLevel
+      - 1
+  - Command:
+      CastSkill:
+      - LosePkPoint
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ContextI64:
+      - Self
+      - PkPoint
+      - 0
+    - ContextI64:
+      - Self
+      - DispositionLevel
+      - 0
+  - Command:
+      CastSkill:
+      - LosePkPoint
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ContextI64:
+      - Self
+      - PkPoint
+      - -501
+    - ContextI64:
+      - Self
+      - DispositionLevel
+      - -1
+  - Command:
+      CastSkill:
+      - GainPkPoint
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ContextI64:
+      - Self
+      - PkPoint
+      - 0
+    - ContextI64:
+      - Self
+      - DispositionLevel
+      - 0
+- Id: 131
+  Name: Nested_Servant_Property_Inheritance_Test
+  Comment: Servant의 Servant가 최상위 Master의 AddedDamage를 올바르게 상속받는지 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - AddedDamage
+      - 50
+    Delay: 300
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Nested_Servant_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 850
+    Comment: Level2 Servant의 공격이 Master의 AddedDamage(50)를 포함하여 150 데미지를 입혀야 함 (1000 - 150 = 850)
+- Id: 132
+  Name: Servant_Missing_Property_Default_Zero_Test
+  Comment: CopyMasterProperties에 정의되어 있지만 Master가 가지지 않은 property는 0으로 설정되는지 테스트
+  PcInit:
+  - Name: Self
+    Init: RangerInit
+    StartX: 0
+    StartY: -503
+  - Name: Target
+    Init: PunchingBagInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Target
+      - Hp
+      - 1000
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Summon_Servant_Missing_Property_Skill
+      - Self
+      - Self
+    Delay: 2000
+    Check:
+    - ContextI64:
+      - Target
+      - Hp
+      - 900
+    Comment: Servant의 공격이 M_MeleeDamage(0)를 사용하여 100 데미지만 입혀야 함 (1000 - 100 = 900)
+################################################################################
+# Toggle Skill Tests - ToggleSkillState 기반 토글 스킬 시스템
+################################################################################
+- Id: 200
+  Name: Toggle_Skill_Cycle_Test
+  Comment: 순환 Toggle 스킬 테스트 (Fire → Water → Wind → Fire)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  Scenario:
+  # Stage 1: Fire Stance 활성화 (첫 번째 Toggle)
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 10
+    Comment: Fire Stance 활성화 확인 (HolyMoly = 10)
+  # Stage 2: Water Stance로 전환
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 20
+    Comment: Water Stance로 전환 확인 (HolyMoly = 20)
+  # Stage 3: Wind Stance로 전환
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 30
+    Comment: Wind Stance로 전환 확인 (HolyMoly = 30)
+  # Stage 4: 순환 - Fire Stance로 복귀
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 10
+    Comment: 순환하여 Fire Stance로 복귀 (HolyMoly = 10)
+- Id: 201
+  Name: Toggle_Skill_OnOff_Test
+  Comment: ON/OFF Toggle 스킬 테스트 (Defense Toggle)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  Scenario:
+  # Stage 1: Defense ON
+  - Command:
+      CastSkill:
+      - Toggle_Defense
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 100
+    Comment: Defense Mode ON 확인 (HolyMoly = 100)
+  # Stage 2: Defense OFF
+  - Command:
+      CastSkill:
+      - Toggle_Defense
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 0
+    Comment: Defense Mode OFF 확인 (HolyMoly = 0)
+- Id: 202
+  Name: Toggle_Skill_Multiple_Groups_Test
+  Comment: 여러 Toggle 그룹 동시 사용 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  Scenario:
+  # Stage 1: Fire Stance 활성화
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 10
+    Comment: Stance 그룹 활성화 (Fire, HolyMoly = 10)
+  # Stage 2: Defense Mode 활성화 (다른 그룹) - Fire(10) + Defense(100) = 110
+  - Command:
+      CastSkill:
+      - Toggle_Defense
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 110
+    Comment: Defense Mode 활성화로 HolyMoly = 110 (Fire 10 + Defense 100, 다른 그룹이라 누적)
+  # Stage 3: Stance 변경 (Mode는 유지) - Water(20) + Defense(100) = 120
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 120
+    Comment: Stance Water로 변경하여 HolyMoly = 120 (Water 20 + Defense 100 유지)
+- Id: 203
+  Name: Toggle_Skill_Initial_State_Test
+  Comment: Toggle 스킬 초기 상태 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  Scenario:
+  # Stage 1: 초기 상태 확인 (Toggle 상태 없음)
+  - Command:
+      DoNothing: Self
+    Delay: 100
+    Check:
+    - Not:
+        ExistContext:
+          - Self
+          - HolyMoly
+    Comment: 초기 상태에서는 HolyMoly 프로퍼티 없음
+  # Stage 2: 첫 Toggle 활성화 - Order 0부터 시작
+  - Command:
+      CastSkill:
+      - Toggle_Stance
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 10
+    Comment: 초기 Toggle 사용 시 ToggleOrder=0 스킬(Fire, HolyMoly=10) 활성화
+- Id: 208
+  Name: SearchFarthest_Test
+  Comment: SearchFarthest 타겟 탐색 테스트 - 가장 먼 적을 타겟
+  # 못 움직이도록 벽 감옥 생성
+  Layer:
+  - WallType: LowWall
+    X: -1
+    Y: -499
+  - WallType: LowWall
+    X: 0
+    Y: -499
+  - WallType: LowWall
+    X: 1
+    Y: -499
+  - WallType: LowWall
+    X: -1
+    Y: -500
+  - WallType: LowWall
+    X: 1
+    Y: -500
+  - WallType: LowWall
+    X: -1
+    Y: -501
+  - WallType: LowWall
+    X: 0
+    Y: -501
+  - WallType: LowWall
+    X: 1
+    Y: -501
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: NearEnemy
+    Init: PunchingBagInit
+    StartX: 2
+    StartY: -500
+  - Name: MiddleEnemy
+    Init: PunchingBagInit
+    StartX: 5
+    StartY: -500
+  - Name: FarEnemy
+    Init: PunchingBagInit
+    StartX: 10
+    StartY: -500
+  Scenario:
+  # Stage 1: SearchFarthest 스킬 사용 - 가장 먼 적(FarEnemy) 타겟
+  - Command:
+      CastSkill:
+      - Test_Search_Farthest
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - MainTarget:
+      - Self
+      - FarEnemy
+    Comment: SearchFarthest 스킬로 가장 먼 FarEnemy(10, -500)를 타겟
+  # Stage 2: 타겟 해제 후 다시 SearchFarthest
+  - Command:
+      CastSkill:
+      - TargetCancel
+      - Self
+      - Self
+    Delay: 100
+  - Command:
+      CastSkill:
+      - Test_Search_Farthest
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - MainTarget:
+      - Self
+      - FarEnemy
+    Comment: 타겟 해제 후에도 가장 먼 FarEnemy를 다시 타겟
+- Id: 209
+  Name: SearchFarthest_vs_Search_Test
+  Comment: SearchFarthest와 Search 비교 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: NearEnemy
+    Init: PunchingBagInit
+    StartX: 2
+    StartY: -500
+  - Name: FarEnemy
+    Init: PunchingBagInit
+    StartX: 10
+    StartY: -500
+  Scenario:
+  # Stage 1: Search 스킬 (가까운 것 우선) - NearEnemy 타겟
+  - Command:
+      CastSkill:
+      - Test_Search_Nearest
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - MainTarget:
+      - Self
+      - NearEnemy
+    Comment: Search 스킬로 가까운 NearEnemy(2, -500) 타겟
+  # Stage 2: 타겟 해제
+  - Command:
+      CastSkill:
+      - TargetCancel
+      - Self
+      - Self
+    Delay: 300
+  # Stage 3: SearchFarthest 스킬 - FarEnemy 타겟
+  - Command:
+      CastSkill:
+      - Test_Search_Farthest
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - MainTarget:
+      - Self
+      - FarEnemy
+    Comment: SearchFarthest 스킬로 먼 FarEnemy(10, -500) 타겟 (Search와 반대)
+################################################################################
+# MaintainConditions Test - Toggle 스킬 유지 조건 테스트
+################################################################################
+- Id: 210
+  Name: MaintainCondition_Mp_Percent_Test
+  Comment: MaintainConditions MP 퍼센트 조건 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  Scenario:
+  - Command:
+      CastSkill:
+      - Test_MaintainCondition_Toggle
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - HasBuff:
+      - Self
+      - Test_MaintainCondition_DefenseMode_Buff
+    Comment: DefenseMode ON 활성화, Buff 적용 확인
+  - Command:
+      CastSkill:
+      - Test_MaintainCondition_MpDrain
+      - Self
+      - Self
+    Delay: 200
+    Comment: MP를 20% 이하로 소모
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_DefenseMode_Buff
+    Comment: MP < 20% 조건 위반으로 자동 OFF, Buff 제거 확인
+- Id: 211
+  Name: MaintainCondition_Hp_Range_Test
+  Comment: MaintainConditions HP 범위 조건 테스트 (30-70%)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Enemy
+    Init: PunchingBagInit
+    StartX: 2
+    StartY: -500
+  Scenario:
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 1000
+    Delay: 200
+    Comment: HP를 50%로 설정 (30-70% 범위 내)
+  - Command:
+      CastSkill:
+      - Test_MaintainCondition_BerserkMode_Toggle
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - HasBuff:
+      - Self
+      - Test_MaintainCondition_BerserkMode_Buff
+    Comment: BerserkMode ON, HP 50% (조건 만족)
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 500
+    Delay: 500
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_BerserkMode_Buff
+    Comment: HP < 30% 조건 위반으로 자동 OFF
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 1000
+    Delay: 200
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_BerserkMode_Buff
+    Comment: Off 상태의 Hp 변화이므로 버프 변화 없음
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 1600
+    Delay: 500
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_BerserkMode_Buff
+    Comment: Off 상태의 Hp변화이므로 버프 변화 없음
+- Id: 212
+  Name: MaintainCondition_Absolute_Value_Test
+  Comment: MaintainConditions 절대값 조건 테스트 (HP > 1000)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Enemy
+    Init: PunchingBagInit
+    StartX: 2
+    StartY: -500
+  Scenario:
+  - Command:
+      CastSkill:
+      - Test_MaintainCondition_AbsoluteValue
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - HasBuff:
+      - Self
+      - Test_MaintainCondition_AbsoluteValue_Buff
+    Comment: AbsoluteValue Mode ON (HP > 1000)
+  - Command:
+      SetPropertyI64:
+      - Self
+      - Hp
+      - 800
+    Delay: 500
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_AbsoluteValue_Buff
+    Comment: HP < 1000 조건 위반으로 자동 OFF
+- Id: 213
+  Name: Toggle_Reset_On_Death
+  Comment: Toggle상태가 사망 시 OffSkill 시전으로 리셋 되어야함.
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Enemy
+    Init: FighterInit
+    StartX: 2
+    StartY: -500
+  Scenario:
+  - Command:
+      CastSkill:
+      - Test_MaintainCondition_Toggle
+      - Self
+      - Self
+    Delay: 200
+  - Command:
+      ChangeTarget:
+      - Enemy
+      - Self
+    Delay: 200
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Enemy
+      - Self
+    Delay: 500
+    Check:
+    - ContextI64:
+      - Self
+      - HolyMoly
+      - 0
+    - Not:
+        HasBuff:
+          - Self
+          - Test_MaintainCondition_DefenseMode_Buff
+- Id: 300
+  Name: Channel_SinglePC_EnterLimitPopLand
+  Comment: 단일 PC가 LimitPopulation Land에 진입 시 채널 1개 생성
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 0 Simulation_Instance_Limit2_DeleteOnEmpty
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 1
+    - PcInLand:
+      - Self
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+- Id: 301
+  Name: Channel_TwoPC_SameLimitPopLand
+  Comment: 2명이 LimitPopulation=2 Land에 순차 진입 시 같은 채널 배치
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  - Name: Other
+    Init: RangerInit
+  Scenario:
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 0 Simulation_Instance_Limit2
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2
+      - 1
+  - Command:
+      Cheat:
+      - Other
+      - teleport 0 0 Simulation_Instance_Limit2
+    Delay: 1000
+    Check:
+    - SameChannel:
+      - Self
+      - Other
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2
+      - 1
+- Id: 302
+  Name: Channel_ThreePC_ExceedLimitPop
+  Comment: 3명이 LimitPopulation=2 Land에 진입 시 채널 분리
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  - Name: Other1
+    Init: RangerInit
+  - Name: Other2
+    Init: FighterInit
+  Scenario:
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 0 Simulation_Instance_Limit2_DeleteOnEmpty
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 1
+  - Command:
+      Cheat:
+      - Other1
+      - teleport 0 0 Simulation_Instance_Limit2_DeleteOnEmpty
+    Delay: 1000
+    Check:
+    - SameChannel:
+      - Self
+      - Other1
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 1
+  - Command:
+      Cheat:
+      - Other2
+      - teleport 0 0 Simulation_Instance_Limit2_DeleteOnEmpty
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 2
+    - Not:
+        SameChannel:
+          - Self
+          - Other2
+- Id: 303
+  Name: Channel_DeleteOnEmpty_Test
+  Comment: DeleteOnEmpty=true Land에서 모두 퇴장 시 채널 삭제
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 0 Simulation_Instance_Limit2_DeleteOnEmpty
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 1
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 0 Simulation
+    Delay: 1000
+    Check:
+    - ChannelCountByLandName:
+      - Simulation_Instance_Limit2_DeleteOnEmpty
+      - 0
+- Id: 400
+  Name: NPC_Despawn_After_Death_Test
+  Comment: NPC 사망 후 엔티티가 제대로 삭제되는지 확인 (메모리 누수 방지)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Target_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -504
+  Scenario:
+  # Stage 1: 초기 상태 - 범위 내 엔티티 2개 (PC + NPC)
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -504
+      - 3
+      - 2
+    - Alive: Target_NPC
+  # Stage 2: NPC 즉사 스킬 사용
+  - Command:
+      ChangeTarget:
+      - Self
+      - Target_NPC
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Target_NPC
+    Delay: 2000
+    Check:
+    - Dead: Target_NPC
+  # Stage 3: 디스폰 대기 후 엔티티 삭제 확인 (motion_delay 이후)
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Target_NPC
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -504
+      - 3
+      - 1
+- Id: 401
+  Name: Multiple_NPC_Despawn_Test
+  Comment: 다중 NPC 사망 후 엔티티 카운트가 정확히 감소하는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  NpcInit:
+  - Name: NPC_1
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -502
+  - Name: NPC_2
+    Npc: Simulation_No_Move_Npc
+    StartX: 1
+    StartY: -502
+  - Name: NPC_3
+    Npc: Simulation_No_Move_Npc
+    StartX: -1
+    StartY: -502
+  Scenario:
+  # Stage 1: 초기 상태 확인 - 4개 엔티티 (PC 1 + NPC 3)
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 4
+  # Stage 2: 첫 번째 NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - NPC_1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - NPC_1
+    Delay: 2000
+    Check:
+    - Dead: NPC_1
+  # Stage 3: 첫 번째 NPC 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - NPC_1
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 3
+  # Stage 4: 두 번째 NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - NPC_2
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - NPC_2
+    Delay: 2000
+    Check:
+    - Dead: NPC_2
+  # Stage 5: 두 번째 NPC 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - NPC_2
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 2
+  # Stage 6: 세 번째 NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - NPC_3
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - NPC_3
+    Delay: 2000
+    Check:
+    - Dead: NPC_3
+  # Stage 7: 세 번째 NPC 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - NPC_3
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 1
+- Id: 402
+  Name: NPC_Entity_Count_Consistency_Test
+  Comment: NPC 스폰 후 죽이지 않고 시간 경과 시 엔티티 카운트 유지 확인 (누수 없음)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  NpcInit:
+  - Name: Persistent_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -502
+  Scenario:
+  # Stage 1: 초기 상태
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 2
+  # Stage 2: 5초 대기 후에도 엔티티 카운트 동일
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 2
+    - Alive: Persistent_NPC
+  # Stage 3: 10초 더 대기 후에도 엔티티 카운트 동일 (누수 없음 확인)
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 2
+    - Alive: Persistent_NPC
+- Id: 403
+  Name: Range_Type_NPC_Despawn_Test
+  Comment: SpawnType::Range NPC 사망 후 엔티티 완전 삭제 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  - Name: Range_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -504
+  Scenario:
+  # Stage 1: 초기 상태 확인
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -504
+      - 3
+      - 2
+    - Alive: Range_NPC
+  # Stage 2: NPC 즉사
+  - Command:
+      ChangeTarget:
+      - Self
+      - Range_NPC
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Range_NPC
+    Delay: 2000
+    Check:
+    - Dead: Range_NPC
+  # Stage 3: 디스폰 후 엔티티 완전 삭제 확인 (Range 타입은 엔티티 자체 삭제)
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Range_NPC
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -504
+      - 3
+      - 1
+- Id: 404
+  Name: Multiple_Range_NPC_Despawn_Test
+  Comment: 여러 Range 타입 NPC 순차 처치 후 디스폰 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  NpcInit:
+  - Name: Range_NPC_1
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -502
+  - Name: Range_NPC_2
+    Npc: Simulation_No_Move_Npc
+    StartX: 1
+    StartY: -502
+  - Name: Range_NPC_3
+    Npc: Simulation_No_Move_Npc
+    StartX: -1
+    StartY: -502
+  Scenario:
+  # Stage 1: 초기 상태 - 4개 (PC 1 + NPC 3)
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 4
+  # Stage 2: 첫 번째 Range NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - Range_NPC_1
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Range_NPC_1
+    Delay: 2000
+    Check:
+    - Dead: Range_NPC_1
+  # Stage 3: 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Range_NPC_1
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 3
+  # Stage 4: 두 번째 Range NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - Range_NPC_2
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Range_NPC_2
+    Delay: 2000
+    Check:
+    - Dead: Range_NPC_2
+  # Stage 5: 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Range_NPC_2
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 2
+  # Stage 6: 세 번째 Range NPC 처치
+  - Command:
+      ChangeTarget:
+      - Self
+      - Range_NPC_3
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Range_NPC_3
+    Delay: 2000
+    Check:
+    - Dead: Range_NPC_3
+  # Stage 7: 디스폰 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Range_NPC_3
+      - Npc
+    - EntityCountInRange:
+      - 0
+      - -501
+      - 5
+      - 1
+- Id: 405
+  Name: SpawnId_Type_NPC_Despawn_Test
+  Comment: SpawnType::SpawnId NPC 사망 후 엔티티는 유지되고 Spawned 컴포넌트만 삭제되는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -503
+  NpcInit:
+  # Note: SpawnInterval이 있으면 StartX/StartY는 무시되고 Territory 범위 내 랜덤 위치에 스폰됨
+  - Name: SpawnId_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -502
+    SpawnInterval: Simulation_Single_Spawn
+  Scenario:
+  # Stage 1: SpawnId NPC 생존 확인
+  - Command:
+      DoNothing: Self
+    Delay: 1000
+    Check:
+    - Alive: SpawnId_NPC
+  # Stage 2: 타겟 설정
+  - Command:
+      ChangeTarget:
+      - Self
+      - SpawnId_NPC
+    Delay: 500
+  # Stage 3: NPC 즉사
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - SpawnId_NPC
+    Delay: 2000
+    Check:
+    - Dead: SpawnId_NPC
+  # Stage 4: 디스폰 대기 후 Spawned 컴포넌트 삭제 확인 (엔티티는 유지, 리스폰 대기 상태)
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - Dead: SpawnId_NPC
+    - SpawnedNotExist: SpawnId_NPC
+- Id: 406
+  Name: Channel_NPC_Cleanup_On_PC_Leave_Test
+  Comment: PC가 채널을 떠날 때 DeleteOnEmpty 채널과 함께 NPC 엔티티가 정리되는지 확인 (메모리 누수 방지)
+  Land: Simulation_SingleInstance
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  NpcInit:
+  # Note: SpawnInterval이 있으면 StartX/StartY는 무시되고 Territory 범위 내 랜덤 위치에 스폰됨
+  - Name: SpawnId_NPC_1
+    Npc: Simulation_No_Move_Npc
+    StartX: 1
+    StartY: -500
+    SpawnInterval: Simulation_SingleInstance_Spawn
+  - Name: SpawnId_NPC_2
+    Npc: Simulation_No_Move_Npc
+    StartX: -1
+    StartY: -500
+    SpawnInterval: Simulation_SingleInstance_Spawn
+  # Range 타입 NPC (SpawnInterval 없음)
+  - Name: Range_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -501
+  Scenario:
+  # Stage 1: Instance 랜드에서 시작, PC + NPC 존재 확인
+  - Command:
+      DoNothing: Self
+    Delay: 1000
+    Check:
+    - PcInLand:
+      - Self
+      - Simulation_SingleInstance
+    - Alive: SpawnId_NPC_1
+    - Alive: SpawnId_NPC_2
+    - Alive: Range_NPC
+    # PC 1 + SpawnId NPCs (PopulationSize=3 x 2) + Range NPC 1 = 8 엔티티
+    - ChannelEntityCountByTarget:
+      - Self
+      - 8
+  # Stage 2: PC가 다른 랜드로 이동 (채널 삭제 트리거 - NPC 포함 전체 정리)
+  - Command:
+      Cheat:
+      - Self
+      - teleport 0 -500 Simulation
+    Delay: 2000
+    Check:
+    # Instance 채널이 삭제되어야 함 (DeleteOnEmpty=true)
+    - ChannelCountByLandName:
+      - Simulation_SingleInstance
+      - 0
+    # 채널 삭제 후 엔티티도 0개
+    - ChannelEntityCountByLandName:
+      - Simulation_SingleInstance
+      - 0
+- Id: 410
+  Name: ViewList_Boundary_One_Step_Out_Test
+  Comment: 경계(거리20)에서 1칸 밖으로 이동 시 ViewList 제거 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Other
+    Init: RangerInit
+    StartX: 20
+    StartY: -500
+  Scenario:
+  # 거리 20 (경계) - ViewList에 있어야 함
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - InViewList:
+      - Self
+      - Other
+  # Other가 1칸 이동하여 거리 21이 됨
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Other
+      - 21
+      - -500
+    Delay: 2000
+    Check:
+    - Not:
+        InViewList:
+          - Self
+          - Other
+- Id: 411
+  Name: ViewList_Boundary_One_Step_In_Test
+  Comment: 경계 밖(거리21)에서 1칸 안으로 이동 시 ViewList 추가 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Other
+    Init: RangerInit
+    StartX: 21
+    StartY: -500
+  Scenario:
+  # 거리 21 (경계 밖) - ViewList에 없어야 함
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - Not:
+        InViewList:
+          - Self
+          - Other
+  # Other가 1칸 이동하여 거리 20이 됨
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - Other
+      - 20
+      - -500
+    Delay: 2000
+    Check:
+    - InViewList:
+      - Self
+      - Other
+- Id: 412
+  Name: ViewList_Simultaneous_Move_Out_Test
+  Comment: 동시에 서로 ViewList range에서 나감 (거리10 → 거리22)
+  Land: Simulation_Instance_Limit2_DeleteOnEmpty
+  PcInit:
+  - Name: PC_A
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: PC_B
+    Init: RangerInit
+    StartX: 10
+    StartY: -500
+  Scenario:
+  # 거리 10 - ViewList에 있어야 함
+  - Command:
+      DoNothing: PC_A
+    Delay: 500
+    Check:
+    - InViewList:
+      - PC_A
+      - PC_B
+    - InViewList:
+      - PC_B
+      - PC_A
+  # 동시에 반대 방향으로 이동
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_A
+      - -5
+      - -500
+    Delay: 100
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_B
+      - 16
+      - -500
+    Delay: 3000
+    Check:
+    - Not:
+        InViewList:
+          - PC_A
+          - PC_B
+    - Not:
+        InViewList:
+          - PC_B
+          - PC_A
+- Id: 413
+  Name: ViewList_Simultaneous_Move_In_Test
+  Comment: 동시에 서로 ViewList range로 들어옴 (거리22 → 거리20)
+  Land: Simulation_Instance_Limit2_DeleteOnEmpty
+  PcInit:
+  - Name: PC_A
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: PC_B
+    Init: RangerInit
+    StartX: 22
+    StartY: -500
+  Scenario:
+  # 거리 22 - ViewList에 없어야 함
+  - Command:
+      DoNothing: PC_A
+    Delay: 500
+    Check:
+    - Not:
+        InViewList:
+          - PC_A
+          - PC_B
+  # 동시에 서로를 향해 이동
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_A
+      - 1
+      - -500
+    Delay: 100
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_B
+      - 21
+      - -500
+    Delay: 3000
+    Check:
+    - InViewList:
+      - PC_A
+      - PC_B
+    - InViewList:
+      - PC_B
+      - PC_A
+- Id: 414
+  Name: ViewList_Simultaneous_Same_Direction_Test
+  Comment: 경계에서 같은 방향으로 동시 이동 (거리20 유지)
+  Land: Simulation_Instance_Limit2_DeleteOnEmpty
+  PcInit:
+  - Name: PC_A
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: PC_B
+    Init: RangerInit
+    StartX: 20
+    StartY: -500
+  Scenario:
+  # 거리 20 (경계) - ViewList에 있어야 함
+  - Command:
+      DoNothing: PC_A
+    Delay: 500
+    Check:
+    - InViewList:
+      - PC_A
+      - PC_B
+  # 동시에 같은 방향(+X)으로 이동 - 거리 유지
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_A
+      - 5
+      - -500
+    Delay: 100
+  - Command:
+      CastCoordinateSkill:
+      - ChangeWalk
+      - PC_B
+      - 25
+      - -500
+    Delay: 3000
+    Check:
+    - InViewList:
+      - PC_A
+      - PC_B
+    - InViewList:
+      - PC_B
+      - PC_A
+- Id: 415
+  Name: ViewList_Teleport_Out_Test
+  Comment: 텔레포트로 뷰리스트 밖으로 나갈 때
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Other
+    Init: RangerInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - InViewList:
+      - Self
+      - Other
+  # Other가 텔레포트로 멀리 이동
+  - Command:
+      Cheat:
+      - Other
+      - teleport 100 -500 Simulation
+    Delay: 1000
+    Check:
+    - Not:
+        InViewList:
+          - Self
+          - Other
+- Id: 416
+  Name: ViewList_Teleport_In_Test
+  Comment: 텔레포트로 뷰리스트 안으로 들어올 때
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: Other
+    Init: RangerInit
+    StartX: 100
+    StartY: -500
+  Scenario:
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - Not:
+        InViewList:
+          - Self
+          - Other
+  # Other가 텔레포트로 근처로 이동
+  - Command:
+      Cheat:
+      - Other
+      - teleport 0 -501 Simulation
+    Delay: 1000
+    Check:
+    - InViewList:
+      - Self
+      - Other
+- Id: 417
+  Name: ViewList_Entity_Death_Test
+  Comment: 뷰리스트 내 엔티티 사망 시 처리 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  NpcInit:
+  - Name: Target_NPC
+    Npc: Simulation_No_Move_Npc
+    StartX: 0
+    StartY: -502
+  Scenario:
+  - Command:
+      DoNothing: Self
+    Delay: 500
+    Check:
+    - InViewList:
+      - Self
+      - Target_NPC
+  - Command:
+      ChangeTarget:
+      - Self
+      - Target_NPC
+    Delay: 300
+  - Command:
+      CastSkill:
+      - Simulation_Must_Kill
+      - Self
+      - Target_NPC
+    Delay: 2000
+    Check:
+    - Dead: Target_NPC
+  # NPC despawn 후 ViewList에서 제거
+  - Command:
+      DoNothing: Self
+    Delay: 5000
+    Check:
+    - EntityNotExist:
+      - Target_NPC
+      - Npc
+    - ViewListCount:
+      - Self
+      - 0
+- Id: 418
+  Name: ViewList_PC_Disconnect_Test
+  Comment: PC 접속 종료 시 다른 PC의 ViewList에서 제거 확인
+  Land: Simulation_Instance_Limit2_DeleteOnEmpty
+  PcInit:
+  - Name: PC_A
+    Init: FighterInit
+    StartX: 0
+    StartY: -500
+  - Name: PC_B
+    Init: RangerInit
+    StartX: 0
+    StartY: -501
+  Scenario:
+  - Command:
+      DoNothing: PC_A
+    Delay: 500
+    Check:
+    - InViewList:
+      - PC_A
+      - PC_B
+    - InViewList:
+      - PC_B
+      - PC_A
+  # PC_A가 다른 랜드로 이동 (접속 종료 시뮬레이션)
+  - Command:
+      Cheat:
+      - PC_A
+      - teleport 0 -500 Simulation
+    Delay: 2000
+    Check:
+    - ViewListCount:
+      - PC_B
+      - 0
+- Id: 419
+  Name: Schedule_Start_StateChange_Test
+  Comment: 스케줄 시작 스킬로 is_running 상태 변경 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드 (시작 전)
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  # 스케줄 아이템 설정 (Fallback만 활성화 - 스케줄 모드 유지용)
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작 스킬 사용
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ProducedMessage: schedule-state
+- Id: 420
+  Name: Schedule_Stop_StateChange_Test
+  Comment: 스케줄 정지 시 is_running 상태 변경 및 Kafka 메시지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 25000
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 1000
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - ProducedMessage: schedule-state
+- Id: 421
+  Name: Schedule_AutoBuyRequired_Flag_Test
+  Comment: 자동 구매 필요 플래그 초기 상태 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 300
+    Check:
+    # 초기 상태에서 auto_buy_required는 false
+    - AutoBuyRequired:
+      - Self
+      - false
+- Id: 422
+  Name: Schedule_Multiple_Start_Stop_Test
+  Comment: 스케줄 반복 시작/정지 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 초기 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 첫 번째 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 첫 번째 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+  # 두 번째 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+- Id: 423
+  Name: Schedule_DeathCount_Init_Test
+  Comment: 스케줄 시작 시 사망 횟수가 0으로 초기화되는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+- Id: 424
+  Name: Schedule_CurrentIndex_Init_Test
+  Comment: 스케줄 시작 시 현재 인덱스가 0으로 설정되는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+- Id: 425
+  Name: Schedule_WaitingRestoration_Init_Test
+  Comment: 스케줄 시작 시 자동 복구 대기 상태가 비활성화인지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleWaitingRestoration:
+      - Self
+      - false
+- Id: 426
+  Name: Schedule_AutoBuyRequired_Clear_On_Stop_Test
+  Comment: 스케줄 정지 시 자동구매 필요 플래그가 해제되는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+- Id: 429
+  Name: Schedule_Start_Stop_State_Transition_Test
+  Comment: 스케줄 시작/정지 상태 전환 통합 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작 - 초기 상태 확인
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+    - ScheduleWaitingRestoration:
+      - Self
+      - false
+  # 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+- Id: 430
+  Name: Schedule_Kafka_Message_Test
+  Comment: 스케줄 시작 시 Kafka 메시지 전송 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ProducedMessage: schedule-state
+- Id: 431
+  Name: Schedule_AutoSupply_Time_Exhaustion_Test
+  Comment: 자동 보급 시간이 소진되는지 확인 (짧은 시간으로 설정 후 대기)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드 - 10초로 설정 (테스트 환경 지연 고려)
+  # auto_supply_last_update를 먼 미래(9999999999)로 설정하여 일일 리프레시를 방지하고
+  # auto_supply_remain_sec 값이 그대로 적용되도록 함
+  # 참고: Stage 1~4까지 최소 900ms Delay + 실제 처리 시간이 있으므로 충분한 여유 필요
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 10
+          auto_supply_last_update: 9999999999
+          is_running: false
+    Delay: 200
+    Check:
+    - ScheduleAutoSupplyLoaded:
+      - Self
+      - true
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 11초 대기 후 시간 소진 확인 (10초 시간 + 1초 마진)
+  - Command:
+      DoNothing: Self
+    Delay: 11000
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+- Id: 432
+  Name: Schedule_AutoSupply_Refresh_By_Cheat_Test
+  Comment: 치트로 자동 보급 시간 리프레시 후 상태 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드 - 10초 (테스트 환경 지연 고려)
+  # auto_supply_last_update를 먼 미래로 설정하여 일일 리프레시 방지
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 10
+          auto_supply_last_update: 9999999999
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 11초 대기하여 시간 소진 (10초 시간 + 1초 마진)
+  - Command:
+      DoNothing: Self
+    Delay: 11000
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+  # 치트로 시간 리프레시
+  - Command:
+      Cheat:
+      - Self
+      - RefreshScheduleAutoSupplyTime
+    Delay: 500
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+- Id: 433
+  Name: Schedule_AutoBuy_Required_Set_By_Cheat_Test
+  Comment: 치트로 자동 구매 필요 플래그 설정 후 상태 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - AutoBuyRequired:
+      - Self
+      - false
+  # 치트로 자동 구매 필요 플래그 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetScheduleAutoBuyRequired true
+    Delay: 500
+    Check:
+    - AutoBuyRequired:
+      - Self
+      - true
+  # 스케줄 정지 시 플래그 해제 확인
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+- Id: 434
+  Name: Schedule_Inventory_Full_Storage_Trigger_Test
+  Comment: 인벤토리 가득 찼을 때 자동 보관 트리거 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 치트로 인벤토리 가득 참 상태 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 0
+    Delay: 500
+  # 인벤토리 가득 찬 상태에서 스케줄 동작 확인
+  - Command:
+      DoNothing: Self
+    Delay: 1000
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+- Id: 435
+  Name: Schedule_Short_Time_Set_By_Cheat_Test
+  Comment: 치트로 자동 보급 시간을 짧게 설정 후 소진 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드 - 충분한 시간
+  # auto_supply_last_update를 먼 미래로 설정하여 일일 리프레시 방지
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 9999999999
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 치트로 시간을 3초로 설정 (경계 조건 회피)
+  - Command:
+      Cheat:
+      - Self
+      - SetScheduleAutoSupplyTime 3
+    Delay: 1500
+    Check:
+    # 1.5초 후에는 아직 소진되지 않음
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 2.5초 추가 대기 후 소진 확인 (총 4초 경과)
+  - Command:
+      DoNothing: Self
+    Delay: 2500
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+- Id: 436
+  Name: Schedule_Full_Lifecycle_Test
+  Comment: 스케줄 전체 생명주기 통합 테스트 (로드 → 시작 → 사냥 → 시간소진 → 리프레시 → 정지)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 1. 스케줄 상태 로드
+  # auto_supply_last_update를 먼 미래로 설정하여 일일 리프레시 방지
+  # 3초로 설정하여 시간 경계 조건 회피
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 3
+          auto_supply_last_update: 9999999999
+          is_running: false
+    Delay: 200
+    Check:
+    - ScheduleAutoSupplyLoaded:
+      - Self
+      - true
+    - ScheduleAutoMode:
+      - Self
+      - false
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 2. 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+    - ProducedMessage: schedule-state
+  # 3. 사냥 시뮬레이션 (대기) - 4초 대기로 3초 시간 소진
+  - Command:
+      DoNothing: Self
+    Delay: 4000
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+  # 4. 시간 리프레시
+  - Command:
+      Cheat:
+      - Self
+      - RefreshScheduleAutoSupplyTime
+    Delay: 500
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 5. 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+    - ProducedMessage: schedule-state
+- Id: 437
+  Name: Schedule_AutoBuy_AutoStorage_Flags_Test
+  Comment: 자동 구매/보관 옵션 및 플래그 복합 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작 - 초기 상태 확인
+  # setting.yaml 기본값: ScheduleAutoItemBuy=true, ScheduleAutoItemStore=true
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - AutoBuyRequired:
+      - Self
+      - false
+    - ScheduleAutoBuy:
+      - Self
+      - true
+    - ScheduleAutoStorage:
+      - Self
+      - true
+  # 자동 구매 필요 플래그 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetScheduleAutoBuyRequired true
+    Delay: 500
+    Check:
+    - AutoBuyRequired:
+      - Self
+      - true
+  # 인벤토리 가득 참 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 0
+    Delay: 500
+  # 스케줄 정지 시 플래그 해제 확인
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+- Id: 438
+  Name: Schedule_Multiple_Time_Manipulations_Test
+  Comment: 여러 번의 시간 조작과 상태 변화 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 초기 로드 (긴 시간)
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 시간을 1초로 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetScheduleAutoSupplyTime 1
+    Delay: 2000
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+  # 시간 리프레시
+  - Command:
+      Cheat:
+      - Self
+      - RefreshScheduleAutoSupplyTime
+    Delay: 500
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - false
+  # 다시 시간을 1초로 설정
+  - Command:
+      Cheat:
+      - Self
+      - SetScheduleAutoSupplyTime 1
+    Delay: 2000
+    Check:
+    - ScheduleAutoSupplyExhausted:
+      - Self
+      - true
+  # 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+- Id: 439
+  Name: Schedule_AutoStorage_AI_Trigger_Test
+  Comment: 자동 보관 - 인벤토리 가득 시 AI가 마을 이동 후 자동 보관 스킬 사용 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleAutoStorage:
+      - Self
+      - true
+  # 인벤토리 가득 참 설정 (자동 보관 트리거 조건)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 0
+    Delay: 200
+  # AI가 동작할 시간 대기 후 스킬 사용 여부 체크
+  - Command:
+      DoNothing: Self
+    Delay: 3000
+    Check:
+    - SkillSuccess:
+      - ScheduleTeleportToHome
+      - Self
+      - Self
+    - HasBuff:
+      - Self
+      - IsTownBuff
+    - SkillSuccess:
+      - ScheduleAutoStorage
+      - Self
+      - Self
+- Id: 440
+  Name: Schedule_Town_Buff_By_AI_Teleport_Test
+  Comment: AI가 마을 텔레포트 시 마을 버프 자동 부여 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  # 초기 상태 - 마을 버프 없음
+  - Command:
+      DoNothing: Self
+    Delay: 100
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - IsTownBuff
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 인벤토리 가득 참 설정 (마을 이동 트리거 조건)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 0
+    Delay: 200
+  # AI가 마을로 이동할 시간 대기 후 마을 버프 부여 확인
+  - Command:
+      DoNothing: Self
+    Delay: 3000
+    Check:
+    - SkillSuccess:
+      - ScheduleTeleportToHome
+      - Self
+      - Self
+    - HasBuff:
+      - Self
+      - IsTownBuff
+- Id: 442
+  Name: Schedule_Teleport_To_Town_Prerequisite_Test
+  Comment: 마을 아닌 상태에서 정비 조건 만족 시 AI가 마을로 텔레포트하는지 확인
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 인벤토리 여유 공간 초기화 (기본값 0이면 is_inventory_full=true가 되어 즉시 마을 텔포)
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 100
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 마을 버프 없는 상태 확인 (마을 아님 - 텔레포트 전제조건)
+  - Command:
+      DoNothing: Self
+    Delay: 100
+    Check:
+    - Not:
+        HasBuff:
+          - Self
+          - IsTownBuff
+  # 인벤토리 가득 참 설정 → 자동 보급 필요 상태
+  - Command:
+      Cheat:
+      - Self
+      - SetBagRemainSlots 0
+    Delay: 200
+  # AI가 마을로 텔레포트할 시간 대기 후 확인
+  - Command:
+      DoNothing: Self
+    Delay: 3000
+    Check:
+    - SkillSuccess:
+      - ScheduleTeleportToHome
+      - Self
+      - Self
+    - HasBuff:
+      - Self
+      - IsTownBuff
+- Id: 443
+  Name: Schedule_Duplicate_Start_Test
+  Comment: 이미 running 상태에서 StartScheduleSkill 재사용 시 동작 확인 (멱등성)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+  # 두 번째 스케줄 시작 (중복) - 상태가 유지되어야 함
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    # 중복 시작 후에도 running 상태 유지
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+  # 세 번째 스케줄 시작 (연속 중복) - 안정성 확인
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 정상 정지 가능 확인
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+- Id: 444
+  Name: Schedule_Duplicate_Stop_Test
+  Comment: 이미 stopped 상태에서 StopScheduleSkill 재사용 시 동작 확인 (멱등성)
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 스케줄 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 첫 번째 스케줄 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+  # 두 번째 스케줄 정지 (중복) - 에러 없이 상태 유지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    # 중복 정지 후에도 stopped 상태 유지
+    - ScheduleAutoMode:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false
+  # 세 번째 스케줄 정지 (연속 중복) - 안정성 확인
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 정상 재시작 가능 확인
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+- Id: 445
+  Name: Schedule_Rapid_State_Transition_Test
+  Comment: 빠른 상태 전이 (시작→정지→시작→정지) 안정성 테스트
+  PcInit:
+  - Name: Self
+    Init: FighterInit
+  Scenario:
+  # 스케줄 상태 로드
+  - Command:
+      MockConsumeMessage:
+      - Self
+      - LoadScheduleStateReply:
+          auto_supply_remain_sec: 28800
+          auto_supply_last_update: 0
+          is_running: false
+    Delay: 200
+  - Command:
+      DisableAllScheduleItems: Self
+    Delay: 100
+  - Command:
+      SetSettingBool: [Self, ScheduleItemFallbackEnabled, true]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallbackOrder, 0]
+    Delay: 100
+  - Command:
+      SetSettingI64: [Self, ScheduleItemFallback, 99999]
+    Delay: 100
+  # 빠른 시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 빠른 정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+  # 빠른 재시작
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+  # 빠른 재정지
+  - Command:
+      CastSkill:
+      - StopScheduleSkill
+      - Self
+      - Self
+    Delay: 100
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - false
+  # 최종 시작 후 상태 일관성 확인
+  - Command:
+      CastSkill:
+      - StartScheduleSkill
+      - Self
+      - Self
+    Delay: 500
+    Check:
+    - ScheduleAutoMode:
+      - Self
+      - true
+    - ScheduleDeathCount:
+      - Self
+      - 0
+    - ScheduleCurrentIndex:
+      - Self
+      - 0
+    - ScheduleWaitingRestoration:
+      - Self
+      - false
+    - AutoBuyRequired:
+      - Self
+      - false

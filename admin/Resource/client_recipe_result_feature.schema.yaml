@@ -1,0 +1,55 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    MergeTitleDesc:
+      type: string
+      ref: description
+    GachaTitleDesc:
+      type: string
+      ref: description
+    UnableMoveMessage:
+      type: string
+      ref: system_message
+    HighGrade:
+      type: string
+      ref: grade
+    CardType:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        staticProperties: true
+        properties:
+          Group:
+            type: string
+            enum:
+              - PolymorphCard
+              - WeaponCard
+              - Item
+          ItemCategory:
+            type: string
+            ref: item_category
+        required:
+          - Group
+          - ItemCategory
+    RecipeResultPageItemCount:
+      type: integer
+    GachaResultCardMaxCount:
+      type: integer
+  required:
+    - Id
+    - Name
+    - MergeTitleDesc
+    - GachaTitleDesc
+    - UnableMoveMessage
+    - HighGrade
+    - RecipeResultPageItemCount
+    - GachaResultCardMaxCount

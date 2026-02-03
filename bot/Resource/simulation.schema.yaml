@@ -1,0 +1,101 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Comment
+    - PcInitialization
+    - Scenario
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Skip:
+      type: boolean
+    Duplicate:
+      type: integer
+    Layer:
+      type: array
+      items:
+        type: object
+        required:
+          - WallType
+          - X
+          - Y
+        properties:
+          WallType:
+            type: string
+            enum:
+              - LowWall
+              - HighWall
+              - SightWall
+          X:
+            type: integer
+          Y:
+            type: integer
+          Z:
+            type: integer
+    PcInitialization:
+      type: array
+      items:
+        type: object
+        required:
+          - Name
+          - Initialization
+        properties:
+          Name:
+            type: string
+          Initialization:
+            type: string
+            ref: simulation_pc_initialization
+          StartX:
+            type: integer
+          StartY:
+            type: integer
+    NpcInitialization:
+      type: array
+      items:
+        type: object
+        required:
+          - Name
+          - Npc
+          - StartX
+          - StartY
+        properties:
+          Name:
+            type: string
+          Npc:
+            type: string
+            ref: simulation_npc
+          StartX:
+            type: integer
+          StartY:
+            type: integer
+          SpawnInterval:
+            type: string
+    Scenario:
+      # 테이블 셀
+      type: array
+      items:
+        type: object
+        required:
+          - Command
+          - Delay
+        properties:
+          Command:
+            type: object
+          Delay:
+            type: integer
+          SuccessCondition:
+            type: array
+            items:
+              type: object
+

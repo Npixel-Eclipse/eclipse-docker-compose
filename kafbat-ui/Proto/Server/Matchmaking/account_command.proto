@@ -1,0 +1,173 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.matchmaking.account";
+option java_outer_classname = "ServerMatchmakingAccountCommandProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package matchmaking_account_command;
+
+import "Server/Matchmaking/common.proto";
+import "Server/content_limit.proto";
+
+enum AccountCommandResult {
+  SUCCESS = 0;
+  FAIL = 1;
+
+  // Self
+  FAIL_ALREADY_RESERVED = 100;
+  FAIL_NO_TICKET = 101;
+  FAIL_NOT_ALLOW_LAND = 102;
+  FAIL_PLAYER_LEVEL_NOT_ENOUGH = 103;
+  FAIL_PLAYER_COMBAT_POINT_NOT_ENOUGH = 104;
+
+  // Battle
+  FAIL_BATTLE_USER_NOT_FOUND = 200;
+  FAIL_BATTLE_PROPERTY_NOT_FOUND = 201;
+
+  // Party
+  FAIL_NOT_PARTY_LEADER = 300;
+
+  // Dungeon
+  FAIL_NOT_ENOUGH_DUNGEON_REMAIN_COUNT = 400;
+}
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+
+message MatchmakingAccountCommand {
+  string character_uuid = 1;
+
+  oneof command {
+    // general
+
+    // self
+    Start start = 100;
+    OnQueueTicketCreated on_queue_ticket_created = 101;
+    DeleteTicket delete_ticket = 102;
+    ForwardEnterBattlegroundSession forward_enter_battleground_session = 103;
+    OnCancelTicketReply on_cancel_ticket_reply = 104;
+    OnPartyMemberIOEvent on_party_member_io_event = 105;
+    OnPcLandEvent on_pc_land_event = 106;
+    OnPcDeadEvent on_pc_dead_event = 107;
+    OnSessionChanged on_session_changed = 108; // Session Processor에서 생성하는 특수 Command
+    content_limit.UnlockedContentEvent unlock_content_limit = 109;
+    ForwardAggregateMatchRateForStart forward_aggregate_match_rate_for_start = 110;
+    ForwardMatchEvents forward_match_events = 111;
+
+    // from battle
+    OnBattleAggregateMatchRateForStart on_battle_aggregate_match_rate_for_start = 200;
+
+    // from party
+    OnPartyMemberAggregatedForStart on_party_member_aggregated_for_start = 300;
+
+    // from dungeon
+    OnReceivedDungeonQueryForStart on_received_dungeon_query_for_start = 400;
+  }
+
+  message Start {
+    int64 matchmaking_id = 1;
+    optional int64 dungeon_id = 4;
+    string server_id = 5;
+    repeated Player player = 2;
+    AccountCommandResult last_result = 3;
+
+    string transaction_uuid = 1000;
+
+    message Player {
+      int64 account_id = 6;
+      string character_uuid = 2;
+      bool is_reserved = 3;
+      bool is_property_aggregated = 4;
+      repeated common.Property property = 5;
+    }
+  }
+
+  message OnQueueTicketCreated {
+    int64 matchmaking_id = 1;
+    optional int64 dungeon_id = 3;
+    string ticket_uuid = 2;
+  }
+
+  message DeleteTicket {
+    int64 matchmaking_id = 1;
+    optional int64 dungeon_id = 2;
+    matchmaking_common.TicketReason reason = 3;
+  }
+
+  message ForwardEnterBattlegroundSession {
+    string battleground_session_id = 1;
+  }
+
+  message OnCancelTicketReply {
+    AccountCommandResult result = 1;
+    int64 matchmaking_id = 2;
+    optional int64 dungeon_id = 3;
+    matchmaking_common.TicketReason reason = 4;
+  }
+
+  message OnBattleAggregateMatchRateForStart {
+    AccountCommandResult result = 1;
+    bytes matchmaking_account_command_start = 2;
+    repeated common.Property property = 3;
+  }
+
+  message OnPartyMemberAggregatedForStart {
+    int64 matchmaking_id = 1;
+    optional int64 dungeon_id = 2;
+    string server_id = 3;
+
+    string transaction_uuid = 1000;
+  }
+
+  message OnPartyMemberIOEvent {
+    Type type = 1;
+
+    enum Type {
+      JOIN = 0;
+      LEAVE = 1;
+    }
+  }
+
+  message OnPcLandEvent {
+    string land_name = 1;
+  }
+
+  message OnPcDeadEvent {
+    // empty
+  }
+
+  message OnSessionChanged {
+    optional string previous_character_uuid = 1;
+    optional string new_character_uuid = 2;
+  }
+
+  message OnReceivedDungeonQueryForStart {
+    int64 matchmaking_id = 1;
+    optional int64 dungeon_id = 2;
+    string server_id = 3;
+    repeated Player players = 4;
+    int64 requester_account_id = 5; // 매칭 시작을 누른 유저(파티장)에게 알림을 보내기 위함.
+    string requester_character_uuid = 6; // 매칭 시작을 누른 유저(파티장)에게 알림을 보내기 위함.
+    AccountCommandResult last_result = 7;
+
+    string transaction_uuid = 1000;
+
+    message Player {
+      int64 account_id = 1;
+      string character_uuid = 2;
+      bool is_checked_dungeon_condition = 3;
+    }
+  }
+
+  message ForwardAggregateMatchRateForStart {
+    string character_uuid = 1;
+    repeated string property_names = 2;
+    bytes matchmaking_account_command_start = 3;
+  }
+
+  message ForwardMatchEvents {
+    repeated bytes match_events = 1;
+  }
+}

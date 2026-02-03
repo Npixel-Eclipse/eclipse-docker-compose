@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.contentlimit";
+option java_outer_classname = "ClientContentLimitProto";
+
+package eclipse.client.contentlimit;
+
+message ContentLimitRequest {
+    oneof request {
+        List list = 1;
+    }
+
+    message List {
+    }
+}
+
+message ContentLimitEvent {
+    oneof event {
+        UnlockedContent unlocked_content = 1;
+    }
+
+    message UnlockedContent {
+        repeated ContentDetail content_details = 1;
+        message ContentDetail {
+            int64 content_id = 1;
+            bool is_new = 2;
+        }
+    }
+}

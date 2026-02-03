@@ -1,0 +1,46 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - PageOpenCondition_CharLevel             # 페이지 오픈 조건 (캐릭터 레벨)
+              - PageOpenCondition_MasteryLevel          # 페이지 오픈 조건 (마스터리 레벨)
+              - PageOpenCondition_SpendPoint            # 페이지 오픈 조건 (이전 페이지 소모 포인트)
+              - EssenceOpenFail_PointInsufficiention    # 근원 개방 실패 (포인트 부족)
+              - EssenceOpenFail_RequireEssenceUnOpened  # 근원 개방 실패 (이전 근원이 열리지 않음)
+              - MasteryLevelUp                          # 숙련도 레벨 업
+              - MasteryItemPointUp                      # 숙련도 아이템 포인트 업
+              - MasteryItemExpUp                        # 숙련도 아이템 경험치 업
+              - EssenceResetFail_NextEssenceOpened      # 근원 초기화 실패 (다음 근원 개방상태)
+              - EssenceResetFail_NextPageOpened         # 근원 초기화 실패 (다음 페이지의 근원 개방 상태)
+              - MasteryItemPointUp_Fail_MaxPoint        # 숙련도 포인트 획득 아이템 사용 실패 (최대치 도달)
+              - EssenceInfoTab_Ability                  # 탭 이름 (능력)
+              - EssenceInfoTab_Skill                    # 탭 이름 (기술)
+              - EssenceInfoTab_Fusion                   # 탭 이름 (융합)
+              - ActiveCondition_Level                   # 개방조건 (레벨)
+              - ActiveCondition_PrevCondition           # 개방조건 (이전특성개방 갯수)
+              - ActiveCondition_Node                    # 개방조건 (대상 노드)
+              - ActiveCondition_Group                   # 개방조건 (그룹 지정 노드)
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+  required:
+    - Id
+    - Name

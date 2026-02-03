@@ -1,0 +1,93 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    FlowType:
+      type: string
+      enum:
+        - Gathering
+        - Usage
+    HyperLinkDesc:
+      type: string
+      ref: description
+    NoneHyperLinkDesc:
+      type: string
+      ref: description
+    PropertyType:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Monster
+              - BasicMerchant
+              - EventMerchant
+              - GuildMerchant
+              - Craft
+              - Disassemble
+              - BmShop
+              - HuntingZoneShop
+              - HuntingZoneGroupShop
+              - GuildDonation
+              - GuildQuest
+              - HuntingZoneBid
+              - HuntingZoneBidCurrency
+              - Building
+              - Achievement
+          Description:
+            type: string
+            ref: description
+          PopupSummary:
+            type: string
+            ref: description
+          DefaultIcon:
+            type: string
+          DungeonIcon:
+            type: string
+          NameDesc:
+            type: string
+            ref: description
+          OpenContents:   # false 인 경우 하이퍼링크 X
+            type: boolean
+            default: true
+          OpenPopup:      # false 인 경우 팝업 열리지 않고 즉시 콘텐츠 이동
+            type: boolean
+            default: true
+          AllowedResultType:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                ResultType:
+                  type: string
+                  ref: recipe_result_type
+          ItemPriority:
+            type: array
+            items:
+              type: string
+              ref: item
+          BMShopCategoryPriority:
+            type: array
+            items:
+              type: string
+              ref: bm_shop_category
+          DungeonTypePriority:
+            type: array
+            items:
+              type: string # dungeon.schema.yaml 의 Type enum
+          OpenConfirmPopupToContents: # 콘텐츠 이동 전 확인 팝업
+            type: boolean
+            default: false
+  required:
+    - Id
+    - FlowType
+    - PropertyType

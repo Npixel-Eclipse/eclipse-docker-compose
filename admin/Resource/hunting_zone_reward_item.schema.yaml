@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Reward:
+        type: array
+        items:
+            type: object
+            additionalProperties: false
+            required:
+              - Item
+              - Amount
+            properties:
+              Item:
+                  type: string
+                  ref: item
+                  base_ref: true
+              Amount:
+                  type: integer
+                  minimum: 1
+
+  required:
+    - Id
+    - Name
+    - Reward

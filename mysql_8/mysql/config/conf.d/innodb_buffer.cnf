@@ -1,0 +1,5 @@
+[mysqld]
+innodb_buffer_pool_size=8G
+innodb_buffer_pool_chunk_size=2G
+innodb_buffer_pool_instances=4
+

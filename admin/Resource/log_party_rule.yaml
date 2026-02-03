@@ -1,0 +1,9 @@
+- Name: DEFAULT
+  Comment: 각자 루팅
+  Value: 0
+- Name: SEQUENCE
+  Comment: 순차 루팅
+  Value: 1
+- Name: RANDOM
+  Comment: 랜덤 루팅
+  Value: 2

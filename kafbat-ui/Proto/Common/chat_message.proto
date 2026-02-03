@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.chat.message";
+option java_outer_classname = "CommonChatProto";
+
+message ChatMessage {
+    oneof message {
+        ItemAcquiredBroadcast item_acquired_broadcast = 1;
+        ItemAcquiredByBoxBroadcast item_acquired_by_box_broadcast = 2;
+        ItemAcquiredByCraftBroadcast item_acquired_by_craft_broadcast = 3;
+        ItemAcquiredByDefaultBroadcast item_acquired_by_default_broadcast = 4;
+        ItemEnchantBroadcast item_enchant_broadcast = 5;
+        AchievementCompletedBroadcast achievement_completed_broadcast = 6;
+        EmojiBroadcast emoji_broadcast = 7;
+        Notice notice = 8;
+    }
+
+    // 아이템 획득 전체 메시지 - 드랍
+    message ItemAcquiredBroadcast {
+        int64 item_id = 1;             // 획득 아이템 ID
+        int64 amount = 2;              // 획득량
+        string character_name = 3;     // 획득 캐릭터 이름
+        string address_name = 4;       // 획득처 (address.yaml - name)
+    }
+
+    // 아이템 획득 전체 메시지 - 상자, 럭키백
+    message ItemAcquiredByBoxBroadcast {
+        int64 item_id = 1;             // 획득 아이템 ID
+        string character_name = 2;     // 획득 캐릭터 이름
+        int64 box_item_id = 3;        // 상자 아이템 ID
+    }
+
+    // 아이템 획득 전체 메시지 - 제작
+    message ItemAcquiredByCraftBroadcast {
+        int64 item_id = 1;             // 획득 아이템 ID
+        string character_name = 2;     // 획득 캐릭터 이름
+    }
+
+    // 아이템 획득 전체 메시지 - 기본 획득 (획득처 표기 X)
+    message ItemAcquiredByDefaultBroadcast {
+        int64 item_id = 1;             // 획득 아이템 ID
+        string character_name = 2;     // 획득 캐릭터 이름
+    }
+
+    // 아이템 획득 전체 메시지 - 강화, 스킬 강화
+    message ItemEnchantBroadcast {
+        int64 item_id = 1;             // 대상 아이템 ID
+        string character_name = 2;     // 획득 캐릭터 이름
+        int32 enchant_level = 3;       // 강화 레벨
+        int32 enchant_result = 4;      // 강화 결과 (0: 실패, 1: 성공)
+        int32 chat_item_acquired_broadcast_config_id = 5; // chat_item_acquired_broadcast.yaml - id
+    }
+
+    message AchievementCompletedBroadcast {
+        int64 quest_id = 1;            // 달성한 업적의 퀘스트 ID (quest.yaml -> id)
+        string character_name = 2;     // 달성 캐릭터 이름
+    }
+
+    // Pvp 메시지 이모티콘 메시지
+    message EmojiBroadcast {
+        int64 emoji_id = 1;             // 이모티콘 ID (yaml 아직 없음 - 추가 예정)
+    }
+
+    message Notice {
+        string title = 1;
+        string content = 2;
+        int64 display_seconds = 3; // 공지 노출 시간
+        Type type = 4;
+
+        enum Type {
+            ROLLING = 0;
+            DEFAULT = 1;
+        }
+    }
+}

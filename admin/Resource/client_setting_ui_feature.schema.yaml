@@ -1,0 +1,139 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    
+    HideCanNotUseOption:
+      type: boolean      
+
+    TargetInfoList:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:         
+          Description: 
+            type: string
+            ref: description
+          Type:
+            type: string
+            enum:
+              - AttackTarget
+              - AutoBattle
+              - SearchTarget
+          TargetInfo:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Description: 
+                  type: string
+                  ref: description
+                DefaultPriority:
+                  type: integer
+                  minimum: 1
+                DoNotModify:
+                  type: boolean
+                  default: false
+                Type:
+                  type: string
+                  enum:
+                    - ScanOnAttackTarget
+                    - AttackingMePcOnAttackTarget
+                    - HostilePcOnAttackTarget
+                    - AroundPcAttackTarget
+                    - AttackingMeMonsterOnAttackTarget
+                    - QuestMonsterOnAttackTarget
+                    - AggressiveMonsterOnAttackTarget
+                    - NormalMonserOnAttackTarget
+                    - AttackingMeMonsterOnAutoBattle
+                    - QuestMonsterOnAutoBattle
+                    - AggressiveMonsterOnAutoBattle
+                    - NormalMonsterOnAutoBattle
+                    - ScanOnSearchTarget
+                    - AttackingMePcOnSearchTarget
+                    - HostilePcOnSearchTarget
+                    - AroundPcOnSearchTarget
+                    - AttackingMeMonsterOnSearchTarget
+                    - QuestMonsterOnSearchTarget
+                    - AggressiveMonsterOnSearchTarget
+                    - NormalMonsterOnSearchTarget                
+          
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Base
+              - Battle
+              - Environment
+              - Account
+          Enable:
+            type: boolean
+            default: false
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+          ShowAtLoginStage:
+            type: boolean
+            default: false
+          UISubTab:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Type:
+                  type: string
+                  enum:
+                    - Convenience
+                    - Notification
+                    - Battle
+                    - Acquisition
+                    - TargetPriority
+                    - Target
+                    - Scan
+                    - Environment
+                    - Account
+                TabIndex: #위젯 스위쳐 인덱스
+                  type: integer
+                  minimum: 0
+                DefaultTab:
+                  type: boolean
+                  default: false
+                Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+                  type: string
+                Description:
+                  type: string
+                  ref: description
+                Comment:
+                  type: string
+              required:
+                - TabIndex
+        required:
+          - TabIndex
+  required:
+    - Id
+    - Name

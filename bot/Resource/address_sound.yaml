@@ -1,0 +1,822 @@
+- Id: 1
+  Name: World
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Field/BGM_AllRegions_Temp_MS.BGM_AllRegions_Temp_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 384
+  Name: Rainwood
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_RainField01_MS.Rainwood_RainField01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 1406
+  Name: Eldar_Central
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_Central01_MS.Eldar_Central01_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+- Id: 4215
+  Name: Breath_of_Gaia_Ondor
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_GaiaOndor01_MS.Dun_GaiaOndor01_MS
+    FadeInTime: 0
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_GaiaOndor02_MS.Dun_GaiaOndor02_MS
+    FadeInTime: 0
+- Id: 348
+  Name: South_Varitan_Cliff_of_Purity
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Cliff_of_Purity01_MS1.South_Kalitan_Cliff_of_Purity01_MS1
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Cliff_of_Purity02_MS.South_Kalitan_Cliff_of_Purity02_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+- Id: 631
+  Name: South_Varitan_Screaming_Canyon
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Screaming_Canyon01_MS.South_Kalitan_Screaming_Canyon01_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Screaming_Canyon02_MS.South_Kalitan_Screaming_Canyon02_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+- Id: 847
+  Name: South_Varitan_Faceless_Brotherhood_Fortress
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Varitan_Faceless_Brotherhood_Fortress01_MS.South_Varitan_Faceless_Brotherhood_Fortress01_MS
+    FadeInTime: 0
+- Id: 632
+  Name: South_Varitan_Red_Cheeks_Bandit_Camp
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Red_Cheeks_Bandit_Camp02_MS.South_Kalitan_Red_Cheeks_Bandit_Camp02_MS
+    FadeInTime: 2
+- Id: 1472
+  Name: South_Varitan_Ruined_Village
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Ruined_Village01_MS.South_Kalitan_Ruined_Village01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Kalitan_Ruined_Village02_MS.South_Kalitan_Ruined_Village02_MS
+    FadeInTime: 2
+- Id: 62
+  Name: South_Varitan_Lostwick
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Varitan_Lostwick_MS.South_Varitan_Lostwick_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Varitan_Lostwick02_MS.South_Varitan_Lostwick02_MS
+    FadeInTime: 2
+    FadeOutTime: 2
+    IsParentless: true
+- Id: 1058
+  Name: South_Varitan_The_Evoh_Bloodlines
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/Evoh_Bloodlines01_MS.Evoh_Bloodlines01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Kalitan/Evoh_Bloodlines02_MS.Evoh_Bloodlines02_MS
+    FadeInTime: 0
+    FadeOutTime: 2
+- Id: 564
+  Name: Eldar_East_Mirage_Valley
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/East_Eldar_Mirage_Valley01_MS.East_Eldar_Mirage_Valley01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/East_Eldar_Mirage_Valley02_MS.East_Eldar_Mirage_Valley02_MS
+    FadeInTime: 2
+- Id: 1062
+  Name: Eldar_East_Nasyars_Bastion
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/East_Eldar_Nasyars_Bastion01_MS.East_Eldar_Nasyars_Bastion01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    FadeInTime: 2
+- Id: 671
+  Name: Eldar_East_House_of_Nasyar_Refuge
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_House_of_Nasyar_Refuge01_MS.Eldar_East_House_of_Nasyar_Refuge01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 639
+  Name: Eldar_East_Ellan_Border_Patrols
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Hooked_Lake01__MS.Eldar_East_Hooked_Lake01__MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Ellan_Border_Patrols02_MS.Eldar_East_Ellan_Border_Patrols02_MS
+    FadeInTime: 2
+- Id: 732
+  Name: Eldar_East_Hooked_Lake
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Hooked_Lake01__MS.Eldar_East_Hooked_Lake01__MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Hooked_Lake02_MS.Eldar_East_Hooked_Lake02_MS
+    FadeInTime: 2
+- Id: 733
+  Name: Eldar_East_Balko_Rock
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_lavafield01_MS.Eldar_East_lavafield01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/East_Eldar_Balko_Rock02_MS.East_Eldar_Balko_Rock02_MS
+    FadeInTime: 2
+- Id: 1254
+  Name: Eldar_East_Draconian_Karakans_Lands
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_lavafield01_MS.Eldar_East_lavafield01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/East_Eldar_Draconian_Karakans_Lands02_MS.East_Eldar_Draconian_Karakans_Lands02_MS
+    FadeInTime: 2
+- Id: 2694
+  Name: Eldar_East_Barbarian_Chief_Touren_Sisters
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_lavafield01_MS.Eldar_East_lavafield01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Barbarian_Chief_Touren_Sisters02_MS.Eldar_East_Barbarian_Chief_Touren_Sisters02_MS
+    FadeInTime: 2
+- Id: 931
+  Name: Eldar_East_Traces_of_the_Black_Dragon
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_lavafield01_MS.Eldar_East_lavafield01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_East_Traces_of_the_Black_Dragon02_MS.Eldar_East_Traces_of_the_Black_Dragon02_MS
+    FadeInTime: 2
+- Id: 320
+  Name: East_Varitan_Highwinguard_Eastern_Plains
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Highwinguard_Eastern_Plains02_MS.Varitan_Highwinguard_Eastern_Plains02_MS
+    FadeInTime: 2
+- Id: 221
+  Name: East_Varitan_Golden_Oak_Farm
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Golden_Oak_Farm02_MS.Varitan_Golden_Oak_Farm02_MS
+    FadeInTime: 2
+- Id: 172
+  Name: East_Varitan_Halan_Mercenary_Outpost
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Halan_Mercenary_Outpost02_MS.Varitan_Halan_Mercenary_Outpost02_MS
+    FadeInTime: 2
+- Id: 2431
+  Name: East_Varitan_Free_Harbor
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Free_Harbor02_MS.Varitan_Free_Harbor02_MS
+    FadeInTime: 2
+- Id: 1476
+  Name: East_Varitan_Villin_Hills
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Villin_Hills02_MS.Varitan_Villin_Hills02_MS
+    FadeInTime: 2
+- Id: 1697
+  Name: East_Varitan_Combustionists_Civil_Works_Area
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Combustionists_Civil_Works_Area02_MS.Varitan_Combustionists_Civil_Works_Area02_MS
+    FadeInTime: 2
+- Id: 829
+  Name: East_Varitan_Varitan_Castle
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/East_Varitan/East_Varitan_Varitan_Castle01_MS.East_Varitan_Varitan_Castle01_MS
+    FadeInTime: 0
+    FadeOutTime: 4
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Varitan_Castle02_MS.Varitan_Varitan_Castle02_MS
+    FadeInTime: 2
+- Id: 663
+  Name: East_Varitan_Varitan_Biblical_Order_Border_Patrols
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Varitan/Varitan_Varitan_Biblical_Order_Border_Patrols02_MS.Varitan_Varitan_Biblical_Order_Border_Patrols02_MS
+    FadeInTime: 2
+- Id: 3035
+  Name: North_Varitan_Highwinguard_Logging_Area
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Highwinguard_Logging_Area02_MS.Varitan_Highwinguard_Logging_Area02_MS
+    FadeInTime: 2
+- Id: 960
+  Name: North_Varitan_Combustionists_Quarry
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Combustionists_Quarry02_MS.Varitan_Combustionists_Quarry02_MS
+    FadeInTime: 2
+- Id: 3009
+  Name: North_Varitan_Varitan_Biblical_Order
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Varitan_Biblical_Order02_MS.Varitan_Varitan_Biblical_Order02_MS
+    FadeInTime: 2
+- Id: 33
+  Name: North_Varitan_Rockhed_Mercenary_Patrols
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Rockhed_Mercenary_Patrols02_MS.Varitan_Rockhed_Mercenary_Patrols02_MS
+    FadeInTime: 2
+- Id: 1314
+  Name: North_Varitan_Tree_Valley
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Tree_Valley02_MS.Varitan_Tree_Valley02_MS
+    FadeInTime: 2
+- Id: 1064
+  Name: North_Varitan_Soy_Mountains_Mining_Town
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Soy_Mountains_Mining_Town02_MS.Varitan_Soy_Mountains_Mining_Town02_MS
+    FadeInTime: 2
+- Id: 4350
+  Name: North_Varitan_Falmir_Harbor
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Falmir_Harbor02_MS.Varitan_Falmir_Harbor02_MS
+    FadeInTime: 2
+- Id: 3477
+  Name: North_Varitan_Millan_Castle
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Millan_Castle02_MS.Varitan_Millan_Castle02_MS
+    FadeInTime: 2
+- Id: 1598
+  Name: Rainwood_Isah_Lake
+  SoundChannel1:
+    Asset: ''
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Isah_Lake02_MS.Rainwood_Isah_Lake02_MS
+    FadeInTime: 0
+- Id: 1077
+  Name: Rainwood_Hololu_Cavern
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern01_MS.Rainwood_Hololu_Cavern01_MS
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern02_MS.Rainwood_Hololu_Cavern02_MS
+    FadeInTime: 0
+- Id: 5984
+  Name: Rainwood_QuestInstance_Hololu_Cavern
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern01_MS.Rainwood_Hololu_Cavern01_MS
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern02_MS.Rainwood_Hololu_Cavern02_MS
+    FadeInTime: 0
+- Id: 191
+  Name: Rainwood_Stone_Head
+  SoundChannel1:
+    Asset: ''
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Stone_Head02_MS.Rainwood_Stone_Head02_MS
+    FadeInTime: 0
+- Id: 3632
+  Name: Rainwood_Dwarven_Gravediggers_Camp
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Dwarven_Gravediggers01_MS.Rainwood_Dwarven_Gravediggers01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Dwarven_Gravediggers02_MS.Rainwood_Dwarven_Gravediggers02_MS
+    FadeInTime: 0
+- Id: 3314
+  Name: Rainwood_Isah_Garden
+  SoundChannel1:
+    FadeInTime: 0
+    FadeOutTime: 3
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Isah_Garden02_MS.Rainwood_Isah_Garden02_MS
+    FadeInTime: 0
+- Id: 4104
+  Name: Rainwood_Dragondog_Hunters_Camp
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Dragondog_Hunters01_MS.Rainwood_Dragondog_Hunters01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Dragondog_Hunters02_MS.Rainwood_Dragondog_Hunters02_MS
+    FadeInTime: 0
+- Id: 3497
+  Name: Rainwood_Rockhed_Imperial_Outpost
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Rockhed_Imperial01_MS.Rainwood_Rockhed_Imperial01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Rockhed_Imperial02_MS.Rainwood_Rockhed_Imperial02_MS
+    FadeInTime: 0
+- Id: 3570
+  Name: Eldar_Central_Arkhandar_Order
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_Central_Arkhandar_Order02_MS.Eldar_Central_Arkhandar_Order02_MS
+    FadeInTime: 1
+- Id: 1074
+  Name: Eldar_Central_Blackveil_Lake
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_Central_Blackveil_Lake01__MS.Eldar_Central_Blackveil_Lake01__MS
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Eldar/Eldar_Central_Blackveil_Lake02__MS.Eldar_Central_Blackveil_Lake02__MS
+    FadeInTime: 2
+- Id: 649
+  Name: East_Rockhed_The_House_Persister
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_The_House_Persister02_MS.Rockhed_The_House_Persister02_MS
+    FadeInTime: 2
+- Id: 2674
+  Name: East_Rockhed_Golden_Road
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Golden_Road02_MS.Rockhed_Golden_Road02_MS
+    FadeInTime: 2
+- Id: 5904
+  Name: East_Rockhed_Castle_Hornhill
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Castle_Hornhill02_MS.Rockhed_Castle_Hornhill02_MS
+    FadeInTime: 2
+- Id: 4625
+  Name: East_Rockhed_Stone_Neck
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Stone_Neck02_MS.Rockhed_Stone_Neck02_MS
+    FadeInTime: 2
+- Id: 2729
+  Name: East_Rockhed_The_Golden_Valley
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_The_Golden_Valley02_MS.Rockhed_The_Golden_Valley02_MS
+    FadeInTime: 2
+- Id: 9837
+  Name: East_Rockhed_Kagurock_Mining_City
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Kagurock_Mining_City02_MS.Rockhed_Kagurock_Mining_City02_MS
+    FadeInTime: 2
+- Id: 8335
+  Name: East_Rockhed_Faceless_Sisterhood
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Faceless_Sisterhood02_MS.Rockhed_Faceless_Sisterhood02_MS
+    FadeInTime: 2
+- Id: 1398
+  Name: East_Rockhed_Rockhed_Prison
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/East_Rockhed/Rockhed_Rockhed_Prison02_MS.Rockhed_Rockhed_Prison02_MS
+    FadeInTime: 2
+- Id: 322
+  Name: South_Rockhed_Vaellan_Parliament
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Vaellan_Parliament02_MS.Rockhed_Vaellan_Parliament02_MS
+    FadeInTime: 2
+- Id: 1806
+  Name: South_Rockhed_Rockhed_Imperial_Frontline_Outpost
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Rockhed_Imperial_Frontline_Outpost02_MS.Rockhed_Rockhed_Imperial_Frontline_Outpost02_MS
+    FadeInTime: 2
+- Id: 8610
+  Name: South_Rockhed_Castle_Astarote
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Castle_Astarote02_MS.Rockhed_Castle_Astarote02_MS
+    FadeInTime: 2
+- Id: 2878
+  Name: South_Rockhed_Combustionists_Directors_Associate
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Combustionists_Directors_Associate02_MS.Rockhed_Combustionists_Directors_Associate02_MS
+    FadeInTime: 2
+- Id: 3221
+  Name: South_Rockhed_Undead_Haksan
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Undead_Haksan02_MS.Rockhed_Undead_Haksan02_MS
+    FadeInTime: 2
+- Id: 2742
+  Name: South_Rockhed_Dacaroon_Ruins
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Dacaroon_Ruins02_MS.Rockhed_Dacaroon_Ruins02_MS
+    FadeInTime: 2
+- Id: 8458
+  Name: South_Rockhed_Nest_of_the_Babil_Moth_Queen
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Nest_of_the_Babil_Moth_Queen02_MS.Rockhed_Nest_of_the_Babil_Moth_Queen02_MS
+    FadeInTime: 2
+- Id: 5390
+  Name: South_Rockhed_Gaia_Ondor
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/South_Rockhed/Rockhed_Gaia_Ondor02_MS.Rockhed_Gaia_Ondor02_MS
+    FadeInTime: 2
+- Id: 6573
+  Name: West_Rockhed_Blessed_Bastion
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Blessed_Bastion02_MS.Rockhed_Blessed_Bastion02_MS
+    FadeInTime: 2
+- Id: 2971
+  Name: West_Rockhed_Bat_Forest
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Bat_Forest02_MS.Rockhed_Bat_Forest02_MS
+    FadeInTime: 2
+- Id: 11300
+  Name: West_Rockhed_Anna_Mining_Town
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Anna_Mining_Town02_MS.Rockhed_Anna_Mining_Town02_MS
+    FadeInTime: 2
+- Id: 5821
+  Name: West_Rockhed_Harpy_Hell
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Harpy_Hell02_MS.Rockhed_Harpy_Hell02_MS
+    FadeInTime: 2
+- Id: 7451
+  Name: West_Rockhed_Millenium_Well
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Millenium_Well02_MS.Rockhed_Millenium_Well02_MS
+    FadeInTime: 2
+- Id: 1647
+  Name: West_Rockhed_Sharans_Rift
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_Sharans_Rift02_MS.Rockhed_Sharans_Rift02_MS
+    FadeInTime: 2
+- Id: 7088
+  Name: West_Rockhed_Rockhed_First_Imperial_Legion_Mercenaries
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/West_Rockhed/Rockhed_First_Imperial_Legion_Mercenaries02_MS.Rockhed_First_Imperial_Legion_Mercenaries02_MS
+    FadeInTime: 2
+- Id: 4084
+  Name: Kulika_Undying_Lands_01
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_0102F01_MS.Dun_Kulika_0102F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_AF02_MS.Dun_Kulika_AF02_MS
+    FadeInTime: 1
+- Id: 364
+  Name: Kulika_Undying_Lands_02
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_0102F01_MS.Dun_Kulika_0102F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_AF02_MS.Dun_Kulika_AF02_MS
+    FadeInTime: 1
+- Id: 539
+  Name: Kulika_Undying_Lands_03
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_0304F01_MS.Dun_Kulika_0304F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_AF02_MS.Dun_Kulika_AF02_MS
+    FadeInTime: 1
+- Id: 1324
+  Name: Kulika_Undying_Lands_04
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_0304F01_MS.Dun_Kulika_0304F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_AF02_MS.Dun_Kulika_AF02_MS
+    FadeInTime: 1
+- Id: 1635
+  Name: Kulika_Undying_Lands_05_Normal
+  SoundChannel1:
+    FadeInTime: 1
+    FadeOutTime: 3
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_05F02_MS.Dun_Kulika_05F02_MS
+    FadeInTime: 1
+    FadeOutTime: 3
+- Id: 4
+  Name: Kulika_Undying_Lands_05_Boss
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Kulika_05FBoss01_MS.Dun_Kulika_05FBoss01_MS
+    FadeOutTime: 3
+  SoundChannel2:
+    IsParentless: true
+- Id: 2
+  Name: South_Varitan_Bloodshed_01
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_01F01_MS.Dun_Bloodshed_01F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_01F02_MS.Dun_Bloodshed_01F02_MS
+    FadeInTime: 0
+- Id: 1600
+  Name: South_Varitan_Bloodshed_02
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_02F01_MS.Dun_Bloodshed_02F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_02F02_MS.Dun_Bloodshed_02F02_MS
+    FadeInTime: 0
+- Id: 1265
+  Name: South_Varitan_QuestInstance_Bloodshed_01
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_01F01_MS.Dun_Bloodshed_01F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_01F02_MS.Dun_Bloodshed_01F02_MS
+    FadeInTime: 0
+- Id: 12947
+  Name: South_Varitan_QuestInstance_Bloodshed_02
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_02F01_MS.Dun_Bloodshed_02F01_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Bloodshed_02F02_MS.Dun_Bloodshed_02F02_MS
+    FadeInTime: 0
+- Id: 3
+  Name: Dungeon_Encroached_Castle
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Field/BGM_AllRegions_Temp_MS.BGM_AllRegions_Temp_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 2923
+  Name: Dungeon_Lost_Plains
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Field/BGM_AllRegions_Temp_MS.BGM_AllRegions_Temp_MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 1512
+  Name: East_Rockhed_Abrion_Tower_01
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_OddF02MS.Dun_TheGift_OddF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 2675
+  Name: East_Rockhed_Abrion_Tower_02
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_EvenF02MS.Dun_TheGift_EvenF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 4903
+  Name: East_Rockhed_Abrion_Tower_03
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_OddF02MS.Dun_TheGift_OddF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 3939
+  Name: East_Rockhed_Abrion_Tower_04
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_EvenF02MS.Dun_TheGift_EvenF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 1944
+  Name: East_Rockhed_Abrion_Tower_05
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_OddF02MS.Dun_TheGift_OddF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 934
+  Name: East_Rockhed_Abrion_Tower_06
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_EvenF02MS.Dun_TheGift_EvenF02MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 8738
+  Name: East_Rockhed_Abrion_Tower_07
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_F0601_MS.Dun_TheGift_F0601_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+    IsParentless: false
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_TheGift_F0602MS.Dun_TheGift_F0602MS
+    FadeInTime: 0
+    FadeOutTime: 5
+- Id: 7441
+  Name: South_Rockhed_Holy_Patria_Lesbos_Sanctum_01
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Holy_Patria01_MS.Dun_Holy_Patria01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_Holy_Patria02_MS.Dun_Holy_Patria02_MS
+    FadeInTime: 1
+- Id: 5
+  Name: Dungeon_Ruined_Castle
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Ruined_Castle01_MS.Dungeon_Ruined_Castle01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Ruined_Castle02_MS.Dungeon_Ruined_Castle02_MS
+    FadeInTime: 0
+- Id: 1898
+  Name: Dungeon_Mining_Area
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Mining_Area01_MS.Dungeon_Mining_Area01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Mining_Area02_MS.Dungeon_Mining_Area02_MS
+    FadeInTime: 0
+- Id: 12106
+  Name: Dungeon_Undead_Temple
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Undead_Temple01_MS.Dungeon_Undead_Temple01_MS
+    FadeInTime: 0
+    IsParentless: false
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/DailyD/Dungeon_Undead_Temple02_MS.Dungeon_Undead_Temple02_MS
+    FadeInTime: 0
+- Id: 6
+  Name: TestFortress_01
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress01_MS.Fortress01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress02_MS.Fortress02_MS
+    FadeInTime: 2
+- Id: 1452
+  Name: TestAddress_Secured
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress01_MS.Fortress01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    FadeInTime: 0
+- Id: 10109
+  Name: TestAddress_Battle
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress01_MS.Fortress01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    FadeInTime: 0
+- Id: 9776
+  Name: TestAddress_Competed
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress01_MS.Fortress01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    FadeInTime: 0
+- Id: 8015
+  Name: Dungeon_Challenge_Undead_Mine
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge01__MS.Dungeon_Challenge01__MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge_Undead_Mine02__MS.Dungeon_Challenge_Undead_Mine02__MS
+    FadeInTime: 0
+- Id: 7628
+  Name: Dungeon_Challenge_Monkey_Playground
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge01__MS.Dungeon_Challenge01__MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge_Monkey_Playground02__MS.Dungeon_Challenge_Monkey_Playground02__MS
+    FadeInTime: 0
+- Id: 8373
+  Name: Dungeon_Challenge_Polluted_Lake
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge01__MS.Dungeon_Challenge01__MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/ChallengeD/Dungeon_Challenge_Polluted_Lake02__MS.Dungeon_Challenge_Polluted_Lake02__MS
+    FadeInTime: 0
+- Id: 8
+  Name: Dungeon_WorldBossKraka
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_WorldBossKraka01_MS.Dun_WorldBossKraka01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_WorldBossKraka02_MS.Dun_WorldBossKraka02_MS
+    FadeInTime: 0
+- Id: 3064
+  Name: Fortress_Tutorial
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress01_MS.Fortress01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Fortress/Fortress02_MS.Fortress02_MS
+    FadeInTime: 2
+- Id: 7578
+  Name: Tutorial_Instance02
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Varitan/Varitan_Millan_Castle02_MS.Varitan_Millan_Castle02_MS
+    FadeInTime: 2
+- Id: 5746
+  Name: Tutorial_Instance03
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern01_MS.Rainwood_Hololu_Cavern01_MS
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Rainwood/Rainwood_Hololu_Cavern02_MS.Rainwood_Hololu_Cavern02_MS
+    FadeInTime: 0
+- Id: 7
+  Name: Eldar_North_Mud_Kings_Land
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Mud_Kings_Land02_MS.Eldar_Mud_Kings_Land02_MS
+- Id: 9
+  Name: Eldar_North_Muck_Kings_Land
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Muck_Kings_Land02_MS.Eldar_Muck_Kings_Land02_MS
+- Id: 10
+  Name: Eldar_North_Nest_of_the_Dwarven_King_Durunk
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Nest_of_the_Dwarven_King_Durunk02_MS.Eldar_Nest_of_the_Dwarven_King_Durunk02_MS
+- Id: 11
+  Name: Eldar_North_Tail_of_the_Exiled
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Tail_of_the_Exiled02_MS.Eldar_Tail_of_the_Exiled02_MS
+- Id: 12
+  Name: Eldar_North_House_Rua_Grave_Mound
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_House_Rua_Grave_Mound02_MS.Eldar_House_Rua_Grave_Mound02_MS
+- Id: 14
+  Name: Eldar_North_Harf_Wetlands
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Harf_Wetlands02_MS.Eldar_Harf_Wetlands02_MS
+- Id: 15
+  Name: Eldar_North_Valley_of_Corpses
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Valley_of_Corpses02_MS.Eldar_Valley_of_Corpses02_MS
+- Id: 13
+  Name: Eldar_North_Ruah_Riverside_Sharans_Wall
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/North_Eldar/Eldar_Ruah_Riverside_Sharans_Wall02_MS.Eldar_Ruah_Riverside_Sharans_Wall02_MS
+- Id: 16
+  Name: Eldar_Central_Slumbering_Sand_Dock
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Slumbering_Sand_Dock02_MS.Eldar_Slumbering_Sand_Dock02_MS
+- Id: 17
+  Name: Eldar_Central_Slumbering_Sand_Beach
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Slumbering_Sand_Beach02_MS.Eldar_Slumbering_Sand_Beach02_MS
+- Id: 18
+  Name: Eldar_Central_Wild_Boar_Forest
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Wild_Boar_Forest02_MS.Eldar_Wild_Boar_Forest02_MS
+- Id: 19
+  Name: Eldar_Central_Labyrinthine_Forest
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Labyrinthine_Forest02_MS.Eldar_Labyrinthine_Forest02_MS
+- Id: 20
+  Name: Eldar_Central_Butterfly_Lump_Bunk
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Butterfly_Lump_Bunk02_MS.Eldar_Butterfly_Lump_Bunk02_MS
+- Id: 21
+  Name: BossSpawn_Charle_Entrails
+  SoundChannel1:
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/Charle_Entrails/Charle_Entrails02_MS.Charle_Entrails02_MS
+    FadeInTime: 0
+- Id: 22
+  Name: BattleGround_Faction_HighRiver
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/BattleGround/BattleGround_Faction_HighRiver01_MS.BattleGround_Faction_HighRiver01_MS
+    FadeInTime: 0
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Dungeon/BattleGround/BattleGround_Faction_HighRiver03_MS.BattleGround_Faction_HighRiver03_MS
+    FadeInTime: 1
+- Id: 23
+  Name: South_Varitan_Varitan_Outpost
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Kalitan/South_Varitan_Varitan_Outpost01_MS.South_Varitan_Varitan_Outpost01_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+- Id: 24
+  Name: South_Varitan_Varitan_Guard_Post
+- Id: 25
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_05
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Dungeon/Dun_GaiaOndor01F05_MS.Dun_GaiaOndor01F05_MS
+    FadeInTime: 0
+- Id: 26
+  Name: Eldar_Central_Elsar
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Central_Eldar/Eldar_Central_Elsar01_MS.Eldar_Central_Elsar01_MS
+    FadeInTime: 0
+    FadeOutTime: 4
+- Id: 27
+  Name: Tutorial_Instance_Bridge
+  SoundChannel1:
+    Asset: ''
+    FadeInTime: 0
+    FadeOutTime: 3
+    IsParentless: true
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Tutorial/Tutorial_Instance_Bridge02__MS.Tutorial_Instance_Bridge02__MS
+    FadeInTime: 0
+    FadeOutTime: 3
+- Id: 28
+  Name: Tutorial_Instance_Place
+  SoundChannel1:
+    Asset: /Game/Sound/Music/Address/Tutorial/Tutorial_Instance_Place01_MS.Tutorial_Instance_Place01_MS
+    FadeInTime: 0
+    FadeOutTime: 3
+  SoundChannel2:
+    Asset: /Game/Sound/Music/Address/Tutorial/Tutorial_Instance_Place02_MS.Tutorial_Instance_Place02_MS
+    FadeInTime: 1
+    FadeOutTime: 3

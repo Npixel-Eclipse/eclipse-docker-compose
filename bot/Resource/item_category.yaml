@@ -1,0 +1,1468 @@
+- Id: 1
+  Name: Item
+  Comment: 아이템
+  DefaultInventory: Bag
+- Id: 4
+  Name: Item_Currency
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item
+  Comment: 재화
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  CanNotLock: true
+- Id: 3490
+  Name: Item_Currency_Diamond
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_다이아
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultInventory: AccountWallet
+  SortOrder: 100
+- Id: 2854
+  Name: Item_Currency_Gold
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_골드
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultInventory: AccountWallet
+  SortOrder: 101
+- Id: 4986
+  Name: Item_Currency_Mileage
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_마일리지
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultInventory: AccountWallet
+  SortOrder: 102
+- Id: 10413
+  Name: Item_Currency_GuildPoint
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_길드포인트
+  DefaultInventory: Guild
+- Id: 4432
+  Name: Item_Currency_GuildCoin
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_길드주화
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  SortOrder: 103
+- Id: 3427
+  Name: Item_Currency_BattleGroundToken
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_전장의증표
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  SortOrder: 104
+- Id: 13333
+  Name: Item_Currency_CurrencyChallengeToken
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_도전 던전의 증표
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  SortOrder: 105
+- Id: 4048
+  Name: Item_Currency_SeongsoQueue
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_성소 대기열
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  SortOrder: 106
+- Id: 6763
+  Name: Item_Currency_HuntingZoneToken
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Currency
+  Comment: 재화_영토소유증표
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  SortOrder: 107
+- Id: 2
+  Name: Item_Equip
+  Description: ItemCategory1Item_EquipDesc
+  Parent: Item
+  Comment: 장비류
+  Icon: /Game/UI/Inventory_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+  DefaultUseDescription: UIWordItemEquip
+  RedDotOnAcquired: Always
+  SortOrder: 10
+- Id: 955
+  Name: Item_Equip_WeaponBase
+  Description: ItemCategory1Item_WeaponDesc
+  Parent: Item_Equip
+  Comment: 무기 기본
+  RedDotOnAcquired: Always
+  OneTouchEquip: true
+- Id: 6
+  Name: Item_Equip_WeaponBase_Weapon
+  Description: ItemCategory1Item_WeaponDesc
+  Parent: Item_Equip_WeaponBase
+  Comment: 무기류
+  Equip:
+    EquipSlot: Weapon
+  RedDotOnAcquired: Always
+  SortOrder: 30
+  OneTouchEquip: true
+- Id: 2739
+  Name: Item_Equip_Weapon_Fighter
+  Description: ItemCategory1Item_FighterDesc
+  Parent: Item_Equip_WeaponBase_Weapon
+  Comment: 근거리형
+  ClassLimit:
+    - Fighter
+  RedDotOnAcquired: Always
+  SortOrder: 31
+  OneTouchEquip: true
+- Id: 31
+  Name: Item_Equip_Weapon_Fighter_Sword
+  Description: ItemCategory1Item_SwordDesc
+  Parent: Item_Equip_Weapon_Fighter
+  Comment: 한손검
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Sword.WeaponType_Sword
+  Equip:
+    EquipSlot: Weapon
+  EquipBuff: Item_Check_Category_Sword
+  WeaponAsset: /Game/Weapons/DAA_PM_SD001.DAA_PM_SD001
+  AnimationGroupType: OneHandSwordSheild
+  RedDotOnAcquired: Always
+  SortOrder: 33
+  OneTouchEquip: true
+- Id: 516
+  Name: Item_Equip_Weapon_Fighter_Lsword
+  Description: ItemCategory1Item_TwohandSwordDesc
+  Parent: Item_Equip_Weapon_Fighter
+  Comment: 대검
+  Icon: /Game/UIIcon/WeaponType/WeaponType_TwoHander.WeaponType_TwoHander
+  Equip:
+    EquipSlot: Weapon
+  EquipBuff: Item_Check_Category_TwoHandSword
+  WeaponAsset: /Game/Weapons/DAA_PM_LS002.DAA_PM_LS002
+  AnimationGroupType: TwoHandSword
+  RedDotOnAcquired: Always
+  SortOrder: 32
+  OneTouchEquip: true
+- Id: 702
+  Name: Item_Equip_Weapon_Ranger
+  Description: ItemCategory1Item_RangerDesc
+  Parent: Item_Equip_WeaponBase_Weapon
+  Comment: 원거리형
+  ClassLimit:
+    - Ranger
+  RedDotOnAcquired: Always
+  SortOrder: 34
+  OneTouchEquip: true
+- Id: 15
+  Name: Item_Equip_Weapon_Ranger_Bow
+  Description: ItemCategory1Item_BowDesc
+  Parent: Item_Equip_Weapon_Ranger
+  Comment: 활
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Bow.WeaponType_Bow
+  Equip:
+    EquipSlot: Weapon
+  EquipBuff: Item_Check_Category_LongBow
+  WeaponAsset: /Game/Weapons/DAA_PM_BW001.DAA_PM_BW001
+  AnimationGroupType: Bow
+  RedDotOnAcquired: Always
+  SortOrder: 35
+  OneTouchEquip: true
+- Id: 1131
+  Name: Item_Equip_Weapon_Ranger_Cbow
+  Description: ItemCategory1Item_CrossBowDesc
+  Parent: Item_Equip_Weapon_Ranger
+  Comment: 석궁
+  Icon: /Game/UIIcon/WeaponType/WeaponType_CrossBow.WeaponType_CrossBow
+  Equip:
+    EquipSlot: Weapon
+  EquipBuff: Item_Check_Category_CrossBow
+  WeaponAsset: /Game/Weapons/DAA_PM_CB001.DAA_PM_CB001
+  AnimationGroupType: Crossbow
+  RedDotOnAcquired: Always
+  SortOrder: 36
+  OneTouchEquip: true
+- Id: 2657
+  Name: Item_Equip_Weapon_Sorcerer
+  Description: ItemCategory1Item_SorcererDesc
+  Parent: Item_Equip_WeaponBase_Weapon
+  Comment: 마법형
+  ClassLimit:
+    - Sorcerer
+  RedDotOnAcquired: Always
+  SortOrder: 37
+  OneTouchEquip: true
+- Id: 1332
+  Name: Item_Equip_Weapon_Sorcerer_Staff
+  Description: ItemCategory1Item_StaffDesc
+  Parent: Item_Equip_Weapon_Sorcerer
+  Comment: 지팡이
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Staff.WeaponType_Staff
+  Equip:
+    EquipSlot: Weapon
+  ClassLimit:
+    - Sorcerer
+  EquipBuff: Item_Check_Category_Staff
+  WeaponAsset: /Game/Weapons/DAA_PM_ST012.DAA_PM_ST012
+  AnimationGroupType: Staff
+  RedDotOnAcquired: Always
+  SortOrder: 39
+  OneTouchEquip: true
+- Id: 2966
+  Name: Item_Equip_Weapon_Sorcerer_Orb
+  Description: ItemCategory1Item_OrbDesc
+  Parent: Item_Equip_Weapon_Sorcerer
+  Comment: 오브
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Orb.WeaponType_Orb
+  Equip:
+    EquipSlot: Weapon
+  ClassLimit:
+    - Sorcerer
+  EquipBuff: Item_Check_Category_Orb
+  WeaponAsset: /Game/Weapons/DAA_PM_OR001.DAA_PM_OR001
+  AnimationGroupType: Orb
+  RedDotOnAcquired: Always
+  SortOrder: 38
+  OneTouchEquip: true
+- Id: 4456
+  Name: Item_Equip_Weapon_Assassin
+  Description: ItemCategory1Item_AssassinDesc
+  Parent: Item_Equip_WeaponBase_Weapon
+  Comment: 어쌔신
+  ClassLimit:
+    - Assassin
+  RedDotOnAcquired: Always
+  SortOrder: 40
+  OneTouchEquip: true
+- Id: 6351
+  Name: Item_Equip_Weapon_Assassin_Katana
+  Description: ItemCategory1Item_KatanaDesc
+  Parent: Item_Equip_Weapon_Assassin
+  Comment: 카타나
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Staff.WeaponType_Staff
+  Equip:
+    EquipSlot: Weapon
+  ClassLimit:
+    - Assassin
+  EquipBuff: Item_Check_Category_Katana
+  WeaponAsset: /Game/Weapons/DAA_PM_KA001.DAA_PM_KA001
+  AnimationGroupType: Katana
+  RedDotOnAcquired: Always
+  SortOrder: 41
+  OneTouchEquip: true
+- Id: 11513
+  Name: Item_Equip_Weapon_Assassin_TwinDaggers
+  Description: ItemCategory1Item_TwinDaggersDesc
+  Parent: Item_Equip_Weapon_Assassin
+  Comment: 쌍단검
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Orb.WeaponType_Orb
+  Equip:
+    EquipSlot: Weapon
+  ClassLimit:
+    - Assassin
+  EquipBuff: Item_Check_Category_TwinDaggers
+  WeaponAsset: /Game/Weapons/DAA_PM_TD001.DAA_PM_TD001
+  AnimationGroupType: TwinShortSword
+  RedDotOnAcquired: Always
+  SortOrder: 42
+  OneTouchEquip: true
+- Id: 962
+  Name: Item_Equip_WeaponBase_SubWeapon
+  Description: ItemCategory1Item_SubWeaponDesc
+  Parent: Item_Equip_WeaponBase
+  Comment: 보조무기류
+  RedDotOnAcquired: Always
+  SortOrder: 40
+  OneTouchEquip: true
+- Id: 2928
+  Name: Item_Equip_Subweapon_Fighter_Sword
+  Description: ItemCategory1Item_SubWeaponMeleeOnehandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 한손검_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Fighter
+  RedDotOnAcquired: Always
+  SortOrder: 41
+  OneTouchEquip: true
+- Id: 3636
+  Name: Item_Equip_Subweapon_Fighter_Lsword
+  Description: ItemCategory1Item_SubWeaponMeleeTwohandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 대검_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Fighter
+  RedDotOnAcquired: Always
+  SortOrder: 42
+  OneTouchEquip: true
+- Id: 12562
+  Name: Item_Equip_Subweapon_Fighter
+  Description: ItemCategory1Item_SubWeaponMeleeDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 근거리형_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Fighter
+  RedDotOnAcquired: Always
+  SortOrder: 43
+  OneTouchEquip: true
+- Id: 4454
+  Name: Item_Equip_Subweapon_Ranger_Bow
+  Description: ItemCategory1Item_SubWeaponRangeOnehandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 활_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Ranger
+  RedDotOnAcquired: Always
+  SortOrder: 44
+  OneTouchEquip: true
+- Id: 308
+  Name: Item_Equip_Subweapon_Ranger_Cbow
+  Description: ItemCategory1Item_SubWeaponRangeTwohandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 석궁_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Ranger
+  RedDotOnAcquired: Always
+  SortOrder: 45
+  OneTouchEquip: true
+- Id: 14278
+  Name: Item_Equip_Subweapon_Ranger
+  Description: ItemCategory1Item_SubWeaponRangeDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 원거리형_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Ranger
+  RedDotOnAcquired: Always
+  SortOrder: 46
+  OneTouchEquip: true
+- Id: 2316
+  Name: Item_Equip_Subweapon_Sorcerer_Orb
+  Description: ItemCategory1Item_SubWeaponMagicOnehandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 오브_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Sorcerer
+  RedDotOnAcquired: Always
+  SortOrder: 47
+  OneTouchEquip: true
+- Id: 5507
+  Name: Item_Equip_Subweapon_Sorcerer_Staff
+  Description: ItemCategory1Item_SubWeaponMagicTwohandDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 지팡이_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Sorcerer
+  RedDotOnAcquired: Always
+  SortOrder: 48
+  OneTouchEquip: true
+- Id: 11241
+  Name: Item_Equip_Subweapon_Sorcerer
+  Description: ItemCategory1Item_SubWeaponMagicDesc
+  Parent: Item_Equip_WeaponBase_SubWeapon
+  Comment: 마법형_보조
+  Equip:
+    EquipSlot: SubWeapon
+  ClassLimit:
+    - Sorcerer
+  RedDotOnAcquired: Always
+  SortOrder: 49
+  OneTouchEquip: true
+- Id: 7
+  Name: Item_Equip_Armor
+  Description: ItemCategory1Item_ArmorDesc
+  Parent: Item_Equip
+  Comment: 방어구류
+  RedDotOnAcquired: Always
+  SortOrder: 50
+  OneTouchEquip: true
+- Id: 23
+  Name: Item_Equip_Armor_Helm
+  Description: ItemCategory1Item_HelmDesc
+  Parent: Item_Equip_Armor
+  Comment: 투구
+  Equip:
+    EquipSlot: Helmet
+  RedDotOnAcquired: Always
+  SortOrder: 51
+  OneTouchEquip: true
+- Id: 30
+  Name: Item_Equip_Armor_Suit
+  Description: ItemCategory1Item_SuitDesc
+  Parent: Item_Equip_Armor
+  Comment: 상의
+  Equip:
+    EquipSlot: Suit
+  RedDotOnAcquired: Always
+  SortOrder: 52
+  OneTouchEquip: true
+- Id: 16
+  Name: Item_Equip_Armor_Cape
+  Description: ItemCategory1Item_CapeDesc
+  Parent: Item_Equip_Armor
+  Comment: 망토
+  Equip:
+    EquipSlot: Cape
+  RedDotOnAcquired: Always
+  SortOrder: 53
+  OneTouchEquip: true
+- Id: 22
+  Name: Item_Equip_Armor_Gloves
+  Description: ItemCategory1Item_GlovesDesc
+  Parent: Item_Equip_Armor
+  Comment: 장갑
+  Equip:
+    EquipSlot: Gloves
+  RedDotOnAcquired: Always
+  SortOrder: 54
+  OneTouchEquip: true
+- Id: 1963
+  Name: Item_Equip_Armor_Pants
+  Description: ItemCategory1Item_PantsDesc
+  Parent: Item_Equip_Armor
+  Comment: 하의
+  Equip:
+    EquipSlot: Pants
+  RedDotOnAcquired: Always
+  SortOrder: 55
+  OneTouchEquip: true
+- Id: 29
+  Name: Item_Equip_Armor_Boots
+  Description: ItemCategory1Item_BootsDesc
+  Parent: Item_Equip_Armor
+  Comment: 신발
+  Equip:
+    EquipSlot: Boots
+  RedDotOnAcquired: Always
+  SortOrder: 56
+  OneTouchEquip: true
+- Id: 12
+  Name: Item_Equip_Accessory
+  Description: ItemCategory1Item_AccessoryDesc
+  Parent: Item_Equip
+  Comment: 악세서리류
+  RedDotOnAcquired: Always
+  SortOrder: 60
+  OneTouchEquip: true
+- Id: 20
+  Name: Item_Equip_Accessory_Earring
+  Description: ItemCategory1Item_EarringDesc
+  Parent: Item_Equip_Accessory
+  Comment: 귀걸이
+  Equip:
+    EquipSlot: Earring1
+    AdditionalEquipSlots:
+      - Earring2
+  RedDotOnAcquired: Always
+  SortOrder: 62
+  OneTouchEquip: true
+- Id: 24
+  Name: Item_Equip_Accessory_Necklace
+  Description: ItemCategory1Item_NecklaceDesc
+  Parent: Item_Equip_Accessory
+  Comment: 목걸이
+  Equip:
+    EquipSlot: Necklace
+  RedDotOnAcquired: Always
+  SortOrder: 61
+  OneTouchEquip: true
+- Id: 27
+  Name: Item_Equip_Accessory_Ring
+  Description: ItemCategory1Item_RingDesc
+  Parent: Item_Equip_Accessory
+  Comment: 반지
+  Equip:
+    EquipSlot: Ring1
+    AdditionalEquipSlots:
+      - Ring2
+  RedDotOnAcquired: Always
+  SortOrder: 63
+  OneTouchEquip: true
+- Id: 1804
+  Name: Item_Equip_Accessory_Bracelet
+  Description: ItemCategory1Item_BraceletDesc
+  Parent: Item_Equip_Accessory
+  Comment: 팔찌
+  Equip:
+    EquipSlot: Bracelet
+  RedDotOnAcquired: Always
+  SortOrder: 64
+  OneTouchEquip: true
+- Id: 3864
+  Name: Item_Equip_Accessory_Belt
+  Description: ItemCategory1Item_BeltDesc
+  Parent: Item_Equip_Accessory
+  Comment: 벨트
+  Equip:
+    EquipSlot: Belt
+  RedDotOnAcquired: Always
+  SortOrder: 65
+  OneTouchEquip: true
+- Id: 2374
+  Name: Skill_Book
+  Description: ItemCategory1Item_SkillBookDesc
+  Parent: Item
+  Comment: 스킬북
+  Icon: /Game/UI/Menu_SP/MenuIconSkillBook_Sprite.MenuIconSkillBook_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 200
+- Id: 2370
+  Name: Skill_Book_Fighter
+  Description: ItemCategory1Item_SkillBookFighterDesc
+  Parent: Skill_Book
+  Comment: 스킬북 (파이터)
+  Icon: /Game/UIIcon/Class/Icons/ClassFighter_S.ClassFighter_S
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 201
+- Id: 2320
+  Name: Skill_Book_Ranger
+  Description: ItemCategory1Item_SkillBookRangerDesc
+  Parent: Skill_Book
+  Comment: 스킬북 (레인저)
+  Icon: /Game/UIIcon/Class/Icons/ClassRanger_S.ClassRanger_S
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 202
+- Id: 2328
+  Name: Skill_Book_Sorcerer
+  Description: ItemCategory1Item_SkillBookSorcererDesc
+  Parent: Skill_Book
+  Comment: 스킬북 (소서러)
+  Icon: /Game/UIIcon/Class/Icons/ClassWizard_S.ClassWizard_S
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 203
+- Id: 2345
+  Name: Skill_Book_Assassin
+  Description: ItemCategory1Item_SkillBookAssassinDesc
+  Parent: Skill_Book
+  Comment: 스킬북(어쌔신)
+  Icon: /Game/UIIcon/Class/Icons/ClassFighter_S.ClassFighter_S
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 204
+- Id: 11611
+  Name: Skill_Book_Public
+  Description: ItemCategory1Item_SkillBookAllDesc
+  Parent: Skill_Book
+  Comment: 스킬북(공용)
+  Icon: /Game/UIIcon/Class/Icons/ClassFighter_S.ClassFighter_S
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 205
+- Id: 5907
+  Name: Item_Misc
+  Description: ItemCategory1Item_MiscDesc
+  Parent: Item
+  Comment: 인벤토리아이템
+  Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+- Id: 5910
+  Name: Item_Misc_Upgrade
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc
+  Comment: 성장 재료
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 300
+- Id: 14464
+  Name: Item_Misc_Upgrade_LevelUp
+  Parent: Item_Misc_Upgrade
+  Comment: 카드 레벨업 재료
+  RedDotOnAcquired: Always
+- Id: 4946
+  Name: Item_Misc_Upgrade_LevelUp_Polymorph
+  Description: ItemCategory1Item_PolymorphLevelUpMeterialDesc
+  Parent: Item_Misc_Upgrade_LevelUp
+  Comment: 초월체 레벨업 재료
+  RedDotOnAcquired: Always
+  SortOrder: 391
+- Id: 7153
+  Name: Item_Misc_Upgrade_LevelUp_WeaponPolymorph
+  Description: ItemCategory1Item_WeaponPolymorphLevelUpMeterialDesc
+  Parent: Item_Misc_Upgrade_LevelUp
+  Comment: 무기외형 레벨업 재료
+  RedDotOnAcquired: Always
+  SortOrder: 392
+- Id: 5725
+  Name: Item_Misc_Upgrade_LimitBreak
+  Parent: Item_Misc_Upgrade
+  Comment: 카드 돌파 재료
+  RedDotOnAcquired: Always
+- Id: 13078
+  Name: Item_Misc_Upgrade_LimitBreak_Polymorph
+  Description: ItemCategory1Item_PolymorphLimitBreakMeterialDesc
+  Parent: Item_Misc_Upgrade_LimitBreak
+  Comment: 초월체 돌파 재료
+  RedDotOnAcquired: Always
+  SortOrder: 393
+- Id: 6531
+  Name: Item_Misc_Upgrade_LimitBreak_WeaponPolymorph
+  Description: ItemCategory1Item_WeaponPolymorphLimitBreakMeterialDesc
+  Parent: Item_Misc_Upgrade_LimitBreak
+  Comment: 무기외형 돌파 재료
+  RedDotOnAcquired: Always
+  SortOrder: 394
+- Id: 3545
+  Name: Item_Misc_Upgrade_Merge
+  Description: ItemCategory1Item_MergeDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 기타 - 합성 재료
+  RedDotOnAcquired: Always
+  SortOrder: 430
+- Id: 1039
+  Name: Item_Misc_Upgrade_Enchant
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 강화 재료
+  RedDotOnAcquired: Always
+  SortOrder: 301
+- Id: 2515
+  Name: Item_Misc_Upgrade_Enchant_Weapon
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant
+  Comment: 무기 아이템 강화 재료
+  RedDotOnAcquired: Always
+- Id: 5524
+  Name: Item_Misc_Upgrade_Enchant_Armor
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant
+  Comment: 방어구 아이템 강화 재료
+  RedDotOnAcquired: Always
+- Id: 5909
+  Name: Item_Misc_Upgrade_Enchant_Accessory
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant
+  Comment: 아이템 강화 재료
+  RedDotOnAcquired: Always
+- Id: 2022
+  Name: Item_Misc_Upgrade_Enchant_Weapon_Normal
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Weapon
+  Comment: 무기 아이템 강화 재료_일반
+  RedDotOnAcquired: Always
+  SortOrder: 310
+- Id: 6352
+  Name: Item_Misc_Upgrade_Enchant_Weapon_Blessed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Weapon
+  Comment: 무기 아이템 강화 재료_축복
+  RedDotOnAcquired: Always
+  SortOrder: 320
+- Id: 1768
+  Name: Item_Misc_Upgrade_Enchant_Weapon_Cursed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Weapon
+  Comment: 무기 아이템 강화 재료_저주
+  RedDotOnAcquired: Always
+  SortOrder: 330
+- Id: 3783
+  Name: Item_Misc_Upgrade_Enchant_Armor_Normal
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Armor
+  Comment: 방어구 아이템 강화 재료_일반
+  RedDotOnAcquired: Always
+  SortOrder: 311
+- Id: 5584
+  Name: Item_Misc_Upgrade_Enchant_Armor_Blessed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Armor
+  Comment: 방어구 아이템 강화 재료_축복
+  RedDotOnAcquired: Always
+  SortOrder: 321
+- Id: 3186
+  Name: Item_Misc_Upgrade_Enchant_Armor_Cursed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Armor
+  Comment: 방어구 아이템 강화 재료_저주
+  RedDotOnAcquired: Always
+  SortOrder: 331
+- Id: 5172
+  Name: Item_Misc_Upgrade_Enchant_Accessory_Normal
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Accessory
+  Comment: 악세서리 아이템 강화 재료_일반
+  RedDotOnAcquired: Always
+  SortOrder: 312
+- Id: 5886
+  Name: Item_Misc_Upgrade_Enchant_Accessory_Blessed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Accessory
+  Comment: 악세서리 아이템 강화 재료_축복
+  RedDotOnAcquired: Always
+  SortOrder: 322
+- Id: 4771
+  Name: Item_Misc_Upgrade_Enchant_Accessory_Cursed
+  Description: ItemCategory1Item_EnchantMeterialDesc
+  Parent: Item_Misc_Upgrade_Enchant_Accessory
+  Comment: 악세서리 아이템 강화 재료_저주
+  RedDotOnAcquired: Always
+  SortOrder: 332
+- Id: 12825
+  Name: Item_Misc_Upgrade_Engrave_SlotOpen
+  Parent: Item_Misc_Upgrade_Engrave
+  Comment: 기타 - 슬롯 해금
+  RedDotOnAcquired: Always
+  SortOrder: 423
+- Id: 8913
+  Name: Item_Misc_Upgrade_Engrave_SlotOpen_Engrave
+  Description: ItemCategory1Item_SlotOpenEngrave_Desc
+  Parent: Item_Misc_Upgrade_Engrave_SlotOpen
+  Comment: 기타 - 슬롯 해금(세공)
+  RedDotOnAcquired: Always
+  SortOrder: 424
+- Id: 8865
+  Name: Item_Misc_Upgrade_Engrave_SlotOpen_Might
+  Description: ItemCategory1Item_SlotOpenMight_Desc
+  Parent: Item_Misc_Upgrade_Engrave_SlotOpen
+  Comment: 기타 - 슬롯 해금(권능부여)
+  RedDotOnAcquired: Always
+  SortOrder: 425
+- Id: 1126
+  Name: Item_Misc_Upgrade_Engrave
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 아이템 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 350
+- Id: 5369
+  Name: Item_Misc_Upgrade_Engrave_Weapon
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave
+  Comment: 무기 세공 재료
+  RedDotOnAcquired: Always
+- Id: 7650
+  Name: Item_Misc_Upgrade_Engrave_Armor
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave
+  Comment: 방어구 세공 재료
+  RedDotOnAcquired: Always
+- Id: 5674
+  Name: Item_Misc_Upgrade_Engrave_Accessory
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave
+  Comment: 악세서리 세공 재료
+  RedDotOnAcquired: Always
+- Id: 1732
+  Name: Item_Misc_Upgrade_Engrave_Weapon_Normal
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Weapon
+  Comment: 일반 무기 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 351
+- Id: 5373
+  Name: Item_Misc_Upgrade_Engrave_Weapon_Blessed
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Weapon
+  Comment: 축복 받은 무기 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 360
+- Id: 3399
+  Name: Item_Misc_Upgrade_Engrave_Armor_Normal
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Armor
+  Comment: 일반 방어구 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 352
+- Id: 7278
+  Name: Item_Misc_Upgrade_Engrave_Armor_Blessed
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Armor
+  Comment: 축복 받은 방어구 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 361
+- Id: 688
+  Name: Item_Misc_Upgrade_Engrave_Accessory_Normal
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Accessory
+  Comment: 일반 악세서리 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 353
+- Id: 3971
+  Name: Item_Misc_Upgrade_Engrave_Accessory_Blessed
+  Description: ItemCategory1Item_EngraveMeterialDesc
+  Parent: Item_Misc_Upgrade_Engrave_Accessory
+  Comment: 축복 받은 악세서리 세공 재료
+  RedDotOnAcquired: Always
+  SortOrder: 362
+- Id: 6932
+  Name: Item_Misc_Upgrade_Might
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 370
+- Id: 4894
+  Name: Item_Misc_Upgrade_Might_Weapon
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might
+  Comment: 무기 권능 부여 재료
+  RedDotOnAcquired: Always
+- Id: 11790
+  Name: Item_Misc_Upgrade_Might_Armor
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might
+  Comment: 방어구 권능 부여 재료
+  RedDotOnAcquired: Always
+- Id: 7266
+  Name: Item_Misc_Upgrade_Might_Accessory
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might
+  Comment: 악세서리 권능 부여 재료
+  RedDotOnAcquired: Always
+- Id: 654
+  Name: Item_Misc_Upgrade_Might_Weapon_Normal
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Weapon
+  Comment: 일반 무기 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 371
+- Id: 10575
+  Name: Item_Misc_Upgrade_Might_Weapon_Blessed
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Weapon
+  Comment: 축복 받은 무기 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 381
+- Id: 7221
+  Name: Item_Misc_Upgrade_Might_Armor_Normal
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Armor
+  Comment: 일반 방어구 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 372
+- Id: 7623
+  Name: Item_Misc_Upgrade_Might_Armor_Blessed
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Armor
+  Comment: 축복 받은 방어구 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 382
+- Id: 4093
+  Name: Item_Misc_Upgrade_Might_Accessory_Normal
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Accessory
+  Comment: 일반 악세서리 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 373
+- Id: 11418
+  Name: Item_Misc_Upgrade_Might_Accessory_Blessed
+  Description: ItemCategory1Item_MightMeterialDesc
+  Parent: Item_Misc_Upgrade_Might_Accessory
+  Comment: 축복 받은 악세서리 권능 부여 재료
+  RedDotOnAcquired: Always
+  SortOrder: 383
+- Id: 2376
+  Name: Item_Misc_Upgrade_Skill_Enchant
+  Description: ItemCategory1Item_SkillEnchantDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 스킬 강화
+  Icon: /Game/UI/Menu_SP/MenuIconSkillBook_Sprite.MenuIconSkillBook_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 210
+- Id: 4889
+  Name: Item_Misc_Upgrade_Skill_Enchant_All
+  Description: ItemCategory1Item_SkillEnchantAllDesc
+  Parent: Item_Misc_Upgrade_Skill_Enchant
+  Comment: 스킬 강화석 (공용)
+  Icon: /Game/UI/Menu_SP/MenuIconSkillBook_Sprite.MenuIconSkillBook_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 211
+- Id: 3293
+  Name: Item_Misc_Upgrade_Awakening
+  Description: ItemCategory1Item_AwakeningDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 기타 - 불꽃 (각성/자각의 불꽃)
+  DefaultInventory: Bag
+  RedDotOnAcquired: Always
+  SortOrder: 420
+- Id: 6766
+  Name: Item_Misc_Upgrade_Awareness
+  Description: ItemCategory1Item_AwarenessDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 기타 - 자각 재료
+  DefaultUseDescription: UIWordItemConsume
+  DefaultInventory: Bag
+  RedDotOnAcquired: Always
+  SortOrder: 419
+- Id: 5908
+  Name: Item_Misc_Consume
+  Description: ItemCategory1Item_ConsumeDesc
+  Parent: Item_Misc
+  Comment: 기타 - 기타 소모품
+  Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 460
+- Id: 163
+  Name: Item_Misc_Healing
+  Description: ItemCategory1Item_HealthPotionDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 체력 회복 물약
+  Icon: /Game/UI/Inventory_SP/TabIconPotion_Sprite.TabIconPotion_Sprite
+  MaxCarryAmount: Item_HealthPotion_MaxCarryAmount
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 110
+- Id: 3656
+  Name: Item_Misc_Empower
+  Description: ItemCategory1Item_EmpowerDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 능력 강화제
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 120
+- Id: 7250
+  Name: Item_Misc_Recharge
+  Description: ItemCategory1Item_RechargeDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 던전 시간의 시계
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 440
+  ConsumeMessage: SuccessToConsumeItem
+- Id: 2293
+  Name: Item_Misc_TeleportScroll
+  Description: ItemCategory1Item_TeleportScrollDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 이동 주문서류
+  Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 130
+- Id: 15858
+  Name: Item_Misc_Guild
+  Description: ItemCategory1Item_GuildDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 길드 지원 증서
+  SortOrder: 425
+- Id: 6100
+  Name: Item_Misc_SkillUse
+  Description: ItemCategory1Item_SkillUseDesc
+  Parent: Item_Misc
+  Comment: 기타 - 스킬 사용 재료
+  RedDotOnAcquired: Always
+  SortOrder: 423
+- Id: 11664
+  Name: Item_Misc_Combined
+  Description: ItemCategory1Item_CombinedDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 서판조합 재료
+  RedDotOnAcquired: Always
+  SortOrder: 421
+- Id: 1769
+  Name: Item_Misc_Timeacceleration
+  Description: ItemCategory1Item_TimeaccelerationDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 성소 가속
+  RedDotOnAcquired: Always
+  SortOrder: 450
+- Id: 4520
+  Name: Item_Misc_Mastery
+  Description: ItemCategory1Item_MasteryDesc
+  Parent: Item_Misc_Consume
+  Comment: 기타 - 숙련도
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 410
+- Id: 11509
+  Name: Item_Misc_HuntingZoneJewl
+  Description: ItemCategory1Item_HuntingZoneJewlDesc
+  Parent: Item
+  Comment: 창조석
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultUseDescription: UIWord_Bid
+  RedDotOnAcquired: Always
+  SortOrder: 104
+- Id: 7751
+  Name: Item_Misc_Cardpack
+  Description: ItemCategory1Item_CardpackDesc
+  Parent: Item_Misc
+  Comment: 기타 - 각종 뽑기권
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 480
+- Id: 6858
+  Name: Item_Misc_LuckyBag
+  Description: ItemCategory1Item_LuckyBagDesc
+  Parent: Item_Misc
+  Comment: 기타 - 럭키백
+  Icon: /Game/UI/Inventory_SP/TabIconMaterialCraft_Sprite.TabIconMaterialCraft_Sprite
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 490
+- Id: 1319
+  Name: Item_Misc_Collection
+  Description: ItemCategory1Item_CollectionDesc
+  Parent: Item
+  Comment: 기타 - 수집
+  RedDotOnAcquired: Always
+  SortOrder: 160
+- Id: 431
+  Name: Item_Misc_Collection_Varitan
+  Description: ItemCategory1Item_CollectionVaritanDesc
+  Parent: Item_Misc_Collection
+  Comment: 기타 - 바리탄 수집
+  SortOrder: 161
+- Id: 3508
+  Name: Item_Misc_Collection_Eldar
+  Description: ItemCategory1Item_CollectionEldarDesc
+  Parent: Item_Misc_Collection
+  Comment: 기타 - 엘다르 수집
+  SortOrder: 162
+- Id: 80
+  Name: Item_Misc_Collection_Rockhed
+  Description: ItemCategory1Item_CollectionRockhedDesc
+  Parent: Item_Misc_Collection
+  Comment: 기타 - 락헤드 수집
+  SortOrder: 163
+- Id: 9072
+  Name: Item_Misc_Exchange
+  Description: ItemCategory1Item_ExchangeDesc
+  Parent: Item_Misc
+  Comment: 기타 - 환금 아이템
+  SortOrder: 424
+- Id: 1898
+  Name: Item_Craft
+  Description: ItemCategory1Item_CraftDesc
+  Parent: Item
+  Comment: 제작 재료
+  Icon: /Game/UI/Inventory_SP/TabIconMaterialCraft_Sprite.TabIconMaterialCraft_Sprite
+  RedDotOnAcquired: Always
+  SortOrder: 150
+- Id: 1053
+  Name: Item_Craft_Special
+  Description: ItemCategory1Item_CraftEssenceDesc
+  Parent: Item_Craft
+  Comment: 제작 정수
+  Icon: /Game/UI/Inventory_SP/TabIconMaterialCraft_Sprite.TabIconMaterialCraft_Sprite
+  RedDotOnAcquired: Always
+  SortOrder: 152
+- Id: 5511
+  Name: Item_Craft_Material
+  Description: ItemCategory1Item_CraftMeterialDesc
+  Parent: Item_Craft
+  Comment: 제작 재료
+  Icon: /Game/UI/Inventory_SP/TabIconMaterialCraft_Sprite.TabIconMaterialCraft_Sprite
+  RedDotOnAcquired: Always
+  SortOrder: 151
+- Id: 772
+  Name: Item_Misc_SeongsoBuild
+  Description: ItemCategory1Item_SeongsoBuildDesc
+  Parent: Item_Craft
+  Comment: 기타 - 성소 건설 재료
+  RedDotOnAcquired: Always
+  SortOrder: 422
+- Id: 14832
+  Name: Guild_Quest_Reward_Box
+  Parent: Item
+  Comment: 길드 퀘스트 보상 상자
+  DefaultInventory: GuildQuestRewardBox
+- Id: 13355
+  Name: SeasonpassTicket
+  Description: UIWord_BMShop_SeasonPass
+  Parent: Item
+  Comment: 시즌 패스 구매 아이템
+  DefaultInventory: Seasonpass
+- Id: 7319
+  Name: Subscribe_Buff_Item
+  Description: Item_Subscribe_Buff_Name
+  Parent: Item
+  Comment: 구독 버프 지급 아이템
+  DefaultInventory: SubscribeCharacter
+- Id: 13356
+  Name: HuntingZone_Owner
+  Parent: Item
+  Comment: 사냥터 소유 길드원들에게 특별하게 지급되는 아이템들 (서버용)
+  DefaultInventory: Independent
+- Id: 1134
+  Name: Polymorph
+  GivenProperty:
+    - PropertyName: EnchantLevel
+      PropertyValue: 1
+  Comment: 초월
+  Equip:
+    EquipSlot: Polymorph
+    AdditionalEquipSlotsByType: Solidarity
+  DefaultInventory: Polymorph
+  RedDotOnAcquired: Always
+- Id: 2661
+  Name: Polymorph_Skin
+  Parent: Polymorph
+  Comment: 초월스킨
+- Id: 3014
+  Name: Polymorph_Card
+  Parent: Polymorph
+  Comment: 초월체
+- Id: 2799
+  Name: Polymorph_Card_Fighter
+  Description: ItemCategory1Item_PolymorphCardFighterDesc
+  Parent: Polymorph_Card
+  Comment: 파이터 초월체
+  Icon: /Game/UIIcon/PolymorphFeature/PolymorphFeature_ShortDistance.PolymorphFeature_ShortDistance
+  SortOrder: 3
+- Id: 1374
+  Name: Polymorph_Card_Ranger
+  Description: ItemCategory1Item_PolymorphCardRangerDesc
+  Parent: Polymorph_Card
+  Comment: 원거리 초월체
+  Icon: /Game/UIIcon/PolymorphFeature/PolymorphFeature_LongDistance.PolymorphFeature_LongDistance
+  SortOrder: 2
+- Id: 3155
+  Name: Polymorph_Card_Sorcerer
+  Description: ItemCategory1Item_PolymorphCardSorcererDesc
+  Parent: Polymorph_Card
+  Comment: 소서러 초월체
+  Icon: /Game/UIIcon/PolymorphFeature/PolymorphFeature_Spell.PolymorphFeature_Spell
+  SortOrder: 1
+- Id: 9338
+  Name: Polymorph_Card_Assassin
+  Description: ItemCategory1Item_PolymorphCardAssassinDesc
+  Parent: Polymorph_Card
+  Comment: 어쌔신 초월체
+  Icon: /Game/UIIcon/PolymorphFeature/PolymorphFeature_ShortDistance.PolymorphFeature_ShortDistance
+  SortOrder: 3
+- Id: 1890
+  Name: Polymorph_Card_All
+  Description: ItemCategory1Item_PolymorphCardAllDesc
+  Parent: Polymorph_Card
+  Comment: 만능형 초월체
+  Icon: /Game/UIIcon/PolymorphFeature/PolymorphFeature_All.PolymorphFeature_All
+  SortOrder: 4
+- Id: 3088
+  Name: WeaponPolymorph
+  Parent: Polymorph
+  Comment: 무기외형
+  DefaultInventory: WeaponPolymorph
+  RedDotOnAcquired: Always
+- Id: 2745
+  Name: WeaponPolymorph_Sword
+  Description: ItemCategory1Item_WeaponPolymorphCardSwordDesc
+  Parent: WeaponPolymorph
+  Comment: 한손검 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Sword.WeaponType_Sword
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Fighter
+  EquipParent: Item_Equip_Weapon_Fighter_Sword
+  AnimationGroupType: OneHandSwordSheild
+  SortOrder: 6
+- Id: 1372
+  Name: WeaponPolymorph_LSword
+  Description: ItemCategory1Item_WeaponPolymorphCardLSwordDesc
+  Parent: WeaponPolymorph
+  Comment: 대검 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_TwoHander.WeaponType_TwoHander
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Fighter
+  EquipParent: Item_Equip_Weapon_Fighter_Lsword
+  AnimationGroupType: TwoHandSword
+  SortOrder: 5
+- Id: 1871
+  Name: WeaponPolymorph_Bow
+  Description: ItemCategory1Item_WeaponPolymorphCardBowDesc
+  Parent: WeaponPolymorph
+  Comment: 활 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Bow.WeaponType_Bow
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Ranger
+  EquipParent: Item_Equip_Weapon_Ranger_Bow
+  AnimationGroupType: Bow
+  SortOrder: 4
+- Id: 1129
+  Name: WeaponPolymorph_Cbow
+  Description: ItemCategory1Item_WeaponPolymorphCardCBowDesc
+  Parent: WeaponPolymorph
+  Comment: 석궁 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_CrossBow.WeaponType_CrossBow
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Ranger
+  EquipParent: Item_Equip_Weapon_Ranger_Cbow
+  AnimationGroupType: Crossbow
+  SortOrder: 3
+- Id: 4153
+  Name: WeaponPolymorph_Staff
+  Description: ItemCategory1Item_WeaponPolymorphCardStaffDesc
+  Parent: WeaponPolymorph
+  Comment: 지팡이 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Staff.WeaponType_Staff
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Sorcerer
+  EquipParent: Item_Equip_Weapon_Sorcerer_Staff
+  AnimationGroupType: Staff
+  SortOrder: 2
+- Id: 4015
+  Name: WeaponPolymorph_Orb
+  Description: ItemCategory1Item_WeaponPolymorphCardOrbDesc
+  Parent: WeaponPolymorph
+  Comment: 오브 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Orb.WeaponType_Orb
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Sorcerer
+  EquipParent: Item_Equip_Weapon_Sorcerer_Orb
+  AnimationGroupType: Orb
+  SortOrder: 1
+- Id: 4380
+  Name: WeaponPolymorph_Katana
+  Description: ItemCategory1Item_WeaponPolymorphCardKatanaDesc
+  Parent: WeaponPolymorph
+  Comment: 카타나 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_Sword.WeaponType_Sword
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Assassin
+  EquipParent: Item_Equip_Weapon_Assassin_Katana
+  AnimationGroupType: Katana
+  SortOrder: 8
+- Id: 12409
+  Name: WeaponPolymorph_TwinDaggers
+  Description: ItemCategory1Item_WeaponPolymorphCardTwinDaggersDesc
+  Parent: WeaponPolymorph
+  Comment: 쌍단검 무기 외형
+  Icon: /Game/UIIcon/WeaponType/WeaponType_TwoHander.WeaponType_TwoHander
+  Equip:
+    EquipSlot: WeaponPolymorph
+    AdditionalEquipSlotsByType: Solidarity
+  ClassLimit:
+    - Assassin
+  EquipParent: Item_Equip_Weapon_Assassin_TwinDaggers
+  AnimationGroupType: TwinShortSword
+  SortOrder: 7
+- Id: 3267
+  Name: Skin
+  Description: ItemCategory1Item_SkinDesc
+  Comment: 스킨
+  Icon: /Game/UI/Polymorph_SP/IconGradeAll_Imtx_Sprite.IconGradeAll_Imtx_Sprite
+  Equip:
+    EquipSlot: PolymorphSkin
+  DefaultInventory: Skin
+  RedDotOnAcquired: Always
+- Id: 7173
+  Name: Skin_BM
+  Description: ItemCategory1Item_SkinDesc
+  Parent: Skin
+  Comment: 스킨 - BM
+  Icon: /Game/UI/Polymorph_SP/IconFilterSkin00_Sprite.IconFilterSkin00_Sprite
+- Id: 10067
+  Name: Skin_Event
+  Description: ItemCategory1Item_SkinDesc
+  Parent: Skin
+  Comment: 스킨 - 이벤트
+  Icon: /Game/UI/Polymorph_SP/IconFilterSkin01_Sprite.IconFilterSkin01_Sprite
+- Id: 86
+  Name: Skill
+  Comment: 스킬
+  DefaultInventory: Skill
+- Id: 1389
+  Name: Skill_Learned
+  Parent: Skill
+  Comment: 습득 스킬
+- Id: 972
+  Name: Skill_Learned_Attack
+  Description: UIWord_SkillCategory_Active
+  Parent: Skill_Learned
+  Comment: 액티브
+  Icon: /Game/UI/Skill_SP/TabIconActive_Sprite.TabIconActive_Sprite
+- Id: 3033
+  Name: Skill_Learned_AutoActive
+  Description: UIWord_SkillCategory_AutoActive
+  Parent: Skill_Learned
+  Comment: 자동액티브
+  Icon: /Game/UI/Skill_SP/TabIconAttackAuto_Imtx_Sprite.TabIconAttackAuto_Imtx_Sprite
+- Id: 3034
+  Name: Skill_Learned_Passive
+  Description: UIWord_SkillCategory_Passive
+  Parent: Skill_Learned
+  Comment: 패시브
+  Icon: /Game/UI/Skill_SP/TabIconPassive_Imtx_Sprite.TabIconPassive_Imtx_Sprite
+- Id: 3038
+  Name: Independent
+  Comment: 무소속 아이템
+  DefaultInventory: Independent
+  RedDotOnAcquired: Always
+- Id: 3036
+  Name: Penalty_Experience
+  Parent: Independent
+  Comment: 경험치 페널티
+  DefaultInventory: LostExperience
+- Id: 3037
+  Name: Penalty_Item
+  Parent: Independent
+  Comment: 아이템 페널티
+  DefaultInventory: LostItem
+- Id: 869
+  Name: Mastery
+  Comment: 숙련도
+  DefaultInventory: Mastery
+- Id: 870
+  Name: Mastery_Essence
+  Description: ItemCategory1Item_MasteryEssenceDesc
+  Parent: Mastery
+  Comment: 숙련도 근원
+  DefaultInventory: Mastery_Essence
+- Id: 871
+  Name: Mastery_Transfer
+  Description: ItemCategory1Item_MasteryTransferDesc
+  Parent: Item_Misc_Consume
+  Comment: 숙련도 이전서
+  DefaultInventory: Bag
+- Id: 755
+  Name: RecipeReroll
+  Comment: 다시뽑기
+  DefaultInventory: Independent
+- Id: 8170
+  Name: RecipeReroll_Polymorph
+  Parent: RecipeReroll
+  Comment: 초월 다시뽑기
+  DefaultInventory: RecipeReroll_Polymorph
+- Id: 1164
+  Name: RecipeReroll_WeaponPolymorph
+  Parent: RecipeReroll
+  Comment: 무기외형 다시뽑기
+  DefaultInventory: RecipeReroll_WeaponPolymorph
+- Id: 4811
+  Name: MergePoint
+  Comment: 합성 실패 포인트
+  DefaultInventory: MergePoint
+- Id: 10017
+  Name: Combination
+  Comment: 조합식
+  DefaultInventory: Combination
+- Id: 4261
+  Name: Awakening
+  Comment: 각성
+  DefaultInventory: Awakening
+- Id: 9385
+  Name: Awareness
+  Comment: 자각
+  DefaultInventory: Awareness
+- Id: 401
+  Name: Awareness_Material
+  Comment: 자각 재료 아이템
+  DefaultUseDescription: UIWordItemConsume
+  DefaultInventory: Bag
+- Id: 4209
+  Name: Craft_DummyItem
+  Comment: 제작 출력용 더미아이템
+  DefaultInventory: Bag
+  Dummy: true
+- Id: 5416
+  Name: Guild
+  Description: ItemCategory1GuildDesc
+  Comment: 길드 아이템
+  DefaultInventory: Guild
+  ShowDetailAmount: false
+- Id: 3198
+  Name: GuildStorage
+  Comment: 길드 창고
+  DefaultInventory: GuildStorage
+- Id: 4692
+  Name: Item_SlotOpen
+  Parent: Item
+  Comment: 슬롯 해금 아이템
+  RedDotOnAcquired: Always
+- Id: 489
+  Name: Item_SlotOpen_Engrave
+  Description: ItemCategory1Item_SlotOpenEngrave_Desc
+  Parent: Item_SlotOpen
+  Comment: 슬롯 해금-세공 슬롯 해금
+  RedDotOnAcquired: Always
+  SortOrder: 390
+- Id: 10515
+  Name: Item_SlotOpen_Might
+  Description: ItemCategory1Item_SlotOpenMight_Desc
+  Parent: Item_SlotOpen
+  Comment: 슬롯 해금-권능부여 슬롯 해금
+  RedDotOnAcquired: Always
+  SortOrder: 391
+- Id: 704
+  Name: Item_Misc_Food
+  Description: ItemCategory1Item_FoodDesc
+  Parent: Item_Misc
+  Comment: 기타 - 능력 강화제 - 음식
+  DefaultUseDescription: UIWordItemConsume
+  RedDotOnAcquired: Always
+  SortOrder: 121
+- Id: 13195
+  Name: Item_Misc_Admission
+  Description: ItemCategory1Item_AdmissionDesc
+  Parent: Item_Misc
+  Comment: 기타 - 던전 입장 열쇠
+  RedDotOnAcquired: Always
+  SortOrder: 440
+- Id: 4049
+  Name: Item_Misc_Instialize
+  Description: ItemCategory1Item_InstializeDesc
+  Parent: Item_Misc
+  Comment: 스탯 초기화 아이템
+  Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+  RedDotOnAcquired: Always
+  SortOrder: 461
+- Id: 6681
+  Name: Item_Misc_BidToken
+  Description: ItemCategory1Item_BidTokenDesc
+  Parent: Item_Misc
+  Comment: 기타 - 점유권
+  Icon: /Game/UI/Craft_SP/FIconQuest_Sprite.FIconQuest_Sprite
+  RedDotOnAcquired: Always
+  SortOrder: 470
+- Id: 10383
+  Name: Item_Currency_HuntingZoneJewl
+  Description: ItemCategory1Item_CurrencyDesc
+  Parent: Item_Misc_HuntingZoneJewl
+  Comment: 기타_창조석
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+  DefaultUseDescription: UIWord_Bid
+  RedDotOnAcquired: Always
+  SortOrder: 104
+- Id: 15100
+  Name: Item_Potential_Page
+  Description: UIWord_Potential
+  Comment: 잠재력 영역 아이템
+  Icon: /Game/UIIcon/Item/ETC_Potential_Page.ETC_Potential_Page
+  DefaultInventory: Independent
+  RedDotOnAcquired: Always
+  SortOrder: 165
+- Id: 7880
+  Name: SubscribeTicket
+  Comment: 구독권
+  DefaultInventory: SubscribeCharacter
+- Id: 363
+  Name: Item_Misc_Upgrade_Potential
+  Description: ItemCategory1Item_PotentialDesc
+  Parent: Item_Misc_Upgrade
+  Comment: 잠재력
+  RedDotOnAcquired: Always

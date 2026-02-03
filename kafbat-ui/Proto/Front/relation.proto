@@ -1,0 +1,371 @@
+syntax = "proto3";
+package eclipse.client.relation;
+
+import "google/protobuf/timestamp.proto";
+import "Common/guild_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.relation";
+option java_outer_classname = "ClientRelationProto";
+
+// ============================================
+// 결과 코드
+// ============================================
+enum RelationResultCode {
+  INVALID = 0;
+
+  // 성공 코드
+  SUCCESS = 1;
+  SUCCESS_FRIEND_LIST = 2;
+  SUCCESS_ENEMY_LIST = 3;
+  SUCCESS_BLOCK_LIST = 4;
+  SUCCESS_SEND_FRIEND_REQUEST = 5;
+  SUCCESS_CANCEL_FRIEND_REQUEST = 6;
+  SUCCESS_REPLY_FRIEND_REQUEST = 7;
+  SUCCESS_DELETE_FRIEND = 8;
+  SUCCESS_REGISTER_ENEMY = 9;
+  SUCCESS_UNREGISTER_ENEMY = 10;
+  SUCCESS_REGISTER_BLOCK = 11;
+  SUCCESS_UNREGISTER_BLOCK = 12;
+  SUCCESS_UPDATE_MEMO = 13;
+  SUCCESS_UPDATE_FAVORITE = 14;
+  SUCCESS_FRIEND_REQUEST_LIST = 15;
+  SUCCESS_SENT_FRIEND_REQUEST_LIST = 16;
+  SUCCESS_SEARCH_CHARACTER = 17;
+  SUCCESS_GUILD_MEMBER_LIST = 18;
+
+  // 실패 코드 - 공통
+  FAIL = 100;
+  FAIL_INVALID_REQUEST = 101;
+  FAIL_CHARACTER_NOT_FOUND = 102;
+  FAIL_SELF_TARGET = 103;  // 자기 자신을 대상으로 할 수 없음
+
+  // 실패 코드 - 친구
+  FAIL_FRIEND_LIST_FULL = 201;
+  FAIL_TARGET_FRIEND_LIST_FULL = 202;
+  FAIL_ALREADY_FRIEND = 203;
+  FAIL_FRIEND_REQUEST_NOT_FOUND = 204;
+  FAIL_FRIEND_NOT_FOUND = 205;
+
+  // 실패 코드 - 친구 요청
+  FAIL_FRIEND_REQUEST = 241;
+  FAIL_ALREADY_FRIEND_REQUESTED = 242;
+  FAIL_TARGET_BLOCK_FRIEND_REQUEST = 243;  // 상대방이 친구 추가 요청을 거부 설정함
+  FAIL_FRIEND_REQUEST_EXPIRED = 244;
+  FAIL_FRIEND_REQUEST_LIST_FULL = 245;  // 내가 보낸 친구 요청 목록이 가득 참
+  FAIL_TARGET_FRIEND_REQUEST_LIST_FULL = 246;  // 상대방이 받은 친구 요청 목록이 가득 참
+
+  // 실패 코드 - 원수
+  FAIL_ENEMY_LIST_FULL = 301;
+  FAIL_ALREADY_ENEMY = 302;
+  FAIL_ENEMY_NOT_FOUND = 303;
+
+  // 실패 코드 - 차단
+  FAIL_BLOCK_LIST_FULL = 401;
+  FAIL_ALREADY_BLOCKED = 402;
+  FAIL_BLOCK_NOT_FOUND = 403;
+
+  // 실패 코드 - 메모
+  FAIL_MEMO_TOO_LONG = 501;
+}
+
+// ============================================
+// 친구 요청 응답 상태
+// ============================================
+enum FriendRequestReplyStatus {
+  UNSPECIFIED = 0;
+  DENY = 1;
+  ACCEPT = 2;
+}
+
+// ============================================
+// 데이터 메시지
+// ============================================
+
+// 친구 정보
+message FriendInfo {
+  string character_uuid = 1;
+  string character_name = 2;
+  int32 class_type = 3;
+  bool online = 4;
+  bool favorite = 5;  // 즐겨찾기 여부
+  string memo = 6;
+  google.protobuf.Timestamp registered_at = 7;  // 등록 시간
+  optional google.protobuf.Timestamp last_online_at = 8;  // 마지막 접속 시간
+  optional string guild_name = 9;
+  optional common.GuildMark guild_mark = 10;
+  string server_name = 11;
+}
+
+// 원수 정보
+message EnemyInfo {
+  string character_name = 1;  // 캐릭터 이름 기반 저장
+  string memo = 2;
+  google.protobuf.Timestamp registered_at = 3;  // 등록 시간
+  bool online = 4;
+  bool favorite = 5;  // 즐겨찾기 여부
+  optional google.protobuf.Timestamp last_online_at = 6;  // 마지막 접속 시간
+  optional string guild_name = 7;
+  optional common.GuildMark guild_mark = 8;
+  int32 class_type = 9;
+  string server_name = 10;
+}
+
+// 차단 정보
+message BlockInfo {
+  string character_name = 1;  // 캐릭터 이름 기반 저장
+  google.protobuf.Timestamp registered_at = 2;  // 등록 시간
+  optional string guild_name = 3;
+  optional common.GuildMark guild_mark = 4;
+  string memo = 5;
+  string server_name = 6;
+  int32 class_type = 7;
+}
+
+// 친구 요청 정보
+message FriendRequestInfo {
+  string character_uuid = 1;
+  string character_name = 2;
+  int32 class_type = 3;
+  bool online = 4;
+  google.protobuf.Timestamp requested_at = 5;  // 요청 시간
+  google.protobuf.Timestamp expire_at = 6;  // 만료 시간
+  optional string guild_name = 7;
+  optional common.GuildMark guild_mark = 8;
+  string server_name = 9;
+}
+
+// 캐릭터 검색 결과
+message SearchCharacterInfo {
+  string character_uuid = 1;
+  string character_name = 2;
+  int32 class_type = 3;
+  bool online = 4;
+  optional google.protobuf.Timestamp last_online_at = 5;  // 마지막 접속 시간
+  optional string guild_name = 6;
+  optional common.GuildMark guild_mark = 7;
+  bool is_friend = 8;  // 이미 친구인지 여부
+  bool is_requested = 9;  // 이미 친구 요청을 보냈는지 여부
+  string server_name = 10;
+}
+
+// ============================================
+// 요청 메시지
+// ============================================
+message RelationRequest {
+  oneof request {
+    // 친구
+    GetFriendList get_friend_list = 10;
+    GetSendFriendRequestList get_send_friend_request_list = 11;
+    GetReceivedFriendRequestList get_received_friend_request_list = 12;
+    SendFriendRequest send_friend_request = 13;
+    CancelFriendRequest cancel_friend_request = 14;
+    ReplyFriendRequest reply_friend_request = 15;
+    DeleteFriend delete_friend = 16;
+    UpdateFriendMemo update_friend_memo = 17;
+    UpdateFriendFavorite update_friend_favorite = 18;
+
+    // 원수
+    GetEnemyList get_enemy_list = 30;
+    RegisterEnemy register_enemy = 31;
+    UnregisterEnemy unregister_enemy = 32;
+    UpdateEnemyMemo update_enemy_memo = 33;
+    UpdateEnemyFavorite update_enemy_favorite = 34;
+
+    // 차단
+    GetBlockList get_block_list = 40;
+    RegisterBlock register_block = 41;
+    UnregisterBlock unregister_block = 42;
+    UpdateBlockMemo update_block_memo = 43;
+
+    // 검색
+    SearchCharacter search_character = 50;
+  }
+}
+
+// ========== 친구 요청 ==========
+message GetFriendList {}
+message GetSendFriendRequestList {}
+message GetReceivedFriendRequestList {}
+
+message SendFriendRequest {
+  string target_character_uuid = 1;
+}
+
+message CancelFriendRequest {
+  repeated string target_character_uuid = 1;
+}
+
+message ReplyFriendRequest {
+  repeated string requester_character_uuid = 1;
+  FriendRequestReplyStatus reply_status = 2;
+}
+
+message DeleteFriend {
+  repeated string target_character_uuids = 1;
+}
+
+message UpdateFriendMemo {
+  string target_character_uuid = 1;
+  string memo = 2;  // 최대 20자
+}
+
+message UpdateFriendFavorite {
+  string target_character_uuid = 1;
+  bool favorite = 2;
+}
+
+// ========== 원수 요청 ==========
+message GetEnemyList {}
+
+message RegisterEnemy {
+  string target_character_name = 1;
+}
+
+message UnregisterEnemy {
+  repeated string target_character_names = 1;
+}
+
+message UpdateEnemyMemo {
+  string target_character_name = 1;
+  string memo = 2;  // 최대 20자
+}
+
+message UpdateEnemyFavorite {
+  string target_character_name = 1;
+  bool favorite = 2;
+}
+
+// ========== 차단 요청 ==========
+message GetBlockList {}
+
+message RegisterBlock {
+  string target_character_name = 1;
+}
+
+message UnregisterBlock {
+  string target_character_name = 1;
+}
+
+message UpdateBlockMemo {
+  string target_character_name = 1;
+  string memo = 2;  // 최대 20자
+}
+
+// ========== 검색 요청 ==========
+message SearchCharacter {
+  string keyword = 1;
+}
+
+// ============================================
+// 이벤트 메시지
+// ============================================
+message RelationEvent {
+  optional RelationResultCode result_code = 100;
+
+  oneof event {
+    // 친구 응답
+    FriendEvent friend_list = 1;
+    DeleteFriendEvent delete_friend = 2;
+
+    // 친구 요청 받은 경우
+    ReceivedFriendRequestEvent received_friend_request = 5;
+    DeleteReceivedFriendRequestEvent delete_received_friend_request = 6;
+
+    // 친구 요청 보낸 경우
+    SentFriendRequestEvent sent_friend_request = 8;
+    DeleteSentFriendRequestEvent delete_sent_friend_request = 9;
+
+    // 원수 응답
+    EnemyListEvent enemy_list = 20;
+    UnregisterEnemyEvent unregister_enemy = 22;
+
+    // 차단 응답
+    BlockListEvent block_list = 30;
+    UnregisterBlockEvent unregister_block = 32;
+
+    // 검색 응답
+    SearchCharacterEvent search_character = 40;
+
+    FriendOnlineEvent friend_online_event = 55;
+    EnemyOnlineEvent enemy_online_event = 57;
+  }
+}
+
+// ========== 친구 응답 ==========
+// 친구 목록
+// 초기 목록 받을 때 사용
+// 초기 목록 받은 이후로 오는건 추가 및 수정
+message FriendEvent {
+  repeated FriendInfo friends = 1;
+}
+
+// 삭제 시 사용
+message DeleteFriendEvent {
+  repeated string target_character_uuids = 1;
+}
+
+// 친구 요청 목록
+// 받은 요청
+// 초기 목록 받을 때 사용
+// 초기 목록 받은 이후로 오는건 추가 및 수정
+message ReceivedFriendRequestEvent {
+  repeated FriendRequestInfo requests = 1;
+}
+
+// 삭제 시 사용
+message DeleteReceivedFriendRequestEvent {
+  repeated string target_character_uuids = 1;
+}
+// 보낸 요청
+// 초기 목록 받을 때 사용
+// 초기 목록 받은 이후로 오는건 추가 및 수정
+message SentFriendRequestEvent {
+  repeated FriendRequestInfo requests = 1;
+}
+
+// 삭제 시 사용
+message DeleteSentFriendRequestEvent {
+  repeated string target_character_uuids = 1;
+}
+
+// ========== 원수 응답 ==========
+// 초기 목록 받을 때 사용
+// 초기 목록 받은 이후로 오는건 추가 및 수정
+message EnemyListEvent {
+  repeated EnemyInfo enemies = 1;
+}
+
+// 삭제 시 사용
+message UnregisterEnemyEvent {
+  repeated string target_character_names = 1;
+}
+
+// ========== 차단 응답 ==========
+// 초기 목록 받을 때 사용
+// 초기 목록 받은 이후로 오는건 추가 및 수정
+message BlockListEvent {
+  repeated BlockInfo blocks = 1;
+}
+
+// 삭제 시 사용
+message UnregisterBlockEvent {
+  string target_character_name = 1;
+}
+
+// ========== 검색 응답 ==========
+// 매치되는게 없으면 empty, 있다면 1개를 담아서 보냄
+message SearchCharacterEvent {
+  repeated SearchCharacterInfo characters = 1;
+}
+
+// ========== 온라인 알림 ==========
+// 길드는 길드 서버에서 이미 처리되고 있음
+message FriendOnlineEvent {
+  string character_uuid = 1;
+  string character_name = 2;
+}
+
+message EnemyOnlineEvent {
+  string character_name = 1;
+}

@@ -1,0 +1,49 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.property";
+option java_outer_classname = "CommonPropertyProto";
+
+message Property {
+  string key = 1;
+  oneof value {
+    int64 integer_value = 2;
+    string string_value = 3;
+    IntegerValues integer_values = 9;
+    bytes bytes_value = 19;
+  }
+  int64 grade_id = 4;
+  bool locked = 5;
+  int64 symbol_id = 6;
+  int64 group_id = 7;
+  bool reserve = 8;
+  oneof category {
+    bool engrave = 10;
+    bool mastery_essence_skill = 11;
+    bool mastery_essence_buff = 12;
+    bool combination = 13;
+    bool cost = 15;
+    bool might = 16;
+    Enchant enchant = 17;
+    bool given_option = 18;
+    bool related_enchant = 20;
+  }
+  oneof leaderboard{
+    string character_name = 21;
+    string guild_name = 22;
+    int32 class_id = 23;
+  }
+
+  message Enchant {
+    int64 expand_step = 1;
+  }
+
+  message IntegerValues {
+    repeated int64 values = 1;
+  }
+}
+
+message Filter {
+  repeated common.Property properties = 1;
+}

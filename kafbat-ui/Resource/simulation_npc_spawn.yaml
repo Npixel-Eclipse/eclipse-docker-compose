@@ -1,0 +1,66 @@
+- Id: 10000000000
+  Name: Simulation_Basic_Spawn
+  Comment: 2초마다 스폰
+  Population:
+    - Territories:
+        - Territory: Simulation_Basic_Spawn_Territory
+      Npcs:
+        - Npc: Simulation_Passive_Monster_Spawn_Interval
+      SpawnDirection: W
+  PopulationSize: 50
+  SpawnInterval: 2000
+- Id: 10000000001
+  Name: Simulation_Performance_Passive_Spawn
+  Comment: 성능 테스트용 패시브 몬스터 5초마다 스폰
+  Population:
+    - Territories:
+        - Territory: Simulation_Performance_Spawn_Territory
+      Npcs:
+        - Npc: Simulation_Performance_Passive_Monster_Spawn_Interval
+      SpawnDirection: W
+  PopulationSize: 1
+  SpawnInterval: 5000
+- Id: 10000000002
+  Name: Simulation_Performance_Aggressive_Spawn
+  Comment: 성능 테스트용 선공 몬스터 5초마다 스폰
+  Population:
+    - Territories:
+        - Territory: Simulation_Performance_Spawn_Territory
+      Npcs:
+        - Npc: Simulation_Performance_Aggressive_Monster_Spawn_Interval
+      SpawnDirection: W
+  PopulationSize: 1
+  SpawnInterval: 5000
+- Id: 10000000003
+  Name: Simulation_SingleInstance_Spawn
+  Comment: SingleInstance 랜드 테스트용 NPC 스폰 (DeleteOnEmpty 채널 삭제 시 NPC 정리 테스트)
+  Population:
+    - Territories:
+        - Territory: Simulation_SingleInstance_Territory
+      Npcs:
+        - Npc: Simulation_No_Move_Npc
+      SpawnDirection: W
+  PopulationSize: 3
+  SpawnInterval: 60000
+- Id: 10000000004
+  Name: Simulation_Single_Spawn
+  Comment: 테스트용 단일 NPC 스폰 (PopulationSize=1, PC 근처 좁은 범위)
+  Population:
+    - Territories:
+        - Territory: Simulation_Single_Spawn_Territory
+      Npcs:
+        - Npc: Simulation_No_Move_Npc
+      SpawnDirection: W
+  PopulationSize: 1
+  SpawnInterval: 60000
+- Id: 10000000005
+  Name: SimulationTown_Merchant_Spawn
+  Comment: 시뮬레이션 마을 상인 스폰 (자동 구매용)
+  Population:
+    - Territories:
+        - Territory: SimulationTown_Territory
+      Npcs:
+        - Npc: Simulation_Town_Merchant
+      SpawnDirection: S
+  PopulationSize: 1
+  SpawnInterval: 60000

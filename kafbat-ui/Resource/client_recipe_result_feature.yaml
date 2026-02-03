@@ -1,0 +1,15 @@
+- Id: 1
+  Name: RecipeResult
+  MergeTitleDesc: UIWord_Polymorph_MergeResult
+  GachaTitleDesc: UIWord_Polymorph_PolymorphResult
+  UnableMoveMessage: MergeResult_UnableMove
+  HighGrade: Rare
+  CardType:
+    - Group: PolymorphCard
+      ItemCategory: Polymorph_Card
+    - Group: WeaponCard
+      ItemCategory: WeaponPolymorph
+    - Group: Item
+      ItemCategory: Item_Equip
+  RecipeResultPageItemCount: 10
+  GachaResultCardMaxCount: 100

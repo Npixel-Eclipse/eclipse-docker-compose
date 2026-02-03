@@ -1,0 +1,49 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "Common/server_time.proto";
+
+package dungeon;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.dungeon";
+option java_outer_classname = "BattleDungeonProto";
+
+// dungeon -> battle
+message BattleDungeonCommand {
+  reserved 11;
+
+  oneof message {
+    WelcomeDungeon welcome_dungeon = 10;
+    UpdateDungeonResource update_dungeon_resource = 12;
+  }
+}
+
+message WelcomeDungeon {
+  reserved 3,4,5;
+
+  string character_uuid = 1;
+  repeated DungeonResource dungeon_resources = 6;
+}
+
+message UpdateDungeonResource {
+  enum Reason {
+    REFILL = 0;
+    RECHARGE = 1;
+    CHEAT = 2;
+  }
+
+  int64 label = 1;
+  string character_uuid = 2;
+  DungeonResource dungeon_resource = 3;
+  Reason reason = 4;
+}
+
+message DungeonResource {
+  int64 resource_id = 1;
+  optional common.AmountTime remain_time = 2; // null 인 경우 무한
+  optional common.AmountTime charging_time = 3;
+  optional int64 remain_count = 4;
+  optional int64 additional_count = 5;
+  optional int64 charging_count = 6;
+  optional google.protobuf.Timestamp refresh_at = 7;
+}

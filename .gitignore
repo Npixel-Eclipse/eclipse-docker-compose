@@ -1,0 +1,90 @@
+# Exclude all .env files (Sensitive)
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Exhaustive Data/Runtime/Binary Exclusion
+**/data/
+**/_data/
+**/db/
+**/database/
+**/postgres_data/
+**/mysql_data/
+**/redis_data/
+**/kafka_data/
+**/*-data/
+**/*_data/
+**/*_storage/
+**/*_history/
+**/storage/
+**/snapshots/
+**/volumes/
+**/letsencrypt/
+**/mongo_data/
+**/qdrant_storage/
+**/bitnami_kafka/
+**/confluent_kafka/
+**/mysql/db/
+**/mysql/db_qa1/
+
+# Specific Binary & Large file types
+**/*.jar
+**/*.war
+**/*.ear
+**/*.zip
+**/*.tar.gz
+**/*.tgz
+**/*.bin
+**/*.exe
+**/*.dll
+**/*.so
+**/*.ibd
+**/*.ibdata*
+**/*.rdb
+**/*.binlog.*
+**/Nav
+
+# Secrets & Credentials (Avoid Secret Scanning failures)
+**/aws_credentials
+**/credentials
+**/*_credentials
+**/.aws/
+**/.ssh/
+**/*.pem
+**/*.key
+**/*.pub
+**/id_rsa*
+**/id_ed25519*
+**/*.crt
+**/*.p12
+**/*.pfx
+**/auth.json
+**/passwd
+**/shadow
+
+# Exclude log files and directories
+**/logs/
+**/*.log
+**/*.log.*
+**/1.logs
+**/2.logs
+**/3.logs
+
+# Exclude Python cache and IDE project files
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.idea/
+**/.vscode/
+
+# Exclude Node.js
+**/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.swp
+*.bak
+~*

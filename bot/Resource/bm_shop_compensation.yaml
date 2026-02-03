@@ -1,0 +1,90 @@
+- Id: 1
+  Name: BMPolymorphCardCompensation
+  RepeatRoundFrom: 2
+  Reward:
+    - Round: 1
+      Condition: 50
+      Item: Item_Cardpack_Transcendence_G3_T1_03_Bounded
+      Amount: 1
+    - Round: 1
+      Condition: 100
+      Item: Item_Cardpack_Transcendence_G3_T1_03_Bounded
+      Amount: 2
+    - Round: 1
+      Condition: 150
+      Item: Item_Cardpack_Transcendence_G3_T1_03_Bounded
+      Amount: 3
+    - Round: 1
+      Condition: 200
+      Item: Item_Cardpack_Transcendence_G3_T1_03_Bounded
+      Amount: 4
+    - Round: 1
+      Condition: 250
+      Item: Item_Cardpack_Transcendence_G3_T1_03_Bounded
+      Amount: 5
+    - Round: 2
+      Condition: 50
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 1
+    - Round: 2
+      Condition: 100
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 2
+    - Round: 2
+      Condition: 150
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 3
+    - Round: 2
+      Condition: 200
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 4
+    - Round: 2
+      Condition: 250
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 5
+  CountItem: BMCompensation_Count_01
+- Id: 15
+  Name: BMWeaponPolymorphCardCompensation
+  RepeatRoundFrom: 2
+  Reward:
+    - Round: 1
+      Condition: 50
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_03_Bounded
+      Amount: 1
+    - Round: 1
+      Condition: 100
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_03_Bounded
+      Amount: 2
+    - Round: 1
+      Condition: 150
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_03_Bounded
+      Amount: 3
+    - Round: 1
+      Condition: 200
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_03_Bounded
+      Amount: 4
+    - Round: 1
+      Condition: 250
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_03_Bounded
+      Amount: 5
+    - Round: 2
+      Condition: 50
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 1
+    - Round: 2
+      Condition: 100
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 2
+    - Round: 2
+      Condition: 150
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 3
+    - Round: 2
+      Condition: 200
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 4
+    - Round: 2
+      Condition: 250
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 5
+  CountItem: BMCompensation_Count_02

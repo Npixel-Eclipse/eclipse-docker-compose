@@ -1,0 +1,60 @@
+- Id: 1301
+  Name: Merchant_Group_Guild
+  Comment: 길드 상인 그룹
+  MerchantType: Guild
+- Id: 1581
+  Name: Merchant_Group_Basic
+  Comment: 기본 상인 그룹
+  MerchantType: Basic
+- Id: 1561
+  Name: Merchant_Group_Event
+  Comment: 이벤트 상인 그룹
+  MerchantType: Event
+- Id: 1405
+  Name: Merchant_Group_HuntingZone_Owner_A
+  Comment: (테스트) 소유 상점_A 세부 권역
+  MerchantType: HuntingZone
+- Id: 34
+  Name: Merchant_Group_HuntingZone_Owner_B
+  Comment: (테스트) 소유 상점_B 세부 권역
+  MerchantType: HuntingZone
+- Id: 908
+  Name: Merchant_Group_HuntingZone_A
+  Comment: (테스트) 특산품 상점_A 세부 권역
+  MerchantType: HuntingZone
+- Id: 855
+  Name: Merchant_Group_HuntingZone_B
+  Comment: (테스트) 특산품 상점_B 세부 권역
+  MerchantType: HuntingZone
+- Id: 231
+  Name: Merchant_Group_HuntingZone_Owner_1
+  Comment: (테스트) 소유 상점_1 세부 권역
+  MerchantType: HuntingZone
+- Id: 101
+  Name: Merchant_Group_HuntingZone_Owner_2
+  Comment: (테스트) 소유 상점_2 세부 권역
+  MerchantType: HuntingZone
+- Id: 235
+  Name: Merchant_Group_HuntingZone_1
+  Comment: (테스트) 특산품 상점_1 세부 권역
+  MerchantType: HuntingZone
+- Id: 387
+  Name: Merchant_Group_HuntingZone_2
+  Comment: (테스트) 특산품 상점_2 세부 권역
+  MerchantType: HuntingZone
+- Id: 827
+  Name: Merchant_Group_HuntingZone_Owner_3
+  Comment: (테스트) 소유 상점_3 세부 권역
+  MerchantType: HuntingZone
+- Id: 248
+  Name: Merchant_Group_HuntingZone_Owner_4
+  Comment: (테스트) 소유 상점_4 세부 권역
+  MerchantType: HuntingZone
+- Id: 165
+  Name: Merchant_Group_HuntingZone_3
+  Comment: (테스트) 특산품 상점_3 세부 권역
+  MerchantType: HuntingZone
+- Id: 1013
+  Name: Merchant_Group_HuntingZone_4
+  Comment: (테스트) 특산품 상점_4 세부 권역
+  MerchantType: HuntingZone

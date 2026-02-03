@@ -1,0 +1,37 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - PresetProperties
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    PresetProperties:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - PropertyName
+          - PropertyValue
+        columnize:
+          column: PropertyName
+          value: PropertyValue
+        properties:
+            PropertyName:
+              type: string
+              ref: property
+            PropertyValue:
+              type:
+                - integer
+                - boolean
+                - string

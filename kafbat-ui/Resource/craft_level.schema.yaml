@@ -1,0 +1,41 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - CountItem
+    - RecipeInputs
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    Category:
+      type: string
+      enum:
+        - DivinityCraft
+    CountItem: # 제작 횟수 카운팅을 위한 아이템 (유저에게는 보이지 않는 내부 구현을 위한 아이템)
+      type: string
+      ref: item
+    RecipeInputs:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - CraftCount
+          - Input
+        properties:
+          Level:
+            type: integer
+          CraftCount:
+            type: integer
+          Input:
+            type: string
+            ref: recipe_input

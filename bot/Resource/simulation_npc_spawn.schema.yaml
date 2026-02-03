@@ -1,0 +1,172 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    #네이밍 규칙
+    #사냥터이름_몬스터이름 (ex.Deepden_RedBanditGun)
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    # 스폰 규칙
+    # 1. 각 Population 중 해당 Population으로 인해 소환된 개체수가 MaxCount 이하인 것들 중 하나를 Weight 가중치에 따라 랜덤하게 하나 선택
+    # 2. 선택된 Population의 Npcs, Territories 중 하나를 각각의 Weight 가중치와 Capacity 따라 랜덤하게 하나 선택
+    # 3. 해당 Npc, Territory를 이용하여 npc를 생성, 이를 PopulationSize 만큼 반복
+    # 단, PopulationSize가 각 Population의 MaxCount보다 작을 경우 MaxCount의 합만큼만 생성
+    Population:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Npcs
+          - Territories
+        properties:
+          Npcs:
+            type: array
+            items:
+              type: object
+              properties:
+                Npc:
+                  type: string
+                  ref: npc
+                  visible: true
+                Weight:
+                  type: integer
+                  default: 1
+                  minimum: 1
+                  visible: true
+          Territories:
+            type: array
+            items:
+              type: object
+              properties:
+                Territory:
+                  type: string
+                  ref: territory
+                  visible: true
+                Weight:
+                  type: integer
+                  default: 1
+                  minimum: 1
+                  visible: true
+                Capacity: # 해당 Territory에 소환 가능한 최대 npc 수, 0이면 무제한
+                  type: integer
+                  default: 0
+                  visible: true
+          Weight:
+            type: integer
+            default: 1
+            minimum: 1
+            visible: true
+          MaxCount:
+            type: integer
+            default: 0 # 0이면 무제한, PopulationSize(and Weight) 따라 작동
+            visible: true
+          SpawnDirection: # 공백이면 S방향으로 스폰됨
+            type: string
+            enum:
+              - N
+              - NE
+              - E
+              - SE
+              - S
+              - SW
+              - W
+              - NW
+            visible: true
+        # 고정된 좌표에서 이동하지 않는 npc에 설정
+          IsFixed:
+            type: boolean
+            default: false
+            visible: true
+          DisplayAddress:
+            type: string
+            ref: address
+          TeleportWorldmapArea:
+            type: string
+            ref: worldmap_area
+    # 해당 수 만큼 npc 생성 시도함. population에서 MaxCount에 걸리거나 Territory, land 지정 잘못하면 이 수보다 적게 소환
+    # 0이면 소환 안함
+    PopulationSize:
+      type: integer
+      minimum: 0
+      visible: true
+    #AI 노드를 통해 npc를 스폰하기 위한 컬럼
+    #Action: SpawnSkill: NpcName
+    # true 일 경우 기본적으로 스폰하지 않고 스킬을 통해서만 작동함
+    BySkill:
+      type: boolean
+      default: false
+    # 스폰 주기(ms)
+    # 최종 스폰 주기 = SpawnInterval + random(MinRandomSpawnInterval, MaxRandomSpawnInterval)
+    # 시폰 시간이 0이면 land 생성될 때 한번만 스폰
+    SpawnInterval:
+      type: integer
+    MinRandomSpawnInterval: # 음수(최소한 max 보단 작은 값) 입력해야 함, SpawnInterval 보다 작으면 리스폰 안함
+      type: integer # todo : 데이터 검증기에 SpawnInterval 보다 작은지 검증 로직 추가 필요
+      maximum: -1000
+    MaxRandomSpawnInterval:
+      type: integer
+      minimum: 1000
+    #스폰 확률, 100만율
+    SpawnProbability:
+      type: integer
+    SpawnPolicy:
+      type: string
+      default: Individual # 하위 호환성을 위한 기본값
+      enum:
+        - Individual #npc 각 개체가 사망 후 interval 지나면 스폰
+        - Population #소속 population 내 모든 npc 사망 후 interval 지나면 전체 스폰
+        - AllPopulation #모든 population 내 모든 npc 사망 후 interval 지나면 전체 스폰
+    # 스폰 시간 제한, 해당 시간 동안만 스폰 허용, 없을 경우 제한 없음
+    ScheduleTime:
+      type: array
+      items:
+        type: object
+        required:
+          - Start
+          - End
+        # 시간 형식은 HH:MM:SS
+        # 범위는 양쪽 다 닫힌 구간 : [Start, End]
+        properties:
+          Start:
+            type: string
+          End:
+            type: string
+    # 스폰 요일 제한, 해당 요일에만 스폰 허용, 없을 경우 제한 없음
+    ScheduleWeekdays:
+      type: array
+      items:
+        type: object
+        properties:
+          Weekday:
+            type: string
+            enum:
+              - Sun
+              - Mon
+              - Tue
+              - Wed
+              - Thu
+              - Fri
+              - Sat
+    # 소환 시 메시지 표기
+    BroadcastSpawnMessageType:
+      type: string
+      enum:
+        - World
+        - Address
+    BlockSpawnByLandGroup: # true 일 경우 npc가 소환될 때 해당 랜드 그룹에 소속된 랜드가 아닐 경우 소환하지 않음
+      type: boolean
+      default: false
+  required:
+    - Id
+    - Name
+    - Population
+    - PopulationSize

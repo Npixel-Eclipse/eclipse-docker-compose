@@ -1,0 +1,53 @@
+- Id: 1
+  Activate: true
+  UIMainTab:
+    - Comment: 친구
+      Type: Friend
+      ValidDataType: UuID
+      TabDescription: UIWord_Friend
+      UISubTab:
+        - Comment: 전체 목록
+          SubTabDescription: UIWord_FriendList
+          MaxCount: MaxRelationshipFriendList
+          SubTabType: Default
+        - Comment: 받은 요청
+          SubTabDescription: UIWord_Receive_Request
+          MaxCount: MaxRelationshipSendFriendRequestList
+          SubTabType: ReceiveRequest
+        - Comment: 보낸 요청
+          SubTabDescription: UIWord_Send_Request
+          MaxCount: MaxRelationshipReceiveFriendRequestList
+          SubTabType: Request
+      SearchTab:
+        - SearchTabType: All
+          SearchTabDescription: UIWord_Relationship_AddPopUp_Search
+          SearchTabHintText: UIWord_EnterCharacterName
+        - SearchTabType: GuildMember
+          SearchTabDescription: UIWord_Relationship_AddPopUp_GuildMember
+          SearchTabHintText: UIWord_EnterGuildMemberName
+    - Comment: 원수
+      Type: Enemy
+      ValidDataType: Name
+      TabDescription: UIWord_Enemy
+      UISubTab:
+        - Comment: 전체 목록
+          SubTabDescription: UIWord_AllList
+          MaxCount: MaxRelationshipEnemyList
+          SubTabType: Default
+      SearchTab:
+        - SearchTabType: All
+          SearchTabDescription: UIWord_Relationship_AddPopUp_Search
+          SearchTabHintText: UIWord_EnterCharacterName
+    - Comment: 차단
+      Type: Block
+      ValidDataType: Name
+      TabDescription: UIWord_Block
+      UISubTab:
+        - Comment: 전체 목록
+          SubTabDescription: UIWord_AllList
+          MaxCount: MaxRelationshipBlockList
+          SubTabType: Default
+      SearchTab:
+        - SearchTabType: All
+          SearchTabDescription: UIWord_Relationship_AddPopUp_Search
+          SearchTabHintText: UIWord_EnterCharacterName

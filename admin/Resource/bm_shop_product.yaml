@@ -1,0 +1,2023 @@
+- Id: 3056
+  Name: BM_SeasonPass_Seongso_Ticket
+  Rewards:
+    - RewardType: item
+      RewardName: SeasonPass_Seongso_Ticket
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 13750
+  StartDate: 2025-02-06T00:00:00
+  EndDate: 2026-03-01T00:00:00
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: SeasonPass_Seongso_Ticket_Name
+  SlotType: Normal
+  SlotSize: Small
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/BMItem/BMM_SeasonPass_SeongsoTicket.BMM_SeasonPass_SeongsoTicket
+  DisplayTab: SeasonPassSub
+  DisplayOrder: 0
+- Id: 4718
+  Name: BM_SeasonPass_Growth_Ticket
+  Rewards:
+    - RewardType: item
+      RewardName: SeasonPass_Growth_Ticket
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 13750
+  StartDate: 2025-02-06T00:00:00
+  EndDate: 2026-03-01T00:00:00
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: SeasonPass_Growth_Ticket_Name
+  SlotType: Normal
+  SlotSize: Small
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/BMItem/BMM_SeasonPass_GrowthTicket.BMM_SeasonPass_GrowthTicket
+  DisplayTab: SeasonPassSub
+  DisplayOrder: 0
+- Id: 1865
+  Name: BM_SeasonPass_Ticket
+  Rewards:
+    - RewardType: item
+      RewardName: DailyPass_Eclipse_Ticket
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  Billing: STOVE
+  DoNotStore: true
+  StartDate: 2025-02-06T00:00:00
+  EndDate: 2026-03-01T00:00:00
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: UIWord_SeasonPass_SubTitle_Eclipse
+  SlotType: Normal
+  SlotSize: Small
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/BMItem/BMM_SeasonPass_GrowthTicket.BMM_SeasonPass_GrowthTicket
+  DisplayTab: SeasonPassSub
+  DisplayOrder: 0
+- Id: 1684
+  Name: BM_SeasonPass_Attendance_Ticket
+  Rewards:
+    - RewardType: item
+      RewardName: SeasonPass_Attendance_Ticket
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 13750
+  StartDate: 2025-02-06T00:00:00
+  EndDate: 2026-03-01T00:00:00
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: SeasonPass_Seongso_Ticket_Name
+  SlotType: Normal
+  SlotSize: Small
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/BMItem/BMM_SeasonPass_28DayTicket.BMM_SeasonPass_28DayTicket
+  DisplayTab: SeasonPassSub
+  DisplayOrder: 0
+- Id: 4359
+  Name: BM_SeasonPass_Daily_Ticket
+  Rewards:
+    - RewardType: item
+      RewardName: SeasonPass_Daily_Ticket
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 13750
+  StartDate: 2025-02-06T00:00:00
+  EndDate: 2026-03-01T00:00:00
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: SeasonPass_Growth_Ticket_Name
+  SlotType: Normal
+  SlotSize: Small
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/BMItem/BMM_SeasonPass_28DayTicket.BMM_SeasonPass_28DayTicket
+  DisplayTab: SeasonPassSub
+  DisplayOrder: 0
+- Id: 611
+  Name: Package_01
+  DesignComment: 스타터 패키지 (초월 지원)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 33
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: Package_01
+  SlotType: Special
+  SlotSize: Medium
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 0
+- Id: 196
+  Name: Package_02
+  DesignComment: 스타터 패키지 (장비 지원)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Equip_G3_T1_01_Bounded
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Boots_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Cape_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Gloves_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Helm_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Pants_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Equip_Armor_Suit_G3_T01_Type1_N1_Storable
+      Amount: 1
+      EnchantLevel: 7
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 30
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 30
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 15000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: Package_02
+  SlotType: Special
+  SlotSize: Medium
+  SlotTag:
+    - Hot
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 1
+- Id: 3440
+  Name: Package_16
+  DesignComment: 일반 스킬 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G1_T1_01_Storable
+      Amount: 20
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G2_T1_02_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 3300
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 30
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 33000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_16
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 3
+- Id: 4156
+  Name: Package_17
+  DesignComment: 고급 스킬 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G1_T1_01_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G2_T1_02_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 50
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Weekly
+  Description: Package_17
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 4
+- Id: 5436
+  Name: Package_18
+  DesignComment: 희귀 스킬 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G2_T1_02_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: Item_Grown_SkillEnchant_G3_T1_03_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 11000
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 100
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 110000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Weekly
+  Description: Package_18
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 5
+- Id: 2299
+  Name: Package_47
+  DesignComment: 각성의 불씨 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_47
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: StarterKit
+  DisplayOrder: 2
+- Id: 1749
+  Name: Package_03
+  DesignComment: 장비 강화 실속 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp1
+  Description: Package_03
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 862
+  Name: Package_04
+  DesignComment: 장비 강화 실속 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 20
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 20
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp1
+  Description: Package_04
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 757
+  Name: Package_05
+  DesignComment: 장비 강화 실속 패키지 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 40
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 40
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 16
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 2200
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 22000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp1
+  Description: Package_05
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 620
+  Name: Package_06
+  DesignComment: 장비 강화 실속 패키지 4단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 80
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 80
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 48
+    - RewardType: item
+      RewardName: Item_Box_Grown_G3_T1_09_Storable
+      Amount: 7
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 4
+    StepGroup: StepUp1
+  Description: Package_06
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 592
+  Name: Package_07
+  DesignComment: 무기 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 20
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_07
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 1
+- Id: 605
+  Name: Package_08
+  DesignComment: 방어구 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 20
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_08
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 2
+- Id: 1466
+  Name: Package_09
+  DesignComment: 장신구 강화 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_09
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 3
+- Id: 389
+  Name: Package_10
+  DesignComment: 장비 세공 실속 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Grown_G1_T1_08_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp2
+  Description: Package_10
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 1340
+  Name: Package_11
+  DesignComment: 장비 세공 실속 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Grown_G1_T1_08_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp2
+  Description: Package_11
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 800
+  Name: Package_12
+  DesignComment: 장비 세공 실속 패키지 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Grown_G1_T1_08_Storable
+      Amount: 16
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 2200
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 22000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp2
+  Description: Package_12
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 438
+  Name: Package_13
+  DesignComment: 장비 세공 실속 패키지 4단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Grown_G1_T1_08_Storable
+      Amount: 32
+    - RewardType: item
+      RewardName: Item_Box_Grown_G3_T1_11_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 4
+    StepGroup: StepUp2
+  Description: Package_13
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 0
+- Id: 1704
+  Name: Package_14
+  DesignComment: 희귀 장비 세공석 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_06_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 3300
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 30
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 33000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_14
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 4
+- Id: 90
+  Name: Package_15
+  DesignComment: 영웅 장비 세공석 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 15
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 15
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_06_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 50
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Daily
+  Description: Package_15
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Equipment
+  DisplayOrder: 5
+- Id: 787
+  Name: Package_19
+  DesignComment: 초월 성장 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G3_T1_03_Storable
+      Amount: 16
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G3_T1_03_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp3
+  Description: Package_19
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 59
+  Name: Package_20
+  DesignComment: 초월 성장 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 25
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G3_T1_03_Storable
+      Amount: 50
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G3_T1_03_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 3300
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 33000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp3
+  Description: Package_20
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 712
+  Name: Package_21
+  DesignComment: 초월 성장 패키지 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 35
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G3_T1_03_Storable
+      Amount: 70
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G3_T1_03_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp3
+  Description: Package_21
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 871
+  Name: Package_22
+  DesignComment: 초월 성장 패키지 4단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 45
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G3_T1_03_Storable
+      Amount: 90
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 8000
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 80000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 4
+    StepGroup: StepUp3
+  Description: Package_22
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 2680
+  Name: Package_23
+  DesignComment: 무기 외형 성장 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G4_T1_04_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G4_T1_04_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G3_T1_03_Storable
+      Amount: 16
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G3_T1_03_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp4
+  Description: Package_23
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 3042
+  Name: Package_24
+  DesignComment: 무기 외형 성장 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G4_T1_04_Storable
+      Amount: 25
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G4_T1_04_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G3_T1_03_Storable
+      Amount: 50
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G3_T1_03_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 3300
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 33000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp4
+  Description: Package_24
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 1318
+  Name: Package_25
+  DesignComment: 무기 외형 성장 패키지 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G4_T1_04_Storable
+      Amount: 35
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G4_T1_04_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G3_T1_03_Storable
+      Amount: 70
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G3_T1_03_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 5500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 55000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp4
+  Description: Package_25
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 1045
+  Name: Package_26
+  DesignComment: 무기 외형 성장 패키지 4단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G4_T1_04_Storable
+      Amount: 45
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G3_T1_03_Storable
+      Amount: 90
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 8000
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 80000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Monthly
+  StepProperty:
+    StepIndex: 4
+    StepGroup: StepUp4
+  Description: Package_26
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 0
+- Id: 2184
+  Name: Package_27
+  DesignComment: 초월 성장 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G3_T1_03_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G3_T1_03_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 2200
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 20
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 22000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Weekly
+  Description: Package_27
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 1
+- Id: 2822
+  Name: Package_28
+  DesignComment: 무기 외형 성장 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Use_G3_T1_03_Storable
+      Amount: 8
+    - RewardType: item
+      RewardName: Item_Grown_WeaponPolymorph_Pass_G3_T1_03_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 2200
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 20
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 22000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Weekly
+  Description: Package_28
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Polymorph
+  DisplayOrder: 2
+- Id: 3585
+  Name: Package_29
+  DesignComment: 성위 성장 지원 패키지2
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_BMSantuary_G1_T1_01_Storable
+      Amount: 500
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 11000
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 100
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 110000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  Description: Package_29
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 4
+- Id: 2963
+  Name: Package_30
+  DesignComment: 성위 성장 지원 패키지1
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_BMSantuary_G1_T1_01_Storable
+      Amount: 50
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 2200
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 20
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 22000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Daily
+  Description: Package_30
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 3
+- Id: 3486
+  Name: Package_36
+  DesignComment: 길드 지원 상자
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Guild_G1_T1_01_Storable
+      Amount: 10
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 13750
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_36
+  SlotType: Special
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/ETC_Guild_TechDocument.ETC_Guild_TechDocument
+  DisplayTab: Normal
+  DisplayOrder: 7
+- Id: 475
+  Name: Package_56
+  DesignComment: 희미한 성소의 숨결
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_BMSantuary_G1_T1_01_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 500
+  Billing: STOVE
+  LimitRefreshType: None
+  Description: Package_56
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/ETC_Statue_Growth01.ETC_Statue_Growth01
+  DisplayTab: Normal
+  DisplayOrder: 1
+- Id: 2430
+  Name: Package_59
+  DesignComment: 무기 세공석
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1500
+  LimitRefreshType: None
+  Description: Package_59
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_GivingMagicWeapon01.CSM_GivingMagicWeapon01
+  DisplayTab: Normal
+  DisplayOrder: 2
+- Id: 4414
+  Name: Package_60
+  DesignComment: 방어구 세공석
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1500
+  LimitRefreshType: None
+  Description: Package_60
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_GivingMagicArmor01.CSM_GivingMagicArmor01
+  DisplayTab: Normal
+  DisplayOrder: 3
+- Id: 4137
+  Name: Package_37
+  DesignComment: 대기열 추가팩 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Test_ConstructionQueue_Add_Item
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_08_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_09_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 275
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 2750
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp5
+  Description: Package_37
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 3828
+  Name: Package_38
+  DesignComment: 대기열 추가팩 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Test_ConstructionQueue_Add_Item
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_08_Storable
+      Amount: 12
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_09_Storable
+      Amount: 12
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp5
+  Description: Package_38
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 1787
+  Name: Package_39
+  DesignComment: 대기열 추가팩 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Test_ConstructionQueue_Add_Item
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_08_Storable
+      Amount: 24
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_09_Storable
+      Amount: 24
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp5
+  Description: Package_39
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 1630
+  Name: Package_40
+  DesignComment: 실속 가속 축원서 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_10_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_11_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 5
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp6
+  Description: Package_40
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 2487
+  Name: Package_41
+  DesignComment: 실속 가속 축원서 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_10_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_11_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1650
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 15
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 16500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp6
+  Description: Package_41
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 3680
+  Name: Package_42
+  DesignComment: 가속 축원서 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_09_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_10_Storable
+      Amount: 2
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_11_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_42
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 2
+- Id: 4420
+  Name: Package_43
+  DesignComment: 성소 지원 패키지 1단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Material_G1_T1_02_Storable
+      Amount: 50
+    - RewardType: item
+      RewardName: Item_Box_Material_G2_T1_10_Storable
+      Amount: 50
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 5
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 1
+    StepGroup: StepUp7
+  Description: Package_43
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 1481
+  Name: Package_44
+  DesignComment: 성소 지원 패키지 2단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Material_G1_T1_02_Storable
+      Amount: 100
+    - RewardType: item
+      RewardName: Item_Box_Material_G2_T1_10_Storable
+      Amount: 100
+    - RewardType: item
+      RewardName: Item_Grown_Santuary_G3_T1_21_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: Item_Grown_Santuary_G3_T1_24_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1100
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 10
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 11000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 2
+    StepGroup: StepUp7
+  Description: Package_44
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 3162
+  Name: Package_45
+  DesignComment: 성소 지원 패키지 3단계 (스텝업)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Material_G1_T1_02_Storable
+      Amount: 300
+    - RewardType: item
+      RewardName: Item_Box_Material_G2_T1_10_Storable
+      Amount: 300
+    - RewardType: item
+      RewardName: Item_Grown_Santuary_G3_T1_21_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: Item_Grown_Santuary_G3_T1_24_Storable
+      Amount: 10
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 3300
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 30
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 33000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Weekly
+  StepProperty:
+    StepIndex: 3
+    StepGroup: StepUp7
+  Description: Package_45
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 0
+- Id: 4840
+  Name: Package_46
+  DesignComment: 성소 지원 패키지
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Material_G1_T1_02_Storable
+      Amount: 40
+    - RewardType: item
+      RewardName: Item_Box_Material_G2_T1_10_Storable
+      Amount: 40
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_09_Storable
+      Amount: 6
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G1_T1_10_Storable
+      Amount: 4
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+    - RewardType: item
+      RewardName: CurrencyGuildCoin
+      Amount: 5
+      TagType: GuildReward
+      TagDescription: UIWord_BMShop_Items_GuildTag
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5500
+  LimitType: AccountServer
+  LimitAmount: 5
+  LimitRefreshType: Daily
+  Description: Package_46
+  SlotType: Normal
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Fortress
+  DisplayOrder: 1
+- Id: 427
+  Name: Package_48
+  DesignComment: 무기 강화 결정
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_01_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 10000
+  LimitType: AccountServer
+  LimitAmount: 6
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_48
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/MA_WeaponCore.MA_WeaponCore
+  DisplayTab: GoldPackage
+  DisplayOrder: 3
+- Id: 5653
+  Name: Package_49
+  DesignComment: 방어구 강화 결정
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_02_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 10000
+  LimitType: AccountServer
+  LimitAmount: 6
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_49
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/MA_ArmorCore.MA_ArmorCore
+  DisplayTab: GoldPackage
+  DisplayOrder: 4
+- Id: 188
+  Name: Package_50
+  DesignComment: 장신구 강화 결정
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Enchant_G1_T1_03_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 20000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_50
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/MA_AccCore.MA_AccCore
+  DisplayTab: GoldPackage
+  DisplayOrder: 5
+- Id: 3744
+  Name: Package_51
+  DesignComment: 회복의 룬
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G3_T2_01_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 5000
+  LimitType: AccountServer
+  LimitAmount: 4
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_51
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_Scroll_Buff_Defense01.CSM_Scroll_Buff_Defense01
+  DisplayTab: GoldPackage
+  DisplayOrder: 6
+- Id: 410
+  Name: Package_55
+  DesignComment: 전투의 룬
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Use_Scroll_G2_T2_03_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 3000
+  LimitType: AccountServer
+  LimitAmount: 4
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_55
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_Scroll_Buff_AD01.CSM_Scroll_Buff_AD01
+  DisplayTab: GoldPackage
+  DisplayOrder: 7
+- Id: 2896
+  Name: Package_Skin_Test
+  DesignComment: 스킨 소환권 (테스트)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Cardpack_Skin_SN001
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 3000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: Package_Skin_Test
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BM_Gacha_Skin.BM_Gacha_Skin
+  DisplayTab: GoldPackage
+  DisplayOrder: 8
+- Id: 3032
+  Name: Package_57
+  DesignComment: 일일 보급 상자 (초월)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Cardpack_Transcendence_G4_T1_01_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 100
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_57
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_polygotchaSingle_G04.CSM_polygotchaSingle_G04
+  DisplayTab: GoldPackage
+  DisplayOrder: 1
+- Id: 1681
+  Name: Package_58
+  DesignComment: 일일 보급 상자 (무기외형)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Cardpack_Weaponpolymorph_G4_T1_01_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyGold
+      Amount: 100
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Daily
+  MultiPurchasable: true
+  Description: Package_58
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_polygotchaSingle_W04.CSM_polygotchaSingle_W04
+  DisplayTab: GoldPackage
+  DisplayOrder: 2
+- Id: 5968
+  Name: Package_52
+  DesignComment: 무기 세공석
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyMileage
+      Amount: 500
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_52
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_GivingMagicWeapon01.CSM_GivingMagicWeapon01
+  DisplayTab: MileageItem
+  DisplayOrder: 0
+- Id: 796
+  Name: Package_53
+  DesignComment: 방어구 세공석
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyMileage
+      Amount: 500
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_53
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_GivingMagicArmor01.CSM_GivingMagicArmor01
+  DisplayTab: MileageItem
+  DisplayOrder: 0
+- Id: 3870
+  Name: Package_54
+  DesignComment: 장신구 세공석
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_06_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyMileage
+      Amount: 1000
+  LimitType: AccountServer
+  LimitAmount: 3
+  LimitRefreshType: Daily
+  Description: Package_54
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/Item/CSM_GivingMagicAccessories01.CSM_GivingMagicAccessories01
+  DisplayTab: MileageItem
+  DisplayOrder: 0
+- Id: 2214
+  Name: BM_PolymorphCard
+  DesignComment: 초월 뽑기 1회(SG)
+  Rewards:
+    - RewardType: recipe_output
+      RewardName: Item_Cardpack_Transcendence_G5_T2_01
+      Amount: 1
+    - RewardType: item
+      RewardName: BMCompensation_Count_01
+      Amount: 1
+  Cost:
+    - ItemName: Item_GachaTicket_Polymorph_01_Test
+      Amount: 1
+      Order: 1
+    - ItemName: CurrencyDiamond
+      Amount: 100
+      Order: 2
+  LimitRefreshType: None
+  MultiRecipeOutput: true
+  Description: UIWord_BM_PolymorphCard
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Gacha_Polymorph_Dia01.BMM_Gacha_Polymorph_Dia01
+  DisplayTab: GachaPolymorph
+  DisplayOrder: 3
+  Compensation: BMPolymorphCardCompensation
+- Id: 3316
+  Name: BM_PolymorphCard_pickup
+  DesignComment: 초월 뽑기 1회(SG)
+  Rewards:
+    - RewardType: recipe_output
+      RewardName: Item_Cardpack_Transcendence_G5_T2_01
+      Amount: 1
+    - RewardType: item
+      RewardName: BMCompensation_Count_01
+      Amount: 1
+  Cost:
+    - ItemName: Item_GachaTicket_Polymorph_01_Test
+      Amount: 1
+      Order: 1
+    - ItemName: CurrencyDiamond
+      Amount: 100
+      Order: 2
+  LimitRefreshType: None
+  MultiRecipeOutput: true
+  Description: UIWord_BM_PolymorphCard_pickup
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Gacha_Polymorph_Dia01.BMM_Gacha_Polymorph_Dia01
+  DisplayTab: GachaPolymorph
+  DisplayOrder: 4
+- Id: 391
+  Name: BM_WeaponPolymorphCard
+  DesignComment: 무기 외형 뽑기 1회(SG)
+  Rewards:
+    - RewardType: recipe_output
+      RewardName: Item_Cardpack_Weaponpolymorph_G5_T2_01
+      Amount: 1
+    - RewardType: item
+      RewardName: BMCompensation_Count_02
+      Amount: 1
+  Cost:
+    - ItemName: Item_GachaTicket_WeaponPolymorph_01_Test
+      Amount: 1
+      Order: 1
+    - ItemName: CurrencyDiamond
+      Amount: 100
+      Order: 2
+  LimitRefreshType: None
+  MultiRecipeOutput: true
+  Description: UIWord_BM_WeaponPolymorphCard
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Gacha_WeaponPoly_Dia01.BMM_Gacha_WeaponPoly_Dia01
+  DisplayTab: GachaWeaponPolymorph
+  DisplayOrder: 5
+  Compensation: BMWeaponPolymorphCardCompensation
+- Id: 5364
+  Name: BM_WeaponPolymorphCard_pickup
+  DesignComment: 무기 외형 뽑기 1회(SG)
+  Rewards:
+    - RewardType: recipe_output
+      RewardName: Item_Cardpack_Weaponpolymorph_G5_T2_01
+      Amount: 1
+    - RewardType: item
+      RewardName: BMCompensation_Count_02
+      Amount: 1
+  Cost:
+    - ItemName: Item_GachaTicket_WeaponPolymorph_01_Test
+      Amount: 1
+      Order: 1
+    - ItemName: CurrencyDiamond
+      Amount: 100
+      Order: 2
+  LimitRefreshType: None
+  MultiRecipeOutput: true
+  Description: UIWord_BM_WeaponPolymorphCard_pickup
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Gacha_WeaponPoly_Dia01.BMM_Gacha_WeaponPoly_Dia01
+  DisplayTab: GachaWeaponPolymorph
+  DisplayOrder: 6
+- Id: 6560
+  Name: HotDeal_Product1
+  DesignComment: 핫딜상품1
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Box_Equip_G3_T1_01_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Box_Equip_G3_T1_02_Storable
+      Amount: 1
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_04_Storable
+      Amount: 5
+    - RewardType: item
+      RewardName: Item_Grown_Engrave_G1_T1_05_Storable
+      Amount: 30
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 1500
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: UIWord_HotDeal_Product1
+  SlotType: Special
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: HotDeal
+  DisplayOrder: 0
+  HotDealTime: 1440
+  PurchaseTerms: ContentLimit_CharacterLevel05
+  HotDealBackground: /Game/UIIcon/HotDeal/HotDealBanner001.HotDealBanner001
+  Summary: UIWord_HotDeal_Product1_HotDealdescription_1
+- Id: 5039
+  Name: HotDeal_Product2
+  DesignComment: 핫딜상품2
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 33
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 100
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: UIWord_HotDeal_Product2
+  SlotType: Special
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: HotDeal
+  DisplayOrder: 1
+  HotDealTime: 1440
+  PurchaseTerms: ContentLimit_CharacterLevel15
+  HotDealBackground: /Game/UIIcon/HotDeal/HotDealBanner001.HotDealBanner001
+  Summary: UIWord_HotDeal_Product2_HotDealdescription
+- Id: 237
+  Name: Subscribe_Product
+  DesignComment: 구독 버프 상품
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Subscribe_Buff_Test
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyDiamond
+      Amount: 100
+      SubscribePayment: true
+      TagType: DailyReward
+      TagDescription: UIWord_BMShop_Items_DailyTag
+    - RewardType: item
+      RewardName: Item_Use_Potion_G1_T1_01_Storable
+      Amount: 100
+    - RewardType: item
+      RewardName: Item_Box_Use_G1_T1_02_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Day28
+  Description: Item_Subscribe_Buff_Name
+  SlotType: Special
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Subscribe
+  DisplayOrder: 6
+- Id: 7047
+  Name: Cash_Test1
+  DesignComment: 스킨 소환권 (테스트)
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Cardpack_Skin_SN001
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  Billing: STOVE
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: Cash_Test1
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BM_Gacha_Skin.BM_Gacha_Skin
+  DisplayTab: Normal
+  DisplayOrder: 9
+- Id: 7362
+  Name: Cash_Test3
+  DesignComment: 핫딜상품1
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Use_G4_T1_04_Storable
+      Amount: 33
+    - RewardType: item
+      RewardName: Item_Grown_Transcend_Pass_G4_T1_04_Storable
+      Amount: 3
+    - RewardType: item
+      RewardName: CurrencyMileage
+      Amount: 550
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  Billing: STOVE
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Permanent
+  Description: Cash_Test3
+  SlotType: Special
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: HotDeal
+  DisplayOrder: 2
+  HotDealTime: 1440
+  PurchaseTerms: ContentLimit_CharacterLevel20
+  HotDealBackground: /Game/UIIcon/HotDeal/HotDealBanner001.HotDealBanner001
+  Summary: UIWord_HotDeal_Product1_HotDealdescription_1
+- Id: 4579
+  Name: Cash_Test4
+  DesignComment: 구독 버프 상품
+  Rewards:
+    - RewardType: item
+      RewardName: Item_Subscribe_Buff_Test
+      Amount: 1
+    - RewardType: item
+      RewardName: CurrencyDiamond
+      Amount: 100
+      SubscribePayment: true
+      TagType: DailyReward
+      TagDescription: UIWord_BMShop_Items_DailyTag
+    - RewardType: item
+      RewardName: Item_Use_Potion_G1_T1_01_Storable
+      Amount: 100
+    - RewardType: item
+      RewardName: Item_Box_Use_G1_T1_02_Storable
+      Amount: 1
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 1000
+  Billing: STOVE
+  DoNotStore: true
+  LimitType: AccountServer
+  LimitAmount: 1
+  LimitRefreshType: Day28
+  Description: Cash_Test4
+  SlotType: Special
+  SlotSize: Medium
+  DisplayImage: /Game/UIIcon/Item/CSM_WeaponBox01.CSM_WeaponBox01
+  DisplayTab: Subscribe
+  DisplayOrder: 7
+- Id: 6851
+  Name: Cash_Test5
+  DesignComment: 다이아 400 (테스트)
+  Rewards:
+    - RewardType: item
+      RewardName: CurrencyPaidDiamond
+      Amount: 400
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 5000
+  Billing: STOVE
+  LimitRefreshType: None
+  Description: UIWord_BMShop_Product4
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Dia01.BMM_Dia01
+  DisplayTab: Normal
+  DisplayOrder: 10
+- Id: 6881
+  Name: Cash_Test6
+  DesignComment: 다이아 800 (테스트)
+  Rewards:
+    - RewardType: item
+      RewardName: CurrencyPaidDiamond
+      Amount: 800
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 10000
+  Billing: STOVE
+  LimitRefreshType: None
+  Description: UIWord_BMShop_Product5
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Dia02.BMM_Dia02
+  DisplayTab: Normal
+  DisplayOrder: 11
+- Id: 3410
+  Name: Cash_Test7
+  DesignComment: 다이아 4000 (테스트)
+  Rewards:
+    - RewardType: item
+      RewardName: CurrencyPaidDiamond
+      Amount: 4000
+  Cost:
+    - ItemName: CurrencyDiamond
+      Amount: 50000
+  Billing: STOVE
+  LimitRefreshType: None
+  Description: UIWord_BMShop_Product8
+  SlotType: Normal
+  SlotSize: Small
+  DisplayImage: /Game/UIIcon/BMItem/BMM_Dia03.BMM_Dia03
+  DisplayTab: Normal
+  DisplayOrder: 12

@@ -1,0 +1,104 @@
+- Id: 10102
+  Name: EclipseTime_Var_Subjugate_BloodSoakedSealAltar_2F_EveryDay
+  Comment: 던전_블러드셰드 2층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Blood_Shed
+  TargetDungeonAddress: Var_Subjugate_BloodSoakedSealAltar_2F
+  Title: UIWord_EclipseTime_Var_Subjugate_BloodSoakedSealAltar_2F_EveryDay_Main
+  Description: UIWord_EclipseTime_Var_Subjugate_BloodSoakedSealAltar_2F_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossBonus.EclipseTime_BossBonus
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 12
+      StartMinute: 30
+      EndHour: 19
+      EndMinute: 30
+- Id: 400
+  Name: EclipseTime_Var_Subjugate_BloodSoakedSealAltar_1F_EveryDay
+  Comment: 던전_블러드셰드 1층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Blood_Shed
+  TargetDungeonAddress: Var_Subjugate_BloodSoakedSealAltar_1F
+  Title: UIWord_EclipseTime_Var_Subjugate_BloodSoakedSealAltar_2F_EveryDay_Main
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossSpawn.EclipseTime_BossSpawn
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 12
+      StartMinute: 30
+      EndHour: 19
+      EndMinute: 30
+- Id: 10201
+  Name: EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_5F_EveryDay
+  Comment: 던전_구리가라 불멸지_5층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Title: UIWord_EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_5F_EveryDay_Main
+  Description: UIWord_EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_5F_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossBonus.EclipseTime_BossBonus
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 456
+  Name: EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_4F_EveryDay
+  Comment: 던전_구리가라 불멸지_4층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 129
+  Name: EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_3F_EveryDay
+  Comment: 던전_구리가라 불멸지_3층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 226
+  Name: EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_2F_EveryDay
+  Comment: 던전_구리가라 불멸지_2층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 327
+  Name: EclipseTime_Eld_Dawnbough_GorgeOfTheLeftBehind_1F_EveryDay
+  Comment: 던전_구리가라 불멸지_1층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30

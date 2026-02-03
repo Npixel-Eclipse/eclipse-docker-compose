@@ -1,0 +1,112 @@
+- Id: 1
+  Name: Solidarity_Gold_Rare
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[황금성물] 희귀 결속 조합"
+  Grade: Rare
+  Building: Statue_Gold_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM039
+      EnchantLevel: 1
+    - Item: Item_Polymorph_Transcendence_PM281
+      EnchantLevel: 1
+  CombinationBonus:
+    - Grade: Rare
+      Value: 3
+    - Grade: Epic
+      Value: 5
+  Order: 0
+- Id: 2
+  Name: Solidarity_Gold_Epic
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[황금성물] 에픽 결속 조합"
+  Grade: Epic
+  Building: Statue_Gold_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM020
+      EnchantLevel: 2
+    - Item: Item_Polymorph_Transcendence_PM244
+      EnchantLevel: 2
+  CombinationBonus:
+    - Grade: Rare
+      Value: 5
+    - Grade: Epic
+      Value: 10
+    - Grade: Legendary
+      Value: 15
+  Order: 0
+- Id: 3
+  Name: Solidarity_Polymorph_Rare
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[초월의성물] 희귀 결속 조합"
+  Grade: Rare
+  Building: Statue_Polymorph_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM076
+      EnchantLevel: 1
+    - Item: Item_Polymorph_Transcendence_PM134
+      EnchantLevel: 1
+    - Item: Item_Polymorph_Transcendence_PM073
+      EnchantLevel: 1
+  CombinationBonus:
+    - Grade: Rare
+      Value: 6
+    - Grade: Epic
+      Value: 12
+  Order: 0
+- Id: 4
+  Name: Solidarity_Polymorph_Epic
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[초월의성물] 에픽 결속 조합"
+  Grade: Epic
+  Building: Statue_Polymorph_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM128
+      EnchantLevel: 3
+    - Item: Item_Polymorph_Transcendence_PM085
+      EnchantLevel: 3
+  CombinationBonus:
+    - Grade: Rare
+      Value: 8
+    - Grade: Epic
+      Value: 16
+    - Grade: Legendary
+      Value: 24
+  Order: 0
+- Id: 5
+  Name: Solidarity_Weapon_Rare
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[외형의성물] 희귀 결속 조합"
+  Grade: Rare
+  Building: Statue_WeaponPolymorph_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM109
+      EnchantLevel: 2
+    - Item: Item_Polymorph_Transcendence_PM262
+      EnchantLevel: 2
+  CombinationBonus:
+    - Grade: Rare
+      Value: 5
+    - Grade: Epic
+      Value: 10
+  Order: 0
+- Id: 6
+  Name: Solidarity_Weapon_Epic
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: "[외형의성물] 에픽 결속 조합"
+  Grade: Epic
+  Building: Statue_WeaponPolymorph_Seongso
+  Combination:
+    - Item: Item_Polymorph_Transcendence_PM277
+      EnchantLevel: 4
+    - Item: Item_Polymorph_Transcendence_PM241
+      EnchantLevel: 4
+    - Item: Item_Polymorph_Transcendence_PM293
+      EnchantLevel: 3
+  CombinationBonus:
+    - Grade: Rare
+      Value: 9
+    - Grade: Epic
+      Value: 18
+    - Grade: Legendary
+      Value: 27
+  Order: 0

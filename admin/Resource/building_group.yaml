@@ -1,0 +1,983 @@
+- Id: 888
+  Name: Statue_Main
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Comment: 성좌 그룹
+  RepresentativeBuilding: Statue_Main_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 300
+    - Level: 2
+      DurationSecond: 3600
+    - Level: 3
+      DurationSecond: 10800
+    - Level: 4
+      DurationSecond: 21600
+    - Level: 5
+      DurationSecond: 43200
+    - Level: 6
+      DurationSecond: 86400
+    - Level: 7
+      DurationSecond: 172800
+    - Level: 8
+      DurationSecond: 259200
+    - Level: 9
+      DurationSecond: 432000
+    - Level: 10
+      DurationSecond: 604800
+    - Level: 11
+      DurationSecond: 864000
+    - Level: 12
+      DurationSecond: 1296000
+    - Level: 13
+      DurationSecond: 1296000
+    - Level: 14
+      DurationSecond: 1296000
+    - Level: 15
+      DurationSecond: 1296000
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon13.Fortress_SanctumIcon13
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01.VAE_BG_IP000_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_01.VAE_BG_IP000_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_02.VAE_BG_IP000_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_02.VAE_BG_IP000_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP000_03.VAE_BG_IP000_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_03.VAE_BG_IP000_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_04.VAE_BG_IP000_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_04.VAE_BG_IP000_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04.VAE_BG_IP000_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP000_05.VAE_BG_IP000_05
+- Id: 924
+  Name: Statue_Exp
+  NameDesc: Seongso_Name_Statue_Exp_Title
+  Comment: 경험치 성물 그룹
+  ContentLimit: ExpBuilding
+  RepresentativeBuilding: Statue_Exp_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 30
+    - Level: 2
+      DurationSecond: 2700
+    - Level: 3
+      DurationSecond: 7200
+    - Level: 4
+      DurationSecond: 18000
+    - Level: 5
+      DurationSecond: 52500
+    - Level: 6
+      DurationSecond: 69600
+    - Level: 7
+      DurationSecond: 85200
+    - Level: 8
+      DurationSecond: 117600
+    - Level: 9
+      DurationSecond: 165100
+    - Level: 10
+      DurationSecond: 172800
+    - Level: 11
+      DurationSecond: 330000
+    - Level: 12
+      DurationSecond: 450000
+    - Level: 13
+      DurationSecond: 450000
+    - Level: 14
+      DurationSecond: 450000
+    - Level: 15
+      DurationSecond: 450000
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon04.Fortress_SanctumIcon04
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 1309
+  Name: Statue_Gold
+  NameDesc: Seongso_Name_Statue_Gold_Title
+  Comment: 황금 성물 그룹
+  ContentLimit: GoldBuilding
+  RepresentativeBuilding: Statue_Gold_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 30
+    - Level: 2
+      DurationSecond: 1500
+    - Level: 3
+      DurationSecond: 4500
+    - Level: 4
+      DurationSecond: 11400
+    - Level: 5
+      DurationSecond: 31500
+    - Level: 6
+      DurationSecond: 42000
+    - Level: 7
+      DurationSecond: 51000
+    - Level: 8
+      DurationSecond: 70500
+    - Level: 9
+      DurationSecond: 99600
+    - Level: 10
+      DurationSecond: 181200
+    - Level: 11
+      DurationSecond: 259200
+    - Level: 12
+      DurationSecond: 388800
+    - Level: 13
+      DurationSecond: 388800
+    - Level: 14
+      DurationSecond: 388800
+    - Level: 15
+      DurationSecond: 388800
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon09.Fortress_SanctumIcon09
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 1421
+  Name: Statue_Awareness
+  NameDesc: Seongso_Name_Statue_Awareness_Title
+  Comment: 자각의 성물 그룹
+  ContentLimit: Statue_Awareness
+  RepresentativeBuilding: Statue_Awareness_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1800
+    - Level: 1
+      DurationSecond: 5400
+    - Level: 2
+      DurationSecond: 10800
+    - Level: 3
+      DurationSecond: 21600
+    - Level: 4
+      DurationSecond: 26700
+    - Level: 5
+      DurationSecond: 73200
+    - Level: 6
+      DurationSecond: 97500
+    - Level: 7
+      DurationSecond: 120000
+    - Level: 8
+      DurationSecond: 164400
+    - Level: 9
+      DurationSecond: 231300
+    - Level: 10
+      DurationSecond: 648000
+    - Level: 11
+      DurationSecond: 814380
+    - Level: 12
+      DurationSecond: 914700
+    - Level: 13
+      DurationSecond: 914700
+    - Level: 14
+      DurationSecond: 914700
+    - Level: 15
+      DurationSecond: 914700
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon07.Fortress_SanctumIcon07
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 39
+  Name: Statue_Awakening
+  NameDesc: Seongso_Name_Statue_Awakening_Title
+  Comment: 각성의 성물 그룹
+  ContentLimit: Statue_Awakening
+  RepresentativeBuilding: Statue_Awakening_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1800
+    - Level: 1
+      DurationSecond: 5400
+    - Level: 2
+      DurationSecond: 10800
+    - Level: 3
+      DurationSecond: 21600
+    - Level: 4
+      DurationSecond: 26700
+    - Level: 5
+      DurationSecond: 73200
+    - Level: 6
+      DurationSecond: 97500
+    - Level: 7
+      DurationSecond: 120000
+    - Level: 8
+      DurationSecond: 164400
+    - Level: 9
+      DurationSecond: 231300
+    - Level: 10
+      DurationSecond: 648000
+    - Level: 11
+      DurationSecond: 814380
+    - Level: 12
+      DurationSecond: 914700
+    - Level: 13
+      DurationSecond: 914700
+    - Level: 14
+      DurationSecond: 914700
+    - Level: 15
+      DurationSecond: 914700
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon08.Fortress_SanctumIcon08
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 1460
+  Name: Statue_DungeonItem
+  NameDesc: Seongso_Name_Statue_DungeonItem_Title
+  Comment: 시간의 성물 그룹
+  ContentLimit: Building_Statue_DungeonItem
+  RepresentativeBuilding: Statue_DungeonItem_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 30
+    - Level: 2
+      DurationSecond: 1700
+    - Level: 3
+      DurationSecond: 5100
+    - Level: 4
+      DurationSecond: 9600
+    - Level: 5
+      DurationSecond: 35700
+    - Level: 6
+      DurationSecond: 36000
+    - Level: 7
+      DurationSecond: 44700
+    - Level: 8
+      DurationSecond: 61200
+    - Level: 9
+      DurationSecond: 112300
+    - Level: 10
+      DurationSecond: 648000
+    - Level: 11
+      DurationSecond: 814380
+    - Level: 12
+      DurationSecond: 914700
+    - Level: 13
+      DurationSecond: 914700
+    - Level: 14
+      DurationSecond: 914700
+    - Level: 15
+      DurationSecond: 914700
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon11.Fortress_SanctumIcon11
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 486
+  Name: Statue_Polymorph
+  NameDesc: Seongso_Name_Statue_Polymorph_Title
+  Comment: 초월의 성물 그룹
+  ContentLimit: Building_Statue_Polymorph
+  RepresentativeBuilding: Statue_Polymorph_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 30
+    - Level: 2
+      DurationSecond: 2100
+    - Level: 3
+      DurationSecond: 6000
+    - Level: 4
+      DurationSecond: 12600
+    - Level: 5
+      DurationSecond: 41900
+    - Level: 6
+      DurationSecond: 47400
+    - Level: 7
+      DurationSecond: 57900
+    - Level: 8
+      DurationSecond: 80100
+    - Level: 9
+      DurationSecond: 112500
+    - Level: 10
+      DurationSecond: 393120
+    - Level: 11
+      DurationSecond: 561600
+    - Level: 12
+      DurationSecond: 842400
+    - Level: 13
+      DurationSecond: 842400
+    - Level: 14
+      DurationSecond: 842400
+    - Level: 15
+      DurationSecond: 842400
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon01.Fortress_SanctumIcon01
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05
+- Id: 1295
+  Name: Statue_WeaponPolymorph
+  NameDesc: Seongso_Name_Statue_WeaponPolymorph_Title
+  Comment: 외형의 성물 그룹
+  ContentLimit: Building_Statue_WeaponPolymorph
+  RepresentativeBuilding: Statue_WeaponPolymorph_Seongso
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 30
+    - Level: 2
+      DurationSecond: 1700
+    - Level: 3
+      DurationSecond: 5100
+    - Level: 4
+      DurationSecond: 9600
+    - Level: 5
+      DurationSecond: 35700
+    - Level: 6
+      DurationSecond: 36000
+    - Level: 7
+      DurationSecond: 44700
+    - Level: 8
+      DurationSecond: 61200
+    - Level: 9
+      DurationSecond: 112300
+    - Level: 10
+      DurationSecond: 393120
+    - Level: 11
+      DurationSecond: 561600
+    - Level: 12
+      DurationSecond: 842400
+    - Level: 13
+      DurationSecond: 842400
+    - Level: 14
+      DurationSecond: 842400
+    - Level: 15
+      DurationSecond: 842400
+  WorldMapArea: WorldMap_SeongsoEnter
+  Icon: /Game/UIIcon/FortressSanctum/Fortress_SanctumIcon02.Fortress_SanctumIcon02
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP100_01.VAE_BG_IP100_01
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP100_02.VAE_BG_IP100_02
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP100_03.VAE_BG_IP100_03
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP100_04.VAE_BG_IP100_04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP100_05.VAE_BG_IP100_05

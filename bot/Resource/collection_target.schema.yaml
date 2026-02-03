@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties: 
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+
+    # 아이템 태그 목록(And 조건)
+    Grade: # 등급
+      type: string
+      ref: grade
+      visible: true
+    Category: # 카테고리
+      type: string
+      ref: item_category
+      visible: true
+    EquipSolidarityBuilding:
+      type: string
+      ref: building
+      visible: true
+    TargetProperty:
+      type: string
+      visible: true
+    EquipItemSet:
+      type: string
+      ref: item_set
+      visible: true

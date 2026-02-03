@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - NameDesc
+    - Comment
+    - CategoryType
+    - TabIcon
+  properties: 
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    NameDesc:
+      type: string
+      ref: description
+    Comment:
+      type: string
+    CategoryType:
+      type: string
+      enum:
+        - All
+        - Equipment
+        - Monster
+        - Event
+        - Favorited
+    TabIcon:
+      type: string
+    GroupIcon: #수집 그룹 이미지
+      type: string
+    BGIcon: #메인 배경 이미지
+      type: string

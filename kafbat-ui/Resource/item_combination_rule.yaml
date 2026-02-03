@@ -1,0 +1,957 @@
+- Id: 161
+  Name: Combination01_Common_List1
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+  To:
+    - TargetProperty: NormalAttackHit
+      Value: 24
+- Id: 953
+  Name: Combination01_Common_List2
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+  To:
+    - TargetProperty: NormalAttackDodge
+      Value: 24
+- Id: 2379
+  Name: Combination01_Common_List3
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+  To:
+    - TargetProperty: Penetration
+      Value: 26
+- Id: 2465
+  Name: Combination01_Common_List4
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+  To:
+    - TargetProperty: PenetrationResistance
+      Value: 32
+- Id: 2408
+  Name: Combination01_Common_List5
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_6
+  To:
+    - TargetProperty: NormalAttackDamage
+      Value: 15
+- Id: 3100
+  Name: Combination01_Common_List6
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_1
+  To:
+    - TargetProperty: NormalAttackArmorClass
+      Value: 15
+- Id: 2501
+  Name: Combination01_Common_List7
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+  To:
+    - TargetProperty: NormalAttackDamageScale
+      Value: 5000
+- Id: 2756
+  Name: Combination01_Common_List8
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+  To:
+    - TargetProperty: NormalAttackDamageReduceScale
+      Value: 5000
+- Id: 1711
+  Name: Combination01_Common_List9
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+  To:
+    - TargetProperty: NormalAttackDamageReductionIgnore
+      Value: 20
+- Id: 396
+  Name: Combination01_Common_List10
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+  To:
+    - TargetProperty: NormalAttackDamageReduction
+      Value: 20
+- Id: 892
+  Name: Combination01_Common_List11
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+  To:
+    - TargetProperty: HealthPotionIncrease
+      Value: 5
+- Id: 2380
+  Name: Combination01_Common_List12
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+  To:
+    - TargetProperty: HealthPotionAmount
+      Value: 50
+- Id: 1709
+  Name: Combination01_Common_List13
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+  To:
+    - TargetProperty: MoveSpeedBonus
+      Value: 18000
+- Id: 1291
+  Name: Combination01_Uncommon_List1
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+  To:
+    - TargetProperty: NormalAttackHit
+      Value: 48
+- Id: 1478
+  Name: Combination01_Uncommon_List2
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+  To:
+    - TargetProperty: NormalAttackDodge
+      Value: 48
+- Id: 3557
+  Name: Combination01_Uncommon_List3
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+  To:
+    - TargetProperty: Penetration
+      Value: 52
+- Id: 1596
+  Name: Combination01_Uncommon_List4
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+  To:
+    - TargetProperty: PenetrationResistance
+      Value: 64
+- Id: 3882
+  Name: Combination01_Uncommon_List5
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+  To:
+    - TargetProperty: NormalAttackDamage
+      Value: 30
+- Id: 339
+  Name: Combination01_Uncommon_List6
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+  To:
+    - TargetProperty: NormalAttackArmorClass
+      Value: 30
+- Id: 1753
+  Name: Combination01_Uncommon_List7
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+  To:
+    - TargetProperty: NormalAttackDamageScale
+      Value: 10000
+- Id: 375
+  Name: Combination01_Uncommon_List8
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+  To:
+    - TargetProperty: NormalAttackDamageReduceScale
+      Value: 10000
+- Id: 2158
+  Name: Combination01_Uncommon_List9
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+  To:
+    - TargetProperty: NormalAttackDamageReductionIgnore
+      Value: 40
+- Id: 844
+  Name: Combination01_Uncommon_List10
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+  To:
+    - TargetProperty: NormalAttackDamageReduction
+      Value: 40
+- Id: 3569
+  Name: Combination01_Uncommon_List11
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+  To:
+    - TargetProperty: HealthPotionIncrease
+      Value: 10
+- Id: 3741
+  Name: Combination01_Uncommon_List12
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_6
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_2
+  To:
+    - TargetProperty: HealthPotionAmount
+      Value: 100
+- Id: 947
+  Name: Combination01_Uncommon_List13
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol1_1
+    - TargetSymbol: Symbol1_2
+    - TargetSymbol: Symbol1_3
+    - TargetSymbol: Symbol1_4
+    - TargetSymbol: Symbol1_5
+    - TargetSymbol: Symbol1_6
+  To:
+    - TargetProperty: MoveSpeedBonus
+      Value: 36000
+- Id: 2552
+  Name: Combination02_Common_List1
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_5
+  To:
+    - TargetProperty: SkillHit
+      Value: 36
+- Id: 5121
+  Name: Combination02_Common_List2
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+  To:
+    - TargetProperty: SkillDodge
+      Value: 36
+- Id: 4600
+  Name: Combination02_Common_List3
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+  To:
+    - TargetProperty: CriticalProbability
+      Value: 40
+- Id: 2544
+  Name: Combination02_Common_List4
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+  To:
+    - TargetProperty: CriticalResistance
+      Value: 80
+- Id: 62
+  Name: Combination02_Common_List5
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+  To:
+    - TargetProperty: SkillAttackDamage
+      Value: 15
+- Id: 421
+  Name: Combination02_Common_List6
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+  To:
+    - TargetProperty: SkillArmorClass
+      Value: 15
+- Id: 1533
+  Name: Combination02_Common_List7
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+  To:
+    - TargetProperty: SkillDamageScale
+      Value: 5000
+- Id: 1485
+  Name: Combination02_Common_List8
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_5
+  To:
+    - TargetProperty: SkillDamageReduceScale
+      Value: 5000
+- Id: 819
+  Name: Combination02_Common_List9
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_6
+  To:
+    - TargetProperty: SkillDamageReductionIgnore
+      Value: 16
+- Id: 926
+  Name: Combination02_Common_List10
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_1
+  To:
+    - TargetProperty: SkillDamageReduction
+      Value: 16
+- Id: 5518
+  Name: Combination02_Common_List11
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_2
+  To:
+    - TargetProperty: MaxHpBase
+      Value: 1000
+- Id: 889
+  Name: Combination02_Common_List12
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_3
+  To:
+    - TargetProperty: MaxMpBase
+      Value: 200
+- Id: 2070
+  Name: Combination02_Common_List13
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_4
+  To:
+    - TargetProperty: CastSpeedBonus
+      Value: 60000
+- Id: 1799
+  Name: Combination02_Uncommon_List1
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+  To:
+    - TargetProperty: SkillHit
+      Value: 72
+- Id: 4588
+  Name: Combination02_Uncommon_List2
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+  To:
+    - TargetProperty: SkillDodge
+      Value: 72
+- Id: 2618
+  Name: Combination02_Uncommon_List3
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+  To:
+    - TargetProperty: CriticalProbability
+      Value: 80
+- Id: 4878
+  Name: Combination02_Uncommon_List4
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+  To:
+    - TargetProperty: CriticalResistance
+      Value: 160
+- Id: 6945
+  Name: Combination02_Uncommon_List5
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+  To:
+    - TargetProperty: SkillAttackDamage
+      Value: 30
+- Id: 4738
+  Name: Combination02_Uncommon_List6
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+  To:
+    - TargetProperty: SkillArmorClass
+      Value: 30
+- Id: 824
+  Name: Combination02_Uncommon_List7
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+  To:
+    - TargetProperty: SkillDamageScale
+      Value: 10000
+- Id: 5971
+  Name: Combination02_Uncommon_List8
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+  To:
+    - TargetProperty: SkillDamageReduceScale
+      Value: 10000
+- Id: 6475
+  Name: Combination02_Uncommon_List9
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+  To:
+    - TargetProperty: SkillDamageReductionIgnore
+      Value: 32
+- Id: 6661
+  Name: Combination02_Uncommon_List10
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+  To:
+    - TargetProperty: SkillDamageReduction
+      Value: 32
+- Id: 6197
+  Name: Combination02_Uncommon_List11
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+  To:
+    - TargetProperty: MaxHpBase
+      Value: 2000
+- Id: 7041
+  Name: Combination02_Uncommon_List12
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_6
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_1
+  To:
+    - TargetProperty: MaxMpBase
+      Value: 400
+- Id: 4293
+  Name: Combination02_Uncommon_List13
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol2_1
+    - TargetSymbol: Symbol2_2
+    - TargetSymbol: Symbol2_3
+    - TargetSymbol: Symbol2_4
+    - TargetSymbol: Symbol2_5
+    - TargetSymbol: Symbol2_6
+  To:
+    - TargetProperty: CastSpeedBonus
+      Value: 120000
+- Id: 2390
+  Name: Combination03_Common_List1
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_5
+  To:
+    - TargetProperty: HitChance
+      Value: 18
+- Id: 1268
+  Name: Combination03_Common_List2
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_2
+  To:
+    - TargetProperty: DodgeChance
+      Value: 24
+- Id: 1604
+  Name: Combination03_Common_List3
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_3
+  To:
+    - TargetProperty: CriticalDamage
+      Value: 20000
+- Id: 5456
+  Name: Combination03_Common_List4
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_4
+  To:
+    - TargetProperty: CriticalDamageReduction
+      Value: 20000
+- Id: 112
+  Name: Combination03_Common_List5
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_5
+  To:
+    - TargetProperty: AddedDamage
+      Value: 30
+- Id: 3765
+  Name: Combination03_Common_List6
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_6
+  To:
+    - TargetProperty: ArmorClass
+      Value: 30
+- Id: 2357
+  Name: Combination03_Common_List7
+  Grade: Uncommon
+  From:
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_1
+  To:
+    - TargetProperty: DamageScale
+      Value: 5000
+- Id: 354
+  Name: Combination03_Common_List8
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_4
+  To:
+    - TargetProperty: DamageReduceScale
+      Value: 5000
+- Id: 2360
+  Name: Combination03_Common_List9
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_5
+  To:
+    - TargetProperty: DamageReductionIgnore
+      Value: 16
+- Id: 4858
+  Name: Combination03_Common_List10
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_6
+  To:
+    - TargetProperty: DamageReduction
+      Value: 16
+- Id: 5643
+  Name: Combination03_Common_List11
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_1
+  To:
+    - TargetProperty: HpRegen
+      Value: 50
+- Id: 351
+  Name: Combination03_Common_List12
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_2
+  To:
+    - TargetProperty: MpRegen
+      Value: 20
+- Id: 5871
+  Name: Combination03_Common_List13
+  Grade: Common
+  From:
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_3
+  To:
+    - TargetProperty: AttackSpeedBonus
+      Value: 30000
+- Id: 6409
+  Name: Combination03_Uncommon_List1
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+  To:
+    - TargetProperty: HitChance
+      Value: 36
+- Id: 747
+  Name: Combination03_Uncommon_List2
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+  To:
+    - TargetProperty: DodgeChance
+      Value: 48
+- Id: 1125
+  Name: Combination03_Uncommon_List3
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+  To:
+    - TargetProperty: CriticalDamage
+      Value: 40000
+- Id: 5976
+  Name: Combination03_Uncommon_List4
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+  To:
+    - TargetProperty: CriticalDamageReduction
+      Value: 40000
+- Id: 4099
+  Name: Combination03_Uncommon_List5
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+  To:
+    - TargetProperty: AddedDamage
+      Value: 60
+- Id: 2084
+  Name: Combination03_Uncommon_List6
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+  To:
+    - TargetProperty: ArmorClass
+      Value: 60
+- Id: 4475
+  Name: Combination03_Uncommon_List7
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_2
+  To:
+    - TargetProperty: DamageScale
+      Value: 10000
+- Id: 6628
+  Name: Combination03_Uncommon_List8
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_3
+  To:
+    - TargetProperty: DamageReduceScale
+      Value: 10000
+- Id: 6719
+  Name: Combination03_Uncommon_List9
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_4
+  To:
+    - TargetProperty: DamageReductionIgnore
+      Value: 32
+- Id: 3911
+  Name: Combination03_Uncommon_List10
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_5
+  To:
+    - TargetProperty: DamageReduction
+      Value: 32
+- Id: 3818
+  Name: Combination03_Uncommon_List11
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_6
+  To:
+    - TargetProperty: HpRegen
+      Value: 100
+- Id: 3123
+  Name: Combination03_Uncommon_List12
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_6
+    - TargetSymbol: Symbol3_1
+  To:
+    - TargetProperty: MpRegen
+      Value: 40
+- Id: 1413
+  Name: Combination03_Uncommon_List13
+  Grade: Rare
+  From:
+    - TargetSymbol: Symbol3_1
+    - TargetSymbol: Symbol3_2
+    - TargetSymbol: Symbol3_3
+    - TargetSymbol: Symbol3_4
+    - TargetSymbol: Symbol3_5
+    - TargetSymbol: Symbol3_6
+  To:
+    - TargetProperty: AttackSpeedBonus
+      Value: 60000

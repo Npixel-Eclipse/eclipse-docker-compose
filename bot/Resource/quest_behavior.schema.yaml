@@ -1,0 +1,295 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    ByClass:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Class:
+            type: string
+            ref: class
+          Behavior:
+            type: string
+            ref: quest_behavior
+    StartCondition:
+      type: string
+      ref: help
+    Behavior:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              # 지정된 Behavior 를 실행합니다.
+              - Behavior
+
+              # Npc 를 중심으로 카메라가 이동
+              # FOV 로 블렌딩
+              - FocusCamera
+
+              - RotateCamera
+              
+              # 카메라를 원래 상태로 돌립니다.
+              - ResetCamera
+
+              # 페이드 인 / 아웃
+              - FadeIn
+              - FadeOut
+
+              # UI 를 포커싱합니다.
+              #
+              # Path {예약어}.변수
+              # {NamePlateUI}         Npc 의 NamePlate
+              # {UIName}              ui.schema.yaml:Name
+              - FocusUI
+              - AttentionUI
+
+              # Path 에 있는 UI 가 열릴때까지 기다립니다.
+              - WaitUIOpen
+
+              # Path 에 있는 UI 가 닫힐때까지 기다립니다.
+              - WaitUIClose
+
+              # 다이얼로그를 출력합니다.
+              - Dialogue
+
+              # 특정 시간동안 대기합니다.
+              - Wait
+
+              # 서버로 이동을 보냅니다.
+              - MoveTo
+
+              # 서버로 스킬 사용을 보냅니다.
+              - CastSkill
+
+              # 이펙트 출력 및 중단
+              - PlayEffect
+              - StopEffect
+
+              # 가이드 페이지를 오픈합니다.
+              - OpenGuide
+
+              # 입력을 막거나 활성화합니다.
+              # 쌍이 잘 맞아야하니 사용에 주의를 부탁드립니다.
+              - EnableInput
+              - DisableInput
+
+              # 모션을 관리합니다.
+              - PlayMotion
+              - StopMotion
+              - JumpMotion
+
+              # 모션을 관리합니다.
+              - ShowNamePlate
+              - HideNamePlate
+
+              # 해당 비헤이비어가 포함된 퀘스트의 자동진행을 요청합니다.
+              - ToggleQuestAutoMode
+
+              # 모든 UI를 숨김 처리합니다. HideAllUI 호출 후, 각 비헤이비어 단계가 끝난다면 ShowAllUI를 호출해야 합니다.
+              - HideAllUI
+              - ShowAllUI
+
+              # 시퀀서 용 레터박스를 출력합니다. (21:9 화면비 고정용)
+              # ShowSequencerLetterbox -> Sequence -> HideSequencerLetterbox 순으로 호출해야 합니다.
+              # UI는 자동으로 숨김 처리 됩니다.
+              - ShowSequencerLetterbox
+              - HideSequencerLetterbox
+
+              # Sequence를 재생합니다.
+              - PlaySequence
+              # Level에 설치된 Sequence를 재생합니다.
+              - PlaySubLevelSequence
+
+              # 월드맵 좌측의 리스트탭을 숨깁니다.
+              - HideWorldMapLeftTab
+
+              # 월드맵 줌인/아웃 기능을 사용합니다.
+              - ZoomInWorldMap
+              - ZoomOutWorldMap
+
+              # 마을, 사냥터 아이콘을 제외한 아이콘을 숨깁니다.
+              - ShowIconOnlyTownAndHuntingZone
+
+              # 월드맵에서 보스 UI를 보여줍니다.
+              - ShowBossUIInWorldMap
+              # 월드맵에서 열려있는 보스 UI를 숨김 처리합니다. 
+              - HideBossUIInWorldMap
+
+              # 월드맵에서 특정 위치로 이동합니다.
+              - WorldMapMove
+
+              # 월드맵에서 Tag "Extra"인 NPC를 보여주기/숨김 처리합니다.
+              - RevealTagNPC
+              - HideTagNPC
+
+              # ScenarioSceneDirector 재생
+              - PlayScenarioSceneDirector
+              - StopScenarioSceneDirector
+
+              # 해당 비헤이비어가 끝나면 자동사냥 요청을 
+              - ToggleAutoCombat
+
+          Name:
+            type: string
+          Npc:
+            type: string
+            ref: npc
+          Skill:
+            type: string
+            ref: skill
+          Behavior:
+            type: string
+            ref: quest_behavior
+          Guide:
+            type: string
+            ref: help
+          Area:
+            type: string
+            ref: worldmap_area
+          TargetLocation:
+            type: object
+            additionalProperties: false
+            properties:
+              X:
+                type: integer
+                default: 0
+              Y:
+                type: integer
+                default: 0
+          LocalSpaceRotation:
+            type: object
+            additionalProperties: false
+            properties:
+              X:
+                type: integer
+                default: 0
+              Y:
+                type: integer
+                default: 0
+          WorldSpaceRotation:
+            type: object
+            additionalProperties: false
+            properties:
+              X:
+                type: integer
+                default: 0
+              Y:
+                type: integer
+                default: 0
+          Distance:
+            type: number
+            default: 0
+          MotionType:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+
+          # FocusUI & UnFocusUI 예약어
+          # {NamePlateUI}
+          # Npc 프로퍼티를 보고 해당 Npc 의 NamePlate 를 가져온다.
+          Path:
+            type: string
+          Dialogue:
+            type: string
+            ref: dialogue
+          Duration:
+            type: integer
+            default: 0
+          FOV:
+            type: integer
+            default: 0
+          Dimmed:
+            type: boolean
+            default: true
+          Tooltip:
+            type: object
+            additionalProperties: false
+            properties:
+              SubDescription:
+                type: string
+                ref: description
+
+          # 체크포인트 골로 기록함.
+          # 이 단계를 지난 후에 재접속을 하면 자동으로 완료처리가 된다.
+          CheckPointGoal:
+            type: boolean
+
+          Sequence:
+            type: string
+
+          ZoomSpeed:
+            type: integer
+            default: 0
+
+          WorldMapMoveSpeed:
+            type: integer
+            default: 0
+          
+          VisibleNpcGroup:
+            type: integer
+            default: 0
+
+          BossInfos:
+            type: object
+            additionalProperties: false
+            properties:
+              Path:
+                type: string
+              LocationName:
+                type: string
+                ref: description
+              BossName:
+                type: string
+                ref: description
+              BossDesc:
+                type: string
+                ref: description
+          
+          CameraBlend:
+            type: object
+            additionalProperties: false
+            properties:
+              BlendFunc:
+                type: string
+                enum:
+                  - Linear
+                  - Cubic
+                  - EaseIn
+                  - EaseOut
+                  - EaseInOut
+              BlendExp:
+                type: number
+              BlendTime:
+                type: number
+
+          RotateCameraParameter:
+            type: object
+            additionalProperties: false
+            properties:
+              OrbitRadius:
+                type: number
+              OrbitSpeed:
+                type: number
+              CameraHeightOffset:
+                type: number
+              OrbitPitchAngle:
+                type: number

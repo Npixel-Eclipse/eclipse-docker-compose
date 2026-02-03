@@ -1,0 +1,66 @@
+- Id: 374000
+  Name: Simulation_Servant_NPC_Ai
+  Comment: Test scenario servant NPC AI - trap-style (실제 덫 AI와 동일한 패턴)
+  Tree:
+    Sequence:
+      - SearchSkill: Simulation_Servant_Target_Search
+      - HasTarget: Main
+      - Skill: Simulation_Servant_Attack
+      - Exit
+- Id: 9398
+  Name: Simulation_Trap_Npc_Ai
+  Comment: Test scenario trap NPC AI - EnemyTarget 사용 (M_Bora 체크, 실제 덫과 동일한 구조)
+  Tree:
+    Sequence:
+      - Select:
+          - Sequence:
+              - SearchSkill: Simulation_Trap_Target_Search
+              - HasTarget: Main
+              - Skill: Simulation_Trap_Damage_EnemyTarget
+              - Skill: RemoveSelf
+          - Sequence:
+              - Skill: Simulation_Trap_TrapBuff_Skill
+      - Exit
+- Id: 374001
+  Name: Simulation_Servant_With_Trigger_Ai
+  Comment: Test scenario servant NPC AI with trigger skill - applies trigger buff on attack
+  Tree:
+    Sequence:
+      - SearchSkill: Simulation_Servant_Target_Search
+      - HasTarget: Main
+      - Skill: Simulation_Servant_Attack_With_Trigger
+      - Exit
+- Id: 374002
+  Name: Simulation_Servant_With_OnHit_Trigger_Ai
+  Comment: Test scenario servant NPC AI with CastOnHit trigger skill
+  Tree:
+    Sequence:
+      - SearchSkill: Simulation_Servant_Target_Search
+      - HasTarget: Main
+      - Skill: Simulation_Servant_Attack_With_OnHit_Trigger
+      - Exit
+- Id: 374003
+  Name: Simulation_Nested_Servant_Level1_Ai
+  Comment: Level1 Servant AI - summons Level2 Servant once
+  Tree:
+    Sequence:
+      - Skill: Simulation_Nested_Servant_Summon_Child_Skill
+      - Exit
+- Id: 374004
+  Name: Simulation_Nested_Servant_Level2_Ai
+  Comment: Level2 Servant AI - attacks using top-level Master's AddedDamage
+  Tree:
+    Sequence:
+      - SearchSkill: Simulation_Nested_Servant_Target_Search
+      - HasTarget: Main
+      - Skill: Simulation_Nested_Servant_Attack
+      - Exit
+- Id: 374005
+  Name: Simulation_Servant_Missing_Property_Ai
+  Comment: Servant AI that uses M_CustomMissingProperty (should be 0)
+  Tree:
+    Sequence:
+      - SearchSkill: Simulation_Servant_Missing_Property_Target_Search
+      - HasTarget: Main
+      - Skill: Simulation_Servant_Attack_With_Missing_Property
+      - Exit

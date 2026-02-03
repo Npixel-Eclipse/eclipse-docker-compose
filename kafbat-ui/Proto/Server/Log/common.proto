@@ -1,0 +1,43 @@
+syntax = "proto3";
+package log;
+import "Common/item_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "CommonLogServiceProto";
+
+message Probability {
+  string rate_id = 1;
+  string rate_version = 2;
+  string rate_dtl_id = 3;
+}
+
+message GameHealthCheck {
+  int64 concurrent_users = 1;
+  int64 offline_mode_users = 2;
+  repeated SpecificConcurrentUsers concurrent_users_by_nation = 3;
+  repeated SpecificConcurrentUsers concurrent_users_by_os = 4;
+
+  message SpecificConcurrentUsers {
+    string value = 1;
+    int64 count = 2;
+  }
+}
+
+message ItemChange { // 재화가 아닌 아이템 수량 변동시에만 적재
+  int64 item_type = 1; // item_category_id
+  int64 item_cd = 2; // item_id
+  int64 amount_before = 3;
+  int64 amount_current = 4;
+  string change_type = 5; // 삭제 및 사용 USE / 생성 및 획득 GET
+  common.Reason change_reason_cd = 6;
+}
+
+message CurrencyChange { // 재화(ItemCategory_Currency의 자식) 수량 변동시에만 적재
+  int64 currency_type = 1; // item_category_id
+  int64 currency_cd = 2; // item_id
+  int64 amount_before = 3;
+  int64 amount_current = 4;
+  string change_type = 5; // 삭제 및 사용 USE / 생성 및 획득 GET
+  common.Reason change_reason_cd = 6;
+}

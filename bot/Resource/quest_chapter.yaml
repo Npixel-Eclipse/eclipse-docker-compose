@@ -1,0 +1,289 @@
+- Id: 768
+  Name: Story_Chapter01
+  Quests:
+    - Name: Tutorial_New_01_01
+    - Name: Tutorial_New_01_02
+    - Name: Tutorial_New_01_03
+    - Name: Story_CH01_06
+    - Name: Story_CH01_07
+    - Name: Story_CH02_01
+    - Name: Story_CH02_02
+    - Name: Story_CH02_03
+    - Name: Story_CH02_04
+    - Name: Story_CH02_05
+    - Name: Story_CH02_06
+    - Name: Story_CH02_07
+    - Name: Story_CH02_08
+    - Name: Story_CH02_09
+    - Name: Story_CH02_10
+    - Name: Story_CH02_11
+    - Name: Story_CH02_12
+    - Name: Story_CH02_13
+    - Name: Story_CH02_14
+    - Name: Story_CH02_15
+    - Name: Story_CH02_16
+    - Name: Story_CH02_17
+    - Name: Story_CH02_18
+    - Name: Story_CH02_19
+    - Name: Story_CH02_20
+    - Name: Story_CH02_21
+    - Name: Story_CH02_22
+    - Name: Story_CH02_23
+    - Name: Story_CH02_24
+    - Name: Story_CH02_25
+    - Name: Story_CH02_26_Dun
+    - Name: Story_CH02_26
+    - Name: Story_CH02_27
+    - Name: Story_CH02_28
+    - Name: Story_CH02_29
+    - Name: Story_CH02_30
+  Category: Main
+  Description: Story_CH01_Title
+  Comment: 튜토리얼
+- Id: 1274
+  Name: Story_Chapter02
+  Quests:
+    - Name: Story_CH03_01
+    - Name: Story_CH03_02
+    - Name: Story_CH03_03
+    - Name: Story_CH03_04
+    - Name: Story_CH03_05
+    - Name: Story_CH03_06
+    - Name: Story_CH03_07
+    - Name: Story_CH03_08
+    - Name: Story_CH03_09
+    - Name: Story_CH03_10
+    - Name: Story_CH03_11
+    - Name: Story_CH03_12
+    - Name: Story_CH03_13
+    - Name: Story_CH03_14
+    - Name: Story_CH03_15
+    - Name: Story_CH03_16
+    - Name: Story_CH03_17
+    - Name: Story_CH03_17_Ex
+    - Name: Story_CH03_18
+    - Name: Story_CH03_19
+    - Name: Story_CH03_20
+    - Name: Story_CH03_21
+    - Name: Story_CH03_22
+    - Name: Story_CH03_23
+    - Name: Story_CH03_24
+    - Name: Story_CH03_25
+    - Name: Story_CH03_25_Ex01
+    - Name: Story_CH03_25_Ex02
+    - Name: Story_CH03_26
+    - Name: Story_CH03_27
+  Category: Main
+  Description: Story_CH03_Title
+  Comment: 메인 퀘스트 3
+- Id: 525
+  Name: Story_Chapter03
+  Quests:
+    - Name: Story_CH04_01
+    - Name: Story_CH04_02
+    - Name: Story_CH04_03
+    - Name: Story_CH04_04
+    - Name: Story_CH04_05
+    - Name: Story_CH04_06
+    - Name: Story_CH04_07
+    - Name: Story_CH04_08
+    - Name: Story_CH04_09
+    - Name: Story_CH04_10
+    - Name: Story_CH04_11
+    - Name: Story_CH04_12
+    - Name: Story_CH04_13
+    - Name: Story_CH04_14
+    - Name: Story_CH04_15
+    - Name: Story_CH04_16
+    - Name: Story_CH04_17
+    - Name: Story_CH04_18
+    - Name: Story_CH04_19
+    - Name: Story_CH04_20
+    - Name: Story_CH04_21
+    - Name: Story_CH04_22
+    - Name: Story_CH04_23
+    - Name: Story_CH04_24
+    - Name: Story_CH04_25
+    - Name: Story_CH04_26
+    - Name: Story_CH04_27
+    - Name: Story_CH04_28
+    - Name: Story_CH04_29
+    - Name: Story_CH04_30
+    - Name: Story_CH04_31
+    - Name: Story_CH04_32
+    - Name: Story_CH04_33
+    - Name: Story_CH04_34
+    - Name: Story_CH04_35
+    - Name: Story_CH04_36
+    - Name: Story_CH04_37
+    - Name: Story_CH04_38
+    - Name: Story_CH04_39
+    - Name: Story_CH04_40
+    - Name: Story_CH04_41
+    - Name: Story_CH04_42
+    - Name: Story_CH04_43
+    - Name: Story_CH04_44
+    - Name: Story_CH04_45
+    - Name: Story_CH04_45_Ex
+  Category: Main
+  Description: Story_CH04_Title
+  Comment: 메인 퀘스트 4
+- Id: 1437
+  Name: Story_Chapter04
+  Quests:
+    - Name: Story_CH05_01
+    - Name: Story_CH05_02
+    - Name: Story_CH05_03
+    - Name: Story_CH05_04
+    - Name: Story_CH05_05
+    - Name: Story_CH05_06
+    - Name: Story_CH05_07
+    - Name: Story_CH05_08
+    - Name: Story_CH05_09
+    - Name: Story_CH05_10
+    - Name: Story_CH05_11
+    - Name: Story_CH05_11_Ex
+    - Name: Story_CH05_12
+    - Name: Story_CH05_13
+  Category: Main
+  Description: Story_CH05_Title
+  Comment: 메인 퀘스트 5
+- Id: 1124
+  Name: Story_Chapter05
+  Quests:
+    - Name: Story_CH06_01
+    - Name: Story_CH06_02
+    - Name: Story_CH06_03
+    - Name: Story_CH06_04
+    - Name: Story_CH06_05
+    - Name: Story_CH06_06
+    - Name: Story_CH06_07
+    - Name: Story_CH06_08
+    - Name: Story_CH06_09
+    - Name: Story_CH06_10
+    - Name: Story_CH06_10_Ex
+    - Name: Story_CH06_11
+    - Name: Story_CH06_12
+  Category: Main
+  Description: Story_CH06_Title
+  Comment: 메인 퀘스트 6
+- Id: 1793
+  Name: Story_Chapter06
+  Quests:
+    - Name: Story_CH07_01
+    - Name: Story_CH07_02
+    - Name: Story_CH07_03
+    - Name: Story_CH07_04
+    - Name: Story_CH07_05
+    - Name: Story_CH07_05_Ex
+    - Name: Story_CH07_06
+    - Name: Story_CH07_06_Ex
+    - Name: Story_CH07_07
+    - Name: Story_CH07_08
+    - Name: Story_CH07_09
+    - Name: Story_CH07_10
+  Category: Main
+  Description: Story_CH07_Title
+  Comment: 메인 퀘스트 7
+- Id: 1164
+  Name: Story_Chapter07
+  Quests:
+    - Name: Story_CH08_01
+    - Name: Story_CH08_02
+    - Name: Story_CH08_03
+    - Name: Story_CH08_04
+    - Name: Story_CH08_05
+    - Name: Story_CH08_05_Ex
+    - Name: Story_CH08_06
+    - Name: Story_CH08_07
+    - Name: Story_CH08_08
+    - Name: Story_CH08_08_Ex
+    - Name: Story_CH08_09
+    - Name: Story_CH08_10
+  Category: Main
+  Description: Story_CH08_Title
+  Comment: 메인 퀘스트 8
+- Id: 806
+  Name: Story_Chapter08
+  Quests:
+    - Name: Story_CH09_01
+    - Name: Story_CH09_02
+    - Name: Story_CH09_03
+    - Name: Story_CH09_04
+    - Name: Story_CH09_05
+    - Name: Story_CH09_06
+    - Name: Story_CH09_07
+    - Name: Story_CH09_07_Ex
+    - Name: Story_CH09_08
+    - Name: Story_CH09_09
+    - Name: Story_CH09_10
+    - Name: Story_CH09_11
+  Category: Main
+  Description: Story_CH09_Title
+  Comment: 메인 퀘스트 9
+- Id: 1906
+  Name: Story_Chapter09
+  Quests:
+    - Name: Story_CH10_01
+    - Name: Story_CH10_02
+    - Name: Story_CH10_03
+    - Name: Story_CH10_04
+    - Name: Story_CH10_05
+    - Name: Story_CH10_06
+    - Name: Story_CH10_06_Ex
+    - Name: Story_CH10_07
+    - Name: Story_CH10_08
+  Category: Main
+  Description: Story_CH10_Title
+  Comment: 메인 퀘스트 10
+- Id: 432
+  Name: Tutorial_01_01
+  Quests:
+    - Name: Tutorial_01_01
+    - Name: Tutorial_01_02
+    - Name: Tutorial_01_03
+    - Name: Tutorial_02_01
+    - Name: Tutorial_02_02
+    - Name: Tutorial_02_03
+    - Name: Tutorial_02_04
+    - Name: Tutorial_02_05
+    - Name: Tutorial_02_06
+    - Name: Tutorial_02_07
+    - Name: Tutorial_02_08
+    - Name: Tutorial_02_09
+    - Name: Tutorial_02_10
+    - Name: Tutorial_02_11
+    - Name: Tutorial_02_12
+    - Name: Tutorial_02_13
+    - Name: Tutorial_02_14
+  Category: Tutorial
+  Description: Tutorial_Title_CH01_01
+  Comment: 튜토리얼_성소
+- Id: 685
+  Name: Tutorial_01_02
+  Quests:
+    - Name: Tutorial_03_02
+  Category: Tutorial
+  Description: Tutorial_Title_CH01_02
+  Comment: 튜토리얼_숙련도
+- Id: 902
+  Name: Tutorial_01_03
+  Quests:
+    - Name: Tutorial_04_02
+  Category: Tutorial
+  Description: Tutorial_Title_CH01_03
+  Comment: 튜토리얼_각성의 불꽃
+- Id: 1503
+  Name: Tutorial_01_08
+  Quests:
+    - Name: Tutorial_09_02
+  Category: Tutorial
+  Description: Tutorial_Title_CH01_08
+  Comment: 튜토리얼_ 수집
+- Id: 1646
+  Name: Tutorial_01_11
+  Quests:
+    - Name: Tutorial_12_02
+  Category: Tutorial
+  Description: Tutorial_Title_CH01_11
+  Comment: 튜토리얼_ 서판 조합

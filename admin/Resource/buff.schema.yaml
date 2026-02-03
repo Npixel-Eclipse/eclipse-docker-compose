@@ -1,0 +1,488 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    #---버프 기본 정보---
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Description:
+      type: string
+      ref: description
+    Summary:
+      type: string
+      ref: description
+    SubSummary:
+      type: string
+      ref: description
+    Comment:
+      type: string
+    Group:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    DisplayGroup: #서로 다른 그룹의 버프를 하나의 버프로 통합하여 출력하는 기능
+      type: string
+      ref: buff_display_group
+    TextDisplayType: #데미지 폰트
+      type: string
+      enum:
+        - None
+        - Buff
+        - SpecialBuff
+        - Debuff
+        - SpecialDebuff
+    TextDisplayDescription: #데미지 폰트
+      type: string
+      ref: description
+    #높은 숫자가 우선순위 높음
+    GroupPriority: #높은 값일수록 우선 적용되며, 낮은 버프를 덮는 형태
+      type: integer
+      maximum: 20
+    PartyBroadcast: #파티창에 버프 아이콘을 출력하는 기능
+      type: boolean
+    # 이 옵션이 true인 버프는, 주변 대상에게 해당 버프의 정보를 알려줌
+    Broadcast:
+      type: boolean
+    # 이 옵션을 가진 버프가 생길 경우, 이 옵션에 명시된 프로퍼티를 주변 대상에게 알려줌
+    # NPC 타겟하지 않아도 해당 NPC의 정보를 보여줄 때 사용할 수 있음.
+    # 주로 Hp, MaxHp 입력
+    BroadcastProperties:
+      type: array
+      items:
+        type: string
+    StackBuff: #스택형 버프 (중첩 스킬)
+      type: array
+      items: #스택 a~b 인 경우에 따라 버프를 대체하여 적용
+        type: object
+        additionalProperties: false
+        properties:
+          Start: #스택 a 입력
+            type: integer
+          End: #스택 b 입력
+            type: integer
+          Buff: #스택값에 맞는 버프 입력
+            type: string
+            ref: buff
+    MaxStack: #stackBuff 최대 중첩
+      type: integer
+    MaxStackable: # 버프 인스턴스 자체가 스택  - 소환수에 사용 시 입력된 값만큼만 소환을 유지( 초과하는 경우 가장 이전에 설치한 소환수를 제거)
+      type: integer
+    #Formula 프로퍼티에 StackCount값으로 중첩을 변수로 사용할 수 있음
+    FormulaStackBuff:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - TargetProperty
+          - Formula
+        properties:
+          TargetProperty: # 증가시킬 property 값을 입력
+            type: string
+          Formula: # `StackCount`를 변수값으로 사용할 수 있음
+            type: string
+            formula: true
+    DisplayType: #버프 아이콘 Hud 표시 설정 
+      type: string
+      enum:
+        - Hide #HUD, List에 보이지 않음  List: 버프 상세보기
+        - Show #모든 곳에서 보입니다.
+        - ShowOnlyList #버프 List에서만 보입니다.
+    DisplayOrder:
+      type: integer
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Skill/파일명.파일명
+      type: string
+    LoopingEffect: # 버프 지속시간 동안 출력되는 이펙트
+      type: string
+      ref: effect
+    StartEffect: # 버프를 얻는 시점에 출력되는 이펙트
+      type: string
+      ref: effect
+    #---버프 기능---
+    ChangeModel: # 초월체 적용
+      type: string
+      ref: character_model
+    ChangeModelPriority:
+      type: string
+      enum:
+        - Polymorph
+        - Skin
+      default: Polymorph
+    ChangeWeaponAsset: # 리소스 경로 가이드: /Game/Weapons/파일명.파일명
+      type: string
+    IgnoreChangeWeapon: # 해당 프로퍼티가 true 인 버프가 하나라도 있으면, item_category 의 WeaponAsset, buff 의 ChangeWeaponAsset 등으로 설정한 WeaponAsset 이 노출되지 않는다.
+      type: boolean
+    WeaponPriority: # ChangeWeaponAsset 우선순위. 높을 수록 우선순위 높음.
+      type: integer
+    AlwaysEffectActionSize: # 초월의 상시 이펙트 사이즈 (아이템 등급, 강화 레벨 + 사이즈로 디폴트 이펙트 설정), (무기 외형은 사이즈 X)
+      type: string
+      default: None
+      enum: # client_polymorph_feature.schema.yaml의 Size와 동일
+        - None
+        - Woman # 기본 인간형(여성)   / (희귀/영웅/전설)
+        - Man # 기본 인간형(남성)   / (희귀/영웅/전설)
+        - Medium # 중형 고유 초월체    / (희귀/영웅)
+        - Large # 대형 고유 초월체    / (희귀/영웅/전설)
+        - XLarge # 초대형 고유 초월체  / (영웅)
+    CustomAlwaysEffectActions: # 초월/무기 외형 커스텀 상시 이펙트 (강화 레벨 구간 별 이펙트 설정)
+      type: object
+      additionalProperties: false
+      properties:
+        DefaultEffectAction:
+          type: string
+          ref: effect
+        UpgradeEffectAction:
+          type: string
+          ref: effect
+    UnaffectedSkillCategory: #이 스킬 카테고리만 받을 수 있음
+      type: array
+      items:
+        type: string
+    BlockSkillCategory: #이 스킬 카테고리 못씀
+      type: array
+      items:
+        type: string
+    AllowSkillCategory: #이 스킬 카테고리만 사용 가능
+      type: array
+      items:
+        type: string
+    # --- 트리거 버프들 --- #
+    # 동작(현재형 동사) - 전치사 - 조건(과거분사) 구조 네이밍
+    # ~On~ : 자신이 조건의 주체일 경우
+    # ~When~ : 자신이 조건의 대상일 경우
+    # Cast~ : 조건 만족시 스킬 시전, 스킬 타겟 공식은 상대 - 나 순서로 평가함
+    # 발동 스킬의 카테고리를 발동 카테고리와 다르게 설정해야 무한 루프에 빠질 위험을 차단 가능!
+    EraseOnCast: # 해당 카테고리 스킬 사용 시 버프 삭제
+      type: array
+      items:
+        type: string
+        ref: skill_category
+    EraseWhenHit: # 해당 카테고리 스킬에 적중당할 경우 버프 삭제
+      type: array
+      items:
+        type: string
+        ref: skill_category
+    EraseWhenAddressPropertyDeleted: # 현재 addressId와 매칭되는 프로퍼티가 삭제될 경우 버프 삭제
+      type: array
+      items:
+        type: string
+        ref: property
+    CastOnDeleted: # 버프가 삭제될때 발동되는 스킬, 생성 된 스킬은 다음 틱에 처리
+      type: string
+      ref: skill
+    CastOnHit: # 해당 카테고리 스킬 적중 시 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+            visible: true
+          SkillCategory:
+            type: string
+            ref: skill_category
+            visible: true
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+    CastOnCast: # 해당 카테고리 스킬 시전 시 타겟(혹은 본인)에게 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+            visible: true
+          SkillCategory:
+            type: string
+            ref: skill_category
+            visible: true
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+    CastWhenHit: # 해당 카테고리 스킬 피격 시 타겟(혹은 본인)에게 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+            visible: true
+          SkillCategory:
+            type: string
+            ref: skill_category
+            visible: true
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+    CastWhenDodge: # 특정 카테고리 스킬 회피 시 타겟(혹은 본인)에게 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+            visible: true
+          SkillCategory:
+            type: string
+            ref: skill_category
+            visible: true
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+    CastWhenCast: # 특정 카테고리 스킬을 나에게 사용했을 시(즉 피격인데 명중 여부 상관 없음) 타겟(혹은 본인)에게 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+            visible: true
+          SkillCategory:
+            type: string
+            ref: skill_category
+            visible: true
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+    AllowedWeaponCategory: #초월에서 허용되는 무기 카테고리 목록을 세팅
+      type: array
+      items:
+        type: string
+        ref: item_category
+    BlockBuffs: #차단할 버프 설정
+      type: object
+      additionalProperties: false
+      required:
+        - UnitType
+        - Units
+      properties:
+        UnitType:
+          type: string
+          enum:
+            - Group   # buff의 'Group' 프로퍼티 기준
+            - Tag     # 'buff_tag.yaml' 기준
+        Units:
+          type: array
+          items:
+            type: string
+    # 버프가 존재하는 동안 주기적으로 발동되는 스킬
+    # 케스터와 타겟이 다른 경우  스킬의 타겟을 케스터 입장에서 설정하여야 함.
+    PeriodicSkill:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Skill
+          - Interval
+        properties:
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+          Interval:
+            type: integer # 단위 : ms
+            minimum: 1
+            visible: true
+    ChangeSkill: #스킬의 프로퍼티 값을 변경하는 기능
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - BaseSkill
+          - TargetProperty
+          - Value
+        properties:
+          BaseSkill:
+            type: string
+            ref: skill
+          TargetProperty:
+            type: string
+            ref: property
+          Value:
+            type: integer
+    AwayFromKeyboard: # 퀵슬롯 자동사용을 막기 위한 잠수 체크 정보
+      type: integer
+    AttackedPenalty: #피격모션 출력
+      type: boolean
+    ImmediateAttackedPenalty: # 즉시 피격패널티를 적용
+      type: boolean
+    Base:
+      type: string
+      ref: buff
+    StackablePerCaster: # true : 같은 버프여도 캐스터 별로 따로 적용
+      type: boolean
+      default: false
+    SightSharing: # 시야 공유 옵션, 캐스터와 타겟이 하나의 버프를 공유함
+      type: string
+      enum:
+        - CasterSight # 캐스터가 타겟에게 자신의 시야를 공유
+        - CasterVision # 캐스터가 타겟에게 자신과 자신이 공유받고 있는 시야를 공유
+        - PartyVision # 타겟에게 파티원들의 시야를 공유
+        - TeamVision # 타겟에게 팀원들의 시야를 공유
+    SharingSightRange: # 시야 공유 범위, 단위 : 셀, 원형 기반 체크
+      type: integer
+    FGTInvisibility: # 이창희 투명화 - FGT 종료 후 제거 예정 - 클라에서만 임시 사용.
+      type: boolean
+      default: false
+    Deletable: # 영구 버프를 지우기 위한 프로퍼티
+      type: boolean
+    IsDebuff:
+      type: boolean
+    SaveDb:
+      type: boolean
+    GroupDuplicatedPolicy:
+      type: string
+      enum:
+        - DeleteOnNew
+        - DisabledOnNew
+    LogoutPolicy:
+      type: string
+      default: Pause
+      enum:
+        - Delete # 접속 종료 시 버프 삭제
+        - Consume # 접속 종료 중 버프 시간 소모, 24.04.01 미구현
+        - Pause # 접속 종료 중 버프 시간 소모 안함
+    OccupationGroup: # 특정 그룹끼리만 충돌 및 점유 체크 (EX: 장판형 Npc)
+      type: string # 그룹 이름
+    # --- 사냥터 소유 관련 아이템에서 사용해서 battle 통해 포워딩 되는 프로퍼티 ---
+    # item 서버 개선되어야 삭제 가능
+    HuntingZoneLord:
+      type: integer
+    HuntingZoneOwner:
+      type: integer
+    HuntingZoneOwnerGuildMaster:
+      type: integer
+    # --- ---
+    Spawn: # 클라에서 몬스터 스폰 연출에 사용
+      type: boolean
+    IsTitle: # 클라 표현에 사용, 타이틀 버프 여부
+      type: boolean
+      default: false
+    LoopingHUDEffect: #상태이상에 걸렸을 때 클라 HUD 표현에 사용
+      type: string
+      enum:
+        - Stun #기절 효과
+        - Freeze #빙결 효과
+        - Cocoon #고치 효과
+    # 실제 플레이어에게 적용되고 계산 될 프로퍼티들
+    BuffProperties:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - PropertyName
+          - PropertyValue
+        columnize:
+          column: PropertyName
+          value: PropertyValue
+        properties:
+          PropertyName:
+            type: string
+            ref: property
+          PropertyValue:
+            type:
+              - integer
+              - boolean
+              - string
+    CastOnCoordinateEnter: # 버프를 받은 자리에 들어오면 발동되는 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Skill
+          - EraseBuffOnCast
+        properties:
+          Skill:
+            type: string
+            ref: skill
+            visible: true
+          EraseBuffOnCast:
+            type: boolean
+            visible: true
+    OnlyLookAtMe: # 버프를 받으면 타깃 공식에서 G_OnlyYou_T_EntityId를 사용 할 수 있음,OnlyYou 안에는 Caster의 EntityId가 들어가 있음, 반환 값은 해당 버프를 건 순서대로 운선 순위 값이 출력, 1위: 1, 2위: 2 ...
+      type: boolean
+    LimitedTerritories: # 버프를 받으면 해당 지역으로는 이동할 수 없음
+      type: array
+      items:
+        type: string
+        ref: territory
+    KeepDuration: # 버프 받을 때 이미 같은 버프가 있을 경우 스택 같은 것은 증가하지만 지속시간은 갱신하지 않음
+      type: boolean
+    HealOnApply: # 버프 최초 적용 시 MaxHpBuff/MaxMpBuff 값만큼 Hp/Mp를 증가시킴 (갱신/스택 증가 시에는 적용 안 함)
+      type: boolean
+    SkillZone: # 스킬 영역 존 설정 - 진입 시 EnterSkill, 이탈 시 ExitSkill 실행
+      type: object
+      additionalProperties: false
+      required:
+        - Shape
+      properties:
+        Shape:
+          type: string
+          enum:
+            - Circle
+            - Rectangle
+        Radius: # Circle용 반지름 (cm 단위, 100cm = 1cell)
+          type: integer
+          minimum: 1
+        InnerRadius: # Circle용 내부 반지름 (cm 단위). 지정 시 도넛형
+          type: integer
+          minimum: 0
+        Width: # Rectangle용 가로 길이 (cm 단위)
+          type: integer
+          minimum: 1
+        Height: # Rectangle용 세로 길이 (cm 단위)
+          type: integer
+          minimum: 1
+        EnterSkill:
+          type: string
+          ref: skill
+        ExitSkill:
+          type: string
+          ref: skill
+        TargetFilter:
+          type: string
+          enum:
+            - All
+            - PcOnly
+            - NpcOnly
+    WalkOppositeFromCaster:
+      type: boolean
+    ProcessService:
+      type: string
+      enum:
+        - battle
+        - fortress
+      default: battle
+    IsAccountBuff:
+      type: boolean
+      default: false

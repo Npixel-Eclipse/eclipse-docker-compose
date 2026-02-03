@@ -1,0 +1,27 @@
+version: "3.1"
+
+services:
+  frontend:
+    image: 530627797191.dkr.ecr.ap-northeast-2.amazonaws.com/build_main/bot-frontend:0.1.404.1
+    container_name: bot-frontend
+    environment:
+      COMPUTERNAME: N3-L1
+      REDIS_CLUSTER_NODES: 192.168.121.91:6380,192.168.121.91:6381,192.168.121.91:6382
+    ports:
+      - 8101:3000
+    restart: always
+
+  backend:
+    image: 530627797191.dkr.ecr.ap-northeast-2.amazonaws.com/build_main/bot:0.1.404.1
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 5
+    environment:
+      COMPUTERNAME: N3-L1
+      SPRING_PROFILES_ACTIVE: default,redis-cluster
+      REDIS_CLUSTER_NODES: 192.168.121.91:6380,192.168.121.91:6381,192.168.121.91:6382
+    volumes:
+      - ./Resource:/Resource
+      - ./Nav:/ProjectX/Content/NavData
+

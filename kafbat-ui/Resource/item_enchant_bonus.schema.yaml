@@ -1,0 +1,42 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Bonus
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Bonus:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - SourceProperty
+          - SourcePropertyValue
+          - TargetProperty
+          - TargetPropertyValue
+        columnize:
+          column: TargetProperty
+          value: TargetPropertyValue
+        properties:
+          SourceProperty:
+            type: string
+            ref: property
+          SourcePropertyValue:
+            type: integer
+          TargetProperty:
+            type: string
+            ref: property
+          TargetPropertyValue:
+            type: 
+              - integer
+              - string

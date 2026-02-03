@@ -1,0 +1,111 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    
+    TutorialType:
+      type: string
+      enum:
+        - Mastery_Tutorial                                 # 숙련도
+        - FlameAwakening_Tutorial                          # 각성의 불꽃
+        - RuneCombine_Tutorial                             # 서판 조합
+        - PolymorphSkinMerge_Tutorial                      # 초월/무기외형 합성
+        - PolymorphSkinEnchant_Tutorial                    # 초월/무기외형 성장
+        - FirstEnterAfterGuildJoin_Tutorial                # 길드 가입 후 최초로 길드 화면에 입장
+        - FirstEnterGuildResearchTabAfterUnlock_Tutorial   # 길드 연구 탭의 잠금이 풀리고 최초로 탭에 진입 했을 때
+        - FirstClickFlameAbsorptionFirst_Tutorial          # 자각의 불꽃 ‘흡수’ 버튼 최초 클릭
+        - FirstClickInventorySortFirst_Tutorial            # 인벤토리의 정렬 드랍다운 버튼 해금 시 최초 클릭 
+        - ItemRandomOption_Tutorial                        # 아이템 랜덤 옵션
+        - RequestRefresh_Tutorial                          # 의뢰 새로고침
+        - Achievement_Tutorial                             # 업적
+        - FusionSkill_Tutorial                             # 스킬 융합
+        - EclipseTime_Tutorial                             # 이클립스 타임
+        - Trade_Tutorial                                   # 거래소
+        - EngraveGuide_Tutorial                            # 세공
+        - Craft_Tutorial                                   # 제작
+        - BMShop_Tutorial                                  # 상점
+        - Collection_Tutorial                              # 수집
+        - Fortress_Tutorial                                # 성소
+
+    ContentType:
+      type: string
+      enum:
+        - Probability_Begin # 확률
+        - EnchantSkill      # 스킬 강화
+        - EnchantItem       # 아이템 강화
+        - PolymorphWeapon   # 무기 외형
+        - PolymorphSkin     # 초월
+        - EngraveItem       # 세공
+        - CraftItem         # 제작
+        - BMShop            # BM 상점
+        - Merge             # 합성
+        - ItemRandomOption  # 랜덤 옵션
+        - RequestRefresh    # 의뢰
+        - Probability_End
+
+        - Guide_Begin             # 가이드
+        - CollectionGuide         # 수집
+        - MergeGuide              # 합성
+        - MasteryGuide            # 숙련도
+        - HuntingZoneGuide        # 영토 소유
+        - TradeGuide              # 거래소
+        - BMShopGuide             # BM 상점
+        - KeyboardGuide           # 조작키
+        - EngraveGuide            # 세공
+        - BattleGroundGuide       # 전장
+        - AwakeningGuide          # 각성
+        - CombinationGuide        # 조합식
+        - FortressGuide           # 성소
+        - GuildGuide              # 길드
+        - FortressSolidarityGuide # 성소 결속
+        - PolymorphGuide          # 초월 / 외형
+        - SkillPriorityGuide      # 스킬 자동 사용 우선 순위
+        - Guide_End
+
+    GuideFirstSetting: #UI 가 최초 열렸을 때, Guide 보여줄 여부 ( url 에 대해서는 동작 하지 않음 )
+      type: string
+      ref: setting
+
+    Guide:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Name:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+          Comment:
+            type: string
+          LocalizedAsset:
+            type: string
+            ref: localized_asset
+          Description:
+            type: string
+            ref: description
+        required:
+          - Id
+          - Name
+          - LocalizedAsset
+          - Description
+
+    Url:
+      type: string
+      pattern: https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&//=]*)$
+
+  required:
+    - Id
+    - Name

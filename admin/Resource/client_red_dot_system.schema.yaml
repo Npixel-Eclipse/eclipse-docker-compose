@@ -1,0 +1,31 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Path:
+      type: object
+      additionalProperties: false
+      properties:
+        PathName:
+          type: string
+        Children: 
+          type: array
+          items:
+            type: string
+      required:
+        - PathName
+    Rule:
+      type: string
+    ContentLimitName:
+      type: string
+      ref: content_limit
+  required:
+    - Id
+    - Name

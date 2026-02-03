@@ -1,0 +1,249 @@
+- Id: 10000000000
+  Name: Simulation_Ghost
+  Comment: 고스트 테스트
+  BuffProperties:
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 10000000001
+  Name: Simulation_Tax_Buff_10
+  Comment: 스킬로 임의의 버프 값 설정 테스트하기 위한 용도
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 10
+- Id: 10000000002
+  Name: Simulation_Tax_Buff_20
+  Comment: 스킬로 임의의 버프 값 설정 테스트하기 위한 용도
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 20
+- Id: 10000000003
+  Name: Simulation_Tax_Buff_10_Priority_1
+  Comment: 스킬로 임의의 버프 값 설정 테스트하기 위한 용도
+  Group: Tax
+  GroupPriority: 1
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 10
+- Id: 10000000004
+  Name: Simulation_Tax_Buff_20_Priority_2
+  Comment: 스킬로 임의의 버프 값 설정 테스트하기 위한 용도
+  Group: Tax
+  GroupPriority: 2
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 20
+- Id: 10000000005
+  Name: Simulation_Tax_Immune_Buff
+  Comment: Group이 Tax인 버프들 막음
+  BlockBuffGroup:
+    - Tax
+- Id: 10000000006
+  Name: Simulation_Immune_AttackSkill_Buff
+  Comment: AttackSkill 카테고리 스킬 막음
+  UnaffectedSkillCategory:
+    - AttackSkill
+- Id: 10000000007
+  Name: Simulation_HuntingZone_InvokeSkill_Tax_10_Buff
+  Comment: HuntingZone_Ticket 카테고리 스킬 사용하면 InvokeSkill로 인해 TaxExperience 10 버프를 적용함
+  InvokeSkill:
+    - Id: 1
+      SkillCategory: HuntingZone_Ticket
+      Skill: Simulation_Target_Tax_Buff_10_Skill
+- Id: 10000000008
+  Name: Simulation_Immune_Targeted_Buff
+  BuffProperties:
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+- Id: 10000000009
+  Name: Simulation_Immune_Main_Targeted_Buff
+  BuffProperties:
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 10000000010
+  Name: Simulation_Stack_Buff
+  MaxStack: 4
+  StackBuff:
+    - Start: 1
+      End: 2
+      Buff: Simulation_Tax_Buff_10
+    - Start: 3
+      End: 4
+      Buff: Simulation_Tax_Buff_20
+- Id: 10000000011
+  Name: Simulation_Bora_Buff
+  Comment: 보라 버프 적용
+  Broadcast: true
+  BuffProperties:
+    - PropertyName: Bora
+      PropertyValue: true
+- Id: 10000000012
+  Name: Simulation_Noclip
+  Comment: Noclip 테스트
+  Noclip: true
+- Id: 10000000013
+  Name: Simulation_Erase_On_HuntingZone_Ticket_Buff
+  Comment: SkillCategory가 HuntingZone_Ticket인 스킬 맞으면 해당 버프 사라짐
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 10
+  EraseWhenHit:
+    - HuntingZone_Ticket
+- Id: 10000000014
+  Name: Simulation_Cast_On_Cast_Buff
+  Comment: SkillCategory가 HuntingZone_Ticket인 스킬 쓰면 지정된 스킬을 더 씀
+  CastOnCast:
+    - Id: 1
+      SkillCategory: HuntingZone_Ticket
+      Skill: Simulation_Self_Tax_Buff_10_Skill
+- Id: 10000000017
+  Name: Simulation_Stackable_Buff
+  Comment: MaxStackable만큼 효과가 중첩되는 버프
+  MaxStackable: 3
+  BuffProperties:
+    - PropertyName: TaxExperience
+      PropertyValue: 10
+- Id: 10000000018
+  Name: Simulation_Formula_Buff
+  Comment: Formula를 이용한 버프
+  FormulaStackBuff:
+    - TargetProperty: FormulaBuffResultProperty
+      Formula: "if(StackCount < 2, StackCount + 1, StackCount * 6 - 1)"
+  MaxStack: 10
+  BuffProperties:
+    - PropertyName: FormulaBuffResultProperty
+      PropertyValue: 3
+- Id: 10000000019
+  Name: Simulation_Stack_Buff_2
+  MaxStack: 7
+  StackBuff:
+    - Start: 1
+      End: 2
+      Buff: Simulation_Tax_Buff_10
+    - Start: 3
+      End: 3
+      Buff: Simulation_Tax_Buff_20
+    - Start: 4
+      End: 7
+      Buff: Simulation_Tax_Buff_10
+- Id: 10000000020
+  Name: Simulation_Hp_Buff_10
+  Comment: 스킬로 임의의 버프 값 설정 테스트하기 위한 용도
+  BuffProperties:
+    - PropertyName: TestHp
+      PropertyValue: 10
+- Id: 10000000021
+  Name: Simulation_Trap_TrapBuff
+  Comment: "[테스트] 덫 공격 트리거 - CastOnCoordinateEnter 사용 (실제 덫과 유사)"
+  CastOnDeleted: RemoveSelf_3s
+  CastOnCoordinateEnter:
+    - Skill: Simulation_Trap_Damage_EnemyTarget
+      EraseBuffOnCast: true
+- Id: 10000000022
+  Name: Simulation_Servant_Trigger_Buff
+  Comment: Servant trigger buff - triggers damage on coordinate change (uses Master's AddedDamage)
+  CastOnCoordinateEnter:
+    - Skill: Simulation_Servant_Trigger_Damage
+      EraseBuffOnCast: true
+- Id: 10000000023
+  Name: Simulation_Servant_Trigger_OnHit_Buff
+  Comment: Servant trigger buff - triggers damage on hit (uses Master's AddedDamage)
+  CastOnHit:
+    - Id: 1
+      SkillCategory: AttackSkill
+      Skill: Simulation_Servant_Trigger_Damage
+- Id: 10000000024
+  Name: Simulation_Servant_Trigger_CastWhenHit_Buff
+  Comment: Servant counter-attack buff - triggers damage when hit (uses Master's AddedDamage)
+  CastWhenHit:
+    - Id: 1
+      SkillCategory: AttackSkill
+      Skill: Simulation_Servant_Trigger_CastWhenHit_Damage
+- Id: 10000000025
+  Name: Simulation_Disposition_Neutral
+  Comment: Neutral disposition buff for testing
+  BuffProperties:
+    - PropertyName: DispositionLevel
+      PropertyValue: 0
+- Id: 10000000026
+  Name: Simulation_Disposition_Justice1
+  Comment: Justice Step 1 disposition buff for testing
+  BuffProperties:
+    - PropertyName: DispositionLevel
+      PropertyValue: 1
+- Id: 10000000027
+  Name: Simulation_Disposition_Outlaw1
+  Comment: Outlaw Step 1 disposition buff for testing
+  BuffProperties:
+    - PropertyName: DispositionLevel
+      PropertyValue: -1
+################################################################################
+# Toggle Skill Test Buffs - HolyMoly property 설정용
+# 같은 Toggle 그룹 내 버프는 동일한 Group을 가져서 RemoveBuffGroup으로 제거 가능
+################################################################################
+- Id: 10000000030
+  Name: Test_Toggle_HolyMoly_10
+  Comment: Toggle 스킬 테스트용 - HolyMoly를 10으로 설정 (Stance 그룹)
+  Group: ToggleStance
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 10
+- Id: 10000000031
+  Name: Test_Toggle_HolyMoly_20
+  Comment: Toggle 스킬 테스트용 - HolyMoly를 20으로 설정 (Stance 그룹)
+  Group: ToggleStance
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 20
+- Id: 10000000032
+  Name: Test_Toggle_HolyMoly_30
+  Comment: Toggle 스킬 테스트용 - HolyMoly를 30으로 설정 (Stance 그룹)
+  Group: ToggleStance
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 30
+- Id: 10000000033
+  Name: Test_Toggle_HolyMoly_100
+  Comment: Toggle 스킬 테스트용 - HolyMoly를 100으로 설정 (Defense 그룹)
+  Group: ToggleDefense
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 100
+- Id: 10000000034
+  Name: Test_Toggle_HolyMoly_0
+  Comment: Toggle 스킬 테스트용 - HolyMoly를 0으로 설정 (Defense 그룹)
+  Group: ToggleDefense
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 0
+################################################################################
+# MaintainConditions Test Buffs - Toggle 유지 조건 테스트용
+################################################################################
+- Id: 10000000035
+  Name: Test_MaintainCondition_DefenseMode_Buff
+  Comment: MaintainCondition 테스트용 - DefenseMode (MP > 20% 유지)
+  Group: TestMaintainDefense
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 100
+- Id: 10000000036
+  Name: Test_MaintainCondition_BerserkMode_Buff
+  Comment: MaintainCondition 테스트용 - BerserkMode (30% <= HP <= 70% 유지)
+  Group: TestMaintainBerserk
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 50
+- Id: 10000000037
+  Name: Test_MaintainCondition_AbsoluteValue_Buff
+  Comment: MaintainCondition 테스트용 - AbsoluteValue (HP > 1000 유지)
+  Group: TestMaintainAbsolute
+  Deletable: true
+  BuffProperties:
+    - PropertyName: HolyMoly
+      PropertyValue: 200

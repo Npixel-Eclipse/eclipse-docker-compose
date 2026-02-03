@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mysql:
+    #    platform: linux/x86_64
+    image: mysql:8.0
+    container_name: mysql8_test
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: dlzmfflqtm
+        #      TZ: Asia/Seoul
+    volumes:
+      - ./mysql/db:/var/lib/mysql
+      - ./mysql/config:/etc/mysql
+      - ./mysql/mysql-files:/var/lib/mysql-files
+        #      - ./mysql/etc:/etc/
+      - /etc/localtime:/etc/localtime
+        #    user: "${USER_ID}:${GROUP_ID}"    

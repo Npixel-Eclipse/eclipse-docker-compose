@@ -1,0 +1,149 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Target
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+  # Reson 목록, 시스템 메세지 공통 팝업일 때 _ 뒤를 Name으로 사용하여야 한다.
+  #RECIPE_LUCKY_BAG = 4;
+  #RECIPE_CRAFT = 5;
+  #RECIPE_POLYMORPH_MERGE = 6;
+  #RECIPE_DISASSEMBLE = 7;
+  #MERCHANT_BUY = 8;
+    Target:
+      type: string
+      default: Self
+      enum:
+        - Self
+        - Party
+        - Guild
+        - All
+    DisplayPosition:
+      type: string
+      default: Pushup
+      enum:
+        - Pushup
+        - Notice
+        - CenterNotice
+        - Chat
+        - ErrorPopup
+        - Always
+        - Alert
+        - ChatAndPushup
+    ModalPopup: # ErrorPopup 일 때, X 버튼 없는 팝업을 만들고 싶으면 true 로 설정.
+      type: boolean
+      default: false
+    ShowPushupMsgOnPowerSavingMode: # Pushup 메세지에 대해 절전모드 중에 보여줄지 여부
+      type: boolean
+      default: false
+    ShowPushupMsgOnModalLayer: # Pushup 메세지에 대해 ModalLayer 위에 보여줄지 여부
+      type: boolean
+      default: false
+    AlwaysPriority: # DisplayPosition 이 Always 인 메세지의 출력 우선순위. 높을 수록 우선순위 높음. 같으면 데이터상 앞에 있을수록 우선순위 높음.
+      type: integer
+    DisplayChat: # 채팅창에 시스템 메세지 내용 출력 여부
+      type: boolean
+      default: false
+    DisplayTextStyle: #텍스트의 색상을 설정 가능
+      type: string
+      ref: richtext_display
+    #SystemMsgDefault = 회색, SystemMsgAnnounceComplete = 노란색, SystemMsgAnnounce2 = 주황색
+    RewardPopupType: # 공용팝업(CommonReward)을 띄울지 말지 (시스템 채팅만 뜨는 경우를 위함)
+      type: string
+      enum:
+        - None
+        - Popup # 요청 시 즉시 출력, 다른 팝업과 겹칠 수 없음
+        - Alert # 요청 시 다른 알럿이 출력 중일 경우 대기 후 출력
+      default: None
+    Icon: #C 리소스 경로 가이드: /Game/UI/CommonReward_SP/파일명.파일명
+      type: string
+    ShowItemPanel: # 공용팝업(CommonReward)의 아이템 패널이 보일지 여부
+      type: boolean
+      default: true
+    ShowEXPPanel: # 공용팝업(CommonReward)의 경험치 패널이 보일지 여부
+      type: boolean
+      default: false
+    Title: # 공용팝업(CommonReward)의 상단 타이틀
+      type: string
+      ref: description
+      default: RecipeCategory_SpecialChest
+    CloseText: # 공용팝업(CommonReward)의 하단 닫을때의 
+      type: string
+      ref: description
+      defulat: UIWord_Quest_HUD_RewardRecieve
+    Description: # 공용팝업(CommonReward)의 상단 아이콘을 정하는 부분
+      type: string
+      ref: description
+    Comment:
+      type: string
+    Condition:
+      type: array
+      items:
+        type: object
+        dynamicProperties: true
+        additionalProperties: false
+        properties: 
+          EventType:
+            type: string
+            enum:
+              - None
+              - Trade
+              - BattlePartyByShareType
+              - Quest
+              - Favorite
+              - Lobby
+              - Item
+              - Party
+              - GuildByResultCode
+              - GuildByShareType
+              - ShowWindowEvent
+              - BattleGround_Match
+              - BattleGround_MatchCancel
+              - BattleGround_BossSpawn
+              - Boss
+              - Chat
+              - ClientResult
+              - OfflineMode
+              - RelationResultCode
+            default: None 
+          ProtoResultCode:
+            type: integer
+            proto_enum: true
+            ref_column: ProtoFile
+          ShareType:
+            type: integer
+          OptionParamType:
+            type: string
+            enum: 
+              - none
+              - skill
+              - item
+              - quest
+              - npc_spawn
+              - client_condition_value # yaml이 아니라 하나의 이벤트에서 변수로 제어 하고 싶을 때 사용. 
+          OptionParamValue:
+            type: string
+            selectable_ref: true
+            ref_column: OptionParamType
+    MuteSecond: # 메시지를 얼마나 무시할지 (단위: 초)
+      type: integer
+      minimum: 0
+    BroadcastMinGrade:
+      type: string
+      ref: grade
+    BroadcastMinEnchantLevel:
+      type: integer
+    Alert:
+      type: string
+      ref: alert
+      

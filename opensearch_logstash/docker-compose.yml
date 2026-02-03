@@ -1,0 +1,13 @@
+version: "2.2"
+
+services:
+  logstash:
+    image: opensearchproject/logstash-oss-with-opensearch-output-plugin:7.16.2
+    volumes:
+      - ./pipeline:/usr/share/logstash/pipeline/
+    ports:
+      - 5044:5044
+    environment:
+      - XPACK_MONITORING_ENABLE=false
+    restart: always
+

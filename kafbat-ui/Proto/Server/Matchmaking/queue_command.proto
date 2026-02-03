@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.matchmaking.queue";
+option java_outer_classname = "ServerMatchmakingQueueCommandProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package matchmaking_queue_command;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+
+import "Server/Matchmaking/common.proto";
+
+message MatchmakingQueueCommand {
+  oneof command {
+    // from matchmaking
+    CreateTicket create_ticket = 100;
+    OnTicketMatched on_ticket_matched = 101;
+    CancelTicket cancel_ticket = 102;
+    DeleteInvalidQueueState delete_invalid_queue_state = 103;
+  }
+}
+
+message CreateTicket {
+  repeated Player player = 1;
+
+  string transaction_uuid_when_created = 1000;
+
+  message Player {
+    int64 account_id = 4;
+    string character_uuid = 2;
+    repeated common.Property property = 3;
+  }
+}
+
+message OnTicketMatched {
+  repeated Match match = 1;
+
+  message Match {
+    repeated Team team = 1;
+
+    message Team {
+      int64 team_id = 1;
+      repeated string ticket_uuid = 2;
+    }
+  }
+}
+
+message CancelTicket {
+  string ticket_uuid = 1;
+  optional int64 requester_account_id = 5;
+  optional string requester_character_uuid = 3;
+  matchmaking_common.TicketReason reason = 4;
+}
+
+// 잘못된 Queue State를 삭제함
+message DeleteInvalidQueueState {
+  string reason = 1; // 삭제 사유
+}

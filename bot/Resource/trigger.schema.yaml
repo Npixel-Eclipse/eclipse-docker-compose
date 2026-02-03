@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Trigger:
+      type: string
+      formula: true
+    Skills:
+      type: array
+      items:
+      - type: string
+  required:
+    - Id
+    - Name
+    - Trigger

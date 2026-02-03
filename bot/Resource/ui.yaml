@@ -1,0 +1,1922 @@
+- Id: 4
+  Type: EventMain
+  TypeGroup: Other
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Event
+  Comment: 이벤트
+- Id: 5
+  Type: AchievementMain
+  TypeGroup: Achievement
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Achievement
+  DataRecord: Achievement
+  Comment: 업적
+- Id: 6
+  Type: RecordRoom
+  TypeGroup: RecordRoom
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_RecordRoom
+  Comment: 기록실
+- Id: 7
+  Type: Awakening
+  TypeGroup: Awakening
+  IsTitleUI: true
+  TitleNames:
+    - UIWordAwakening
+  Comment: 각성
+- Id: 8
+  Type: BMShop
+  TypeGroup: BMShop
+  IsTitleUI: true
+  TitleNames:
+    - UIWordShopTitle
+  Comment: 상점
+- Id: 9
+  Type: Collection
+  TypeGroup: Collection
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Collection
+  DataRecord: Collection
+  Comment: 수집
+- Id: 10
+  Type: Combination
+  TypeGroup: Combination
+  IsTitleUI: true
+  TitleNames:
+    - UIWordCombination
+  Comment: 서판 조합
+- Id: 11
+  Type: CraftMainPopup
+  TypeGroup: Craft
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Craft
+  DataRecord: Craft
+  Comment: 제작
+- Id: 12
+  Type: DeathPopup
+  TypeGroup: CoreGamePlay
+  IsTitleUI: true
+  ResetBacktrackHistoryWhenAttached: true
+  Comment: 사망 팝업
+- Id: 13
+  Type: DungeonMain
+  TypeGroup: Dungeon
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Dungeon
+  DataRecord: DungeonMain
+  Comment: 던전
+- Id: 14
+  Type: DungeonMap
+  TypeGroup: Dungeon
+  IsTitleUI: true
+  TitleNames:
+    - UIWordDungeonMap
+  Category: Map
+  Comment: 던전맵
+- Id: 15
+  Type: EnchantMain
+  TypeGroup: Craft
+  IsTitleUI: true
+  TitleNames:
+    - UIWordEquipEnchant
+  Comment: 장비 강화
+- Id: 16
+  Type: Engraving
+  TypeGroup: Craft
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Engrave_Title
+  Comment: 세공
+- Id: 17
+  Type: GuildMain
+  TypeGroup: Guild
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_GUILD
+  Comment: 길드
+- Id: 18
+  Type: HuntingZone
+  TypeGroup: HuntingZone
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_HuntingZone
+  Category: Map
+  Comment: 사냥터
+- Id: 19
+  Type: Mail
+  TypeGroup: Mail
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Mail
+  DataRecord: Mail
+  Comment: 우편
+- Id: 20
+  Type: Merge
+  TypeGroup: Other
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Merge
+  Comment: 합성
+- Id: 21
+  Type: Might
+  TypeGroup: Might
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Might_Title
+  Comment: 권능
+- Id: 22
+  Type: InGameShop
+  TypeGroup: InGameShop
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_NPCShop_Title
+  Category: NPC
+  Comment: 마을 상인
+- Id: 23
+  Type: PolymorphMain
+  TypeGroup: Polymorph
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Polymorph
+    - UIWord_WeaponPolymorph
+  DataRecord: Polymorph
+  Comment: 초월
+- Id: 24
+  Type: Mastery
+  TypeGroup: Mastery
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Mastery_Menu
+  DataRecord: Mastery
+  Comment: 숙련도
+- Id: 25
+  Type: QuestMain
+  TypeGroup: Quest
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Quest
+  Comment: 퀘스트
+- Id: 26
+  Type: SeasonPass
+  TypeGroup: Other
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_SeasonPass_Title
+  Comment: 시즌 패스
+- Id: 27
+  Type: Setting
+  TypeGroup: Other
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Memory
+  Comment: 설정
+- Id: 28
+  Type: EnchantSkill
+  TypeGroup: Skill
+  IsTitleUI: true
+  TitleNames:
+    - Skill_Enchant_Title
+  Comment: 스킬 강화
+- Id: 29
+  Type: Storage
+  TypeGroup: Storage
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Storage
+  Category: NPC
+  DataRecord: Storage
+  Comment: 창고
+- Id: 30
+  Type: TradeMain
+  TypeGroup: Trade
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Menu_Exchange
+  Comment: 거래소
+- Id: 31
+  Type: WorldMap
+  TypeGroup: WorldMap
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_WorldMap
+  Category: Map
+  Comment: 월드맵
+- Id: 32
+  Type: RequestMain
+  TypeGroup: Other
+  IsTitleUI: true
+  TitleNames:
+    - UI_Request_Desc
+  Comment: 의뢰
+- Id: 33
+  Type: FortressPreviewMainHUD
+  TypeGroup: Fortress
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_BMShop_Fortress
+  Comment: 성소
+- Id: 34
+  Type: Solidarity
+  TypeGroup: Solidarity
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Solidarity
+  Comment: 결속
+- Id: 35
+  Type: Awareness
+  TypeGroup: Awareness
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Awareness
+  Comment: 자각의 불꽃
+- Id: 36
+  Type: None
+  TypeGroup: System
+  Comment: 기본값
+- Id: 37
+  Type: Login
+  TypeGroup: Lobby
+  Comment: 로그인
+- Id: 38
+  Type: Lobby
+  TypeGroup: Lobby
+  Comment: 로비
+- Id: 39
+  Type: LobbyCharacterCreationPopup
+  TypeGroup: Lobby
+  Comment: 캐릭터 생성 팝업
+- Id: 40
+  Type: LobbyCharacterCreation
+  TypeGroup: Lobby
+  Comment: 캐릭터 생성
+- Id: 41
+  Type: LobbyCharacterCreationNamePopup
+  TypeGroup: Lobby
+  Comment: 캐릭터 이름 생성 팝업
+- Id: 42
+  Type: LobbyCharacterDeletionPopup
+  TypeGroup: Lobby
+  Comment: 캐릭터 삭제 팝업
+- Id: 43
+  Type: LobbyCancelCharacterDeletionPopup
+  TypeGroup: Lobby
+  Comment: 캐릭터 삭제 취소 팝업
+- Id: 44
+  Type: LobbyServerListPopup
+  TypeGroup: Lobby
+  Comment: 서버 리스트 팝업
+- Id: 45
+  Type: LobbyMaintenancePopup
+  TypeGroup: Lobby
+  Comment: 점검 팝업
+- Id: 46
+  Type: LobbyWaitPopup
+  TypeGroup: Lobby
+  Comment: 대기 팝업
+- Id: 47
+  Type: Loading
+  TypeGroup: System
+  Comment: 로딩
+- Id: 48
+  Type: MainHUD
+  TypeGroup: CoreGamePlay
+  Comment: 메인 HUD
+- Id: 49
+  Type: Menu
+  TypeGroup: System
+  Comment: 메뉴
+- Id: 50
+  Type: SystemMessageHUD
+  TypeGroup: System
+  Comment: 시스템 메시지 HUD
+- Id: 51
+  Type: SystemPushUpMessage
+  TypeGroup: System
+  Comment: 시스템 푸시업 메시지
+- Id: 52
+  Type: SystemPushUpMessage_Modal
+  TypeGroup: System
+  Comment: 모달 푸시업 메시지
+- Id: 53
+  Type: SystemNormalNoticeMessage
+  TypeGroup: System
+  Comment: 일반 공지 메시지
+- Id: 54
+  Type: SystemEmergencyNoticeMessage
+  TypeGroup: System
+  Comment: 긴급 공지 메시지
+- Id: 55
+  Type: SystemErrorMessage
+  TypeGroup: System
+  Comment: 시스템 오류 메시지
+- Id: 56
+  Type: SystemConstantMessage
+  TypeGroup: System
+  Comment: 시스템 상수 메시지
+- Id: 57
+  Type: InventoryHUD
+  TypeGroup: Inventory
+  Comment: 인벤토리 HUD
+- Id: 58
+  Type: InventoryExpandPopup
+  TypeGroup: Inventory
+  Comment: 인벤토리 확장 팝업
+- Id: 16737
+  Type: Inventory
+  TypeGroup: Inventory
+- Id: 59
+  Type: DeleteItemPopup
+  TypeGroup: Inventory
+  Comment: 아이템 삭제 팝업
+- Id: 60
+  Type: ItemFilterPopup
+  TypeGroup: Inventory
+  Comment: 아이템 필터 팝업
+- Id: 61
+  Type: LuckyBagCalculator
+  TypeGroup: Inventory
+  Comment: 럭키백 계산기
+- Id: 62
+  Type: CalculatorHUD
+  TypeGroup: Inventory
+  Comment: 계산기 HUD
+- Id: 63
+  Type: CalculatorHUD_Popup
+  TypeGroup: Inventory
+  Comment: 계산기 HUD 팝업
+- Id: 64
+  Type: ItemInfoHUD_Weapon
+  TypeGroup: ItemInfo
+  Comment: 무기 아이템 정보 HUD
+- Id: 65
+  Type: ItemInfoHUD_WeaponEnchant
+  TypeGroup: ItemInfo
+  Comment: 무기 강화 아이템 정보 HUD
+- Id: 66
+  Type: ItemInfoHUD_WeaponEngraving
+  TypeGroup: ItemInfo
+  Comment: 무기 세공 아이템 정보 HUD
+- Id: 67
+  Type: ItemInfoHUD_Buyable
+  TypeGroup: ItemInfo
+  Comment: 구매 가능 아이템 정보 HUD
+- Id: 68
+  Type: ItemInfoHUD_BuyablePopup
+  TypeGroup: ItemInfo
+  Comment: 구매 가능 아이템 정보 팝업
+- Id: 69
+  Type: ItemInfoHUD_DisableButtons
+  TypeGroup: ItemInfo
+  Comment: 버튼 비활성 아이템 정보 HUD
+- Id: 70
+  Type: ItemInfoHUD_QuestRewardItem
+  TypeGroup: ItemInfo
+  Comment: 퀘스트 보상 아이템 정보 HUD
+- Id: 71
+  Type: ItemInfoHUD_Popup
+  TypeGroup: ItemInfo
+  Comment: 아이템 정보 팝업
+- Id: 72
+  Type: ItemInfoHUD_EquipSlot
+  TypeGroup: ItemInfo
+  Comment: 장착 슬롯 아이템 정보 HUD
+- Id: 73
+  Type: ItemInfoHUD_EquipSlotNoneButton
+  TypeGroup: ItemInfo
+  Comment: 장착 슬롯 없음 버튼 아이템 정보 HUD
+- Id: 74
+  Type: ItemInfoHUD_EquipSlotPolymorph
+  TypeGroup: ItemInfo
+  Comment: 장착 슬롯 초월 아이템 정보 HUD
+- Id: 75
+  Type: ItemInfoHUD_OnlyCollection
+  TypeGroup: ItemInfo
+  Comment: 수집 전용 아이템 정보 HUD
+- Id: 76
+  Type: ItemInfoHUD_DeathPenalty
+  TypeGroup: ItemInfo
+  Comment: 사망 패널티 아이템 정보 HUD
+- Id: 77
+  Type: ItemInfoHUD_PowerSavingMode
+  TypeGroup: ItemInfo
+  Comment: 절전모드 아이템 정보 HUD
+- Id: 78
+  Type: ItemInfoHUD_GuildStorage
+  TypeGroup: ItemInfo
+  Comment: 길드 창고 아이템 정보 HUD
+- Id: 79
+  Type: SkillBookHUD
+  TypeGroup: Skill
+  Comment: 스킬북 HUD
+- Id: 80
+  Type: SkillInfoHUD
+  TypeGroup: Skill
+  Comment: 스킬 정보 HUD
+- Id: 81
+  Type: SkillInfoHUD_Enchant
+  TypeGroup: Skill
+  Comment: 스킬 강화 정보 HUD
+- Id: 82
+  Type: SkillInfoHUD_Lobby
+  TypeGroup: Skill
+  Comment: 로비 스킬 정보 HUD
+- Id: 83
+  Type: SkillLearnedPopup
+  TypeGroup: Skill
+  Comment: 스킬 학습 팝업
+- Id: 85
+  Type: StatContents
+  TypeGroup: CoreGamePlay
+  Comment: 스탯 내용
+- Id: 87
+  Type: StatDetailInfoPopup
+  TypeGroup: CoreGamePlay
+  Comment: 스탯 상세 정보 팝업
+- Id: 88
+  Type: CharacterHUD
+  TypeGroup: CoreGamePlay
+  Comment: 캐릭터 HUD
+- Id: 89
+  Type: CharacterInfoPopup
+  TypeGroup: CoreGamePlay
+  Comment: 캐릭터 정보 팝업
+- Id: 90
+  Type: NpcHUD
+  TypeGroup: CoreGamePlay
+  Comment: NPC HUD
+- Id: 91
+  Type: MonsterHUD
+  TypeGroup: CoreGamePlay
+  Comment: 몬스터 HUD
+- Id: 92
+  Type: BuffAlertHUD
+  TypeGroup: CoreGamePlay
+  Comment: 버프 알림 HUD
+- Id: 93
+  Type: BuffListHUD
+  TypeGroup: CoreGamePlay
+  Comment: 버프 리스트 HUD
+- Id: 94
+  Type: BuffDetailPopup
+  TypeGroup: CoreGamePlay
+  Comment: 버프 상세 팝업
+- Id: 95
+  Type: DropItemHUD
+  TypeGroup: CoreGamePlay
+  Comment: 드롭 아이템 HUD
+- Id: 96
+  Type: NpcTargetHUD
+  TypeGroup: CoreGamePlay
+  Comment: NPC 타겟 HUD
+- Id: 97
+  Type: PCTargetHUD
+  TypeGroup: CoreGamePlay
+  Comment: PC 타겟 HUD
+- Id: 98
+  Type: PCTargetHUD_BattleGround
+  TypeGroup: CoreGamePlay
+  Comment: 전장 PC 타겟 HUD
+- Id: 99
+  Type: SpaceHUD
+  TypeGroup: CoreGamePlay
+  Comment: 공간 HUD
+- Id: 100
+  Type: MoneyHUD
+  TypeGroup: CoreGamePlay
+  Comment: 돈 HUD
+- Id: 101
+  Type: BloodShedHUD
+  TypeGroup: CoreGamePlay
+  Comment: 피의 HUD
+- Id: 102
+  Type: AcquireGoldHUD
+  TypeGroup: CoreGamePlay
+  Comment: 획득 골드 HUD
+- Id: 103
+  Type: AcquireGoldChildHUD
+  TypeGroup: CoreGamePlay
+  Comment: 획득 골드 자식 HUD
+- Id: 104
+  Type: AcquireExpHUD
+  TypeGroup: CoreGamePlay
+  Comment: 획득 경험치 HUD
+- Id: 105
+  Type: AcquireExpChildHUD
+  TypeGroup: CoreGamePlay
+  Comment: 획득 경험치 자식 HUD
+- Id: 106
+  Type: EnchantUnsafetyPopup
+  TypeGroup: Craft
+  Comment: 강화 불안전 팝업
+- Id: 107
+  Type: LevelUpPopup
+  TypeGroup: CoreGamePlay
+  Comment: 레벨업 팝업
+- Id: 108
+  Type: DeathPenaltyPopup_Restoration
+  TypeGroup: CoreGamePlay
+  Comment: 사망 패널티 복구 팝업
+- Id: 109
+  Type: DamageListHUD
+  TypeGroup: CoreGamePlay
+  Comment: 데미지 리스트 HUD
+- Id: 110
+  Type: QuickSlotHUD
+  TypeGroup: CoreGamePlay
+  Comment: 퀵슬롯 HUD
+- Id: 111
+  Type: QuickItemEquipHUD
+  TypeGroup: CoreGamePlay
+  Comment: 퀵 아이템 장착 HUD
+- Id: 112
+  Type: WorldMapAreaIcon
+  TypeGroup: WorldMap
+  Comment: 월드맵 지역 아이콘
+- Id: 113
+  Type: WorldMapPartyMemberIcon
+  TypeGroup: WorldMap
+  Comment: 월드맵 파티원 아이콘
+- Id: 114
+  Type: WorldmapTeleportPopup
+  TypeGroup: WorldMap
+  Comment: 월드맵 텔레포트 팝업
+- Id: 115
+  Type: CraftResultPopup
+  TypeGroup: Craft
+  Comment: 제작 결과 팝업
+- Id: 116
+  Type: CraftMaterialReplacePopup
+  TypeGroup: Craft
+  Comment: 제작 재료 교체 팝업
+- Id: 117
+  Type: CraftMaterialTradePopup
+  TypeGroup: Craft
+  Comment: 제작 재료 거래 팝업
+- Id: 118
+  Type: CraftConfirmPopup
+  TypeGroup: Craft
+  Comment: 제작 확인 팝업
+- Id: 119
+  Type: OutputPopup
+  TypeGroup: Craft
+  Comment: 출력 팝업
+- Id: 120
+  Type: Polymorph_DetailInfo
+  TypeGroup: Polymorph
+  Comment: 초월 상세 정보
+- Id: 121
+  Type: Polymorph_EnchantLevelStatInfo
+  TypeGroup: Polymorph
+  Comment: 초월 강화 레벨 스탯 정보
+- Id: 122
+  Type: RecipeResultPopup
+  TypeGroup: Recipe
+  Comment: 레시피 결과 팝업
+- Id: 123
+  Type: NormalChat
+  TypeGroup: Chat
+  Comment: 일반 채팅
+- Id: 124
+  Type: Chat_TabSetting
+  TypeGroup: Chat
+  Comment: 채팅 탭 설정
+- Id: 125
+  Type: Chat_SharingLocationPopup
+  TypeGroup: Chat
+  Comment: 채팅 위치 공유 팝업
+- Id: 126
+  Type: Chat_CharacterInfoPopup
+  TypeGroup: Chat
+  Comment: 채팅 캐릭터 정보 팝업
+- Id: 127
+  Type: Chat_BlockListPopup
+  TypeGroup: Chat
+  Comment: 채팅 차단 리스트 팝업
+- Id: 128
+  Type: Chat_BlockUserPopup
+  TypeGroup: Chat
+  Comment: 채팅 사용자 차단 팝업
+- Id: 129
+  Type: PartyMember
+  TypeGroup: Party
+  Comment: 파티원
+- Id: 130
+  Type: PartyInviter
+  TypeGroup: Party
+  Comment: 파티 초대자
+- Id: 131
+  Type: PartyManagement
+  TypeGroup: Party
+  Comment: 파티 관리
+- Id: 132
+  Type: PartyPopup_Create
+  TypeGroup: Party
+  Comment: 파티 생성 팝업
+- Id: 133
+  Type: PartyPopup_Invite
+  TypeGroup: Party
+  Comment: 파티 초대 팝업
+- Id: 134
+  Type: PartyPopup_Disband
+  TypeGroup: Party
+  Comment: 파티 해산 팝업
+- Id: 135
+  Type: PartyPopup_Banish
+  TypeGroup: Party
+  Comment: 파티 추방 팝업
+- Id: 136
+  Type: PartyPopup_Leave
+  TypeGroup: Party
+  Comment: 파티 나가기 팝업
+- Id: 137
+  Type: PartyPopup_Delegate
+  TypeGroup: Party
+  Comment: 파티 위임 팝업
+- Id: 138
+  Type: GuildPopup_Create
+  TypeGroup: Guild
+  Comment: 길드 생성 팝업
+- Id: 139
+  Type: GuildPopup_Leave
+  TypeGroup: Guild
+  Comment: 길드 나가기 팝업
+- Id: 140
+  Type: GuildPopup_Banish
+  TypeGroup: Guild
+  Comment: 길드 추방 팝업
+- Id: 141
+  Type: GuildPopup_Mark
+  TypeGroup: Guild
+  Comment: 길드 마크 팝업
+- Id: 142
+  Type: GuildPopup_AddAlly
+  TypeGroup: Guild
+  Comment: 길드 동맹 추가 팝업
+- Id: 143
+  Type: GuildPopup_AddHostile
+  TypeGroup: Guild
+  Comment: 길드 적대 추가 팝업
+- Id: 144
+  Type: GuildPopup_HostileProposalList
+  TypeGroup: Guild
+  Comment: 길드 적대 제안 리스트 팝업
+- Id: 145
+  Type: GuildPopup_RemoveAlly
+  TypeGroup: Guild
+  Comment: 길드 동맹 제거 팝업
+- Id: 146
+  Type: GuildPopup_RemoveHostile
+  TypeGroup: Guild
+  Comment: 길드 적대 제거 팝업
+- Id: 147
+  Type: GuildPopup_ReserveDisband
+  TypeGroup: Guild
+  Comment: 길드 해산 예약 팝업
+- Id: 148
+  Type: GuildPopup_Donate
+  TypeGroup: Guild
+  Comment: 길드 기부 팝업
+- Id: 149
+  Type: GuildPopup_Support
+  TypeGroup: Guild
+  Comment: 길드 지원 팝업
+- Id: 150
+  Type: GuildPopup_Info
+  TypeGroup: Guild
+  Comment: 길드 정보 팝업
+- Id: 151
+  Type: GuildPopup_Management
+  TypeGroup: Guild
+  Comment: 길드 관리 팝업
+- Id: 152
+  Type: GuildPopup_Benefit
+  TypeGroup: Guild
+  Comment: 길드 혜택 팝업
+- Id: 153
+  Type: GuildPopup_MemberRoleSetting
+  TypeGroup: Guild
+  Comment: 길드원 역할 설정 팝업
+- Id: 154
+  Type: GuildPopup_MemberSettingTooltip
+  TypeGroup: Guild
+  Comment: 길드원 설정 툴팁 팝업
+- Id: 155
+  Type: GuildPopup_CollectionEnableList
+  TypeGroup: Guild
+  Comment: 길드 수집 활성화 리스트 팝업
+- Id: 156
+  Type: GuildPopup_Introduction
+  TypeGroup: Guild
+  Comment: 길드 소개 팝업
+- Id: 157
+  Type: GuildPopup_ApplyMemberListPopup
+  TypeGroup: Guild
+  Comment: 길드 가입 신청자 리스트 팝업
+- Id: 158
+  Type: GuildPopup_DelegateGuildMaster
+  TypeGroup: Guild
+  Comment: 길드마스터 위임 팝업
+- Id: 159
+  Type: GuildPopup_InputGuildPassword
+  TypeGroup: Guild
+  Comment: 길드 비밀번호 입력 팝업
+- Id: 160
+  Type: GuildPopup_TechNodeDetail
+  TypeGroup: Guild
+  Comment: 길드 기술 노드 상세 팝업
+- Id: 161
+  Type: GuildPopup_AdditionalContribute
+  TypeGroup: Guild
+  Comment: 길드 추가 기여 팝업
+- Id: 162
+  Type: GuildPopup_AcquireTechNode
+  TypeGroup: Guild
+  Comment: 길드 기술 노드 획득 팝업
+- Id: 163
+  Type: GuildStoragePopup_SelectMember
+  TypeGroup: Guild
+  Comment: 길드 창고 멤버 선택 팝업
+- Id: 164
+  Type: GuildStoragePopup_ConfirmStorage
+  TypeGroup: Guild
+  Comment: 길드 창고 저장 확인 팝업
+- Id: 165
+  Type: GuildStoragePopup_Sell
+  TypeGroup: Guild
+  Comment: 길드 창고 판매 팝업
+- Id: 166
+  Type: GuildStoragePopup_ConfirmSell
+  TypeGroup: Guild
+  Comment: 길드 창고 판매 확인 팝업
+- Id: 167
+  Type: GuildStoragePopup_ExpandSlot
+  TypeGroup: Guild
+  Comment: 길드 창고 슬롯 확장 팝업
+- Id: 168
+  Type: GuildStoragePopup_ConfirmDistribute
+  TypeGroup: Guild
+  Comment: 길드 창고 분배 확인 팝업
+- Id: 169
+  Type: GuildStoragePopup_ConfirmBuy
+  TypeGroup: Guild
+  Comment: 길드 창고 구매 확인 팝업
+- Id: 170
+  Type: GuildStoragePopup_ConfirmCancelSell
+  TypeGroup: Guild
+  Comment: 길드 창고 판매 취소 확인 팝업
+- Id: 171
+  Type: GuildStoragePopup_Calculator
+  TypeGroup: Guild
+  Comment: 길드 창고 계산기 팝업
+- Id: 172
+  Type: DungeonResult
+  TypeGroup: Dungeon
+  Comment: 던전 결과
+- Id: 173
+  Type: DungeonGreateSuccess
+  TypeGroup: Dungeon
+  Comment: 던전 대성공
+- Id: 174
+  Type: DungeonPartyExitPopup
+  TypeGroup: Dungeon
+  Comment: 던전 파티 나가기 팝업
+- Id: 175
+  Type: DamageFont_NormalDamageForMe
+  TypeGroup: DamageFont
+  Comment: 내가 받는 일반 데미지 폰트
+- Id: 176
+  Type: DamageFont_EnhanceDamageForMe
+  TypeGroup: DamageFont
+  Comment: 내가 받는 강화 데미지 폰트
+- Id: 177
+  Type: DamageFont_NormalDamageForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 일반 데미지 폰트
+- Id: 178
+  Type: DamageFont_EnhanceDamageForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 강화 데미지 폰트
+- Id: 179
+  Type: DamageFont_MissForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 빗나감 폰트
+- Id: 180
+  Type: DamageFont_DodgeForMe
+  TypeGroup: DamageFont
+  Comment: 내가 회피한 폰트
+- Id: 181
+  Type: DamageFont_ImmuneForMe
+  TypeGroup: DamageFont
+  Comment: 내가 면역한 폰트
+- Id: 182
+  Type: DamageFont_ImmuneForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 면역한 폰트
+- Id: 183
+  Type: DamageFont_BlockForMe
+  TypeGroup: DamageFont
+  Comment: 내가 막은 폰트
+- Id: 184
+  Type: DamageFont_BlockForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 막은 폰트
+- Id: 185
+  Type: DamageFont_DoubleForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 더블 데미지 폰트
+- Id: 186
+  Type: DamageFont_CriticalForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 크리티컬 데미지 폰트
+- Id: 187
+  Type: DamageFont_PerfectForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 퍼펙트 데미지 폰트
+- Id: 188
+  Type: DamageFont_PerfectCriticalForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 퍼펙트 크리티컬 데미지 폰트
+- Id: 189
+  Type: DamageFont_PerfectDoubleForOther
+  TypeGroup: DamageFont
+  Comment: 다른 사람이 받는 퍼펙트 더블 데미지 폰트
+- Id: 190
+  Type: DamageFont_RecoverHp
+  TypeGroup: DamageFont
+  Comment: HP 회복 폰트
+- Id: 191
+  Type: DamageFont_RecoverMp
+  TypeGroup: DamageFont
+  Comment: MP 회복 폰트
+- Id: 192
+  Type: DamageFont_Buff
+  TypeGroup: DamageFont
+  Comment: 버프 폰트
+- Id: 193
+  Type: DamageFont_Debuff
+  TypeGroup: DamageFont
+  Comment: 디버프 폰트
+- Id: 194
+  Type: DamageFont_SpecialBuff
+  TypeGroup: DamageFont
+  Comment: 특수 버프 폰트
+- Id: 195
+  Type: DamageFont_SpecialDebuff
+  TypeGroup: DamageFont
+  Comment: 특수 디버프 폰트
+- Id: 196
+  Type: DamageFont_AttackSkill
+  TypeGroup: DamageFont
+  Comment: 공격 스킬 폰트
+- Id: 197
+  Type: DamageFont_AllySkill
+  TypeGroup: DamageFont
+  Comment: 아군 스킬 폰트
+- Id: 198
+  Type: DamageFont_Kill
+  TypeGroup: DamageFont
+  Comment: 킬 폰트
+- Id: 199
+  Type: DamageFont_Assist
+  TypeGroup: DamageFont
+  Comment: 어시스트 폰트
+- Id: 200
+  Type: MiniDialogue
+  TypeGroup: Dialogue
+  Comment: 미니 대화
+- Id: 201
+  Type: NormalDialogue
+  TypeGroup: Dialogue
+  Comment: 일반 대화
+- Id: 202
+  Type: TutorialDialogue
+  TypeGroup: Dialogue
+  Comment: 튜토리얼 대화
+- Id: 203
+  Type: ErrorPopup
+  TypeGroup: Popup
+  Comment: 오류 팝업
+- Id: 204
+  Type: ModalErrorPopup
+  TypeGroup: Popup
+  Comment: 모달 오류 팝업
+- Id: 205
+  Type: SystemPopup
+  TypeGroup: Popup
+  Comment: 시스템 팝업
+- Id: 206
+  Type: SystemPopup_DuplicateConnection
+  TypeGroup: Popup
+  Comment: 중복 연결 시스템 팝업
+- Id: 207
+  Type: SystemPopup_LogoutByDuplicated
+  TypeGroup: Popup
+  Comment: 중복으로 인한 로그아웃 시스템 팝업
+- Id: 208
+  Type: DevMain
+  TypeGroup: Other
+  Comment: 개발자 메인
+- Id: 209
+  Type: QuestRewardPopup
+  TypeGroup: Quest
+  Comment: 퀘스트 보상 팝업
+- Id: 210
+  Type: QuestTeleportPopup
+  TypeGroup: Quest
+  Comment: 퀘스트 텔레포트 팝업
+- Id: 211
+  Type: QuestDiscardPopup
+  TypeGroup: Quest
+  Comment: 퀘스트 폐기 팝업
+- Id: 213
+  Type: DailyQuestAutoPlayDisablePopup
+  TypeGroup: Quest
+  Comment: 일일 퀘스트 자동 플레이 비활성화 팝업
+- Id: 215
+  Type: TradePopup_BuyConfirm
+  TypeGroup: Trade
+  Comment: 거래소 구매 확인 팝업
+- Id: 216
+  Type: TradePopup_BuyConfirm_ExpiringItem
+  TypeGroup: Trade
+  Comment: 거래소 만료 아이템 구매 확인 팝업
+- Id: 217
+  Type: TradePopup_BuyResult
+  TypeGroup: Trade
+  Comment: 거래소 구매 결과 팝업
+- Id: 218
+  Type: TradePopup_PrivateTargetSetting
+  TypeGroup: Trade
+  Comment: 거래소 개인 거래 대상 설정 팝업
+- Id: 219
+  Type: TradePopup_PrivateSellConfirm
+  TypeGroup: Trade
+  Comment: 거래소 개인 판매 확인 팝업
+- Id: 220
+  Type: TradePopup_PrivateBuyDeniedConfirm
+  TypeGroup: Trade
+  Comment: 거래소 개인 구매 거부 확인 팝업
+- Id: 221
+  Type: TradePopup_SellRegistration
+  TypeGroup: Trade
+  Comment: 거래소 판매 등록 팝업
+- Id: 222
+  Type: TradePopup_SellConfirm
+  TypeGroup: Trade
+  Comment: 거래소 판매 확인 팝업
+- Id: 223
+  Type: TradePopup_SellConfirm_ExpiringItem
+  TypeGroup: Trade
+  Comment: 거래소 만료 아이템 판매 확인 팝업
+- Id: 224
+  Type: TradePopup_SellCancel
+  TypeGroup: Trade
+  Comment: 거래소 판매 취소 팝업
+- Id: 225
+  Type: TradePopup_AllReRegistration
+  TypeGroup: Trade
+  Comment: 거래소 전체 재등록 팝업
+- Id: 226
+  Type: TradePopup_AllRedraw
+  TypeGroup: Trade
+  Comment: 거래소 전체 재추첨 팝업
+- Id: 227
+  Type: SearchPopup
+  TypeGroup: Trade
+  Comment: 검색 팝업
+- Id: 228
+  Type: CommonRewardPopup
+  TypeGroup: Popup
+  Comment: 공통 보상 팝업
+- Id: 229
+  Type: CommonRewardPopup_Alert
+  TypeGroup: Popup
+  Comment: 공통 보상 알림 팝업
+- Id: 230
+  Type: EngravingStatListPopup
+  TypeGroup: Other
+  Comment: 세공 스탯 리스트 팝업
+- Id: 231
+  Type: DungeonExitPopup
+  TypeGroup: Dungeon
+  Comment: 던전 나가기 팝업
+- Id: 232
+  Type: DungeonExitPopup_PowerSavingMode
+  TypeGroup: Dungeon
+  Comment: 절전모드 던전 나가기 팝업
+- Id: 233
+  Type: DungeonRemainTime
+  TypeGroup: Dungeon
+  Comment: 던전 남은 시간
+- Id: 234
+  Type: AchievementPopup_Detail
+  TypeGroup: Achievement
+  Comment: 업적 상세 팝업
+- Id: 235
+  Type: AchievementPopup_Complete
+  TypeGroup: Achievement
+  Comment: 업적 완료 팝업
+- Id: 237
+  Type: LostItemList
+  TypeGroup: CoreGamePlay
+  Comment: 잃어버린 아이템 리스트
+- Id: 238
+  Type: WebView
+  TypeGroup: Other
+  Comment: 웹뷰
+- Id: 239
+  Type: DisassemblePopup
+  TypeGroup: Craft
+  Comment: 분해 팝업
+- Id: 240
+  Type: StorageTransferPopup
+  TypeGroup: Storage
+  Comment: 창고 이전 팝업
+- Id: 241
+  Type: StorageSetting
+  TypeGroup: Storage
+  Comment: 창고 설정
+- Id: 242
+  Type: ToastLayer
+  TypeGroup: System
+  Comment: 토스트 레이어
+- Id: 243
+  Type: ScanHUD
+  TypeGroup: CoreGamePlay
+  Comment: 스캔 HUD
+- Id: 244
+  Type: ScanOption
+  TypeGroup: CoreGamePlay
+  Comment: 스캔 옵션
+- Id: 245
+  Type: AbyssAlert
+  TypeGroup: CoreGamePlay
+  Comment: 심연 알림
+- Id: 246
+  Type: AbyssWorldMapIcon
+  TypeGroup: WorldMap
+  Comment: 심연 월드맵 아이콘
+- Id: 247
+  Type: FieldBossAlert
+  TypeGroup: CoreGamePlay
+  Comment: 필드 보스 알림
+- Id: 248
+  Type: HuntingZoneMapAreaIcon
+  TypeGroup: HuntingZone
+  Comment: 사냥터 맵 지역 아이콘
+- Id: 249
+  Type: HuntingZonePopup_Bid
+  TypeGroup: HuntingZone
+  Comment: 사냥터 입찰 팝업
+- Id: 250
+  Type: HuntingZonePopup_BidRequest
+  TypeGroup: HuntingZone
+  Comment: 사냥터 입찰 요청 팝업
+- Id: 251
+  Type: HuntingZonePopup_ConfirmBidRequest
+  TypeGroup: HuntingZone
+  Comment: 사냥터 입찰 요청 확인 팝업
+- Id: 252
+  Type: HuntingZonePopup_PreviewShop
+  TypeGroup: HuntingZone
+  Comment: 사냥터 미리보기 상점 팝업
+- Id: 253
+  Type: HuntingZonePopup_PreviewGroupShop
+  TypeGroup: HuntingZone
+  Comment: 사냥터 미리보기 그룹 상점 팝업
+- Id: 254
+  Type: HuntingZonePopup_PreviousRanking
+  TypeGroup: HuntingZone
+  Comment: 사냥터 이전 순위 팝업
+- Id: 255
+  Type: HuntingZonePopup_NotifyEndSettling
+  TypeGroup: HuntingZone
+  Comment: 사냥터 정산 종료 알림 팝업
+- Id: 256
+  Type: HuntingZone_BidTokenTooltip
+  TypeGroup: HuntingZone
+  Comment: 사냥터 입찰 토큰 툴팁
+- Id: 257
+  Type: HuntingZone_TobeAcquireTokenTooltip
+  TypeGroup: HuntingZone
+  Comment: 사냥터 획득 예정 토큰 툴팁
+- Id: 258
+  Type: HuntingZone_HuntingZoneTaxTooltip
+  TypeGroup: HuntingZone
+  Comment: 사냥터 세금 툴팁
+- Id: 259
+  Type: HuntingZone_HuntingZoneRewardTooltip
+  TypeGroup: HuntingZone
+  Comment: 사냥터 보상 툴팁
+- Id: 260
+  Type: HuntingZone_HuntingZoneBenefitTooltip
+  TypeGroup: HuntingZone
+  Comment: 사냥터 혜택 툴팁
+- Id: 261
+  Type: BattleGround_Main
+  TypeGroup: BattleGround
+  Comment: 전장 메인
+- Id: 262
+  Type: BattleGroundAlert
+  TypeGroup: BattleGround
+  Comment: 전장 알림
+- Id: 263
+  Type: BattleGroundBossAlert
+  TypeGroup: BattleGround
+  Comment: 전장 보스 알림
+- Id: 264
+  Type: BattleGroundPortalAlert
+  TypeGroup: BattleGround
+  Comment: 전장 포탈 알림
+- Id: 265
+  Type: BattleGroundResult
+  TypeGroup: BattleGround
+  Comment: 전장 결과
+- Id: 266
+  Type: BattleGroundMinimap
+  TypeGroup: BattleGround
+  Comment: 전장 미니맵
+- Id: 267
+  Type: WorldBossAlert
+  TypeGroup: CoreGamePlay
+  Comment: 월드 보스 알림
+- Id: 268
+  Type: WorldBossHUD
+  TypeGroup: CoreGamePlay
+  Comment: 월드 보스 HUD
+- Id: 269
+  Type: BMShopPopup_Buy
+  TypeGroup: BMShop
+  Comment: BM 상점 구매 팝업
+- Id: 270
+  Type: BMShopPopup_BuyInBulk
+  TypeGroup: BMShop
+  Comment: BM 상점 대량 구매 팝업
+- Id: 271
+  Type: BMShopPopup_StoredProduct
+  TypeGroup: BMShop
+  Comment: BM 상점 저장된 상품 팝업
+- Id: 272
+  Type: BMShopPopup_RefundPolicy
+  TypeGroup: BMShop
+  Comment: BM 상점 환불 정책 팝업
+- Id: 273
+  Type: BMShopPopup_BuyError
+  TypeGroup: BMShop
+  Comment: BM 상점 구매 오류 팝업
+- Id: 274
+  Type: BMShopPopup_NotEnoughMoneyShortCut
+  TypeGroup: BMShop
+  Comment: BM 상점 돈 부족 팝업
+- Id: 2741
+  Type: BMShopPopup_NotEnoughItemShortCut
+  TypeGroup: BMShop
+  Comment: BM 상점 아이템 부족 팝업
+- Id: 275
+  Type: BMShopPopup_NotEnoughItem
+  TypeGroup: BMShop
+  Comment: BM 상점 아이템 부족 팝업
+- Id: 276
+  Type: BMShopPopup_AuthFail
+  TypeGroup: BMShop
+  Comment: BM 상점 인증 실패 팝업
+- Id: 277
+  Type: BMShopPopup_ProductPurchase
+  TypeGroup: BMShop
+  Comment: BM 상점 상품 구매 팝업
+- Id: 278
+  Type: BMShopPopup_PurchaseDifferentAccount
+  TypeGroup: BMShop
+  Comment: BM 상점 다른 계정 구매 팝업
+- Id: 279
+  Type: BMShopPopup_PaymentResult
+  TypeGroup: BMShop
+  Comment: BM 상점 결제 결과 팝업
+- Id: 280
+  Type: BMShopPopup_StoveError
+  TypeGroup: BMShop
+  Comment: BM 상점 스토브 오류 팝업
+- Id: 281
+  Type: BMShopPopup_MarketError
+  TypeGroup: BMShop
+  Comment: BM 상점 마켓 오류 팝업
+- Id: 282
+  Type: BMShopPopup_ServerError
+  TypeGroup: BMShop
+  Comment: BM 상점 서버 오류 팝업
+- Id: 283
+  Type: BMShopPopup_NetworkError
+  TypeGroup: BMShop
+  Comment: BM 상점 네트워크 오류 팝업
+- Id: 284
+  Type: BMShopPopup_VoidedProduct
+  TypeGroup: BMShop
+  Comment: BM 상점 무효화된 상품 팝업
+- Id: 285
+  Type: BMShopPopup_RestartGame
+  TypeGroup: BMShop
+  Comment: BM 상점 게임 재시작 팝업
+- Id: 286
+  Type: BMShopPopup_RestartGame_Success
+  TypeGroup: BMShop
+  Comment: BM 상점 게임 재시작 성공 팝업
+- Id: 287
+  Type: BMShopPopup_Purchasing
+  TypeGroup: BMShop
+  Comment: BM 상점 구매 중 팝업
+- Id: 288
+  Type: MergeConfirmPopup
+  TypeGroup: Other
+  Comment: 합성 확인 팝업
+- Id: 289
+  Type: Sequence
+  TypeGroup: Other
+  Comment: 시퀀스
+- Id: 290
+  Type: MasteryOpenEssence
+  TypeGroup: Mastery
+  Comment: 숙련도 정수 열기
+- Id: 291
+  Type: MasteryAllReset
+  TypeGroup: Mastery
+  Comment: 숙련도 전체 리셋
+- Id: 292
+  Type: MasteryReset
+  TypeGroup: Mastery
+  Comment: 숙련도 리셋
+- Id: 293
+  Type: MasteryPageCompleteEffect
+  TypeGroup: Mastery
+  Comment: 숙련도 페이지 완성 효과
+- Id: 294
+  Type: MasteryEssenceStatChange
+  TypeGroup: Mastery
+  Comment: 숙련도 정수 스탯 변경
+- Id: 295
+  Type: MasteryEssenceTooltip
+  TypeGroup: Mastery
+  Comment: 숙련도 정수 툴팁
+- Id: 296
+  Type: MasteryLevelPointInfoPopup
+  TypeGroup: Mastery
+  Comment: 숙련도 레벨별 포인트 정보
+- Id: 298
+  Type: CollectionMain
+  TypeGroup: Collection
+  Comment: 수집 메인
+- Id: 299
+  Type: CollectionBuffPopup
+  TypeGroup: Collection
+  Comment: 수집 버프 팝업
+- Id: 300
+  Type: CollectionItemRegisterPopup
+  TypeGroup: Collection
+  Comment: 수집 아이템 등록 팝업
+- Id: 301
+  Type: CollectionFilterPopup
+  TypeGroup: Collection
+  Comment: 수집 필터 팝업
+- Id: 302
+  Type: CollectionAcquireStatAlert
+  TypeGroup: Collection
+  Comment: 수집 획득 스탯 알림
+- Id: 303
+  Type: CollectionItemGroupRewardBuffPopup
+  TypeGroup: Collection
+  Comment: 수집 아이템 그룹 보상 버프 팝업
+- Id: 304
+  Type: RecipeReroll_ConfirmPopup
+  TypeGroup: Recipe
+  Comment: 레시피 재추첨 확인 팝업
+- Id: 305
+  Type: RecipeReroll_SelectCategoryPopup
+  TypeGroup: Recipe
+  Comment: 레시피 재추첨 카테고리 선택 팝업
+- Id: 306
+  Type: RecipeReroll_PickPopup
+  TypeGroup: Recipe
+  Comment: 레시피 재추첨 선택 팝업
+- Id: 307
+  Type: RecipeReroll_RerollPopup
+  TypeGroup: Recipe
+  Comment: 레시피 재추첨 팝업
+- Id: 308
+  Type: InGameShopPopup_Buy
+  TypeGroup: InGameShop
+  Comment: 인게임 상점 구매 팝업
+- Id: 309
+  Type: InGameShopPopup_Sell
+  TypeGroup: InGameShop
+  Comment: 인게임 상점 판매 팝업
+- Id: 310
+  Type: InGameShopPopup_MultipleBuy
+  TypeGroup: InGameShop
+  Comment: 인게임 상점 다중 구매 팝업
+- Id: 311
+  Type: InGameShopPopup_AutoBuy
+  TypeGroup: InGameShop
+  Comment: 인게임 상점 자동 구매 팝업
+- Id: 312
+  Type: FortressBuildingHUD
+  TypeGroup: Fortress
+  Comment: 성소 건물 HUD
+- Id: 313
+  Type: FortressBuildingHUD_Bottom
+  TypeGroup: Fortress
+  Comment: 성소 건물 하단 HUD
+- Id: 314
+  Type: FortressBuildingHUD_Top
+  TypeGroup: Fortress
+  Comment: 성소 건물 상단 HUD
+- Id: 315
+  Type: FortressConstructBuildingPopup
+  TypeGroup: Fortress
+  Comment: 성소 건물 건설 팝업
+- Id: 316
+  Type: FortressUpgradeBuildingPopup
+  TypeGroup: Fortress
+  Comment: 성소 건물 업그레이드 팝업
+- Id: 317
+  Type: FortressHarvestPopup
+  TypeGroup: Fortress
+  Comment: 성소 수확 팝업
+- Id: 318
+  Type: FortressInstantCompleteBuildingPopup
+  TypeGroup: Fortress
+  Comment: 성소 즉시 완성 건물 팝업
+- Id: 319
+  Type: FortressFastUpgradeBuildingPopup
+  TypeGroup: Fortress
+  Comment: 성소 빠른 업그레이드 건물 팝업
+- Id: 320
+  Type: FortressBuildingManagePopup
+  TypeGroup: Fortress
+  IsTitleUI: true
+  TitleNames:
+    - Seongso_Statue_Management
+  Comment: 성소 건물 관리 팝업
+- Id: 321
+  Type: FortressGroupManagePopup
+  TypeGroup: Fortress
+  Comment: 성소 그룹 관리 팝업
+- Id: 322
+  Type: FortressConstructionQueuePopup
+  TypeGroup: Fortress
+  Comment: 성소 건설 큐 팝업
+- Id: 323
+  Type: FortressConstructionQueuePopup_Preview
+  TypeGroup: Fortress
+  Comment: 성소 건설 큐 미리보기 팝업
+- Id: 324
+  Type: FortressBuildingCompletionAlert
+  TypeGroup: Fortress
+  Comment: 성소 건물 완성 알림
+- Id: 325
+  Type: FortressDashboardPopup
+  TypeGroup: Fortress
+  Comment: 성소 대시보드 팝업
+- Id: 326
+  Type: DungeonTimeRechargePopup
+  TypeGroup: Dungeon
+  Comment: 던전 시간 충전 팝업
+- Id: 327
+  Type: DungeonCountRechargePopup
+  TypeGroup: Dungeon
+  Comment: 던전 횟수 충전 팝업
+- Id: 328
+  Type: ItemFlowPopup_Gathering
+  TypeGroup: CoreGamePlay
+  Comment: 아이템 흐름 수집 팝업
+- Id: 329
+  Type: ItemFlowPopup_Usage
+  TypeGroup: CoreGamePlay
+  Comment: 아이템 흐름 사용 팝업
+- Id: 330
+  Type: ItemFlowPopup_ConfirmTeleport
+  TypeGroup: CoreGamePlay
+  Comment: 아이템 흐름 텔레포트 확인 팝업
+- Id: 331
+  Type: SearchNpc_TeleportPopup
+  TypeGroup: CoreGamePlay
+  Comment: NPC 검색 텔레포트 팝업
+- Id: 332
+  Type: RecordRoomScornAlert
+  TypeGroup: RecordRoom
+  Comment: 기록실 경멸 알림
+- Id: 333
+  Type: RecordRoomPopup_Title
+  TypeGroup: RecordRoom
+  Comment: 기록실 제목 팝업
+- Id: 334
+  Type: RecordRoomPopup_Tooltip
+  TypeGroup: RecordRoom
+  Comment: 기록실 툴팁 팝업
+- Id: 335
+  Type: RecordRoomPopup_DetailLog
+  TypeGroup: RecordRoom
+  Comment: 기록실 상세 로그 팝업
+- Id: 336
+  Type: RecordRoomPopup_MessageSetting
+  TypeGroup: RecordRoom
+  Comment: 기록실 메시지 설정 팝업
+- Id: 337
+  Type: RecordRoomPopup_Scorn
+  TypeGroup: RecordRoom
+  Comment: 기록실 경멸 팝업
+- Id: 338
+  Type: RecordRoomPopup_Trace
+  TypeGroup: RecordRoom
+  Comment: 기록실 추적 팝업
+- Id: 339
+  Type: RecordRoomPopup_Wanted
+  TypeGroup: RecordRoom
+  Comment: 기록실 수배 팝업
+- Id: 340
+  Type: RecordRoomPopup_Hostile
+  TypeGroup: RecordRoom
+  Comment: 기록실 적대 팝업
+- Id: 341
+  Type: RecordRoomPopup_ReactFail
+  TypeGroup: RecordRoom
+  Comment: 기록실 반응 실패 팝업
+- Id: 342
+  Type: Guide
+  TypeGroup: Other
+  Comment: 가이드
+- Id: 343
+  Type: LostMasteryPoinPopup
+  TypeGroup: Mastery
+  Comment: 잃어버린 숙련도 포인트 팝업
+- Id: 344
+  Type: QuantityBonusAlert
+  TypeGroup: CoreGamePlay
+  Comment: 수량 보너스 알림
+- Id: 346
+  Type: PresetPopup
+  TypeGroup: Other
+  Comment: 프리셋 팝업
+- Id: 347
+  Type: PresetConfirmPopup_Import
+  TypeGroup: Other
+  Comment: 프리셋 가져오기 확인 팝업
+- Id: 348
+  Type: PresetConfirmPopup_Export
+  TypeGroup: Other
+  Comment: 프리셋 내보내기 확인 팝업
+- Id: 349
+  Type: PresetConfirmPopup_Expand
+  TypeGroup: Other
+  Comment: 프리셋 확장 확인 팝업
+- Id: 351
+  Type: MailPopup_Send
+  TypeGroup: Mail
+  Comment: 우편 발송 팝업
+- Id: 352
+  Type: MailPopup_Delete
+  TypeGroup: Mail
+  Comment: 우편 삭제 팝업
+- Id: 353
+  Type: MailPopup_DeleteAll
+  TypeGroup: Mail
+  Comment: 우편 전체 삭제 팝업
+- Id: 354
+  Type: MailPopup_ConfirmReceivedItem
+  TypeGroup: Mail
+  Comment: 우편 아이템 수신 확인 팝업
+- Id: 355
+  Type: MailPopup_ConfirmReceivedItemAll
+  TypeGroup: Mail
+  Comment: 우편 아이템 전체 수신 확인 팝업
+- Id: 356
+  Type: MailPopup_BlockList
+  TypeGroup: Mail
+  Comment: 우편 차단 리스트 팝업
+- Id: 357
+  Type: Combination_UnsealPopup
+  TypeGroup: Combination
+  Comment: 서판 조합 봉인 해제 팝업
+- Id: 358
+  Type: Combination_ChangePopup
+  TypeGroup: Combination
+  Comment: 서판 조합 변경 팝업
+- Id: 359
+  Type: Combination_ResetPopup
+  TypeGroup: Combination
+  Comment: 서판 조합 리셋 팝업
+- Id: 360
+  Type: Combination_AddChancePopup
+  TypeGroup: Combination
+  Comment: 서판 조합 기회 추가 팝업
+- Id: 361
+  Type: Combination_UnsealAlert
+  TypeGroup: Combination
+  Comment: 서판 조합 봉인 해제 알림
+- Id: 362
+  Type: Combination_CompleteAlert
+  TypeGroup: Combination
+  Comment: 서판 조합 완성 알림
+- Id: 363
+  Type: SeasonPass_BuyLevelPassPopup
+  TypeGroup: Other
+  Comment: 시즌 패스 레벨 패스 구매 팝업
+- Id: 364
+  Type: PowerSavingMode
+  TypeGroup: Other
+  Comment: 절전모드
+- Id: 365
+  Type: OfflineMode_EnterPopup
+  TypeGroup: Other
+  Comment: 오프라인 모드 진입 팝업
+- Id: 366
+  Type: OfflineMode_ResultPopup
+  TypeGroup: Other
+  Comment: 오프라인 모드 결과 팝업
+- Id: 367
+  Type: OfflineMode_StopPopup
+  TypeGroup: Other
+  Comment: 오프라인 모드 중지 팝업
+- Id: 368
+  Type: ContentUnlockAlert
+  TypeGroup: CoreGamePlay
+  Comment: 컨텐츠 해금 알림
+- Id: 369
+  Type: Might_CandidateStatPopup
+  TypeGroup: Might
+  Comment: 권능 후보 스탯 팝업
+- Id: 370
+  Type: Might_MightAlert
+  TypeGroup: Might
+  Comment: 권능 알림
+- Id: 371
+  Type: ItemMultiUsePopup
+  TypeGroup: Inventory
+  Comment: 아이템 다중 사용 팝업
+- Id: 372
+  Type: AwakeningPopup_ItemUpgrade
+  TypeGroup: Awakening
+  Comment: 각성 아이템 업그레이드 팝업
+- Id: 373
+  Type: AwakeningPopup_BatchLevelUp
+  TypeGroup: Awakening
+  Comment: 각성 일괄 레벨업 팝업
+- Id: 374
+  Type: AwakeningPopup_Reset
+  TypeGroup: Awakening
+  Comment: 각성 리셋 팝업
+- Id: 375
+  Type: AwakeningAlert
+  TypeGroup: Awakening
+  Comment: 각성 알림
+- Id: 376
+  Type: SkillCutScene
+  TypeGroup: Skill
+  Comment: 스킬 컷신
+- Id: 377
+  Type: Setting_UpscaleDetailInfo
+  TypeGroup: Other
+  Comment: 설정 업스케일 상세 정보
+- Id: 378
+  Type: PeakTimeSchedule
+  TypeGroup: Other
+  Comment: 피크 타임 스케줄
+- Id: 379
+  Type: Request_RefreshConfirmPopup
+  TypeGroup: Other
+  Comment: 의뢰 새로고침 확인 팝업
+- Id: 380
+  Type: Request_RefreshBuyCurrencyPopup
+  TypeGroup: Other
+  Comment: 의뢰 새로고침 통화 구매 팝업
+- Id: 381
+  Type: AccountUnregisterPopup
+  TypeGroup: Account
+  Comment: 계정 탈퇴 팝업
+- Id: 382
+  Type: AccountUnregisterPopup_Cancel
+  TypeGroup: Account
+  Comment: 계정 탈퇴 취소 팝업
+- Id: 383
+  Type: AccountUnregisterPopup_Resign
+  TypeGroup: Account
+  Comment: 계정 탈퇴 사직 팝업
+- Id: 384
+  Type: AccountUnregisterPopup_Wait
+  TypeGroup: Account
+  Comment: 계정 탈퇴 대기 팝업
+- Id: 385
+  Type: AccountUnregisterPopup_Complete
+  TypeGroup: Account
+  Comment: 계정 탈퇴 완료 팝업
+- Id: 386
+  Type: LogoutPopup
+  TypeGroup: Account
+  Comment: 로그아웃 팝업
+- Id: 387
+  Type: ManageDevicePopup
+  TypeGroup: Account
+  Comment: 기기 관리 팝업
+- Id: 388
+  Type: ManageAccountPopup
+  TypeGroup: Account
+  Comment: 계정 관리 팝업
+- Id: 389
+  Type: RectTargetingGuide
+  TypeGroup: CoreGamePlay
+  Comment: 직사각형 타겟팅 가이드
+- Id: 390
+  Type: GameExitPopup
+  TypeGroup: Other
+  Comment: 게임 종료 팝업
+- Id: 391
+  Type: Awareness_ConfirmExpand
+  TypeGroup: Awareness
+  Comment: 자각의 불꽃 확장 확인
+- Id: 392
+  Type: Awareness_ConfirmLevelUp
+  TypeGroup: Awareness
+  Comment: 자각의 불꽃 레벨업 확인
+- Id: 393
+  Type: Awareness_Alert
+  TypeGroup: Awareness
+  Comment: 자각의 불꽃 알림
+- Id: 394
+  Type: SolidarityFilterPopup
+  TypeGroup: Solidarity
+  Comment: 결속 필터 팝업
+- Id: 395
+  Type: SolidarityEquipPopup
+  TypeGroup: Solidarity
+  Comment: 결속 장착 팝업
+- Id: 396
+  Type: SolidarityAlreadyLinkedPopup
+  TypeGroup: Solidarity
+  Comment: 결속 이미 연결됨 팝업
+- Id: 397
+  Type: SolidarityAutoLinkPopup
+  TypeGroup: Solidarity
+  Comment: 결속 자동 연결 팝업
+- Id: 398
+  Type: FusionSkill
+  TypeGroup: Skill
+  Comment: 융합 스킬
+- Id: 399
+  Type: FusionSkill_UnFusionConfirmPopup
+  TypeGroup: Skill
+  Comment: 융합 스킬 융합 해제 확인 팝업
+- Id: 400
+  Type: FusionSkillLearnedPopup
+  TypeGroup: Skill
+  Comment: 융합 스킬 학습 팝업
+- Id: 401
+  Type: PatchRequiredPopup
+  TypeGroup: Other
+  Comment: 패치 필요 팝업
+- Id: 402
+  Type: TutorialDetailInfoPopup
+  TypeGroup: Other
+  Comment: 튜토리얼 상세 정보 팝업
+- Id: 403
+  Type: PatchRequired_ExitGamePopup
+  TypeGroup: Other
+  Comment: 패치 필요 게임 종료 팝업
+- Id: 404
+  Type: ItemSetEffectPopup
+  TypeGroup: ItemInfo
+  Comment: 아이템 세트 효과 팝업
+- Id: 405
+  Type: ItemRandomOptionPopup
+  TypeGroup: ItemInfo
+  Comment: 아이템 랜덤 옵션 팝업
+- Id: 406
+  Type: MainBuildingLevelUpUnlockPopup
+  TypeGroup: Fortress
+  Comment: 메인 건물 레벨업 해금 팝업
+- Id: 407
+  Type: Reconnecting
+  TypeGroup: System
+  Comment: 재연결
+- Id: 408
+  Type: StoveLoginErrorPopup_BlockUser
+  TypeGroup: Account
+  Comment: 스토브 로그인 오류 차단된 사용자 팝업
+- Id: 409
+  Type: StoveLoginErrorPopup_GUIDNotFound
+  TypeGroup: Account
+  Comment: 스토브 로그인 오류 GUID 없음 팝업
+- Id: 410
+  Type: StoveLoginErrorPopup_Network
+  TypeGroup: Account
+  Comment: 스토브 로그인 오류 네트워크 팝업
+- Id: 411
+  Type: StoveLoginErrorPopup_TokenExpired
+  TypeGroup: Account
+  Comment: 스토브 로그인 오류 토큰 만료 팝업
+- Id: 412
+  Type: StoveLoginErrorPopup_Unknown
+  TypeGroup: Account
+  Comment: 스토브 로그인 오류 알 수 없음 팝업
+- Id: 413
+  Type: StoveInitErrorPopup_AppUpdate
+  TypeGroup: Account
+  Comment: 스토브 초기화 오류 앱 업데이트 팝업
+- Id: 414
+  Type: StoveInitErrorPopup_Configuration
+  TypeGroup: Account
+  Comment: 스토브 초기화 오류 설정 팝업
+- Id: 415
+  Type: StoveInitErrorPopup_ServerMaintenance
+  TypeGroup: Account
+  Comment: 스토브 초기화 오류 서버 점검 팝업
+- Id: 416
+  Type: StoveInitErrorPopup_NetworkError
+  TypeGroup: Account
+  Comment: 스토브 초기화 오류 네트워크 오류 팝업
+- Id: 417
+  Type: AppUpdatePopup
+  TypeGroup: Other
+  Comment: 앱 업데이트 팝업
+- Id: 418
+  Type: VerifyIdentificationPopup
+  TypeGroup: Account
+  Comment: 신원 확인 팝업
+- Id: 419
+  Type: CombatPointAlert
+  TypeGroup: CoreGamePlay
+  Comment: 전투력 알림
+- Id: 421
+  Type: Setting_ReconnectPopup
+  TypeGroup: Other
+  Comment: 설정 재접속 팝업
+- Id: 422
+  Type: RecordRoomPvP
+  TypeGroup: RecordRoom
+  Comment: PvP 기록실
+- Id: 423
+  Type: GameRatingPopup
+  TypeGroup: Other
+  Comment: 게임 이용 등급 팝업
+- Id: 424
+  Type: Setting_NextHpPotion_Tooltip
+  TypeGroup: Other
+  Comment: 설정 물약 자동 교체 툴팁
+- Id: 425
+  Type: EngravingAutoSlotOpenOptionPopup
+  TypeGroup: Craft
+  Comment: 자동 세공 슬롯 오픈 옵션 팝업
+- Id: 426
+  Type: EngravingAutoEngravingOptionPopup
+  TypeGroup: Craft
+  Comment: 자동 세공 옵션 팝업
+- Id: 427
+  Type: GuildAlert_TechLevelUp
+  TypeGroup: Guild
+  Comment: 길드 레벨업 알럿
+- Id: 4271
+  Type: GuildAuctionPopup_BidConfirm
+  TypeGroup: Guild
+  Comment: 길드 경매 입찰 확인
+- Id: 4272
+  Type: GuildAuctionPopup_Bid
+  TypeGroup: Guild
+  Comment: 길드 경매 입찰
+- Id: 4273
+  Type: GuildAuctionPopup_RegisterCancel
+  TypeGroup: Guild
+  Comment: 길드 경매 등록 취소
+- Id: 4274
+  Type: GuildAuctionPopup_RegisterConfirm
+  TypeGroup: Guild
+  Comment: 길드 경매 등록 확인
+- Id: 4275
+  Type: GuildAuctionPopup_Register
+  TypeGroup: Guild
+  Comment: 길드 경매 등록
+- Id: 428
+  Type: PotionSetting
+  TypeGroup: CoreGamePlay
+  Comment: 물약 설정창
+- Id: 429
+  Type: PotionSetting_PowerSavingMode
+  TypeGroup: CoreGamePlay
+  Comment: 물약 설정창 (절전모드)
+- Id: 430
+  Type: EnchantResult
+  TypeGroup: Craft
+  Comment: 장비 강화 결과
+- Id: 431
+  Type: ItemInfoHUD_EquipSlotSkin
+  TypeGroup: ItemInfo
+  Comment: 장착 슬롯 스킨 아이템 정보 HUD
+- Id: 432
+  Type: Disassemble_SubPopup
+  TypeGroup: Inventory
+- Id: 433
+  Type: Delete_SubPopup
+  TypeGroup: Inventory
+- Id: 434
+  Type: SkillPrioritySettingPopup
+  TypeGroup: Skill
+- Id: 435
+  Type: PotentialMainPopup
+  TypeGroup: Potential
+  IsTitleUI: true
+  TitleNames:
+    - UIWord_Potential
+  Comment: 잠재력 메인 화면
+- Id: 437
+  Type: PotentialSlotInfoPopup
+  TypeGroup: Potential
+  Comment: 잠재력 근원 정보 팝업
+- Id: 438
+  Type: PotentialAutoManifestPopup
+  TypeGroup: Potential
+  Comment: 잠재력 자동 발현 설정 팝업
+- Id: 439
+  Type: PotentialBatchEnchantPopup
+  TypeGroup: Potential
+  Comment: 잠재력 일괄 강화 팝업
+- Id: 440
+  Type: PotentialAutoEnchantPopup
+  TypeGroup: Potential
+  Comment: 잠재력 자동 강화 팝업
+- Id: 441
+  Type: SkinResultPopup
+  TypeGroup: Polymorph
+  Comment: 스킨 뽑기 결과화면
+- Id: 442
+  Type: SkinQuantityBonusPopup
+  TypeGroup: Polymorph
+  Comment: 스킨 보유효과
+- Id: 443
+  Type: PotentialManifestGradeCautionPopup
+  TypeGroup: Potential
+  Comment: 잠재력 등급 확인 팝업
+- Id: 444
+  Type: BMShopPopup_HotDeal
+  TypeGroup: BMShop
+  Comment: BM 상점 핫딜 팝업
+- Id: 445
+  Type: SolidarityCombinationPopup
+  TypeGroup: Solidarity
+- Id: 446
+  Type: ResetStatFavoritePopup
+  TypeGroup: CharacterInfo
+  Comment: 캐릭터정보 스탯창 즐겨찾기 초기화 팝업
+- Id: 447
+  Type: InstanceExitPopup
+  TypeGroup: CoreGamePlay
+  Comment: 인스턴스 퇴장 팝업
+- Id: 448
+  Type: SolidarityAcquireAlert
+  TypeGroup: Solidarity
+- Id: 449
+  Type: TradePopup_PurchaseWarning
+  TypeGroup: Trade
+  Comment: 비정상 거래 팝업 (구매)
+- Id: 450
+  Type: TradePopup_SellWarning
+  TypeGroup: Trade
+  Comment: 비정상 거래 팝업 (판매)
+- Id: 451
+  Type: TradePopup_AdjustWarning
+  TypeGroup: Trade
+  Comment: 비정상 거래 팝업 (정산)
+- Id: 452
+  Type: RecipeResultSpecialPopup
+  TypeGroup: Recipe
+  Comment: 레시피 결과 팝업
+- Id: 453
+  Type: TradePopup_ReRegistrationWarning
+  TypeGroup: Trade
+  Comment: 비정상 거래 팝업 (일괄 재등록)
+- Id: 454
+  Type: SequencerLetterbox
+  TypeGroup: Other
+  Comment: 시퀀서 레터박스 연출
+- Id: 455
+  Type: MasteryLevelUpPopup
+  TypeGroup: Mastery
+  Comment: 전투 특성 레벨업 팝업
+- Id: 456
+  Type: PotentialBatchEnchantCalculator
+  TypeGroup: Potential
+  Comment: 잠재력 일괄 강화 계산기 팝업
+- Id: 457
+  Type: PotentialAutoEnchantCalculator
+  TypeGroup: Potential
+  Comment: 잠재력 자동 강화 계산기 팝업
+- Id: 458
+  Type: SolidarityUnlinkAllPopup
+  TypeGroup: Solidarity
+- Id: 459
+  Type: ItemMultiDisassemblePopup
+  TypeGroup: Inventory
+- Id: 460
+  Type: ItemMultiDeletePopup
+  TypeGroup: Inventory

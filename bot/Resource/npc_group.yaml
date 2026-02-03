@@ -1,0 +1,789 @@
+- Id: 1038
+  Name: South_Varitan_Lostwick
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Lostwick_Desc
+  Comment: 로스트윅
+- Id: 11
+  Name: Varitan
+  Parent: World
+  Description: Npc_Group_Varitan_Desc
+  Comment: 바리탄
+- Id: 21
+  Name: Eldar
+  Parent: World
+  Description: Npc_Group_Eldar_Desc
+  Comment: 엘다르
+- Id: 31
+  Name: Rockhed
+  Parent: World
+  Description: Npc_Group_Rockhed_Desc
+  Comment: 락헤드
+- Id: 101
+  Name: Rainwood
+  Parent: Varitan
+  Description: Npc_Group_Rainwood_Desc
+  Comment: 레인우드
+- Id: 102
+  Name: East_Varitan
+  Parent: Varitan
+  Description: Npc_Group_East_Varitan_Desc
+  Comment: 바리탄 동부
+- Id: 103
+  Name: South_Varitan
+  Parent: Varitan
+  Description: Npc_Group_South_Varitan_Desc
+  Comment: 바리탄 남부
+- Id: 104
+  Name: West_Varitan
+  Parent: Varitan
+  Description: Npc_Group_West_Varitan_Desc
+  Comment: 바리탄 서부
+- Id: 105
+  Name: North_Varitan
+  Parent: Varitan
+  Description: Npc_Group_North_Varitan_Desc
+  Comment: 바리탄 북부
+- Id: 201
+  Name: Eldar_East
+  Parent: Eldar
+  Description: Npc_Group_Eldar_East_Desc
+  Comment: 엘다르 동부
+- Id: 202
+  Name: Eldar_Central
+  Parent: Eldar
+  Description: Npc_Group_Eldar_Central_Desc
+  Comment: 엘다르 중부
+- Id: 203
+  Name: Eldar_North
+  Parent: Eldar
+  Description: Npc_Group_Eldar_North_Desc
+  Comment: 엘다르 북부
+- Id: 301
+  Name: East_Rockhed
+  Parent: Rockhed
+  Description: Npc_Group_East_Rockhed_Desc
+  Comment: 동부 락헤드
+- Id: 302
+  Name: South_Rockhed
+  Parent: Rockhed
+  Description: Npc_Group_South_Rockhed_Desc
+  Comment: 남부 락헤드
+- Id: 303
+  Name: West_Rockhed
+  Parent: Rockhed
+  Description: Npc_Group_West_Rockhed_Desc
+  Comment: 서부 락헤드
+- Id: 304
+  Name: North_Rockhed
+  Parent: Rockhed
+  Description: Npc_Group_North_Rockhed_Desc
+  Comment: 북부 락헤드
+- Id: 305
+  Name: Central_Rockhed
+  Parent: Rockhed
+  Description: Npc_Group_Central_Rockhed_Desc
+  Comment: 중부 락헤드
+- Id: 1011
+  Name: Rainwood_Isah_Lake
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Isah_Lake_Desc
+  Comment: 이즈아 호수
+- Id: 1012
+  Name: Rainwood_Hololu_Cavern
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Hololu_Cavern_Desc
+  Comment: 홀룰루 동굴
+- Id: 1013
+  Name: Rainwood_Stone_Head
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Stone_Head_Desc
+  Comment: 스톤 헤드
+- Id: 1014
+  Name: Rainwood_Dwarven_Gravediggers_Camp
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Dwarven_Gravediggers_Camp_Desc
+  Comment: 난쟁이 도굴꾼 소굴
+- Id: 1015
+  Name: Rainwood_Isah_Garden
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Isah_Garden_Desc
+  Comment: 이즈아 정원
+- Id: 1016
+  Name: Rainwood_Dragondog_Hunters_Camp
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Dragondog_Hunters_Camp_Desc
+  Comment: 용개 사냥꾼 소굴
+- Id: 1017
+  Name: Rainwood_Rockhed_Imperial_Outpost
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Rockhed_Imperial_Outpost_Desc
+  Comment: 락헤드 제국군 초소
+- Id: 1021
+  Name: East_Varitan_Highwinguard_Eastern_Plains
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Highwinguard_Eastern_Plains_Desc
+  Comment: 하이윙가드 동부 평원
+- Id: 1022
+  Name: East_Varitan_Golden_Oak_Farm
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Golden_Oak_Farm_Desc
+  Comment: 골든 오크 농장
+- Id: 1023
+  Name: East_Varitan_Halan_Mercenary_Outpost
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Halan_Mercenary_Outpost_Desc
+  Comment: 할란 용병단 전초기지
+- Id: 1024
+  Name: East_Varitan_Free_Harbor
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Free_Harbor_Desc
+  Comment: 자유항
+- Id: 1025
+  Name: East_Varitan_Villin_Hills
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Villin_Hills_Desc
+  Comment: 빌린 언덕
+- Id: 1026
+  Name: East_Varitan_Combustionists_Civil_Works_Area
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Combustionists_Civil_Works_Area_Desc
+  Comment: 대발파회 토목공사 지구
+- Id: 1027
+  Name: East_Varitan_Varitan_Biblical_Order_Border_Patrols
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Varitan_Biblical_Order_Border_Patrols_Desc
+  Comment: 바리탄 성서기사단 국경 수비대
+- Id: 1030
+  Name: Bloodshed
+  Parent: South_Varitan
+  Description: Npc_Group_Bloodshed_Desc
+  Comment: 블러드쉐드
+- Id: 8860
+  Name: South_Varitan_Bloodshed_01
+  Parent: Bloodshed
+  Description: Npc_Group_South_Varitan_Bloodshed_01_Desc
+  Comment: 블러드쉐드 1층
+- Id: 8974
+  Name: South_Varitan_Bloodshed_02
+  Parent: Bloodshed
+  Description: Npc_Group_South_Varitan_Bloodshed_02_Desc
+  Comment: 블러드쉐드 2층
+- Id: 1031
+  Name: South_Varitan_Cliff_of_Purity
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Cliff_of_Purity_Desc
+  Comment: 순결의 절벽
+- Id: 1032
+  Name: South_Varitan_Screaming_Canyon
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Screaming_Canyon_Desc
+  Comment: 비명 협곡
+- Id: 1033
+  Name: South_Varitan_Varitan_Outpost
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Varitan_Outpost_Desc
+  Comment: 바리탄 전초기지
+- Id: 1034
+  Name: South_Varitan_Varitan_Guard_Post
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Varitan_Guard_Post_Desc
+  Comment: 바리탄 경비초소
+- Id: 1035
+  Name: South_Varitan_Faceless_Brotherhood_Fortress
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Faceless_Brotherhood_Fortress_Desc
+  Comment: 얼굴 없는 형제단 요새
+- Id: 1036
+  Name: South_Varitan_Red_Cheeks_Bandit_Camp
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Red_Cheeks_Bandit_Camp_Desc
+  Comment: 붉은 볼짝 도적단 소굴
+- Id: 1037
+  Name: South_Varitan_Ruined_Village
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Ruined_Village_Desc
+  Comment: 폐허가 된 마을
+- Id: 1
+  Name: World
+  Description: Npc_Group_World_Desc
+  Comment: 월드 전체
+- Id: 1039
+  Name: South_Varitan_The_Evoh_Bloodlines
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_The_Evoh_Bloodlines_Desc
+  Comment: 에보 가문의 핏줄
+- Id: 1051
+  Name: North_Varitan_Highwinguard_Logging_Area
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Highwinguard_Logging_Area_Desc
+  Comment: 하이윙가드 벌목지구
+- Id: 1052
+  Name: North_Varitan_Combustionists_Quarry
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Combustionists_Quarry_Desc
+  Comment: 대발파회 채광지
+- Id: 1053
+  Name: North_Varitan_Varitan_Biblical_Order
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Varitan_Biblical_Order_Desc
+  Comment: 바리탄 성서 수도회
+- Id: 1054
+  Name: North_Varitan_Rockhed_Mercenary_Patrols
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Rockhed_Mercenary_Patrols_Desc
+  Comment: 락헤드 용병단 국경 수비대
+- Id: 1055
+  Name: North_Varitan_Tree_Valley
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Tree_Valley_Desc
+  Comment: 나무 계곡
+- Id: 1056
+  Name: North_Varitan_Soy_Mountains_Mining_Town
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Soy_Mountains_Mining_Town_Desc
+  Comment: 소이산맥 광산촌
+- Id: 1057
+  Name: North_Varitan_Falmir_Harbor
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Falmir_Harbor_Desc
+  Comment: 팔미르 항
+- Id: 1058
+  Name: North_Varitan_Millan_Castle
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Millan_Castle_Desc
+  Comment: 밀란의 성채
+- Id: 2010
+  Name: Kulika_Undying
+  Parent: Eldar_East
+  Description: Npc_Group_Kulika_Undying_Desc
+  Comment: 구리 불멸지
+- Id: 1375
+  Name: Kulika_Undying_Lands_01
+  Parent: Kulika_Undying
+  Description: Npc_Group_Kulika_Undying_Lands_01_Desc
+  Comment: 구리 불멸지 1층
+- Id: 7271
+  Name: Kulika_Undying_Lands_02
+  Parent: Kulika_Undying
+  Description: Npc_Group_Kulika_Undying_Lands_02_Desc
+  Comment: 구리 불멸지 2층
+- Id: 8626
+  Name: Kulika_Undying_Lands_03
+  Parent: Kulika_Undying
+  Description: Npc_Group_Kulika_Undying_Lands_03_Desc
+  Comment: 구리 불멸지 3층
+- Id: 2547
+  Name: Kulika_Undying_Lands_04
+  Parent: Kulika_Undying
+  Description: Npc_Group_Kulika_Undying_Lands_04_Desc
+  Comment: 구리 불멸지 4층
+- Id: 4319
+  Name: Kulika_Undying_Lands_05
+  Parent: Kulika_Undying
+  Description: Npc_Group_Kulika_Undying_Lands_05_Desc
+  Comment: 구리 불멸지 5층
+- Id: 2011
+  Name: Eldar_East_Mirage_Valley
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Mirage_Valley_Desc
+  Comment: 신기루 계곡
+- Id: 2012
+  Name: Eldar_East_Nasyars_Bastion
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Nasyars_Bastion_Desc
+  Comment: 나샤르의 보루
+- Id: 2013
+  Name: Eldar_East_Ellan_Border_Patrols
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Ellan_Border_Patrols_Desc
+  Comment: 엘란 국경 수비대
+- Id: 2014
+  Name: Eldar_East_Hooked_Lake
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Hooked_Lake_Desc
+  Comment: 갈고리 호수
+- Id: 2015
+  Name: Eldar_East_Balko_Rock
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Balko_Rock_Desc
+  Comment: 발꼬 락
+- Id: 2016
+  Name: Eldar_East_Draconian_Karakans_Lands
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Draconian_Karakans_Lands_Desc
+  Comment: 용족 카라칸의 땅
+- Id: 2017
+  Name: Eldar_East_Barbarian_Chief_Touren_Sisters
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Barbarian_Chief_Touren_Sisters_Desc
+  Comment: 야만족장 토우렌 자매
+- Id: 2018
+  Name: Eldar_East_Traces_of_the_Black_Dragon
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Traces_of_the_Black_Dragon_Desc
+  Comment: 검용의 흔적
+- Id: 2021
+  Name: Eldar_Central_Arkhandar_Order
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Arkhandar_Order_Desc
+  Comment: 아르칸다르 교단
+- Id: 2022
+  Name: Eldar_Central_Blackveil_Lake
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Blackveil_Lake_Desc
+  Comment: 검은막 호수
+- Id: 2023
+  Name: Eldar_Central_Wild_Boar_Forest
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Wild_Boar_Forest_Desc
+  Comment: 멧돼지 숲
+- Id: 2024
+  Name: Eldar_Central_Butterfly_Lump_Bunk
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Butterfly_Lump_Bunk_Desc
+  Comment: 나비 혹 잠자리
+- Id: 2025
+  Name: Eldar_Central_Labyrinthine_Forest
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Labyrinthine_Forest_Desc
+  Comment: 미로숲
+- Id: 2026
+  Name: Eldar_Central_Slumbering_Sand_Beach
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Slumbering_Sand_Beach_Desc
+  Comment: 잠든모래 백사장
+- Id: 2027
+  Name: Eldar_Central_Slumbering_Sand_Dock
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Slumbering_Sand_Dock_Desc
+  Comment: 잠든모래 선착장
+- Id: 2031
+  Name: Eldar_North_House_Rua_Grave_Mound
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_House_Rua_Grave_Mound_Desc
+  Comment: 루아 총묘
+- Id: 2032
+  Name: Eldar_North_Harf_Wetlands
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Harf_Wetlands_Desc
+  Comment: 하프 습지
+- Id: 2033
+  Name: Eldar_North_Valley_of_Corpses
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Valley_of_Corpses_Desc
+  Comment: 시체 협곡
+- Id: 2034
+  Name: Eldar_North_Ruah_Riverside_Sharans_Wall
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Ruah_Riverside_Sharans_Wall_Desc
+  Comment: 루아흐 강변
+- Id: 2035
+  Name: Eldar_North_Nest_of_the_Dwarven_King_Durunk
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Nest_of_the_Dwarven_King_Durunk_Desc
+  Comment: 난쟁이 왕 두릉크 둥지
+- Id: 2036
+  Name: Eldar_North_Tail_of_the_Exiled
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Tail_of_the_Exiled_Desc
+  Comment: 추방자의 땅
+- Id: 2037
+  Name: Eldar_North_Muck_Kings_Land
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Muck_Kings_Land_Desc
+  Comment: 오물왕의 땅
+- Id: 2038
+  Name: Eldar_North_Mud_Kings_Land
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Mud_Kings_Land_Desc
+  Comment: 진흑왕의 땅
+- Id: 2324
+  Name: East_Rockhed_The_House_Persister
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_The_House_Persister_Desc
+  Comment: 퍼시스터 가문
+- Id: 1901
+  Name: West_Rockhed_Rockhed_First_Imperial_Legion_Mercenaries
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Rockhed_First_Imperial_Legion_Mercenaries_Desc
+  Comment: 락헤드 제국 제1군 소속 용병단
+- Id: 235
+  Name: East_Rockhed_Castle_Hornhill
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Castle_Hornhill_Desc
+  Comment: 호른힐 성채
+- Id: 4977
+  Name: East_Rockhed_Stone_Neck
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Stone_Neck_Desc
+  Comment: 스톤 넥
+- Id: 340
+  Name: East_Rockhed_The_Golden_Valley
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_The_Golden_Valley_Desc
+  Comment: 황금 계곡
+- Id: 1700
+  Name: East_Rockhed_Kagurock_Mining_City
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Kagurock_Mining_City_Desc
+  Comment: 카굴록 광산도시
+- Id: 5848
+  Name: East_Rockhed_Faceless_Sisterhood
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Faceless_Sisterhood_Desc
+  Comment: 얼굴 없는 자매단
+- Id: 5469
+  Name: East_Rockhed_Rockhed_Prison
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Rockhed_Prison_Desc
+  Comment: 락헤드 형무소
+- Id: 1746
+  Name: Abrion_Tower
+  Parent: East_Rockhed
+  Description: Npc_Group_Abrion_Tower_Desc
+  Comment: 아브리온 탑
+- Id: 4880
+  Name: East_Rockhed_Abrion_Tower_01
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_01_Desc
+  Comment: 아브리온 탑 1층
+- Id: 5041
+  Name: East_Rockhed_Abrion_Tower_02
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_02_Desc
+  Comment: 아브리온 탑 2층
+- Id: 5318
+  Name: East_Rockhed_Abrion_Tower_03
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_03_Desc
+  Comment: 아브리온 탑 3층
+- Id: 5412
+  Name: East_Rockhed_Abrion_Tower_04
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_04_Desc
+  Comment: 아브리온 탑 4층
+- Id: 4171
+  Name: East_Rockhed_Abrion_Tower_05
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_05_Desc
+  Comment: 아브리온 탑 5층
+- Id: 5767
+  Name: East_Rockhed_Abrion_Tower_06
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_06_Desc
+  Comment: 아브리온 탑 6층
+- Id: 8695
+  Name: East_Rockhed_Abrion_Tower_07
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Rockhed_Abrion_Tower_07_Desc
+  Comment: 아브리온 탑 7층
+- Id: 4637
+  Name: South_Rockhed_Vaellan_Parliament
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Vaellan_Parliament_Desc
+  Comment: 바엘란 의사당
+- Id: 7117
+  Name: South_Rockhed_Rockhed_Imperial_Frontline_Outpost
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Rockhed_Imperial_Frontline_Outpost_Desc
+  Comment: 락헤드 제국군 전진초소
+- Id: 5
+  Name: South_Rockhed_Castle_Astarote
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Castle_Astarote_Desc
+  Comment: 아스타로트 성채
+- Id: 6431
+  Name: South_Rockhed_Combustionists_Directors_Associate
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Combustionists_Directors_Associate_Desc
+  Comment: 대발파회 감독회
+- Id: 2166
+  Name: South_Rockhed_Undead_Haksan
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Undead_Haksan_Desc
+  Comment: 언데드 학산
+- Id: 5560
+  Name: South_Rockhed_Dacaroon_Ruins
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Dacaroon_Ruins_Desc
+  Comment: 다카룬 유적
+- Id: 2212
+  Name: South_Rockhed_Nest_of_the_Babil_Moth_Queen
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Nest_of_the_Babil_Moth_Queen_Desc
+  Comment: 바빌 나방 여왕 둥지
+- Id: 2077
+  Name: South_Rockhed_Gaia_Ondor
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Gaia_Ondor_Desc
+  Comment: 가이아 온도르
+- Id: 9497
+  Name: Breath_of_Gaia_Ondor
+  Parent: South_Rockhed
+  Description: Npc_Group_Breath_of_Gaia_Ondor_Desc
+  Comment: 가이아 온도르의 숨결
+- Id: 5916
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_01
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_01_Desc
+  Comment: 가이아 온도르의 숨결 1층
+- Id: 6999
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_02
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_02_Desc
+  Comment: 가이아 온도르의 숨결 2층
+- Id: 9094
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_03
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_03_Desc
+  Comment: 가이아 온도르의 숨결 3층
+- Id: 2850
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_04
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_04_Desc
+  Comment: 가이아 온도르의 숨결 4층
+- Id: 8290
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_05
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_05_Desc
+  Comment: 가이아 온도르의 숨결 5층
+- Id: 5800
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_06
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_06_Desc
+  Comment: 가이아 온도르의 숨결 6층
+- Id: 9378
+  Name: South_Rockhed_Breath_of_Gaia_Ondor_07
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Rockhed_Breath_of_Gaia_Ondor_07_Desc
+  Comment: 가이아 온도르의 숨결 7층
+- Id: 1988
+  Name: Holy_Patria_Lesbos_Sanctum
+  Parent: South_Rockhed
+  Description: Npc_Group_Holy_Patria_Lesbos_Sanctum_Desc
+  Comment: 성녀 페트리아 레스보스 신단
+- Id: 4992
+  Name: South_Rockhed_Holy_Patria_Lesbos_Sanctum_01
+  Parent: Holy_Patria_Lesbos_Sanctum
+  Description: Npc_Group_South_Rockhed_Holy_Patria_Lesbos_Sanctum_01_Desc
+  Comment: 성녀 페트리아 레스보스 신단 1층
+- Id: 7588
+  Name: South_Rockhed_Holy_Patria_Lesbos_Sanctum_02
+  Parent: Holy_Patria_Lesbos_Sanctum
+  Description: Npc_Group_South_Rockhed_Holy_Patria_Lesbos_Sanctum_02_Desc
+  Comment: 성녀 페트리아 레스보스 신단 2층
+- Id: 3938
+  Name: West_Rockhed_Blessed_Bastion
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Blessed_Bastion_Desc
+  Comment: 축복 성채
+- Id: 6710
+  Name: West_Rockhed_Bat_Forest
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Bat_Forest_Desc
+  Comment: 박쥐 숲
+- Id: 2447
+  Name: West_Rockhed_Anna_Mining_Town
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Anna_Mining_Town_Desc
+  Comment: 안나 광산촌
+- Id: 1980
+  Name: West_Rockhed_Harpy_Hell
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Harpy_Hell_Desc
+  Comment: 하피 지옥
+- Id: 2492
+  Name: West_Rockhed_Millenium_Well
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Millenium_Well_Desc
+  Comment: 천년 우물
+- Id: 2918
+  Name: West_Rockhed_Sharans_Rift
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Sharans_Rift_Desc
+  Comment: 샤란의 균열
+- Id: 89
+  Name: West_Rockhed_Tower_of_Triumph
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Tower_of_Triumph_Desc
+  Comment: 승전의 탑
+- Id: 5051
+  Name: East_Rockhed_Golden_Road
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_Golden_Road_Desc
+  Comment: 골든 로드
+- Id: 10433
+  Name: Daily_Dun_Ruined_Castle
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_Desc
+  Comment: 데일리 던전 무법성채
+- Id: 11882
+  Name: Daily_Dun_Undead_Temple
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Undead_Temple_Desc
+  Comment: 데일리 던전 언데드 신전
+- Id: 4111
+  Name: Daily_Dun_Mining_Area
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Mining_Area_Desc
+  Comment: 데일리 던전 광산 지구
+- Id: 10456
+  Name: Daily_Dun_Ruined_Castle_01
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_01_Desc
+  Comment: 데일리 던전 무법성채 1층
+- Id: 4339
+  Name: Daily_Dun_Ruined_Castle_02
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_02_Desc
+  Comment: 데일리 던전 무법성채 2층
+- Id: 11857
+  Name: Daily_Dun_Ruined_Castle_03
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_03_Desc
+  Comment: 데일리 던전 무법성채 3층
+- Id: 4824
+  Name: Daily_Dun_Ruined_Castle_04
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_04_Desc
+  Comment: 데일리 던전 무법성채 4층
+- Id: 4845
+  Name: Daily_Dun_Ruined_Castle_05
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_05_Desc
+  Comment: 데일리 던전 무법성채 5층
+- Id: 2069
+  Name: Daily_Dun_Undead_Temple_01
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_01_Desc
+  Comment: 데일리 던전 언데드 신전 1층
+- Id: 2675
+  Name: Daily_Dun_Undead_Temple_02
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_02_Desc
+  Comment: 데일리 던전 언데드 신전 2층
+- Id: 2178
+  Name: Daily_Dun_Undead_Temple_03
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_03_Desc
+  Comment: 데일리 던전 언데드 신전 3층
+- Id: 2152
+  Name: Daily_Dun_Undead_Temple_04
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_04_Desc
+  Comment: 데일리 던전 언데드 신전 4층
+- Id: 889
+  Name: Daily_Dun_Undead_Temple_05
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_05_Desc
+  Comment: 데일리 던전 언데드 신전 5층
+- Id: 11532
+  Name: Daily_Dun_Mining_Area_01
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_01_Desc
+  Comment: 데일리 던전 버려진 채굴지 1층
+- Id: 726
+  Name: Daily_Dun_Mining_Area_02
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_02_Desc
+  Comment: 데일리 던전 버려진 채굴지 2층
+- Id: 7571
+  Name: Daily_Dun_Mining_Area_03
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_03_Desc
+  Comment: 데일리 던전 버려진 채굴지 3층
+- Id: 8271
+  Name: Daily_Dun_Mining_Area_04
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_04_Desc
+  Comment: 데일리 던전 버려진 채굴지 4층
+- Id: 7982
+  Name: Daily_Dun_Mining_Area_05
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_05_Desc
+  Comment: 데일리 던전 버려진 채굴지 5층
+- Id: 7692
+  Name: BattleGround_Faction_HighRiver
+  Parent: World
+  Description: Npc_Group_BattleGround_Faction_HighRiver_Desc
+  Comment: "[전장] 하이리버 전투"
+- Id: 12301
+  Name: BattleGround_Faction_HighRiver_Stun
+  Parent: BattleGround_Faction_HighRiver
+  Description: Npc_Group_BattleGround_Faction_HighRiver_Stun_Desc
+  Comment: "[전장] 하이리버 전투_기절"
+- Id: 11606
+  Name: South_Varitan_Varitan_Guard_Post_instance
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Varitan_Guard_Post_instance_Desc
+  Comment: 인스턴스 바리탄 경비초소
+- Id: 9376
+  Name: South_Varitan_Bloodshed02_instance
+  Parent: Bloodshed
+  Description: Npc_Group_South_Varitan_Bloodshed02_instance_Desc
+  Comment: 인스턴스 블러드쉐드 2층
+- Id: 213
+  Name: Rainwood_Hololu_Cavern_instance
+  Parent: Rainwood
+  Description: Npc_Group_Rainwood_Hololu_Cavern_instance_Desc
+  Comment: 인스턴스 홀룰루 동굴
+- Id: 5276
+  Name: Eldar_North_Ruah_Riverside_Sharans_Wall_instance
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Ruah_Riverside_Sharans_Wall_instance_Desc
+  Comment: 인스턴스 루아흐 강변
+- Id: 10920
+  Name: Eldar_Central_Arkhandar_Order_instance
+  Parent: Eldar_Central
+  Description: Npc_Group_Eldar_Central_Arkhandar_Order_instance_Desc
+  Comment: 인스턴스 아르칸다르 교단
+- Id: 8721
+  Name: Eldar_East_Barbarian_Chief_Touren_Sisters_instance
+  Parent: Eldar_East
+  Description: Npc_Group_Eldar_East_Barbarian_Chief_Touren_Sisters_instance_Desc
+  Comment: 인스턴스 야만족장 토우렌 자매
+- Id: 1563
+  Name: North_Varitan_Combustionists_Quarry_instance
+  Parent: North_Varitan
+  Description: Npc_Group_North_Varitan_Combustionists_Quarry_instance_Desc
+  Comment: 인스턴스 대발파회 채광지
+- Id: 5402
+  Name: Eldar_North_Valley_of_Corpses_instance
+  Parent: Eldar_North
+  Description: Npc_Group_Eldar_North_Valley_of_Corpses_instance_Desc
+  Comment: 인스턴스 시체 협곡
+- Id: 12768
+  Name: South_Varitan_Cliff_of_Purity_instance
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Cliff_of_Purity_instance_Desc
+  Comment: 인스턴스 순결의 절벽
+- Id: 13707
+  Name: South_Varitan_Screaming_Canyon_instance
+  Parent: South_Varitan
+  Description: Npc_Group_South_Varitan_Screaming_Canyon_instance_Desc
+  Comment: 인스턴스 비명 협곡
+- Id: 10512
+  Name: East_Varitan_Varitan_Castle_instance
+  Parent: East_Varitan
+  Description: Npc_Group_East_Varitan_Varitan_Castle_instance_Desc
+  Comment: 인스턴스 바리탄 성채
+- Id: 6801
+  Name: West_Rockhed_Tower_of_Triumph_instance
+  Parent: West_Rockhed
+  Description: Npc_Group_West_Rockhed_Tower_of_Triumph_instance_Desc
+  Comment: 인스턴스 승전의 탑
+- Id: 10102
+  Name: South_Rockhed_Castle_Astarote_instance
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Castle_Astarote_instance_Desc
+  Comment: 인스턴스 아스타로트 성채
+- Id: 3396
+  Name: South_Rockhed_Nest_of_the_Babil_Moth_Queen_instance
+  Parent: South_Rockhed
+  Description: Npc_Group_South_Rockhed_Nest_of_the_Babil_Moth_Queen_instance_Desc
+  Comment: 인스턴스 바빌 나방 여왕 둥지
+- Id: 2051
+  Name: East_Rockhed_The_Golden_Valley_instance
+  Parent: East_Rockhed
+  Description: Npc_Group_East_Rockhed_The_Golden_Valley_instance_Desc
+  Comment: 인스턴스 황금 계곡

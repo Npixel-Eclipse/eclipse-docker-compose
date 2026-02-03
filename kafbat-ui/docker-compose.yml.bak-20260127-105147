@@ -1,0 +1,44 @@
+services:
+  kafbat-ui:
+    image: 530627797191.dkr.ecr.ap-northeast-2.amazonaws.com/kafbat-ui:default
+    volumes:
+      - ./Proto:/Proto
+      - ./files/kui-proto-serde-1.4-SNAPSHOT.jar:/kui-proto-serde-1.4-SNAPSHOT.jar
+    ports:
+      - "8092:8080"
+    environment:
+      DYNAMIC_CONFIG_ENABLED: 'false'
+      AUTH_TYPE: 'DISABLED'
+      KAFKA_CLUSTERS_0_NAME: 'Dev 환경'
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: '192.168.121.91:39092,192.168.121.91:39093,192.168.121.91:39094'
+      KAFKA_CLUSTERS_0_PROPERTIES_SECURITY_PROTOCOL: 'SASL_PLAINTEXT'
+      KAFKA_CLUSTERS_0_PROPERTIES_SASL_MECHANISM: 'SCRAM-SHA-512'
+      KAFKA_CLUSTERS_0_PROPERTIES_SASL_JAAS_CONFIG: 'org.apache.kafka.common.security.scram.ScramLoginModule required username="admin" password="admin123";'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_0_NAME: 'connect-1'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: 'http://192.168.121.91:38083'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_1_NAME: 'connect-2'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_1_ADDRESS: 'http://192.168.121.91:38084'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_2_NAME: 'connect-3'
+      KAFKA_CLUSTERS_0_KAFKACONNECT_2_ADDRESS: 'http://192.168.121.91:38084'
+      KAFKA_CLUSTERS_0_SERDE_0_NAME: EclipseProtoSerde
+      KAFKA_CLUSTERS_0_SERDE_0_CLASSNAME: com.eclipse.KuiProtoSerde.KafbatUiProtoSerde
+      KAFKA_CLUSTERS_0_SERDE_0_FILEPATH: /kui-proto-serde-1.4-SNAPSHOT.jar
+      KAFKA_CLUSTERS_0_SERDE_0_PROPERTIES_RESOURCEFILENAME: server_kafka_topic.yaml
+      KAFKA_CLUSTERS_0_SERDE_1_NAME: EclipseKafkaKeySerde
+      KAFKA_CLUSTERS_0_SERDE_1_CLASSNAME: com.eclipse.KuiProtoSerde.KafbatUiKafkaKeySerde
+      KAFKA_CLUSTERS_0_SERDE_1_FILEPATH: /kui-proto-serde-1.4-SNAPSHOT.jar
+      KAFKA_CLUSTERS_1_NAME: 'Stage (OnPremPerf) 환경'
+      KAFKA_CLUSTERS_1_BOOTSTRAPSERVERS: 'kafka.onpremperf.eclipsestudio.co.kr:9094'
+      KAFKA_CLUSTERS_1_SERDE_0_NAME: EclipseProtoSerde
+      KAFKA_CLUSTERS_1_SERDE_0_CLASSNAME: com.eclipse.KuiProtoSerde.KafbatUiProtoSerde
+      KAFKA_CLUSTERS_1_SERDE_0_FILEPATH: /kui-proto-serde-1.4-SNAPSHOT.jar
+      KAFKA_CLUSTERS_1_SERDE_0_PROPERTIES_RESOURCEFILENAME: server_kafka_topic.yaml
+      KAFKA_CLUSTERS_1_SERDE_1_NAME: EclipseKafkaKeySerde
+      KAFKA_CLUSTERS_1_SERDE_1_CLASSNAME: com.eclipse.KuiProtoSerde.KafbatUiKafkaKeySerde
+      KAFKA_CLUSTERS_1_SERDE_1_FILEPATH: /kui-proto-serde-1.4-SNAPSHOT.jar
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    driver: bridge

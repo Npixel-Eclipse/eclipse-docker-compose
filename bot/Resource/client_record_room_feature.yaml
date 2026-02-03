@@ -1,0 +1,92 @@
+- Id: 1
+  Name: RecordRoom
+  ClientConstants:
+    - Name: NoUseTitle
+      DescValue: UIWord_RecordRoom_NoUseTitle
+    - Name: NoApplyTitle
+      DescValue: UIWord_RecordRoom_NoApplyTitle
+    - Name: NoScornCount
+      SystemMessageValue: UIWord_SystemMsg_Record_ScornCountZero
+    - Name: NoTraceCount
+      SystemMessageValue: UIWord_SystemMsg_Record_TraceCountZero
+    - Name: ReactFailGold
+      SystemMessageValue: UIWord_SystemMsg_Record_ReactFailGold
+    - Name: WinHintText
+      DescValue: UIWord_Record_PvPMessage_VictoryMessage
+    - Name: LoseHintText
+      DescValue: UIWord_Record_PvPMessage_DefeatMessage
+    - Name: RankingReddot
+      Value: Record_Room_Ranking
+    - Name: TitleReddot
+      Value: Record_Room_Ranking_Title
+    - Name: PvpLogReddot
+      Value: Pk_Log_List
+    - Name: BuffCharacterTitle
+      Value: CharacterTitle
+    - Name: BuffScornTitle
+      Value: ScornTitle
+    - Name: BuffRankingMark
+      Value: RankingMark
+    - Name: PropertyLogId
+      Value: id
+    - Name: PropertyLeftScorn
+      Value: left_scorn
+  Constants:
+    - Name: ScornMessageDisplaySeconds
+      Value: ScornMessageDisplaySeconds
+    - Name: RankingLevelLimit
+      Value: RankingLevelLimit
+  CostConstants:
+    - Name: TraceCost
+      Cost: Trace
+    - Name: WantedCost
+      Cost: Wanted
+    - Name: ScornMessage
+      Cost: ScornMessage
+    - Name: ScornTitle
+      Cost: ScornTitle
+    - Name: ScornEmoji
+      Cost: ScornEmoji
+  UITab:
+    - Group: Ranking
+      SubGroup: Ranking
+      TabIndex: 0
+      DefaultTab: true
+      Icon: /Game/UI/ArchiveRoom_SP/TabIcon_Rank.TabIcon_Rank
+      Description: UIWord_Rank
+    - Group: Ranking
+      SubGroup: Guild
+      TabIndex: 1
+      Icon: /Game/UI/ArchiveRoom_SP/TabICon_GuildRank_Sprite.TabICon_GuildRank_Sprite
+      Description: UIWord_GUILD
+    - Group: PvP
+      SubGroup: AllLog
+      TabIndex: 0
+      DefaultTab: true
+      Icon: /Game/UI/ArchiveRoom_SP/TabIcon_PVPAll.TabIcon_PVPAll
+      Description: UIWordAll
+      Reddot: Pk_Log_List
+    - Group: PvP
+      SubGroup: MyLog
+      TabIndex: 1
+      Icon: /Game/UI/ArchiveRoom_SP/TabIcon_PVPMine.TabIcon_PVPMine
+      Description: UIWord_MyLog
+      Reddot: Pk_Log_List_Mine
+    - Group: PvP
+      SubGroup: GuildLog
+      TabIndex: 2
+      Icon: /Game/UI/ArchiveRoom_SP/TabIcon_PVPGuild.TabIcon_PVPGuild
+      Description: UIWord_GuildLog_Guild
+      Reddot: Pk_Log_List_Guild
+    - Group: PvP
+      SubGroup: WantedLog
+      TabIndex: 3
+      Icon: /Game/UI/ArchiveRoom_SP/TabIcon_PVPWanted.TabIcon_PVPWanted
+      Description: UIWord_OnlyWanted
+      Reddot: Pk_Log_List_Wanted
+  EmojiInfo:
+    DataTableAsset: /Game/Common/UI/RichText_ImgDataTable.RichText_ImgDataTable
+    RowNameCondition:
+      - ScornEmoji
+      - PvpVictoryEmoji
+      - PvpDefeatEmoji

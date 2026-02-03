@@ -1,0 +1,1095 @@
+- Id: 2
+  Name: RateVersion
+  Comment: 확률 공개 버전. 확률 데이터가 변경되면 버전도 변경해 주어야 함.
+  Value: 1
+- Id: 18534
+  Name: GuildCreateItemName
+  Comment: "[길드] 길드 생성 시 사용되는 아이템"
+  Value: CurrencyGold
+- Id: 16725
+  Name: ComebackLands
+  Comment: comeback 가능한 Land 목록. 이동 전 현재 좌표를 comeback 좌표로 설정.
+  Value:
+    - Tutorial
+    - GuildFortress
+- Id: 16726
+  Name: ComebackLandGroups
+  Comment: comeback 가능한 Land group 목록. 이동 전 현재 좌표를 comeback 좌표로 설정.
+  Value:
+    - Dungeon
+    - DungeonInter
+    - Fortress
+    - Battleground
+    - QuestInstance
+- Id: 16727
+  Name: RememberAutoModeLands
+  Comment: "Comeback 시 자동 상태(사냥, 퀘스트) 복원을 위해 이전 자동 상태를 기억해야하는 Land 목록"
+  Value:
+    - Challenge_Dungeon_Polluted_Lake_1F
+    - Challenge_Dungeon_Monkey_Playground_1F
+    - Challenge_Dungeon_Undead_Mine_1F
+- Id: 16728
+  Name: SetComeback_DefaultRoutingTerritory
+  Comment: comeback 좌표 설정시 기본 라우팅 테리토리(DefaultRoutingTerritory) 사용하여 변환.
+  Value:
+    - GuildFortress
+- Id: 16729
+  Name: DefaultRoutingTerritory
+  Comment: 기본 라우팅 테리토리
+  Value: RoutingTerritory_Field_to_Town
+- Id: 37
+  Name: MaxClientNormalChatMessages
+  Comment: 클라이언트 채팅 메시지 최대 수
+  Value: 200
+- Id: 35323
+  Name: NoticeDisassembleItemGrade
+  Comment: 분해 시 등급 알림 팝업창 출력할 등급 기준 설정
+  Value: 3
+- Id: 35324
+  Name: NoticeDeleteItemGrade
+  Comment: 삭제 시 등급 알림 팝업창 출력할 등급 기준 설정
+  Value: 3
+- Id: 168
+  Name: CraftCancelDuration
+  Comment: 제작 시도 후 취소 가능한 시간 (초)
+  Value: 2
+- Id: 266
+  Name: MaxQuickSlotPage
+  Comment: 퀵슬롯 최대 페이지 수
+  Value: 4
+- Id: 12454
+  Name: MaxQuickSlotItemInPage
+  Comment: 페이지당 퀵슬롯 개수
+  Value: 8
+- Id: 1711
+  Name: HpPotionQuickSlotItem1
+  Comment: 퀵슬롯 체력 회복 물약 1
+  Value: Item_Use_Potion_G1_T1_01
+- Id: 13304
+  Name: HpPotionQuickSlotItem2
+  Comment: 퀵슬롯 체력 회복 물약 2
+  Value: Item_Use_Potion_G2_T2_02
+- Id: 452
+  Name: HpPotionQuickSlotItem3
+  Comment: 퀵슬롯 체력 회복 물약 3
+  Value: Item_Use_Potion_G3_T3_03
+- Id: 4371
+  Name: HpPotionCategory
+  Comment: 체력 회복 물약 아이템 카테고리
+  Value: Item_Misc_Healing
+- Id: 8252
+  Name: HpPotionMaxCarryAmountProperty
+  Comment: 최대 물약 소지 갯수 프로퍼티 명
+  Value: Item_HealthPotion_MaxCarryAmount
+- Id: 22891
+  Name: ScheduleStopMaxDeathCount
+  Comment: "[스케줄] 스케줄 중단 사망 횟수 최대값"
+  Value: 10
+- Id: 22892
+  Name: ScheduleAutoBuyDuration
+  Comment: "[스케줄] 자동 구매 소요 시간 (초)"
+  Value: 5
+- Id: 22893
+  Name: ScheduleAutoStorageDuration
+  Comment: "[스케줄] 자동 보관 소요 시간 (초)"
+  Value: 5
+- Id: 22894
+  Name: ScheduleAutoSupplyTime
+  Comment: "[스케줄] 일일 자동 보급 가능 시간 (초)"
+  Value: 28800
+- Id: 14841
+  Name: HpRegenPeriod
+  Comment: Hp 리젠 주기
+  Value: 5
+- Id: 12160
+  Name: MpRegenPeriod
+  Comment: Mp 리젠 주기
+  Value: 5
+- Id: 6861
+  Name: ScornValidTime
+  Comment: 멸시 가능 시간(초단위)
+  Value: 7200
+- Id: 351
+  Name: MerchantCloseRange
+  Comment: 상점 닫혀지는 셀 거리
+  Value: 20
+- Id: 352
+  Name: NpcInteractionRange
+  Comment: Npc인터렉션 가능 셀 거리
+  Value: 5
+- Id: 354
+  Name: ScanMaxCount
+  Comment: 스캔으로 탐지되는 개체의 최대 개수
+  Value: 8
+- Id: 355
+  Name: ScanAutoCycle1
+  Comment: 자동 스캔 사이클(초)
+  Value: 1
+- Id: 356
+  Name: ScanAutoCycle3
+  Comment: 자동 스캔 사이클(초)
+  Value: 3
+- Id: 357
+  Name: ScanAutoCycle5
+  Comment: 자동 스캔 사이클(초)
+  Value: 5
+- Id: 358
+  Name: ScanAutoCycle10
+  Comment: 자동 스캔 사이클(초)
+  Value: 10
+- Id: 360
+  Name: ScanEffectCoolTime
+  Comment: 스캔 이펙트 쿨타임 (밀리초)
+  Value: 1800
+- Id: 361
+  Name: ScanRequestCoolTime
+  Comment: 스캔 쿨타임
+  Value: 1
+- Id: 362
+  Name: ScanAltitudeDiffLimit
+  Comment: 스캔 고도 판별 거리
+  Value: 170
+- Id: 13309
+  Name: GlobalCoolTime
+  Comment: 글로벌 스킬 쿨타임
+  Value: 1000
+- Id: 392
+  Name: MaxGuildAllianceCount
+  Comment: 길드 최대 동맹 수
+  Value: 10
+- Id: 495
+  Name: MaxClientMinimalChatMessages
+  Comment: 클라이언트 미니멀 채팅 메시지 최대 수
+  Value: 5
+- Id: 627
+  Name: MinGuildJoinLevel
+  Comment: 길드 가입 가능 최소 레벨
+  Value: 1
+- Id: 641
+  Name: MaxGuildAllyProposalCount
+  Comment: 길드 최대 동맹 요청 수
+  Value: 5
+- Id: 644
+  Name: MinGuildCreateLevel
+  Comment: 길드 생성 가능 최소 레벨
+  Value: 1
+- Id: 647
+  Name: MaxCharacterNameLength
+  Comment: 캐릭터 생성 이름 최대 글자수 (한글) - 하위호환용
+  Value: 8
+- Id: 648
+  Name: MaxAlnumCharacterNameLength
+  Comment: 캐릭터 생성 이름 최대 글자수 (영문 + 숫자) - 하위호환용
+  Value: 12
+- Id: 20001
+  Name: MaxCharacterNameLength_KR
+  Comment: 캐릭터 생성 이름 최대 글자수 (한글)
+  Value: 8
+- Id: 20002
+  Name: MaxCharacterNameLength_EN
+  Comment: 캐릭터 생성 이름 최대 글자수 (영문 + 숫자)
+  Value: 12
+- Id: 894
+  Name: ChallengeDungeonTopRanking
+  Comment: 도전 던전 상위 랭킹 커트
+  Value: 5
+- Id: 877
+  Name: MinDisplayTimeForBuff
+  Comment: 버프 지속 시간 표시 최소 시간
+  Value: 10
+- Id: 890
+  Name: RefreshDay
+  Comment: 컨텐츠 초기화 일(1-31)
+  Value: 1
+- Id: 963
+  Name: MaxChatCharacters
+  Comment: 채팅 최대 글자 수
+  Value: 50
+- Id: 1025
+  Name: MinCharacterNameLength
+  Comment: 캐릭터 생성 이름 최소 글자수
+  Value: 2
+- Id: 1092
+  Name: GuildListPageSize
+  Comment: 길드 리스트 페이지 크기
+  Value: 50
+- Id: 1147
+  Name: AllyProposalReplyTime
+  Comment: 길드 우호 신청 응답 시간 (second)
+  Value: 259200
+- Id: 1172
+  Name: GuildResetCollectionCoolTime
+  Comment: 길드 특성 초기화 쿨타임(초)
+  Value: 86400
+- Id: 1173
+  Name: ItemDeleteWarningRemainTime
+  Comment: 기간제 아이템 아이콘 노랗게 표시하는 기준 시간(초)
+  Value: 259200
+- Id: 1174
+  Name: ItemDeleteDangerousRemainTime
+  Comment: 기간제 아이템 아이콘 붉게 표시하는 기준 시간(초)
+  Value: 86400
+- Id: 1233
+  Name: MaxLobbyCharacterSlotCount
+  Comment: 최대 캐릭터 슬롯 수
+  Value: 4
+- Id: 1234
+  Name: BattleStateDurationTime
+  Comment: 교전 상태 지속 시간 (second)
+  Value: 10
+- Id: 1498
+  Name: NpcShopRefreshDay
+  Comment: NPC상점 초기화 일(1-31)
+  Value: 1
+- Id: 1613
+  Name: GoldForCreateGuild
+  Comment: 길드 생성 시 소모 골드
+  Value: 200000
+- Id: 1697
+  Name: DefaultLobbyCharacterSlotCount
+  Comment: 기본 제공 캐릭터 슬롯 수
+  Value: 2
+- Id: 1922
+  Name: ExperienceRestorationLimit
+  Comment: 경험치 복구가능 날짜(일)
+  Value: 1
+- Id: 1924
+  Name: ItemRecoveryDiaCost
+  Comment: 아이템 복구 기본 비용(다이아)
+  Value: 20
+- Id: 2196
+  Name: CharacterDeleteDelayDays
+  Comment: 캐릭터 삭제 유예 기간 (일)
+  Value: 1
+- Id: 2206
+  Name: ScanRange
+  Comment: 스캔 거리(서버)
+  Value: 30
+- Id: 2404
+  Name: WorldBossEnterDuration
+  Comment: 월드보스 입장 가능 시간(s)
+  Value: 60000
+- Id: 2409
+  Name: MasteryExperienceProbability
+  Comment: 평타 명중 시 숙련도 경험치 오를 확률
+  Value: "5%"
+- Id: 17310
+  Name: CharacterNameDeleteDelayDays
+  Comment: 캐릭터 닉네임 삭제 기간 (캐릭터 삭제 이후 N일)
+  Value: 90
+- Id: 2410
+  Name: CharacterRotateSpeedModifier
+  Comment: 캐릭터 회전 속도
+  Value: 9
+- Id: 2411
+  Name: WeaponMismatchPenaltyBuff
+  Comment: 무기 불일치 페널티 버프
+  Value: WeaponMismatchPenalty
+- Id: 2412
+  Name: MasteryLimitPointsByItem
+  Comment: 아이템으로 얻을 수 있는 숙련도 포인트 최대치
+  Value: 50
+- Id: 2454
+  Name: MaxGuildMemberCount
+  Comment: 길드 초기 멤버 수
+  Value: 30
+- Id: 2465
+  Name: RefreshDayOfWeek
+  Comment: "컨텐츠 초기화 요일(SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY)"
+  Value: MONDAY
+- Id: 2492
+  Name: TradeSellMinPrice
+  Comment: 판매 최소 금액 (다이아)
+  Value: 10
+- Id: 2570
+  Name: ItemRestorationLimit
+  Comment: 아이템 복구가능 날짜(일)
+  Value: 1
+- Id: 2603
+  Name: LastLogoutMaxDurationInDays
+  Comment: 최근 접속 시간의 최대 표시 기간 (일)
+  Value: 30
+- Id: 2752
+  Name: MaxGuildHostileCount
+  Comment: 길드 최대 적대 수
+  Value: 5
+- Id: 2873
+  Name: OwnDuration
+  Comment: 아이템 선점 지속 시간 (초)
+  Value: 30
+- Id: 2874
+  Name: ContributionResetTime
+  Comment: 기여도 초기화 시간 (초)
+  Value: 30
+- Id: 2988
+  Name: MaxClassAbilityLevel
+  Comment: 최대 클래스 능력 레벨
+  Value: 5
+- Id: 3444
+  Name: RefreshHour
+  Comment: 컨텐츠 초기화 시간(0-23)
+  Value: 4
+- Id: 3804
+  Name: TradeSellMaxPrice
+  Comment: 판매 최대 금액 (다이아)
+  Value: 99999999
+- Id: 3920
+  Name: DroppingItemDuration
+  Comment: 아이템 드롭 후 일정 시간이 지나면 아이템이 사라짐 (초)
+  Value: 600
+- Id: 4489
+  Name: FortressUpgradeSkipCostScaleSec
+  Comment: 요새 건물 업그레이드 시간 스킵 비용 단위 (초)
+  Value: 10
+- Id: 4714
+  Name: QuestTeleportSkill
+  Comment: 퀘스트 서버에서 배틀 서버로 텔레포트 요청할 때 사용 하는 스킬
+  Value: QuestAutoTeleportStart
+- Id: 4727
+  Name: GuildPenaltyTime
+  Comment: 길드 탈퇴시 패널티 시간(분)
+  Value: 5
+- Id: 5166
+  Name: BmShopRefreshDay
+  Comment: BM상점 초기화 일(1-31)
+  Value: 1
+- Id: 5319
+  Name: BattlegroundStartWaitTime
+  Comment: 전장 시작 대기 시간(초)
+  Value: 10
+- Id: 5578
+  Name: InGameShopMaxBuyCount
+  Comment: NPC 상점 최대 구매 수량
+  Value: 9999
+- Id: 5579
+  Name: InGameShopLock_MaxMessageCount
+  Comment: NPC 상점 제한 조건 최대 갯수
+  Value: 2
+- Id: 6677
+  Name: BmShopRefreshDayOfWeek
+  Comment: "BM상점 초기화 요일(SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY)"
+  Value: MONDAY
+- Id: 6697
+  Name: GuildMasterCandidateQualifyTime
+  Comment: 길드장 자동 위임 시 해당 일 수 내에 접속한 길드원만 길드장이 될 수 있음 (일) 만약 -1일 경우 1분으로 취급함
+  Value: 1
+- Id: 6799
+  Name: FortressUpgradeSkipCostAmount
+  Comment: 요새 건물 업그레이드 시간 스킵 비용 아이템 소모 값
+  Value: 10
+- Id: 6985
+  Name: NpcShopRefreshDayOfWeek
+  Comment: "NPC상점 초기화 요일(SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY)"
+  Value: MONDAY
+- Id: 8000
+  Name: MaximumKillWindow
+  Comment: 최근 입은 피해를 기록하는 최대 시간(초). 이 시간보다 오래된 피해 기록은 삭제. 미 지정 시 42초.
+  Value: 60
+- Id: 8001
+  Name: KillWindow
+  Comment: 일반적인 필드 처치 시 데미지 집계를 할 시간(초). 미 지정 시 42초.
+  Value: 30
+- Id: 8080
+  Name: MaxPartyMemberCount
+  Comment: 파티 최대 멤버 수
+  Value: 5
+- Id: 8081
+  Name: PartyInvitationReplyTime
+  Comment: 파티 초대 응답 시간 (millisecond)
+  Value: 10000
+- Id: 8082
+  Name: PartyMemberEnableRange
+  Comment: 파티 멤버 활성화 거리 (m)
+  Value: 20
+- Id: 8083
+  Name: PartyInvitationMaxCount
+  Comment: 한 사람이 받을 수 있는 최대 초대 개수
+  Value: 4
+- Id: 8084
+  Name: PartyOfflineRemainTime
+  Comment: 오프라인시 파티가 유지되는 시간 (분)
+  Value: 5
+- Id: 8777
+  Name: NpcShopRefreshHour
+  Comment: NPC상점 초기화 시간(0-23)
+  Value: 0
+- Id: 9000
+  Name: TradeRate
+  Comment: "거래소 수수료 (0.0 ~ 100.0%)"
+  Value: 5.0
+- Id: 9090
+  Name: TradePrivateRate
+  Comment: "거래소 개인거래 수수료 (0.0 ~ 100.0%)"
+  Value: 7.0
+- Id: 17626
+  Name: TradeGuildRate
+  Comment: "[길드] 거래소 길드거래 수수료 (0.0 ~ 100.0%)"
+  Value: 5.0
+- Id: 9001
+  Name: TradeRegistrationMinWaitTime
+  Comment: 판매 등록 최소 대기 시간 (분)
+  Value: 2
+- Id: 9002
+  Name: TradeRegistrationMaxWaitTime
+  Comment: 판매 등록 최대 대기 시간 (분)
+  Value: 10
+- Id: 9003
+  Name: TradeSellTime
+  Comment: 판매 진행 시간 (분)
+  Value: 5760
+- Id: 9004
+  Name: TradePageSize
+  Comment: 클라가 요청할 때마다 서버가 응답하는 페이지 크기
+  Value: 20
+- Id: 9005
+  Name: TradeHistoryMaxCount
+  Comment: 거래 내역 최대 표시 항목 개수
+  Value: 100
+- Id: 9006
+  Name: TradeSellMaxCount
+  Comment: 거래소 판매 등록 최대 개수
+  Value: 30
+- Id: 9096
+  Name: TradePrivateSellMaxCount
+  Comment: 거래소 개인거래 판매 등록 최대 개수
+  Value: 20
+- Id: 9007
+  Name: TradeRegistrationFee
+  Comment: 판매 등록 수수료 (판매 가격에 Value만큼 곱해짐)
+  Value: 10
+- Id: 9097
+  Name: TradePrivateRegistrationFee
+  Comment: 개인 거래 판매 등록 수수료 (판매 가격에 Value만큼 곱해짐)
+  Value: 15
+- Id: 9098
+  Name: TradeGuildRegistrationFee
+  Comment: 길드 거래 판매 등록 수수료 (판매 가격에 Value만큼 곱해짐)
+  Value: 10
+- Id: 9008
+  Name: TradeWeaponTopCategory
+  Comment: 거래소 무기 최상위 카테고리
+  Value: Item_Equip_WeaponBase_Weapon
+- Id: 9010
+  Name: TradeArmorTopCategory
+  Comment: 거래소 방어구 최상위 카테고리
+  Value: Item_Equip_Armor
+- Id: 9012
+  Name: TradeConsumeTopCategory
+  Comment: 거래소 소비 최상위 카테고리
+  Value: Item_Misc_Consume
+- Id: 9013
+  Name: TradeCraftTopCategory
+  Comment: 거래소 재료 최상위 카테고리
+  Value: Item_Craft
+- Id: 9014
+  Name: TradeSkillBookTopCategory
+  Comment: 거래소 스킬북 최상위 카테고리
+  Value: Skill_Book
+- Id: 9015
+  Name: TradeMultiSelectMaxCount
+  Comment: 거래소 다중 선택 최대 개수
+  Value: 10
+- Id: 9017
+  Name: TradeBuyItemTextLimit
+  Comment: 거래소 구매 아이템 글자 제한
+  Value: 60
+- Id: 9018
+  Name: TradePrivateBuyLimit
+  Comment: 거래소 개인 거래 구매 일일 제한
+  Value: 30
+- Id: 9019
+  Name: TradePrivateBuyRequestLimit
+  Comment: 거래소 개인 거래 최대 구매 요청 수량
+  Value: 20
+- Id: 9016
+  Name: RefreshBtnCoolTime
+  Comment: 새로고침 버튼 쿨타임(초)
+  Value: 5
+- Id: 9028
+  Name: BmShopRefreshHour
+  Comment: BM상점 초기화 시간(0-23)
+  Value: 0
+- Id: 9330
+  Name: HostileProposalRemainTime
+  Comment: 길드 적대 요청 만료 시간 (초)
+  Value: 86400
+- Id: 12682
+  Name: GuildResetCollectionConsumeItem
+  Comment: 길드 특성 리셋 아이템(길드 아이템의 경우도 item.yaml 기준으로 값을 넣으면됨)
+  Value: Guild_Point
+- Id: 11367
+  Name: GuildResetCollectionConsumeItemAmount
+  Comment: 길드 특성 리셋 아이템 수량
+  Value: 100000
+- Id: 9877
+  Name: PresetSlotCount
+  Comment: 프리셋 기본 슬롯 개수
+  Value: 2
+- Id: 9878
+  Name: PresetSlotPrice
+  Comment: 프리셋 슬롯 확장 비용 (다이아)
+  Value: 100
+- Id: 9879
+  Name: PresetMaxSlotCount
+  Comment: 프리셋 최대 슬롯 개수
+  Value: 4
+- Id: 9959
+  Name: BattlegroundExitWaitTime
+  Comment: 전장 종료 후 퇴장 대기 시간(초)
+  Value: 60
+- Id: 10000
+  Name: MaxEnchantEquipmentCount
+  Comment: 최대 강화 장비 수
+  Value: 100
+- Id: 10123
+  Name: FortressUpgradeSkipCostItem
+  Comment: 요새 건물 업그레이드 시간 스킵 비용 아이템
+  Value: CurrencyDiamond
+- Id: 12428
+  Name: GuildMasterAutoDelegateTime
+  Comment: 길드장 자동 위임 시간 (일) 만약 -1일 경우 1분으로 설정
+  Value: 10
+- Id: 3553
+  Name: GuildApplicationMaxCount
+  Comment: 길드 가입 요청 최대 횟수
+  Value: 10
+- Id: 3554
+  Name: GuildReceivedApplicationMaxCount
+  Comment: 길드 가입 요청을 받을 수 있는 최대 개수
+  Value: 50
+- Id: 39393
+  Name: ZoneId
+  Comment: 지역 구별 용도
+  Value: Asia/Seoul
+- Id: 30441
+  Name: EnchantItemProbabilityMaxDecimal
+  Comment: "아이템 강화 확률 최대 표현 소수점, 넘어가는 자리수는 잘림"
+  Value: 2
+- Id: 5469
+  Name: CommonRewardPopupItemSlotMaxCount
+  Comment: 공용 보상 팝업(자동 소멸) 슬롯 최대 수량
+  Value: 16
+- Id: 9255
+  Name: FortressInitialConstructionQueueCount
+  Comment: 성소(요새) 최초 건설 대열 개수
+  Value: 1
+- Id: 4016
+  Name: FortressMaxConstructionQueueCount
+  Comment: 성소(요새) 최대 건설 대열 개수
+  Value: 4
+- Id: 13303
+  Name: FortressInitialMaxInstantConstructionCount
+  Comment: 성소(요새) 초기 최대 일일 즉시완료 횟수
+  Value: 5
+- Id: 5778
+  Name: FortressBaseHelpMeCount
+  Comment: 성소(요새) 지원 요청 기본 횟수
+  Value: 25
+- Id: 8211
+  Name: FortressBaseHelpReduceTime
+  Comment: 성소(요새) 지원 시 감소 시간 (초)
+  Value: 80
+- Id: 6748
+  Name: FortressBaseHelpCount
+  Comment: 성소(요새) 지원 받을 수 있는 기본 횟수
+  Value: 10
+- Id: 6557
+  Name: FortressRefreshHour
+  Comment: 성소(요새) 초기화 시각
+  Value: 4
+- Id: 13400
+  Name: PresetApplyCoolTime
+  Comment: 프리셋 적용 쿨타임 (초)
+  Value: 5
+- Id: 3902
+  Name: PvPReactTime
+  Comment: 기록실 PVP 대응 가능 시간 (분)
+  Value: 360
+- Id: 3910
+  Name: MaxChatBlockUserCount
+  Comment: 최대 차단 유저 수
+  Value: 50
+- Id: 10270
+  Name: SendMailCost
+  Comment: 우편 발송 시 비용
+  Value: 1000
+- Id: 11132
+  Name: MailSendTextLimit_Receiver
+  Comment: "우편 발송 시 캐릭터명, 길드명 최대 길이"
+  Value: 12
+- Id: 15067
+  Name: MailSendTextLimit_Title
+  Comment: 우편 발송 시 제목 최대 길이
+  Value: 20
+- Id: 2748
+  Name: MailSendTextLimit_Content
+  Comment: 우편 발송 시 내용 최대 길이
+  Value: 200
+- Id: 2272
+  Name: MailSendItemLimitCount
+  Comment: 우편 발송 시 첨부할 수 있는 아이템 최대 개수
+  Value: 4
+- Id: 3752
+  Name: MaxLetterCount
+  Comment: 보유 가능한 최대 편지 수
+  Value: 50
+- Id: 8851
+  Name: MaxLetterSendPerDay
+  Comment: 하루에 보낼 수 있는 최대 편지 개수
+  Value: 50
+- Id: 6912
+  Name: MaxMailHistoryCount
+  Comment: 편지 수령 이력 최대 보관 개수
+  Value: 50
+- Id: 3753
+  Name: PartyMemberAlertHpRatio
+  Comment: 파티 멤버 Hp Alert 비율
+  Value: 500
+- Id: 3754
+  Name: RemainTimeRedAlertSeconds
+  Value: 10800
+- Id: 8629
+  Name: ItemMightPropertyKey
+  Comment: 권능부여 프로퍼티의 키 - 키 값을 어떤 값으로 하던 상관이 없어서 따로 관리
+  Value: MightProperty
+- Id: 819
+  Name: PartyBlockLand
+  Comment: 파티 불가 지역
+  Value:
+    - BattleGround_Faction_HighRiver_Group1
+- Id: 13495
+  Name: ViewListRadius
+  Comment: 뷰리스트 범위 값
+  Value: 20
+- Id: 2016
+  Name: AccountDeleteDelayDays
+  Comment: 계정 삭제 유예 기간 (일) (2025.04.17 사용하지 않음.)
+  Value: 2
+- Id: 10318
+  Name: AccountDeleteDelayMinutes
+  Comment: 계정 삭제 유예 기간 (분)
+  Value: 21600
+- Id: 22
+  Name: PotionEssenceofWisdomMaxAmount
+  Comment: 지혜의 정수 최대 보유 수량
+  Value: 1000
+- Id: 183
+  Name: HealingPotionCarryCount
+  Comment: 체력 회복 물약 최대 보유 수량
+  Value: 100000000
+- Id: 313
+  Name: BuffScrollCarryCount
+  Comment: 버프 스크롤 최대 보유 수량
+  Value: 1000
+- Id: 125
+  Name: RecipeRepeatLimit
+  Comment: recipeoutput 데이터의 공통 개수 제한 설정 값 (서버 부하 방지용)
+  Value: 9999
+- Id: 437
+  Name: BmShopStorageExpireDay
+  Comment: BM 상점 구매 상품 보관 기간
+  Value: 7
+- Id: 18309
+  Name: StoveItemBoxMailSenderDefault
+  Comment: "[스토브] 아이템박스 우편 발송인 (기본값)"
+  Value: 이클립스 운영팀
+- Id: 9964
+  Name: StoveItemBoxMailSender_COUPON
+  Comment: "[스토브] 아이템박스 우편 발송인 (쿠폰 기본값)"
+  Value: 이클립스 쿠폰 시스템
+- Id: 5642
+  Name: StoveItemBoxMailSender_EVENT
+  Comment: "[스토브] 아이템박스 우편 발송인 (이벤트 기본값)"
+  Value: 이클립스 이벤트 시스템
+- Id: 16257
+  Name: StoveItemBoxMailSender_BILLING
+  Comment: "[스토브] 아이템박스 우편 발송인 (빌링 기본값)"
+  Value: 이클립스
+- Id: 2008
+  Name: StoveItemBoxMailSender_CROSSPROMOTION
+  Comment: "[스토브] 아이템박스 우편 발송인 (크로스프로모션 기본값)"
+  Value: 이클립스 운영팀
+- Id: 9581
+  Name: StoveItemBoxMailTitleDefault
+  Comment: "[스토브] 아이템박스 우편 제목 (기본값)"
+  Value: 아이템 보상
+- Id: 5091
+  Name: StoveItemBoxMailTitle_COUPON
+  Comment: "[스토브] 아이템박스 우편 제목 (쿠폰 기본값)"
+  Value: 쿠폰 등록 보상
+- Id: 13265
+  Name: StoveItemBoxMailTitle_EVENT
+  Comment: "[스토브] 아이템박스 우편 제목 (이벤트 기본값)"
+  Value: 이벤트 참여 보상
+- Id: 1971
+  Name: StoveItemBoxMailTitle_BILLING
+  Comment: "[스토브] 아이템박스 우편 제목 (빌링 기본값)"
+  Value: 결제 완료
+- Id: 17475
+  Name: StoveItemBoxMailTitle_CROSSPROMOTION
+  Comment: "[스토브] 아이템박스 우편 제목 (크로스프로모션 기본값)"
+  Value: 프로모션 보상
+- Id: 15952
+  Name: DefaultHomeTerritory
+  Comment: 기본 귀환 테리토리 (ArgumentOfHomeTeleport 및 Comeback)
+  Value: WorldMap_Var_Wastes_LascanoFortress
+- Id: 8486
+  Name: TradePrivateSellMinPrice
+  Comment: 개인 거래 판매 최소 금액(다이아)
+  Value: 10
+- Id: 8487
+  Name: TradePrivateSellMaxPrice
+  Comment: 개인 거래 판매 최대 금액(다이아)
+  Value: 10000000000
+- Id: 259
+  Name: TradeGuildSellTime
+  Comment: "[길드] 판매 진행 시간 (분)"
+  Value: 5760
+- Id: 9604
+  Name: TradeGuildSellMaxCount
+  Comment: "[길드] 판매 등록 최대 개수"
+  Value: 20
+- Id: 10050
+  Name: TradeGuildSellMinPrice
+  Comment: "[길드] 판매 최소 금액 (다이아)"
+  Value: 10
+- Id: 7661
+  Name: TradeGuildSellMaxPrice
+  Comment: "[길드] 판매 최대 금액 (다이아)"
+  Value: 99999999
+- Id: 1074
+  Name: GuildAuctionDurationMinute
+  Comment: "[길드 경매] 경매 진행 시간 (분)"
+  Value: 3
+- Id: 1400
+  Name: GuildAuctionMinStartPrice
+  Comment: "[길드 경매] 최소 경매 시작가"
+  Value: 10
+- Id: 7689
+  Name: GuildAuctionMinNextPrice
+  Comment: "[길드 경매] 입찰 최소 추가 금액"
+  Value: 10
+- Id: 17036
+  Name: GuildAuctionFinishSoon
+  Comment: "[길드 경매] 마감 임박 버튼 몇초 남았을 때 출력할지 지정"
+  Value: 60
+- Id: 13461
+  Name: GuildAuctionDeferFinish
+  Comment: "[길드 경매] 마감 임박 연장 몇초씩 할지 지정"
+  Value: 30
+- Id: 13263
+  Name: GuildAuctionDeferFinishCount
+  Comment: "[길드 경매] 마감 임박 최대 연장 가능 횟수"
+  Value: 5
+- Id: 10140
+  Name: GuildAuctionHistoryPageItems
+  Comment: "[길드 경매] 경매 내역 페이지 당 아이템 개수"
+  Value: 100
+- Id: 7651
+  Name: GuildAuctionHistoryMaxItems
+  Comment: "[길드 경매] 경매 내역 최대 아이템 개수"
+  Value: 1000
+- Id: 13809
+  Name: GuildAuctionFee
+  Comment: "[길드 경매] 경매 낙찰 시 수수료 (단위: %)"
+  Value: 10
+- Id: 10295
+  Name: PostedRewardItemExpireHour
+  Comment: 참여/막타 아이템 보상 우편 보관 시간. 0 지정 시 무기한 보관.
+  Value: 0
+- Id: 19666
+  Name: SeasonpassPostedRewardExpireHour
+  Comment: 시즌 패스 기간 종료 시 우편 보관 시간. 0 지정 시 무기한 보관
+  Value: 0
+- Id: 10296
+  Name: ScornMessageDisplaySeconds
+  Comment: 멸시 메시지 보여주는 시간(초 단위)
+  Value: 2
+- Id: 11099
+  Name: GuildMinPasswordLength
+  Comment: "[길드] 최소 비밀번호 길이"
+  Value: 1
+- Id: 13600
+  Name: GuildMaxPasswordLength
+  Comment: "[길드] 최대 비밀번호 길이"
+  Value: 12
+- Id: 3769
+  Name: GuildMinNameLength
+  Comment: "[길드] 최소 길드 이름 길이 - 하위호환용"
+  Value: 2
+- Id: 13313
+  Name: GuildMaxNameLength
+  Comment: "[길드] 최대 길드 이름 길이 (한글) - 하위호환용"
+  Value: 8
+- Id: 13314
+  Name: GuildMaxAlnumNameLength
+  Comment: "[길드] 최대 길드 이름 길이 (영문 + 숫자) - 하위호환용"
+  Value: 12
+- Id: 20003
+  Name: MinGuildNameLength
+  Comment: "[길드] 최소 길드 이름 길이"
+  Value: 2
+- Id: 20004
+  Name: MaxGuildNameLength_KR
+  Comment: "[길드] 최대 길드 이름 길이 (한글)"
+  Value: 8
+- Id: 20005
+  Name: MaxGuildNameLength_EN
+  Comment: "[길드] 최대 길드 이름 길이 (영문 + 숫자)"
+  Value: 12
+- Id: 19171
+  Name: GuildMaxIntroductionLength
+  Comment: "[길드] 최대 길드 소개 길이"
+  Value: 30
+- Id: 7860
+  Name: GuildMaxNoticeLength
+  Comment: "[길드] 최대 길드 공지 길이"
+  Value: 100
+- Id: 12861
+  Name: GuildMaxMemberIntroductionLength
+  Comment: "[길드] 최대 길드원 소개 길이"
+  Value: 14
+- Id: 9378
+  Name: GuildMaxLogSize
+  Comment: "[길드] 길드 로그 최대 갯수"
+  Value: 1000
+- Id: 11974
+  Name: GuildContributeMaxCount
+  Comment: "[길드] 길드 지원 최대 횟수"
+  Value: 24
+- Id: 10308
+  Name: GuildAmountPerContribute
+  Comment: "[길드] 길드 지원 시 증가하는 양"
+  Value: 100
+- Id: 3567
+  Name: GuildRechargeTimePerContributeCount
+  Comment: "[길드] 길드 지원 횟수 충전 시간 (시간 단위: 초)"
+  Value: 3600
+- Id: 10818
+  Name: GuildMaxItemManageSize
+  Comment: "[길드] 길드 창고 관리 내역 최대 크기"
+  Value: 2000
+- Id: 12532
+  Name: GuildItemManagePerPageSize
+  Comment: "[길드] 길드 창고 관리 내역 페이지 당 크기"
+  Value: 200
+- Id: 27
+  Name: PkLogTraceTeleportSkill
+  Comment: "[기록실] 추적 시 사용할 스킬 이름"
+  Value: StartTraceTeleport
+- Id: 7724
+  Name: PkLogTraceTeleportRange
+  Comment: "[기록실] 추적 시 대상 주변 범위 (단위: 셀, 1~100 사이의 값)"
+  Value: 2
+- Id: 13463
+  Name: GuildStorableGrade
+  Comment: "[길드] 길드 창고 보관 가능 등급 - 해당 등급 이상의 아이템만 길드 창고에 보관 가능함"
+  Value: 1
+- Id: 4035
+  Name: GuildAuctionWaitTime
+  Comment: "[길드 경매] 경매 시작 대기 시간"
+  Value: "1"
+- Id: 15661
+  Name: GuildFortressWorldMap
+  Comment: "[길드] 길드 요새 입장 시 사용하는 월드맵"
+  Value: WorldMap_GuildFortressEnter_Field
+- Id: 15662
+  Name: GuildRaidSacrificeNpc
+  Comment: "[길드] 길드 레이드 제물 NPC"
+  Value: Test_GuildRaidSacrifice
+- Id: 15663
+  Name: GuildRaidSacrificeNpcTerritory
+  Comment: "[길드] 길드 레이드 제물 NPC 소환 Territory"
+  Value: Guild_Raid_Sacrifice_Npc_Spawn
+- Id: 15664
+  Name: GuildRaidJumpStepCorrectionValue
+  Comment: "[길드] 길드 레이드 진행 단계 결정 시 사용하는 보정값(지난주 클리어한 최대 난이도 - GuildRaidJumpStepCorrectionValue)"
+  Value: 4
+- Id: 15665
+  Name: GuildRaidContributionSkill
+  Comment: "[길드] 길드 레이드 기여도 계산 공식이 기록된 스킬"
+  Value: Test_Guild_Raid_Contribution
+- Id: 17479
+  Name: OfflineModeDefaultTime
+  Comment: 무접속 플레이 모드 기본 시간(초)
+  Value: 28800
+- Id: 18069
+  Name: LongAttackedPenalty
+  Comment: "[전투] pc 피해로 인한 피격 패널티 시간"
+  Value: 600
+- Id: 9554
+  Name: ShortAttackedPenalty
+  Comment: "[전투] npc 피해로 인한 피격 패널티 시간"
+  Value: 500
+- Id: 7423
+  Name: AttackedPenaltyCoolTime
+  Comment: "[전투] 피격패널티 받은 후 면역인 시간"
+  Value: 1500
+- Id: 21885
+  Name: MainStatueBuildingId
+  Comment: "[성소] 최대 레벨 제한 성물 id (building.yaml)"
+  Value: 2151
+- Id: 3529
+  Name: DefaultPkScore
+  Comment: "[기록실] 기본 pk score"
+  Value: 1000
+- Id: 2951
+  Name: RankingLevelLimit
+  Comment: "[기록실] 랭킹 레벨 제한 "
+  Value: 10
+- Id: 14473
+  Name: RankingRestrictionThreshold
+  Comment: "[기록실] RankingRestrictionThreshold일 이상 제재시 랭킹 제외"
+  Value: 30
+- Id: 3530
+  Name: MaxActiveFusionSkillCount
+  Comment: 보유할 수 있는 최대 융합 스킬 수량
+  Value: 1
+- Id: 3531
+  Name: LiveMode
+  Comment: 스튜디오 개발 환경에서 LiveMode 활성화 여부
+  Value: false
+- Id: 60
+  Name: DropItemCandidateRadius
+  Comment: 아이템 드롭 시 후보자 반경 (셀 단위)
+  Value: 30
+- Id: 61
+  Name: DefaultSearchRadius
+  Comment: 기본 검색 반경 (셀 단위)
+  Value: 16
+- Id: 3289
+  Name: LongSkillThreshold
+  Comment: "[스킬] MotionDelay가 이 값보다 크면 스킬 사용 후에 도착해도 스킬 이벤트를 보내줌"
+  Value: 1000
+- Id: 4715
+  Name: QuestTeleportDistanceThreshold
+  Comment: 퀘스트 텔레포트 거리 임계값 (이 값 이하일 때 자동 이동)
+  Value: 15
+- Id: 4716
+  Name: AutoQuestTeleportSkill
+  Comment: 자동 퀘스트 텔레포트 시 사용하는 스킬 이름
+  Value: StartTeleport_AutoQuest
+- Id: 4717
+  Name: AutoCombatTeleportSkill
+  Comment: 자동 퀘스트 텔레포트 시 사용하는 스킬 이름
+  Value: StartTeleport_AutoCombat
+- Id: 4718
+  Name: ScheduleQuestTeleportSkill
+  Comment: 스케줄 자동 퀘스트 텔레포트 시 사용하는 스킬 이름 (quest_category_auto_id가 있을 때)
+  Value: StartTeleport_ScheduleQuest
+- Id: 8692
+  Name: PkLogRetentionDays
+  Comment: "[기록실] pkLog 기록 보관 일"
+  Value: 30
+- Id: 8693
+  Name: Skin_DeleteTimeColor
+  Comment: 스킨 만료시간 (시간 단위)
+  Value: 24
+- Id: 8694
+  Name: MaxSkillPriority
+  Comment: 스킬 우선순위 설정 가능한 최대 수량
+  Value: 20
+- Id: 11106
+  Name: BM_Prolongation
+  Comment: 재구독 기간 설정 (일)
+  Value: 3
+- Id: 7564
+  Name: BM_Prolongation_Guide
+  Comment: 재구독 안내 출력 기간 설정
+  Value: 7
+- Id: 260
+  Name: BmSubscribeTicketItemName
+  Comment: 구독상품 구독권 아이템 이름
+  Value: SubscribeTicket
+- Id: 598
+  Name: AggroResetTime
+  Comment: npc 어그로 테이블 초기화 시간(초)
+  Value: 30
+- Id: 11107
+  Name: DisconnectWaitTime
+  Comment: "배틀 서버 유휴 타임아웃 시간 (분). 이 시간 동안 활동이 없으면 자동 연결 해제. 프로덕션: 30분, 테스트: 1분"
+  Value: 60
+- Id: 19608
+  Name: ItemEnchantResetCostItem
+  Comment: "[아이템] Enchant 리셋 아이템"
+  Value: CurrencyGold
+- Id: 15978
+  Name: ItemEnchantResetCost
+  Comment: "[아이템] Enchant 리셋 아이템 갯수"
+  Value: 10000
+- Id: 3039
+  Name: RelationshipFriendRequestWaitTime
+  Comment: "[관계] 친구 추가 요청 대기 시간 (분 단위)"
+  Value: 1440
+- Id: 2925
+  Name: RelationshipMemoMax
+  Comment: "[관계] 메모 최대 글자 수"
+  Value: 20
+- Id: 2241
+  Name: MaxRelationshipFriendList
+  Comment: "[관계] 추가 가능한 최대 친구 캐릭터 수"
+  Value: 50
+- Id: 2242
+  Name: MaxRelationshipSendFriendRequestList
+  Comment: "[관계] 보낼 수 있는 최대 친구 추가 요청 수"
+  Value: 50
+- Id: 2243
+  Name: MaxRelationshipReceiveFriendRequestList
+  Comment: "[관계] 받을 수 있는 최대 친구 추가 요청 수"
+  Value: 50
+- Id: 2244
+  Name: MaxRelationshipEnemyList
+  Comment: "[관계] 추가 가능한 최대 원수 캐릭터 수"
+  Value: 50
+- Id: 2245
+  Name: MaxRelationshipBlockList
+  Comment: "[관계] 추가 가능한 최대 차단 캐릭터 수"
+  Value: 50
+- Id: 10597
+  Name: PinPointPersonalLimit
+  Comment: 개인 핀 포인트 제한 개수
+  Value: 5
+- Id: 7917
+  Name: PinPointPartyLimit
+  Comment: 파티 멤버 별 핀 포인트 제한 개수
+  Value: 1
+- Id: 2072
+  Name: PinPointGuildLimit
+  Comment: 길드 권한자 별 핀 포인트 제한 개수
+  Value: 1
+- Id: 21532
+  Name: PkScoreMinLevel
+  Comment: PvP 점수 획득 및 차감 제한 레벨
+  Value: 10
+- Id: 2246
+  Name: RelationshipFriendRequestWaitWarningTime
+  Comment: "[관계] 친구 추가 요청 대기 시간 중 붉은 색으로 표기되는 기준 (분 단위)"
+  Value: 60
+- Id: 2247
+  Name: StartInteractionSkill
+  Comment: "[인터렉션] NPC 인터렉션 시작 스킬 이름"
+  Value: StartInteractionSkill
+- Id: 19687
+  Name: WorldBossHudAppearance
+  Comment: "[월드보스 개선] HUD 아이콘 출현중 디스크립션 출력 시간 (초)"
+  Value: 30
+- Id: 22724
+  Name: WorldBossHudBeforeAppearance
+  Comment: "[월드보스 개선] 보스 스케쥴표- '출현예정' 디스크립션 출력 시간 (초)"
+  Value: 30
+- Id: 17816
+  Name: WorldBossHudDurationAppearance
+  Comment: "[월드보스 개선] 보스 스케쥴표- '출현중' 디스크립션 출력 시간 (초)"
+  Value: 30
+- Id: 19913
+  Name: DungeonCongestionFULL
+  Comment: "[인터서버] 혼잡도 포화 상태"
+  Value: 0.9
+- Id: 24546
+  Name: DungeonCongestionHIGH
+  Comment: "[인터서버] 혼잡도 혼잡 상태"
+  Value: 0.8
+- Id: 9641
+  Name: DungeonCongestionMEDIUM
+  Comment: "[인터서버] 혼잡도 보통 상태"
+  Value: 0.5

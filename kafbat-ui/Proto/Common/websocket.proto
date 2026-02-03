@@ -1,0 +1,22 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.session";
+option java_outer_classname = "CommonSessionProto";
+
+/**
+  - RFC 6455
+  - @link{https://www.iana.org/assignments/websocket/websocket.xhtml#close-code-number}
+ */
+enum WebSocketCloseCode {
+  CLOSE_STATUS_UNSPECIFIED = 0;     // 상태 코드가 지정되지 않음
+  CLOSE_NORMAL = 1000;              // 정상 종료
+
+  KICKED_BY_GM = 4001;              // GM에 의한 강제 퇴장
+  CLOSE_SERVER_MAINTENANCE = 4002;  // 서버 점검
+  DUPLICATE_LOGIN = 4003;           // 중복 로그인
+  SESSION_EXPIRED = 4004;           // 세션 만료
+  SOCKET_TIMEOUT = 4005;            // 소켓 타임 아웃
+  UNREGISTER = 4006;                // 탈퇴
+}

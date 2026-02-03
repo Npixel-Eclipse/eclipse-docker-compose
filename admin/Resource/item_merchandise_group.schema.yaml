@@ -1,0 +1,52 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Type:
+      type: string
+      enum:
+        - Buy #유저가 NPC한테 구매
+        - Sell #유저가 NPC한테 판매
+    Comment:
+      type: string
+    UITab: # 각 드롭다운 항목 정의
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+          TabIndex:
+            type: integer
+          DefaultTab:
+            type: boolean
+          Description:
+            type: string
+            ref: description
+          Class:
+            type: string
+            ref : class
+          Group:
+            type: array
+            items:
+              type: string
+              enum:
+                - Public
+                - Fighter
+                - Ranger
+                - Sorcerer
+                - Assassin
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+  required:
+    - Id
+    - Name

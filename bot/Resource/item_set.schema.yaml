@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name: # item.yaml의 Set 컬럼과 collection_target.yaml의 EquipItemSet 컬럼에 연결
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    ItemSetNameDesc: # 세트 이름 연결
+      type: string
+      ref: description
+    Comment:
+      type: string

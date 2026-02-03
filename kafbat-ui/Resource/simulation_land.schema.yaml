@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Comment
+    - LandGroup
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    LandGroup:
+      type: string
+    # Land 인구 제한
+    LimitPopulation:
+      type: integer
+      minimum: 1
+    # 인구가 0명이 되면 삭제
+    DeleteOnEmpty:
+      type: boolean

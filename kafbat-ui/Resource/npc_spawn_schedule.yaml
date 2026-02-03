@@ -1,0 +1,12 @@
+- Id: 1
+  Name: WorldBoss_Schedule
+  Comment: 월드보스 스케쥴
+  ScheduleTypeName: WorldBoss
+  ScheduleTypeDescription: UIWord_BossSchedule_Category_WorldBoss
+  NpcName: Boss_Kraka
+  NpcSpawnName: WorldBoss_Karaka
+  SortOrder: 1
+  DisplayImage: /Game/UIIcon/DungeonWorldBoss/BossSchedule_WorldBoss_Krakan_.BossSchedule_WorldBoss_Krakan_
+  WorldMapMoveIcon: /Game/UI/WorldMap/WorldMapContents_LI_MapBtn.WorldMapContents_LI_MapBtn
+  WorldmapName: WorldMap_Dun_WorldBoss
+  WorldMapDisplayTerritory: WorldMap_WorldBoss_Kraka

@@ -1,0 +1,33 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    PropertyName:
+      type: string
+      ref: property
+    Numerator: # 곱하는 값
+      type: number
+      visible: true
+      default: 1
+    Denominator: # 나누는 값
+      type: number
+      visible: true
+      default: 1
+    LimitTargetClass:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Class:
+            type: string
+            ref: class
+  required:
+    - Id
+    - PropertyName

@@ -1,0 +1,70 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - RankType
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    RankType:
+      type: string
+      enum:
+        - ClearTime
+        - Contribute
+    Dungeon:
+      type: string
+      ref: dungeon
+    NpcName:
+      type: string
+      ref: npc
+    ApplyContributeParty:
+      type: boolean
+      default: false
+    ParticipationReward:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Item
+          - Amount
+        properties:
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+            minimum: 1
+    RankReward:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - RankGroupMin
+          - RankGroupMax
+          - Item
+          - Amount
+        properties:
+          RankGroupMin:
+            type: integer
+            minimum: 1
+          RankGroupMax:
+            type: integer
+            minimum: 1
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+            minimum: 1

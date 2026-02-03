@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - EnchantLevel
+        - Broken
+        - GoldCost
+        - DiamondCost
+        - DieDate
+        - Experience
+        - LoseAmount
+        - ClassLimit
+        - TargetUUID
+        - TargetItemID
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - Comment

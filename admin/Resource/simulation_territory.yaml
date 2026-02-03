@@ -1,0 +1,64 @@
+- Id: 10000000000
+  Name: Simulation_Basic_Spawn_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: Simulation
+  Comment: 테스트 환경 스폰
+- Id: 10000000006
+  Name: Simulation_Performance_Spawn_Territory
+  StartX: -10
+  StartY: -517
+  EndX: 10
+  EndY: -486
+  IsClientSpawn: false
+  Land: Simulation
+  Comment: 테스트 환경 좁은 범위로 스폰
+- Id: 10000000001
+  Name: Simulation_Instance_Limit2_DeleteOnEmpty_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: Simulation_Instance_Limit2_DeleteOnEmpty
+  Comment: 최대 2명, 빈 채널 삭제
+- Id: 10000000002
+  Name: Simulation_Instance_Limit2_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: Simulation_Instance_Limit2
+  Comment: 최대 2명, 빈 채널 유지
+- Id: 10000000003
+  Name: Simulation_SingleInstance_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: Simulation_SingleInstance
+  Comment: 1인 인스턴스
+- Id: 10000000007
+  Name: Simulation_Single_Spawn_Territory
+  StartX: -2
+  StartY: -505
+  EndX: 2
+  EndY: -501
+  IsClientSpawn: false
+  Land: Simulation
+  Comment: 단일 NPC 스폰 테스트용 (좁은 범위, PC 좌표 y=-503 근처)
+
+- Id: 10000000008
+  Name: SimulationTown_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: SimulationTown
+  Comment: 시뮬레이션 마을 Territory (텔레포트 도착지)

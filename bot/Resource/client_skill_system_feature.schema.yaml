@@ -1,0 +1,56 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    PropertyType:
+      type: string
+      enum:
+        - SkillBook
+        - ActiveAnimation
+        - InactiveAnimation
+        - ChagneCompareSkillLevel
+        - SkillCategoryMainType
+        - SkillCategorySubtype
+    ItemCategory:
+      type: string
+      ref: item_category
+    AnimationName:
+      type: string
+    UIParam:
+      type: string
+      enum: 
+        - Increase
+        - Decrease
+    HasWeaponType:
+      type: string
+      enum:
+        - ItemEquippedWeaponAxe
+        - ItemEquippedWeaponCrossBow
+        - ItemEquippedWeaponLongBow
+        - ItemEquippedWeaponOrb
+        - ItemEquippedWeaponStaff
+        - ItemEquippedWeaponSword
+        - ItemEquippedWeaponTwoHandSword
+    HasPropertyType:
+      type: boolean
+    Description:
+      type: string
+      ref: description
+    #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+    Icon: 
+      type: string
+    SortOrder:
+      type: integer
+  required:
+    - Id
+    - Name
+    - PropertyType

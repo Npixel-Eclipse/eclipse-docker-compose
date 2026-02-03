@@ -1,0 +1,5870 @@
+- Id: 56
+  Name: PolymorphCommon
+  Comment: 초월체 강화_일반(미사용)
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+- Id: 305
+  Name: PolymorphUncommon
+  Comment: 초월체 강화_고급(미사용)
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+- Id: 1460
+  Name: WeaponPolymorphCommon
+  Comment: 무기 외형 강화_일반(미사용)
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+- Id: 4702
+  Name: WeaponPolymorphUncommon
+  Comment: 무기 외형 강화_고급(미사용)
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+- Id: 3523
+  Name: PolymorphRare
+  Comment: 초월체 확률형강화_희귀
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 2000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 69
+  Name: PolymorphEpic
+  Comment: 초월체 확률형강화_영웅
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 20000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 30000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 40000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G4_T1_04
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G4_T1_04
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G4_T1_04
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G4_T1_04
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G4_T1_04
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 6297
+  Name: PolymorphLegendary
+  Comment: 초월체 확률형강화_전설
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 50000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 100000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 150000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 250000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G5_T1_05
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G5_T1_05
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G5_T1_05
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G5_T1_05
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G5_T1_05
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 2502
+  Name: PolymorphMyth
+  Comment: 초월체 확률형강화_신화
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 200000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 400000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 600000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 800000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 1000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Use_G6_T1_06
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Use_G6_T1_06
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Use_G6_T1_06
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Use_G6_T1_06
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Use_G6_T1_06
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 5181
+  Name: WeaponPolymorphRare
+  Comment: 무기 외형 확률형강화_희귀
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 2000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 20000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 30000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 40000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 3450
+  Name: WeaponPolymorphEpic
+  Comment: 무기 외형 확률형강화_영웅
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 100000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 150000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 250000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G4_T1_04
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 4823
+  Name: WeaponPolymorphLegendary
+  Comment: 무기 외형 확률형강화_전설
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 50000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 100000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 150000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 250000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G5_T1_05
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 24
+  Name: WeaponPolymorphMyth
+  Comment: 무기 외형 확률형강화_신화
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 200000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 400000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 600000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 800000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 1000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      Amount: 5
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      Amount: 5
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      Amount: 5
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      Amount: 5
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Use_G6_T1_06
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+      Probability: "60%"
+    - Id: 2
+      From: 0
+      To: 0
+      Probability: "40%"
+    - Id: 3
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 3
+      Probability: "40%"
+    - Id: 6
+      From: 2
+      To: 2
+      Probability: "60%"
+    - Id: 7
+      From: 3
+      To: 4
+      Probability: "30%"
+    - Id: 8
+      From: 3
+      To: 3
+      Probability: "70%"
+    - Id: 9
+      From: 4
+      To: 5
+      Probability: "20%"
+    - Id: 10
+      From: 4
+      To: 4
+      Probability: "80%"
+- Id: 3042
+  Name: PolymorphRarePass
+  Comment: 초월체 확정형강화_희귀
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 2000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Pass_G3_T1_03
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Pass_G3_T1_03
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Pass_G3_T1_03
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Pass_G3_T1_03
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Pass_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+- Id: 1581
+  Name: PolymorphEpicPass
+  Comment: 초월체 확정형강화_영웅
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 20000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 30000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 40000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Pass_G4_T1_04
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Pass_G4_T1_04
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Pass_G4_T1_04
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Pass_G4_T1_04
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Pass_G4_T1_04
+      Amount: 5
+  Rule:
+    - Id: 6
+      From: 0
+      To: 1
+    - Id: 7
+      From: 1
+      To: 2
+    - Id: 8
+      From: 2
+      To: 3
+    - Id: 9
+      From: 3
+      To: 4
+    - Id: 10
+      From: 4
+      To: 5
+- Id: 6726
+  Name: PolymorphLegendaryPass
+  Comment: 초월체 확정형강화_전설
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 50000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 100000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 150000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 250000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Pass_G5_T1_05
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Pass_G5_T1_05
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Pass_G5_T1_05
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Pass_G5_T1_05
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Pass_G5_T1_05
+      Amount: 5
+  Rule:
+    - Id: 11
+      From: 0
+      To: 1
+    - Id: 12
+      From: 1
+      To: 2
+    - Id: 13
+      From: 2
+      To: 3
+    - Id: 14
+      From: 3
+      To: 4
+    - Id: 15
+      From: 4
+      To: 5
+- Id: 5175
+  Name: PolymorphMythPass
+  Comment: 초월체 확정형강화_신화
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 200000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 400000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 600000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 800000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 1000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Transcend_Pass_G6_T1_06
+    - From: 1
+      MaterialItem: Item_Grown_Transcend_Pass_G6_T1_06
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Transcend_Pass_G6_T1_06
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_Transcend_Pass_G6_T1_06
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_Transcend_Pass_G6_T1_06
+      Amount: 5
+  Rule:
+    - Id: 16
+      From: 0
+      To: 1
+    - Id: 17
+      From: 1
+      To: 2
+    - Id: 18
+      From: 2
+      To: 3
+    - Id: 19
+      From: 3
+      To: 4
+    - Id: 20
+      From: 4
+      To: 5
+- Id: 945
+  Name: WeaponPolymorphRarePass
+  Comment: 무기 외형 확정형강화_희귀
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 2000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 2000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 4000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 6000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 8000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G3_T1_03
+      Amount: 5
+  Rule:
+    - Id: 21
+      From: 0
+      To: 1
+    - Id: 22
+      From: 1
+      To: 2
+    - Id: 23
+      From: 2
+      To: 3
+    - Id: 24
+      From: 3
+      To: 4
+    - Id: 25
+      From: 4
+      To: 5
+- Id: 2028
+  Name: WeaponPolymorphEpicPass
+  Comment: 무기 외형 확정형강화_영웅
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 10000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 20000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 30000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 40000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G4_T1_04
+      Amount: 5
+  Rule:
+    - Id: 26
+      From: 0
+      To: 1
+    - Id: 27
+      From: 1
+      To: 2
+    - Id: 28
+      From: 2
+      To: 3
+    - Id: 29
+      From: 3
+      To: 4
+    - Id: 30
+      From: 4
+      To: 5
+- Id: 5490
+  Name: WeaponPolymorphLegendaryPass
+  Comment: 무기 외형 확정형강화_전설
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 50000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 50000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 100000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 150000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 250000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G5_T1_05
+      Amount: 5
+  Rule:
+    - Id: 31
+      From: 0
+      To: 1
+    - Id: 32
+      From: 1
+      To: 2
+    - Id: 33
+      From: 2
+      To: 3
+    - Id: 34
+      From: 3
+      To: 4
+    - Id: 35
+      From: 4
+      To: 5
+- Id: 2267
+  Name: WeaponPolymorphMythPass
+  Comment: 무기 외형 확정형강화_신화
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 200000
+  Cost:
+    - From: 0
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 200000
+    - From: 1
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 400000
+    - From: 2
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 600000
+    - From: 3
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 800000
+    - From: 4
+      EnchantCostItem: CurrencyGold
+      EnchantCost: 1000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+    - From: 1
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+      Amount: 3
+    - From: 3
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+      Amount: 4
+    - From: 4
+      MaterialItem: Item_Grown_WeaponPolymorph_Pass_G6_T1_06
+      Amount: 5
+  Rule:
+    - Id: 36
+      From: 0
+      To: 1
+    - Id: 37
+      From: 1
+      To: 2
+    - Id: 38
+      From: 2
+      To: 3
+    - Id: 39
+      From: 3
+      To: 4
+    - Id: 40
+      From: 4
+      To: 5
+- Id: 16520
+  Name: EnhanceWeapon
+  Comment: 강화_무기
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 1
+      From: 0
+      To: 1
+    - Id: 2
+      From: 1
+      To: 2
+    - Id: 3
+      From: 2
+      To: 3
+    - Id: 4
+      From: 3
+      To: 4
+    - Id: 5
+      From: 4
+      To: 5
+    - Id: 6
+      From: 5
+      To: 6
+    - Id: 7
+      From: 6
+      To: 7
+      Probability: "60%"
+    - Id: 8
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "40%"
+    - Id: 9
+      From: 7
+      To: 8
+      Probability: "50%"
+    - Id: 10
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 11
+      From: 8
+      To: 9
+      Probability: "40%"
+    - Id: 12
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 13
+      From: 9
+      To: 10
+      Probability: "30%"
+    - Id: 14
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 15
+      From: 10
+      To: 11
+      Probability: "20%"
+    - Id: 16
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 17
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "75%"
+    - Id: 18
+      From: 11
+      To: 12
+      Probability: "10%"
+    - Id: 19
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 20
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 21
+      From: 12
+      To: 13
+      Probability: "10%"
+    - Id: 22
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 23
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 24
+      From: 13
+      To: 14
+      Probability: "10%"
+    - Id: 25
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 26
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 27
+      From: 14
+      To: 15
+      Probability: "9%"
+    - Id: 28
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 29
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 30
+      From: 15
+      To: 16
+      Probability: "9%"
+    - Id: 31
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 32
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 33
+      From: 16
+      To: 17
+      Probability: "9%"
+    - Id: 34
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 35
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 36
+      From: 17
+      To: 18
+      Probability: "8%"
+    - Id: 37
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 38
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 39
+      From: 18
+      To: 19
+      Probability: "8%"
+    - Id: 40
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 41
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 42
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 43
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 44
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 5
+- Id: 21500
+  Name: EnhanceWeaponBlessed
+  Comment: 강화_무기_축복
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 137
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 138
+      From: 0
+      To: 2
+      Probability: "50%"
+    - Id: 139
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 140
+      From: 1
+      To: 3
+      Probability: "50%"
+    - Id: 141
+      From: 2
+      To: 3
+      Probability: "50%"
+    - Id: 142
+      From: 2
+      To: 4
+      Probability: "50%"
+    - Id: 143
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 144
+      From: 3
+      To: 5
+      Probability: "50%"
+    - Id: 145
+      From: 4
+      To: 5
+      Probability: "50%"
+    - Id: 146
+      From: 4
+      To: 6
+      Probability: "50%"
+    - Id: 147
+      From: 5
+      To: 6
+      Probability: "50%"
+    - Id: 148
+      From: 5
+      To: 7
+      Probability: "50%"
+    - Id: 149
+      From: 6
+      To: 7
+      Probability: "30%"
+    - Id: 150
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "40%"
+    - Id: 151
+      From: 6
+      To: 8
+      Probability: "30%"
+    - Id: 152
+      From: 7
+      To: 8
+      Probability: "25%"
+    - Id: 153
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 154
+      From: 7
+      To: 9
+      Probability: "25%"
+    - Id: 155
+      From: 8
+      To: 9
+      Probability: "20%"
+    - Id: 156
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 157
+      From: 8
+      To: 10
+      Probability: "20%"
+    - Id: 158
+      From: 9
+      To: 10
+      Probability: "15%"
+    - Id: 159
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 160
+      From: 9
+      To: 11
+      Probability: "15%"
+    - Id: 161
+      From: 10
+      To: 11
+      Probability: "10%"
+    - Id: 162
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 163
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "75%"
+    - Id: 164
+      From: 10
+      To: 12
+      Probability: "10%"
+    - Id: 165
+      From: 11
+      To: 12
+      Probability: "5%"
+    - Id: 166
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 167
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 168
+      From: 11
+      To: 13
+      Probability: "5%"
+    - Id: 169
+      From: 12
+      To: 13
+      Probability: "5%"
+    - Id: 170
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 171
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 172
+      From: 12
+      To: 14
+      Probability: "5%"
+    - Id: 173
+      From: 13
+      To: 14
+      Probability: "5%"
+    - Id: 174
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 175
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 176
+      From: 13
+      To: 15
+      Probability: "5%"
+    - Id: 177
+      From: 14
+      To: 15
+      Probability: "4.5%"
+    - Id: 178
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 179
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 180
+      From: 14
+      To: 16
+      Probability: "4.5%"
+    - Id: 181
+      From: 15
+      To: 16
+      Probability: "4.5%"
+    - Id: 182
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 183
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 184
+      From: 15
+      To: 17
+      Probability: "4.5%"
+    - Id: 185
+      From: 16
+      To: 17
+      Probability: "4.5%"
+    - Id: 186
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 187
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 188
+      From: 16
+      To: 18
+      Probability: "4.5%"
+    - Id: 189
+      From: 17
+      To: 18
+      Probability: "4%"
+    - Id: 190
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 191
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 192
+      From: 17
+      To: 19
+      Probability: "4%"
+    - Id: 193
+      From: 18
+      To: 19
+      Probability: "4%"
+    - Id: 194
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 195
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 196
+      From: 18
+      To: 20
+      Probability: "4%"
+    - Id: 197
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 198
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 199
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_01_Bounded
+      Amount: 5
+- Id: 983
+  Name: EnhanceWeaponCursed
+  Comment: 강화_무기_저주
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 330
+      From: 1
+      To: 0
+    - Id: 331
+      From: 2
+      To: 1
+    - Id: 332
+      From: 3
+      To: 2
+    - Id: 333
+      From: 4
+      To: 3
+    - Id: 334
+      From: 5
+      To: 4
+    - Id: 335
+      From: 6
+      To: 5
+    - Id: 336
+      From: 7
+      To: 6
+    - Id: 337
+      From: 8
+      To: 7
+    - Id: 338
+      From: 9
+      To: 8
+    - Id: 339
+      From: 10
+      To: 9
+    - Id: 340
+      From: 11
+      To: 10
+    - Id: 341
+      From: 12
+      To: 11
+    - Id: 342
+      From: 13
+      To: 12
+    - Id: 343
+      From: 14
+      To: 13
+    - Id: 344
+      From: 15
+      To: 14
+    - Id: 345
+      From: 16
+      To: 15
+    - Id: 346
+      From: 17
+      To: 16
+    - Id: 347
+      From: 18
+      To: 17
+    - Id: 348
+      From: 19
+      To: 18
+- Id: 3930
+  Name: EnhanceArmor
+  Comment: 강화_방어구
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 45
+      From: 0
+      To: 1
+    - Id: 46
+      From: 1
+      To: 2
+    - Id: 47
+      From: 2
+      To: 3
+    - Id: 48
+      From: 3
+      To: 4
+    - Id: 49
+      From: 4
+      To: 5
+    - Id: 50
+      From: 5
+      To: 6
+    - Id: 51
+      From: 6
+      To: 7
+      Probability: "60%"
+    - Id: 52
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "40%"
+    - Id: 53
+      From: 7
+      To: 8
+      Probability: "50%"
+    - Id: 54
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 55
+      From: 8
+      To: 9
+      Probability: "40%"
+    - Id: 56
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 57
+      From: 9
+      To: 10
+      Probability: "30%"
+    - Id: 58
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 59
+      From: 10
+      To: 11
+      Probability: "20%"
+    - Id: 60
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 61
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "75%"
+    - Id: 62
+      From: 11
+      To: 12
+      Probability: "10%"
+    - Id: 63
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 64
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 65
+      From: 12
+      To: 13
+      Probability: "10%"
+    - Id: 66
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 67
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 68
+      From: 13
+      To: 14
+      Probability: "10%"
+    - Id: 69
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 70
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 71
+      From: 14
+      To: 15
+      Probability: "9%"
+    - Id: 72
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 73
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 74
+      From: 15
+      To: 16
+      Probability: "9%"
+    - Id: 75
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 76
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 77
+      From: 16
+      To: 17
+      Probability: "9%"
+    - Id: 78
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 79
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 80
+      From: 17
+      To: 18
+      Probability: "8%"
+    - Id: 81
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 82
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 83
+      From: 18
+      To: 19
+      Probability: "8%"
+    - Id: 84
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 85
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 86
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 87
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 88
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 5
+- Id: 26652
+  Name: EnhanceArmorBlessed
+  Comment: 강화_방어구_축복
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 200
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 201
+      From: 0
+      To: 2
+      Probability: "50%"
+    - Id: 202
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 203
+      From: 1
+      To: 3
+      Probability: "50%"
+    - Id: 204
+      From: 2
+      To: 3
+      Probability: "50%"
+    - Id: 205
+      From: 2
+      To: 4
+      Probability: "50%"
+    - Id: 206
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 207
+      From: 3
+      To: 5
+      Probability: "50%"
+    - Id: 208
+      From: 4
+      To: 5
+      Probability: "50%"
+    - Id: 209
+      From: 4
+      To: 6
+      Probability: "50%"
+    - Id: 210
+      From: 5
+      To: 6
+      Probability: "50%"
+    - Id: 211
+      From: 5
+      To: 7
+      Probability: "50%"
+    - Id: 212
+      From: 6
+      To: 7
+      Probability: "30%"
+    - Id: 213
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "40%"
+    - Id: 214
+      From: 6
+      To: 8
+      Probability: "30%"
+    - Id: 215
+      From: 7
+      To: 8
+      Probability: "25%"
+    - Id: 216
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 217
+      From: 7
+      To: 9
+      Probability: "25%"
+    - Id: 218
+      From: 8
+      To: 9
+      Probability: "20%"
+    - Id: 219
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 220
+      From: 8
+      To: 10
+      Probability: "20%"
+    - Id: 221
+      From: 9
+      To: 10
+      Probability: "15%"
+    - Id: 222
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 223
+      From: 9
+      To: 11
+      Probability: "15%"
+    - Id: 224
+      From: 10
+      To: 11
+      Probability: "10%"
+    - Id: 225
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 226
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "75%"
+    - Id: 227
+      From: 10
+      To: 12
+      Probability: "10%"
+    - Id: 228
+      From: 11
+      To: 12
+      Probability: "5%"
+    - Id: 229
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 230
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 231
+      From: 11
+      To: 13
+      Probability: "5%"
+    - Id: 232
+      From: 12
+      To: 13
+      Probability: "5%"
+    - Id: 233
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 234
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 235
+      From: 12
+      To: 14
+      Probability: "5%"
+    - Id: 236
+      From: 13
+      To: 14
+      Probability: "5%"
+    - Id: 237
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 238
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 239
+      From: 13
+      To: 15
+      Probability: "5%"
+    - Id: 240
+      From: 14
+      To: 15
+      Probability: "4.5%"
+    - Id: 241
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 242
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 243
+      From: 14
+      To: 16
+      Probability: "4.5%"
+    - Id: 244
+      From: 15
+      To: 16
+      Probability: "4.5%"
+    - Id: 245
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 246
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 247
+      From: 15
+      To: 17
+      Probability: "4.5%"
+    - Id: 248
+      From: 16
+      To: 17
+      Probability: "4.5%"
+    - Id: 249
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 250
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 251
+      From: 16
+      To: 18
+      Probability: "4.5%"
+    - Id: 252
+      From: 17
+      To: 18
+      Probability: "4%"
+    - Id: 253
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 254
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 255
+      From: 17
+      To: 19
+      Probability: "4%"
+    - Id: 256
+      From: 18
+      To: 19
+      Probability: "4%"
+    - Id: 257
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 258
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 259
+      From: 18
+      To: 20
+      Probability: "4%"
+    - Id: 260
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 261
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 262
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_02_Bounded
+      Amount: 5
+- Id: 34072
+  Name: EnhanceArmorCursed
+  Comment: 강화_방어구_저주
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 349
+      From: 1
+      To: 0
+    - Id: 350
+      From: 2
+      To: 1
+    - Id: 351
+      From: 3
+      To: 2
+    - Id: 352
+      From: 4
+      To: 3
+    - Id: 353
+      From: 5
+      To: 4
+    - Id: 354
+      From: 6
+      To: 5
+    - Id: 355
+      From: 7
+      To: 6
+    - Id: 356
+      From: 8
+      To: 7
+    - Id: 357
+      From: 9
+      To: 8
+    - Id: 358
+      From: 10
+      To: 9
+    - Id: 359
+      From: 11
+      To: 10
+    - Id: 360
+      From: 12
+      To: 11
+    - Id: 361
+      From: 13
+      To: 12
+    - Id: 362
+      From: 14
+      To: 13
+    - Id: 363
+      From: 15
+      To: 14
+    - Id: 364
+      From: 16
+      To: 15
+    - Id: 365
+      From: 17
+      To: 16
+    - Id: 366
+      From: 18
+      To: 17
+    - Id: 367
+      From: 19
+      To: 18
+- Id: 23024
+  Name: EnhanceAccessory
+  Comment: 강화_장신구
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 89
+      From: 0
+      To: 1
+    - Id: 90
+      From: 1
+      To: 2
+    - Id: 91
+      From: 2
+      To: 3
+    - Id: 92
+      From: 3
+      To: 4
+    - Id: 93
+      From: 4
+      To: 5
+      Probability: "50%"
+    - Id: 94
+      From: 4
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 95
+      From: 5
+      To: 6
+      Probability: "40%"
+    - Id: 96
+      From: 5
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 97
+      From: 6
+      To: 7
+      Probability: "30%"
+    - Id: 98
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 99
+      From: 7
+      To: 8
+      Probability: "20%"
+    - Id: 100
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "80%"
+    - Id: 101
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 102
+      From: 8
+      To: 8
+      Probability: "5%"
+    - Id: 103
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 104
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 105
+      From: 9
+      To: 9
+      Probability: "5%"
+    - Id: 106
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 107
+      From: 10
+      To: 11
+      Probability: "10%"
+    - Id: 108
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 109
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 110
+      From: 11
+      To: 12
+      Probability: "10%"
+    - Id: 111
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 112
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 113
+      From: 12
+      To: 13
+      Probability: "10%"
+    - Id: 114
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 115
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 116
+      From: 13
+      To: 14
+      Probability: "10%"
+    - Id: 117
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 118
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 119
+      From: 14
+      To: 15
+      Probability: "9%"
+    - Id: 120
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 121
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 122
+      From: 15
+      To: 16
+      Probability: "9%"
+    - Id: 123
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 124
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 125
+      From: 16
+      To: 17
+      Probability: "9%"
+    - Id: 126
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 127
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 128
+      From: 17
+      To: 18
+      Probability: "8%"
+    - Id: 129
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 130
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 131
+      From: 18
+      To: 19
+      Probability: "8%"
+    - Id: 132
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 133
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 134
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 135
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 136
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 5
+- Id: 27480
+  Name: EnhanceAccessoryBlessed
+  Comment: 강화_장신구_축복
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 263
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 264
+      From: 0
+      To: 2
+      Probability: "50%"
+    - Id: 265
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 266
+      From: 1
+      To: 3
+      Probability: "50%"
+    - Id: 267
+      From: 2
+      To: 3
+      Probability: "50%"
+    - Id: 268
+      From: 2
+      To: 4
+      Probability: "50%"
+    - Id: 269
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 270
+      From: 3
+      To: 5
+      Probability: "50%"
+    - Id: 271
+      From: 4
+      To: 5
+      Probability: "25%"
+    - Id: 272
+      From: 4
+      To: 0
+      Vaporize: true
+      Probability: "50%"
+    - Id: 273
+      From: 4
+      To: 6
+      Probability: "25%"
+    - Id: 274
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 275
+      From: 5
+      To: 0
+      Vaporize: true
+      Probability: "60%"
+    - Id: 276
+      From: 5
+      To: 7
+      Probability: "20%"
+    - Id: 277
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 278
+      From: 6
+      To: 0
+      Vaporize: true
+      Probability: "70%"
+    - Id: 279
+      From: 6
+      To: 8
+      Probability: "15%"
+    - Id: 280
+      From: 7
+      To: 8
+      Probability: "10%"
+    - Id: 281
+      From: 7
+      To: 0
+      Vaporize: true
+      Probability: "80%"
+    - Id: 282
+      From: 7
+      To: 9
+      Probability: "10%"
+    - Id: 283
+      From: 8
+      To: 9
+      Probability: "5%"
+    - Id: 284
+      From: 8
+      To: 8
+      Probability: "5%"
+    - Id: 285
+      From: 8
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 286
+      From: 8
+      To: 10
+      Probability: "5%"
+    - Id: 287
+      From: 9
+      To: 10
+      Probability: "5%"
+    - Id: 288
+      From: 9
+      To: 9
+      Probability: "5%"
+    - Id: 289
+      From: 9
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 290
+      From: 9
+      To: 11
+      Probability: "5%"
+    - Id: 291
+      From: 10
+      To: 11
+      Probability: "5%"
+    - Id: 292
+      From: 10
+      To: 10
+      Probability: "5%"
+    - Id: 293
+      From: 10
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 294
+      From: 10
+      To: 12
+      Probability: "5%"
+    - Id: 295
+      From: 11
+      To: 12
+      Probability: "5%"
+    - Id: 296
+      From: 11
+      To: 11
+      Probability: "5%"
+    - Id: 297
+      From: 11
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 298
+      From: 11
+      To: 13
+      Probability: "5%"
+    - Id: 299
+      From: 12
+      To: 13
+      Probability: "5%"
+    - Id: 300
+      From: 12
+      To: 12
+      Probability: "5%"
+    - Id: 301
+      From: 12
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 302
+      From: 12
+      To: 14
+      Probability: "5%"
+    - Id: 303
+      From: 13
+      To: 14
+      Probability: "5%"
+    - Id: 304
+      From: 13
+      To: 13
+      Probability: "5%"
+    - Id: 305
+      From: 13
+      To: 0
+      Vaporize: true
+      Probability: "85%"
+    - Id: 306
+      From: 13
+      To: 15
+      Probability: "5%"
+    - Id: 307
+      From: 14
+      To: 15
+      Probability: "4.5%"
+    - Id: 308
+      From: 14
+      To: 14
+      Probability: "5%"
+    - Id: 309
+      From: 14
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 310
+      From: 14
+      To: 16
+      Probability: "4.5%"
+    - Id: 311
+      From: 15
+      To: 16
+      Probability: "4.5%"
+    - Id: 312
+      From: 15
+      To: 15
+      Probability: "5%"
+    - Id: 313
+      From: 15
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 314
+      From: 15
+      To: 17
+      Probability: "4.5%"
+    - Id: 315
+      From: 16
+      To: 17
+      Probability: "4.5%"
+    - Id: 316
+      From: 16
+      To: 16
+      Probability: "5%"
+    - Id: 317
+      From: 16
+      To: 0
+      Vaporize: true
+      Probability: "86%"
+    - Id: 318
+      From: 16
+      To: 18
+      Probability: "4.5%"
+    - Id: 319
+      From: 17
+      To: 18
+      Probability: "4%"
+    - Id: 320
+      From: 17
+      To: 17
+      Probability: "5%"
+    - Id: 321
+      From: 17
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 322
+      From: 17
+      To: 19
+      Probability: "4%"
+    - Id: 323
+      From: 18
+      To: 19
+      Probability: "4%"
+    - Id: 324
+      From: 18
+      To: 18
+      Probability: "5%"
+    - Id: 325
+      From: 18
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+    - Id: 326
+      From: 18
+      To: 20
+      Probability: "4%"
+    - Id: 327
+      From: 19
+      To: 20
+      Probability: "8%"
+    - Id: 328
+      From: 19
+      To: 19
+      Probability: "5%"
+    - Id: 329
+      From: 19
+      To: 0
+      Vaporize: true
+      Probability: "87%"
+  RewardItem:
+    - From: 6
+      To: 7
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 7
+      To: 8
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 8
+      To: 9
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 9
+      To: 10
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 2
+    - From: 10
+      To: 11
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 11
+      To: 12
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 12
+      To: 13
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 13
+      To: 14
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 3
+    - From: 14
+      To: 15
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 15
+      To: 16
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 16
+      To: 17
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 17
+      To: 18
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 4
+    - From: 18
+      To: 19
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 5
+    - From: 19
+      To: 20
+      Item: Item_Grown_Enchant_G1_T1_03_Bounded
+      Amount: 5
+- Id: 6627
+  Name: EnhanceAccessoryCursed
+  Comment: 강화_장신구_저주
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 368
+      From: 1
+      To: 0
+    - Id: 369
+      From: 2
+      To: 1
+    - Id: 370
+      From: 3
+      To: 2
+    - Id: 371
+      From: 4
+      To: 3
+    - Id: 372
+      From: 5
+      To: 4
+    - Id: 373
+      From: 6
+      To: 5
+    - Id: 374
+      From: 7
+      To: 6
+    - Id: 375
+      From: 8
+      To: 7
+    - Id: 376
+      From: 9
+      To: 8
+    - Id: 377
+      From: 10
+      To: 9
+    - Id: 378
+      From: 11
+      To: 10
+    - Id: 379
+      From: 12
+      To: 11
+    - Id: 380
+      From: 13
+      To: 12
+    - Id: 381
+      From: 14
+      To: 13
+    - Id: 382
+      From: 15
+      To: 14
+    - Id: 383
+      From: 16
+      To: 15
+    - Id: 384
+      From: 17
+      To: 16
+    - Id: 385
+      From: 18
+      To: 17
+    - Id: 386
+      From: 19
+      To: 18
+- Id: 28453
+  Name: MightSlotTest
+  Comment: 권능 부여 슬롯 테스트(업데이트)
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Rule:
+    - Id: 12983
+      From: 0
+      To: 1
+      Probability: "33.33%"
+    - Id: 12984
+      From: 0
+      To: 2
+      Probability: "33.33%"
+    - Id: 12985
+      From: 0
+      To: 3
+      Probability: "33.34%"
+    - Id: 12986
+      From: 1
+      To: 1
+      Probability: "33.33%"
+    - Id: 12987
+      From: 1
+      To: 2
+      Probability: "33.33%"
+    - Id: 12988
+      From: 1
+      To: 3
+      Probability: "33.34%"
+    - Id: 12989
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 12990
+      From: 2
+      To: 3
+      Probability: "50%"
+- Id: 22453
+  Name: MightRareMaterialEpic2Tier1TierSlot
+  Comment: "권능 부여 희귀 재료 영웅 2,1티어 슬롯"
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 100000
+  Rule:
+    - Id: 13016
+      From: 0
+      To: 0
+      Probability: "80%"
+    - Id: 13017
+      From: 0
+      To: 1
+      Probability: "20%"
+- Id: 30819
+  Name: MightRareMaterialLegendary3Tier2TierSlot
+  Comment: "권능 부여 희귀 재료 전설 3,2티어 슬롯"
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000000
+  Rule:
+    - Id: 13018
+      From: 0
+      To: 0
+      Probability: "89%"
+    - Id: 13019
+      From: 0
+      To: 1
+      Probability: "10%"
+    - Id: 13020
+      From: 0
+      To: 2
+      Probability: "1%"
+    - Id: 13021
+      From: 1
+      To: 1
+      Probability: "99%"
+    - Id: 13022
+      From: 1
+      To: 2
+      Probability: "1%"
+- Id: 27388
+  Name: MightEpicMaterialEpicLegendary3Tier2TierSlot
+  Comment: "권능 부여 영웅 재료 전설 3,2티어 슬롯"
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000000
+  Rule:
+    - Id: 13023
+      From: 0
+      To: 0
+      Probability: "87%"
+    - Id: 13024
+      From: 0
+      To: 1
+      Probability: "10%"
+    - Id: 13025
+      From: 0
+      To: 2
+      Probability: "3%"
+    - Id: 13026
+      From: 1
+      To: 1
+      Probability: "97%"
+    - Id: 13027
+      From: 1
+      To: 2
+      Probability: "3%"
+- Id: 33503
+  Name: MightEpicMaterialSlotLagendary1TierSlot
+  Comment: 권능 부여 영웅 재료 전설 1티어 슬롯
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000000
+  Rule:
+    - Id: 13028
+      From: 0
+      To: 0
+      Probability: "93.5%"
+    - Id: 13029
+      From: 0
+      To: 1
+      Probability: "4%"
+    - Id: 13030
+      From: 0
+      To: 2
+      Probability: "2%"
+    - Id: 13031
+      From: 0
+      To: 3
+      Probability: "0.5%"
+    - Id: 13032
+      From: 1
+      To: 1
+      Probability: "97.5%"
+    - Id: 13033
+      From: 1
+      To: 2
+      Probability: "2%"
+    - Id: 13034
+      From: 1
+      To: 3
+      Probability: "0.5%"
+    - Id: 13035
+      From: 2
+      To: 2
+      Probability: "99.5%"
+    - Id: 13036
+      From: 2
+      To: 3
+      Probability: "0.5%"
+- Id: 6499
+  Name: MightLagendaryMaterialLagendary1TierSlot
+  Comment: 권능 부여 전설 재료 전설 1티어 슬롯
+  TargetProperty: MightSlotCount
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000000
+  Rule:
+    - Id: 13037
+      From: 0
+      To: 0
+      Probability: "67%"
+    - Id: 13038
+      From: 0
+      To: 1
+      Probability: "20%"
+    - Id: 13039
+      From: 0
+      To: 2
+      Probability: "10%"
+    - Id: 13040
+      From: 0
+      To: 3
+      Probability: "3%"
+    - Id: 13041
+      From: 1
+      To: 1
+      Probability: "87%"
+    - Id: 13042
+      From: 1
+      To: 2
+      Probability: "10%"
+    - Id: 13043
+      From: 1
+      To: 3
+      Probability: "3%"
+    - Id: 13044
+      From: 2
+      To: 2
+      Probability: "97%"
+    - Id: 13045
+      From: 2
+      To: 3
+      Probability: "3%"
+- Id: 15586
+  Name: EnhanceSkillCommon
+  Comment: 일반 등급 스킬
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 50000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 2
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 3
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 4
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 5
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 6
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 7
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 8
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+    - From: 9
+      MaterialItem: Item_Grown_SkillEnchant_G1_T1_01
+  Rule:
+    - Id: 1001
+      From: 0
+      To: 1
+    - Id: 1002
+      From: 1
+      To: 2
+      Probability: "80%"
+    - Id: 1003
+      From: 1
+      To: 1
+      Probability: "20%"
+    - Id: 1004
+      From: 2
+      To: 3
+      Probability: "65%"
+    - Id: 1005
+      From: 2
+      To: 2
+      Probability: "35%"
+    - Id: 1006
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 1007
+      From: 3
+      To: 3
+      Probability: "50%"
+    - Id: 1008
+      From: 4
+      To: 5
+      Probability: "35%"
+    - Id: 1009
+      From: 4
+      To: 4
+      Probability: "65%"
+    - Id: 1010
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 1011
+      From: 5
+      To: 5
+      Probability: "80%"
+    - Id: 1012
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 1013
+      From: 6
+      To: 6
+      Probability: "70%"
+    - Id: 1014
+      From: 6
+      To: 5
+      Probability: "15%"
+    - Id: 1015
+      From: 7
+      To: 8
+      Probability: "15%"
+    - Id: 1016
+      From: 7
+      To: 7
+      Probability: "65%"
+    - Id: 1017
+      From: 7
+      To: 6
+      Probability: "20%"
+    - Id: 1018
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 1019
+      From: 8
+      To: 8
+      Probability: "60%"
+    - Id: 1020
+      From: 8
+      To: 7
+      Probability: "30%"
+    - Id: 1021
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 1022
+      From: 9
+      To: 9
+      Probability: "55%"
+    - Id: 1023
+      From: 9
+      To: 8
+      Probability: "35%"
+- Id: 2988
+  Name: EnhanceSkillUncommon
+  Comment: 고급 등급 스킬
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 200000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 1
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 2
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 3
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 4
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 5
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 6
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 7
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 8
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+    - From: 9
+      MaterialItem: Item_Grown_SkillEnchant_G2_T1_02
+  Rule:
+    - Id: 1101
+      From: 0
+      To: 1
+    - Id: 1102
+      From: 1
+      To: 2
+      Probability: "80%"
+    - Id: 1103
+      From: 1
+      To: 1
+      Probability: "20%"
+    - Id: 1104
+      From: 2
+      To: 3
+      Probability: "65%"
+    - Id: 1105
+      From: 2
+      To: 2
+      Probability: "35%"
+    - Id: 1106
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 1107
+      From: 3
+      To: 3
+      Probability: "50%"
+    - Id: 1108
+      From: 4
+      To: 5
+      Probability: "35%"
+    - Id: 1109
+      From: 4
+      To: 4
+      Probability: "65%"
+    - Id: 1110
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 1111
+      From: 5
+      To: 5
+      Probability: "80%"
+    - Id: 1112
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 1113
+      From: 6
+      To: 6
+      Probability: "70%"
+    - Id: 1114
+      From: 6
+      To: 5
+      Probability: "15%"
+    - Id: 1115
+      From: 7
+      To: 8
+      Probability: "15%"
+    - Id: 1116
+      From: 7
+      To: 7
+      Probability: "65%"
+    - Id: 1117
+      From: 7
+      To: 6
+      Probability: "20%"
+    - Id: 1118
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 1119
+      From: 8
+      To: 8
+      Probability: "60%"
+    - Id: 1120
+      From: 8
+      To: 7
+      Probability: "30%"
+    - Id: 1121
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 1122
+      From: 9
+      To: 9
+      Probability: "55%"
+    - Id: 1123
+      From: 9
+      To: 8
+      Probability: "35%"
+- Id: 24632
+  Name: EnhanceSkillRare
+  Comment: 희귀 등급 스킬
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 500000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 1
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 2
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 3
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 4
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 5
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 6
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 7
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 8
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+    - From: 9
+      MaterialItem: Item_Grown_SkillEnchant_G3_T1_03
+  Rule:
+    - Id: 1201
+      From: 0
+      To: 1
+    - Id: 1202
+      From: 1
+      To: 2
+      Probability: "80%"
+    - Id: 1203
+      From: 1
+      To: 1
+      Probability: "20%"
+    - Id: 1204
+      From: 2
+      To: 3
+      Probability: "65%"
+    - Id: 1205
+      From: 2
+      To: 2
+      Probability: "35%"
+    - Id: 1206
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 1207
+      From: 3
+      To: 3
+      Probability: "50%"
+    - Id: 1208
+      From: 4
+      To: 5
+      Probability: "35%"
+    - Id: 1209
+      From: 4
+      To: 4
+      Probability: "65%"
+    - Id: 1210
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 1211
+      From: 5
+      To: 5
+      Probability: "80%"
+    - Id: 1212
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 1213
+      From: 6
+      To: 6
+      Probability: "70%"
+    - Id: 1214
+      From: 6
+      To: 5
+      Probability: "15%"
+    - Id: 1215
+      From: 7
+      To: 8
+      Probability: "15%"
+    - Id: 1216
+      From: 7
+      To: 7
+      Probability: "65%"
+    - Id: 1217
+      From: 7
+      To: 6
+      Probability: "20%"
+    - Id: 1218
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 1219
+      From: 8
+      To: 8
+      Probability: "60%"
+    - Id: 1220
+      From: 8
+      To: 7
+      Probability: "30%"
+    - Id: 1221
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 1222
+      From: 9
+      To: 9
+      Probability: "55%"
+    - Id: 1223
+      From: 9
+      To: 8
+      Probability: "35%"
+- Id: 33821
+  Name: EnhanceSkillEpic
+  Comment: 영웅 등급 스킬
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 2000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 1
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 2
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 3
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 4
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 5
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 6
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 7
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 8
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+    - From: 9
+      MaterialItem: Item_Grown_SkillEnchant_G4_T1_04
+  Rule:
+    - Id: 1301
+      From: 0
+      To: 1
+    - Id: 1302
+      From: 1
+      To: 2
+      Probability: "80%"
+    - Id: 1303
+      From: 1
+      To: 1
+      Probability: "20%"
+    - Id: 1304
+      From: 2
+      To: 3
+      Probability: "65%"
+    - Id: 1305
+      From: 2
+      To: 2
+      Probability: "35%"
+    - Id: 1306
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 1307
+      From: 3
+      To: 3
+      Probability: "50%"
+    - Id: 1308
+      From: 4
+      To: 5
+      Probability: "35%"
+    - Id: 1309
+      From: 4
+      To: 4
+      Probability: "65%"
+    - Id: 1310
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 1311
+      From: 5
+      To: 5
+      Probability: "80%"
+    - Id: 1312
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 1313
+      From: 6
+      To: 6
+      Probability: "70%"
+    - Id: 1314
+      From: 6
+      To: 5
+      Probability: "15%"
+    - Id: 1315
+      From: 7
+      To: 8
+      Probability: "15%"
+    - Id: 1316
+      From: 7
+      To: 7
+      Probability: "65%"
+    - Id: 1317
+      From: 7
+      To: 6
+      Probability: "20%"
+    - Id: 1318
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 1319
+      From: 8
+      To: 8
+      Probability: "60%"
+    - Id: 1320
+      From: 8
+      To: 7
+      Probability: "30%"
+    - Id: 1321
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 1322
+      From: 9
+      To: 9
+      Probability: "55%"
+    - Id: 1323
+      From: 9
+      To: 8
+      Probability: "35%"
+- Id: 34815
+  Name: EnhanceSkillLegendary
+  Comment: 전설 등급 스킬
+  TargetProperty: EnchantLevel
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 10000000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 1
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 2
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 3
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 4
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 5
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 6
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 7
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 8
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+    - From: 9
+      MaterialItem: Item_Grown_SkillEnchant_G5_T1_05
+  Rule:
+    - Id: 1401
+      From: 0
+      To: 1
+    - Id: 1402
+      From: 1
+      To: 2
+      Probability: "80%"
+    - Id: 1403
+      From: 1
+      To: 1
+      Probability: "20%"
+    - Id: 1404
+      From: 2
+      To: 3
+      Probability: "65%"
+    - Id: 1405
+      From: 2
+      To: 2
+      Probability: "35%"
+    - Id: 1406
+      From: 3
+      To: 4
+      Probability: "50%"
+    - Id: 1407
+      From: 3
+      To: 3
+      Probability: "50%"
+    - Id: 1408
+      From: 4
+      To: 5
+      Probability: "35%"
+    - Id: 1409
+      From: 4
+      To: 4
+      Probability: "65%"
+    - Id: 1410
+      From: 5
+      To: 6
+      Probability: "20%"
+    - Id: 1411
+      From: 5
+      To: 5
+      Probability: "80%"
+    - Id: 1412
+      From: 6
+      To: 7
+      Probability: "15%"
+    - Id: 1413
+      From: 6
+      To: 6
+      Probability: "70%"
+    - Id: 1414
+      From: 6
+      To: 5
+      Probability: "15%"
+    - Id: 1415
+      From: 7
+      To: 8
+      Probability: "15%"
+    - Id: 1416
+      From: 7
+      To: 7
+      Probability: "65%"
+    - Id: 1417
+      From: 7
+      To: 6
+      Probability: "20%"
+    - Id: 1418
+      From: 8
+      To: 9
+      Probability: "10%"
+    - Id: 1419
+      From: 8
+      To: 8
+      Probability: "60%"
+    - Id: 1420
+      From: 8
+      To: 7
+      Probability: "30%"
+    - Id: 1421
+      From: 9
+      To: 10
+      Probability: "10%"
+    - Id: 1422
+      From: 9
+      To: 9
+      Probability: "55%"
+    - Id: 1423
+      From: 9
+      To: 8
+      Probability: "35%"
+- Id: 1637
+  Name: EnhanceWeaponDivinityDropSlot1Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot1Common
+- Id: 1402
+  Name: EnhanceWeaponDivinityDropSlot2Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot2Common
+- Id: 2721
+  Name: EnhanceWeaponDivinityDropSlot3Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot3Common
+- Id: 2265
+  Name: EnhanceWeaponDivinityDropSlot4Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot4Common
+- Id: 1630
+  Name: EnhanceWeaponDivinityDropSlot5Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot5Common
+- Id: 3759
+  Name: EnhanceWeaponDivinityDropSlot6Common
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot6Common
+- Id: 3340
+  Name: EnhanceWeaponDivinityCraftSlot1Common
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot1Common
+- Id: 828
+  Name: EnhanceWeaponDivinityCraftSlot2Common
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot2Common
+- Id: 1153
+  Name: EnhanceWeaponDivinityCraftSlot3Common
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot3Common
+- Id: 497
+  Name: EnhanceWeaponDivinityDropSlot1Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot1Uncommon
+- Id: 1082
+  Name: EnhanceWeaponDivinityDropSlot2Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot2Uncommon
+- Id: 2069
+  Name: EnhanceWeaponDivinityDropSlot3Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot3Uncommon
+- Id: 1293
+  Name: EnhanceWeaponDivinityDropSlot4Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot4Uncommon
+- Id: 4593
+  Name: EnhanceWeaponDivinityDropSlot5Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot5Uncommon
+- Id: 4131
+  Name: EnhanceWeaponDivinityDropSlot6Uncommon
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot6Uncommon
+- Id: 4406
+  Name: EnhanceWeaponDivinityCraftSlot1Uncommon
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot1Uncommon
+- Id: 1854
+  Name: EnhanceWeaponDivinityCraftSlot2Uncommon
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot2Uncommon
+- Id: 4732
+  Name: EnhanceWeaponDivinityCraftSlot3Uncommon
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot3Uncommon
+- Id: 1255
+  Name: EnhanceWeaponDivinityDropSlot1Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot1Rare
+- Id: 2209
+  Name: EnhanceWeaponDivinityDropSlot2Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot2Rare
+- Id: 5123
+  Name: EnhanceWeaponDivinityDropSlot3Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot3Rare
+- Id: 4656
+  Name: EnhanceWeaponDivinityDropSlot4Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot4Rare
+- Id: 2740
+  Name: EnhanceWeaponDivinityDropSlot5Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot5Rare
+- Id: 2029
+  Name: EnhanceWeaponDivinityDropSlot6Rare
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot6Rare
+- Id: 3832
+  Name: EnhanceWeaponDivinityCraftSlot1Rare
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot1Rare
+- Id: 2537
+  Name: EnhanceWeaponDivinityCraftSlot2Rare
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot2Rare
+- Id: 3601
+  Name: EnhanceWeaponDivinityCraftSlot3Rare
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot3Rare
+- Id: 2919
+  Name: EnhanceWeaponDivinityDropSlot1Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot1Epic
+- Id: 5053
+  Name: EnhanceWeaponDivinityDropSlot2Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot2Epic
+- Id: 4109
+  Name: EnhanceWeaponDivinityDropSlot3Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot3Epic
+- Id: 933
+  Name: EnhanceWeaponDivinityDropSlot4Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot4Epic
+- Id: 952
+  Name: EnhanceWeaponDivinityDropSlot5Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot5Epic
+- Id: 4958
+  Name: EnhanceWeaponDivinityDropSlot6Epic
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot6Epic
+- Id: 3455
+  Name: EnhanceWeaponDivinityCraftSlot1Epic
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot1Epic
+- Id: 6498
+  Name: EnhanceWeaponDivinityCraftSlot2Epic
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot2Epic
+- Id: 2497
+  Name: EnhanceWeaponDivinityCraftSlot3Epic
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot3Epic
+- Id: 6563
+  Name: EnhanceWeaponDivinityDropSlot1Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot1Legendary
+- Id: 7072
+  Name: EnhanceWeaponDivinityDropSlot2Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot2Legendary
+- Id: 207
+  Name: EnhanceWeaponDivinityDropSlot3Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot3Legendary
+- Id: 1154
+  Name: EnhanceWeaponDivinityDropSlot4Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot4Legendary
+- Id: 6474
+  Name: EnhanceWeaponDivinityDropSlot5Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot5Legendary
+- Id: 70
+  Name: EnhanceWeaponDivinityDropSlot6Legendary
+  Comment: 유물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityDropSlot6Legendary
+- Id: 6122
+  Name: EnhanceWeaponDivinityCraftSlot1Legendary
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot1Legendary
+- Id: 4861
+  Name: EnhanceWeaponDivinityCraftSlot2Legendary
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot2Legendary
+- Id: 5987
+  Name: EnhanceWeaponDivinityCraftSlot3Legendary
+  Comment: 제물 슬롯 오픈
+  TargetProperty: CarvingSlot
+  BaseEnchantCostItem: CurrencyGold
+  BaseEnchantCost: 1000
+  Material:
+    - From: 0
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+    - From: 1
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 2
+    - From: 2
+      MaterialItem: Item_Grown_Divinity_G1_T1_01
+      Amount: 3
+  Rule:
+    - Id: 1
+      From: 0
+      To: 0
+      Probability: "50%"
+    - Id: 2
+      From: 0
+      To: 1
+      Probability: "50%"
+    - Id: 3
+      From: 1
+      To: 1
+      Probability: "50%"
+    - Id: 4
+      From: 1
+      To: 2
+      Probability: "50%"
+    - Id: 5
+      From: 2
+      To: 2
+      Probability: "50%"
+    - Id: 6
+      From: 2
+      To: 3
+      Probability: "50%"
+  OnSuccess: EnhanceWeaponDivinityCraftSlot3Legendary

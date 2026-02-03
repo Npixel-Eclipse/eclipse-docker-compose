@@ -1,0 +1,90 @@
+- Id: 1
+  Name: CharacterInfo
+  Comment: 캐릭터 정보 버튼 하단
+  DefaultKey: P
+  DefaultKeyDescription: UIWord_InputKey_P
+- Id: 2
+  Name: MiniMap
+  Comment: 미니맵
+  DefaultKey: M
+  DefaultKeyDescription: UIWord_InputKey_M
+- Id: 3
+  Name: Quest
+  Comment: 퀘스트 버튼 하단
+  DefaultKey: J
+  DefaultKeyDescription: UIWord_InputKey_J
+- Id: 4
+  Name: Skill
+  Comment: 스킬 버튼 하단
+  DefaultKey: K
+  DefaultKeyDescription: UIWord_InputKey_K
+- Id: 5
+  Name: Inventory
+  Comment: 인벤토리 버튼 하단
+  DefaultKey: I
+  DefaultKeyDescription: UIWord_InputKey_I
+- Id: 6
+  Name: Scan
+  Comment: 스캔 버튼 하단
+  DefaultKey: Q
+  DefaultKeyDescription: UIWord_InputKey_Q
+- Id: 7
+  Name: Chat
+  Comment: 채팅 버튼 하단
+  DefaultKey: Enter
+  DefaultKeyDescription: UIWord_InputKey_Enter
+- Id: 8
+  Name: PowerSavingMode
+  Comment: 절전 모드 버튼 하단
+  DefaultKey: L
+  DefaultKeyDescription: UIWord_InputKey_L
+- Id: 9
+  Name: ReturnToHome
+  Comment: 귀환 버튼 하단
+  DefaultKey: B
+  DefaultKeyDescription: UIWord_InputKey_B
+- Id: 10
+  Name: PickupItem
+  Comment: 아이템 줍기 버튼 하단
+  DefaultKey: R
+  DefaultKeyDescription: UIWord_InputKey_R
+- Id: 11
+  Name: AutoMode
+  Comment: 자동 사냥 버튼 하단
+  DefaultKey: G
+  DefaultKeyDescription: UIWord_InputKey_G
+- Id: 12
+  Name: Attack
+  Comment: 공격 버튼 하단
+  DefaultKey: F
+  DefaultKeyDescription: UIWord_InputKey_F
+- Id: 13
+  Name: ResetTarget
+  Comment: 대상 취소 버튼 하단
+  DefaultKey: V
+  DefaultKeyDescription: UIWord_InputKey_V
+- Id: 14
+  Name: CounterAttack
+  Comment: 반격 버튼 하단
+  DefaultKey: T
+  DefaultKeyDescription: UIWord_InputKey_T
+- Id: 15
+  Name: ChangeTarget
+  Comment: 대상 변경 버튼 하단
+  DefaultKey: Tab
+  DefaultKeyDescription: UIWord_InputKey_Tab
+- Id: 16
+  Name: PartyTarget
+  Comment: 파티 시야 공유 버튼 및 공유 받은 대상 선택 버튼 하단
+  DefaultKey: E
+  DefaultKeyDescription: UIWord_InputKey_E
+- Id: 17
+  Name: ScoreBoard
+  Comment: 파티 시야 공유 버튼 및 공유 받은 대상 선택 버튼 하단
+  DefaultKey: Tilde
+  DefaultKeyDescription: UIWord_InputKey_Tilde
+- Id: 18
+  Name: OneButtonSkip
+  Comment: 원버튼 스킵 버튼 하단
+  DefaultKey: SpaceBar
+  DefaultKeyDescription: UIWord_InputKey_Space

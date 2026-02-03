@@ -1,0 +1,80 @@
+- Id: 1
+  Name: DeathPenalty
+  Inventory:
+    - Type: LostExpInventory
+      Value: LostExperience
+      Index: 0
+      Restoration:
+        - Index: 0
+          Type: Free
+          Description: UIWord_Free_Restoration_Daily
+          SpecialItemType: DailyFreeRestorationCount
+          RestorationBtnDescription: UIWord_Penalty_FreeRecovery
+        - Index: 1
+          Type: Gold
+          Description: CurrencyGold
+          NeedItem: CurrencyGold
+          SpecialItemType: DailyGoldRestorationCount
+          RestorationBtnDescription: UIWordRestoration
+        - Index: 2
+          Type: Diamond
+          Description: CurrencyDiamond
+          NeedItem: CurrencyDiamond
+          RestorationBtnDescription: UIWordRestoration
+        - Index: 3
+          Type: Item
+          Description: UIWordItem
+          NeedItem: FreeRestoration
+          RestorationBtnDescription: UIWordRestoration
+    - Type: LostEquipInventory
+      Value: LostItem
+      Index: 1
+      Restoration:
+        - Index: 0
+          Type: Free
+          Description: UIWord_Free_Restoration_Daily
+          SpecialItemType: DailyFreeRestorationCount
+          RestorationBtnDescription: UIWord_Penalty_FreeRecovery
+        - Index: 1
+          Type: Gold
+          Description: CurrencyGold
+          NeedItem: CurrencyGold
+          SpecialItemType: DailyGoldRestorationCount
+          RestorationBtnDescription: UIWordRestoration
+        - Index: 2
+          Type: Diamond
+          Description: CurrencyDiamond
+          NeedItem: CurrencyDiamond
+          RestorationBtnDescription: UIWordRestoration
+        - Index: 3
+          Type: Item
+          Description: UIWordItem
+          NeedItem: FreeRestoration
+          RestorationBtnDescription: UIWordRestoration
+  Constants:
+    - Name: RemainTimeRedAlertSeconds #해당 초 미만일 경우 빨간 글씨로 표현
+      Value: RemainTimeRedAlertSeconds
+  Icons:
+    - Type: ExpIcon
+      Icon: /Game/UIIcon/Item/ETC_EXP_G01.ETC_EXP_G01
+  UITab:
+    - Type: Exp
+      TabIndex: 0
+      Description: EXP
+      CountDescription: UIWordCountFormat
+      Comment: 경험치
+      DefaultTab: true
+    - Type: Equip
+      TabIndex: 1
+      Description: UIWordItem
+      CountDescription: UIWordCountFormat
+      Comment: 아이템
+  DefaultTextStyleKey: Kit04
+  WarningTextStyleKey: SystemMsgRed #무료 복구권이 부족한 경우 빨간 글씨로 표현
+  WarningPercentage: 80
+  FailedGoldDescription: UIWord_SystemMsg_LackOfRecoveryGold
+  FailedDiamondDescription: UIWord_SystemMsg_LackofDiamonds
+  FailedItemDescription: UIWord_SystemMsg_LackOfRestoration
+  FailedOverGoldRecoveryCountDescription: UIWord_SystemMsg_OverGoldRecoveryCount
+  FailedDonotSelectPenaltyListDescription: UIWord_SystemMsg_DonotSelectPenaltyList
+  FailedOverFreeRecoveryCountDescription: UIWord_SystemMsg_OverFreeRecoveryCount

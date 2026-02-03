@@ -1,0 +1,77 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - SeasonPassCategoryType
+    - Description
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    #탭이름
+    Description:
+      type: string
+      ref: description
+    SubTitle:
+      type: string
+      ref: description
+    DefaultTab:
+      type: boolean
+      default: false
+    SeasonPassDescription:
+      type: string
+      ref: description
+    SeasonPassCategoryType: 
+      type: string
+      enum:
+        - SeasonPass
+        - DailyPass
+    SeasonPassLevelQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassDiamondQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassMissionQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassWeeklyMissionQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassCommonQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassPremiumQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassDailyQuestCategory:
+      type: string
+      ref: quest_category
+    SeasonPassDailyFreeQuestCategory:
+      type: string
+      ref: quest_category
+    BackgroundIcon:
+      type: string
+
+    Comment:
+      type: string
+
+    #순서바꾸면 안됨. 데이터 선언 순서.
+    QuestType: 
+      type: string
+      enum:
+        - SeasonPass_Level
+        - SeasonPass_Diamond
+        - SeasonPass_Mission
+        - SeasonPass_WeeklyMission
+        - SeasonPass_Common
+        - SeasonPass_Premium
+        - SeasonPass_Daily
+        - SeasonPass_DailyFree

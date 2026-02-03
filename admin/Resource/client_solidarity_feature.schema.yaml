@@ -1,0 +1,120 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    DefaultSlotGrade:
+      type: string
+      ref: grade
+    BuildingUITabs:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - CommonBuff
+              - PolymorphItem
+              - WeaponItem
+          UITabKey:
+            type: string
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+    Pages:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - PageA
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+          WidgetAssetName:
+            type: string
+    SortFilterItems:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum: #순서 의존
+              - Basic
+              - AscGrade
+              - DescGrade
+              - AscLevel
+              - DescLevel
+    CardFilterItems:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum: #순서 의존
+              - ALL
+              - Have
+              - NotHave
+    StatusFilterItems:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum: #순서 의존
+              - ALL
+              - LinkBuildingAll
+              - NotLink
+          Description:
+            type: string
+            ref: description
+    NoChangeAutoSolidarizeSystemMessage:
+      type: string
+      ref: system_message
+    ConnectableMinItemGrade:
+      type: string
+      ref: grade
+    ConnectableMaxItemGrade:
+      type: string
+      ref: grade
+    LackEnchantLevelTextStyle:
+      type: string
+    DefaultEnchantLevelTextStyle:
+      type: string
+    SolidarityContentLimit:
+      type: string
+      ref: content_limit
+    CommonBuffReddotKey:
+      type: string
+  required:
+  - Id
+  - Name
+  - BuildingUITabs
+  - Pages
+  - DefaultSlotGrade
+  - NoChangeAutoSolidarizeSystemMessage
+  - LackEnchantLevelTextStyle
+  - DefaultEnchantLevelTextStyle
+  - SolidarityContentLimit
+  - CommonBuffReddotKey

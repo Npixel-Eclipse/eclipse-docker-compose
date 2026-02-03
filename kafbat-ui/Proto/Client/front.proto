@@ -1,0 +1,103 @@
+﻿syntax = "proto3";
+package eclipse.front;
+
+import "Common/websocket.proto";
+import "Common/cheat.proto";
+import "Front/favorite.proto";
+import "Front/guild.proto";
+import "Front/item.proto";
+import "Front/notification.proto";
+import "Front/party.proto";
+import "Front/quest.proto";
+import "Front/trade.proto";
+import "Front/broadcast.proto";
+import "Front/hunting_zone.proto";
+import "Front/mail.proto";
+import "Front/setting.proto";
+import "Front/fortress.proto";
+import "Front/matchmaking.proto";
+import "Front/ranking.proto";
+import "Front/pklog.proto";
+import "Front/dungeon.proto";
+import "Front/popup.proto";
+import "Front/content_limit.proto";
+import "Front/relation.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front";
+option java_outer_classname = "EclipseFrontProto";
+
+message Heartbeat {}
+message Disconnect {}
+
+message FrontRequest {
+  oneof request {
+    Heartbeat heartbeat = 1;
+    Disconnect disconnect = 12;
+    client.guild.GuildRequest guild_request = 2;
+    client.item.ItemRequest item_request = 3;
+    client.party.PartyRequest party_request = 4;
+    client.favorite.FavoriteRequest favorite_request = 5;
+    client.notification.NotificationRequest notification_request = 6;
+    client.quest.QuestRequest quest_request = 7;
+    client.trade.TradeRequest trade_request = 8;
+    client.huntingzone.HuntingZoneRequest hunting_zone_request = 9;
+    client.mail.MailRequest mail_request = 10;
+    client.setting.SettingRequest setting_request = 11;
+    client.fortress.FortressRequest fortress_request = 13;
+    client.matchmaking.MatchRequest match_request = 14;
+    client.ranking.RankingRequest ranking_request = 15;
+    client.pklog.PkLogRequest pklog_request = 16;
+    client.dungeon.DungeonRequest dungeon_request = 17;
+    client.contentlimit.ContentLimitRequest content_limit_request = 18;
+    client.relation.RelationRequest relation_request = 19;
+
+    common.CheatRequest cheat = 100;
+  }
+}
+
+message FrontEvent {
+  message ConnectEvent {
+    google.protobuf.Timestamp timestamp = 1;
+    int64 local_time_offset = 2;
+  }
+  message DisconnectEvent {
+    common.WebSocketCloseCode reason  = 1;
+  }
+  oneof event {
+    ConnectEvent connect_event = 1;
+    DisconnectEvent disconnect_event = 19;
+    client.guild.GuildEvent guild_event = 2;
+    client.item.ItemEvent item_event = 3;
+    client.party.PartyEvent party_event = 4;
+    client.favorite.FavoriteEvent favorite_event = 5;
+    client.notification.NotificationEvent notification_event = 6;
+    client.quest.QuestEvent quest_event = 7;
+    client.trade.TradeEvent trade_event = 8;
+    client.huntingzone.HuntingZoneEvent hunting_zone_event = 9;
+    client.mail.MailEvent mail_event = 10;
+    client.setting.SettingEvent setting_event = 11;
+    client.fortress.FortressEvent fortress_event = 12;
+    client.matchmaking.MatchEvent match_event = 13;
+    client.ranking.RankingEvent ranking_event = 14;
+    client.pklog.PkLogEvent pklog_event = 15;
+    client.dungeon.DungeonEvent dungeon_event = 16;
+    client.popup.PopupEvent popup_event = 17;
+    client.contentlimit.ContentLimitEvent content_limit_event = 18;
+    client.relation.RelationEvent relation_event = 20;
+
+    client.broadcast.BroadcastEvent broadcast_event = 100;
+  }
+  uint32 message_main_type = 1000;
+  uint32 message_sub_type = 1001;
+}
+
+message TestRequest {
+  string character_name = 1;
+  FrontRequest request = 2;
+}
+
+message TestReply {
+
+}

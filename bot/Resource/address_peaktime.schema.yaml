@@ -1,0 +1,85 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+
+    Enable: # 활성화 여부 - false 라면, 던전 및 스케쥴 모두 표기가 되지 않음.
+      type: boolean
+      default: false
+
+    ShowInSchedule: # 스케줄에 노출 여부 - false 여도 dungeon 등에서는 표기가 됨.
+      type: boolean
+      default: true
+
+    TargetWorldMapArea: # 대상 world map area
+      type: string
+      ref: worldmap_area
+
+    TargetDungeon:  # 대상 dungeon
+      type: string
+      ref: dungeon
+    TargetDungeonAddress:  # 대상 dungeon address
+      type: string
+      ref: address
+
+    Title:  # 제목
+      type: string
+      ref: description
+    Description:  # 설명
+      type: string
+      ref: description
+    Icon: # 아이콘
+      type: string
+
+    Schedule: # 스케줄
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          DayOfWeek:  # 요일
+            type: string
+            enum:
+              - None
+              - Mon
+              - Tue
+              - Wed
+              - Thu
+              - Fri
+              - Sat
+              - Sun
+          StartHour: # 시작 시간 (h) - 0H ~ 23H
+            type: integer
+            minimum: 0
+            maximum: 23
+          StartMinute: # 시작 시간 (min) - 0M ~ 59M
+            type: integer
+            minimum: 0
+            maximum: 59
+          EndHour: # 종료 시간 (h) - 0H ~ 23H
+            type: integer
+            minimum: 0
+            maximum: 23
+          EndMinute: # 종료 시간 (min) - 0M ~ 59M
+            type: integer
+            minimum: 0
+            maximum: 59
+    
+            

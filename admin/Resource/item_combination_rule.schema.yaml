@@ -1,0 +1,43 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Grade
+    - From
+    - To
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Grade:
+      type: string
+      ref: grade
+    From:
+      type: array
+      required:
+        - TargetSymbol
+      items:
+        type: object
+        properties:
+          TargetSymbol:
+            type: string
+            ref: symbol
+    To:
+      type: array
+      items:
+        type: object
+        required:
+          - TargetProperty
+          - Value
+        properties:
+          TargetProperty:
+            type: string
+          Value:
+            type: integer

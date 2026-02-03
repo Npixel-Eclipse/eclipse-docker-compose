@@ -1,0 +1,152 @@
+- Id: 12
+  Name: Ranking_Combat_No1
+  Comment: 전투력 랭킹 1위
+  RankingType: Combat
+  StartRanking: 0
+  EndRanking: 1
+  RankingMark: Ranking_CombatMark_No1
+  RankingChattingMark: Ranking_CombatMark_No1
+  RankingTitle: Ranking_Combattitle_No1
+- Id: 187
+  Name: Ranking_Combat_No2
+  Comment: 전투력 랭킹 2위
+  RankingType: Combat
+  StartRanking: 2
+  EndRanking: 2
+  RankingMark: Ranking_CombatMark_No2
+  RankingChattingMark: Ranking_CombatMark_No2
+  RankingTitle: Ranking_Combattitle_No2
+- Id: 58
+  Name: Ranking_Combat_No3
+  Comment: 전투력 랭킹 3위
+  RankingType: Combat
+  StartRanking: 3
+  EndRanking: 3
+  RankingMark: Ranking_CombatMark_No3
+  RankingChattingMark: Ranking_CombatMark_No3
+  RankingTitle: Ranking_Combattitle_No3
+- Id: 38
+  Name: Ranking_Combat_No4to10
+  Comment: 전투력 랭킹 4위~10위
+  RankingType: Combat
+  StartRanking: 4
+  EndRanking: 10
+  RankingMark: Ranking_CombatMark_No4to10
+  RankingChattingMark: Ranking_CombatMark_No4to10
+  RankingTitle: Ranking_Combattitle_No4to10
+- Id: 484
+  Name: Ranking_Combat_No11to30
+  Comment: 전투력 랭킹 11위~30위
+  RankingType: Combat
+  StartRanking: 11
+  EndRanking: 30
+  RankingMark: Ranking_CombatMark_No11to30
+  RankingChattingMark: Ranking_CombatMark_No11to30
+  RankingTitle: Ranking_Combattitle_No11to30
+- Id: 663
+  Name: Ranking_Combat_No31to60
+  Comment: 전투력 랭킹 31위~60위
+  RankingType: Combat
+  StartRanking: 31
+  EndRanking: 60
+  RankingMark: Ranking_CombatMark_No31to60
+  RankingChattingMark: Ranking_CombatMark_No31to60
+  RankingTitle: Ranking_Combattitle_No31to60
+- Id: 192
+  Name: Ranking_Combat_No61to100
+  Comment: 전투력 랭킹 61위~100위
+  RankingType: Combat
+  StartRanking: 61
+  EndRanking: 100
+  RankingMark: Ranking_CombatMark_No61to100
+  RankingChattingMark: Ranking_CombatMark_No61to100
+  RankingTitle: Ranking_Combattitle_No61to100
+- Id: 611
+  Name: Ranking_Combat_No101to200
+  Comment: 전투력 랭킹 101위~200위
+  RankingType: Combat
+  StartRanking: 101
+  EndRanking: 200
+  RankingMark: Ranking_CombatMark_No101to200
+  RankingChattingMark: Ranking_CombatMark_No101to200
+  RankingTitle: Ranking_Combattitle_No101to200
+- Id: 830
+  Name: Ranking_PvP_No1
+  Comment: PvP 랭킹 1위
+  RankingType: PvP
+  StartRanking: 0
+  EndRanking: 1
+  RankingBuff: Ranking_PvP_No1
+  RankingMark: Ranking_PvPMark_No1
+  RankingChattingMark: Ranking_PvPMark_No1
+  RankingTitle: Ranking_PvPtitle_No1
+- Id: 106
+  Name: Ranking_PvP_No2
+  Comment: PvP 랭킹 2위
+  RankingType: PvP
+  StartRanking: 2
+  EndRanking: 2
+  RankingBuff: Ranking_PvP_No2to3
+  RankingMark: Ranking_PvPMark_No2
+  RankingChattingMark: Ranking_PvPMark_No2
+  RankingTitle: Ranking_PvPtitle_No2
+- Id: 776
+  Name: Ranking_PvP_No3
+  Comment: PvP 랭킹 3위
+  RankingType: PvP
+  StartRanking: 3
+  EndRanking: 3
+  RankingBuff: Ranking_PvP_No4to5
+  RankingMark: Ranking_PvPMark_No3
+  RankingChattingMark: Ranking_PvPMark_No3
+  RankingTitle: Ranking_PvPtitle_No3
+- Id: 338
+  Name: Ranking_PvP_No4to10
+  Comment: PvP 랭킹 4위~10위
+  RankingType: PvP
+  StartRanking: 4
+  EndRanking: 10
+  RankingBuff: Ranking_PvP_No6to10
+  RankingMark: Ranking_PvPMark_No4to10
+  RankingChattingMark: Ranking_PvPMark_No4to10
+  RankingTitle: Ranking_PvPtitle_No4to10
+- Id: 1340
+  Name: Ranking_PvP_No11to30
+  Comment: PvP 랭킹 11위~30위
+  RankingType: PvP
+  StartRanking: 11
+  EndRanking: 30
+  RankingBuff: Ranking_PvP_No11to30
+  RankingMark: Ranking_PvPMark_No11to30
+  RankingChattingMark: Ranking_PvPMark_No11to30
+  RankingTitle: Ranking_PvPtitle_No11to30
+- Id: 1402
+  Name: Ranking_PvP_No31to60
+  Comment: PvP 랭킹 31위~60위
+  RankingType: PvP
+  StartRanking: 31
+  EndRanking: 50
+  RankingBuff: Ranking_PvP_No31to60
+  RankingMark: Ranking_PvPMark_No31to60
+  RankingChattingMark: Ranking_PvPMark_No31to60
+  RankingTitle: Ranking_PvPtitle_No31to60
+- Id: 115
+  Name: Ranking_PvP_No61to100
+  Comment: PvP 랭킹 61위~100위
+  RankingType: PvP
+  StartRanking: 51
+  EndRanking: 100
+  RankingBuff: Ranking_PvP_No51to100
+  RankingMark: Ranking_PvPMark_No61to100
+  RankingChattingMark: Ranking_PvPMark_No61to100
+  RankingTitle: Ranking_PvPtitle_No61to100
+- Id: 454
+  Name: Ranking_PvP_No101to200
+  Comment: PvP 랭킹 101위~200위
+  RankingType: PvP
+  StartRanking: 101
+  EndRanking: 200
+  RankingBuff: Ranking_PvP_No101to200
+  RankingMark: Ranking_PvPMark_No101to200
+  RankingChattingMark: Ranking_PvPMark_No101to200
+  RankingTitle: Ranking_PvPtitle_No101to200

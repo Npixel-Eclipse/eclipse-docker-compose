@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  bytebase:
+    image: bytebase/bytebase:3.5.0
+    container_name: bytebase
+    init: true
+    restart: always
+    ports:
+      - "8093:8080"
+    environment:
+      - PG_URL=postgresql://eclipse:dlzmfflqtm@local-bytebase-db.czpzmraixnwy.ap-northeast-2.rds.amazonaws.com:5432/bytebase
+    volumes:
+      - ./data:/var/opt/bytebase
+

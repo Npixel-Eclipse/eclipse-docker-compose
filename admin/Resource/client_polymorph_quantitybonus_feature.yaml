@@ -1,0 +1,52 @@
+- Id: 1
+  Name: Polymorph
+  UITab:
+    - Group: PolymorphCardList
+      CollectionType: Polymorph_Card
+      Description: UIWord_QuantityBonus_Polymorph
+      Comment: 초월체
+    - Group: WeaponCardList
+      CollectionType: Polymorph_Weapon
+      Description: UIWord_QuantityBonus_WeaponPolymorph
+      Comment: 무기 외형
+  CollectionInfo:
+    - IsAllCollectionTypes: True
+      PropertyTitleDescription: UIWord_QuantityBonus_AcquistionBonus_All
+      Comment: 전체 
+    - CollectionType: Polymorph_Card
+      TitleDescription: UIWord_QuantityBonus_AcquistionBonus_Title_Polymorph
+      AlertTitleDescription: UIWord_Polymorph_GetBonus_Polymorph
+      PropertyTitleDescription: UIWord_QuantityBonus_AcquistionBonus_Polymorph
+      Icon: /Game/UIIcon/PolymorphCategory/PolymorphCategory05.PolymorphCategory05
+      Comment: 초월체
+    - CollectionType: Polymorph_CardLevel
+      TitleDescription: UIWord_QuantityBonus_AcquistionBonus_Title_PolymorphLevel
+      PropertyTitleDescription: UIWord_QuantityBonus_AcquistionBonus_PolymorphLevel
+      Icon: /Game/UIIcon/PolymorphCategory/PolymorphCategory03.PolymorphCategory03
+      Comment: 초월 레벨
+    - CollectionType: Polymorph_Weapon
+      TitleDescription: UIWord_QuantityBonus_AcquistionBonus_Title_WeaponPolymorph
+      AlertTitleDescription: UIWord_Polymorph_GetBonus_WeaponPolymorph
+      PropertyTitleDescription: UIWord_QuantityBonus_AcquistionBonus_WeaponPolymorph
+      Icon: /Game/UIIcon/PolymorphCategory/PolymorphWeaponCategory05.PolymorphWeaponCategory05
+      Comment: 무기 외형
+    - CollectionType: Polymorph_WeaponLevel
+      TitleDescription: UIWord_QuantityBonus_AcquistionBonus_Title_Polymorph
+      AlertTitleDescription: UIWord_Polymorph_GetBonus_WeaponPolymorph
+      PropertyTitleDescription: UIWord_QuantityBonus_AcquistionBonus_WeaponPolymorphLevel
+      Icon: /Game/UIIcon/PolymorphCategory/PolymorphWeaponCategory04.PolymorphWeaponCategory04
+      Comment: 무기 외형 레벨
+  GradeInfo:
+    - Grade: Common
+      ProgressColor: "94A0B3FF"
+    - Grade: Uncommon
+      ProgressColor: "68B366FF"
+    - Grade: Rare
+      ProgressColor: "5D9AD1FF"
+    - Grade: Epic
+      ProgressColor: "D3504AFF"
+    - Grade: Legendary
+      ProgressColor: "E5AC39FF"
+    - Grade: Myth
+      ProgressColor: "C97AEFFF"
+

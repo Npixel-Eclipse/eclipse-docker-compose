@@ -1,0 +1,299 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Type
+    - BuildingType
+    - Name
+    - NameDesc
+    - UpgradeCost
+    - Construction
+    - Effect
+    - WorldMapArea
+    - TabIcon
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Type:
+      type: string
+      enum:
+        - Main
+        - Exp
+        - Gold
+        - Awareness
+        - Awakening
+        - IronOre
+        - Fur
+        - Wood
+        - Bone
+        - Time
+        - WeaponPolymorph
+        - Polymorph
+        - BuffItem
+        - BM01
+        - BM02
+        - Mastery
+    BuildingType:
+      type: string
+      enum:
+        - Main        # 성좌
+        - BM          # 성위
+        - Production  # 성물
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    NameDesc:
+      type: string
+      ref: description
+    Prerequisite:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          OtherBuilding:
+            type: string
+            ref: building
+            visible: true
+          OtherBuildingLevel:
+            type: integer
+            minimum: 1
+          ContentLimit:
+            type: string
+            ref: content_limit
+            visible: true
+    MarkPosition:
+      type: object
+      additionalProperties: false
+      properties:
+        X:
+          type: number
+        Y:
+          type: number
+    HarvestRateOnConstruct: #Range: 0.0(0%) ~ 1.0(100%)
+      type: number
+      default: 0
+    ContentLimit:
+      type: string
+      ref: content_limit
+    Harvest:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Item
+          - IntervalSecond
+          - Amount
+          - MaxStackCount
+          - IsAutoStart
+        properties:
+          Level:
+            type: integer
+            minimum: 1
+          Item:
+            type: string
+            ref: item
+          IntervalSecond:
+            type: integer # in seconds
+            minimum: 1
+          Amount:
+            type: integer
+            minimum: 1
+          MaxStackCount:
+            type: integer
+            minimum: 1
+          IsAutoStart:
+            type: boolean
+          ImmediateHarvestTicket:
+            visible: true
+            type: object
+            additionalProperties: false
+            required:
+              - Item
+              - UseAmount
+            properties:
+              Item:
+                type: string
+                ref: item
+              UseAmount:
+                type: integer
+                minimum: 1
+    HarvestCost:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Item
+          - Cost
+        properties:
+          Level:
+            type: integer
+          Item:
+            type: string
+            ref: item
+          Cost:
+            type: integer
+            minimum: 0
+    UpgradeCost:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Items
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Items:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Item
+                - Cost
+              properties:
+                Item:
+                  type: string
+                  ref: item
+                Cost:
+                  type: integer
+                  minimum: 1
+          DefenseFailureItems:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Item
+                - Cost
+              properties:
+                Item:
+                  type: string
+                  ref: item
+                Cost:
+                  type: integer
+                  minimum: 1
+
+    Construction:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+        properties:
+          Level:
+            type: integer
+          # 성물, 성좌의 경우 증축 시간이 있음.
+          DurationSecond:
+            type: integer
+            minimum: 1
+            visible: true
+          # BM 성물의 경우 증축 확률이 있음.
+          Probability:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - ResultType
+                - ResultLevel
+                - Probability
+              properties:
+                ResultType:
+                  type: string
+                  enum:
+                    - Success
+                    - Keep
+                    - Failure
+                ResultLevel:
+                  type: integer
+                  minimum: 0
+                Probability:
+                  type: integer
+                  default: 100
+    WorldMapArea:
+      type: string
+      ref: worldmap_area
+    TabIcon:
+      type: string
+    Icon:
+      type: string
+    Buffs:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - BuffList
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          BuffList:
+            type: array
+            items:
+              type: string
+              ref: buff
+    Effect:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Asset
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Asset:
+            type: string
+    CharacterAsset:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Asset
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Asset:
+            type: string
+    BuildingIcon:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Asset
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Asset:
+            type: string

@@ -1,0 +1,190 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.notification";
+option java_outer_classname = "ServerNotificationProto";
+
+package notification;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+// Notification 종류 (notification.yaml 참조)
+enum NotificationEnum {
+  UNKNOWN = 0;
+
+  // 길드
+  GUILD = 100;
+  GUILD_INVITED = 110;
+  GUILD_MANAGE = 120;
+  GUILD_MANAGE_MARK = 121;
+  GUILD_ACTIVITY = 130;
+  GUILD_ACTIVITY_REWARD = 131;
+  GUILD_ACTIVITY_REWARD_WEEKLY = 132;
+  GUILD_ACTIVITY_REWARD_ACCUMULATED = 133;
+  GUILD_MEMBER = 140;
+  GUILD_MEMBER_WAITLIST = 141;
+  GUILD_MISSION = 150;
+  GUILD_MISSION_QUEST = 151;
+  GUILD_MISSION_GIVE = 152;
+  GUILD_MISSION_GIVE_REWARD = 153;
+  GUILD_MISSION_GIVE_ENDDATE = 154;
+  GUILD_HELP = 155;
+  GUILD_STORE = 156;
+  GUILD_SELL = 157;
+  GUILD_ACQUIRABLE_TRAIT = 158;
+
+  // 사망패널티
+  DEADPENALTY = 200;
+  DEADPENALTY_EXPERIENCE = 210;
+  DEADPENALTY_EQUIPMENT = 220;
+
+  // 파티
+  PARTY = 300;
+  PARTY_INVITED = 310;
+
+  // 거래소
+  TRADE = 500;
+  TRADE_SELL = 510;
+
+  // 업적
+  ACHIEVEMENT = 600;
+
+  // 이벤트
+  EVENT = 700;
+
+  // 채팅
+  CHAT = 800;
+  CHAT_BLOCK = 810;
+
+  // 도감
+  FIELDBOOK = 900;
+  FIELDBOOK_ITEM = 910;
+  FIELDBOOK_ITEM_REGISTRABLE = 920;
+
+  // 우편함
+  POSTBOX = 1000;
+  POSTBOX_GENERAL = 1010;
+  POSTBOX_ACCOUNT = 1020;
+  POSTBOX_PERSONAL = 1030;
+
+  // 기록실
+  RECORD_ROOM = 1100;
+  RECORD_ROOM_RANKING = 1110;
+  RECORD_ROOM_RANKING_TITLE = 1111;
+  RECORD_ROOM_PK_LOG = 1120;
+  RECORD_ROOM_PK_LOG_LIST = 1121;
+
+  // 사냥터 소유
+  HUNTINGZONE = 1200;
+  HUNTINGZONE_SPECIALTY_SHOP = 1202;
+  HUNTINGZONE_BID_REQUEST = 1203;
+  HUNTINGZONE_BID_ACTIVATE = 1204;
+  HUNTINGZONE_OWNER_SPECIALTY_SHOP = 1205;
+
+  // PVP 기록 시스템
+  PK_LOG = 1300;
+  PK_LOG_LIST = 1301;
+  PK_LOG_LIST_MINE = 1302;
+  PK_LOG_LIST_GUILD = 1303;
+  PK_LOG_LIST_WANTED = 1304;
+
+  // BM상점
+  BMSHOP = 1400;
+  BMSHOP_PURCHASABLEGOLDPRODUCT = 1401;
+}
+
+// Kafka Streams를 통한 명령
+message NotificationCommand {
+  string character_uuid = 1;
+
+  oneof command {
+    // Internal
+    SyncToDatabase sync_to_database = 10;
+
+    // Command
+    CreateNotification create_notification = 20;
+    DeleteNotification delete_notification = 21;
+  }
+
+  message GuildFilter {
+    // 해당 필드가 비워져있다면 모든 길드원을 대상으로 함 (그래도 GuildFiter 자체는 필드에 포함되어야함)
+    // 비워져있지 않다면 해당 role에 해당하는 길드원들만 대상
+    repeated string roles = 1;
+  }
+
+  // 현재 캐시를 데이터베이스로 동기화
+  message SyncToDatabase {
+    // true: StateStore를 비움, false: StateStore를 비우지 않음
+    bool with_unload_cache = 1;
+    // 스케줄러가 관찰한 lastUpdateDate - staleness guard 용 (deprecated, cache_version으로 대체 예정)
+    google.protobuf.Timestamp observed_last_update_date = 2;
+    // 스케줄러가 관찰한 cache_version - staleness guard 용
+    int64 observed_cache_version = 3;
+  }
+
+  // Notification 생성
+  // key = account_id or guild_id
+  message CreateNotification {
+    NotificationEnum notification = 1;
+    optional GuildFilter guild_filter = 2;
+    RefreshType refresh_type = 3;
+
+    oneof target {
+      google.protobuf.Empty empty = 10;
+      int64 target_id = 11;
+      string target_uuid = 12;
+      bytes target_bytes_uuid = 13;
+    }
+
+    enum RefreshType {
+      NONE = 0;
+      DAILY_REFRESH = 1;  // 꺼진 Notification인 경우 다음날 초기화 시간까지 켜지 않음.
+    }
+  }
+
+  // Notification 삭제
+  message DeleteNotification {
+    NotificationEnum notification = 1;
+    optional GuildFilter guild_filter = 2;
+
+    oneof target {
+      google.protobuf.Empty empty = 10;
+      int64 target_id = 11;
+      string target_uuid = 12;
+      bytes target_bytes_uuid = 13;
+    }
+  }
+}
+
+// 레드닷 알림
+message Notification {
+  optional int64 database_id = 1;
+  bool is_deleted = 2;
+
+  int64 notification_id = 10;
+
+  optional int64 target_id = 11;
+  optional string target_uuid = 12;
+  optional bytes target_bytes_uuid = 15;
+
+  google.protobuf.Timestamp notify_date = 13;
+  optional google.protobuf.Timestamp view_date = 14;
+}
+
+// 레드닷 캐시
+message NotificationCache {
+  // internal
+  string cache_id = 1;
+  google.protobuf.Timestamp last_update_date = 2;
+
+  // owner
+  int64 account_id = 12;
+  string character_uuid = 11;
+
+  // notification
+  repeated Notification notification = 20;
+  google.protobuf.Timestamp last_db_synced_at = 21;
+  bool dirty = 22;
+  int64 cache_version = 23;
+}

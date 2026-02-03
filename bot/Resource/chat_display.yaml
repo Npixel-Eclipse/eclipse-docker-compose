@@ -1,0 +1,49 @@
+- Id: 100
+  Name: AllChatCategory
+  Comment: 모든 채팅 카테고리
+  Description: UIChat_All
+  Icon: /Game/UI/Chatting_SP/TabIconAll_Sprite.TabIconAll_Sprite
+  ChatType:
+    - Local
+    - World
+    - Party
+    - Whisper
+    - System
+    - Guild
+  IsCategory: true
+- Id: 200
+  Name: LocalChatType
+  Comment: 지역 채팅 타입
+  ChatType:
+    - Local
+  IsType: true
+  DisplayOrder: 1
+- Id: 210
+  Name: WorldChatType
+  Comment: 전체 채팅 타입
+  ChatType:
+    - World
+  IsType: true
+- Id: 220
+  Name: PartyChatType
+  Comment: 파티 채팅 타입
+  ChatType:
+    - Party
+  IsType: true
+  CheckParty: true
+  DisplayOrder: 2
+- Id: 230
+  Name: WhisperChatType
+  Comment: 귓속말 채팅 타입
+  ChatType:
+    - Whisper
+  IsType: true
+  DisplayOrder: 4
+- Id: 240
+  Name: GuildrChatType
+  Comment: 길드 채팅 타입
+  ChatType:
+    - Guild
+  IsType: true
+  CheckGuild: true
+  DisplayOrder: 3

@@ -1,0 +1,42 @@
+- Id: 326
+  Name: HuntingZone_Area_1
+  Comment: 바리탄 잠식지대 - 나무 계곡
+  DisplayTerritory: WorldMap_Var_Blightlands_ImperialLogging
+  DescriptionName: UIWord_HuntingZone_AreaName_Varitan_Blightlands_Field_Tree_Valley
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Main_Blue_Sprite.AreaMapIcon_Main_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_1
+- Id: 70
+  Name: HuntingZone_Area_2
+  Comment: 바리탄 잠식지대 - 바리탄 성서 수도회
+  DisplayTerritory: WorldMap_Var_Subjugate_VigiliPlain
+  DescriptionName: UIWord_HuntingZone_AreaName_Varitan_Blightlands_Varitan_Biblical_Order
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Blue_Sprite.AreaMapIcon_Sub_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_2
+- Id: 228
+  Name: HuntingZone_Area_3
+  Comment: 바리탄 잠식지대 - 카스티아 국경 수비대
+  DisplayTerritory: WorldMap_Var_Blightlands_SilentRotValley
+  DescriptionName: UIWord_HuntingZone_AreaName_Varitan_Blightlands_Field_Castia_Mercenary_Patrols
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Blue_Sprite.AreaMapIcon_Sub_Blue_Sprite
+  RewardItem: Reward_HuntingZone_Area_3
+- Id: 389
+  Name: HuntingZone_Area_4
+  Comment: 레인우드 - 홀룰루 동굴
+  DisplayTerritory: WorldMap_Ele_Sacredforest_ElessirHeartlands
+  DescriptionName: UIWord_HuntingZone_AreaName_Ele_Sacredforest_ElessirHeartlands
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Main_Yellow_Sprite.AreaMapIcon_Main_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_4
+- Id: 328
+  Name: HuntingZone_Area_5
+  Comment: 레인우드 - 난쟁이 도굴꾼 소굴
+  DisplayTerritory: WorldMap_Ele_Sacredforest_ArkesylLowerRuins
+  DescriptionName: UIWord_HuntingZone_AreaName_Ele_Sacredforest_ArkesylLowerRuins
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Yellow_Sprite.AreaMapIcon_Sub_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_5
+- Id: 589
+  Name: HuntingZone_Area_6
+  Comment: 레인우드 - 제국 연구 초소
+  DisplayTerritory: WorldMap_Ele_Sacredforest_ForestOutskirts
+  DescriptionName: UIWord_HuntingZone_AreaName_Ele_Sacredforest_CastiaSurveyPost
+  Icon: /Game/UI/HuntingZone_SP/AreaMapIcon_Sub_Yellow_Sprite.AreaMapIcon_Sub_Yellow_Sprite
+  RewardItem: Reward_HuntingZone_Area_6

@@ -1,0 +1,24 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Item
+    - PropertyName
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Item:
+      type: string
+      ref: item
+    PropertyName:
+      type: string
+      ref: property
+

@@ -1,0 +1,4580 @@
+- Id: 2151
+  Type: Main
+  BuildingType: Main
+  Name: Statue_Main_Seongso
+  Comment: 성좌_성소
+  NameDesc: Seongso_Name_Statue_Main_Title
+  Prerequisite:
+    - Level: 0
+      ContentLimit: Building_Statue_Main_Require
+    - Level: 1
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 1
+    - Level: 1
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 1
+    - Level: 2
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 2
+    - Level: 2
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 2
+    - Level: 3
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 3
+    - Level: 4
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 4
+    - Level: 5
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 6
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 6
+    - Level: 7
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 7
+    - Level: 8
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 14
+  ContentLimit: Building_Statue_Main
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 400
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 3000
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 20000
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 70000
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 200000
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 1
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 1
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1000000
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 2
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 2
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 1500000
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 3
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 3
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2400000
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 4
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 4
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3200000
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 5
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 5
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6000000
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 1
+        - Item: Item_Grown_Santuary_G4_T1_25
+          Cost: 1
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 8800000
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 2
+        - Item: Item_Grown_Santuary_G4_T1_25
+          Cost: 2
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 15000000
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 2
+        - Item: Item_Grown_Santuary_G4_T1_25
+          Cost: 2
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 29000000
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_26
+          Cost: 1
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 53000000
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_26
+          Cost: 1
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon:
+  Buffs:
+    - Level: 1
+      BuffList:
+        - Statue_Main_Buff_1
+    - Level: 2
+      BuffList:
+        - Statue_Main_Buff_2
+    - Level: 3
+      BuffList:
+        - Statue_Main_Buff_3
+    - Level: 4
+      BuffList:
+        - Statue_Main_Buff_4
+    - Level: 5
+      BuffList:
+        - Statue_Main_Buff_5
+    - Level: 6
+      BuffList:
+        - Statue_Main_Buff_6
+    - Level: 7
+      BuffList:
+        - Statue_Main_Buff_7
+    - Level: 8
+      BuffList:
+        - Statue_Main_Buff_8
+    - Level: 9
+      BuffList:
+        - Statue_Main_Buff_9
+    - Level: 10
+      BuffList:
+        - Statue_Main_Buff_10
+    - Level: 11
+      BuffList:
+        - Statue_Main_Buff_11
+    - Level: 12
+      BuffList:
+        - Statue_Main_Buff_12
+    - Level: 13
+      BuffList:
+        - Statue_Main_Buff_13
+    - Level: 14
+      BuffList:
+        - Statue_Main_Buff_14
+    - Level: 15
+      BuffList:
+        - Statue_Main_Buff_15
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_01_Level01.VAE_BG_IP000_S001_01_Level01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_01_Level02.VAE_BG_IP000_S001_01_Level02
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_01_Level03.VAE_BG_IP000_S001_01_Level03
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_01_Level04_Add.VAE_BG_IP000_S001_01_Level04_Add
+    - Level: 5
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_02_Level00.VAE_BG_IP000_S001_02_Level00
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_02_Level01.VAE_BG_IP000_S001_02_Level01
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_02_Level02.VAE_BG_IP000_S001_02_Level02
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_02_Level03.VAE_BG_IP000_S001_02_Level03
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_02_Level04.VAE_BG_IP000_S001_02_Level04
+    - Level: 10
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_03_Level00.VAE_BG_IP000_S001_03_Level00
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_03_Level01.VAE_BG_IP000_S001_03_Level01
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_03_Level02.VAE_BG_IP000_S001_03_Level02
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_03_Level03.VAE_BG_IP000_S001_03_Level03
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_03_Level04.VAE_BG_IP000_S001_03_Level04
+    - Level: 15
+      Asset: /Game/EffectActions/VAE_BG_IP000_S001_04_Level00.VAE_BG_IP000_S001_04_Level00
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S001.DA_IP000_S001
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S001.DA_IP000_S001
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S001.DA_IP000_S001
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S001.DA_IP000_S001
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S001.DA_IP000_S001
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S002.DA_IP000_S002
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S002.DA_IP000_S002
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S002.DA_IP000_S002
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S002.DA_IP000_S002
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S002.DA_IP000_S002
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S003.DA_IP000_S003
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S003.DA_IP000_S003
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S003.DA_IP000_S003
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S003.DA_IP000_S003
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S003.DA_IP000_S003
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S004.DA_IP000_S004
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_MainSanctum01.Fortress_MainSanctum01
+- Id: 1238
+  Type: BM01
+  BuildingType: BM
+  Name: Statue_BM01_Seongso
+  Comment: BM 성물_01_성소
+  NameDesc: Seongso_Name_Statue_BM01_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 1
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 1
+    - Level: 2
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 2
+    - Level: 3
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 3
+    - Level: 4
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 4
+    - Level: 5
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 5
+    - Level: 6
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 6
+    - Level: 7
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 7
+    - Level: 8
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_BM01_Seongso
+      OtherBuildingLevel: 14
+  ContentLimit: Building_Statue_BM01
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G1_T1_01
+          Cost: 3
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G1_T1_01
+          Cost: 7
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 1
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 2
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 3
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 1
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 2
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 3
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 5
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 9
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 2
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 3
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 5
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 9
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 15
+  Construction:
+    - Level: 0
+      Probability: 100
+    - Level: 1
+      Probability: 90
+    - Level: 2
+      Probability: 80
+    - Level: 3
+      Probability: 70
+    - Level: 4
+      Probability: 60
+    - Level: 5
+      Probability: 50
+    - Level: 6
+      Probability: 40
+    - Level: 7
+      Probability: 30
+    - Level: 8
+      Probability: 30
+    - Level: 9
+      Probability: 30
+    - Level: 10
+      Probability: 30
+    - Level: 11
+      Probability: 30
+    - Level: 12
+      Probability: 20
+    - Level: 13
+      Probability: 10
+    - Level: 14
+      Probability: 5
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Awakening_Sprite.TabIcon_Awakening_Sprite
+  Buffs:
+    - Level: 1
+      BuffList:
+        - Statue_Bm1_Buff_1
+    - Level: 2
+      BuffList:
+        - Statue_Bm1_Buff_2
+    - Level: 3
+      BuffList:
+        - Statue_Bm1_Buff_3
+    - Level: 4
+      BuffList:
+        - Statue_Bm1_Buff_4
+    - Level: 5
+      BuffList:
+        - Statue_Bm1_Buff_5
+    - Level: 6
+      BuffList:
+        - Statue_Bm1_Buff_6
+    - Level: 7
+      BuffList:
+        - Statue_Bm1_Buff_7
+    - Level: 8
+      BuffList:
+        - Statue_Bm1_Buff_8
+    - Level: 9
+      BuffList:
+        - Statue_Bm1_Buff_9
+    - Level: 10
+      BuffList:
+        - Statue_Bm1_Buff_10
+    - Level: 11
+      BuffList:
+        - Statue_Bm1_Buff_11
+    - Level: 12
+      BuffList:
+        - Statue_Bm1_Buff_12
+    - Level: 13
+      BuffList:
+        - Statue_Bm1_Buff_13
+    - Level: 14
+      BuffList:
+        - Statue_Bm1_Buff_14
+    - Level: 15
+      BuffList:
+        - Statue_Bm1_Buff_15
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_S091_01_Level01.VAE_BG_IP000_S091_01_Level01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_S092_01_Level02.VAE_BG_IP000_S092_01_Level02
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_S093_01_Level03.VAE_BG_IP000_S093_01_Level03
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_S094_01_Level04.VAE_BG_IP000_S094_01_Level04
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_S091_01_Level01.VAE_BG_IP000_S091_01_Level01
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_S092_01_Level02.VAE_BG_IP000_S092_01_Level02
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_S093_01_Level03.VAE_BG_IP000_S093_01_Level03
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_S094_01_Level04.VAE_BG_IP000_S094_01_Level04
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_S091_01_Level01.VAE_BG_IP000_S091_01_Level01
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_S092_01_Level02.VAE_BG_IP000_S092_01_Level02
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_S093_01_Level03.VAE_BG_IP000_S093_01_Level03
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_S094_01_Level04.VAE_BG_IP000_S094_01_Level04
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S094.DA_IP000_S094
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+- Id: 1004
+  Type: BM02
+  BuildingType: BM
+  Name: Statue_BM02_Seongso
+  Comment: BM 성물_02_성소
+  NameDesc: Seongso_Name_Statue_BM02_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 1
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 1
+    - Level: 2
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 2
+    - Level: 3
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 3
+    - Level: 4
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 4
+    - Level: 5
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 5
+    - Level: 6
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 6
+    - Level: 7
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 7
+    - Level: 8
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_BM02_Seongso
+      OtherBuildingLevel: 14
+  ContentLimit: Building_Statue_BM02
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G1_T1_01
+          Cost: 3
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G1_T1_01
+          Cost: 7
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 1
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 2
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G2_T1_02
+          Cost: 3
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 1
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 2
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 3
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 5
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G3_T1_03
+          Cost: 9
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 2
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 3
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 5
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 9
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Grown_BMSantuary_G4_T1_04
+          Cost: 15
+  Construction:
+    - Level: 0
+      Probability: 100
+    - Level: 1
+      Probability: 90
+    - Level: 2
+      Probability: 80
+    - Level: 3
+      Probability: 70
+    - Level: 4
+      Probability: 60
+    - Level: 5
+      Probability: 50
+    - Level: 6
+      Probability: 40
+    - Level: 7
+      Probability: 30
+    - Level: 8
+      Probability: 30
+    - Level: 9
+      Probability: 30
+    - Level: 10
+      Probability: 30
+    - Level: 11
+      Probability: 30
+    - Level: 12
+      Probability: 20
+    - Level: 13
+      Probability: 10
+    - Level: 14
+      Probability: 5
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Awakening_Sprite.TabIcon_Awakening_Sprite
+  Buffs:
+    - Level: 1
+      BuffList:
+        - Statue_Bm2_Buff_1
+    - Level: 2
+      BuffList:
+        - Statue_Bm2_Buff_2
+    - Level: 3
+      BuffList:
+        - Statue_Bm2_Buff_3
+    - Level: 4
+      BuffList:
+        - Statue_Bm2_Buff_4
+    - Level: 5
+      BuffList:
+        - Statue_Bm2_Buff_5
+    - Level: 6
+      BuffList:
+        - Statue_Bm2_Buff_6
+    - Level: 7
+      BuffList:
+        - Statue_Bm2_Buff_7
+    - Level: 8
+      BuffList:
+        - Statue_Bm2_Buff_8
+    - Level: 9
+      BuffList:
+        - Statue_Bm2_Buff_9
+    - Level: 10
+      BuffList:
+        - Statue_Bm2_Buff_10
+    - Level: 11
+      BuffList:
+        - Statue_Bm2_Buff_11
+    - Level: 12
+      BuffList:
+        - Statue_Bm2_Buff_12
+    - Level: 13
+      BuffList:
+        - Statue_Bm2_Buff_13
+    - Level: 14
+      BuffList:
+        - Statue_Bm2_Buff_14
+    - Level: 15
+      BuffList:
+        - Statue_Bm2_Buff_15
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_S101_02_Level01.VAE_BG_IP000_S101_02_Level01
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_S102_02_Level02.VAE_BG_IP000_S102_02_Level02
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_S103_02_Level03.VAE_BG_IP000_S103_02_Level03
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_S104_02_Level04.VAE_BG_IP000_S104_02_Level04
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_S101_02_Level01.VAE_BG_IP000_S101_02_Level01
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_S102_02_Level02.VAE_BG_IP000_S102_02_Level02
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_S103_02_Level03.VAE_BG_IP000_S103_02_Level03
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_S104_02_Level04.VAE_BG_IP000_S104_02_Level04
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_S101_02_Level01.VAE_BG_IP000_S101_02_Level01
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_S102_02_Level02.VAE_BG_IP000_S102_02_Level02
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_S103_02_Level03.VAE_BG_IP000_S103_02_Level03
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_S104_02_Level04.VAE_BG_IP000_S104_02_Level04
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S091.DA_IP000_S091
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S092.DA_IP000_S092
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S093.DA_IP000_S093
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S094.DA_IP000_S094
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+- Id: 703
+  Type: Gold
+  BuildingType: Production
+  Name: Statue_Gold_Seongso
+  Comment: 황금 성물_성소
+  NameDesc: Seongso_Name_Statue_Gold_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 0
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 1
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 1
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 2
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 3
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 4
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 6
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 15
+  ContentLimit: Building_Statue_Gold
+  Harvest:
+    - Level: 1
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 1000
+      MaxStackCount: 24000
+      IsAutoStart: true
+    - Level: 2
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 2000
+      MaxStackCount: 48000
+      IsAutoStart: true
+    - Level: 3
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 3000
+      MaxStackCount: 72000
+      IsAutoStart: true
+    - Level: 4
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 4000
+      MaxStackCount: 96000
+      IsAutoStart: true
+    - Level: 5
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 5000
+      MaxStackCount: 120000
+      IsAutoStart: true
+    - Level: 6
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 6000
+      MaxStackCount: 144000
+      IsAutoStart: true
+    - Level: 7
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 7000
+      MaxStackCount: 168000
+      IsAutoStart: true
+    - Level: 8
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 8000
+      MaxStackCount: 192000
+      IsAutoStart: true
+    - Level: 9
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 9000
+      MaxStackCount: 216000
+      IsAutoStart: true
+    - Level: 10
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 10000
+      MaxStackCount: 240000
+      IsAutoStart: true
+    - Level: 11
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 11000
+      MaxStackCount: 264000
+      IsAutoStart: true
+    - Level: 12
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 12000
+      MaxStackCount: 288000
+      IsAutoStart: true
+    - Level: 13
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 13000
+      MaxStackCount: 312000
+      IsAutoStart: true
+    - Level: 14
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 14000
+      MaxStackCount: 336000
+      IsAutoStart: true
+    - Level: 15
+      Item: CurrencyGold
+      IntervalSecond: 1800
+      Amount: 15000
+      MaxStackCount: 360000
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 7000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 2
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 12000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 5
+        - Item: Item_Grown_Santuary_G1_T1_01
+          Cost: 5
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 30000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 10
+        - Item: Item_Grown_Santuary_G1_T1_01
+          Cost: 10
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 100000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 20
+        - Item: Item_Grown_Santuary_G1_T1_01
+          Cost: 20
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 70
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 1
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 1100000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 160
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 2
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 160
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 3
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 2200000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 200
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 4
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2900000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 220
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 4
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 320
+        - Item: Item_Grown_Santuary_G2_T1_05
+          Cost: 4
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 5
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_09
+          Cost: 1
+        - Item: Item_Grown_Santuary_G3_T1_24
+          Cost: 10
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 600
+        - Item: Item_Grown_Santuary_G3_T1_09
+          Cost: 1
+        - Item: Item_Grown_Santuary_G4_T1_25
+          Cost: 1
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G3_T1_09
+          Cost: 1
+        - Item: Item_Grown_Santuary_G4_T1_25
+          Cost: 2
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G3_T1_09
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_26
+          Cost: 1
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G3_T1_09
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_26
+          Cost: 1
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Gold_Sprite.TabIcon_Gold_Sprite
+  Buffs:
+    - Level: 1
+      BuffList:
+        - Statue_Gold_Buff_1
+    - Level: 2
+      BuffList:
+        - Statue_Gold_Buff_2
+    - Level: 3
+      BuffList:
+        - Statue_Gold_Buff_3
+    - Level: 4
+      BuffList:
+        - Statue_Gold_Buff_4
+    - Level: 5
+      BuffList:
+        - Statue_Gold_Buff_5
+    - Level: 6
+      BuffList:
+        - Statue_Gold_Buff_6
+    - Level: 7
+      BuffList:
+        - Statue_Gold_Buff_7
+    - Level: 8
+      BuffList:
+        - Statue_Gold_Buff_8
+    - Level: 9
+      BuffList:
+        - Statue_Gold_Buff_9
+    - Level: 10
+      BuffList:
+        - Statue_Gold_Buff_10
+    - Level: 11
+      BuffList:
+        - Statue_Gold_Buff_11
+    - Level: 12
+      BuffList:
+        - Statue_Gold_Buff_12
+    - Level: 13
+      BuffList:
+        - Statue_Gold_Buff_13
+    - Level: 14
+      BuffList:
+        - Statue_Gold_Buff_14
+    - Level: 15
+      BuffList:
+        - Statue_Gold_Buff_15
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S021.DA_IP000_S021
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S022.DA_IP000_S022
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S023.DA_IP000_S023
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S023.DA_IP000_S023
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S023.DA_IP000_S023
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S023.DA_IP000_S023
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum01.Fortress_GoldSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum02.Fortress_GoldSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum03.Fortress_GoldSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum03.Fortress_GoldSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum03.Fortress_GoldSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_GoldSanctum03.Fortress_GoldSanctum03
+- Id: 919
+  Type: Exp
+  BuildingType: Production
+  Name: Statue_Exp_Seongso
+  Comment: 경험의 성물_성소
+  NameDesc: Seongso_Name_Statue_Exp_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 1
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 1
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 2
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 3
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 4
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 5
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 6
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 7
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 14
+  ContentLimit: Building_Statue_Exp
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 7000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 2
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 12000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 5
+        - Item: Item_Grown_Santuary_G1_T1_03
+          Cost: 5
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 30000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 10
+        - Item: Item_Grown_Santuary_G1_T1_03
+          Cost: 10
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 100000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 20
+        - Item: Item_Grown_Santuary_G1_T1_03
+          Cost: 20
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 400000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 70
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 1
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 1100000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 160
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 2
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 160
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 3
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 2200000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 200
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 4
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2900000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 220
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 4
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 320
+        - Item: Item_Grown_Santuary_G2_T1_07
+          Cost: 4
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 5
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_11
+          Cost: 1
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 10
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 600
+        - Item: Item_Grown_Santuary_G3_T1_11
+          Cost: 1
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 1
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G3_T1_11
+          Cost: 1
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 2
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G3_T1_11
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G3_T1_11
+          Cost: 1
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Exp_Sprite.TabIcon_Exp_Sprite
+  Buffs:
+    - Level: 1
+      BuffList:
+        - Statue_Exp_Buff_1
+    - Level: 2
+      BuffList:
+        - Statue_Exp_Buff_2
+    - Level: 3
+      BuffList:
+        - Statue_Exp_Buff_3
+    - Level: 4
+      BuffList:
+        - Statue_Exp_Buff_4
+    - Level: 5
+      BuffList:
+        - Statue_Exp_Buff_5
+    - Level: 6
+      BuffList:
+        - Statue_Exp_Buff_6
+    - Level: 7
+      BuffList:
+        - Statue_Exp_Buff_7
+    - Level: 8
+      BuffList:
+        - Statue_Exp_Buff_8
+    - Level: 9
+      BuffList:
+        - Statue_Exp_Buff_9
+    - Level: 10
+      BuffList:
+        - Statue_Exp_Buff_10
+    - Level: 11
+      BuffList:
+        - Statue_Exp_Buff_11
+    - Level: 12
+      BuffList:
+        - Statue_Exp_Buff_12
+    - Level: 13
+      BuffList:
+        - Statue_Exp_Buff_13
+    - Level: 14
+      BuffList:
+        - Statue_Exp_Buff_14
+    - Level: 15
+      BuffList:
+        - Statue_Exp_Buff_15
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S011.DA_IP000_S011
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S012.DA_IP000_S012
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S013.DA_IP000_S013
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S013.DA_IP000_S013
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S013.DA_IP000_S013
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S013.DA_IP000_S013
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum01.Fortress_ExpSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum02.Fortress_ExpSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum03.Fortress_ExpSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum03.Fortress_ExpSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum03.Fortress_ExpSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_ExpSanctum03.Fortress_ExpSanctum03
+- Id: 931
+  Type: Polymorph
+  BuildingType: Production
+  Name: Statue_Polymorph_Seongso
+  Comment: 초월의 성물_성소
+  NameDesc: Seongso_Name_Statue_Polymorph_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 1
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 1
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 1
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 2
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 3
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 4
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 6
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 14
+  HarvestRateOnConstruct: 50
+  ContentLimit: Building_Statue_Polymorph
+  Harvest:
+    - Level: 1
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 4320
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 4140
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3960
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3780
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3600
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3420
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3240
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 3060
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 2880
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 2700
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 2520
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 2340
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 2160
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 1980
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      IntervalSecond: 1800
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 2000
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 6000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 2
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 5
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 20000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 10
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 90000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 20
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 300000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 50
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1100000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 130
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 1600000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 160
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 210
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 310
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 5
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 10
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 590
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 1
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 2
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Polymorph_Sprite.TabIcon_Polymorph_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S071.DA_IP000_S071
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S072.DA_IP000_S072
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S073.DA_IP000_S073
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S073.DA_IP000_S073
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S073.DA_IP000_S073
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S073.DA_IP000_S073
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum01.Fortress_PolymorphSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum02.Fortress_PolymorphSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum03.Fortress_PolymorphSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum03.Fortress_PolymorphSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum03.Fortress_PolymorphSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_PolymorphSanctum03.Fortress_PolymorphSanctum03
+- Id: 936
+  Type: WeaponPolymorph
+  BuildingType: Production
+  Name: Statue_WeaponPolymorph_Seongso
+  Comment: 외형의 성물_성소
+  NameDesc: Seongso_Name_Statue_WeaponPolymorph_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 1
+    - Level: 0
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 1
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 2
+    - Level: 1
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 2
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 3
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 4
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 6
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 15
+  HarvestRateOnConstruct: 50
+  ContentLimit: Building_Statue_WeaponPolymorph
+  Harvest:
+    - Level: 1
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 4320
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 4140
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3960
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3780
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3600
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3420
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3240
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 3060
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 2880
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 2700
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 2520
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 2340
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 2160
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 1980
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      IntervalSecond: 1800
+      Amount: 1
+      MaxStackCount: 20
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 2000
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 6000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 2
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 10000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 5
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 20000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 10
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 90000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 20
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 300000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 50
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1100000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 130
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 1600000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 160
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 210
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 310
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 5
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_21
+          Cost: 10
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 590
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 1
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G4_T1_22
+          Cost: 2
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G5_T1_23
+          Cost: 1
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_WeaponPolymorph_Sprite.TabIcon_WeaponPolymorph_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S061.DA_IP000_S061
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S062.DA_IP000_S062
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S063.DA_IP000_S063
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S063.DA_IP000_S063
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S063.DA_IP000_S063
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S063.DA_IP000_S063
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum01.Fortress_WeaponPolymorphSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum02.Fortress_WeaponPolymorphSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum03.Fortress_WeaponPolymorphSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum03.Fortress_WeaponPolymorphSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum03.Fortress_WeaponPolymorphSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_WeaponPolymorphSanctum03.Fortress_WeaponPolymorphSanctum03
+- Id: 2609
+  Type: Awakening
+  BuildingType: Production
+  Name: Statue_Awakening_Seongso
+  Comment: 각성의 성물_성소
+  NameDesc: Seongso_Name_Statue_Awakening_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 1
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 2
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 3
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 6
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 8
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 9
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 10
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 11
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 12
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 13
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Awareness_Seongso
+      OtherBuildingLevel: 14
+  HarvestRateOnConstruct: 20
+  ContentLimit: Building_Statue_Awakening
+  Harvest:
+    - Level: 1
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 3600
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 1800
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 1500
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 1200
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 1020
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 840
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 720
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 660
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 600
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 540
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 480
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 420
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 360
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 300
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Grown_Awakening_G1_T1_01_Bounded
+      IntervalSecond: 240
+      Amount: 1
+      MaxStackCount: 200
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 590000
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 640000
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 700000
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 1000000
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 1060000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 10
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 1690000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 10
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 2000000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 10
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 2400000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 10
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2900000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 10
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 10
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 20
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 20
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 20
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 30
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 30
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 30
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 40
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 40
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 40
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 70
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 70
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 70
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 160
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 160
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 160
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Grown_Awakening_G2_T1_02
+          Cost: 290
+        - Item: Item_Grown_Awakening_G2_T1_03
+          Cost: 290
+        - Item: Item_Grown_Awakening_G2_T1_04
+          Cost: 290
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Awakening_Sprite.TabIcon_Awakening_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S041.DA_IP000_S041
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S042.DA_IP000_S042
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S043.DA_IP000_S043
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S043.DA_IP000_S043
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S043.DA_IP000_S043
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S043.DA_IP000_S043
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum01.Fortress_AwakeningSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum02.Fortress_AwakeningSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum03.Fortress_AwakeningSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum03.Fortress_AwakeningSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum03.Fortress_AwakeningSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwakeningSanctum03.Fortress_AwakeningSanctum03
+- Id: 2560
+  Type: Awareness
+  BuildingType: Production
+  Name: Statue_Awareness_Seongso
+  Comment: 자각의 성물_성소
+  NameDesc: Seongso_Name_Statue_Awareness_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 1
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 2
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 3
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 7
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 4
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 7
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 5
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_BuffItem_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Awakening_Seongso
+      OtherBuildingLevel: 15
+  HarvestRateOnConstruct: 20
+  ContentLimit: Building_Statue_Awareness
+  Harvest:
+    - Level: 1
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 10800
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 5400
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 4500
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 3600
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 3060
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 2520
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 2160
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1980
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1800
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1620
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1440
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1260
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 1080
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 900
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Grown_Awareness_G1_T1_02_Bounded
+      IntervalSecond: 720
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 1170000
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 1240000
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 1330000
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 1410000
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 2050000
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 3200000
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 3500000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 10
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 2
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 10
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 2
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 4300000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 20
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 4
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 5700000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 20
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 4
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 30
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 6
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 40
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 8
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 70
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 14
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 160
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 32
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Grown_Awareness_G2_T1_04
+          Cost: 300
+        - Item: Item_Grown_Awareness_G3_T1_05
+          Cost: 60
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_Awareness_Sprite.TabIcon_Awareness_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S031.DA_IP000_S031
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S032.DA_IP000_S032
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S033.DA_IP000_S033
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S033.DA_IP000_S033
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S033.DA_IP000_S033
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S033.DA_IP000_S033
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum01.Fortress_AwarenessSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum02.Fortress_AwarenessSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_AwarenessSanctum03.Fortress_AwarenessSanctum03
+- Id: 1064
+  Type: BuffItem
+  BuildingType: Production
+  Name: Statue_BuffItem_Seongso
+  Comment: 소모품 성물_성소
+  NameDesc: Seongso_Name_Statue_BuffItem_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 1
+      OtherBuilding: Statue_DungeonItem_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 2
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 4
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 6
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_WeaponPolymorph_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Gold_Seongso
+      OtherBuildingLevel: 15
+  HarvestRateOnConstruct: 20
+  ContentLimit: Building_Statue_BuffItem
+  Harvest:
+    - Level: 1
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1800
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1740
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1680
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1620
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1560
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1500
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1440
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1380
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1320
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1260
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1200
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1140
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1080
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 1020
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Use_Scroll_G2_T2_04_Bounded
+      IntervalSecond: 900
+      Amount: 1
+      MaxStackCount: 50
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 130000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 40
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 330000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 80
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 500000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 110
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 590000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 170
+        - Item: Item_Grown_Santuary_G1_T1_04
+          Cost: 110
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 30
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 933000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 180
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 3
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 40
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 1590000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 190
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 3
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 50
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 2000000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 180
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 3
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 60
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 2400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 200
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 4
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 70
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2900000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 220
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 4
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 80
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 320
+        - Item: Item_Grown_Santuary_G2_T1_08
+          Cost: 4
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 90
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_12
+          Cost: 1
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 100
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 600
+        - Item: Item_Grown_Santuary_G3_T1_12
+          Cost: 1
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 110
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G3_T1_12
+          Cost: 1
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 120
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G3_T1_12
+          Cost: 1
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 130
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G3_T1_12
+          Cost: 1
+        - Item: Item_Use_Scroll_G2_T2_04
+          Cost: 140
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_BuffItem_Sprite.TabIcon_BuffItem_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S081.DA_IP000_S081
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S082.DA_IP000_S082
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S083.DA_IP000_S083
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S083.DA_IP000_S083
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S083.DA_IP000_S083
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S083.DA_IP000_S083
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum01.Fortress_BuffItemSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum02.Fortress_BuffItemSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum03.Fortress_BuffItemSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum03.Fortress_BuffItemSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum03.Fortress_BuffItemSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_BuffItemSanctum03.Fortress_BuffItemSanctum03
+- Id: 4061
+  Type: Time
+  BuildingType: Production
+  Name: Statue_DungeonItem_Seongso
+  Comment: 시간의 성물_성소
+  NameDesc: Seongso_Name_Statue_DungeonItem_Title
+  Prerequisite:
+    - Level: 0
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 1
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 1
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 3
+    - Level: 2
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 3
+    - Level: 3
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 4
+    - Level: 3
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 4
+    - Level: 4
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 5
+    - Level: 4
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 5
+    - Level: 5
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 6
+    - Level: 5
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 6
+    - Level: 6
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 7
+    - Level: 6
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 7
+    - Level: 7
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 8
+    - Level: 7
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 8
+    - Level: 8
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 9
+    - Level: 8
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 9
+    - Level: 9
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 10
+    - Level: 9
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 10
+    - Level: 10
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 11
+    - Level: 10
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 11
+    - Level: 11
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 12
+    - Level: 11
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 12
+    - Level: 12
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 13
+    - Level: 12
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 13
+    - Level: 13
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 14
+    - Level: 13
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 14
+    - Level: 14
+      OtherBuilding: Statue_Main_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Polymorph_Seongso
+      OtherBuildingLevel: 15
+    - Level: 14
+      OtherBuilding: Statue_Exp_Seongso
+      OtherBuildingLevel: 15
+  HarvestRateOnConstruct: 70
+  ContentLimit: Building_Statue_DungeonItem
+  Harvest:
+    - Level: 1
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 7200
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 2
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 6960
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 3
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 6720
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 4
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 6480
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 5
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 6240
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 6
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 6000
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 7
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 5760
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 8
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 5520
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 9
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 5280
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 10
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 5040
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 11
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 4800
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 12
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 4560
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 13
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 4320
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 14
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 4080
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+    - Level: 15
+      Item: Item_Craft_Recharge_G1_T1_01_Bounded
+      IntervalSecond: 3600
+      Amount: 1
+      MaxStackCount: 15
+      IsAutoStart: true
+  UpgradeCost:
+    - Level: 0
+      Items:
+        - Item: CurrencyGold
+          Cost: 30000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 5
+    - Level: 1
+      Items:
+        - Item: CurrencyGold
+          Cost: 70000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 10
+    - Level: 2
+      Items:
+        - Item: CurrencyGold
+          Cost: 160000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_01
+          Cost: 30
+        - Item: Item_Grown_Santuary_G1_T1_02
+          Cost: 20
+    - Level: 3
+      Items:
+        - Item: CurrencyGold
+          Cost: 650000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 110
+        - Item: Item_Grown_Santuary_G1_T1_02
+          Cost: 70
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 10
+    - Level: 4
+      Items:
+        - Item: CurrencyGold
+          Cost: 1080000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 160
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 3
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 10
+    - Level: 5
+      Items:
+        - Item: CurrencyGold
+          Cost: 1400000
+        - Item: Item_Craft_Basic_Varitan_G1_T1_02
+          Cost: 180
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 3
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 10
+    - Level: 6
+      Items:
+        - Item: CurrencyGold
+          Cost: 1700000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 170
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 3
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 20
+    - Level: 7
+      Items:
+        - Item: CurrencyGold
+          Cost: 2400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 200
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 4
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 20
+    - Level: 8
+      Items:
+        - Item: CurrencyGold
+          Cost: 2900000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_01
+          Cost: 220
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 4
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 20
+    - Level: 9
+      Items:
+        - Item: CurrencyGold
+          Cost: 3700000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 320
+        - Item: Item_Grown_Santuary_G2_T1_06
+          Cost: 4
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 30
+    - Level: 10
+      Items:
+        - Item: CurrencyGold
+          Cost: 6500000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 480
+        - Item: Item_Grown_Santuary_G3_T1_10
+          Cost: 1
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 50
+    - Level: 11
+      Items:
+        - Item: CurrencyGold
+          Cost: 9400000
+        - Item: Item_Craft_Basic_Eldar_G1_T1_02
+          Cost: 600
+        - Item: Item_Grown_Santuary_G3_T1_10
+          Cost: 1
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 100
+    - Level: 12
+      Items:
+        - Item: CurrencyGold
+          Cost: 17000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 800
+        - Item: Item_Grown_Santuary_G3_T1_10
+          Cost: 1
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 100
+    - Level: 13
+      Items:
+        - Item: CurrencyGold
+          Cost: 34000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 1600
+        - Item: Item_Grown_Santuary_G3_T1_10
+          Cost: 1
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 200
+    - Level: 14
+      Items:
+        - Item: CurrencyGold
+          Cost: 56000000
+        - Item: Item_Craft_Basic_Rockhead_G1_T1_01
+          Cost: 2300
+        - Item: Item_Grown_Santuary_G3_T1_10
+          Cost: 1
+        - Item: Item_Craft_Recharge_G1_T1_01
+          Cost: 300
+  Construction:
+    - Level: 0
+      DurationSecond: 1
+    - Level: 1
+      DurationSecond: 60
+    - Level: 2
+      DurationSecond: 300
+    - Level: 3
+      DurationSecond: 600
+    - Level: 4
+      DurationSecond: 1800
+    - Level: 5
+      DurationSecond: 3600
+    - Level: 6
+      DurationSecond: 7200
+    - Level: 7
+      DurationSecond: 14400
+    - Level: 8
+      DurationSecond: 21600
+    - Level: 9
+      DurationSecond: 28800
+    - Level: 10
+      DurationSecond: 36000
+    - Level: 11
+      DurationSecond: 43200
+    - Level: 12
+      DurationSecond: 50400
+    - Level: 13
+      DurationSecond: 57600
+    - Level: 14
+      DurationSecond: 72000
+  WorldMapArea: WorldMap_SeongsoEnter
+  TabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_DungeonItem_Sprite.TabIcon_DungeonItem_Sprite
+  Effect:
+    - Level: 1
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 2
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 3
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 4
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 6
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 7
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 8
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 9
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+    - Level: 11
+      Asset: /Game/EffectActions/VAE_BG_IP000_01_Object.VAE_BG_IP000_01_Object
+    - Level: 12
+      Asset: /Game/EffectActions/VAE_BG_IP000_02_Object.VAE_BG_IP000_02_Object
+    - Level: 13
+      Asset: /Game/EffectActions/VAE_BG_IP000_03_Object.VAE_BG_IP000_03_Object
+    - Level: 14
+      Asset: /Game/EffectActions/VAE_BG_IP000_04_Object.VAE_BG_IP000_04_Object
+  CharacterAsset:
+    - Level: 0
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 1
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 2
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 3
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 4
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 5
+      Asset: /Game/Characters/DA_IP000_S051.DA_IP000_S051
+    - Level: 6
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 7
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 8
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 9
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 10
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 11
+      Asset: /Game/Characters/DA_IP000_S052.DA_IP000_S052
+    - Level: 12
+      Asset: /Game/Characters/DA_IP000_S053.DA_IP000_S053
+    - Level: 13
+      Asset: /Game/Characters/DA_IP000_S053.DA_IP000_S053
+    - Level: 14
+      Asset: /Game/Characters/DA_IP000_S053.DA_IP000_S053
+    - Level: 15
+      Asset: /Game/Characters/DA_IP000_S053.DA_IP000_S053
+  BuildingIcon:
+    - Level: 0
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 1
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 2
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 3
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 4
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 5
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum01.Fortress_DungeonItemSanctum01
+    - Level: 6
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 7
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 8
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 9
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 10
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 11
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum02.Fortress_DungeonItemSanctum02
+    - Level: 12
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum03.Fortress_DungeonItemSanctum03
+    - Level: 13
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum03.Fortress_DungeonItemSanctum03
+    - Level: 14
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum03.Fortress_DungeonItemSanctum03
+    - Level: 15
+      Asset: /Game/UIIcon/FortressSanctum/Fortress_DungeonItemSanctum03.Fortress_DungeonItemSanctum03

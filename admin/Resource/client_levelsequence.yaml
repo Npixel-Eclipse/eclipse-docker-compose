@@ -1,0 +1,925 @@
+- Id: 1
+  Name: CharacterCreationStart
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: Intro
+  ShowUI: false
+- Id: 5
+  Name: Login
+  LevelSequenceAsset: /Game/Lobby/Cine/Facade/SQ_Master_Facade.SQ_Master_Facade
+  IsLoop: true
+  SubName: Facade Loop
+  ShowUI: false
+- Id: 6
+  Name: LoginToCharacterCreation
+  LevelSequenceAsset: /Game/Lobby/Cine/Facade/SQ_Master_Facade.SQ_Master_Facade
+  SubName: New User
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+  ShowUI: false
+- Id: 12
+  Name: FighterSelectionLoop
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  IsLoop: true
+  SubName: FighterLoop
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 14
+  Name: FighterSelectionConfirm
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: FighterConfirm
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 15
+  Name: FighterToRanger
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: FighterToRanger
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 16
+  Name: FighterToSorcerer
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: FighterToSorcerer
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 17
+  Name: FighterToAssassin
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: FighterToAssassin
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 22
+  Name: RangerSelectionLoop
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  IsLoop: true
+  SubName: RangerLoop
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 24
+  Name: RangerSelectionConfirm
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: RangerConfirm
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 25
+  Name: RangerToFighter
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: RangerToFighter
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 26
+  Name: RangerToSorcerer
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: RangerToSorcerer
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 27
+  Name: RangerToAssassin
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: RangerToAssassin
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 32
+  Name: SorcererSelectionLoop
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  IsLoop: true
+  SubName: SorcererLoop
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 34
+  Name: SorcererSelectionConfirm
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: SorcererConfirm
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 35
+  Name: SorcererToFighter
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: SorcererToFighter
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 36
+  Name: SorcererToRanger
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: SorcererToRanger
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 37
+  Name: SorcererToAssassin
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: SorcererToAssassin
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 42
+  Name: AssassinSelectionLoop
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  IsLoop: true
+  SubName: AssassinLoop
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 43
+  Name: AssassinSelectionConfirm
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: AssassinConfirm
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 44
+  Name: AssassinToFighter
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: AssassinToFighter
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 45
+  Name: AssassinToRanger
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: AssassinToRanger
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 46
+  Name: AssassinToSorcerer
+  LevelSequenceAsset: /Game/Lobby/Cine/Create_Character/SQ_Master_PCmake.SQ_Master_PCmake
+  SubName: AssassinToSorcerer
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 51
+  Name: FighterAdvanceIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance_PC001.QS_Master_Advance_PC001
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 52
+  Name: RangerAdvanceIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance_PC002.QS_Master_Advance_PC002
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 53
+  Name: SorcererAdvanceIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance_PC003.QS_Master_Advance_PC003
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 54
+  Name: AssassinAdvanceIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance_PC003.QS_Master_Advance_PC003
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 15000
+- Id: 61
+  Name: AdvanceIntro
+  TakeList:
+    - TakeName: Fighter
+      LevelSequence: FighterAdvanceIntro
+    - TakeName: Ranger
+      LevelSequence: RangerAdvanceIntro
+    - TakeName: Sorcerer
+      LevelSequence: SorcererAdvanceIntro
+    - TakeName: Assassin
+      LevelSequence: AssassinAdvanceIntro
+- Id: 101
+  Name: Opening
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Master_Seq_Scene4.Master_Seq_Scene4
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 201
+  Name: CharacterSelectionStart
+  TakeList:
+    - TakeName: FighterToRanger
+      LevelSequence: FighterToRanger
+    - TakeName: FighterToSorcerer
+      LevelSequence: FighterToSorcerer
+    - TakeName: FighterToAssassin
+      LevelSequence: FighterToAssassin
+    - TakeName: RangerToFighter
+      LevelSequence: RangerToFighter
+    - TakeName: RangerToSorcerer
+      LevelSequence: RangerToSorcerer
+    - TakeName: RangerToAssassin
+      LevelSequence: RangerToAssassin
+    - TakeName: SorcererToFighter
+      LevelSequence: SorcererToFighter
+    - TakeName: SorcererToRanger
+      LevelSequence: SorcererToRanger
+    - TakeName: SorcererToAssassin
+      LevelSequence: SorcererToAssassin
+    - TakeName: AssassinToFighter
+      LevelSequence: AssassinToFighter
+    - TakeName: AssassinToRanger
+      LevelSequence: AssassinToRanger
+    - TakeName: AssassinToSorcerer
+      LevelSequence: AssassinToSorcerer
+  ShowUI: false
+- Id: 202
+  Name: CharacterSelectionLoop
+  IsLoop: true
+  TakeList:
+    - TakeName: Fighter
+      LevelSequence: FighterSelectionLoop
+    - TakeName: Ranger
+      LevelSequence: RangerSelectionLoop
+    - TakeName: Sorcerer
+      LevelSequence: SorcererSelectionLoop
+    - TakeName: Assassin
+      LevelSequence: AssassinSelectionLoop
+  ShowUI: false
+- Id: 204
+  Name: CharacterSelectionConfirm
+  TakeList:
+    - TakeName: Fighter
+      LevelSequence: FighterSelectionConfirm
+    - TakeName: Ranger
+      LevelSequence: RangerSelectionConfirm
+    - TakeName: Sorcerer
+      LevelSequence: SorcererSelectionConfirm
+    - TakeName: Assassin
+      LevelSequence: AssassinSelectionConfirm
+  ShowUI: false
+- Id: 301
+  Name: CardMergeSelect
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Select
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  ShowUI: false
+  HideUILayer:
+    - Screen
+    - FortressScreen
+- Id: 304
+  Name: CardMergeListView
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  IsLoop: true
+  SubName: ListView
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  ShowUI: false
+  HideUILayer:
+    - Fullscreen
+    - Screen
+    - FortressScreen
+- Id: 305
+  Name: CardMergeTouch
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Touch
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 311
+  Name: CardMergeRareFailureResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result01
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 312
+  Name: CardMergeRareSuccessResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result02
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 313
+  Name: CardMergeEpicFailureResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result03
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 314
+  Name: CardMergeEpicSuccessResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result04
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 315
+  Name: CardMergeLegendaryFailureResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result05
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 316
+  Name: CardMergeLegendarySuccessResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Card_Merge/SQ_Master_Card_Merge.SQ_Master_Card_Merge
+  SubName: Result06
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 401
+  Name: PolymorphCardGachaIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Gotcha_PM/SQ_Master_Gotcha_PM.SQ_Master_Gotcha_PM
+  SubName: Intro
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 402
+  Name: PolymorphCardGachaListView
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_ListView_PM.SQ_Master_ListView_PM
+  IsLoop: true
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+      - Radius: 15000
+        IsSector: true
+        SectorAngle: 70
+  HideUILayer:
+    - MainHUD
+    - Fullscreen
+    - Screen
+    - FortressScreen
+- Id: 403
+  Name: PolymorphCardGachaTouch
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Gatcha_Idle
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 411
+  Name: PolymorphCardGachaRareResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Result01
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 412
+  Name: PolymorphCardGachaEpicLegendaryResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Result02
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 501
+  Name: WeaponCardGachaIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Gotcha_WP/SQ_Master_Gotcha_WP.SQ_Master_Gotcha_WP
+  SubName: Intro
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 502
+  Name: WeaponCardGachaListView
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_ListView_WP.SQ_Master_ListView_WP
+  IsLoop: true
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+      - Radius: 15000
+        IsSector: true
+        SectorAngle: 70
+  HideUILayer:
+    - MainHUD
+    - Fullscreen
+    - Screen
+    - FortressScreen
+- Id: 503
+  Name: WeaponCardGachaTouch
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Gatcha_Idle
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 511
+  Name: WeaponCardGachaRareResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Result01
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 512
+  Name: WeaponCardGachaEpicLegendaryResult
+  LevelSequenceAsset: /Game/Lobby/Cine/Sub_Interaction/SQ_Master_Interaction_PM.SQ_Master_Interaction_PM
+  SubName: Result02
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 601
+  Name: PolymorphCardEpicResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_PM_Epic.SQ_Master_Consequence_PM_Epic
+  SubName: Epic
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 602
+  Name: PolymorphCardLegendaryResultItem
+  TakeList:
+    - TakeName: Item_Polymorph_Transcendence_PM053
+      LevelSequence: Gurigaras
+    - TakeName: Item_Polymorph_Transcendence_PM348
+      LevelSequence: Gurigaras
+    - TakeName: Item_Polymorph_Transcendence_PM002
+      LevelSequence: RasereneEvo
+    - TakeName: Item_Polymorph_Transcendence_PM303
+      LevelSequence: RasereneEvo
+    - TakeName: Item_Polymorph_Transcendence_PM121
+      LevelSequence: ArahaEvangelistFanatic
+    - TakeName: Item_Polymorph_Transcendence_PM394
+      LevelSequence: ArahaEvangelistFanatic
+    - TakeName: Default
+      LevelSequence: ArahaEvangelistFanatic
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 603
+  Name: PolymorphCardMythResultItem
+  TakeList:
+    - TakeName: Item_Polymorph_Transcendence_PM130
+      LevelSequence: GodsBlood
+    - TakeName: Default
+      LevelSequence: GodsBlood
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 611
+  Name: WeaponCardEpicResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_WP.SQ_Master_Consequence_WP
+  SubName: Epic
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 612
+  Name: WeaponCardLegendaryResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Weapon.SQ_Master_Consequence_Weapon
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 613
+  Name: WeaponCardMythResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Weapon.SQ_Master_Consequence_Weapon
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 701
+  Name: GodsBlood
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_PM130.SQ_Master_Consequence_Card_Legendary_PM130
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+- Id: 702
+  Name: Gurigaras
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_PM053.SQ_Master_Consequence_Card_Legendary_PM053
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+- Id: 703
+  Name: RasereneEvo
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_PM002.SQ_Master_Consequence_Card_Legendary_PM002
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+- Id: 704
+  Name: ArahaEvangelistFanatic
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_PM121.SQ_Master_Consequence_Card_Legendary_PM121
+  SubName: Legendary
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+- Id: 710
+  Name: PolymorphCardLegendaryMaleResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_Bank.SQ_Master_Consequence_Card_Legendary_Bank
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 711
+  Name: PolymorphCardLegendaryFemaleResultItem
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/SQ_Master_Consequence_Card_Legendary_Bank_Female.SQ_Master_Consequence_Card_Legendary_Bank_Female
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 801
+  Name: FighterAdvanceQuest
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance.QS_Master_Advance
+  SubName: Fighter
+- Id: 802
+  Name: RangerAdvanceQuest
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance.QS_Master_Advance
+  SubName: Ranger
+- Id: 803
+  Name: SorcererAdvanceQuest
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/QS_Master_Advance.QS_Master_Advance
+  SubName: Sorcerer
+- Id: 387
+  Name: QuestCutScene01
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Allied_Defence_01.Allied_Defence_01
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 3531
+  Name: QuestCutScene02
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Scene3.Scene3
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 1231
+  Name: QuestCutScene03
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Scene4_2.Scene4_2
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 1064
+  Name: QuestCutScene04
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Scene4_3.Scene4_3
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 2574
+  Name: QuestCutScene05
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/Scene_4_1.Scene_4_1
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 2575
+  Name: SkinIntro
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/BJ_SKIN/SQ_Master_Consequence_PM_BJ.SQ_Master_Consequence_PM_BJ
+  SubName: BJ_Skin
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 2576
+  Name: SkinLoop
+  LevelSequenceAsset: /Game/Lobby/Cine/Consequence/BJ_SKIN/SQ_Master_Consequence_PM_BJ.SQ_Master_Consequence_PM_BJ
+  IsLoop: true
+  SubName: Loop
+  WorldPartitionStreamingSource:
+    Shapes:
+      - Radius: 6000
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2577
+  Name: QuestCutSceneTest
+  LevelSequenceAsset: /Game/C/Sequencer/Advance/SceneSubLevel.SceneSubLevel
+  SubLevelAsset: /Game/Maps/OtherLevel.OtherLevel
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - Tooltip
+    - System
+- Id: 2611
+  Name: FighterMainTutorialChapter1
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC001.QS_Master_Main_Tutorial_PC001
+  SubName: Chapter1
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2612
+  Name: RangerMainTutorialChapter1
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC002.QS_Master_Main_Tutorial_PC002
+  SubName: Chapter1
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2613
+  Name: SorcererMainTutorialChapter1
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC003.QS_Master_Main_Tutorial_PC003
+  SubName: Chapter1
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2618
+  Name: MainTutorialChapter1
+  TakeList:
+    - TakeName: Fighter
+      LevelSequence: FighterMainTutorialChapter1
+    - TakeName: Ranger
+      LevelSequence: RangerMainTutorialChapter1
+    - TakeName: Sorcerer
+      LevelSequence: SorcererMainTutorialChapter1
+    - TakeName: Assassin
+      LevelSequence: SorcererMainTutorialChapter1
+- Id: 2621
+  Name: FighterMainTutorialChapter3
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC001.QS_Master_Main_Tutorial_PC001
+  SubName: Chapter3
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2622
+  Name: RangerMainTutorialChapter3
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC002.QS_Master_Main_Tutorial_PC002
+  SubName: Chapter3
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2623
+  Name: SorcererMainTutorialChapter3
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC003.QS_Master_Main_Tutorial_PC003
+  SubName: Chapter3
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2631
+  Name: FighterMainTutorialChapter4
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC001.QS_Master_Main_Tutorial_PC001
+  SubName: Chapter4
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2632
+  Name: RangerMainTutorialChapter4
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC002.QS_Master_Main_Tutorial_PC002
+  SubName: Chapter4
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2633
+  Name: SorcererMainTutorialChapter4
+  LevelSequenceAsset: /Game/Lobby/Cine/Quest/Main/Tutorial/QS_Master_Main_Tutorial_PC003.QS_Master_Main_Tutorial_PC003
+  SubName: Chapter4
+  TouchOnlySkipUI: true
+  HidePlayer: true
+  HideNpc: true
+  HideUILayer:
+    - MainHUD
+    - Popup
+    - Screen
+    - FortressScreen
+    - System
+- Id: 2701
+  Name: MainTutorialChapter1_BridgeBroken1
+  LevelSequenceAsset: /Game/ENV/Asset/TutorialBridge_Broken/Sequence/TutorialBridge_01.TutorialBridge_01
+  IsLoop: true
+  SubName: Intro
+  ShowUI: false
+  PlayerCamera: true
+  AmbientSequenceType: true
+- Id: 2702
+  Name: MainTutorialChapter1_BridgeBroken2
+  LevelSequenceAsset: /Game/ENV/Asset/TutorialBridge_Broken/Sequence/TutorialBridge_01.TutorialBridge_01
+  IsLoop: true
+  SubName: First
+  ShowUI: false
+  PlayerCamera: true
+  AmbientSequenceType: true
+- Id: 2703
+  Name: MainTutorialChapter1_BridgeBroken3
+  LevelSequenceAsset: /Game/ENV/Asset/TutorialBridge_Broken/Sequence/TutorialBridge_01.TutorialBridge_01
+  IsLoop: true
+  SubName: Second
+  ShowUI: false
+  PlayerCamera: true
+  AmbientSequenceType: true
+- Id: 2704
+  Name: MainTutorialChapter1_BridgeBroken4
+  LevelSequenceAsset: /Game/ENV/Asset/TutorialBridge_Broken/Sequence/TutorialBridge_01.TutorialBridge_01
+  SubName: Third
+  ShowUI: false
+  PlayerCamera: true
+  AmbientSequenceType: true

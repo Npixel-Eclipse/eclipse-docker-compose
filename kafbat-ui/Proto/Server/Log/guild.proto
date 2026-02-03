@@ -1,0 +1,189 @@
+syntax = "proto3";
+package log;
+import "Common/item_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "GuildLogServiceProto";
+
+enum GuildJoinType {
+  IMMEDIATE = 0;
+  APPROVAL = 1;
+  PASSWORD = 2;
+}
+
+message HelpMyBuilding {
+  int64 guild_id = 1;
+  int64 building_id = 2;
+  int64 help_request_count = 3;
+}
+
+message CreateGuild {
+  int64 guild_id = 1;
+  string name = 2;
+  string introduction = 3;
+  int64 guild_mark_frame_id = 4;
+  int64 guild_mark_symbol_id = 5;
+  string guild_mark_color = 6;
+  GuildJoinType guild_join_type = 7;
+  string password = 8;
+}
+
+message DisbandGuild {
+  int64 guild_id = 1;
+}
+
+message JoinGuild {
+  int64 guild_id = 1;
+}
+
+message RequestJoinGuild {
+  int64 guild_id = 1;
+}
+
+message ReplyJoinGuild {
+  int64 guild_id = 1;
+  string target_character_uuid = 2;
+  bool denied = 3;
+}
+
+message CancelRequestJoinGuild {
+  int64 guild_id = 1;
+}
+
+message LeaveGuild {
+  int64 guild_id = 1;
+}
+
+message BanishGuild {
+  int64 guild_id = 1;
+  string target_character_uuid = 2;
+}
+
+message ProposeAllyGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message CancelProposeAllyGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message ReplyAllyGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+  bool denied = 3;
+}
+
+message DisAllyGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message AddHostileGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message ProposeHostileGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+  string reason = 3;
+}
+
+message DeclineHostileGuildProposal {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message RemoveHostileGuild {
+  int64 guild_id = 1;
+  int64 target_guild_id = 2;
+}
+
+message UpdateGuildInfo {
+  int64 guild_id = 1;
+  GuildJoinType guild_join_type = 2;
+  string introduction_before = 3;
+  string introduction = 4;
+  string notice_before = 5;
+  string notice = 6;
+  int64 guild_mark_frame_id_before = 7;
+  int64 guild_mark_frame_id = 8;
+  int64 guild_mark_symbol_id_before = 9;
+  int64 guild_mark_symbol_id = 10;
+  string guild_mark_color_before = 11;
+  string guild_mark_color = 12;
+  string password_before = 13;
+  string password = 14;
+}
+
+message UpdateGuildMemberRole {
+  int64 guild_id = 1;
+  string target_character_uuid = 2;
+  int64 guild_role_id_before = 3;
+  int64 guild_role_id = 4;
+}
+
+message DelegateGuildMaster {
+  int64 guild_id = 1;
+  string target_character_uuid = 2;
+  bool auto = 3;
+}
+
+message UpdateGuildMemberIntroduction {
+  int64 guild_id = 1;
+  string introduction = 2;
+}
+
+message ContributeGuild {
+  int64 guild_id = 1;
+  int64 contribution = 2;
+  int64 weekly_contribution = 3;
+  int64 total_contribution = 4;
+  common.Reason reason = 5;
+}
+
+message ChangeGuildItem {
+  int64 guild_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 amount_before = 4;
+  int64 amount = 5;
+  common.Reason reason = 6;
+}
+
+message AcquireGuildCollection {
+  int64 guild_id = 1;
+  int64 guild_collection_id = 2;
+}
+
+message ContributeGuildCollection {
+  int64 guild_id = 1;
+  int64 guild_collection_id = 2;
+  int64 level = 3;
+  int64 progress = 4;
+  string achieved_at = 5;
+}
+
+message ContributeAdditionalGuildCollection {
+  int64 guild_id = 1;
+  int64 guild_collection_id = 2;
+  int64 level = 3;
+  int64 progress = 4;
+}
+
+message PromoteContributeGuildCollection {
+  int64 guild_id = 1;
+  int64 guild_collection_id = 2;
+  int64 level = 3;
+  bool promote = 4;
+}
+
+message StoreToGuildStorage {
+  int64 guild_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 amount = 4;
+}

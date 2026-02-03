@@ -1,0 +1,98 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    SearchMainTab:
+      type: string
+      ref: recipe_display
+    SearchSubTab:
+      type: string
+      ref: recipe_display
+    FavoriteMainTab:
+      type: string
+      ref: recipe_display
+    FavoriteSubTab:
+      type: string
+      ref: recipe_display
+    Favorite:
+      type: string
+      ref: favorite
+    LimitAmountDesc:
+      type: string
+      ref: description
+    LimitCountUnitDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    LimitCountRefreshDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    LimitOutputUnitDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    LimitOutputRefreshDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    PaybackResultTypeDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    PaybackTargetDesc:
+      type: array
+      items:
+        type: string
+        ref: description
+    FailMessage_NotEnoughMaterial:
+      type: string
+      ref: system_message
+    FailMessage_OverLimitPartial:
+      type: string
+      ref: system_message
+    FailMessage_OverLimit:
+      type: string
+      ref: system_message
+    FailMessage_OverCount:
+      type: string
+      ref: system_message
+    FailMessage_NotInFeriod:
+      type: string
+      ref: system_message
+    FailMessage_InventoryFull:
+      type: string
+      ref: system_message
+  required:
+    - Id
+    - Name
+    - SearchMainTab
+    - SearchSubTab
+    - FavoriteMainTab
+    - FavoriteSubTab
+    - Favorite
+    - LimitAmountDesc
+    - LimitCountUnitDesc
+    - LimitCountRefreshDesc
+    - LimitOutputUnitDesc
+    - LimitOutputRefreshDesc
+    - PaybackResultTypeDesc
+    - PaybackTargetDesc
+    - FailMessage_NotEnoughMaterial
+    - FailMessage_OverLimitPartial
+    - FailMessage_OverLimit
+    - FailMessage_OverCount
+    - FailMessage_NotInFeriod
+    - FailMessage_InventoryFull

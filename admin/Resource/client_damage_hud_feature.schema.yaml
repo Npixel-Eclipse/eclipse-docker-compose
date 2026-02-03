@@ -1,0 +1,71 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+
+    TopRightOffset: #Hp, Mp 회복 영역 기준점
+      type: integer
+    BodyLeftOffset: #buff.yaml -> TextDisplayType -> Debuff 영역 기준점
+      type: integer
+    BodyRightOffset: #buff.yaml -> TextDisplayType -> buff 영역 기준점
+      type: integer
+    BottomOffset: #skill.yaml -> TextDisplayType 영역 기준점
+      type: integer
+
+    PositionInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+        
+          Position:
+            type: string
+            enum:
+              - None
+              - Top #critical, Perfect
+              - Body #Damage
+              - TopRight #Hp, Mp 회복
+              - Bottom #Immune, Dodge, Block, Miss
+              - BottomDown #skill.yaml -> TextDisplayType
+              - BodyLeft #buff.yaml -> TextDisplayType -> Debuff
+              - BodyRight #buff.yaml -> TextDisplayType -> buff
+
+          UIType:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Name:
+                  type: string
+
+          RandomOffset: #랜덤 영역 생성 -> 사각형 형태로 영역 생성 
+            type: object
+            additionalProperties: false
+            properties:
+              HalfWidth: #가로 지정
+                type: integer
+                minimum: 1
+
+              HalfHeight: #세로 지정
+                type: integer 
+                minimum: 1
+
+            required:
+              - HalfWidth
+              - HalfHeight
+          
+          Comment:
+              type: string
+
+  required:
+    - Id
+    - Name

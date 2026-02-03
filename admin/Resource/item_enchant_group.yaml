@@ -1,0 +1,264 @@
+- Id: 27175
+  Name: Enchant_PolymorphCard
+  Comment: 초월체 강화
+- Id: 11423
+  Name: Enchant_WeaponPolymorph
+  Comment: 무기 외형 강화
+- Id: 29470
+  Name: Enhance_Weapon
+  Comment: 무기 강화
+- Id: 5355
+  Name: Enhance_Weapon_Blessed
+  Comment: 무기 강화(축복)
+- Id: 11667
+  Name: Enhance_Weapon_Cursed
+  Comment: 무기 강화(저주)
+- Id: 20175
+  Name: Enhance_Armor
+  Comment: 뱡어구 강화
+- Id: 15283
+  Name: Enhance_Armor_Blessed
+  Comment: 방어구 강화(축복)
+- Id: 21415
+  Name: Enhance_Armor_Cursed
+  Comment: 방어구 강화(저주)
+- Id: 14425
+  Name: Enhance_Accessory
+  Comment: 장신구 강화
+- Id: 16925
+  Name: Enhance_Accessory_Blessed
+  Comment: 장신구 강화(축복)
+- Id: 2406
+  Name: Enhance_Accessory_Cursed
+  Comment: 장신구 강화(저주)
+- Id: 4368
+  Name: Engrave_Slot_Rare
+  Comment: 희귀 세공 슬롯
+  SlotLimit: 3
+- Id: 20888
+  Name: Engrave_Slot_Epic
+  Comment: 영웅 세공 슬롯
+  SlotLimit: 3
+- Id: 16204
+  Name: Engrave_Slot_Legendary
+  Comment: 전설 세공 슬롯
+  SlotLimit: 3
+- Id: 4663
+  Name: Might_Slot_Test_Group
+  Comment: 권능 부여 슬롯 테스트(업데이트)
+  SlotLimit: 3
+- Id: 4266
+  Name: Might_Slot_Epic_2Tier
+  Comment: 영웅2티어 권능 부여 슬롯
+  SlotLimit: 1
+- Id: 14542
+  Name: Might_Slot_Epic_1Tier
+  Comment: 영웅1티어 권능 부여 슬롯
+  SlotLimit: 1
+- Id: 30355
+  Name: Might_Slot_Legendary_3Tier
+  Comment: 전설3티어 권능 부여 슬롯
+  SlotLimit: 2
+- Id: 30262
+  Name: Might_Slot_Legendary_2Tier
+  Comment: 전설2티어 권능 부여 슬롯
+  SlotLimit: 2
+- Id: 16215
+  Name: Might_Slot_Legendary_1Tier
+  Comment: 전설1티어 권능 부여 슬롯
+  SlotLimit: 3
+- Id: 19396
+  Name: Enhance_Skill_Common
+  Comment: 일반 스킬 강화
+- Id: 14639
+  Name: Enhance_Skill_Uncommon
+  Comment: 고급 스킬 강화
+- Id: 30997
+  Name: Enhance_Skill_Rare
+  Comment: 희귀 스킬 강화
+- Id: 13431
+  Name: Enhance_Skill_Epic
+  Comment: 영웅 스킬 강화
+- Id: 27456
+  Name: Enhance_Skill_Legendary
+  Comment: 전설 스킬 강화
+- Id: 1597
+  Name: DivinityDropSlot1Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 825
+  Name: DivinityDropSlot2Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1857
+  Name: DivinityDropSlot3Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1383
+  Name: DivinityDropSlot4Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1109
+  Name: DivinityDropSlot5Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2515
+  Name: DivinityDropSlot6Common
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 266
+  Name: DivinityCraftSlot1Common
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 2295
+  Name: DivinityCraftSlot2Common
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 6
+  Name: DivinityCraftSlot3Common
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 2493
+  Name: DivinityDropSlot1Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2955
+  Name: DivinityDropSlot2Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2384
+  Name: DivinityDropSlot3Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 3280
+  Name: DivinityDropSlot4Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2084
+  Name: DivinityDropSlot5Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 39
+  Name: DivinityDropSlot6Uncommon
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1895
+  Name: DivinityCraftSlot1Uncommon
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 2690
+  Name: DivinityCraftSlot2Uncommon
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 112
+  Name: DivinityCraftSlot3Uncommon
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 1931
+  Name: DivinityDropSlot1Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 118
+  Name: DivinityDropSlot2Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2523
+  Name: DivinityDropSlot3Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 4187
+  Name: DivinityDropSlot4Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 4437
+  Name: DivinityDropSlot5Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1287
+  Name: DivinityDropSlot6Rare
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 4292
+  Name: DivinityCraftSlot1Rare
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 4833
+  Name: DivinityCraftSlot2Rare
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 771
+  Name: DivinityCraftSlot3Rare
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 3013
+  Name: DivinityDropSlot1Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2561
+  Name: DivinityDropSlot2Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 1973
+  Name: DivinityDropSlot3Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 4887
+  Name: DivinityDropSlot4Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 601
+  Name: DivinityDropSlot5Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 3935
+  Name: DivinityDropSlot6Epic
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 5197
+  Name: DivinityCraftSlot1Epic
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 4159
+  Name: DivinityCraftSlot2Epic
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 5505
+  Name: DivinityCraftSlot3Epic
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 1359
+  Name: DivinityDropSlot1Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 4614
+  Name: DivinityDropSlot2Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 872
+  Name: DivinityDropSlot3Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 3552
+  Name: DivinityDropSlot4Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 3666
+  Name: DivinityDropSlot5Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 2804
+  Name: DivinityDropSlot6Legendary
+  Comment: 유물 슬롯
+  SlotLimit: 3
+- Id: 972
+  Name: DivinityCraftSlot1Legendary
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 2186
+  Name: DivinityCraftSlot2Legendary
+  Comment: 제물 슬롯
+  SlotLimit: 3
+- Id: 2351
+  Name: DivinityCraftSlot3Legendary
+  Comment: 제물 슬롯
+  SlotLimit: 3

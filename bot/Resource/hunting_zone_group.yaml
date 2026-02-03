@@ -1,0 +1,96 @@
+- Id: 279
+  Name: HuntingZone_Group_Season_1_North_Varitan
+  Comment: CCB시즌1 바리탄 북부
+  Season: 1
+  Address: North_Varitan
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_1
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_2
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_3
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_A
+  ShopMerchant: Merchant_HuntingZone_Owner_A
+- Id: 280
+  Name: HuntingZone_Group_Season_1_Rainwood
+  Comment: CCB시즌1 레인우드
+  Season: 1
+  Address: Rainwood
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_4
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_5
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_6
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_B
+  ShopMerchant: Merchant_HuntingZone_Owner_B
+- Id: 190
+  Name: HuntingZone_Group_Season_2_North_Varitan
+  Comment: CCB시즌2 바리탄 북부
+  Season: 2
+  Address: North_Varitan
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_1
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_2
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_3
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_1
+  ShopMerchant: Merchant_HuntingZone_Owner_1
+- Id: 51
+  Name: HuntingZone_Group_Season_2_Rainwood
+  Comment: CCB시즌2 레인우드
+  Season: 2
+  Address: Rainwood
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_4
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_5
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_6
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_2
+  ShopMerchant: Merchant_HuntingZone_Owner_2
+- Id: 397
+  Name: HuntingZone_Group_Season_3_North_Varitan
+  Comment: CCB시즌3 바리탄 북부
+  Season: 3
+  Address: North_Varitan
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_1
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_2
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_3
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_3
+  ShopMerchant: Merchant_HuntingZone_Owner_3
+- Id: 145
+  Name: HuntingZone_Group_Season_3_Rainwood
+  Comment: CCB시즌3 레인우드
+  Season: 3
+  Address: Rainwood
+  GoldBonusRate: 10
+  Group:
+    - HuntingZone: HuntingZone_Area_4
+      DistributionRate: 60
+      IsRepresentative: true
+    - HuntingZone: HuntingZone_Area_5
+      DistributionRate: 20
+    - HuntingZone: HuntingZone_Area_6
+      DistributionRate: 20
+  GroupShopMerchant: Merchant_HuntingZone_4
+  ShopMerchant: Merchant_HuntingZone_Owner_4

@@ -1,0 +1,3548 @@
+- Id: 1
+  Name: MainBuilding
+  Behavior:
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      Duration: 500
+      FOV: 50
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: CastSkill
+      Npc: Seongso_Statue_Main
+      Skill: ChangeTarget
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Main
+      Path: /Game/EffectActions/VAE_Etc_Teleport_Start.VAE_Etc_Teleport_Start
+    - Type: MoveTo
+      Npc: Seongso_Clear_NPC
+    - Type: StopEffect
+      Name: Building_Main_Effect
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+- Id: 2
+  Name: Tutorial_Craft
+  Comment: 제작
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Craft
+    - Type: FocusUI
+      Path: $CraftMainPopup$.Contents.BtnCraft
+    - Type: WaitUIOpen
+      Path: $CraftMainPopup$
+    - Type: WaitUIClose
+      Path: $CraftMainPopup$
+- Id: 3
+  Name: Tutorial_Collection
+  Comment: 수집
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Collection
+    - Type: WaitUIClose
+      Path: $Collection$
+- Id: 4
+  Name: Tutorial_Achievement
+  Comment: 업적+모두 받기
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Achievement
+    - Type: FocusUI
+      Path: $AchievementMain$.Contents.BtnGet
+    - Type: FocusUI
+      Path: $AchievementMain$.BtnExit
+    - Type: WaitUIClose
+      Path: $AchievementMain$
+- Id: 3612
+  Name: Tutorial_Skill
+  Comment: 스킬
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnSkill
+- Id: 3688
+  Name: Tutorial_QuickQuest
+  Behavior:
+    - Type: FocusUI
+      Path: $QuickQuest$.Contents.AcceptPanel
+- Id: 316
+  Name: Tutorial_BuildingSlot4
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Map.BuildingMarkSlot3.IconSwitcher
+- Id: 317
+  Name: Tutorial_BuildingSlot3
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Map.BuildingMarkSlot2.IconSwitcher
+- Id: 318
+  Name: Tutorial_BuildingSlot2
+  Comment: 골드 건물 지역 1
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Map.BuildingMarkSlot1
+      Dimmed: true
+- Id: 319
+  Name: Tutorial_BuildingSlot1
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Map.BuildingMarkSlot0.IconSwitcher
+- Id: 320
+  Name: Tutorial_UseFastItem
+  Comment: 가속권
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_UseFastItem
+- Id: 321
+  Name: Tutorial_Supply
+  Comment: 수확품
+  Behavior:
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.SupplyListView
+- Id: 323
+  Name: Tutorial_Polymorph
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Polymorph
+    - Type: WaitUIClose
+      Path: $PolymorphMain$
+- Id: 324
+  Name: Tutorial_WeaponPolymorph
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.WeaponPolymorph
+    - Type: WaitUIClose
+      Path: $PolymorphMain$
+- Id: 325
+  Name: Tutorial_FortressGroupManagePopup
+  Behavior:
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.ClosePanel
+- Id: 6
+  Name: Test_Build
+  Comment: 바로 건설 테스트
+  Behavior:
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Quick00
+- Id: 7
+  Name: Test_Complete
+  Comment: 수확 테스트
+  Behavior:
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.BuildComplete
+      Dimmed: false
+- Id: 8
+  Name: Test_Target
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Main
+      Skill: ChangeTarget
+- Id: 9
+  Name: Test_Auto
+  Comment: 오토
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.BtnAuto
+- Id: 10
+  Name: RotateCamera_PC
+  Comment: 플레이어 카메라 회전 테스트
+  Behavior:
+    - Type: RotateCamera
+      RotateCameraParameter:
+        OrbitRadius: 1200.0
+        OrbitSpeed: 60.0
+        CameraHeightOffset: 100.0
+        OrbitPitchAngle: -30.0
+      CameraBlend:
+        BlendFunc: EaseInOut
+        BlendExp: 2.0
+        BlendTime: 2.5
+      Duration: 8000
+    - Type: ResetCamera
+      CameraBlend:
+        BlendFunc: EaseOut
+        BlendExp: 1.0
+        BlendTime: 1.5
+- Id: 11
+  Name: RotateCamera_NPC
+  Comment: 바리탄 전초기지 병사 (지팡이) 회전 테스트
+  Behavior:
+    - Type: RotateCamera
+      Npc: Magic_SoldierStaff_05
+      RotateCameraParameter:
+        OrbitRadius: 1200.0
+        OrbitSpeed: 60.0
+        CameraHeightOffset: 100.0
+        OrbitPitchAngle: -30.0
+      CameraBlend:
+        BlendFunc: EaseInOut
+        BlendExp: 2.0
+        BlendTime: 2.5
+      Duration: 8000
+    - Type: ResetCamera
+      CameraBlend:
+        BlendFunc: EaseOut
+        BlendExp: 1.0
+        BlendTime: 1.5
+- Id: 5685
+  Name: Test_ScanTargetChangeAttack
+  Comment: "스캔, 타겟 변경, 일반 공격"
+  Behavior:
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.BtnScan
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.BtnPartyTarget
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.Attack
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.BtnAuto
+- Id: 1875
+  Name: Test_Merge
+  Comment: 합성
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Merge
+    - Type: WaitUIClose
+      Path: $Merge$
+- Id: 1552
+  Name: Test_BMshop
+  Comment: 대열 증축
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.EntranceBtn
+    - Type: FocusUI
+      Path: $MainHUD$.BtnShop
+- Id: 4176
+  Name: Test_Guild
+  Comment: 길드
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Guild
+    - Type: WaitUIClose
+      Path: $Guild$
+- Id: 4609
+  Name: Test_HuntingZone
+  Comment: 영토 관리
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.HuntingZone
+    - Type: WaitUIClose
+      Path: $HuntingZone$
+- Id: 801
+  Name: KLKL
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView
+- Id: 8822
+  Name: Seongso_Quest_01_01
+  Comment: 진격 이후 성소 스타트
+  Behavior:
+    - Type: FadeOut
+      Duration: 1500
+    - Type: CastSkill
+      Skill: Quest_Instance_Teleport_Fortress
+    - Type: ResetCamera
+    - Type: FadeIn
+      Duration: 1500
+    - Type: PlayMotion
+      MotionType: Spawn
+    - Type: HideNamePlate
+    - Type: Dialogue
+      Dialogue: Seongso_Quest_01_01_Dialogue
+    - Type: Wait
+      Duration: 2000
+    - Type: JumpMotion
+      MotionType: Spawn
+    - Type: CastSkill
+      Skill: Fortress_Daughter_Spawn_Skill
+    - Type: Wait
+      Duration: 8000
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -45
+        Y: 10
+      Duration: 1500
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      WorldSpaceRotation:
+        X: -45
+        Y: 30
+      Distance: -200
+      Duration: 2500
+    - Type: Wait
+      Duration: 5000
+    - Type: FadeOut
+    - Type: ResetCamera
+    - Type: FadeIn
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Seongso_Quest_01_02_Dialogue
+    - Type: MoveTo
+      Area: Main_Seongso_Center
+    - Type: Dialogue
+      Dialogue: Seongso_Quest_01_03_Dialogue
+    - Type: ShowNamePlate
+- Id: 14014
+  Name: Seongso_Quest_02_01
+  Comment: 대장 이후 유사세트 조우
+  Behavior:
+    - Type: CastSkill
+      Skill: Quest_Instance_Yusaset_Spawn01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusCamera
+      Npc: Fortress_Daughter
+      Duration: 1500
+      FOV: 35
+    - Type: Dialogue
+      Dialogue: Seongso_Quest_02_02_Dialogue
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeOut
+      Duration: 2000
+    - Type: ResetCamera
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Seongso_UserSpawn
+    - Type: FocusCamera
+      TargetLocation:
+        X: -797
+        Y: -1440
+      WorldSpaceRotation:
+        X: -45
+        Y: 20
+      Duration: 1500
+      FOV: 40
+    - Type: FadeIn
+      Duration: 1000
+    - Type: MoveTo
+      Area: Main_Seongso
+    - Type: Wait
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Seongso_Quest_02_03_Dialogue
+    - Type: ResetCamera
+      Duration: 1500
+- Id: 4236
+  Name: Tutorial_Quest_01_01
+  Comment: 튜토리얼 초반
+  Behavior:
+    - Type: PlayMotion
+      MotionType: Spawn
+    - Type: HideNamePlate
+    - Type: Wait
+      Duration: 2000
+    - Type: CastSkill
+      Skill: Fortress_Daughter_Spawn_Skill
+    - Type: FocusCamera
+      Npc: Tutorial_Daughter
+      Duration: 1000
+      FOV: 40
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_01_01_Dialogue
+    - Type: FocusCamera
+      Npc: Fortress_Ghost_NPC
+      Duration: 500
+      FOV: 40
+    - Type: JumpMotion
+      MotionType: Spawn
+    - Type: Wait
+      Duration: 11000
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 500
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Seongso
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Wait
+      Duration: 1000
+    - Type: ShowNamePlate
+- Id: 1478
+  Name: Tutorial_Quest_01_02
+  Comment: "성소 보여주기, 성좌 포커싱"
+  Behavior:
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -45
+        Y: 10
+      Duration: 1500
+    - Type: Wait
+      Duration: 500
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      WorldSpaceRotation:
+        X: -45
+        Y: 30
+      Distance: -200
+      Duration: 2500
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_01_02_Dialogue
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+- Id: 3473
+  Name: Tutorial_Quest_01_03
+  Comment: 성좌로 이동
+  Behavior:
+    - Type: MoveTo
+      Npc: Seongso_Clear_NPC
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 6859
+  Name: Tutorial_Quest_01_04
+  Comment: 성좌 재건
+  Behavior:
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Main
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Main
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 3011
+  Name: Story_Quest_01_00
+  Comment: 스토리 퀘스트 시작시 텔포
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Story_Start_Teleport
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: Wait
+      Duration: 2000
+    - Type: Dialogue
+      Dialogue: Main_CH01_08_dialogue_S
+    - Type: FadeOut
+      Duration: 1000
+    - Type: FocusCamera
+      TargetLocation:
+        X: 139
+        Y: 429
+      Duration: 2000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Wait
+      Duration: 5000
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 2000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 13880
+  Name: Story_Quest_01_00_01
+  Comment: 스토리 퀘스트 시작 시 연출(텔레포트 제외 버전)
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Main_CH01_08_dialogue_S
+    - Type: FadeOut
+      Duration: 1000
+    - Type: FocusCamera
+      TargetLocation:
+        X: 139
+        Y: 429
+      Duration: 2000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Wait
+      Duration: 5000
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 2000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 10181
+  Name: Story_Quest_01_00_02
+  Comment: 스토리 퀘스트 시작 시 연출(텔레포트 제외 버전)
+  Behavior:
+    - Type: ToggleQuestAutoMode
+- Id: 12592
+  Name: Story_Quest_01_03_01
+  Comment: 할리반 연설
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: CastSkill
+      Skill: AddProxy_Instance_NPC_Halivan_CliffofPurity
+    - Type: FocusCamera
+      Npc: Instance_NPC_Halivan_CliffofPurity
+      Duration: 1500
+      FOV: 35
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_CH01_07_dialogue_C
+    - Type: Dialogue
+      Dialogue: Main_CH01_07_dialogue_D
+    - Type: CastSkill
+      Skill: Quest_NPC_AddProperty
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 2000
+    - Type: CastSkill
+      Skill: RemoveAllProxy
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 10072
+  Name: Story_Quest_01_04_01
+  Comment: 하닐 해방
+  Behavior:
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_Hanil_Spawn01
+    - Type: FocusCamera
+      Npc: NPC_Hanil_01
+      FOV: 35
+    - Type: FadeIn
+      Duration: 500
+    - Type: Wait
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Main_CH01_10_dialogue_CC
+    - Type: Wait
+      Duration: 500
+    - Type: ResetCamera
+      Duration: 2000
+    - Type: ToggleQuestAutoMode
+- Id: 1089
+  Name: Story_Quest_01_05_02
+  Comment: 발타자르 입장
+  Behavior:
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanGeneral_Spawn01
+    - Type: FocusCamera
+      Npc: Quest_Boss_Range_VaritanGeneral
+      FOV: 35
+    - Type: FadeIn
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_CH01_11_dialogue_C
+    - Type: CastSkill
+      Skill: Quest_Instance_Balthazar_Spawn01
+    - Type: Wait
+      Duration: 3000
+    - Type: Dialogue
+      Dialogue: Main_CH01_11_dialogue_02
+    - Type: Wait
+      Duration: 1500
+    - Type: FocusCamera
+      Npc: Quest_NPC_Range_Balthazar
+      Duration: 1500
+      FOV: 35
+    - Type: Dialogue
+      Dialogue: Main_CH01_11_dialogue_03
+    - Type: ResetCamera
+      Duration: 2000
+    - Type: ToggleQuestAutoMode
+- Id: 691
+  Name: Tutorial_Quest_02_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 9409
+  Name: Tutorial_Quest_02_01
+  Comment: 숙련도 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_02_01_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 288
+  Name: Tutorial_Quest_03_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 2236
+  Name: Tutorial_Quest_03_01
+  Comment: 경험의 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Exp
+      Duration: 700
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_03_01_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Exp
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Exp
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Exp
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Exp
+      Duration: 400
+      FOV: 35
+    - Type: FocusUI
+      Npc: Seongso_Statue_Exp
+      Path: $NamePlateUI$.BuildComplete
+    - Type: Wait
+      Duration: 2500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 9573
+  Name: Tutorial_Quest_03_02
+  Comment: 경험의 성물 수확품 수거
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_03_03_Dialogue
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Exp
+      Duration: 700
+      FOV: 50
+    - Type: FocusUI
+      Npc: Seongso_Statue_Exp
+      Path: $NamePlateUI$.SupplyListView
+    - Type: ResetCamera
+      Duration: 700
+- Id: 5819
+  Name: Tutorial_Quest_03_03
+  Comment: 황금 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Gold
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_03_04_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Gold
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 4362
+  Name: Tutorial_Quest_03_04
+  Comment: 황금 성물 수확품 수거
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_03_05_Dialogue
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Gold
+      Duration: 700
+      FOV: 50
+    - Type: FocusUI
+      Npc: Seongso_Statue_Gold
+      Path: $NamePlateUI$.SupplyListView
+    - Type: ResetCamera
+      Duration: 700
+- Id: 7280
+  Name: Tutorial_Quest_04_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 4381
+  Name: Tutorial_Quest_04_01
+  Comment: 초월의 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_StatuePolymorph
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_04_05_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_StatuePolymorph
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_StatuePolymorph
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_StatuePolymorph
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 3961
+  Name: Tutorial_Quest_04_02
+  Comment: 초월의 성물 수확품 수거
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_04_07_Dialogue
+    - Type: FocusCamera
+      Npc: Seongso_StatuePolymorph
+      Duration: 700
+      FOV: 50
+    - Type: FocusUI
+      Npc: Seongso_StatuePolymorph
+      Path: $NamePlateUI$.SupplyListView
+    - Type: ResetCamera
+      Duration: 700
+- Id: 7230
+  Name: Tutorial_Quest_04_03
+  Comment: 외형의 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_StatueWeaponPolymorph
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_04_06_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_StatueWeaponPolymorph
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_StatueWeaponPolymorph
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_StatueWeaponPolymorph
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.CloseBtnPanel
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 5253
+  Name: Tutorial_Quest_04_04
+  Comment: 외형의 성물 수확품 수거
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_04_09_Dialogue
+    - Type: FocusCamera
+      Npc: Seongso_StatueWeaponPolymorph
+      Duration: 700
+      FOV: 50
+    - Type: FocusUI
+      Npc: Seongso_StatueWeaponPolymorph
+      Path: $NamePlateUI$.SupplyListView
+    - Type: ResetCamera
+      Duration: 700
+- Id: 7870
+  Name: Tutorial_Quest_05_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 265
+  Name: Tutorial_Quest_05_01
+  Comment: 철광석 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_05_03_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 492
+  Name: Tutorial_Quest_05_02
+  Comment: 나무 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 1500
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_05_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 5032
+  Name: Tutorial_Quest_06_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 1790
+  Name: Tutorial_Quest_06_01
+  Comment: 뼈 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_06_03_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 5301
+  Name: Tutorial_Quest_06_02
+  Comment: 모피 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 1500
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_06_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 93
+  Name: Tutorial_Quest_06_01_Fighter
+  Comment: (미사용)
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_06_01_Dialogue
+    - Type: FocusUI
+      Path: $MainHUD$.PlayerHUD.XGroupPanel_0
+    - Type: FocusUI
+      Path: $CharacterInfoPopup$.Contents.StatDetailBtn
+    - Type: AttentionUI
+      Path: $MainHUD$.StatInfo
+      Duration: 3000
+    - Type: FocusUI
+      Path: "$MainHUD$.StatInfo.Contents.StatList[0].Btn+"
+    - Type: FocusUI
+      Path: $MainHUD$.StatInfo.Contents.BtnDecision
+- Id: 5859
+  Name: Tutorial_Quest_06_01_Ranger
+  Comment: (미사용)
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_06_01_Dialogue
+    - Type: FocusUI
+      Path: $MainHUD$.PlayerHUD.XGroupPanel_0
+    - Type: FocusUI
+      Path: $CharacterInfoPopup$.Contents.StatDetailBtn
+    - Type: AttentionUI
+      Path: $MainHUD$.StatInfo
+      Duration: 3000
+    - Type: FocusUI
+      Path: "$MainHUD$.StatInfo.Contents.StatList[1].Btn+"
+    - Type: FocusUI
+      Path: $MainHUD$.StatInfo.Contents.BtnDecision
+- Id: 8113
+  Name: Tutorial_Quest_07_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 1235
+  Name: Tutorial_Quest_07_01
+  Comment: 성좌 증축
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Main
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Main
+      Skill: ChangeTarget
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_07_07_Dialogue
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_07_08_Dialogue
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.contents.RemainTimePanel
+      Duration: 2000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_UseFastItem
+      Duration: 2000
+    - Type: ResetCamera
+      Duration: 700
+    - Type: Wait
+      Duration: 3000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 4757
+  Name: Tutorial_Quest_07_02
+  Comment: (미사용) 뼈의 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_07_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 5649
+  Name: Tutorial_Quest_07_03
+  Comment: (미사용) 나무 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.contents.RemainTimePanel
+      Duration: 2700
+    - Type: Wait
+      Duration: 400
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.BtnClose
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 7617
+  Name: Tutorial_Quest_07_04
+  Comment: (미사용) 기초 전투 인스턴스 이동
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_07_02_Dialogue
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 1277
+  Name: Tutorial_Quest_07_05
+  Comment: (미사용) 지형 전투 가이드
+  Behavior:
+    - Type: MoveTo
+      Area: Tutorial_South_Var_GuardPost02
+    - Type: FadeOut
+      Duration: 1000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -97
+        Y: -177
+      FOV: 35
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_07_03_Dialogue
+    - Type: CastSkill
+      Skill: Tutorial_VaritanSoldierStaff_01_Sharing_Removal
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: MoveTo
+      Area: Tutorial_South_Var_GuardPost03
+    - Type: Wait
+      Duration: 1500
+    - Type: MoveTo
+      Area: Tutorial_South_Var_GuardPost04
+    - Type: Wait
+      Duration: 1500
+    - Type: ToggleQuestAutoMode
+- Id: 7454
+  Name: Tutorial_Quest_07_06
+  Comment: (미사용) 성소 복귀 가이드
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 4840
+  Name: Tutorial_Quest_07_07
+  Comment: (미사용) 모피 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.contents.RemainTimePanel
+      Duration: 2700
+    - Type: Wait
+      Duration: 400
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.BtnClose
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 2907
+  Name: Tutorial_Quest_08_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 3478
+  Name: Tutorial_Quest_08_01
+  Comment: 경험치 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Exp
+      Duration: 700
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Exp
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_08_05_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Exp
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 4287
+  Name: Tutorial_Quest_08_02
+  Comment: (미사용) 숙련도 성물 재건 실패
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_08_02_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.OptionListView
+      Duration: 3000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      Duration: 3000
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.BtnClose
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_08_03_Dialogue
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 449
+  Name: Tutorial_Quest_09_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 3466
+  Name: Tutorial_Quest_09_01
+  Comment: 모피 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_09_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 2480
+  Name: Tutorial_Quest_09_02
+  Comment: (미사용) 샤를레 연출
+  Behavior:
+    - Type: FocusCamera
+      TargetLocation:
+        X: -489
+        Y: 373
+      LocalSpaceRotation:
+        X: 15
+        Y: 0
+      Distance: 1500
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -489
+        Y: 373
+      LocalSpaceRotation:
+        X: -15
+        Y: 0
+      Distance: 1500
+      Duration: 2000
+    - Type: ResetCamera
+      Distance: 1500
+      Duration: 3000
+    - Type: ToggleQuestAutoMode
+- Id: 1857
+  Name: Tutorial_Quest_09_03
+  Comment: (미사용) 성소 복귀 가이드
+  Behavior:
+    - Type: Wait
+      Duration: 5000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 1512
+  Name: Tutorial_Quest_10_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 3913
+  Name: Tutorial_Quest_10_01
+  Comment: 뼈 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_10_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 6702
+  Name: Tutorial_Quest_10_02
+  Comment: (미사용) 숙련도 성물 재건
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Awareness
+      Duration: 500
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_10_02_Dialogue
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Awareness
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: CastSkill
+      Npc: Seongso_Statue_Awareness
+      Skill: ChangeTarget
+    - Type: FocusUI
+      Npc: Seongso_Statue_Awareness
+      Path: $NamePlateUI$.Action_Manage
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Build00
+      CheckPointGoal: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.contents.RemainTimePanel
+      Duration: 2700
+    - Type: Wait
+      Duration: 400
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Complete
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.BtnClose
+    - Type: ResetCamera
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 5567
+  Name: Tutorial_Quest_11_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 7674
+  Name: Tutorial_Quest_11_01
+  Comment: 시간의 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_DungeonItem
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_DungeonItem
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_11_04_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_DungeonItem
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 6550
+  Name: Tutorial_Quest_12_00
+  Comment: 성소 복귀
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+- Id: 683
+  Name: Tutorial_Quest_12_01
+  Comment: 황금 성물 포커싱
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Gold
+      Duration: 500
+      FOV: 50
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: Seongso_Statue_Gold
+      Path: /Game/EffectActions/VAE_BG_Sanctum_Pick_A001.VAE_BG_Sanctum_Pick_A001
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_12_03_Dialogue
+    - Type: CastSkill
+      Npc: Seongso_Statue_Gold
+      Skill: ChangeTarget
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 700
+    - Type: StopEffect
+      Name: Building_Main_Effect
+- Id: 1874
+  Name: Tutorial_Quest_13_01
+  Comment: (미사용) 길드 가이드
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_13_01_Dialogue
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_13_02_Dialogue
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+    - Type: FocusUI
+      Path: $Menu$.Guild
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_13_03_Dialogue
+- Id: 1494
+  Name: Tutorial_Quest_14_01
+  Comment: (미사용) 형제단 요새로 이동
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 2000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_14_01_Dialogue
+    - Type: FocusUI
+      Path: $MainHUD$.BtnQuickQuest
+    - Type: Wait
+      Duration: 1000
+- Id: 7042
+  Name: Main_Quest_01_05
+  Comment: 형제단 요새로 이동(+연출)
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Var_South_Town_Faceless_Brotherhood_Fortress_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 2740
+  Name: Main_Quest_03_01
+  Comment: 형제단 요새로 이동
+  Behavior:
+    - Type: Wait
+      Duration: 3000
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView.BtnTeleport
+    - Type: FocusUI
+      Path: $QuestTeleportPopup$.Contents.ButtonIn01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.Etc.BtnFortress
+- Id: 2192
+  Name: Inventory
+  Comment: 인벤토리
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtInventory
+      Dimmed: true
+- Id: 2239
+  Name: TestGuide
+  Comment: 가이드
+  Behavior:
+    - Type: OpenGuide
+      Guide: KeyboardGuide
+- Id: 936
+  Name: Instance_Halivan_01
+  Comment: 할리반 인스턴스 시퀀스 01
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Melee_ShroomSoldier_01_Spawn
+    - Type: CastSkill
+      Skill: AddProxy_Instance_Monster_South_Var_Halivan_Sequence02_01
+    - Type: FocusCamera
+      TargetLocation:
+        X: -65
+        Y: 308
+      FOV: 35
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Main_CH02_32_03_dialogue
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_CH02_32_03_Dialogue_Narrative
+    - Type: CastSkill
+      Skill: RemoveAllProxy
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: MoveTo
+      Area: Main_CH02_18_16
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 1183
+  Name: Instance_Halivan_02
+  Comment: 할리반 인스턴스 시퀀스 02
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: BossSkill_BishopHalivan_Summon
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: AddProxy_Instance_Boss_South_Var_Halivan_01
+    - Type: FocusCamera
+      TargetLocation:
+        X: -56
+        Y: 335
+      FOV: 35
+    - Type: FadeIn
+      Duration: 600
+    - Type: Dialogue
+      Dialogue: Main_CH02_35_01_dialogue
+    - Type: HideAllUI
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: CastSkill
+      Skill: RemoveAllProxy
+    - Type: MoveTo
+      Area: Main_CH02_18_17
+    - Type: EnableInput
+    - Type: ShowAllUI
+    - Type: ToggleQuestAutoMode
+- Id: 8459
+  Name: Instance_Halivan_Wave_01_02
+  Comment: 할리반 인스턴스 웨이브 01
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Halivan_Wave01_01
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 16440
+  Name: Instance_Halivan_Wave_Spawn
+  Comment: 할리반 인스턴스 웨이브 02 스타트
+  Behavior:
+    - Type: CastSkill
+      Skill: Quest_Instance_Halivan_Wave03_Start
+    - Type: ToggleQuestAutoMode
+- Id: 7708
+  Name: Instance_Enkidu_Spawn_01
+  Comment: 엔키두 스폰
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Enkidu_Instance_Spawn
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 3748
+  Name: Instance_Halivan_Phase02
+  Comment: 할리반 2페이즈
+  Behavior:
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 500
+    - Type: MoveTo
+      Area: Main_CH02_18_18
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: CastSkill
+      Skill: BossSkill_BishopHalivan_Phase02_Summon
+    - Type: FocusCamera
+      Npc: Quest_Boss_Melee_BishopHalivan_Phase02
+      FOV: 45
+    - Type: FadeIn
+      Duration: 600
+    - Type: Dialogue
+      Dialogue: Main_CH02_35_02_dialogue
+    - Type: Wait
+      Duration: 7800
+    - Type: ResetCamera
+      Duration: 300
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 11572
+  Name: Instance_Halivan_Death
+  Comment: 할리반 사망
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: Dialogue
+      Dialogue: Main_CH02_36_02_dialogue
+    - Type: Wait
+      Duration: 1500
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 1329
+  Name: Instance_Fade01
+  Comment: 인스턴스용 페이드아웃 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 1000
+- Id: 5271
+  Name: Instance_Fade02
+  Comment: 인스턴스용 페이드인 시퀀스
+  Behavior:
+    - Type: FadeIn
+      Duration: 1000
+- Id: 2730
+  Name: Instance_Enter_Halivan
+  Comment: 할리반 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: HideAllUI
+    - Type: MoveTo
+      Area: Main_CH02_18_06
+    - Type: Wait
+      Duration: 3000
+    - Type: ShowAllUI
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 3309
+  Name: Instance_Exit_Halivan
+  Comment: 할리반 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Halivan_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 3061
+  Name: Instance_Entrance_BloodShed
+  Comment: 블러드쉐드 인스턴스용 입구 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_TeleportSelf_Entrance
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 1065
+  Name: Instance_Enter_BloodShed
+  Comment: 블러드쉐드 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 4864
+  Name: Instance_Exit_BloodShed
+  Comment: 블러드쉐드 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 3896
+  Name: Instance_BloodShed_Wave_01
+  Comment: 블러드쉐드 인스턴스 웨이브 01
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_WaveChecker01
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1262
+        Y: -1779
+      Duration: 500
+      FOV: 50
+    - Type: Wait
+      Duration: 2500
+    - Type: ResetCamera
+      Duration: 500
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 4068
+  Name: Instance_BloodShed_Sequence_01
+  Comment: 블러드쉐드 인스턴스 시퀀스 01
+  Behavior:
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Deco01
+    - Type: FadeIn
+      Duration: 500
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: Wait
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1262
+        Y: -1805
+      Duration: 5000
+    - Type: Dialogue
+      Dialogue: Main_CH02_60_01_dialogue
+    - Type: ResetCamera
+      Duration: 3000
+    - Type: CastSkill
+      Skill: Tutorial_VaritanSoldierStaff_01_Sharing_Removal
+    - Type: MoveTo
+      Area: Main_CH02_36_1
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 6551
+  Name: Instance_BloodShed_Sequence_02
+  Comment: 블러드쉐드 인스턴스 시퀀스 02
+  Behavior:
+    - Type: DisableInput
+    - Type: MoveTo
+      Duration: 500
+    - Type: FocusCamera
+      Npc: Quest_Boss_Melee_BloodshedElf_01
+      Duration: 500
+      FOV: 45
+    - Type: Dialogue
+      Dialogue: Main_CH02_32_03_dialogue
+    - Type: Dialogue
+      Dialogue: Main_CH02_32_03_Dialogue_Narrative
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 1237
+  Name: Instance_BloodShed_Sequence_03
+  Comment: 블러드쉐드 인스턴스 시퀀스 03
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Walltop01
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1227
+        Y: -1784
+      FOV: 35
+    - Type: FadeIn
+      Duration: 500
+    - Type: Wait
+      Duration: 1000
+    - Type: EnableInput
+    - Type: Dialogue
+      Dialogue: Quest_BloodShed_Dialogue_Guide_01_01
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Tutorial_VaritanSoldierStaff_01_Sharing_Removal
+    - Type: ToggleQuestAutoMode
+- Id: 3908
+  Name: Instance_BloodShed_Sequence_04
+  Comment: 블러드쉐드 인스턴스 시퀀스 04
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: Dialogue
+      Dialogue: Main_CH02_59_04_dialogue
+    - Type: FadeOut
+      Duration: 800
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1235
+        Y: -1810
+      Duration: 1000
+      FOV: 45
+    - Type: FadeIn
+      Duration: 800
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Boss_Spawn
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_CH02_59_06_dialogue
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: MoveTo
+      Area: Main_CH02_36_6
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 2137
+  Name: Instance_BloodShed_Sequence_05
+  Comment: 블러드쉐드 인스턴스 시퀀스 05
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Quest_BloodShed_Dialogue_Guide_02_01
+    - Type: ToggleQuestAutoMode
+- Id: 1595
+  Name: Instance_BloodShed_Sequence_06
+  Comment: 블러드쉐드 인스턴스 시퀀스 06
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: Dialogue
+      Dialogue: Main_CH02_59_05_dialogue
+    - Type: Wait
+      Duration: 1500
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 9275
+  Name: Instance_BloodShed_Spawn01
+  Comment: 블러드쉐드 인스턴스 스폰 01
+  Behavior:
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Spawn01
+    - Type: ToggleQuestAutoMode
+- Id: 3935
+  Name: Instance_BloodShed_Spawn02
+  Comment: 블러드쉐드 인스턴스 스폰 02
+  Behavior:
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Spawn02
+    - Type: ToggleQuestAutoMode
+- Id: 6677
+  Name: Instance_BloodShed_Spawn03
+  Comment: 블러드쉐드 인스턴스 스폰 03
+  Behavior:
+    - Type: CastSkill
+      Skill: Quest_Instance_BloodShed_Spawn03
+    - Type: ToggleQuestAutoMode
+- Id: 7152
+  Name: Instance_Enter_Helgus
+  Comment: 헬거스 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Helgus_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 7445
+  Name: Instance_Spawn_Helgus
+  Comment: 헬거스 스폰 스킬
+  Behavior:
+    - Type: CastSkill
+      Skill: Helgus_Instance_Spawn
+    - Type: ToggleQuestAutoMode
+- Id: 5582
+  Name: Instance_Exit_Helgus
+  Comment: 헬거스 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Helgus_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 9417
+  Name: Instance_Enter_Christina
+  Comment: 크리스티나 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Christina_TeleportSelf_Enter
+    - Type: FocusCamera
+      TargetLocation:
+        X: -142
+        Y: 90
+      FOV: 35
+    - Type: FadeIn
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Main_CH03_45_01_dialogue
+    - Type: Dialogue
+      Dialogue: Main_CH03_45_03_dialogue
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 1500
+    - Type: ToggleQuestAutoMode
+- Id: 937
+  Name: Instance_Exit_Christina
+  Comment: 크리스티나 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Christina_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 7736
+  Name: Instance_Enter_Charle
+  Comment: 샤를레 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Charle_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 10153
+  Name: Instance_Exit_Charle
+  Comment: 샤를레 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Charle_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 10635
+  Name: Instance_Enter_KnightCommander
+  Comment: 성서기사단장 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_KnightCommander_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 8536
+  Name: Instance_Exit_KnightCommander
+  Comment: 성서기사단장 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_KnightCommander_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+- Id: 5620
+  Name: Instance_Enter_Touren
+  Comment: 토우렌 자매 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Touren_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 6258
+  Name: Instance_Exit_Touren
+  Comment: 토우렌 자매 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Touren_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 4618
+  Name: Instance_Enter_Arkhandar
+  Comment: 아르칸다르 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Arkhandar_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 6898
+  Name: Instance_Sequence_Arkhandar
+  Comment: 아르칸다르 인스턴스용 스폰 시퀀스
+  Behavior:
+    - Type: CastSkill
+      Skill: Arkhandar_Instance_Spawn
+    - Type: Dialogue
+      Dialogue: Main_CH07_23_01_dialogue
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 3671
+  Name: Instance_Exit_Arkhandar
+  Comment: 아르칸다르 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Arkhandar_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 8047
+  Name: Instance_Enter_Enkidu
+  Comment: 엔키두 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Enkidu_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 5605
+  Name: Instance_Exit_Enkidu
+  Comment: 엔키두 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Enkidu_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 4008
+  Name: Instance_Enter_Ogre
+  Comment: 하락말록 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Ogre_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 9133
+  Name: Instance_Exit_Ogre
+  Comment: 하락말록 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Ogre_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 6422
+  Name: Instance_Enter_Andarun
+  Comment: 안다룬 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Andarun_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 10098
+  Name: Instance_Exit_Andarun
+  Comment: 안다룬 인스턴스용 진입 시퀀스
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Andarun_TeleportSelf_Exit
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleAutoCombat
+- Id: 1049
+  Name: Instance_Sequence_GoldenValley01
+  Comment: 황금 계곡 인스턴스용 스폰 시퀀스
+  Behavior:
+    - Type: CastSkill
+      Skill: BossSkill_GoldenValley_Summon
+    - Type: ToggleQuestAutoMode
+- Id: 3323
+  Name: TutorialSpawnMotion
+  Comment: TutorialSpawnMotion
+  Behavior:
+    - Type: PlayMotion
+      MotionType: Spawn
+      Duration: 3000
+    - Type: JumpMotion
+      MotionType: Spawn
+- Id: 9321
+  Name: Test_Fighter
+  Behavior:
+    - Type: FadeOut
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+- Id: 9421
+  Name: Test_Ranger
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+    - Type: FadeOut
+      Duration: 500
+    - Type: FadeIn
+      Duration: 500
+- Id: 9721
+  Name: Class_Behavior
+  ByClass:
+    - Class: Fighter
+      Behavior: Test_Fighter
+    - Class: Ranger
+      Behavior: Test_Ranger
+- Id: 3310
+  Name: Test_Camera
+  Comment: 카메라 기능 테스트 1
+  Behavior:
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      LocalSpaceRotation:
+        X: 0
+        Y: 15
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Distance: -1500
+      Duration: 1000
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+- Id: 3321
+  Name: Test_Camera1
+  Comment: 카메라 기능 테스트 2
+  Behavior:
+    - Type: FocusCamera
+      TargetLocation:
+        X: 8
+        Y: 234
+      WorldSpaceRotation:
+        X: 45
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -3
+        Y: 224
+      WorldSpaceRotation:
+        X: 90
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -13
+        Y: 236
+      WorldSpaceRotation:
+        X: -45
+        Y: 0
+      Duration: 2000
+    - Type: ResetCamera
+      Duration: 1000
+- Id: 9287
+  Name: Instance_Charle_Sequence_01
+  Comment: 샤를레 스폰 연출
+  Behavior:
+    - Type: MoveTo
+      Area: BossSpawn_Tutorial_Charle_ClearNPC_01
+    - Type: Dialogue
+      Dialogue: Main_CH04_19_02_dialogue
+    - Type: CastSkill
+      Skill: TutorialBoss_Charle_Spawn
+    - Type: FocusCamera
+      TargetLocation:
+        X: -489
+        Y: 373
+      LocalSpaceRotation:
+        X: 15
+        Y: 0
+      Distance: 1500
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -489
+        Y: 373
+      LocalSpaceRotation:
+        X: -15
+        Y: 0
+      Distance: 1500
+      Duration: 2000
+    - Type: ResetCamera
+      Distance: 1500
+      Duration: 3000
+    - Type: ToggleQuestAutoMode
+- Id: 6165
+  Name: Instance_Charle_Sequence_02
+  Comment: 샤를레 사망 연출
+  Behavior:
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FocusCamera
+      TargetLocation:
+        X: -489
+        Y: 369
+      WorldSpaceRotation:
+        X: 0
+        Y: 5
+      Duration: 1000
+      FOV: 50
+    - Type: Dialogue
+      Dialogue: Main_CH04_19_03_dialogue
+    - Type: Wait
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -493
+        Y: 372
+      LocalSpaceRotation:
+        X: 0
+        Y: 10
+      WorldSpaceRotation:
+        X: 0
+        Y: 10
+      Distance: 100
+      Duration: 1500
+      FOV: 50
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_Iza_Spawn01
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 2229
+  Name: Instance_Enter_Iza
+  Comment: 이즈아 인스턴스용 진입 시퀀스 2회차
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Charle_TeleportSelf_Enter
+    - Type: Wait
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_Iza_Spawn01
+    - Type: FadeIn
+      Duration: 500
+    - Type: ToggleQuestAutoMode
+- Id: 5047
+  Name: Instance_Christina_01
+  Comment: 크리스티나 인스턴스 시퀀스 01
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -142
+        Y: 90
+      FOV: 35
+    - Type: FadeIn
+      Duration: 500
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 1772
+  Name: Instance_Helgus_01
+  Comment: 헬거스 인스턴스 시퀀스 01
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: 29
+        Y: -51
+      FOV: 40
+    - Type: FadeIn
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Main_CH03_23_01_dialogue
+    - Type: MoveTo
+      Area: Main_CH03_26_2
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 5882
+  Name: Instance_Touren_Sequence
+  Comment: 토우렌 자매 인스턴스 시퀀스
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Main_CH06_47_01_dialogue
+    - Type: ToggleQuestAutoMode
+- Id: 12395
+  Name: Main_Tuotorial_01_01
+  Comment: 공격 가이드
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_01_dialogue_01
+    - Type: FocusCamera
+      Npc: Tutorial_Melee_VaritanGuardianOnehand_01
+      Duration: 1500
+      FOV: 40
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.BtnPartyTarget
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Target_Button
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 1500
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.Attack
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Atk_Button
+- Id: 997
+  Name: Main_Tuotorial_01_02
+  Comment: 하닐에게 이동 가이드
+  Behavior:
+    - Type: ToggleQuestAutoMode
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_01_dialogue_05
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Quest_Button
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_01_dialogue_04
+    - Type: MoveTo
+      Area: Main_Tutorial_01_03
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_01_dialogue_06
+- Id: 1593
+  Name: Main_Tuotorial_01_03
+  Comment: 나무 계곡으로 텔레포트
+  Behavior:
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_TreeValley_TeleportSelf_Enter
+    - Type: FadeIn
+      Duration: 2000
+- Id: 10813
+  Name: Main_Tuotorial_02_01
+  Comment: 분노한 늑대인간 처치
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_01
+      FOV: 40
+    - Type: FocusCamera
+      Npc: Tutorial_Melee_RagingWereWolf_02
+      Duration: 1500
+      FOV: 40
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_02
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_03
+    - Type: ResetCamera
+      Duration: 1500
+- Id: 9324
+  Name: Main_Tuotorial_02_02
+  Comment: "하울 포커싱 & 하울에게 이동"
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_04
+    - Type: MoveTo
+      Area: Main_Tutorial_02_03
+    - Type: FadeOut
+    - Type: FadeIn
+      Duration: 1500
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_05
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 7348
+  Name: Main_Tuotorial_02_03
+  Comment: 바리탄 성채로 텔레포트
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_02_dialogue_06
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Enter
+    - Type: FadeIn
+      Duration: 2000
+- Id: 4035
+  Name: Main_Tuotorial_03_01
+  Comment: 바리탄 성채 중앙 포커싱
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      LocalSpaceRotation:
+        X: 15
+        Y: 0
+      FOV: 65
+    - Type: FadeIn
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      Duration: 2000
+      FOV: 65
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      LocalSpaceRotation:
+        X: -15
+        Y: 0
+      Duration: 3000
+      FOV: 65
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_03_dialogue_02
+    - Type: ToggleQuestAutoMode
+- Id: 9307
+  Name: Main_Tuotorial_04_01
+  Comment: 대주교 등장 연출
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_06
+    - Type: FocusCamera
+      TargetLocation:
+        X: -473
+        Y: 773
+      FOV: 30
+    - Type: FadeIn
+      Duration: 600
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_04_dialogue_02
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+    - Type: PlaySequence
+      Duration: 1000
+      Sequence: QuestCutScene02
+    - Type: FadeOut
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_08
+    - Type: ResetCamera
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 600
+    - Type: ToggleQuestAutoMode
+- Id: 451
+  Name: Main_Tuotorial_05_01
+  Comment: 차원체 소환
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_06
+    - Type: FocusCamera
+      TargetLocation:
+        X: -473
+        Y: 773
+      FOV: 30
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 600
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_05_dialogue_01
+    - Type: CastSkill
+      Skill: Tutorial_NPC_VaritanHighBishop_01_Add_BuffSkill
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_09
+    - Type: Wait
+      Duration: 10000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -484
+        Y: 773
+      Duration: 1500
+      FOV: 30
+    - Type: Wait
+      Duration: 1500
+    - Type: ResetCamera
+      Duration: 1000
+- Id: 8632
+  Name: Main_Tuotorial_05_03
+  Comment: 지원군 등장 연출
+  Behavior:
+    - Type: FadeOut
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_02
+    - Type: FocusCamera
+      TargetLocation:
+        X: -534
+        Y: 736
+      LocalSpaceRotation:
+        X: 0
+        Y: 5
+      FOV: 15
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_05_dialogue_03
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+    - Type: PlaySequence
+      Sequence: QuestCutScene05
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_04
+    - Type: FocusCamera
+      TargetLocation:
+        X: -523
+        Y: 843
+      LocalSpaceRotation:
+        X: -5
+        Y: 5
+      FOV: 20
+    - Type: Wait
+      Duration: 500
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Wait
+      Duration: 500
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_05_dialogue_04
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+    - Type: PlaySequence
+      Sequence: QuestCutScene03
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_03
+    - Type: FocusCamera
+      TargetLocation:
+        X: -576
+        Y: 757
+      LocalSpaceRotation:
+        X: -5
+        Y: 5
+      FOV: 30
+    - Type: Wait
+      Duration: 300
+    - Type: FadeIn
+      Duration: 600
+    - Type: Dialogue
+      Dialogue: Main_Tutorial_05_dialogue_05
+    - Type: Wait
+      Duration: 500
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+    - Type: HideTagNPC
+      VisibleNpcGroup: 1
+    - Type: PlaySequence
+      Sequence: QuestCutScene04
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+    - Type: FadeIn
+      Duration: 1000
+- Id: 16225
+  Name: Main_Tuotorial_05_04
+  Comment: 대립구도 연출
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      LocalSpaceRotation:
+        X: 0
+        Y: -15
+      FOV: 65
+    - Type: FadeIn
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      Duration: 2000
+      FOV: 65
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 800
+      LocalSpaceRotation:
+        X: 0
+        Y: 15
+      Duration: 3000
+      FOV: 65
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+- Id: 6549
+  Name: Main_Tuotorial_06_01
+  Comment: 제누스 소환
+  Behavior:
+    - Type: FadeOut
+      Duration: 500
+    - Type: CastSkill
+      Skill: Quest_Instance_VaritanCastle_TeleportSelf_Sequence_07
+    - Type: FocusCamera
+      TargetLocation:
+        X: -531
+        Y: 801
+      FOV: 30
+    - Type: Wait
+    - Type: FadeIn
+      Duration: 500
+    - Type: Wait
+      Duration: 500
+- Id: 13320
+  Name: Test_Tutorial_ToolTip
+  Comment: 튜토리얼 툴팁 테스트
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.BtnMenu
+      Tooltip:
+        SubDescription: UIWord_SystemMsg_TradePrivate_CanNotRegisterUnlockChar
+- Id: 10961
+  Name: Test_Tutorial_Dialogue
+  Comment: 튜토리얼 다이얼로그 테스트
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+- Id: 16123
+  Name: Test_Tutorial_Dialogue_Trade
+  Comment: 거래소 최초 접근 테스트
+  StartCondition: Trade_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+- Id: 14756
+  Name: Test_Tutorial_BossSequence
+  Comment: 튜토리얼 보스 소개 테스트
+  Behavior:
+    - Type: WorldMapMove
+      TargetLocation:
+        X: 250
+        Y: -125
+      WorldMapMoveSpeed: 2
+    - Type: ZoomInWorldMap
+      ZoomSpeed: 1
+    - Type: ShowBossUIInWorldMap
+      Path: $WorldMap$.Contents.BossInfo
+      BossInfos:
+        LocationName: Address_Arkhandar_Order
+        BossName: Que_Speaker_Arkandar
+        BossDesc: Main_CH07_05_Title
+    - Type: Wait
+      Duration: 2000
+    - Type: HideBossUIInWorldMap
+      Path: $WorldMap$.Contents.BossInfo
+    - Type: ZoomOutWorldMap
+      ZoomSpeed: 10
+- Id: 6379
+  Name: Test_Tutorial_Sequence
+  Comment: 튜토리얼 시퀀스 테스트
+  Behavior:
+    - Type: PlaySequence
+      Sequence: Opening
+- Id: 6380
+  Name: Test_Tutorial_SubLevelSequence
+  Comment: 튜토리얼 서브 레벨 시퀀스 테스트
+  Behavior:
+    - Type: PlaySubLevelSequence
+      Sequence: QuestCutSceneTest
+- Id: 6381
+  Name: Test_Tutorial_Possessable_Sequence
+  Comment: 튜토리얼 Possessable 시퀀스 테스트
+  Behavior:
+    - Type: PlaySequence
+      Sequence: QuestCutSceneTest
+- Id: 10999
+  Name: Test_Tutorial_HideNPC1
+  Comment: 튜토리얼 NPC 숨기기 기능 테스트(1그룹 숨기기)
+  Behavior:
+    - Type: HideTagNPC
+      VisibleNpcGroup: 1
+    - Type: Wait
+      Duration: 3000
+- Id: 7696
+  Name: Test_Tutorial_HideNPC2
+  Comment: 튜토리얼 NPC 숨기기 기능 테스트(2그룹 숨기기)
+  Behavior:
+    - Type: HideTagNPC
+      VisibleNpcGroup: 2
+    - Type: Wait
+      Duration: 3000
+- Id: 12101
+  Name: Test_Tutorial_RevealNPC1
+  Comment: 튜토리얼 NPC 보이기 기능 테스트(1그룹 보이기)
+  Behavior:
+    - Type: RevealTagNPC
+      VisibleNpcGroup: 1
+    - Type: Wait
+      Duration: 3000
+- Id: 14601
+  Name: Test_Tutorial_RevealNPC2
+  Comment: 튜토리얼 NPC 보이기 기능 테스트(2그룹 보이기)
+  Behavior:
+    - Type: RevealTagNPC
+      VisibleNpcGroup: 2
+    - Type: Wait
+      Duration: 3000
+- Id: 9190
+  Name: Test_Tutorial_Sequence1
+  Comment: 튜토리얼 시퀀스 테스트1
+  Behavior:
+    - Type: FadeOut
+    - Type: PlaySequence
+      Duration: 1000
+      Sequence: QuestCutScene01
+- Id: 7516
+  Name: Test_Tutorial_Sequence2
+  Comment: 튜토리얼 시퀀스 테스트2
+  Behavior:
+    - Type: PlaySequence
+      Sequence: QuestCutScene02
+- Id: 162
+  Name: Test_Tutorial_Sequence3
+  Comment: 튜토리얼 시퀀스 테스트3_남쪽 지원군
+  Behavior:
+    - Type: FadeOut
+    - Type: PlaySequence
+      Duration: 1000
+      Sequence: QuestCutScene03
+- Id: 14185
+  Name: Test_Tutorial_Sequence4
+  Comment: 튜토리얼 시퀀스 테스트4_서쪽 지원군
+  Behavior:
+    - Type: PlaySequence
+      Sequence: QuestCutScene04
+- Id: 6751
+  Name: Test_Tutorial_Sequence5
+  Comment: 튜토리얼 시퀀스 테스트5_북쪽 지원군
+  Behavior:
+    - Type: PlaySequence
+      Sequence: QuestCutScene05
+- Id: 7359
+  Name: Tutorial_Fortress_01_01
+  Comment: 성좌 재건 튜토리얼
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+- Id: 14121
+  Name: Tutorial_Fortress_Test_01
+  Comment: 성소 전체 모습(외형 성물 강조) 카메라 테스트
+  Behavior:
+    - Type: HideTagNPC
+      VisibleNpcGroup: 1
+    - Type: FocusCamera
+      Npc: Seongso_StatueWeaponPolymorph
+      WorldSpaceRotation:
+        X: 20
+        Y: 20
+      Duration: 1500
+      FOV: 70
+    - Type: Wait
+      Duration: 10000
+    - Type: ResetCamera
+      Duration: 1500
+- Id: 15261
+  Name: Story_Quest_01_01
+  Comment: 성소에서 깨어남
+  Behavior:
+    - Type: DisableInput
+    - Type: PlayMotion
+      MotionType: Spawn
+    - Type: CastSkill
+      Skill: Fortress_Daughter_Spawn_Skill
+    - Type: Wait
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_01_01_Dialogue
+    - Type: HideAllUI
+    - Type: FocusCamera
+      Npc: Fortress_Ghost_NPC
+      Duration: 1500
+      FOV: 40
+    - Type: JumpMotion
+      MotionType: Spawn
+    - Type: Wait
+      Duration: 11000
+    - Type: FadeOut
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 500
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Seongso
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1000
+- Id: 8092
+  Name: Story_Quest_01_02
+  Comment: 성소 중앙으로 이동
+  Behavior:
+    - Type: MoveTo
+      Area: Main_Seongso
+    - Type: FocusCamera
+      TargetLocation:
+        X: -797
+        Y: -1440
+      WorldSpaceRotation:
+        X: -45
+        Y: 20
+      Duration: 1500
+      FOV: 40
+    - Type: Wait
+      Duration: 1500
+    - Type: ShowAllUI
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_01_03_Dialogue
+    - Type: EnableInput
+- Id: 11830
+  Name: Story_Quest_01_02_Test
+  Comment: 성소 강조 테스트
+  Behavior:
+    - Type: FocusCamera
+      TargetLocation:
+        X: -797
+        Y: -1440
+      WorldSpaceRotation:
+        X: -45
+        Y: 20
+      Duration: 1500
+      FOV: 40
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 500
+- Id: 12252
+  Name: Story_Quest_01_03_Test
+  Comment: 성소 강조 테스트
+  Behavior:
+    - Type: MoveTo
+      Area: Main_Seongso
+    - Type: FocusCamera
+      Npc: Seongso_Statue_Main
+      WorldSpaceRotation:
+        X: -45
+        Y: 35
+      Duration: 1500
+      FOV: 30
+    - Type: Wait
+      Duration: 1500
+    - Type: Dialogue
+      Dialogue: Tutorial_Quest_01_01_Dialogue
+- Id: 4038
+  Name: Story_Quest_01_03
+  Comment: 말레우스 순례길 텔레포트
+  Behavior:
+    - Type: FadeOut
+      Duration: 2000
+    - Type: ResetCamera
+    - Type: CastSkill
+      Skill: Quest_Story_Start_Teleport
+    - Type: FadeIn
+      Duration: 2000
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 2176
+  Name: Tutorial_Mastery_01
+  Comment: 숙련도 튜토리얼
+  StartCondition: Mastery_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Mastery_Dialogue_01
+- Id: 16020
+  Name: Tutorial_Awakening_01
+  Comment: 각성의 불꽃
+  StartCondition: FlameAwakening_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Awakening_Dialogue_01
+    - Type: FocusUI
+      Name: 공격 각성 메뉴
+      Path: "$Awakening$.Contents.ContentsLI.LISwitcher.CategoryListView[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_01
+    - Type: FocusUI
+      Name: 첫 번째 스탯 항목
+      Path: "$Awakening$.Contents.ContentsLI.LISwitcher.CategoryListView[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_02
+    - Type: AttentionUI
+      Name: 레벨 상승에 따른 획득 효과
+      Path: $Awakening$.Contents.ContentsLI.LISwitcher.StatInfo_Switcher.StatEffectPanel
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_03
+- Id: 11743
+  Name: Tutorial_Awareness_01
+  Comment: 자각의 불꽃
+  StartCondition: FirstClickFlameAbsorptionFirst_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+    - Type: AttentionUI
+      Name: 현재 단계
+      Path: $Awareness$.Default
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 상승할 단계
+      Path: $Awareness$.MultiDrainPanel
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 흡수 버튼
+      Path: $Awareness$.Btn_Drain
+      Tooltip:
+        SubDescription: TESTDATA
+- Id: 6939
+  Name: Tutorial_PolymorphGrowth_01
+  Comment: 초월 성장
+  StartCondition: PolymorphSkinEnchant_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+    - Type: AttentionUI
+      Name: 첫 번째 초월 카드
+      Path: "$PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.CardList[0]"
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 레벨 상승에 따른 스탯 리스트
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.LeftSwitcher
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 재료 리스트
+      Path: "$PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.LevelUp.ItemListView_Registerable_New[0]"
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 자동 등록 버튼
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.LevelUp.AutoBtn
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 레벨업 버튼
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.LevelUp.EnchantBtn
+      Tooltip:
+        SubDescription: TESTDATA
+- Id: 12714
+  Name: Tutorial_Craft_01
+  Comment: 제작
+  StartCondition: Craft_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+    - Type: AttentionUI
+      Name: 제작 리스트
+      Path: $CraftMainPopup$.Contents.NoBookmarkSwitcher
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 제작 버튼
+      Path: $CraftMainPopup$.Contents.DetailInfoSwitcher.BtnCraft
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 제작 트리 탭
+      Path: $CraftMainPopup$.Contents.DetailInfoSwitcher.TabTree
+      Tooltip:
+        SubDescription: TESTDATA
+- Id: 13477
+  Name: Tutorial_Polymorph_01
+  Comment: 합성
+  StartCondition: PolymorphSkinMerge_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+    - Type: AttentionUI
+      Name: 초월 카드 리스트
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.CardListSwitcher
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 합성 필수 재료 팝업
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.EssentialSlot
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 자동 등록 버튼
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.BtnAutoResist
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 합성 버튼 1
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.BtnMerge
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: AttentionUI
+      Name: 합성 버튼 2
+      Path: $PolymorphMain$.Contents.ContentsSwitcher.PolymorphSwitcher.PointInfo
+      Tooltip:
+        SubDescription: TESTDATA
+- Id: 8703
+  Name: Tutorial_Collection_01
+  Comment: 수집
+  StartCondition: Collection_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Collection_Dialogue_01
+- Id: 13945
+  Name: Tutorial_Guild_01
+  Comment: 길드
+  StartCondition: FirstEnterAfterGuildJoin_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Guild_Dialogue_01
+- Id: 13598
+  Name: Tutorial_GuildResearch_01
+  Comment: 길드 연구
+  StartCondition: FirstEnterGuildResearchTabAfterUnlock_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Tutorial_behavior_Test_Dialogue
+- Id: 8736
+  Name: Tutorial_RuneCombine_01
+  Comment: 서판 조합
+  StartCondition: RuneCombine_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_RuneCombination_Dialogue_01
+- Id: 12022
+  Name: Tutorial_Achievement_01
+  Comment: 업적
+  StartCondition: Achievement_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Achievement_Dialogue_01
+- Id: 14132
+  Name: Tutorial_FusionSkill_01
+  Comment: 스킬 융합
+  StartCondition: FusionSkill_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_SkillFusion_Dialogue_01
+- Id: 5221
+  Name: Tutorial_EclipseTime_01
+  Comment: 이클립스 타임
+  StartCondition: EclipseTime_Tutorial
+  Behavior:
+    - Type: AttentionUI
+      Name: 보스 출현 던전 이름
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.TitleTxt
+    - Type: AttentionUI
+      Name: 보스 이름과 버프
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.DescriptionTxt01
+    - Type: AttentionUI
+      Name: 이동 버튼
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.ButtonMove
+- Id: 5969
+  Name: Challenge_Quest
+  Comment: 도전 던전 퀘스트
+  Behavior:
+    - Type: ToggleQuestAutoMode
+- Id: 207
+  Name: Story_CH02_28_03
+  Comment: 야홉에게 텔레포트
+  Behavior:
+    - Type: CastSkill
+      Skill: Story_CH02_28_03_Teleport
+    - Type: ToggleQuestAutoMode
+- Id: 16825
+  Name: Story_CH03_26_03
+  Comment: 바리탄 성채로 텔레포트
+  Behavior:
+    - Type: CastSkill
+      Skill: Story_CH03_26_03_Teleport
+    - Type: ToggleQuestAutoMode
+- Id: 1474
+  Name: New_Tutorial_Buff01
+  Comment: 신규 튜토리얼 버프 1
+  Behavior:
+    - Type: CastSkill
+      Skill: Tutorial_GutsBuff_Transform
+    - Type: Dialogue
+      Dialogue: Tutorial_New_01_01_01_Dialogue_Accept
+- Id: 8148
+  Name: New_Tutorial_Spawn01
+  Comment: 신규 튜토리얼 스폰 1
+  Behavior:
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1473
+        Y: 897
+      Distance: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: Dialogue
+      Dialogue: Tutorial_New_01_01_03_Dialogue_Accept
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker01
+    - Type: Wait
+      Duration: 3000
+    - Type: FadeOut
+      Duration: 500
+    - Type: ResetCamera
+    - Type: FadeIn
+      Duration: 1000
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 17479
+  Name: New_Tutorial_Spawn02
+  Comment: 신규 튜토리얼 스폰 2
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker02
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 1583
+  Name: New_Tutorial_Move01
+  Comment: 신규 튜토리얼 이동
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker02
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 18845
+  Name: New_Tutorial_Boss_Spawn01
+  Comment: 신규 튜토리얼 보스 스폰
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Boss_Spawn01
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 9955
+  Name: New_Tutorial_BuffEnd
+  Comment: 신규 튜토리얼 버프 제거
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Tutorial_GutsBuff_Removal
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 8269
+  Name: Class_MainTutorialChapter3
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스
+  ByClass:
+    - Class: Fighter
+      Behavior: Class_MainTutorialChapter3_Fighter
+    - Class: Ranger
+      Behavior: Class_MainTutorialChapter3_Ranger
+    - Class: Sorcerer
+      Behavior: Class_MainTutorialChapter3_Socerer
+    - Class: Assassin
+      Behavior: Class_MainTutorialChapter3_Fighter
+- Id: 19071
+  Name: Class_MainTutorialChapter3_Fighter
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_파이터
+  Behavior:
+    - Type: PlaySequence
+      Sequence: FighterMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 12636
+  Name: Class_MainTutorialChapter3_Ranger
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_레인저
+  Behavior:
+    - Type: PlaySequence
+      Sequence: RangerMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 8594
+  Name: Class_MainTutorialChapter3_Socerer
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_소서러
+  Behavior:
+    - Type: PlaySequence
+      Sequence: SorcererMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 7761
+  Name: Class_MainTutorialChapter4
+  Comment: "신과 조우 & 플레이어 부활"
+  ByClass:
+    - Class: Fighter
+      Behavior: Class_MainTutorialChapter4_Fighter
+    - Class: Ranger
+      Behavior: Class_MainTutorialChapter4_Ranger
+    - Class: Sorcerer
+      Behavior: Class_MainTutorialChapter4_Socerer
+    - Class: Assassin
+      Behavior: Class_MainTutorialChapter4_Fighter
+- Id: 14653
+  Name: Class_MainTutorialChapter4_Fighter
+  Comment: "신과 조우 & 플레이어 부활_파이터"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: FighterMainTutorialChapter4
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Enter_Pilgrimage01
+- Id: 6659
+  Name: Class_MainTutorialChapter4_Ranger
+  Comment: "신과 조우 & 플레이어 부활_레인저"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: RangerMainTutorialChapter4
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Enter_Pilgrimage01
+- Id: 10646
+  Name: Class_MainTutorialChapter4_Socerer
+  Comment: "신과 조우 & 플레이어 부활_소서러"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: SorcererMainTutorialChapter4
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Enter_Pilgrimage01
+- Id: 11280
+  Name: LetterBoxCheck
+  Comment: 레터 박스 출력 / 숨김 연출
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: DisableInput
+    - Type: Wait
+      Duration: 5000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox

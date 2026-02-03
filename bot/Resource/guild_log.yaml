@@ -1,0 +1,77 @@
+- Id: 1
+  Name: Join
+  Comment: "<Green00>{Character}</> 님이 길드에 가입하셨습니다."
+  Description: UIWord_GuildLog_Guild_Join
+  Type: Join
+  Params:
+    - Character
+- Id: 2
+  Name: Banish
+  Comment: "<Green00>{Character}</> 님이 길드에서 추방되었습니다."
+  Description: UIWord_GuildLog_Guild_Expulsion
+  Type: Banish
+  Params:
+    - Character
+- Id: 3
+  Name: Leave
+  Comment: "<Green00>{Character}</> 님이 탈퇴하셨습니다."
+  Description: UIWord_GuildLog_Guild_Resign
+  Type: Leave
+  Params:
+    - Character
+- Id: 4
+  Name: ChangeRole
+  Comment: "<Green00>{Character}</> 님이 {Role}으로 임명되었습니다."
+  Description: UIWord_GuildLog_Guild_PositionChange
+  Type: ChangeRole
+  Params:
+    - Character
+    - Role
+- Id: 5
+  Name: LevelUp
+  Comment: "길드 {Level}레벨을 달성하였습니다."
+  Description: UIWord_GuildLog_Guild_LevelUp
+  Type: LevelUp
+  Params:
+    - Level
+- Id: 6
+  Name: Hostile
+  Comment: "<Blue00>{Guild}</> 길드에 적대를 선포하였습니다."
+  Description: UIWord_GuildLog_Relationship_Hostile_Add
+  Category: Relation
+  Type: Hostile
+  Params:
+    - Guild
+- Id: 7
+  Name: Dishostile
+  Comment: "<Blue00>{Guild}</> 길드에 대한 적대를 해제하였습니다."
+  Description: UIWord_GuildLog_Relationship_Hostile_Remove
+  Category: Relation
+  Type: Dishostile
+  Params:
+    - Guild
+- Id: 8
+  Name: Ally
+  Comment: "<Blue00>{Guild}</> 길드와 우호 관계가 되었습니다."
+  Description: UIWord_GuildLog_Relationship_Friendly
+  Category: Relation
+  Type: Ally
+  Params:
+    - Guild
+- Id: 9
+  Name: Disally
+  Comment: "<Blue00>{Guild}</> 길드와 우호 관계가 해제되었습니다."
+  Description: UIWord_GuildLog_Relationship_Friendly_Remove
+  Category: Relation
+  Type: Disally
+  Params:
+    - Guild
+- Id: 10
+  Name: CollectionLevelUp
+  Comment: "개발을 위한 임시 데이터 나중에 변경 필요"
+  Description: UIWord_GuildLog_Tech_LevelUp
+  Category: Collection
+  Type: CollectionLevelUp
+  Params:
+    - CollectionName
+    - CollectionLevel

@@ -1,0 +1,1310 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+    - Target
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    MonsterGradeComment:
+      type: string
+    DesignComment:
+      type: string
+    SkillLevel: #스킬 레벨 입력 0인경우 초기 레벨을 뜻함
+      type: integer
+      minimum: 0
+    Grade: # 스킬 등급 (일반 == 1 , 고급 == 2, 희귀 == 3, 영웅 == 4, 전설 == 5)
+      type: integer
+      default: 1
+    Description: # 스킬 이름
+      type: string
+      ref: description
+    Summary: # 상세정보에 출력되는 스킬 설명
+      type: string
+      ref: description
+    Category: # 스킬 카테고리 설정, 주로 Block 혹은 Allow할 스킬을 구분할 때 사용
+      type: string
+      ref: skill_category
+    Target: # 대상을 검색하고 조건에 맞는 값을 도출 true인 경우 true인 대상에게 스킬을 실행
+      type: string
+      formula: true
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명 또는 /Game/UIIcon/Skill/파일명.파일명
+      type: string
+    IconBG: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명 또는 /Game/UIIcon/Skill/파일명.파일명
+      type: string
+    Passive: # 패시브 스킬인지 체크
+      type: boolean
+    MotionInfo: # 스킬 사용 시 출력되는 모션
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Type
+          - Motion
+        properties:
+          Type:
+            type: string
+            enum:
+              - Default #기본
+              - Critical #Critical 발동 시
+              - Double #Double 발동 시
+          Motion:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            enum:
+              - None
+              - Move
+              - Damage
+              - Death
+              - Interaction01
+              - Interaction02
+              - Refresh
+              - Get
+              - Attack_01
+              - Attack_02
+              - Attack_03
+              - Attack_04
+              - Attack_Normal    #일반 공격
+              - Attack_Critical  #치명타 공격
+              - SkillAtk_01      #공격 스킬1
+              - SkillAtk_02      #공격 스킬2
+              - SkillAtk_03      #공격 스킬3 캐릭터/변신체 사용XXXXXXX
+              - SkillAtk_04      #공격 스킬4 캐릭터/변신체 사용XXXXXXX
+              - SkillBuff_01     #버프형 스킬1
+              - SkillBuff_02     #버프형 스킬2
+              - SkillBuff_03     #버프형 스킬3
+              - SkillBuff_04     #버프형 스킬4
+              - BossNormal_01    #보스 일반 공격1 보스의 일반 공격이 근거리 타겟/원거리 타겟일때 구분하기 위함
+              - BossNormal_02    #보스 일반 공격2
+              - BossSkill_01     #보스 스킬1
+              - BossSkill_01_01  #보스 스킬1-1 스킬 1번에서 모션이 나뉜경우 사용
+              - BossSkill_01_02  #보스 스킬1-2
+              - BossSkill_01_03  #보스 스킬1-3
+              - BossSkill_01_04  #보스 스킬1-4
+              - BossSkill_02     #보스 스킬2
+              - BossSkill_02_01  #보스 스킬2-1 스킬 2번에서 모션이 나뉜경우 사용
+              - BossSkill_02_02  #보스 스킬2-2
+              - BossSkill_02_03  #보스 스킬2-3
+              - BossSkill_02_04  #보스 스킬2-4
+              - BossSkill_03     #보스 스킬3
+              - BossSkill_03_01  #보스 스킬3-1 스킬 3번에서 모션이 나뉜경우 사용
+              - BossSkill_03_02  #보스 스킬3-2
+              - BossSkill_03_03  #보스 스킬3-3
+              - BossSkill_03_04  #보스 스킬3-4
+              - BossSkill_04     #보스 스킬4
+              - BossSkill_04_01  #보스 스킬4-1 스킬 4번에서 모션이 나뉜경우 사용
+              - BossSkill_04_02  #보스 스킬4-2
+              - BossSkill_04_03  #보스 스킬4-3
+              - BossSkill_04_04  #보스 스킬4-4
+              - BossSkill_04_05  #보스 스킬4-5
+              - BossSkill_05     #보스 스킬5
+              - BossSkill_05_01  #보스 스킬5-1 스킬 5번에서 모션이 나뉜경우 사용
+              - BossSkill_05_02  #보스 스킬5-2
+              - BossSkill_05_03  #보스 스킬5-3
+              - BossSkill_05_04  #보스 스킬5-4
+              - BossSkill_06     #보스 스킬6
+              - BossSkill_06_01  #보스 스킬6-1 스킬 5번에서 모션이 나뉜경우 사용
+              - BossSkill_06_02  #보스 스킬6-2
+              - BossSkill_06_03  #보스 스킬6-3
+              - BossSkill_06_04  #보스 스킬6-4
+              - BossBuff_01      #보스 페이즈 변경 / 보스 광폭화
+              - BossBuff_02      #보스 추가 모션
+              - Push
+              - Pull
+              - Dash
+              - Spawn
+              - Card_Idle
+              - Select_Idle
+              - AppearanceScene_Idle
+              - Upgrade
+              - WaitComplete
+              - Emotion_01
+              - Emotion_02
+    MotionDelay: #모션 출력 시간 -> Delay속도에 맞춰 모션이 빠르게 재생됨
+      type:
+        - string
+        - integer
+      formula: true
+    StopMotion: # 다른 스킬에 의해 motion_delay가 강제로 0이 되는 기능. BT RUNNING 상태에서 곧바로 SUCCESS가 됨.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          SkillCategory:
+            type: string
+            ref: skill_category
+          ChangedBuffGroup:
+            type: string
+    RotateToTarget: # true: 스킬을 사용할 떄 대상 방향을 바라봄
+      type: boolean
+      default: false
+      immediate: true
+    #===================================================================
+    # Caster/Target 이펙트가 있는 경우에만 클라 표기함
+    CasterEffect:
+      type: string
+      ref: effect
+    CasterEffectScale:
+      type: object
+      additionalProperties: false
+      required:
+        - X
+        - Y
+        - Z
+      properties:
+        X:
+          type: number
+          default: 1.0
+        Y:
+          type: number
+          default: 1.0
+        Z:
+          type: number
+          default: 1.0
+    #스킬 적중 대상에게 출력하는 이펙트
+    TargetEffect:
+      type: string
+      ref: effect
+    TargetEffectScale:
+      type: object
+      additionalProperties: false
+      required:
+        - X
+        - Y
+        - Z
+      properties:
+        X:
+          type: number
+          default: 1.0
+        Y:
+          type: number
+          default: 1.0
+        Z:
+          type: number
+          default: 1.0
+    #메인 타겟에게 출력하는 이펙트 (명중에 관계없이 항상 출력)스킬 적중 대상에게 출력하는 이펙트
+    MainTargetEffect:
+      type: string
+      ref: effect
+    MainTargetEffectScale:
+      type: object
+      additionalProperties: false
+      required:
+        - X
+        - Y
+        - Z
+      properties:
+        X:
+          type: number
+          default: 1.0
+        Y:
+          type: number
+          default: 1.0
+        Z:
+          type: number
+          default: 1.0
+
+    HitEffectInfo: #HitEffect
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          HasProperty:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            visible: true
+          HitEffectType:
+            type: string
+            ref: hit_effect_type
+    Projectile: #리소스 경로 가이드: /Game/Common/파일명.파일명
+      type: string
+      ref: projectile
+    #===================================================================
+    CastRange: # 스킬 사거리 사거리내에 없는 경우 스킬 실패 처리
+      type:
+        - string
+        - integer
+      formula: true
+    BaseCastRange: # 다중 타겟 npc의 사거리 계산을 위한 입력값 사거리가 있는 PC 스킬에 포함되어야 함
+      type: integer     # CastRange를 공식화하여 BaseCastRange에 상수값을 넣어 계산하는 형식, BaseCastRange가 비는 경우 CastRange에 상수값을 넣어도 무방
+      dynamic_property: true
+    PassCastRange: #스킬 사거리를 체크를 하지 않음
+      type: boolean
+    #===================================================================
+    MeshShake: #Hit 시 대상에게 메시 쉐이크를 출력함 (로컬)
+      type: boolean
+      default: false
+
+    # --- true or false 로 계산되는 formula ---
+    # 스킬 처리 시 계산 완료 이후 IsX 형태로 다른 공식에서 사용 가능
+    # Critical -> Perfect -> Double -> Probability 순으로 계산해서, 나중 공식에서는 이전 값을 쓸 수 있음
+    # ex) Critical 계산 공식에서는 Perfect, Double 등등 못쓰지만 명중 계산 할 때는 사용 가능
+    # 크리 계산에서 Double 여부를 쓰고 싶다던가 하는 수요가 발생할 경우, 계산 순서 변경이 필요하니 서버팀으로 문의바랍니다.
+    Critical: # 이후 `IsCritical`로 사용 가능
+      type:
+        - string   #true인 경우 발동
+        - integer
+      formula: true
+    Perfect: # 이후 `IsPerfect`로 사용 가능
+      type:
+        - string   #true인 경우 발동
+        - integer
+      formula: true
+    Double: # 이후 `IsDouble`로 사용 가능
+      type:
+        - string   #true인 경우 발동
+        - integer
+      formula: true
+
+    #===================================================================
+    ChangeHp: # 스킬 명중 시 대상의 Hp 변화 값 (대미지)
+      type:
+        - string
+        - integer
+      formula: true
+    ChangeMp: # 스킬 명중 시 대상의 Mp 변화 값 (대미지)
+      type:
+        - string
+        - integer
+      formula: true
+    ChangeCasterHpOnCast: # 스킬 시전 시 시전자의 HP 변화
+      type: string
+      formula: true
+      immediate: true
+    ChangeCasterMpOnCast: # 스킬 시전 시 시전자의 MP 변화
+      type: string
+      formula: true
+      immediate: true
+    AddDmgScale: # 대미지 증가 %  <- 방어력 계산하기 전
+      type: integer
+      dynamic_property: true
+    ActivatedTotalDamagePercent: # 발동 스킬 공격력 기반 계수 
+      type: integer
+    DamageType: # 공격 타입 설정 근거리 == 1 원거리 == 2 마법 == 3
+      type: integer
+    HealBase: # 치유량 - 공식에서 계산
+      type: integer
+      dynamic_property: true
+    HpPercentHeal: # 치유량 자신의 Hp비례 회복 소서러 스킬에서 적용 백만분율
+      type: integer
+      dynamic_property: true
+    AddedHealScale: # 치유량 증가 - 백만분율
+      type: integer
+      dynamic_property: true
+    PeriodicSkillLoopTime: #지속 스킬 틱 수 - formula
+      type: integer
+      dynamic_property: true
+    DmgBase: # 기본 대미지
+      type: integer
+    DmgDiceNum: # 대미지 계산에서 적용되는 dice(a,b) 중 b에 해당
+      type: integer
+    DmgDiceSpot: # 대미지 계산에서 적용되는 dice(a,b) 중 a에 해당
+      type: integer
+      #dice(a,b) -> 1~a 값을 b번 무작위로 뽑은 값을 모두 더한 값 -> 최솟값 : b  최댓값 : a*b
+      dynamic_property: true
+    NoAttackedPenalty: # 피격 패널티를 적용하지 않음
+      type: boolean
+    #===================================================================
+
+    ExecuteProbability: #스킬 실행 확률 (명중계산 보다 우선된다). Periodic, Invoke, Counter skill 에서 동작함. 
+      type:
+        - string
+        - integer
+      formula: true
+    Probability: # 명중 확률
+      type:
+        - string   #true인 경우 발동
+        - integer
+      formula: true
+    ProbBase: #스킬의 기본 명중 확률
+      type: integer
+    ProbAdd: #추가 확률 표시 <- 무기 추가 효과를 표시하려고 할 때 입력
+      type: integer
+      dynamic_property: true
+    ProbLevelMultiplier: #레벨 차에대한 명중 보정치
+      type: integer
+    ProbMax: #명중 확률 최대 값
+      type: integer
+    ProbMin: #명중 확률 최소 값
+      type: integer
+    ProbType: #명중 타입 ( 1 -> 기본 명중, 2 -> 스킬 프로퍼티 값만 적용한 명중 ex) 기절 50% 확률, 3 -> 1번 과 2번을 곱한 값)
+      type: integer
+
+    #===================================================================
+
+    Buff: # 스킬 명중 시 타겟에게 적용되는 버프
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Buff
+        properties:
+          Buff:
+            type: string
+            ref: buff
+          Duration: # 버프 지속 시간, 단위 : ms
+            type: # fomula 입력 가능  ex) rand(1000,5000)
+              - string   #고정 시간인 경우 정수만 입력하는 형태 
+              - integer  #0 입력 시 무한으로 적용
+            formula: true
+            visible: true
+          BonusPropertyName: # 버프가 부여되면서, 클라 노티를 위해 전달할 프로퍼티 이름
+            type: string
+            visible: true
+          BonusPropertyStringValue: # 클라 노티를 위해 전달할 프로퍼티 값
+            type: string
+            visible: true
+          Condition: # 버프 부여 확률, 설정 하지 않으면 항상 성공
+            type:
+              - string
+              - integer
+            formula: true
+            visible: true
+    SelfBuff: # 시전 시 캐스터에게 적용되는 버프
+      type: array
+      immediate: true # 시전 즉시 버프 적용
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Buff:
+            type: string
+            ref: buff
+          Duration: #버프 지속 시간, 단위 : ms
+            type:
+              - string
+              - integer
+            formula: true
+          BonusPropertyName: # 버프가 부여되면서, 클라 노티를 위해 전달할 프로퍼티 이름
+            type: string
+          BonusPropertyStringValue: # 클라 노티를 위해 전달할 프로퍼티 값
+            type: string
+          Condition: # 버프 부여 확률, 설정 하지 않으면 항상 성공
+            type:
+              - string
+              - integer
+            formula: true
+
+    #===================================================================
+    HpCost: # 스킬 실행에 필요한 Hp - 사용 시 HpCost만큼 시전자 Hp 감소
+      type: integer
+      dynamic_property: true
+    MpCost: # 스킬 실행에 필요한 Mp - 사용 시 MpCost만큼 시전자 Mp 감소
+      type: integer
+      dynamic_property: true
+    #===================================================================
+    TextDisplayType: #데미지 폰트 - 스킬 아이콘, 이름 출력
+      type: string
+      enum:
+        - None
+        - AttackSkill
+        - AllySkill
+    DoNotShowTextDisplay: # 데미지 폰트 보이지 않는 여부
+      type: boolean
+      default: false
+
+    #===================================================================
+    QuickSlotUse: #퀵슬롯 등록 가능 여부
+      type: boolean
+    CanAuto: #퀵슬롯 자동 사용 기능 on/off 기능
+      type: boolean
+    #===================================================================
+
+    CoolTime: #스킬 쿨타임 입력
+      type: integer   #쿨타임 그룹이 있는 경우 Group의 쿨타임으로 적용
+    CoolTimeGroup: #같은 쿨타임 그룹의 스킬은 쿨타임을 공유한다.
+      type: string
+      ref: cool_time_group
+    GlobalCoolTime:
+      type: boolean
+    AddedCoolTimeReduce: #기술의 근원 스킬 쿨타임 감소 10000 <- 1% 적용
+      type: integer      #스킬에 입력하는 것이 아닌 item_engrave에서 적용 시키는 값
+      dynamic_property: true
+    AdditionalCoolTime: #스킬 사용 시 해당 스킬의 쿨타임 그룹도 쿨타임을 적용한다.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          CoolTimeFromSkill: #스킬의 쿨타임 그룹이 같은 경우 같은 그룹내 가장 큰 쿨타임으로 적용된다.
+            type: string
+            ref: skill
+    #===================================================================
+
+    Radius: # 범위 내 모든 타겟을 검색하여 조건에 맞는 타겟에게 스킬을 실행하는 방식 / 조건은 ObjectFilter으로 체크한다.
+      type: integer
+      default: -1 # Radius 의 경우 0 인 데이터를 저장하기 위해 -1를 기본 값으로 결정
+      minimum: -1
+    ObjectFilter: #타깃을 별도로 지정하는 광역이나 spray 형태의 스킬에서 지정할 대상 필터
+      type: string
+      formula: true
+    MaxTarget: #최대 지정할 대상의 수, ObjectFileter 필수
+      type: integer
+      dynamic_property: true
+    #===================================================================
+    TransformSkill:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Skill
+        properties:
+          TargetScope:
+            type: string
+            default: MainTargetOnly
+            enum:
+              - MainTargetOnly
+              - AllTargets
+          Condition:
+            type: string
+            formula: true
+            visible: true
+          HasProperty:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            visible: true
+          Group:
+            type: integer
+            minimum: 1
+            visible: true
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+          Skill:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            ref: skill
+    #===================================================================
+
+    NeedLearn: #스킬 학습을 위한 정보
+      type: boolean
+
+    #===================================================================
+
+    Base: #스킬 베이스 A가 B를 베이스로 설정 시 B의 모든 프로퍼티가 A에게 전이된다.
+      type: string
+      ref: skill
+    #===================================================================
+    Attack: #공격인지 판단 (클라)
+      type: boolean
+    LeaveLand:
+      type: boolean
+    StartOfflineMode:
+      type: boolean
+    StopOfflineMode:
+      type: boolean
+    AutoConsumeCondition: #true인 경우에만 canauto 스킬을 사용
+      type: string
+      formula: true
+
+    ChangeWalkTarget:
+      type: boolean
+    ChangeWalkDirectionByPad:
+      type: boolean
+    KeepDistance:
+      type: integer
+      pattern: ^[1-9]$
+
+    SkillExtractHp: #스킬 사용 시 Hp 회복량  - CalcSkillDrainHp 을 ChangeCasterHp 에 넣고 적용 하여야 함
+      type: integer
+    SkillExtractMp: #스킬 사용 시 Mp 회복량  - CalcSkillDrainMp 을 ChangeCasterMp 에 넣고 적용 하여야 함
+      type: integer
+    SkillDrainHp: #대상의HP 흡수 및 회복 계산 공식을 사용해야만 그만큼 흡수 됨
+      type: integer
+      dynamic_property: true
+    SkillDrainMp: #대상의MP 흡수 및 회복 계산 공식을 사용해야만 그만큼 흡수 됨
+      type: integer
+      dynamic_property: true
+    AddedCastSpeedBonus: #기술의 근원 스킬 시전 속도 감소 10000 <- 1% 적용
+      type: integer      #스킬에 입력하는 것이 아닌 item_engrave에서 적용 시키는 값
+      dynamic_property: true
+
+
+
+    BaseCoolTime: # 기본 스킬 쿨타임
+      type: integer
+    WeaponCoolTimeReduce01: # ItemEquippedWeaponTypeNum == 1 인 무기 장착 시 적용
+      type: integer
+    WeaponCoolTimeReduce02: # ItemEquippedWeaponTypeNum == 2 인 무기 장착 시 적용
+      type: integer
+    ChangeExperience:
+      type:
+        - integer
+        - string
+      formula: true
+    LoseExperience: # 사망 시 잃어버릴 경험치 양
+      type: string
+      formula: true
+    ExpRecoveryCost: # 경험치 복구 골드 비용
+      type: string
+      formula: true
+    ExpRecoveryDiaCost: # 경험치 복구 다이아 비용
+      type: string
+      formula: true
+    ItemRecoveryCostRatio: # 아이템 복구 골드 비용, 마지막에 해당 아이템의 Standardcost와 한번 곱한다.
+      type: string
+      formula: true
+    ItemRecoveryDiaCostRatio: # 아이템 복구 다이아 비용, constantyaml에 설정된 다이아 값에 곱한다.
+      type: string
+      formula: true
+    BreakEquipmentProbability: # 장비 아이템 손상 확률
+      type: string
+      formula: true
+    VictimChangePkScore: # 사망 시 얻는 pvp 점수, 사망자가 T_, 음수로 표현 해야 함
+      type: string
+      formula: true
+    KillerChangePkScore: # 처치 시 얻는 pvp 점수, 사망자가 T_, 양수로 표현 해야함
+      type: string
+      formula: true
+    AssistantChangePkScore: # 도움을 준 플레이어가 얻는 pvp 점수, AssistOrder 사용 가능(피해량 순으로 1, 2, 3), 사망자가 T_, 양수로 표현 해야함
+      type: string
+      formula: true
+    ChangeTarget: # 타겟 변경 규칙 주로 AI 에서 사용됨
+      type: string
+      enum: # todo : ai와 요청 두 종류로 분리
+        - Object
+        - Search # 같은 우선순위일 경우 가까운 대상
+        - SearchCost # 같은 우선순위일 경우 이동 거리가 가까운 대상
+        - Contribution # 기여도로 평가
+        - PickUp
+        - CounterAttack
+        - Tab
+        - PartyTarget
+        - Coordinate
+        - TargetCancel
+        - TargetCancelSubThenMain
+        - Pad
+        - DragScan
+        - NpcId
+        - Aggro
+    SearchTargetRadius: # ChangeTarget: Search, SearchCost 일 때의 검색 범위, 없을 경우 자기 시야 이내 NPC가 NPC를 타겟하는 기능
+      type: integer
+    AiSearchTargetFilter: # AI 타겟 검색 필터 (미입력: 모든 대상, PcOnly: PC만)
+      type: string
+      enum:
+        - PcOnly
+        - NpcOnly
+    # 다음에 의해 타겟이 변경되면 클라이언트 HUD 출력 여부를 결정
+    # - ChangeTarget
+    # - ResetMainTargetOrChangeToSubTarget
+    # - ResetMainTargetedOrChangeToSubTargeted
+    NotifyHudTarget:
+      type: boolean
+    ScanManual:
+      type: boolean
+    ScanTarget: # 스캔 대상 검색 규칙
+      type: string
+      formula: true
+    ChainedSkill: # 스킬 실행 후(MotionDelay가 종료 된 후) ChainedSkill의 스킬을 이어서 실행
+      type: string
+      ref: skill
+
+    FixedDamage: #고정대미지, 방어력 계산을 하지 않고 대미지를 준다.
+      type: integer
+
+    TargetStunDmgMultiplier: #스턴 대상인 경우 추가 피해 증폭량 10000 -> 1%
+      type: integer
+    #대미지 증가 10000 : 1%  <- 대미지 공식 참고
+    #공식에 1M이 더해지기 떄문에 100000입력 시 기본 공격의 +110% 개념
+
+    GetExperience:
+      type: boolean
+    NormalAttackCheck: #일반 공격인지 체크 (PC의 일반 공격에만 적용)
+      type: integer
+    PcBuffSkillCheck: #버프형 스킬인지 체크 (PC의 버프 스킬에만 적용)
+      type: integer
+    HealthPotionCheck: #체력 물약인지 체크  물약 == 1  <- 타입 추가 시 스키마 추가 필수
+      type: integer
+
+    Entrant: # 참여자 모두를 대상으로 설정
+      type: boolean
+
+    RetainBuffGroup: # 입력된 버프 그룹이 아닌 버프를 모두 제거
+      type: array
+      items:
+        type: string
+    RelativeSRType: # 상태이상 체크를 위한 프로퍼티 전투 공식에서 쓰임
+      type: integer
+    RemoveBuffGroup: #입력된 버프 그룹인 버프를 모두 제거
+      type: array
+      items:
+        type: string
+    # 타겟 엔티티의 타겟을 풀어버림
+    ResetMainTarget:
+      type: boolean
+    # 타겟 엔티티를 타겟으로 한 엔티티들의 타겟을 풀어버림
+    ResetMainTargeted:
+      type: boolean
+    # 이동 타겟을 해제
+    ResetWalkTarget:
+      type: boolean
+    # 타겟 엔티티의 타겟을 예비 타겟이 있으면 풀고 없으면 예비 타겟으로 바꿈
+    ResetMainTargetOrChangeToSubTarget:
+      type: boolean
+    # 타겟 엔티티를 타겟으로 설정한 엔티티들에게...
+    # 예비 타겟이 없을 경우 : 타겟을 예비 타겟으로 교체
+    # 예비 타겟이 있을 경우 : 타겟을 해제
+    ResetMainTargetedOrChangeToSubTargeted:
+      type: boolean
+    ResetSubTargeted:
+      type: boolean
+    ResetSubTarget:
+      type: boolean
+    ResetPartyTarget:
+      type: boolean
+    StandardObject:
+      type: string
+    StopWait:
+      type: boolean
+    DungeonHoldSkip:
+      type: boolean      
+    DungeonCharge:
+      type: boolean
+    DungeonExit:
+      type: boolean
+    BroadcastEventProduce:
+      type: string
+      enum:
+        - bossSpawned # deprecated - 보스가 소환되었을 때, 현재 채널 모두에게
+        - bossKilled # deprecated - 보스가 죽었을 때, 현재 채널 모두에게
+        - dungeonClose # 던전 클리어 시, 현재 채널 모두에게
+        - dungeonComplete # 던전 클리어 시, 현재 채널 모두에게 (추가로 dungeon complete 골이벤트 생성)
+        - dungeonCompleteThird # 3 번 이벤트 발생 시 던전 클리어(todo: 임시 기능, 개선 예정)
+        - battlegroundBossComing
+        - battlegroundBossSpawned
+    #어떤 address에서 퇴장 시 어디로 보낼 것인가를 설정
+    #주로 필드 던전에 사용할 예정, 던전에서 가장 가까운 마을로 설정한다.
+    ArgumentOfHomeTeleport:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - ToTerritory
+        properties:
+          # 프로퍼티 이름
+          ## IntegerValue/StringValue를 적지 않는다면 프로퍼티를 가지고 있는지 검사함
+          PropertyName:
+            type: string
+            ref: property
+          # 위 프로퍼티의 값이 이것인지 검사함
+          IntegerValue:
+            type: integer
+          # 위 프로퍼티의 값이 이것인지 검사함
+          StringValue:
+            type: string
+          FromAddress:
+            type: string
+            ref: address
+          FromTerritory:
+            type: string
+            ref: territory
+          ToTerritory:
+            type: string
+            ref: territory
+    #--로밍 기능--
+    SetRoamCoordinate:
+      type: boolean
+    RoamDistanceMin: #배회하는 셀 최소 거리
+      type: integer
+    RoamDistanceMax: #배회하는 셀 최대 거리
+      type: integer
+    RoamWaitDurationMax: #최대 배회 주기 시간
+      type: integer
+    RoamWaitDurationMin: #최소 배회 주기 시간
+      type: integer
+    Material: #스킬 사용 시 아이템 소모
+      type: array
+      items:
+        - type: string
+        - type: integer
+
+    CastSkillByCasterStack:
+      type: array
+      items:
+        type: array
+        items:
+          - type: string
+          - type: integer
+          - type: string
+    CastSkillByTargetStack:
+      type: array
+      items:
+        type: array
+        items:
+          - type: string
+          - type: integer
+          - type: string
+    #--스킬 분기, 연사에 사용하는 기능--
+    #기능 추가
+    #기술의 근원 개방 프로퍼티는 mastery_essence.yaml의 Name을 공식에 넣어서 판단할 수 있다.
+
+    Repeat: #스킬 전체를 반복
+      type: integer
+      minimum: 2
+
+    #--스킬 동작이나 계산에 영향을 주지 않는 Flag 용 Property (혹은 정말 제한적으로 써서 범용적으로 사용할 수 없는 기능용)--
+    Toggle: #스킬을 다시 사용하면 ON/OFF 형태로 동작한다는 것을 체크하기 위한 정보
+      type: boolean
+    Die:
+      type: boolean
+      
+    UpdateAutoMode: # 스킬 사용 시 자동 상태 설정
+      type: string
+      enum:
+        - ToggleAutoCombat    # 자동 사냥 상태를 전환 함
+        - ToggleAutoQuest     # 자동 퀘스트 상태를 전환 함
+        - SetAutoCombat       # 자동 사냥 상태를 활성화 함
+        - SetAutoQuest        # 자동 퀘스트 상태를 활성화 함
+        - DisableAutoCombat   # 자동 사냥 상태를 해제함
+        - DisableAutoQuest    # 자동 퀘스트 상태를 해제함        
+        - DisableAll          # 모든 자동 상태를 해제함
+    # IsGood true 일 경우 서버에서 서브타겟 작동이 다르며 pk 체크를 하지 않음
+    IsGood: #피격모션을 패스하기 위한 스킬 정보
+      type: boolean
+
+    IsNotNotifySkill:
+      type: boolean
+    AutoDistributeItem: #true == 아이템이 드랍되지 않고 바로 인벤토리로 바로 들어감
+      type: boolean
+    UpsertQuickSlot: #퀵 슬롯
+      type: boolean
+    ClearQuickSlot: #퀵 슬롯
+      type: boolean
+    LimitOnMaxHp: #물약사용등 최대HP에서 스킬을 사용할 수 없다.
+      type: boolean
+    ForgetEventOnTargetDeath: #자동사냥 등에서 대상이 죽었을 때 초기화
+      type: boolean
+    #--미니공성에서 임시로 쓰였던 내용--
+    MatchDuration:
+      type: integer
+    RotateBurst: #연사 스킬에서 사용하는 프로퍼티
+      type: array #[추가사거리, 범위, 대상의 수, 몇발쏠지] ##추가 사거리는 스킬 사용이후 대상이 벗어나는것을 예외처리 하기 위한 내용
+      items:
+        type: integer
+    CannotCancel: #이 프로퍼티를 보유한 스킬 사용 시 다른 스킬이 Reserved 로 개입되지 않는다.
+      type: boolean
+    Revive:
+      type: boolean
+      immediate: true
+    MonsterKillEventProduce:
+      type: boolean
+    NpcTalkEventProduce:
+      type: boolean
+
+    TerritoryEventProduce:
+      type: boolean
+
+    ToggleAutoTownNpcWalk:
+      type: boolean
+    ToggleAutoWorldMapWalk:
+      type: boolean
+
+    ChangePkPoint:
+      type:
+        - string
+        - integer
+      formula: true
+    PcKillQuestCommandProduce:
+      type: boolean
+    WalkToWalkTarget:
+      type: boolean
+    WalkPad: #ChangeWalkByPad에서 방향을 세팅하고, 이 값에 대한 이동 스킬을 사용
+      type: boolean
+    ContainedInAddress:
+      type: boolean
+    LimitTargetToSameAddress:
+      type: boolean
+    AllowedAddress: # 해당 주소 내에서만 사용가능한 스킬
+      type: string
+      ref: address
+    ReduceCoolTimeByPercent: #스킬 쿨타임 차감 기능 -> 현재 쿨타임이 적용중인 스킬의 쿨타임을 가속해주는 기능
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          CoolTimeGroup: #쿨타임 그룹 입력
+            type: string
+            visible: true
+          Percent: # 퍼센트 단위는 만분율 사용
+            type: integer
+            visible: true
+    MoveSkill: #이동 스킬임을 구분하는 프로퍼티
+      type: string
+      enum:
+        - Dash  # 돌진
+        - Pull  # 끌어오기
+        - Blink  # 점멸(순간이동)
+    ArriveRadius: # MoveSkill 이 없으면 독자적으로는 쓰일 수 없는 property
+      type: integer     # 1로 설정 시 도착지점 주변 1셀 범위로 이동 
+    LayerHeightMin: # 이동 스킬을 사용하기 위한 대상과의 최소 고도 차이 <- Z축 차이 입력
+      type: integer
+    LayerHeightMax: # 이동 스킬을 사용하기 위한 대상과의 최대 고도 차이 <- Z축 차이 입력
+      type: integer
+    CastAsPermutation: # 스킬 사용 시, 모션 딜레이를 무시하고 즉시 타겟들끼리 순열을 만들어서(P(n, 2)) 서로 지정된 스킬을 사용함
+      type: string
+      ref: skill
+    CastAsBoomerang: # 스킬 사용 시, 타겟이 캐스터에게 스킬을 되돌려쏨
+      type: string    # 위 프로퍼티처럼 스킬의 타겟과 캐스터 사이에 추가적으로 나가는 스킬을 표현하는 더 나은 방법 생각나면 교체할 예정
+      ref: skill
+    SpawnNpc: # npc_spawn을 실행하는 기능
+      type: array
+      items:
+        type: string
+        ref: npc_spawn
+    SpawnNpcByRange: #범위 스킬 활용할 수 있는 npc 소환 기능
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Npc
+        properties:
+          Npc: # 소환할 npc
+            type: string
+            ref: npc
+          Polar: # 극좌표 이동 변환
+            type: object
+            additionalProperties: false
+            required:
+              - Distance
+            properties:
+              Distance: # 음수도 가능, 직선 거리(미터)
+                type: integer
+              Angle: # 캐릭터가 바라보는 방향이 0도, 단위 : 각도(degree)
+                type: integer
+                default: 0
+                minimum: -1 # -1로 설정할 경우 랜덤 각도(16방향) 사용
+                maximum: 359
+          Range: # 소환할 범위 (목표 좌표 중심 기준)
+            type: integer
+            default: 0
+          SpawnCount: # 입력하지 않으면 하나만 소환
+            type: integer
+            default: 1
+          IncludeTargetCoordinate: # 자기 자신 (또는 메인 타겟) 좌표도 소환 범위에 포함시킬지
+            type: boolean
+            default: false
+          SpawnDirection:
+            type: string
+            enum:
+              - N
+              - NE
+              - E
+              - SE
+              - S
+              - SW
+              - W
+              - NW
+    CastByTargetCount: # Hit인 타깃의 수에 따라 스킬을 추가로 사용 하는 프로퍼티 (TransformSkill과 비슷하지만 Condition이 Target의 수)
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          MaxTargetCount:
+            type: integer
+          Skill:
+            type: string
+            ref: skill
+    PassTerrainCheck: # true : 서버에서 사선 체크할 때, SightWall, HighWall 체크하지 않음
+      type: boolean
+      default: false
+    PassVisionCheck: # true : 서버에서 true인 스킬은 시야 체크 안함
+      type: boolean   # 단, 타겟팅 자체가 시야 밖의 상대에겐 되지 않기에
+      default: false  # 실질적으로는 각종 스킬이나 시스템으로 인해 타겟이 고정된 채 생성된 스킬에만 적용
+    IsRestoration:
+      type: boolean
+    ReserveSkill: #조건부 예약 스킬 (텔레포트 시 쓰이고 있음)
+      type: string
+      ref: skill
+    SetPartyTarget: # 선택한 공격 타겟 or 예비 타겟을 파티 타겟으로 설정, request(수동) 시전만 작동, transform 금지
+      type: boolean
+      default: false
+    BuffDuration: #버프 지속 시간 증가 - 기술 근원
+      type: integer
+      dynamic_property: true
+    IgnoreParentSkillTarget: # TransformSkill의 자식은 기본적으로 부모 타겟을 따라가는데 이 값이 true면 자식의 타겟을 공식 평가함
+      type: boolean
+    TeleportByArgument:
+      type: boolean
+    ArgumentOfTerritoryTeleport:
+      type: string
+      ref: territory
+    ArgumentOfWorldMapAreaTeleport:
+      type: string
+      ref: worldmap_area
+    UseArgumentOfStartingPointTeleport:
+      type: boolean
+    ArgumentOfAroundTeleport:
+      type: integer
+    ArgumentOfLand:
+      type: string
+      ref: land
+    # [전장] 전장 지역으로 텔레포트
+    TeleportToBattlegroundBase:
+      type: boolean
+    # [전장] 보스 처치 팀 설정
+    ## 1. Caster가 속한 팀을 보스를 처치한 팀으로 설정함
+    ## 2. Caster가 보스를 처치했다고 알림을 보냄
+    SetBattlegroundBossKillTeam:
+      type: boolean
+    # 텔레포트 시작 스킬. 텔레포트 관련 전처리 수행(던전 입장 티켓, 귀환 좌표 저장, ...)
+    TeleportStart:
+      type: boolean
+    DragIn:
+      type: integer # 한번에 몇 칸 땡길지 (충돌 체크 o)
+    DragInWalk:
+      type: boolean # 끌려가야하는 목표 지점으로 가까워지는 경우메만 1칸씩 걸음 (충돌 체크 o)
+    GiveQuest:
+      type: string
+      ref: quest
+    CutScene: # 컷씬 데이터
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ProtraitIcon: # 포트레이트
+            type: string
+          Description: # 대사
+            type: string
+            ref: description
+          WithChat: # 채팅에 뿌려질 여부
+            type: boolean
+            default: false
+    SpeechBubble: # 말풍선
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Description: # 대사
+            type: string
+            ref: description
+          WithChat: # 채팅에 뿌려질 여부
+            type: boolean
+            default: false
+    TeleportToWorldMapArea:
+      type: boolean
+    # 타겟에게 시스템메시지 발송
+    TargetSystemMessage:
+      type: boolean
+    # 뷰리스트 프록시 생성
+    AddViewListProxy:  #보이지 않는 곳의 시야를 보여주는 프로퍼티
+      type: object
+      additionalProperties: false
+      required:
+        - Territory
+        - ChannelMode
+      properties:
+        Territory:
+          type: string
+          ref: territory
+        ChannelMode:
+          type: string
+          enum:
+            - AccountBased    #개인 서버의 시야 (성소 전용)
+            - CurrentChannel  #자신이 위치한 서버 (인스턴스, 전체맵 가능) 설정한 territory와 랜드가 같아야 함
+    # 모든 뷰리스트 프록시 제거
+    RemoveViewListProxy:
+      type: boolean
+      default: false
+    NonTargetSkill: # 논타겟 스킬
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - MaxDistance
+          - MoveDelay
+        properties:
+          Id:
+            type: integer
+          #유효 사거리이며, 도착 시 ArrivalSkill 사용
+          #-1값이면 메인 타겟 지점으로 날아갑니다. (이때 ToMainTarget 값이 true여야 합니다.)
+          MaxDistance:
+            type: integer
+          MoveDelay: # 1m 를 이동하는데 걸리는 시간
+            type: integer
+          ArrivalSkill: #MaxDistance만큼 이동 후 사용하는 스킬
+            type: string
+            ref: skill
+          ArrivalSkillMaxLimit: #ArrivalSkill에 자기 자신을 넣었을 때 무한 반복을 막기 위해 설정하는 프로퍼티
+            type: integer
+          CollisionSkill: #CollisionRadius 만큼의 범위에 충돌한 대상에게 사용하는 스킬
+            type: string
+            ref: skill
+          CollisionTargetCondition:
+            type: string
+            formula: true
+          CollisionRadius: # 충돌 범위
+            type: number
+          PenetrateWall: # 벽을 관통하는지
+            type: boolean
+          PenetrateEntity: # 대상을 관통하여 날아갑니다.
+            type: boolean
+          NonTargetProjectile: #리소스 경로 가이드: /Game/Common/파일명.파일명
+            type: string
+            ref: projectile
+          Duration: #입력된 시간만큼 발사체가 날아가는 것이 유지됩니다. MaxDistance에 도달하면 ArrivalSkill스킬을 사용합니다.
+            type: integer
+          ToMainTarget: #자신의 방향과 관계없이 메인 타겟 방향으로 발사체를 날립니다. Angle과 같이 사용할 수 없습니다.
+            type: boolean
+          Ai:
+            type: string
+            ref: ai
+          Angle: #스킬을 날리는 방향(각도) 시계 방향
+            type: integer
+            minimum: -1
+            maximum: 359
+          Height: # 플레이어가 바라보는 방향 기준 세로, PolarRadius와 같은 축
+            type: integer
+          # 발사체의 시작 지점을 설정
+          # Angle만큼 각도를 바꾸고 현재 시전자의 위치에 Distance 값 만큼 더해준 곳에 투사체 소환
+          # 투사체의 목표 지점은 시전자가 바라보는 방향을 기준으로 고정하되 시작 각도가 바뀜
+          Polar: # 극좌표 이동 변환
+            type: object
+            additionalProperties: false
+            required:
+              - Distance
+            properties:
+              Distance: # 음수도 가능, 직선 거리(미터)
+                type: integer
+              Angle: # 캐릭터가 바라보는 방향이 0도, 단위 : 각도(degree)
+                type: integer
+                default: 0
+                minimum: -1 # -1로 설정할 경우 랜덤 각도(16방향) 사용
+                maximum: 359
+          SelfProjectile: # 캐스터를 투사체 취급해서 날아가게 함, array에서 마지막 속성으로 적용
+            type: boolean
+            default: false
+          NonTargetSkillTiming:
+            type: integer
+    RemoveMovementState:
+      type: boolean
+    SwitchTarget: 
+      type: object
+      additionalProperties: false
+      properties:
+        From:
+          type: string
+        To:
+          type: string
+    DrawSkillNav: # AreaOfEffect 를 바탕으로 Skill Nav 를 그릴지 여부
+      type: boolean
+      default: false
+    # radius 대체하는 것을 기대
+    AreaOfEffect:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Shape
+        properties:
+          Id:
+            type: integer
+          Shape:
+            type: string
+            enum:
+              - Circle
+              - Rectangle
+          # 모든 길이 단위는 cm, 즉 100 = 1셀 크기
+          # -- Circle --
+          Radius: # 반지름, 단위 cm
+            type: integer
+          # 도넛 표현을 위한 비활성화 될 반지름. 타격 범위는 InnerRadius 이상 Radius 이하 거리
+          InnerRadius: # 단위 cm
+            type: integer
+          CentralAngle: # 부채꼴 표현을 위한 중심각
+            type: integer
+            minimum: 0
+            maximum: 359 # 예: 40이면 플레이어 방향 기준 좌우 각각 20°씩, 총 40° 범위가 활성화됨
+          # -- Rectangle --
+          # 플레이어가 바라보는 방향 기준 가로
+          Width: # cm 단위
+            type: integer
+          # 플레이어가 바라보는 방향 기준 세로
+          Height: # cm 단위
+            type: integer
+          # -- Translate --
+          # 중심점, local +y(바라보는 방향) 기준으로 회전 변환, 단위 : 도(degree)
+          Rotation:
+            type: integer
+            default: 0
+            minimum: 0
+            maximum: 359
+          # offset에 따라 로컬 좌표계에서 이동변환 수행, cm 단위
+          # 플레이어 전방을 +y 축으로 함
+          OffsetX: # world +y축을 보는 상황일때 x가 증가하는 방향, 게임 화면 기준 오른쪽 아래를 볼때 양수면 캐릭터 기준 왼쪽으로 이동
+            type: integer
+            default: 0
+          OffsetY:
+            type: integer
+            default: 0
+          OffsetXUniform: # OffsetX에 -n ~ n 사이의 값을 더함. 균등분포.
+            type: integer # 단위 cm
+            minimum: 0
+          OffsetYUniform:
+            type: integer
+            minimum: 0
+          UseCastDirection: # 원점으로 타겟의 위치와 방향을 쓰는 대신, 캐스터의 위치와 타겟으로 향하는 방향을 사용
+            type: boolean
+          # -- Target Filter --
+          Filter:
+            type: string
+            formula: true
+          # -- Visual (Cleint Only) --
+          AreaStartEffect:
+            type: string
+            ref: effect
+          AreaStartEffectScale:
+            type: object
+            additionalProperties: false
+            required:
+              - X
+              - Y
+              - Z
+            properties:
+              X:
+                type: number
+                default: 1.0
+              Y:
+                type: number
+                default: 1.0
+              Z:
+                type: number
+                default: 1.0
+          AreaDoneEffect:
+            type: string
+            ref: effect
+          AreaDoneEffectScale:
+            type: object
+            additionalProperties: false
+            required:
+              - X
+              - Y
+              - Z
+            properties:
+              X:
+                type: number
+                default: 1.0
+              Y:
+                type: number
+                default: 1.0
+              Z:
+                type: number
+                default: 1.0
+
+          OverrideMaterial: #리소스 경로 가이드: /Game/Materials/Decal/파일명.파일명
+            type: string
+    # 후판정 타이밍 백분율, 0이면 선판정(ImmediateSkill)으로 작동
+    # 후판정이여도 즉시 처리되어야 할 스킬 프로퍼티 컴포넌트는 immediate: true 지정
+    DelayedHitTiming:
+      type: integer
+      minimum: 0
+      maximum: 100
+      default: 0
+    ToggleOrder:
+      type: integer
+      minimum: 0
+    # deprecated
+    ToggleGroup:
+      type: string
+    # 토클 그룹에 속한 스킬들. 이 프로퍼티가 있는 스킬 사용 시 array안의 순서대로 실행 됨.
+    ToggleGroupSkills:
+      type: array
+      items:
+        type: object
+        required:
+          - Skill
+        properties:
+          Skill:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            ref: skill
+          OffSkill:
+            type: boolean
+            default: false
+    # Toggle 스킬 유지 조건 - 조건을 만족하지 못하면 FallbackSkill 실행
+    MaintainConditions:
+      type: object
+      additionalProperties: false
+      required:
+        - Checks
+        - FallbackSkill
+      properties:
+        Checks:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            additionalProperties: false
+            required:
+              - Property
+              - Condition
+              - Value
+            properties:
+              Property:
+                type: string
+                enum:
+                  - Hp
+                  - Mp
+              Condition:
+                type: string
+                enum:
+                  - AbovePercent
+                  - BelowPercent
+                  - AboveAbsolute
+                  - BelowAbsolute
+                  - Equals
+              Value:
+                type: number
+        Logic:
+          type: string
+          enum:
+            - And
+            - Or
+          default: And
+        FallbackSkill:
+          type: string
+          ref: skill
+    UpdateAutoCombatBase:
+      type: boolean
+    ReturnToBase:
+      type: boolean
+    AggroCoefficient:   # 어그로 수치 delta (피해): 데미지 * AggroCoefficient + AggroConstant
+      type: integer     # 어그로 수치 delta (회복): 회복량(어그로 테이블 포함 대상) * AggroCoefficient + AggroConstant
+      default: 10000    # 10000 -> 1.0 / 1000 -> 0.1 / 25000 -> 2.0
+    AggroConstant:
+      type: integer
+      default: 0
+    ResetAggroTable:
+      type: boolean
+    BuffDuplicationCheck:
+      type: boolean
+    MultiHitCount:
+      type: integer
+      minimum: 2

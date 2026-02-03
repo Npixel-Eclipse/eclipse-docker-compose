@@ -1,0 +1,52 @@
+- Id: 1
+  Name: FortressFeature
+  WaitConstructionItem: CurrencySeongsoQueue
+  AddWaitConstructionItem: Test_ConstructionQueue_Add_Item
+  InstantHarvestTicketItem: Item_Misc_ImmediatelyHarvest
+  SupportItem: CurrencySupport
+  QuestPrerequisiteIcon: /Game/UIIcon/MapSymbol/MapSymbol_Quest_Sprite.MapSymbol_Quest_Sprite
+  FortressPrerequisiteIcon: /Game/UIIcon/MapSymbol/MapSymbol_Fortress_Sprite.MapSymbol_Fortress_Sprite
+  FortressAddress: Sanctum
+  UpgradeStartReddotKey: UpgradeStart
+  UpgradeCompleteReddotKey: UpgradeComplete
+  UpgradeReddotKey: Upgrade
+  HarvestReddotKey: Harvest
+  HelpMeReddotKey: HelpMe
+  ConstructionQueueReddotKey: ConstructionQueue
+  CharacterLevelHurdledReddotKey: CharacterLevelHurdled
+  ConstructionQueueNotEnoughSystemMessage: UIWord_SystemMsg_OverConstructionQueue
+  ImmediatelyHarvestDeficiencySystemMessage: SystemMsg_Sanctum_ImmediatelyHarvest_Deficiency
+  ImmediatelyHarvestNoConsumeItemSystemMessage: SystemMsg_Sanctum_ImmediatelyHarvest_NoConsumeItem
+  MaxlevelBuildingSystemMessage: Sanctum_Maxlevel
+  OverConstructionQueueItemSystemMessage: OverConstructionQueueItem
+  CompleteAdditionConstructionQueueSystemMessage: Seongso_SystemMsg_AdditionQueue
+  LackPrerequisiteSystemMessage: UIWord_SystemMsg_LackPrerequisite
+  ImmediatelyHarvestNoRelicSystemMessage: SystemMsg_Sanctum_ImmediatelyHarvest_NoRelic
+  LackCostSystemMessage: UIWord_SystemMsg_LackCost
+  UseReduceTimeItemSystemMessage: UIWord_SystemMsg_UseReduceItem
+  CannotHarvestSystemMessage: UIWord_SystemMsg_NoHarvest
+  RequestSupportWhenUpgradingSystemMessage: UIWord_SystemMsg_RequestSupported_Upgrading
+  RequestSupportWhenNotHavingGuildSystemMessage: UIWord_SystemMsg_RequestSupported_Guild
+  RequestSupportWhenAlreadySupportedSystemMessage: UIWord_SystemMsg_RequestSupported_Already
+  InventorySlotNotEnoughSystemMessage: FAIL_INVENTORY_SLOT_NOT_ENOUGH
+  EnterPreviewSkill: Fortress_AddProxy
+  LeavePreviewSkill: RemoveAllProxy
+  RequirementUITab:
+    - Type: Prerequisite
+      Description: Fortress_NeedOption
+    - Type: Cost
+      Description: UIWord_Polymorph_MaterialPopup_Material
+  AllUITabIcon: /Game/UI/FortressSolidarity_SP/TabIcon_All_Sprite.TabIcon_All_Sprite
+  ChangedStatValueTextFormat: "<Green00>{0}</>"
+  FortressMainLevel:
+    - Level: 0
+      Icon: /Game/UI/BattleHUD_SP/FortressLevelIcon01_Sprite.FortressLevelIcon01_Sprite
+    - Level: 1
+      Icon: /Game/UI/BattleHUD_SP/FortressLevelIcon02_Sprite.FortressLevelIcon02_Sprite
+    - Level: 2
+      Icon: /Game/UI/BattleHUD_SP/FortressLevelIcon03_Sprite.FortressLevelIcon03_Sprite
+    - Level: 3
+      Icon: /Game/UI/BattleHUD_SP/FortressLevelIcon04_Sprite.FortressLevelIcon04_Sprite
+  ItemBuffIcon: /Game/UI/UIKit_SP/ItemInfoIcon_Type_Sprite.ItemInfoIcon_Type_Sprite
+  ItemAmountPerUnitBuffIcon: /Game/UI/UIKit_SP/ItemInfoIcon_ResetTime_Sprite.ItemInfoIcon_ResetTime_Sprite
+  MaxItemAmountBuffIcon: /Game/UI/UIKit_SP/ItemInfoIcon_Quantity_Sprite.ItemInfoIcon_Quantity_Sprite

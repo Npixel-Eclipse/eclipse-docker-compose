@@ -1,0 +1,40 @@
+- Id: 785
+  Name: Request_Varitan_Subjugate
+  Comment: 바리탄 침탈지대
+  DailyQuestCategory: Request_Varitan_Subjugate
+  WeeklyQuestCategory: Request_Varitan_Subjugate_Weekly
+  Description: UI_Request_Varitan_Subjugate
+  ContentLimitName: Request_Varitan_Subjugate
+  ShowInHudWhenInActive: false
+- Id: 841
+  Name: Request_Rainwood
+  Comment: 레인우드
+  DailyQuestCategory: Request_Rainwood
+  WeeklyQuestCategory: Request_Rainwood_Weekly
+  Description: UI_Request_Rainwood
+  ContentLimitName: Request_Rainwood
+  ShowInHudWhenInActive: false
+- Id: 81
+  Name: Request_Eldar_Dawnbough
+  Comment: 엘다르 여명지대
+  DailyQuestCategory: Request_Eldar_Dawnbough
+  WeeklyQuestCategory: Request_Eldar_Dawnbough_Weekly
+  Description: UI_Request_Eldar_Dawnbough
+  ContentLimitName: Request_Eldar_Dawnbough
+  ShowInHudWhenInActive: false
+- Id: 541
+  Name: Request_Eldar_Heartwood
+  Comment: 엘다르 중심지대
+  DailyQuestCategory: Request_Eldar_Heartwood
+  WeeklyQuestCategory: Request_Eldar_Heartwood_Weekly
+  Description: UI_Request_Eldar_Heartwood
+  ContentLimitName: Request_Eldar_Heartwood
+  ShowInHudWhenInActive: false
+- Id: 320
+  Name: Request_Eldar_Shadowbloom
+  Comment: 엘다르 그늘지대
+  DailyQuestCategory: Request_Eldar_Shadowbloom
+  WeeklyQuestCategory: Request_Eldar_Shadowbloom_Weekly
+  Description: UI_Request_Eldar_Shadowbloom
+  ContentLimitName: Request_Eldar_Shadowbloom
+  ShowInHudWhenInActive: false

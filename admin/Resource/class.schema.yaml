@@ -1,0 +1,172 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Group
+    - BaseBuffs
+    - NormalAttack
+    - ItemCategory
+    - ModelAsset
+    - StartTerritory
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Description:
+      type: string
+      ref: description
+      visible: true
+    # class를 묶을 수 있는 단위
+    # 근거리/원거리
+    Group:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    BaseBuffs:
+      type: array
+      items:
+        type: string
+    BaseProperties:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - PropertyPreset
+        properties:
+          PropertyPreset:
+            type: string
+            ref: property_preset
+    #S 사용할 평타 스킬
+    NormalAttack:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Skill
+        properties:
+          Skill:
+            type: string
+            ref: skill
+    ItemCategory: # 해당 클래스가 사용 가능한 상위 아이템 카테고리
+      type: string
+      ref: item_category
+    ModelAsset:
+      type: string
+      ref: character_model
+    Icon: #C 리소스 경로 가이드: /Game/UIIcon/.../파일명.파일명
+      type: string
+    StartTerritory:
+      type: string
+      ref: territory
+    #재질
+    Material:
+      type: string
+      ref: character_material
+      default: Normal
+    # 테이블 셀
+    # 동일 레벨을 설정하고 아이템을 다르게 설정하면 여러 종류를 지급함
+    BasicGivenItems:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        staticProperties: true #C required가 정의된 경우, 그외 propertie들이 고정형으로 변환
+        required:
+          - Id
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Name:
+            type: string
+            ref: item
+          Level:
+            type: integer
+            minimum: 1
+            default: 1
+          Amount:
+            type: integer
+            minimum: 1
+            default: 1
+          EquipOnGiven:
+            type: boolean
+          QuickSlotIndex:
+            type: integer
+            minimum: 1
+    # 표시용 대표스탯
+    PrimaryStats:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Name
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Name:
+            type: string
+            ref: stat
+    #C 캐릭터 생성창: 클래스명
+    ClassDescription:
+      type: string
+      ref: description
+    #C 캐릭터 생성창: 칭호
+    TitleDescription:
+      type: string
+      ref: description
+    #C 캐릭터 생성창: 클래스 간략 설명
+    ShortStyleDescription:
+      type: string
+      ref: description
+    #C 캐릭터 생성창: 클래스 상세 설명
+    StyleDescription:
+      type: string
+      ref: description
+    #C 캐릭터 생성창: 대표 스킬 아이템
+    MainSkillItems:
+      type: array
+      items:
+        type: string
+        ref: item
+    #C 캐릭터 생성창: 능력 정보
+    Abilities:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Description:
+            type: string
+            ref: description
+          Level:
+            type: integer
+            minimum: 0
+            maximum: 5
+            default: 0
+          LevelColor: #C 레벨 표시 색상
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9]*$
+            enum:
+              - None
+              - Yellow
+              - Blue
+              - Red
+            default: Yellow
+    #C 캐릭터 생성창: 생성 가능 여부
+    CanCreation:
+      type: boolean
+      default: true
+

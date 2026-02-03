@@ -1,0 +1,172 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    WaitConstructionItem:
+      type: string
+      ref: item
+    AddWaitConstructionItem:
+      type: string
+      ref: item
+    InstantHarvestTicketItem:
+      type: string
+      ref: item
+    SupportItem:
+      type: string
+      ref: item
+    QuestPrerequisiteIcon:
+      type: string
+    FortressPrerequisiteIcon:
+      type: string
+    FortressAddress:
+      type: string
+      ref: address
+    ChangedStatValueTextFormat:
+      type: string
+    UpgradeStartReddotKey:
+      type: string
+    UpgradeCompleteReddotKey:
+      type: string
+    HelpMeReddotKey:
+      type: string
+    UpgradeReddotKey:
+      type: string
+    HarvestReddotKey:
+      type: string
+    ConstructionQueueReddotKey:
+      type: string
+    CharacterLevelHurdledReddotKey:
+      type: string
+    ConstructionQueueNotEnoughSystemMessage:
+      type: string
+      ref: system_message
+    LackPrerequisiteSystemMessage:
+      type: string
+      ref: system_message
+    LackCostSystemMessage:
+      type: string
+      ref: system_message
+    UseReduceTimeItemSystemMessage:
+      type: string
+      ref: system_message
+    CannotHarvestSystemMessage:
+      type: string
+      ref: system_message
+    OverConstructionQueueItemSystemMessage:
+      type: string
+      ref: system_message
+    ItemBuffIcon:
+      type: string
+    ItemAmountPerUnitBuffIcon:
+      type: string
+    MaxItemAmountBuffIcon:
+      type: string
+    ImmediatelyHarvestNoConsumeItemSystemMessage:
+      type: string
+      ref: system_message
+    MaxlevelBuildingSystemMessage:
+      type: string
+      ref: system_message
+    RequestSupportWhenUpgradingSystemMessage:
+      type: string
+      ref: system_message
+    CompleteAdditionConstructionQueueSystemMessage:
+      type: string
+      ref: system_message
+    ImmediatelyHarvestDeficiencySystemMessage:
+      type: string
+      ref: system_message
+    ImmediatelyHarvestNoRelicSystemMessage:
+      type: string
+      ref: system_message
+    RequestSupportWhenNotHavingGuildSystemMessage:
+      type: string
+      ref: system_message
+    RequestSupportWhenAlreadySupportedSystemMessage:
+      type: string
+      ref: system_message
+    InventorySlotNotEnoughSystemMessage:
+      type: string
+      ref: system_message
+    EnterPreviewSkill:
+      type: string
+      ref: skill
+    LeavePreviewSkill:
+      type: string
+      ref: skill
+    RequirementUITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Prerequisite
+              - Cost
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+    AllUITabIcon:
+      type: string
+    FortressMainLevel:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Comment:
+            type: string
+          Icon:
+            type: string
+  required:
+    - Id
+    - Name
+    - WaitConstructionItem
+    - AddWaitConstructionItem
+    - InstantHarvestTicketItem
+    - SupportItem
+    - QuestPrerequisiteIcon
+    - FortressPrerequisiteIcon
+    - ChangedStatValueTextFormat
+    - FortressAddress
+    - UpgradeStartReddotKey
+    - UpgradeCompleteReddotKey
+    - UpgradeReddotKey
+    - HarvestReddotKey
+    - CharacterLevelHurdledReddotKey
+    - ConstructionQueueNotEnoughSystemMessage
+    - OverConstructionQueueItemSystemMessage
+    - CompleteAdditionConstructionQueueSystemMessage
+    - ImmediatelyHarvestDeficiencySystemMessage
+    - ImmediatelyHarvestNoRelicSystemMessage
+    - ImmediatelyHarvestNoConsumeItemSystemMessage
+    - UseReduceTimeItemSystemMessage
+    - CannotHarvestSystemMessage
+    - RequestSupportWhenUpgradingSystemMessage
+    - RequestSupportWhenNotHavingGuildSystemMessage
+    - RequestSupportWhenAlreadySupportedSystemMessage
+    - InventorySlotNotEnoughSystemMessage
+    - EnterPreviewSkill
+    - LeavePreviewSkill
+    - LackPrerequisiteSystemMessage
+    - LackCostSystemMessage
+    - HelpMeReddotKey
+    - MaxlevelBuildingSystemMessage
+    - ConstructionQueueReddotKey
+    - ItemBuffIcon
+    - ItemAmountPerUnitBuffIcon
+    - MaxItemAmountBuffIcon

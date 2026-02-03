@@ -1,0 +1,19 @@
+- Id: 1
+  Name: CharacterInfo
+  DefaultSelectedEquipPage: 0
+  SystemMessage_LockedEquipSlotSelected: CharacterInfo_LockedEquipSlotSelected
+  SystemMessage_StatBookmarkRegisterMax: StatBookmark_RegisterMax
+  ClassWeaponCategory:
+    - Class: Fighter
+      Category:
+        - Item_Equip_Weapon_Fighter_Lsword
+        - Item_Equip_Weapon_Fighter_Sword
+    - Class: Ranger
+      Category:
+        - Item_Equip_Weapon_Ranger_Bow
+        - Item_Equip_Weapon_Ranger_Cbow
+    - Class: Sorcerer
+      Category:
+        - Item_Equip_Weapon_Sorcerer_Staff
+        - Item_Equip_Weapon_Sorcerer_Orb
+  FavoriteID: Stat

@@ -1,0 +1,420 @@
+﻿syntax = "proto3";
+package item;
+import "Common/item_common.proto";
+import "Common/battle_common.proto";
+import "Common/property.proto";
+import "google/protobuf/timestamp.proto";
+import "Server/item.proto";
+
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.item";
+option java_outer_classname = "BattleItemProto";
+
+message BattleItemCommand {
+  oneof message {
+    ItemEvent item_event = 1;
+    //    ItemBuffEvent item_buff_event = 2;
+    ConsumeBattleItem consume_battle_item = 3;
+    HandleBuyingBattleItem handle_buying_battle_item = 4;
+    HandleSellingBattleItem handle_selling_battle_item = 5;
+    TransferItem transfer_item = 6;
+    RefreshLearnedSkill refresh_learned_skill = 7;
+    WelcomeBattleItemReply welcome_battle_item_reply = 8;
+    ItemListEvent item_list_event = 9;
+    DeleteItem delete_item = 10;
+    QuickSlotList quick_slot_list = 11;
+    RunRecipeWithInputBattleRequest run_recipe_with_input_battle_request = 12;
+    SellTradeBattleItemRequest sell_trade_battle_item_request = 14;
+    RewardBattleItem reward_battle_item = 15;
+    ReleaseReservedItem release_reserved_item = 17;
+    SyncInventorySlot sync_inventory_slot = 18;
+    RollbackBattleItem rollback_battle_item = 22;
+    DecreaseBattleItem decrease_battle_item = 23;
+    IncreaseBattleItem increase_battle_item = 24;
+    IncreaseBattleExperience increase_battle_experience = 25;
+    TeleportPaymentFailed teleport_payment_failed = 26;
+    AutoCastList auto_cast_list = 27;
+    AutoCastSkills auto_cast_skills = 28;
+    DeductCostSuccess deduct_cost_success = 29;
+    DeductCostFailure deduct_cost_failure = 30;
+    ItemCollections item_collections = 31;
+    AutoRestoreDeathPenaltyResult auto_restore_death_penalty_result = 32;
+    ScheduleAutoSupplyFailure schedule_auto_supply_failure = 33;
+  }
+}
+
+message ItemEvent {
+  message EquippableItem {
+    message ItemBuffInfo {
+      string buff_name = 1;
+      repeated common.Property properties = 2;
+    }
+    message SlotComparison {
+      string equip_slot = 1;
+      string new_item_uuid = 2;
+      repeated ItemBuffInfo new_buffs = 3;
+      repeated ItemBuffInfo equipped_buffs = 4;
+    }
+
+    string character_uuid = 1;
+    repeated SlotComparison slot_comparisons = 2;
+  }
+
+  reserved  1;
+  common.InventoryEvent inventory_event = 2;
+  bool skip_notify = 3;
+  EquippableItem equipment_buffs = 4;
+}
+
+//message ItemBuffEvent {
+//  message BuffInfo {
+//    string buff_name = 1;
+//    oneof identifier {
+//      string equip_slot = 2;
+//      int64 essence_id = 3;
+//      int64 essence_page_id = 4;
+//    }
+//  }
+//  message ItemBuff {
+//    BuffInfo buff_info = 1;
+//    repeated common.Property properties = 2;
+//    google.protobuf.Timestamp delete_time = 3;
+//  }
+//  message SkillBuff {
+//    int64 skill_id = 1;
+//    repeated common.Property properties = 2;
+//  }
+//
+//  string character_uuid = 1;
+//  repeated BuffInfo old_buffs = 2;
+//  repeated ItemBuff item_buffs = 3;
+//  repeated SkillBuff old_skills = 4;
+//  repeated SkillBuff new_skills = 5;
+//
+//  // 수집, 숙련도 정수 같은 내부적으로만 아이템 취급하는 것들은
+//  // 굳이 아래 uuid를 보내줄 필요 없음
+//  optional string new_item_uuid = 6;
+//  optional string old_item_uuid = 7;
+//}
+
+message QuickSlotList {
+  reserved 1, 3;
+  message QuickSlot {
+    message SkillSlot {
+      int64 skill_id = 1;
+    }
+    message ItemSlot {
+      reserved 1, 2;
+      int64 base_item_id = 3;
+    }
+    string uuid = 1;
+    int64 slot_index = 2;
+    oneof Slot {
+      SkillSlot skill_slot = 4;
+      ItemSlot item_slot = 5;
+    }
+  }
+  repeated QuickSlot quick_slots = 2;
+}
+
+message ConsumeBattleItem {
+  reserved 1;
+  oneof item {
+    string item_uuid = 2;
+    int64 base_item_id = 3;
+  }
+  int64 repeat = 4;
+}
+
+// 아이템 구매 Command (Item -> Battle)
+message HandleBuyingBattleItem {
+  reserved 6;
+  message Item {
+    int64 item_id = 1;
+    int64 amount = 2;
+    google.protobuf.Timestamp expire_time = 4;
+  }
+  message BuyLimit {
+    // key
+    int64 merchandise_id = 1;
+    int64 merchant_id = 2;
+    int64 buy_count = 3;
+  }
+  message BuyLog {
+    int64 merchandise_id = 1;
+    int64 item_id = 2;
+    int64 buy_count = 3;
+    int64 purchased_count_before = 4;
+    int64 purchased_count = 5;
+    int64 cost_item_id = 6;
+    int64 cost = 7;
+  }
+  message BmShopProduct {
+    int64 product_id = 1;
+    int64 product_amount = 2;
+  }
+
+  string character_uuid = 1;
+  repeated Item items = 2;
+  repeated common.ItemTransaction paid_items = 3;
+  repeated BuyLimit paid_buy_limit = 4;
+  int64 merchant_id = 5;
+  repeated string slot_reserve_item_uuid = 7;
+  common.Reason reason = 8;
+  optional BmShopProduct bm_shop_product = 9;
+  repeated BuyLog buy_log = 100;
+}
+
+// 배틀 아이템 판매 Command
+message HandleSellingBattleItem {
+  reserved 2;
+  string character_uuid = 1;
+  repeated Item battle_items = 3;
+  repeated Item rollback_items = 4; // 선 차감된 non-battle-items
+  int64 merchant_id = 5;
+
+  message Item {
+    common.Item item = 1;
+
+    // for log
+    int64 merchandise_id = 2;
+    int64 cost_item_id = 3;
+    int64 cost = 4;
+  }
+}
+
+// 아이템 이동
+message TransferItem {
+  string character_uuid = 1;
+  string inventory = 2;
+  repeated BattleItem battle_items = 3;
+  repeated NonBattleItem non_battle_items = 4;
+  repeated string slot_reserve_item_uuid = 5;
+
+  message BattleItem {
+    string item_uuid = 1;
+    oneof amount {
+      int64 amount_value = 2;
+      bool amount_all = 3;
+    }
+  }
+
+  message NonBattleItem {
+    int64 item_id = 1;
+    int64 amount = 2;
+    repeated common.Property properties = 3;
+    string inventory = 4;
+    google.protobuf.Timestamp expire_time = 6;
+    google.protobuf.Timestamp delete_time = 7;
+    bool is_locked = 8;
+    string item_uuid = 9; // non stackable 아이템만 사용
+  }
+}
+
+// 스킬학습 정보 전달 Command
+message RefreshLearnedSkill {
+  reserved 1;
+  repeated LearnedSkill new_learned_skills = 2;
+  repeated LearnedSkill old_learned_skills = 3;
+
+  message LearnedSkill {
+    string skill_name = 1;
+    reserved 2;
+    int64 skill_level = 3;
+  }
+}
+
+message WelcomeBattleItemReply {
+  reserved 1;
+  common.InventoryEvent inventory_event = 2;
+}
+
+message ItemListEvent {
+  reserved 1;
+  repeated common.InventoryEvent.InventoryItems items = 2;
+  repeated string inventory_names = 3;
+}
+
+message DeleteItem {
+  reserved 1;
+  string uuid = 2;
+  int64 amount = 3;
+  common.Reason reason = 4;
+}
+
+// 제작 - 배틀아이템 차감/롤백 요청
+message RunRecipeWithInputBattleRequest {
+  reserved 1;
+  repeated RecipeInputItem recipe_input_items = 2;
+  bytes run_recipe_with_input_request_raw = 3;
+  common.Reason reason = 4;
+  RequestType request_type = 5;
+
+  message RecipeInputItem {
+    int64 input_item_id = 1; // 아이템의 ID가 아니라, Input의 ID
+    repeated UseItem use_items = 2;
+
+    message UseItem {
+      repeated CandidateItem candidate_items = 1; // 차감할 아이템 후보
+      int64 total_amount = 2; // 전체 차감 수량
+      int64 remain_amount = 3; // 잔여 차감 수량
+      bool is_battle_item = 4;
+      int64 base_item_id = 5;
+
+      message CandidateItem {
+        int64 item_id = 1;
+        string item_uuid = 2;
+
+        // 차감 이후 롤백을 위한 정보
+        int64 decreased_amount = 10;
+        repeated bytes properties = 11; // Item.Property
+        google.protobuf.Timestamp create_time = 15;
+        google.protobuf.Timestamp expire_time = 13;
+        google.protobuf.Timestamp delete_time = 14;
+        google.protobuf.Timestamp acquire_time = 16;
+      }
+    }
+  }
+
+  enum RequestType {
+    DECREASE = 0; // 아이템 차감
+    ROLLBACK = 1; // 아이템 롤백
+  }
+}
+
+message SellTradeBattleItemRequest {
+  reserved 1;
+  bytes trade_uuid = 2; // 카프카 메시지 중복 방지를 위해 거래소에 아이템 등록시에는 request_uuid를 만들어서 trade_uuid로 사용
+  bytes item_uuid = 3;
+  int64 amount = 4;
+  int64 price = 5;
+  int64 registration_fee = 6;
+  string server = 7;
+  optional bytes target_character_uuid = 8;
+}
+
+// 가지급 상태의 아이템 수량을 해제합니다.
+message ReleaseReservedItem {
+  reserved 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+}
+
+message RewardBattleItem {
+  reserved 1;
+  optional bytes item_uuid = 2;
+  int64 item_id = 3;
+  int64 amount = 4;
+  common.Reason reason = 6;
+  optional string inventory = 7;
+  google.protobuf.Timestamp expire_time = 8;
+  google.protobuf.Timestamp delete_time = 9;
+}
+
+message SyncInventorySlot {
+  reserved 1;
+  string inventory_name = 2;
+  int32 remain_slot_count = 3;
+}
+
+message RollbackBattleItem {
+  reserved 1;
+  repeated common.ItemTransaction item_transactions = 2; // 롤백할 아이템 정보
+}
+
+message DecreaseBattleItem {
+  reserved 1, 6;
+  repeated DecreaseItemCandidate battle_items_to_decrease = 2; // 차감할 아이템 들
+  repeated common.ItemTransaction consumed_Items = 3;  // 아이템 서버에서 이미 소모 된 아이템 정보
+  bytes callback_command_on_success = 4;
+  bytes callback_command_on_failure = 5;
+  int64 correlation_id = 7;
+  optional common.ReservedInventorySlots reserved_inventory_slots = 8; // 예약 슬롯 정보
+
+  message DecreaseItemCandidate {
+    repeated int64 candidate_item_ids = 1; // 차감할 아이템 후보
+    int64 amount = 2; // 차감할 수량
+    optional common.Filter filter = 3; // 아이템 검색 조건
+  }
+}
+
+message IncreaseBattleItem {
+  reserved 1;
+  repeated common.BattleItem battle_items = 2;
+  common.Reason reason = 3;
+  int64 repeated_count = 4;
+  optional bytes callback_command = 5;
+  int64 correlation_id = 6;
+}
+
+message IncreaseBattleExperience {
+  reserved 1;
+  int64 amount = 2;
+  int64 repeated_count = 3;
+  optional bytes callback_command = 4;
+}
+
+message TeleportPaymentFailed {
+  reserved 1;
+  repeated common.Property properties = 2;
+}
+
+message AutoCastList {
+  repeated item.AutoCastItemEntity auto_cast_items = 1;
+  repeated item.AutoCastSkillEntity auto_cast_skills = 2;
+  int32 current_preset_num = 3;
+}
+
+message AutoCastSkills {
+  repeated item.AutoCastSkillEntity auto_cast_skills = 1;
+  int32 current_preset_num = 2;
+}
+
+message DeductCostSuccess {
+  int64 correlation_id = 1;
+}
+
+message DeductCostFailure {
+  int64 correlation_id = 1;
+}
+
+message ItemCollections {
+  message ItemCollection {
+    int64 item_collection_id = 1;
+    google.protobuf.Timestamp expire_time = 2;
+  }
+  repeated ItemCollection item_collections = 1;
+}
+
+// [Response] Item -> Battle
+// 스케줄 자동 복구 결과
+message AutoRestoreDeathPenaltyResult {
+  bool success = 1;
+
+  // 복구된 경험치
+  optional int64 restored_exp = 2;
+
+  // 복구된 아이템 UUID 목록
+  repeated string restored_item_uuids = 3;
+
+  // 실패 사유 (success = false인 경우)
+  FailureReason failure_reason = 4;
+
+  enum FailureReason {
+    NONE = 0;
+    FREE_RESTORATION_FAILED = 1;   // 무료 복구 실패
+    GOLD_RESTORATION_FAILED = 2;   // 골드 복구 실패
+  }
+}
+
+// 스케줄 자동 보급 실패 콜백 (Item -> Battle)
+message ScheduleAutoSupplyFailure {
+  SupplyType supply_type = 1;
+
+  enum SupplyType {
+    NONE = 0;
+    AUTO_SUPPLY_BUY = 1;
+    AUTO_SUPPLY_STORAGE = 2;
+  }
+}

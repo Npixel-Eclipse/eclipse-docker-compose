@@ -1,0 +1,20 @@
+- Id: 1
+  Name: guild_name
+  MessageDisplay: false
+  Comment: 길드 이름
+- Id: 59
+  Name: guild_frame
+  MessageDisplay: false
+  Comment: 길드 마크 프레임
+- Id: 192
+  Name: guild_frame_color
+  MessageDisplay: false
+  Comment: 길드 마크 프레임 컬러
+- Id: 34
+  Name: guild_symbol
+  MessageDisplay: false
+  Comment: 길드 마크 심볼
+- Id: 322
+  Name: ranking_mark_ids
+  MessageDisplay: true
+  Comment: 랭킹 마크

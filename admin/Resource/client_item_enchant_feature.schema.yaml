@@ -1,0 +1,176 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MaxEnchantEquipmentCount
+          Value:
+            type: string
+            ref: constants
+    UITabs: #탭 타입 정보.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Single
+              - Multiple
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+    UITargetItemTabs: #강화 아이템 인벤토리 탭 정보.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:     
+          Type: #탭에 해당하는 강화 아이템의 카테고리
+            type: string
+            ref: item_category
+          Comment:
+            type: string
+          Icon:
+            type: string
+          MaterialItemCategories: #탭에 해당하는 재료 아이템의 카테고리로 순서에 따라 정렬.
+            type: array
+            items:
+              type: string
+              ref: item_category  
+    EnchantItemDisplayOrderInfo: #강화 아이템 정렬 정보.
+      type: object
+      additionalProperties: false
+      properties:     
+        EquippedAcendingOrder: #장착 (false:장착순/true:미장착순)
+          type: boolean
+        ItemCategoryOrder: #아이템 카테고리 설정순.
+          type: array
+          items:
+            type: string
+            ref: item_category
+        GradeAcendingOrder: #등급 (false:내림차순/true:오름차순) 여부.
+          type: boolean
+        EquipBuffAcendingOrder: #장착 버프명 (false:내림차순/true:오름차순)
+          type: boolean
+        DeleteTimeAcendingOrder: #삭제 시간 (false:내림차순/true:오름차순)
+          type: boolean
+        TradeTypeOrder: #귀속 설정순(Item TradeType)
+          type: array
+          items:
+            type: string       
+    ChoiceInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - ChoiceEnhanceRelated
+              - ChoiceEnhanceMaterial
+              - ChoiceEnchaceEquip
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+    ResultInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:   
+          Type:
+            type: string
+            enum:
+              - Success       #성공 결과 정보
+              - Fail_Maintain #유지 실패 결과 정보
+              - Fail_Vaporize #소멸 실패 결과 정보
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+          MinFractionalDigits:
+            type: integer
+            minimum: 0
+            default: 4
+          MaxFractionalDigits:
+            type: integer
+            minimum: 0
+            default: 4
+    SafeEnchantInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:   
+          TargetType:
+            type: string
+            ref: item_category
+          ScrollItemName:
+            type: string
+            ref: item
+    ItemFilter: #아이템 필터 정보
+      type: string
+      ref: client_item_filter
+    ItemProbabilityInfos: #아이템 
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - OptionMaintain # 옵션 유지
+              - OptionUp       # 옵션 증가
+              - OptionDown     # 옵션 다운
+          TextStyleKey:
+            type: string     
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - CancelSelected            #선택 취소 정보
+              - NotEnoughCurrency         #재화 부족
+              - ChoiceEnchantRelatedItem  #강화 아이템 미등록
+              - NotEnoughMaterialItem     #재료 부족
+              - CannotRegisterOnSameEnchant #[동일 아이템 등록] 미허용
+              - ImpossibleRegistrationOnSameEnchant #[동일 아이템 등록] 등록할 장비가 없는 경우
+              - OverRegistrationOnSameEnchant #[동일 아이템 등록] 수량을 초과하여 등록 시도
+              - ChoiceEquipItemOnSameEnchant #[동일 아이템 등록] 장비 아이템 미등록
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+    
+  required:
+    - Id
+    - Name

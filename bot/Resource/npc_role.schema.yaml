@@ -1,0 +1,76 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Priority
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - Quest
+        - GuildMerchant
+        - ArmorMerchant
+        - SkillBookMerchant
+        - GoodsMerchant
+        - WeaponMerchant
+        - AccessoryMerchant
+        - SkillEnchantMerchant
+        - AccountStorage
+        - Conversation
+        - DiaMerchant
+        - Portal_Enter
+        - Portal_Exit
+        - HuntingZoneMerchant
+        - ChallengeDungeonMerchant
+        - BattleGroundMerchant
+        - NonMerchant
+        - Monster
+        - Fortress_Enter
+        - Solidarity
+    #우선순위   
+    Priority:
+      type: integer
+      minimum: 1
+
+    VisibleInNpcList: #Minimap 에 표기할 지 여부 / Npc 리스트에 표기할 지 여부
+      type: boolean
+      default: false
+
+    NamePlateTextStyle: #네임플레이트 색상
+      type: string
+
+    Comment:
+      type: string
+
+    #해당 기능의 Icon (npc 머리 위에 출력)
+    Icon:
+      type: string
+
+    #해당 기능의 HUD icon (마을 NPC 바로가기 버튼)
+    HUDIcon:
+      type: string
+
+    #HUD 버튼 순서 (좌측 상단부터 1번)
+    HUDSortNum:
+      type: integer
+      
+    #QuestRole처럼 기본적으로 있는게 아니라 해당퀘스트 진행시에만 나타나는것처럼 특정 시간에만 나타날 때 true 
+    GenerateOnRuntime:
+      type: boolean
+      default: false
+
+    TitleDescription:
+      type: string
+      ref: description
+
+    PortraitIcon: #초상화 리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+
+#NPC 기능이 필요할 경우 Enum값을 추가 후 빌드를 하여야 합니다.

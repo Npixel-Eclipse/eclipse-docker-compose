@@ -1,0 +1,13 @@
+- Id: 1
+  Name: GuildQuest
+  GuildQuestTab:
+    - Group: Daily
+      DefaultTab: true
+      Description: UIWord_GuildQuest_Tab_Daily
+      Comment: 일일임무
+    - Group: Repeat
+      Description: UIWord_GuildQuest_Tab_Repeat
+      Comment: 반복임무
+  GuildAttendGoalType: GuildAttend
+  GuildCollectionBuffCategory:
+    - Category: Buff

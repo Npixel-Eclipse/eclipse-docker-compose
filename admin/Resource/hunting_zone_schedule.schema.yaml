@@ -1,0 +1,56 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Season
+    - ReleaseTime
+    - StartTime
+    - BidDuration
+    - SettlementDuration
+    - BaseToken
+    - TokenCurrency
+    - TokenAmount
+    - TokenDistribution
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Season:
+      type: integer
+      minimum: 1
+    ReleaseTime:
+      type: string
+    StartTime:
+      type: string
+    BidDuration:
+      type: integer
+    SettlementDuration:
+      type: integer
+    BaseToken: # Base 창조석 연결 (Base 연결된 것 중 Tradable 타입이 있어야함)
+      type: string
+      ref: item
+    TokenCurrency:
+      type: string
+      ref: item
+    TokenAmount:
+      type: integer
+    TokenDistribution:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - DistributionRate
+        properties:
+          DistributionRate:
+            type: integer
+            default: -1

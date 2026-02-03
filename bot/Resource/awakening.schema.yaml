@@ -1,0 +1,82 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+    - TargetProperty
+    - Expand
+    - Awaken
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Category:
+      type: string
+      ref: awakening_category
+    TargetProperty:
+      type: string
+      ref: property
+    DisplayOrder:
+      type: integer
+    Expand:
+      visible: true
+      type: array
+      items:
+        type: object
+        required: 
+          - Step
+          - ExpandAt
+          - CostItem
+          - Cost
+          - Condition
+        properties:
+          Step:
+            type: integer
+            minimum: 1
+          ExpandAt: #확장 되는 레벨
+            type: integer
+            minimum: 1
+          CostItem: #RequiredCostItem
+            type: string
+            ref: item
+            base_ref: true
+          Cost: #RequiredCost
+            type: integer
+            minimum: 1
+          Probability:
+            visible: true
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+          Condition: #RequiredCondition
+            type: string
+            ref: awakening_condition
+    Awaken:
+      visible: true
+      type: array
+      items:
+        type: object
+        required:
+          - Level
+          - CostItem
+          - Cost
+          - Bonus
+        properties:
+          Level:
+            type: integer
+            minimum: 1
+          CostItem:
+            type: string
+            ref: item
+          Cost:
+            type: integer
+          Bonus:
+            type: integer
+            minimum: 1

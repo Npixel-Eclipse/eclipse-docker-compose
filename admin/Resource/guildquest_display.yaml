@@ -1,0 +1,58 @@
+- Id: 3
+  Name: GuildGoldDonation_Quest
+  Comment: 길드 골드 기부
+  QuestCategory: GuildGoldDonation_Quest
+  QuestType: DonationQuest
+  DonateCategoryIcon: /Game/UIIcon/Item/Icons/ETC_Gold_G01_M.ETC_Gold_G01_M
+  DonateCurrencyIcon: /Game/UIIcon/Item/Icons/ETC_Gold_G01_S.ETC_Gold_G01_S
+- Id: 4
+  Name: GuildDiamondDonation_Quest
+  Comment: 길드 다이아 기부
+  QuestCategory: GuildDiamondDonation_Quest
+  QuestType: DonationQuest
+  DonateCategoryIcon: /Game/UIIcon/Item/Icons/ETC_Diamond_M.ETC_Diamond_M
+  DonateCurrencyIcon: /Game/UIIcon/Item/Icons/ETC_Diamond_S.ETC_Diamond_S
+- Id: 505
+  Name: GuildDiamondDonation_Quest01
+  Comment: 길드 고급 다이아 기부
+  QuestCategory: GuildDiamondDonation_Quest01
+  QuestType: DonationQuest
+  DonateCategoryIcon: /Game/UIIcon/Item/Icons/ETC_Diamond_M.ETC_Diamond_M
+  DonateCurrencyIcon: /Game/UIIcon/Item/Icons/ETC_Diamond_S.ETC_Diamond_S
+- Id: 6
+  Name: GuildAttend_Quest
+  Comment: 길드 출석퀘스트
+  QuestCategory: GuildAttend
+  QuestType: AttendQuest
+- Id: 7
+  Name: DailyQuest
+  Comment: 길드 일일퀘스트
+  QuestCategory: Guild_Daily_Mission
+  QuestType: DailyQuest
+- Id: 8
+  Name: DailyBox
+  Comment: 길드 일일상자퀘스트
+  QuestCategory: Guild_Daily_Mission_Box
+  QuestType: DailyBox
+- Id: 9
+  Name: RepeatCount
+  Comment: 길드 반복퀘스트(카운트용)
+  QuestCategory: Guild_Repeatable_Mission
+  QuestType: RepeatCount
+- Id: 10
+  Name: RepeatReward
+  Comment: 길드 반복퀘스트(보상용)
+  QuestCategory: Guild_Repeatable_Mission_Reward
+  QuestType: RepeatReward
+- Id: 723
+  Name: RepeatBoxCount
+  Comment: 길드 반복상자퀘스트(카운트용)
+  QuestCategory: Guild_Repeatable_Mission_Box
+  QuestType: RepeatBoxCount
+- Id: 744
+  Name: RepeatBoxReward
+  Comment: 길드 반복상자퀘스트(보상용)
+  QuestCategory: Guild_Repeatable_Mission_Box_Reward
+  QuestType: RepeatBoxReward
+
+

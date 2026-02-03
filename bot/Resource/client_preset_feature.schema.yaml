@@ -1,0 +1,58 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    PresetSlotCount:
+      type: string
+      ref: constants
+    PresetMaxSlotCount:
+      type: string
+      ref: constants
+    PresetSlotPrice:
+      type: string
+      ref: constants
+    ExpandedPresetSlotCount:
+      type: string
+      ref: item
+    SuccessExpandMessage:
+      type: string
+      ref: system_message
+    SuccessSaveMessage:
+      type: string
+      ref: system_message
+    SuccessApplyMessage:
+      type: string
+      ref: system_message
+    AppliedPresetMessage:
+      type: string
+      ref: system_message
+    ApplyCoolTimeMessage:
+      type: string
+      ref: system_message
+    NotSavedMessage:
+      type: string
+      ref: system_message
+    AlreadyAppliedMessage:
+      type: string
+      ref: system_message
+  required:
+    - Id
+    - Name
+    - PresetSlotCount
+    - PresetMaxSlotCount
+    - PresetSlotPrice
+    - ExpandedPresetSlotCount
+    - SuccessExpandMessage
+    - SuccessSaveMessage
+    - SuccessApplyMessage
+    - AppliedPresetMessage
+    - ApplyCoolTimeMessage
+    - NotSavedMessage
+    - AlreadyAppliedMessage

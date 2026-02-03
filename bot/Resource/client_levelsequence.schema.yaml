@@ -1,0 +1,41 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    LevelSequenceAsset: # 레벨시퀀스 리소스 경로 가이드: /Game/.../파일명.파일명
+      type: string
+    SubLevelAsset:
+      type: string
+    IsLoop:
+      type: boolean
+      default: false
+    TakeList:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          TakeName:
+            type: string
+          LevelSequence:
+            type: string
+            ref: client_levelsequence
+    SubName:
+      type: string
+    ShowUI:
+      type: boolean
+      default: true    
+    HideUILayer: # EXUILayerType과 Screen
+      type: array
+      items:
+        type: string
+  required:
+    - Id
+    - Name

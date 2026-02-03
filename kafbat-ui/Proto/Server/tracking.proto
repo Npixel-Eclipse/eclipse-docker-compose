@@ -1,0 +1,36 @@
+syntax = "proto3";
+package tracking;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.tracking";
+option java_outer_classname = "TrackingServiceProto";
+
+message TrackingCommand {
+  oneof command {
+    Record record = 1;
+    string update_name = 2;
+    bool delete_all_list = 3;
+  }
+
+  message Record {
+    string service = 1;
+    string data = 2;
+    int64 captured_at_in_millis = 3;
+  }
+}
+
+message TrackingData {
+  optional string name = 1;
+
+  repeated Record records = 2;
+  int64 record_started_at_in_millis = 3; // 레코드 중 가장 빠른 시간
+  int64 record_ended_at_in_millis = 4; // 레코드 중 가장 늦은 시간
+
+  message Record {
+    string service = 1;
+    string data = 2;
+    int64 captured_at_in_millis = 3;
+  }
+}

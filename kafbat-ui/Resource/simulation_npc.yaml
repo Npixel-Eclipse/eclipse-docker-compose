@@ -1,0 +1,383 @@
+- Id: 10000000000
+  Name: Simulation_Passive_Monster # Simulation_Potion_Item <-- 이 아이템 드랍
+  Ai: PassiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 5
+    - PropertyName: MaxHp
+      PropertyValue: 10000
+    - PropertyName: Hp
+      PropertyValue: 10000
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+- Id: 10000000001
+  Name: Simulation_Passive_Transform_Skill_Item_Monster # Simulation_Transform_Skill_Battle_Item <-- 이 아이템 드랍
+  Ai: PassiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Asset: PC002
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 5
+    - PropertyName: MaxHp
+      PropertyValue: 1000
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000002
+  Name: Simulation_Passive_Monster_Spawn_Interval
+  Ai: PassiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 5
+    - PropertyName: MaxHp
+      PropertyValue: 1000
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000004
+  Name: Simulation_Performance_Passive_Monster_Spawn_Interval
+  Ai: PassiveMonster
+  Asset: PC002
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 5
+    - PropertyName: MaxHp
+      PropertyValue: 3000
+    - PropertyName: Hp
+      PropertyValue: 3000
+- Id: 10000000005
+  Name: Simulation_Performance_Aggressive_Monster_Spawn_Interval
+  Ai: AggressiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: MaxHp
+      PropertyValue: 3000
+    - PropertyName: Hp
+      PropertyValue: 3000
+    - PropertyName: Aggressive
+      PropertyValue: true      
+- Id: 10000000006
+  Name: Simulation_No_Move_Npc
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  MaxHp: 1000
+  Asset: PC002
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: MaxHp
+      PropertyValue: 1000
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000007
+  Name: Simulation_Trap_Npc
+  Comment: 덫 npc
+  Ai: Ranger_HoldTrap_Npc_Ai
+  BaseBuffs:
+    - Trap_BaseBuff
+    - IsNeutralNpcBuff
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  NpcRole: Monster
+  SightRange: 1
+  Asset: PC002
+  NpcProperties:
+    - PropertyName: RecognitionRange
+      PropertyValue: 1
+    - PropertyName: MaxHp
+      PropertyValue: 100000
+    - PropertyName: Hp
+      PropertyValue: 100000
+- Id: 10000000009
+  Name: Simulation_Trap_Npc_EnemyTarget
+  Comment: 덫 npc - EnemyTarget 테스트용 (실제 덫과 동일하게 AI 사용)
+  Ai: Simulation_Trap_Npc_Ai
+  BaseBuffs:
+    - Trap_BaseBuff
+    - IsNeutralNpcBuff
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  NpcRole: Monster
+  SightRange: 1
+  Asset: PC002
+  CopyMasterProperties:
+      - Test_Servant_AddedDamage_Group
+  NpcProperties:
+    - PropertyName: RecognitionRange
+      PropertyValue: 1
+    - PropertyName: MaxHp
+      PropertyValue: 100000
+    - PropertyName: Hp
+      PropertyValue: 100000
+    - PropertyName: CanPk
+      PropertyValue: 1
+- Id: 10000000008
+  Name: Simulation_Servant_NPC
+  Comment: Servant master property reference test NPC - references master AddedDamage and MaxHp
+  Ai: Simulation_Servant_NPC_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Servant_Attack
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000010
+  Name: Simulation_Servant_With_Trigger_NPC
+  Comment: Servant NPC that uses trigger skills - applies trigger buff and references master AddedDamage
+  Ai: Simulation_Servant_With_Trigger_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Servant_Attack_With_Trigger
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000011
+  Name: Simulation_Servant_With_OnHit_Trigger_NPC
+  Comment: Servant NPC with CastOnHit trigger buff - triggers additional damage when attacking (uses Master's AddedDamage)
+  Ai: Simulation_Servant_With_OnHit_Trigger_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  BaseBuffs:
+    - Simulation_Servant_Trigger_OnHit_Buff
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Servant_Attack_With_OnHit_Trigger
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000012
+  Name: Simulation_Servant_With_CastWhenHit_NPC
+  Comment: Servant NPC with CastWhenHit counter-attack buff - triggers damage when hit (uses Master's AddedDamage)
+  Ai: PassiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  BaseBuffs:
+    - Simulation_Servant_Trigger_CastWhenHit_Buff
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: MaxHp
+      PropertyValue: 1000
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000013
+  Name: Simulation_Nested_Servant_Level1_NPC
+  Comment: Level1 Servant - 자신의 Servant를 소환할 수 있음 (Master의 AddedDamage를 상속)
+  Ai: Simulation_Nested_Servant_Level1_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000014
+  Name: Simulation_Nested_Servant_Level2_NPC
+  Comment: Level2 Servant (Servant의 Servant) - 최상위 Master의 AddedDamage를 사용해야 함
+  Ai: Simulation_Nested_Servant_Level2_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Nested_Servant_Attack
+  CopyMasterProperties:
+    - Test_Servant_Basic_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000015
+  Name: Simulation_Servant_Missing_Property_NPC
+  Comment: Servant NPC that inherits CustomMissingProperty (Master doesn't have it, should default to 0)
+  Ai: Simulation_Servant_Missing_Property_Ai
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: NonSleepMonster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Servant_Attack_With_Missing_Property
+  CopyMasterProperties:
+    - Test_Servant_MeleeDamage_Group
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 7
+    - PropertyName: Hp
+      PropertyValue: 1000
+- Id: 10000000016
+  Name: Simulation_Bonus_Gold_Monster
+  Comment: CalcDropGoldAmount 테스트용 몬스터
+  Ai: PassiveMonster
+  BaseProperties:
+    - PropertyPreset: Simulation_Monster_Normal_Common
+  NpcType: Monster
+  Size:
+    - 1
+    - 1
+  AggroType: Normal
+  Asset: PC002
+  Experience: 100
+  NormalAttack: Simulation_Monster_Melee_NormalAttack
+  NpcProperties:
+    - PropertyName: NPCLevel
+      PropertyValue: 10
+    - PropertyName: RecognitionRange
+      PropertyValue: 5
+    - PropertyName: MaxHp
+      PropertyValue: 100
+    - PropertyName: Hp
+      PropertyValue: 100
+- Id: 10000000017
+  Name: Simulation_Town_Merchant
+  Comment: 시뮬레이션 마을 상인 (자동 구매용)
+  BaseProperties:
+    - PropertyPreset: Invincible
+  NpcType: Merchant
+  Size:
+    - 1
+    - 1
+  Asset: NP051
+  Merchant: Merchant_Basic_Goods
+  DetectionRange: 5
+  NpcProperties:
+    - PropertyName: IsTalkable
+      PropertyValue: true

@@ -1,0 +1,95 @@
+syntax = "proto3";
+package eclipse.client.dungeon;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.dungeon";
+option java_outer_classname = "ClientDungeonProto";
+
+enum DungeonResult {
+  SUCCESS = 0;
+  FAIL_ENTER = 3;
+  FAIL_CHALLENGE = 4;
+}
+
+enum DungeonEventType {
+  LISTING = 0;
+  UPDATE = 1;
+}
+
+enum DungeonCondition {
+  OK = 0;
+  UNHEALTHY = 1;
+}
+
+enum DungeonCongestion {
+  LOW = 0;
+  MEDIUM = 1;
+  HIGH = 2;
+  FULL = 3;
+}
+
+message DungeonRequest {
+  oneof request {
+    List list = 1;
+    InterInfo inter_info = 2;
+  }
+  message List {
+    repeated int64 dungeon_ids = 1;
+  }
+  message InterInfo {
+    int64 dungeon_id = 1;
+    int64 floor = 2;
+  }
+}
+
+message DungeonEvent {
+  oneof event {
+    List list = 1;
+    Challenge challenge = 2;
+    InterInfo inter_info = 3;
+  }
+
+  message List {
+    message Dungeon {
+      int64 dungeon_id = 1;
+      optional int64 reward_rate = 2;
+    }
+
+    message Resource {
+      int64 resource_id = 1;
+
+      google.protobuf.Duration remain_time = 2;// 기본 이용 시간
+      google.protobuf.Duration charge_time = 3;// 충전 이용 시간
+
+      optional int64 remain_count = 4;// 기본 이용 횟수
+      optional int64 charge_count = 5;// 충전 이용 횟수
+
+      google.protobuf.Timestamp refresh_at = 6;// 초기화 시간
+    }
+
+    DungeonEventType event_type = 1;
+
+    // 유저의 사용 가능 던전(UI 메뉴 표시 대상)
+    repeated Dungeon dungeons = 4;
+    // 유저의 던전 이용 시간, 이용 횟수, 초기화 시간
+    repeated Resource resources = 5;
+  }
+
+  message Challenge {
+    DungeonResult result = 1;
+    google.protobuf.Duration play_time = 2;
+    int64 dungeon_id = 3;
+    optional int64 rank = 4;
+    optional int64 reward_rate = 5;
+    google.protobuf.Timestamp reward_renewal_timestamp = 6;
+  }
+
+  message InterInfo {
+    repeated string matching_servers = 1;
+    optional DungeonCondition dungeon_condition = 2;
+    optional DungeonCongestion dungeon_congestion = 3;
+  }
+}

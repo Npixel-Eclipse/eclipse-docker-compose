@@ -1,0 +1,68 @@
+- Id: 1
+  Name: System
+  Comment: 시스템
+  Description: UIChat_System
+  MessageTextStyle: ChattingSystem
+  ShowUserNickname: false
+- Id: 2
+  Name: World
+  Comment: 전체
+  Description: UIChat_World
+  UserNicknameTextStyle: Text01
+  MessageTextStyle: ChattingWorld
+  ContentLimit: Chat_World
+  Shortcut:
+    - /ㅁ
+    - /a
+    - /월
+    - /월드
+    - /all
+- Id: 3
+  Name: Party
+  Comment: 파티
+  Description: UIChat_Party
+  UserNicknameTextStyle: Text01
+  MessageTextStyle: ChattingParty
+  Shortcut:
+    - /ㅔ
+    - /p
+    - /파
+    - /파티
+    - /party
+- Id: 4
+  Name: Whisper
+  Comment: 귓속말
+  Description: UIChat_Whisper
+  UserNicknameTextStyle: Text01
+  MessageTextStyle: ChattingWhisper
+  Shortcut:
+    - /ㅈ
+    - /w
+    - /귓
+    - /귓속말
+    - /whisper
+- Id: 5
+  Name: Guild
+  Comment: 길드
+  Description: UIChat_Guild
+  UserNicknameTextStyle: Text01
+  MessageTextStyle: ChattingGuild
+  Shortcut:
+    - /ㅎ
+    - /g
+    - /길
+    - /길드
+    - /guild
+- Id: 6
+  Name: Local
+  Comment: "지역, 일반"
+  Description: UIChat_Local
+  DelegateTopic: chat.command.message.delegate.local
+  UserNicknameTextStyle: Text01
+  MessageTextStyle: ChattingLocal
+  Shortcut:
+    - /ㄴ
+    - /s
+    - /일
+    - /일반
+    - /say

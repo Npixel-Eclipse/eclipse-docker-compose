@@ -1,0 +1,26 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "PkLogLogServiceProto";
+
+message ScornCharacter {
+  string target_character_uuid = 1;
+  int64 target_guild_id = 2;
+  string description = 3;
+  string emoji = 4;
+  int64 record_pklog_scorn_id = 5;
+  int64 left_scorn = 6;
+  string expire_time = 7;
+}
+
+message TraceCharacter {
+  string target_character_uuid = 1;
+  int64 target_guild_id = 2;
+}
+
+message WantCharacter {
+  string pk_log_uuid = 1;
+  int64 requester_guild_id = 2;
+}

@@ -1,0 +1,45 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    EnoughAmountTextStyleKey:
+      type: string
+    NotEnoughAmountTextStyleKey:
+      type: string
+    KeepMaterialAchieveMaxLevel:
+      type: string
+      ref: grade
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - ChoiceEnchantRelatedItem  #강화 스킬/재료 미등록
+              - NotEnoughCurrency         #골드 부족
+              - NotEnoughMaterialItem     #강화석 부족
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+    EnchantFilter:
+      type: string
+      ref: client_item_filter
+  required:
+    - Id
+    - Name
+    - EnoughAmountTextStyleKey
+    - NotEnoughAmountTextStyleKey
+    - KeepMaterialAchieveMaxLevel
+    - EnchantFilter

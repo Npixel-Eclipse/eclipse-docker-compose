@@ -1,0 +1,116 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Season:
+      type: integer
+      minimum: 1
+    Address: # 권역
+      type: string
+      ref: address
+    GoldBonusRate:
+      type: integer
+      minimum: 0
+    Group:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - HuntingZone
+          - DistributionRate
+        properties:
+          HuntingZone:
+            type: string
+            ref: hunting_zone
+          DistributionRate: # 0 ~ 100
+            type: integer
+            minimum: 0
+          IsRepresentative:
+            type: boolean
+    GroupShopMerchant:
+      type: string
+      ref: item_merchant
+    ShopMerchant:
+      type: string
+      ref: item_merchant
+    # 권역 특산품 구매 수량 조건
+    GroupBuyAmountCondition:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Merchandise
+          - OwnerBound                  
+          - Refresh
+        properties:
+          Merchandise:
+            type: string
+            ref: item_merchandise
+          OwnerBound: # AddendBuyAmount 관리 단위
+            type: string
+            enum:
+              - Character            
+          AddendBuyAmount: # 구매 횟수 가산항
+            type: integer
+            minimum: 0
+          InvestorRank: # 최소 랭킹 조건(ex: 랭킹 3 이상)
+            type: integer
+            minimum: 0
+          LowerRank: # 해당 랭킹보다 낮으면 공통 보상
+            type: integer
+            minimum: 1
+          Refresh: # 구매 횟수 초기화
+            type: string
+            enum:
+              - None
+              - HuntingZoneMainSeason
+              - HuntingZoneSubSeason
+    # 영토 1위 길드들의 구매 수량 조건
+    HuntingZoneBuyAmountCondition:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Merchandise
+          - OwnerBound                  
+          - Refresh
+        properties:
+          Merchandise:
+            type: string
+            ref: item_merchandise
+          OwnerBound: # AddendBuyAmount 관리 단위
+            type: string
+            enum:
+              - Character        
+          AddendBuyAmount: # 구매 횟수 가산항
+            type: integer
+            minimum: 1
+          Refresh: # 구매 횟수 초기화
+            type: string
+            enum:
+              - None
+              - HuntingZoneMainSeason
+              - HuntingZoneSubSeason              
+    DisplayOrder:
+      type: integer
+  required:
+    - Id
+    - Name
+    - Season
+    - Address
+    - Group
+    - GroupShopMerchant
+    - ShopMerchant

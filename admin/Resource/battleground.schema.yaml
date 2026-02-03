@@ -1,0 +1,102 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - GoalScore
+    - Duration
+    - ResurrectCoolTime
+    - Reward
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+      visible: true
+    # 미니맵 보스 위치
+    MapInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Icon
+          - IconName
+          - Summary
+          - DisplayTerritory
+        properties:
+          Icon:
+            type: string
+            visible: true
+          IconName:
+            type: string
+            ref: description
+          Summary:
+            type: string
+            ref: description
+          DisplayTerritory:
+            type: string
+            ref: territory
+    # 목표 점수
+    GoalScore:
+      type: integer
+      minimum: 1
+    # 전장 제한 시간 (단위: 분)
+    Duration:
+      type: integer
+      minimum: 1
+    # 부활 쿨타임 (단위: 초)
+    ResurrectCoolTime:
+      type: integer
+      minimum: 0
+    # 보상
+    Reward:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Target
+          - Item
+          - Amount
+        properties:
+          Comment:
+            type: string
+            visible: true
+          # 대상
+          ## All : 승패 무관
+          ## Win : 승리팀
+          ## Lose : 패배팀
+          ## BossKill : 보스를 처치한 팀 전원
+          Target:
+            type: string
+            enum:
+              - All
+              - Win
+              - Lose
+              - BossKill
+          # 시작 랭크
+          RankStart:
+            type: integer
+          # 종료 랭크
+          RankEnd:
+            type: integer
+          # 아이템
+          Item:
+            type: string
+            ref: item
+          # 강화 수치
+          EnchantLevel:
+            type: integer
+            minimum: 0
+          # 수량
+          Amount:
+            type: integer
+            minimum: 1

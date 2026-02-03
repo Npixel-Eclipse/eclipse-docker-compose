@@ -1,0 +1,42 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    ManifestRule:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - TargetProperty
+          - TargetPropertyGrade
+          - Probability
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          TargetProperty:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+          TargetPropertyGrade:
+            type: string
+            ref: grade
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true

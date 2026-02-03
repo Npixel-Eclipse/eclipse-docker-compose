@@ -1,0 +1,52 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Description: #C 텍스트로 지정 안할 경우 ChatType의 첫번째 Description으로 표시
+      type: string
+      ref: description
+      visible: true
+    Icon:
+      type: string
+    ChatType:
+      type: array
+      items:
+        type: string
+        ref: chat_type
+    IsCategory: #C 채팅 카테고리 여부
+      type: boolean
+      default: false
+    IsType: #C 채팅 타입 여부
+      type: boolean
+      default: false
+    CanUse: #C 컨텐츠 잠금 여부
+      type: boolean
+      default: true
+    CheckParty: #C 파티 참여 여부에 따라 활성화.
+      type: boolean
+      default: false
+    CheckGuild: #C 길드 가입 여부에 따라 활성화.
+      type: boolean
+      default: false      
+    DisplayOrder: #C 표시 순서로 작은 값일수록 이전에 표시되고 큰 값일수록 뒤에 표시
+      type: integer
+      default: 0  
+    ChatTypeSetting:
+      type: string
+      ref: setting
+    TextStyle: #C 텍스트 스타일
+      type: string
+      ref: richtext_display      
+  required:
+    - Id
+    - Name

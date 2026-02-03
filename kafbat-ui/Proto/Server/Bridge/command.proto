@@ -1,0 +1,95 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.bridge.command";
+option java_outer_classname = "ServerBridgeCommandProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package bridge_command;
+
+enum BridgeCommandResult {
+  SUCCESS = 0;
+  FAIL = 1;
+}
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+
+message BridgeCommand {
+  oneof command {
+    // general
+
+    // stove
+    StoveItemBoxReward stove_item_box_reward = 100;
+    StoveBillingPurchase stove_billing_purchase = 101;
+    StoveBillingVoided stove_billing_voided = 102;
+  }
+
+  // key: account id
+  message StoveItemBoxReward {
+    int64 account_id = 1;
+    int64 publisher_character_id = 2;
+    string service_type = 3;
+
+    // 지급 아이템 관련
+    reserved 100; // string item_name = 100;
+    int64 item_id = 103;
+    int64 item_amount = 101;
+    optional google.protobuf.Timestamp expired_at = 102; // end_dt
+
+    // 요청 관련
+    string transaction_id = 200;
+    string reward_message = 201;
+    repeated Payload payload = 202;
+
+    // 브릿지 서버 내부용
+    bytes reply_wait_uuid = 300;
+    string reply_topic_name = 301;
+
+    message Payload {
+      string key = 1;
+      string value = 2;
+    }
+  }
+
+  // key: transaction id
+  message StoveBillingPurchase {
+    int64 account_id = 1;
+    int64 publisher_character_id = 2;
+    string publisher_world_id = 3;
+
+    // 빌링 관련
+    string billing_platform_type = 100;
+    string notification_type = 101;
+    string tid = 102;
+    string product_id = 103; // 이클립스 상품 ID
+    int32 quantity = 104;
+    optional string voided_tid = 105;
+
+    // 브릿지 서버 내부용
+    bytes reply_wait_uuid = 200;
+    string reply_topic_name = 201;
+  }
+
+  // key: transaction id
+  message StoveBillingVoided {
+    int64 account_id = 1;
+    int64 publisher_character_id = 2;
+
+    // 비정상 결제 정보
+    string transaction_id = 100;
+    string market_code = 101;
+    string product_id = 102;
+    string market_product_id = 103;
+    google.protobuf.Timestamp voided_at = 104;
+    google.protobuf.Timestamp purchased_at = 105;
+    string currency = 106;
+    double price = 107;
+    bool is_voided = 108;
+
+    // 브릿지 서버 내부용
+    bytes reply_wait_uuid = 200;
+    string reply_topic_name = 201;
+  }
+}

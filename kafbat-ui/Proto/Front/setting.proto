@@ -1,0 +1,39 @@
+syntax = "proto3";
+package eclipse.client.setting;
+import "Common/setting_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.setting";
+option java_outer_classname = "ClientSettingProto";
+
+
+enum SettingResultCode {
+  SUCCESS = 0;
+  FAIL = 1;
+  FAIL_NOT_FOUND_IN_RESOURCE = 101; // setting.yaml 안에 변경하려는 설정이 없을 경우 발생
+  FAIL_TYPE_MISMATCH = 102;
+}
+
+message Settings {
+  // setting.yaml의 길이가 이론적 최대 길이, 길이 제한에 클라와 협의 필요
+  repeated common.Setting values = 1;
+}
+
+message SettingRequest {
+  message List {}
+  message Replace {
+    Settings settings = 1;
+  }
+
+  oneof request {
+    List list = 1;
+    Replace replace = 2;
+  }
+}
+
+message SettingEvent {
+  oneof event {
+    Settings settings = 1;
+  }
+  optional SettingResultCode result_code = 101;
+}

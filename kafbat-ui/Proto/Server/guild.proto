@@ -1,0 +1,716 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.guild";
+option java_outer_classname = "GuildServiceProto";
+
+import "Server/battle.proto";
+import "Server/session.proto";
+import "Common/guild_common.proto";
+import "Common/callback.proto";
+import "Common/item_common.proto";
+import "Common/battle_common.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/kafka_key_common.proto";
+import "Common/property.proto";
+
+package guild;
+
+message GuildInfoEvent {
+  string guild_id = 1;
+  string guild_name = 2;
+  common.GuildMark guild_mark = 3;
+  int64 member_count = 4;
+  int64 max_member_count = 5;
+  int64 guild_level = 6;
+  int64 guild_exp = 7;
+  string guild_master = 9;
+
+  bool is_hunting_zone_enabled = 8;
+}
+
+message GuildMemberEvent{
+  string character_uuid = 1;
+  string character_name = 2;
+  int64 guild_id = 3;
+  string guild_name = 4;
+  common.GuildMark guild_mark = 5;
+  string role = 6;
+  string server = 7;
+
+  Reason reason = 101;
+
+  enum Reason{
+    CREATE = 0;
+    JOIN = 1;
+    LEAVE = 2;
+    DISBAND = 3;
+    BANISH = 4;
+    SUBSCRIBE = 5;
+    CHANGE_ROLE = 6;
+  }
+}
+
+enum ReplyResult {
+  FAIL = 0;
+  SUCCESS = 1;
+  NOT_ENOUGH_ITEM = 2;
+}
+
+enum EventType {
+  NOTHING = 0;
+  BATTLE = 1;
+  FRONT = 2;
+}
+
+message GuildCreate {
+  string character_name = 1;
+  string character_uuid = 2;
+  string guild_id = 3;
+  int64 cost = 4;
+  string status = 5;
+}
+
+// character uuid가 존재하기 때문에 따로 메시지 내에 character uuid를 기입할 필요가 없다.
+message GuildAccountCommand {
+  string character_uuid = 1;
+  oneof command {
+    CharacterGuildRequest character_guild_request = 13;
+    GiveGuildBonusItem give_guild_bonus_item = 14;
+    Connect connect = 15;
+    Disconnect disconnect = 16;
+    UpdateLevel update_level = 17;
+    BattleWelcome battle_welcome = 18;
+    GuildCreateReply create_reply = 19;
+    ForwardEvent forward_event = 20;
+    UpdateCombatPoint update_combat_point = 21;
+
+    HelpMe help_me = 31;
+    UpsertHelp upsert_help = 33;
+    UpsertHelpStatus upsert_help_status = 34;
+
+    ContentLimitList content_limit_list = 51;
+
+    UpdateMemberName update_member_name = 61;
+
+    AfterTradeSellList after_trade_sell_list = 71;
+  }
+
+  message ContentLimitList {}
+
+  message Connect {
+    session.Session session = 1;
+  }
+  // account_command 내의 모든 command는 character_uuid를 포함해야 미접속 때 처리가 가능하다
+  // 하지만 해당 경우는 접속 때 발생하기 때문에 괜찮다.
+  message Disconnect {
+  }
+  message UpdateLevel {
+    battle.PcLevelEvent pc_level_event = 1;
+  }
+  message BattleWelcome {
+    battle.Welcome welcome = 1;
+  }
+
+  message GuildCreateReply{
+    int64 account_id = 4;
+    string character_uuid = 2;
+    int64 guild_id = 3;
+
+    ReplyResult result = 101;
+  }
+
+  message Help{
+    bytes help_uuid = 1;
+    int64 building_id = 2; // 업그레이드 되고 있는 건물
+    int64 building_level = 3; // 업그레이드 되고 있는 건물 레벨
+    int64 additional_help_count = 4; // 유료 아이템으로 늘린 횟수
+    google.protobuf.Timestamp upgrade_finish_at = 5;
+  }
+
+  message ForwardEvent {
+    string topic = 1; // event_type에 따라 토픽에 추가 처리
+    //    oneof change_key { // deprecated
+    //      int64 integer_key = 6;
+    //      string string_key = 7;
+    //    }
+    bytes event = 3;
+    string character_uuid = 4;
+    EventType event_type = 5;
+    optional common.KafkaKey change_key = 6;
+  }
+
+  message HelpMe {
+    repeated Help buildings = 1;
+    int64 remaining_help_request_count = 2;
+
+  }
+
+  message UpsertHelpStatus{
+    repeated Help buildings = 1;
+  }
+
+  message UpsertHelp {
+    repeated Building buildings = 1;
+
+    message Building {
+      int64 building_id = 1;
+      int64 building_level = 2;
+      google.protobuf.Timestamp upgrade_finish_at = 3;
+    }
+  }
+
+  message UpdateMemberName {
+    string name = 1;
+    string character_uuid = 2;
+  }
+
+  message AfterTradeSellList {
+    int64 requester_account_id = 1;
+    string requester_character_uuid = 2;
+  }
+}
+
+message UpdateCombatPoint {
+  string character_uuid = 1;
+  int64 combat_point = 2;
+}
+
+message GuildCommand {
+  session.Session session = 100;
+
+  oneof command {
+    GuildRequestToCommand request_to_command = 1;
+    GiveGuildItem give_guild_item = 2;
+    Connect connect = 4;
+    Disconnect disconnect = 5;
+    ForwardAccountCommand forward_account_command = 6;
+    GuildCreatedEvent guild_created_event = 7;
+    ResetCollectionReply reset_collection_reply = 8;
+    AutoDelegateGuildMaster auto_delegate_master = 9;
+    TimeoutAllyProposal timeout_ally_proposal = 10;
+    HelpReply help_reply = 11; // HelpArrive를 처리한 후 길드에서 마지막 처리를 위한 command
+    AfterReserveHelpRewardItem after_reserve_help_reward_item = 12;
+    UpdateRank update_rank = 14;
+    AfterDecreaseContributeCostItem after_decrease_contribute_cost_item = 16;
+    BroadcastRecord broadcast_record = 17;
+    AfterReserveStoreItem after_reserve_store_item = 18;
+    AfterDecreaseStoreItem after_decrease_store_item = 19;
+    AfterQueryItem after_query_item = 20;
+    AfterTradeSell after_trade_sell = 21;
+    AfterDistribute after_distribute = 22;
+
+    UpdateBidPoint update_bid_point = 23;
+
+    AllyProposalCommand ally_proposal_command = 24;
+
+    AutoDistribute auto_distribute = 25;
+
+    AfterCheckExpandStorage after_check_expand_storage = 26;
+    AfterTradeBuy after_trade_buy = 27;
+    AfterTradeWithdraw after_trade_withdraw = 28;
+    AfterTradeCancel after_trade_cancel = 29;
+    AfterTradeBuyReject after_trade_buy_reject = 30;
+
+    AfterCheckPkReactTimeForHostileProposal after_check_pk_react_time_for_hostile_proposal = 31;
+
+    DisbandCommand disband_command = 32;
+
+    AutoAuctionRegister auto_auction_register = 33;
+    AutoAuctionFinishSoon auto_auction_finish_soon = 34;
+    AutoAuctionEnd auto_auction_end = 35;
+
+    AfterDecreaseBidPrice after_decrease_bid_price = 38;
+    AfterDecreaseAuctionItem after_decrease_auction_item = 39;
+
+    GuildStorageAddItem guild_storage_add_item = 40;
+    AfterStorageAddItem after_storage_add_item = 41;
+
+    UpdateRaidStatus update_raid_status = 50;
+  }
+
+  message AllyProposalCommand {
+    int64 proposer_guild_id = 1;
+    int64 target_guild_id = 2;
+    int64 ally_proposal_id = 3;
+    google.protobuf.Timestamp created_at = 4;
+  }
+
+  message UpdateRank {
+    int64 guild_id = 1;
+    int64 rank = 2;
+  }
+
+  message AfterReserveHelpRewardItem {
+    int64 account_id = 4;
+    string character_uuid = 2;
+    bytes help_arrive = 3;
+    string server = 5;
+    ReplyResult result = 101;
+  }
+
+  message AfterDecreaseContributeCostItem {
+    int64 account_id = 1;
+    string character_uuid = 2;
+    int64 collection_id = 3;
+    bool additional = 4;
+    int64 level = 5;
+    bytes reserved_inventory_slots = 6;
+    int64 progress = 7;
+
+    ReplyResult result = 101;
+  }
+
+  message Connect {
+    int64 account_id = 3;
+    string character_uuid = 2;
+  }
+
+  message Disconnect {
+    int64 account_id = 4;
+    string character_uuid = 2;
+    google.protobuf.Timestamp disconnect_at = 3;
+  }
+
+  message ForwardAccountCommand {
+    int64 account_id = 4;
+    string character_uuid = 2;
+    GuildAccountCommand account_command = 3;
+  }
+
+  message GuildCreatedEvent {
+    int64 guild_id = 1;
+  }
+
+  message ResetCollectionReply {
+    string character_uuid = 1;
+    int64 category_id = 2;
+    int64 account_id = 4;
+
+    ReplyResult result = 101;
+  }
+
+  message AutoDelegateGuildMaster {
+    int64 guild_id = 1;
+    string character_uuid = 2;
+  }
+
+  message AutoDistribute {
+    int64 bid_history_id = 2;
+  }
+
+  message TimeoutAllyProposal {
+    int64 proposer_guild_id = 1;
+  }
+
+  message HelpReply {
+    bytes result_of_help_arrive = 1;
+  }
+}
+
+message AutoAuctionRegister {
+  int64 guild_id = 1;
+  string auction_uuid = 2;
+}
+
+message AutoAuctionFinishSoon {
+  int64 guild_id = 1;
+  string auction_uuid = 2;
+}
+
+message AutoAuctionEnd {
+  int64 guild_id = 1;
+  string auction_uuid = 2;
+}
+
+// 투자 포인트가 아예 없는 길드 외 모든 길드 투자 포인트 전달
+message UpdateBidPoint {
+  repeated MemberBid member_bid = 1; // 현재 서브 시즌에서 입찰한 길드 멤버 (정산 시점에 존재 하는 멤버만)
+  int64 main_season = 2;
+  int64 sub_season = 3;
+  bool is_holder = 4; // 영토 소유 길드의 경우 true
+
+  int64 holder_sub_season = 5;
+
+  message MemberBid {
+    string character_uuid = 1;
+    int64 bid_amount = 2;
+    google.protobuf.Timestamp last_bid_at = 3;
+  }
+}
+
+// record 필드 그대로 모든 길드 내 멤버들에게 발송
+message BroadcastRecord {
+  string topic = 1;
+  bytes record = 2;
+  // Nothing일 때는 topic을 그대로 사용
+  EventType event_type = 3;
+}
+
+message AfterReserveStoreItem {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string item_uuid = 3;
+  int64 amount = 4;
+  int64 item_id = 5;
+  ReplyResult result = 101;
+}
+
+message AfterDecreaseStoreItem {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string item_uuid = 3;
+  int64 amount = 4;
+  bytes reserved_inventory_slots = 5;
+  int64 item_id = 6;
+
+  ReplyResult result = 101;
+}
+
+message AfterQueryItem {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string item_uuid = 3;
+  int64 amount = 4;
+  ReplyResult result = 101;
+}
+
+// trade_uuid는 header로 받음
+// TRADE_UUID를 키로 함
+message AfterTradeSell {
+  int64 seller_account_id = 1;
+  string seller_character_uuid = 2;
+  string buyer_character_uuid = 3;
+  string buyer_name = 4;
+  string item_uuid = 5;
+  int64 amount = 7;
+  int64 price = 8;
+  string trade_uuid = 9;
+  ReplyResult result = 101;
+}
+
+message AfterDistribute {
+  ReplyResult result = 1;
+  int64 requester_account_id = 2;
+  string requester_character_uuid = 3;
+  bool is_not_notify = 4;
+  bool is_hunting_zone = 5;
+}
+
+message AfterCheckExpandStorage {
+  ReplyResult result = 1;
+  int64 account_id = 2;
+  string character_uuid = 3;
+  int64 target_expand_level = 4;
+}
+
+message AfterTradeBuy {
+  int64 buyer_account_id = 1;
+  string buyer_character_uuid = 2;
+  string trade_uuid = 3;
+  ReplyResult result = 101;
+}
+
+message AfterTradeWithdraw {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  repeated string trade_uuid = 3;
+  ReplyResult result = 101;
+}
+
+message AfterTradeCancel {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string trade_uuid = 3;
+  ReplyResult result = 101;
+}
+
+message AfterTradeBuyReject {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string trade_uuid = 3;
+  ReplyResult result = 101;
+}
+
+message AfterCheckPkReactTimeForHostileProposal {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  int64 target_guild_id = 3;
+  string reason = 4;
+  ReplyResult result = 101;
+}
+
+// 경매에 입찰할 금액을 차감 시도 후 오는 응답
+message AfterDecreaseBidPrice {
+  int64 account_id = 1;
+  string bidder_uuid = 2;
+  string auction_uuid = 3;
+  int64 price = 4;
+  ReplyResult result = 101;
+}
+
+// 경매에 등록할 아이템을 창고에서 차감 시도 후 오는 응답
+message AfterDecreaseAuctionItem {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string item_uuid = 3;
+  int64 amount = 4;
+  int64 start_price = 5;
+  ReplyResult result = 101;
+}
+
+message DisbandCommand {
+  int64 guild_id = 1;
+  int64 account_id = 2;
+  string character_uuid = 3;
+  ReplyResult result = 101;
+}
+
+message GuildRequestToCommand {
+  int64 account_id = 4;
+  string character_uuid = 2;
+  bytes forward_guild_request = 3;
+}
+
+
+message GiveGuildItem {
+  reserved 5;
+  int64 guild_id = 1;
+  optional string character_uuid = 3;
+  repeated GuildItem guild_items = 4;
+
+  message GuildItem {
+    string name = 1;
+    int64 amount = 2;
+  }
+}
+
+message Guild {
+  string name = 1;
+  common.GuildMark mark = 2;
+}
+
+message CharacterGuildRequest {
+  int64 account_id = 4;
+  string character_uuid = 2;
+  string reply_topic = 3;
+}
+
+// 길드원에게 보너스 아이템 지급
+message GiveGuildBonusItem {
+  message BonusItem {
+    int64 item_id = 3;
+    int64 amount = 2;
+    repeated common.Property properties = 4;
+  }
+  enum GiveMethod {
+    POSTBOX = 0;
+    INVENTORY = 1;
+  }
+  message PostboxData {
+    string title = 1;
+    string content = 2;
+    string sender = 3;
+  }
+  repeated BonusItem bonus_item = 3;
+  GiveMethod give_method = 4;
+  optional PostboxData postbox_data = 5; // GiveMethod가 POSTBOX이면 필수.
+}
+
+message CharacterGuildReply {
+  int64 account_id = 4;
+  string character_uuid = 2;
+  Guild guild = 3;
+}
+
+message GuildHonor {
+  int64 guild_id = 1;
+  int64 honor = 2;
+}
+
+message GuildStorageAddItem {
+  repeated Item item = 1;
+  common.Reason reason = 2;
+}
+
+message AfterStorageAddItem {
+  ReplyResult result = 1;
+  int64 guild_id = 2;
+  repeated Item item = 3;
+}
+
+message UpdateRaidStatus {
+  int64 guild_id = 1;
+  int64 guild_raid_id = 2;
+
+  oneof status {
+    SacrificeSpawned sacrifice_spawned = 10;
+    Active active = 11;
+    Complete complete = 12;
+    Fail fail = 13;
+    GiveUp give_up = 14;
+  }
+
+  message SacrificeSpawned {
+    string summoner_character_name = 1; // 길드 레이드 제물 소환자
+  }
+  message Active {
+    google.protobuf.Timestamp end_time = 2; // 레이드 종료 시간
+  }
+  message Complete { // 레이드 완료
+    repeated RaidContributionSnapshot contribution = 1;
+    bool jump_guild_raid = 2;
+  }
+  message Fail { // 레이드 실패
+    repeated RaidContributionSnapshot contribution = 1;
+    repeated RaidNpcStatusSnapshot npc_status = 2; // 남은 NPC 상태
+  }
+  message GiveUp { // 레이드 강제 종료
+
+  }
+}
+
+message Item {
+  optional string item_uuid = 1;
+  oneof item {
+    int64 item_id = 2;
+    string item_name = 3;
+  }
+  int64 amount = 4;
+  repeated common.Property properties = 5;
+  optional string inventory_name = 6;
+  google.protobuf.Timestamp expire_time = 7;
+  google.protobuf.Timestamp delete_time = 8;
+}
+
+message ServerMember {
+  optional int64 id = 1;
+  int64 account_id = 12;
+  string character_uuid = 3;
+  string name = 4;
+  string role = 5;
+  int32 class_type = 6;
+  int32 level = 7;
+  string introduction = 8;
+  bool online = 9;
+  int64 guild_id = 10;
+  google.protobuf.Timestamp disconnect_at = 11;
+  string current_battle = 101;
+  string current_front = 102;
+}
+
+
+message GuildCache {
+  int64 guild_id = 1;
+  repeated HelpInfo helps = 111; // 정답이 아님
+  int64 storage_expand_level = 112;
+  repeated GuildPinPointCache pins = 113;
+
+  message HelpInfo {
+    bytes help_uuid = 1;
+    int64 account_id = 11;
+    bytes character_uuid = 3;
+    int64 building_id = 4;
+    int64 building_level = 5;
+    repeated int64 helper_account_ids = 12;
+    google.protobuf.Timestamp help_me_requested_at = 7;
+
+    int64 additional_help_count = 8;
+    int64 database_id = 9;
+
+    google.protobuf.Timestamp upgrade_finish_at = 10;
+  }
+}
+
+message GuildMemberUpdatedEvent {
+  int64 guild_id = 1;
+  repeated Member members = 2;
+
+  message Member {
+    string character_uuid = 1;
+    string character_name = 2;
+  }
+}
+
+message GuildTimerCache {
+  reserved 2;
+  map<int64, AllyProposalTimer> ally_proposal_timers = 1;
+  AutoDelegateTimer auto_delegate_timer = 3;
+  AutoDistributeTimer auto_distribute_timer = 4;
+  repeated AuctionTimer auction_timers = 10;
+
+  message AllyProposalTimer {
+    int64 proposer_guild_id = 1;
+    int64 target_guild_id = 2;
+    google.protobuf.Timestamp created_at = 3;
+    string target_guild_master = 4;
+  }
+
+  message AutoDelegateTimer {
+    string character_uuid = 1;
+    google.protobuf.Timestamp expire_time = 2;
+  }
+
+  message AutoDistributeTimer {
+    int64 bidHistoryId = 1;
+    google.protobuf.Timestamp distribute_start_at = 2;
+  }
+
+  message AuctionTimer {
+    string auction_uuid = 1;
+    google.protobuf.Timestamp registered_at = 2;
+    AuctionTimerStatus status = 3;
+    int32 extension_count = 4;
+  }
+}
+
+enum AuctionTimerStatus {
+  AUCTION_WAITING = 0;
+  AUCTION_STARTED = 1; // 경매 등록
+  AUCTION_FINISH_SOON = 2; // 경매 종료 임박
+}
+
+message MemberCache {
+  string online_character_uuid = 1;
+}
+
+message Uuids {
+  repeated bytes uuids = 1;
+}
+
+message MemberBidSnapshot {
+  string character_uuid = 1;
+  int64 bid_amount = 2;
+  string role = 3;
+  google.protobuf.Timestamp last_bid_at = 4;
+//  int64 guild_raid_kill_count = 5;
+}
+
+message Privileges {
+  string role = 1;
+  // guild_role.yaml의 Privilege 갯수 만큼의 길이
+  repeated string privilege = 2;
+  map<string, bool> privilegeByName = 3;
+}
+
+message RaidNpcStatusSnapshot {
+  int64 npc_id = 1;
+  int64 hp = 2;
+  int64 max_hp = 3;
+}
+
+message RaidContributionSnapshot {
+  string character_uuid = 1;
+  int64 contribution_amount = 2;
+}
+
+message GuildPinPointCache {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  common.ProtoCoordinate coordinate = 3;
+  int64 guild_id = 4;
+  string sharer_name = 5;
+  google.protobuf.Timestamp created_at = 6;
+  string sharer_character_uuid = 7;
+}

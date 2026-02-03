@@ -1,0 +1,48 @@
+- Name: lobby
+  Description: 클라이언트가 처음 접속하는 서버
+- Name: battle
+  Description: 전투 서버
+- Name: front
+  Description: "battle, lobby, chat을 제외한 나머지 서버의 게이트웨이 역할을 하는 서버"
+- Name: chat
+  Description: 채팅 서버
+- Name: admin
+  Description: 운영툴 백엔드 서버
+- Name: admin-app
+  Description: 운영툴 프론트엔드 서버
+- Name: bridge
+  Description: 스토브 연동을 위한 서버
+- Name: dungeon
+  Description: 던전 서버
+- Name: fortress
+  Description: 성소 서버
+- Name: guild
+  Description: 길드 서버
+- Name: hunting-zone
+  Description: 사냥터 소유 서버
+- Name: item
+  Description: 아이템 서버
+- Name: log
+  Description: 로그 서버
+- Name: mail
+  Description: 우편 서버
+- Name: matchmaking
+  Description: 전장 매칭 서버
+- Name: notification
+  Description: "레드닷, 즐겨찾기 처리 서버"
+- Name: party
+  Description: 파티 서버
+- Name: pklog
+  Description: 기록실 서버
+- Name: quest
+  Description: 퀘스트 서버
+- Name: ranking
+  Description: 랭킹 서버
+- Name: session
+  Description: 세션 서버
+- Name: setting
+  Description: 설정 저장 서버
+- Name: store
+  Description: "버프, 쿨타임 등 전투 관련 데이터 저장 서버"
+- Name: trade
+  Description: 거래소 서버

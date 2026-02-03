@@ -1,0 +1,77 @@
+- Id: 9
+  Name: Outlaw_Step04
+  Comment: 무법 4단계
+  Min: -35000
+  Max: -30001
+  Step: 4
+  Buff:
+    - Buff: Outlaw_Step04_Buff
+    - Buff: Outlaw_Step04_Debuff
+- Id: 8
+  Name: Outlaw_Step03
+  Comment: 무법 3단계
+  Min: -30000
+  Max: -20001
+  Step: 3
+  Buff:
+    - Buff: Outlaw_Step03_Buff
+    - Buff: Outlaw_Step03_Debuff
+- Id: 7
+  Name: Outlaw_Step02
+  Comment: 무법 2단계
+  Min: -20000
+  Max: -10001
+  Step: 2
+  Buff:
+    - Buff: Outlaw_Step02_Buff
+    - Buff: Outlaw_Step02_Debuff
+- Id: 6
+  Name: Outlaw_Step01
+  Comment: 무법 1단계
+  Min: -10000
+  Max: -1
+  Step: 1
+  Buff:
+    - Buff: Outlaw_Step01_Buff
+    - Buff: Outlaw_Step01_Debuff
+- Id: 1
+  Name: Neutral
+  Comment: 중립
+  Min: 0
+  Max: 500
+  Step: 0
+  Buff:
+    - Buff: Neutral_Buff_Buff
+    - Buff: Outlaw_Step01_Debuff
+- Id: 2
+  Name: Justice_Step01
+  Comment: 정의 1단계
+  Min: 501
+  Max: 10000
+  Step: 1
+  Buff:
+    - Buff: Justice_Step01_Buff
+- Id: 3
+  Name: Justice_Step02
+  Comment: 정의 2단계
+  Min: 10001
+  Max: 20000
+  Step: 2
+  Buff:
+    - Buff: Justice_Step02_Buff
+- Id: 4
+  Name: Justice_Step03
+  Comment: 정의 3단계
+  Min: 20001
+  Max: 30000
+  Step: 3
+  Buff:
+    - Buff: Justice_Step03_Buff
+- Id: 5
+  Name: Justice_Step04
+  Comment: 정의 4단계
+  Min: 30001
+  Max: 35000
+  Step: 4
+  Buff:
+    - Buff: Justice_Step04_Buff

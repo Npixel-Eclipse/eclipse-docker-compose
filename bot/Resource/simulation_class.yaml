@@ -1,0 +1,22 @@
+- Id: 100000001
+  Name: Simulation_Fighter
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+  ModelAsset: PC001
+  StartTerritory: Spawn_Var_CharacterCreated
+  NormalAttack: Fighter_NormalAttack
+  BaseProperties:
+    - PropertyPreset: Simulation_Class_Common_Base
+    - PropertyPreset: Class_Fighter_Base
+- Id: 100000002
+  Name: Simulation_Ranger
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+  ModelAsset: PC002
+  StartTerritory: Spawn_Var_CharacterCreated
+  NormalAttack: Ranger_NormalAttack
+  BaseProperties:
+    - PropertyPreset: Simulation_Class_Common_Base
+    - PropertyPreset: Class_Ranger_Base

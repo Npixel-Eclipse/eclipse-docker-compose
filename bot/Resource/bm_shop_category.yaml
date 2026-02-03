@@ -1,0 +1,148 @@
+- Id: 1
+  Name: Product
+  MainTab: Product
+  Icon: /Game/UI/BMShop_SP/BMShopTabIcon00_Sprite.BMShopTabIcon00_Sprite
+  Description: UIWord_BMShop_Product
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 2
+  Name: Gold
+  MainTab: Gold
+  TabDisplayOrder: 1
+  Icon: /Game/UI/BMShop_SP/BMShopTabIcon01_Sprite.BMShopTabIcon01_Sprite
+  Description: UIWord_BMShop_Gold
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 45
+  Name: SeasonPass
+  MainTab: SeasonPass
+  TabDisplayOrder: 2
+  Icon: /Game/UI/BMShop_SP/BMShopTabIcon02_Sprite.BMShopTabIcon02_Sprite
+  Description: UIWord_SeasonPass_Title
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 4
+  Name: Mileage
+  MainTab: Mileage
+  TabDisplayOrder: 3
+  Icon: /Game/UI/BMShop_SP/BMShopTabIcon03_Sprite.BMShopTabIcon03_Sprite
+  Description: UIWord_BMShop_Mileage
+  DisplayItems:
+    - Item: CurrencyMileage
+- Id: 320
+  Name: Proposal
+  MainTab: Product
+  SubTab: Proposal
+  Description: UIWord_BMShop_Proposal
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 98
+  Name: StarterKit
+  MainTab: Product
+  SubTab: Grow
+  TabDisplayOrder: 1
+  Description: UIWord_BMShop_Grow
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1173
+  Name: Fortress
+  MainTab: Product
+  SubTab: Fortress
+  TabDisplayOrder: 2
+  Description: UIWord_BMShop_Fortress
+  DisplayItems:
+    - Item: CurrencySeongsoQueue
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 230
+  Name: Polymorph
+  MainTab: Product
+  SubTab: Polymorph
+  TabDisplayOrder: 3
+  Description: UIWord_BMShop_Polymorph
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 442
+  Name: Equipment
+  MainTab: Product
+  SubTab: Equipment
+  TabDisplayOrder: 4
+  Description: UIWord_BMShop_Equipment
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 646
+  Name: Normal
+  MainTab: Product
+  SubTab: Normal
+  TabDisplayOrder: 5
+  Description: UIWord_BMShop_Normal
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1060
+  Name: HotDeal
+  CategoryType: HotDeal
+  MainTab: Product
+  SubTab: HotDeal
+  TabDisplayOrder: 6
+  Description: UIWord_BMShop_HotDeal
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 428
+  Name: GoldPackage
+  MainTab: Gold
+  SubTab: GoldPackage
+  Description: UIWord_BMShop_Gold
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 870
+  Name: SeasonPassSub
+  MainTab: SeasonPass
+  SubTab: SeasonPassSub
+  Description: UIWord_SeasonPass_Title
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 496
+  Name: MileageItem
+  MainTab: Mileage
+  SubTab: MileageItem
+  Description: UIWord_BMShop_Mileage
+  DisplayItems:
+    - Item: CurrencyMileage
+- Id: 337
+  Name: Gacha
+  MainTab: Gacha
+  TabDisplayOrder: 4
+  Icon: /Game/UI/BMShop_SP/BMShopTabIcon01_Sprite.BMShopTabIcon01_Sprite
+  Description: UIWord_BMShop_Gacha
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 32
+  Name: GachaTest
+  MainTab: Gacha
+  SubTab: GachaTest
+  Description: UIWord_BMShop_Polymorph
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 266
+  Name: Subscribe
+  CategoryType: Subscribe
+  MainTab: Product
+  SubTab: Subscribe
+  TabDisplayOrder: 7
+  Description: UIWord_BMShop_Subscribe
+  DisplayItems:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold

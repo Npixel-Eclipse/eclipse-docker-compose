@@ -1,0 +1,156 @@
+syntax = "proto3";
+package eclipse.client.quest;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.quest";
+option java_outer_classname = "ClientQuestProto";
+
+enum QuestResultCode {
+  FAIL = 0;
+  SUCCESS = 1;
+  SUCCESS_INITIALIZED_BY_TIME = 2;
+  SUCCESS_INITIALIZED_BY_USER = 3;
+  FAIL_CAN_NOT_AUTO_QUEST = 1000;
+  FAIL_NOT_ENOUGH_INVENTORY_SLOT = 1001;
+  FAIL_SKIP_CONDITION_NOT_MET = 1002;
+}
+
+enum QuestState {
+  INACTIVE = 0;
+  ACTIVE = 1;
+  COMPLETED = 2;
+  DELETED = 3;
+  //RESET = 4;
+  REVERTED = 5;
+}
+
+message QuestRequest {
+  reserved 12, 13, 11, 10;
+  oneof request {
+    ListHud list_hud = 1;
+    Start start = 2;
+    UpdateGoal update_goal = 3;
+    Complete complete = 4;
+    Stop stop = 5;
+    Fetch fetch = 6;
+    List list = 8;
+    Refresh refresh = 9;
+    ConsumeItem consume_item = 14;
+    QueryContentLimit query_content_limit = 15;
+    QueryRefreshLevel query_refresh_level = 16;
+    Skip skip = 17;
+  }
+
+  message ListHud {}
+
+  message Start {
+    int64 quest_id = 1;
+  }
+
+  message UpdateGoal {
+    int64 goal_type_id = 1;
+    int64 goal_target_id = 2;
+    int64 amount = 3;
+  }
+
+  message Complete {
+    repeated int64 quest_ids = 1;
+    bool prevent_repeat = 2; // prevent_repeat 값이 true인 경우 반복 완료를 막는다.
+  }
+
+  message Stop {
+    int64 quest_id = 1;
+  }
+
+  message Fetch {
+    int64 quest_category_id = 1;
+  }
+
+  message List {
+    repeated int64 quest_category_ids = 1;
+  }
+
+  message Refresh {
+    int64 quest_category_id = 1;
+  }
+
+  message ConsumeItem {
+    int64 quest_id = 1;
+    int64 goal_id = 2;
+    int64 repeat_count = 3;
+  }
+
+  message QueryContentLimit {}
+
+  message QueryRefreshLevel {
+    repeated int64 quest_category_ids = 1;
+  }
+
+  message Skip {
+    int64 quest_id = 1;
+  }
+}
+
+message QuestEvent {
+  reserved 7;
+  oneof event {
+    Update update = 1;
+    Fetch fetch = 2;
+    List list = 3;
+    Complete complete = 4;
+    SystemMessage system_message = 6;
+    RefreshLevel refresh_level = 8;
+    UpdateBatch update_batch = 10;
+  }
+  string debug = 9999;
+
+  message Update {
+    message Goal {
+      int64 id = 1;
+      int64 amount = 2;
+      int64 step = 3;
+    }
+    int64 quest_id = 1;
+    QuestState quest_state = 2;
+    repeated Goal goal = 3;
+    bool completion_flag = 4; // completion_flag가 true인 경우, 클라이언트는 퀘스트 완료 팝업을 띄운다.
+  }
+
+  message Fetch {
+    int64 category_id = 1;
+    repeated Update update = 2;
+  }
+
+  message List {
+    repeated Fetch fetch = 1;
+  }
+
+  message Complete {
+    reserved 3;
+    repeated int64 quest_ids = 1;
+    int64 level = 2;
+  }
+
+  message SystemMessage {
+    QuestResultCode code = 1;
+    oneof target {
+      int64 quest_id = 2;
+      int64 quest_category_id = 3;
+    }
+  }
+
+  message RefreshLevel {
+    repeated Entry entries = 1;
+
+    message Entry {
+      int64 quest_category_id = 1;
+      int64 refresh_level = 2;
+    }
+  }
+
+  message UpdateBatch {
+    repeated Update updates = 1;
+  }
+}

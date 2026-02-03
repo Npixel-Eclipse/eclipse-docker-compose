@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - MaximumAmount
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+
+    Comment:
+      type: string
+
+    # 등록 가능한 최대 즐겨찾기 수
+    MaximumAmount:
+      type: integer
+      minimum: 1

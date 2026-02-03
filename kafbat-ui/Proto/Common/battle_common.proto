@@ -1,0 +1,119 @@
+syntax = "proto3";
+package common;
+
+import "Common/property.proto";
+import "Common/callback.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.battle";
+option java_outer_classname = "CommonBattleProto";
+
+enum TeleportSkill {
+  DEFAULT = 0;
+}
+
+message SkillRequestFrom {
+  string character_uuid = 1;
+  string skill_name = 2;
+  repeated common.Property properties = 3;
+  //bytes callback_command_on_success = 4;
+  //bytes callback_command_on_fail = 5;
+  //string topic = 6;
+  optional uint32 message_main_type = 7;
+  optional common.CallbackCommand callback_command_on_success = 8;
+  optional common.CallbackCommand callback_command_on_failure = 9;
+}
+
+message TeleportRequestFrom {
+  string character_uuid = 1;
+  string skill_name = 2; // Constants.yaml에 정의된 스킬 이름으로 처리 할 것
+  string world_map_area_name = 3;
+  optional common.CallbackCommand callback_command_on_success = 4;
+  optional common.CallbackCommand callback_command_on_failure = 5;
+  bool skip_if_already_in_area = 6;
+}
+
+message BuffEvent {
+  optional int64 id = 1;
+  int64 buff_id = 2;
+  repeated common.Property properties = 3;
+  optional google.protobuf.Duration valid_until = 4;
+  optional google.protobuf.Duration duration = 5;
+  optional bool is_account_buff = 6;
+  optional google.protobuf.Timestamp logout_timestamp = 7;
+  optional google.protobuf.Timestamp last_update_timestamp = 8;
+}
+
+message ProtoCoordinate {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message ProtoPosition {
+  double x = 1;
+  double y = 2;
+}
+
+enum OfflineModeState {
+  NONE = 0;
+  ACTIVE = 1;
+  CLOSE = 2;
+  MOVE = 3;
+
+}
+
+message OfflineMode {
+  OfflineModeState offline_mode_state = 1;
+  google.protobuf.Duration total_time_consumed = 2;
+
+  optional google.protobuf.Timestamp end_timestamp = 3;
+  optional google.protobuf.Duration time_consumed = 4;
+  optional int64 start_experience = 5;
+
+  optional int64 remain_time_on_move = 6;
+}
+
+message UpsertBuff {
+  message BuffInfo {
+    string buff_name = 1;
+    oneof identifier {
+      string equip_slot = 2;
+      int64 essence_id = 3;
+      int64 essence_page_id = 4;
+      string combination_key = 5;
+      int64 awakening_id = 6;
+      int64 building_id = 7;
+      int64 ranking_buff_id = 8;
+      string item_uuid = 9;
+      int64 essence_buff_id = 10;
+      int64 collection_id = 11;
+      int64 pk_buff_id = 12;
+      int64 offline_mode_time = 13;
+    }
+  }
+
+  message Buff {
+    BuffInfo buff_info = 1;
+    repeated common.Property properties = 2;
+    google.protobuf.Timestamp delete_time = 3;
+  }
+
+  message SkillBuff {
+    int64 skill_id = 1;
+    string essence_name = 2;
+    repeated common.Property properties = 3;
+  }
+
+  string character_uuid = 1;
+  repeated BuffInfo old_buffs = 2;
+  repeated Buff new_buffs = 3;
+  repeated SkillBuff old_skills = 4;
+  repeated SkillBuff new_skills = 5;
+  bool character_created = 6;
+  bool is_welcome = 7;
+  string connection_id = 8; // UUID v7 기반 접속 ID (Welcome 버프 그룹핑용)
+  bool skip_relay = 9; // true면 Store→Battle relay 안함 (Battle에서 Store로 보낼 때 사용)
+  string source = 10; // 버프 소스 (예: "item", "guild")
+}

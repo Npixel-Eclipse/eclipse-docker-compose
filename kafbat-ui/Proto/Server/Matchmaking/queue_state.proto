@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.matchmaking.queue";
+option java_outer_classname = "ServerMatchmakingQueueStateProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package matchmaking_queue_state;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+
+message MatchmakingQueueState {
+  repeated Ticket ticket = 1;
+
+  message Ticket {
+    string ticket_uuid = 1;
+    repeated Player player = 2;
+    google.protobuf.Timestamp created_at = 3;
+
+    string transaction_uuid_when_created = 1000;
+
+    message Player {
+      int64 account_id = 4;
+      string character_uuid = 2;
+      repeated common.Property property = 3;
+    }
+  }
+}

@@ -1,0 +1,1338 @@
+- Id: 6
+  Name: Test_Build
+  Comment: 바로 건설 테스트
+  Behavior:
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.Action_Manage
+      Dimmed: true
+    - Type: FocusUI
+      Path: $FortressGroupManagePopup$.Contents.Btn_Quick00
+- Id: 7
+  Name: Test_Complete
+  Comment: 수확 테스트
+  Behavior:
+    - Type: FocusUI
+      Npc: Seongso_Statue_Main
+      Path: $NamePlateUI$.BuildComplete
+      Dimmed: false
+- Id: 8
+  Name: Test_Target
+  Behavior:
+    - Type: CastSkill
+      Npc: Seongso_Statue_Main
+      Skill: ChangeTarget
+- Id: 10
+  Name: RotateCamera_PC
+  Comment: 플레이어 카메라 회전 테스트
+  Behavior:
+    - Type: RotateCamera
+      RotateCameraParameter:
+        OrbitRadius: 1200.0
+        OrbitSpeed: 60.0
+        CameraHeightOffset: 100.0
+        OrbitPitchAngle: -30.0
+      CameraBlend:
+        BlendFunc: EaseInOut
+        BlendExp: 2.0
+        BlendTime: 2.5
+      Duration: 8000
+    - Type: ResetCamera
+      CameraBlend:
+        BlendFunc: EaseOut
+        BlendExp: 1.0
+        BlendTime: 1.5
+- Id: 938
+  Name: ResetBehavior
+  Comment: 비헤이비어 상태 리셋
+  Behavior:
+    - Type: CastSkill
+      Skill: RemoveAllProxy
+    - Type: ResetCamera
+    - Type: HideSequencerLetterbox
+    - Type: EnableInput
+- Id: 3323
+  Name: TutorialSpawnMotion
+  Comment: TutorialSpawnMotion
+  Behavior:
+    - Type: PlayMotion
+      MotionType: Spawn
+      Duration: 3000
+    - Type: JumpMotion
+      MotionType: Spawn
+- Id: 3310
+  Name: Test_Camera
+  Comment: 카메라 기능 테스트 1
+  Behavior:
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      LocalSpaceRotation:
+        X: 0
+        Y: 15
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Distance: -1500
+      Duration: 1000
+    - Type: FocusCamera
+      WorldSpaceRotation:
+        X: -90
+        Y: 0
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+- Id: 3321
+  Name: Test_Camera1
+  Comment: 카메라 기능 테스트 2
+  Behavior:
+    - Type: FocusCamera
+      TargetLocation:
+        X: 8
+        Y: 234
+      WorldSpaceRotation:
+        X: 45
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -3
+        Y: 224
+      WorldSpaceRotation:
+        X: 90
+        Y: 0
+      Duration: 2000
+    - Type: FocusCamera
+      TargetLocation:
+        X: -13
+        Y: 236
+      WorldSpaceRotation:
+        X: -45
+        Y: 0
+      Duration: 2000
+    - Type: ResetCamera
+      Duration: 1000
+- Id: 14756
+  Name: Test_Tutorial_BossSequence
+  Comment: 튜토리얼 보스 소개 테스트
+  Behavior:
+    - Type: WorldMapMove
+      TargetLocation:
+        X: 250
+        Y: -125
+      WorldMapMoveSpeed: 2
+    - Type: ZoomInWorldMap
+      ZoomSpeed: 1
+    - Type: ShowBossUIInWorldMap
+      Path: $WorldMap$.Contents.BossInfo
+      BossInfos:
+        LocationName: Address_Arkhandar_Order
+        BossName: Que_Speaker_Arkandar
+        BossDesc: Main_CH07_05_Title
+    - Type: Wait
+      Duration: 2000
+    - Type: HideBossUIInWorldMap
+      Path: $WorldMap$.Contents.BossInfo
+    - Type: ZoomOutWorldMap
+      ZoomSpeed: 10
+- Id: 6380
+  Name: Test_Tutorial_SubLevelSequence
+  Comment: 튜토리얼 서브 레벨 시퀀스 테스트
+  Behavior:
+    - Type: PlaySubLevelSequence
+      Sequence: QuestCutSceneTest
+- Id: 6381
+  Name: Test_Tutorial_Possessable_Sequence
+  Comment: 튜토리얼 Possessable 시퀀스 테스트
+  Behavior:
+    - Type: PlaySequence
+      Sequence: QuestCutSceneTest
+- Id: 10999
+  Name: Test_Tutorial_HideNPC1
+  Comment: 튜토리얼 NPC 숨기기 기능 테스트(1그룹 숨기기)
+  Behavior:
+    - Type: HideTagNPC
+      VisibleNpcGroup: 1
+    - Type: Wait
+      Duration: 3000
+- Id: 7696
+  Name: Test_Tutorial_HideNPC2
+  Comment: 튜토리얼 NPC 숨기기 기능 테스트(2그룹 숨기기)
+  Behavior:
+    - Type: HideTagNPC
+      VisibleNpcGroup: 2
+    - Type: Wait
+      Duration: 3000
+- Id: 12101
+  Name: Test_Tutorial_RevealNPC1
+  Comment: 튜토리얼 NPC 보이기 기능 테스트(1그룹 보이기)
+  Behavior:
+    - Type: RevealTagNPC
+      VisibleNpcGroup: 1
+    - Type: Wait
+      Duration: 3000
+- Id: 14601
+  Name: Test_Tutorial_RevealNPC2
+  Comment: 튜토리얼 NPC 보이기 기능 테스트(2그룹 보이기)
+  Behavior:
+    - Type: RevealTagNPC
+      VisibleNpcGroup: 2
+    - Type: Wait
+      Duration: 3000
+- Id: 2176
+  Name: Tutorial_Mastery_01
+  Comment: 숙련도 튜토리얼
+  StartCondition: Mastery_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Mastery_Dialogue_01
+- Id: 16020
+  Name: Tutorial_Awakening_01
+  Comment: 각성의 불꽃
+  StartCondition: FlameAwakening_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Awakening_Dialogue_01
+    - Type: FocusUI
+      Name: 공격 각성 메뉴
+      Path: "$Awakening$.Contents.ContentsLI.LISwitcher.CategoryListView[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_01
+    - Type: FocusUI
+      Name: 첫 번째 스탯 항목
+      Path: "$Awakening$.Contents.ContentsLI.LISwitcher.CategoryListView[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_02
+    - Type: AttentionUI
+      Name: 레벨 상승에 따른 획득 효과
+      Path: $Awakening$.Contents.ContentsLI.LISwitcher.StatInfo_Switcher.StatEffectPanel
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_Awakening_03
+- Id: 8703
+  Name: Tutorial_Collection_01
+  Comment: 수집
+  StartCondition: Collection_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Collection_Dialogue_01
+- Id: 13945
+  Name: Tutorial_Guild_01
+  Comment: 길드
+  StartCondition: FirstEnterAfterGuildJoin_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Guild_Dialogue_01
+- Id: 8736
+  Name: Tutorial_RuneCombine_01
+  Comment: 서판 조합
+  StartCondition: RuneCombine_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_RuneCombination_Dialogue_01
+- Id: 12022
+  Name: Tutorial_Achievement_01
+  Comment: 업적
+  StartCondition: Achievement_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_Achievement_Dialogue_01
+- Id: 14132
+  Name: Tutorial_FusionSkill_01
+  Comment: 스킬 융합
+  StartCondition: FusionSkill_Tutorial
+  Behavior:
+    - Type: Dialogue
+      Dialogue: Guide_Quest_SkillFusion_Dialogue_01
+- Id: 5221
+  Name: Tutorial_EclipseTime_01
+  Comment: 이클립스 타임
+  StartCondition: EclipseTime_Tutorial
+  Behavior:
+    - Type: AttentionUI
+      Name: 보스 출현 던전 이름
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.TitleTxt
+    - Type: AttentionUI
+      Name: 보스 이름과 버프
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.DescriptionTxt01
+    - Type: AttentionUI
+      Name: 이동 버튼
+      Path: $PeakTimeSchedule$.Contents.PeakTimeListView.ButtonMove
+- Id: 5969
+  Name: Challenge_Quest
+  Comment: 도전 던전 퀘스트
+  Behavior:
+    - Type: ToggleQuestAutoMode
+- Id: 1474
+  Name: New_Tutorial_Buff01
+  Comment: 신규 튜토리얼 버프 1
+  Behavior:
+    - Type: CastSkill
+      Skill: Tutorial_GutsBuff_Transform
+    - Type: Dialogue
+      Dialogue: Main_Ch01_01_01_Dialogue_Accept
+- Id: 8148
+  Name: New_Tutorial_Spawn01
+  Comment: 신규 튜토리얼 스폰 1
+  Behavior:
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 500
+    - Type: FocusCamera
+      TargetLocation:
+        X: 1473
+        Y: 897
+      Distance: 1000
+    - Type: FadeIn
+      Duration: 1000
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker01
+    - Type: Wait
+      Duration: 2000
+    - Type: FadeOut
+      Duration: 500
+    - Type: ResetCamera
+    - Type: FadeIn
+      Duration: 1000
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 17479
+  Name: New_Tutorial_Spawn02
+  Comment: 신규 튜토리얼 스폰 2
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker02
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 1583
+  Name: New_Tutorial_Move01
+  Comment: 신규 튜토리얼 이동
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Checker02
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 18845
+  Name: New_Tutorial_Boss_Spawn01
+  Comment: 신규 튜토리얼 보스 스폰
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Quest_Instance_Tutorial_Bridge_Boss_Spawn01
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 9955
+  Name: New_Tutorial_BuffEnd
+  Comment: 신규 튜토리얼 버프 제거
+  Behavior:
+    - Type: DisableInput
+    - Type: CastSkill
+      Skill: Tutorial_GutsBuff_Removal
+    - Type: EnableInput
+    - Type: ToggleQuestAutoMode
+- Id: 8269
+  Name: Class_MainTutorialChapter3
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스
+  ByClass:
+    - Class: Fighter
+      Behavior: Class_MainTutorialChapter3_Fighter
+    - Class: Ranger
+      Behavior: Class_MainTutorialChapter3_Ranger
+    - Class: Sorcerer
+      Behavior: Class_MainTutorialChapter3_Socerer
+    - Class: Assassin
+      Behavior: Class_MainTutorialChapter3_Fighter
+- Id: 19071
+  Name: Class_MainTutorialChapter3_Fighter
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_파이터
+  Behavior:
+    - Type: PlaySequence
+      Sequence: FighterMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 12636
+  Name: Class_MainTutorialChapter3_Ranger
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_레인저
+  Behavior:
+    - Type: PlaySequence
+      Sequence: RangerMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 8594
+  Name: Class_MainTutorialChapter3_Socerer
+  Comment: 가츠 블러드가 아스녹시엘 조우 장면 시퀀스_소서러
+  Behavior:
+    - Type: PlaySequence
+      Sequence: SorcererMainTutorialChapter3
+    - Type: CastSkill
+      Skill: Tutorial_Teleport_Encounter_Asnoxiel01
+    - Type: FadeIn
+      Duration: 1000
+- Id: 7761
+  Name: Class_MainTutorialChapter4
+  Comment: "신과 조우 & 플레이어 부활"
+  ByClass:
+    - Class: Fighter
+      Behavior: Class_MainTutorialChapter4_Fighter
+    - Class: Ranger
+      Behavior: Class_MainTutorialChapter4_Ranger
+    - Class: Sorcerer
+      Behavior: Class_MainTutorialChapter4_Socerer
+    - Class: Assassin
+      Behavior: Class_MainTutorialChapter4_Fighter
+- Id: 14653
+  Name: Class_MainTutorialChapter4_Fighter
+  Comment: "신과 조우 & 플레이어 부활_파이터"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: FighterMainTutorialChapter4
+- Id: 6659
+  Name: Class_MainTutorialChapter4_Ranger
+  Comment: "신과 조우 & 플레이어 부활_레인저"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: RangerMainTutorialChapter4
+- Id: 10646
+  Name: Class_MainTutorialChapter4_Socerer
+  Comment: "신과 조우 & 플레이어 부활_소서러"
+  Behavior:
+    - Type: PlaySequence
+      Sequence: SorcererMainTutorialChapter4
+- Id: 5138
+  Name: Tutorial_Pilgrimage_Getup_01
+  Comment: 순례길 시작
+  Behavior:
+    - Type: FadeOut
+    - Type: DisableInput
+    - Type: PlayMotion
+      MotionType: SkillBuff_01
+    - Type: FadeIn
+      Duration: 1500
+    - Type: ShowSequencerLetterbox
+    - Type: Wait
+      Duration: 3000
+    - Type: PlayMotion
+      MotionType: SkillBuff_02
+    - Type: Wait
+      Duration: 11000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+- Id: 13052
+  Name: Tutorial_Pilgrimage_Soldier_01
+  Comment: 순례길 병사 조우
+  Behavior:
+    - Type: DisableInput
+    - Type: HideAllUI
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FocusCamera
+      TargetLocation:
+        X: -252
+        Y: 800
+      Duration: 3000
+    - Type: Wait
+      Duration: 2000
+    - Type: ResetCamera
+      Duration: 3000
+    - Type: HideSequencerLetterbox
+    - Type: ShowAllUI
+    - Type: EnableInput
+- Id: 5473
+  Name: Tutorial_Pilgrimage_Wolf_01
+  Comment: 순례길 늑대 조우
+  Behavior:
+    - Type: DisableInput
+    - Type: HideAllUI
+    - Type: CastSkill
+      Skill: AddProxy_Tutorial_Pilgrimage_Wolf_01
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FocusCamera
+      TargetLocation:
+        X: -236
+        Y: 875
+      Duration: 3000
+    - Type: Wait
+      Duration: 2000
+    - Type: ResetCamera
+      Duration: 3000
+    - Type: HideSequencerLetterbox
+    - Type: CastSkill
+      Skill: RemoveAllProxy
+    - Type: ShowAllUI
+    - Type: EnableInput
+- Id: 20989
+  Name: Tutorial_Pilgrimage_Wolf_02
+  Comment: 순례길 네임드 늑대 조우
+  Behavior:
+    - Type: DisableInput
+    - Type: HideAllUI
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: FocusCamera
+      TargetLocation:
+        X: -228
+        Y: 889
+      Duration: 3000
+    - Type: Wait
+      Duration: 4000
+    - Type: ResetCamera
+      Duration: 3000
+    - Type: HideSequencerLetterbox
+    - Type: ShowAllUI
+    - Type: EnableInput
+- Id: 11280
+  Name: LetterBoxCheck
+  Comment: 레터 박스 출력 / 숨김 연출
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: DisableInput
+    - Type: Wait
+      Duration: 5000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+- Id: 1919
+  Name: FocusCamera_FOV30
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 30
+- Id: 12618
+  Name: FocusCamera_FOV50
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 50
+- Id: 4327
+  Name: FocusCamera_FOV70
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 70
+- Id: 1037
+  Name: FocusCamera_FOV90
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 90
+- Id: 21280
+  Name: FocusCamera_FOV110
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 110
+- Id: 16172
+  Name: FocusCamera_FOV130
+  Comment: 카메라 테스트
+  Behavior:
+    - Type: FocusCamera
+      FOV: 130
+- Id: 17013
+  Name: ResetCamera
+  Comment: 카메라 테스트-카메라 리셋
+  Behavior:
+    - Type: ResetCamera
+- Id: 6916
+  Name: Main_Quest_Test_01
+  Comment: 메인 퀘스트 사용 임시 데이터
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: ToggleQuestAutoMode
+- Id: 15963
+  Name: Quest_Ch02_09_08
+  Comment: 바리탄 패전지대 인스턴스 임시
+  Behavior:
+    - Type: ToggleQuestAutoMode
+- Id: 8450
+  Name: Quest_Ch02_09_10
+  Comment: 바리탄 패전지대 인스턴스 임시
+  Behavior:
+    - Type: MoveTo
+      Area: Main_Ch02_09_10
+    - Type: ToggleQuestAutoMode
+- Id: 8451
+  Name: Tutorial_QuickSlot
+  Comment: 지급 아이템 튜토리얼
+  Behavior:
+    - Type: RegistQuickSlot
+      TutorialQuickSlot:
+        - SlotSkill: Tutorial_Fighter_GroundSlam
+          SlotNumber: 3
+    - Type: Wait
+      Duration: 3000
+    - Type: RemoveQuickSlot
+      TutorialQuickSlot:
+        - SlotNumber: 3
+- Id: 884
+  Name: InstanceEnter_01
+  Comment: 레터 박스 출력 / 숨김 연출
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -57
+        Y: 250
+      Duration: 3000
+- Id: 8596
+  Name: InstanceEnter_02
+  Comment: 레터 박스 출력 / 숨김 연출
+  Behavior:
+    - Type: MoveTo
+      Area: Main_Ch02_09_02
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 8452
+  Name: Tutorial_InteractionNPC
+  Comment: InteractionNPC 튜토리얼
+  Behavior:
+    - Type: EnableInput
+    - Type: InteractionNPC
+      Npc: Tutorial_Melee_OptioBrute_01
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Target_Button
+- Id: 8453
+  Name: Tutorial_PauseStart
+  Comment: PauseStart 튜토리얼
+  Behavior:
+    - Type: EnableInput
+    - Type: PauseStart
+- Id: 8454
+  Name: Tutorial_PauseEnd
+  Comment: PauseEnd 튜토리얼
+  Behavior:
+    - Type: EnableInput
+    - Type: PauseEnd
+- Id: 8455
+  Name: Tutorial_FocusItem
+  Comment: FocusItem 튜토리얼
+  Behavior:
+    - Type: FocusItem
+      Item: Item_SkillBook_A_G4_T4_C1
+- Id: 8456
+  Name: Tutorial_DragUI
+  Comment: DragUI 튜토리얼
+  Behavior:
+    - Type: DragUI
+      Path: "$MainHUD$.QuickSlot.QuickSlotBtnNamedSlot.QuickSlotItemList[0].Skill"
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Target_Button
+- Id: 17946
+  Name: InstanceEnter_Ch02_09
+  Comment: Ch02_09 인스턴스 입장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -78
+        Y: 267
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch02_09_02
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 17828
+  Name: InstanceExit_Ch02_09
+  Comment: Ch02_09 인스턴스 퇴장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 1500
+    - Type: AddQuestGoalAmount
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1500
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 2082
+  Name: InstanceEnter_Ch03_04
+  Comment: Ch03_04 인스턴스 입장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -80
+        Y: -49
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch03_04_03
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 20673
+  Name: InstanceExit_Ch03_04
+  Comment: Ch03_04 인스턴스 퇴장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -42
+        Y: -117
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch03_04_15
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 10457
+  Name: InstanceEnter_Ch04_05
+  Comment: Ch04_05 인스턴스 입장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: 258
+        Y: 410
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch04_05_07
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 21031
+  Name: InstanceExit_Ch04_05
+  Comment: Ch04_05 인스턴스 퇴장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: 263
+        Y: 394
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch04_05_14
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 7077
+  Name: InstanceEnter_Ch04_10
+  Comment: Ch04_10 인스턴스 입장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 1500
+    - Type: AddQuestGoalAmount
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1500
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 8557
+  Name: InstanceExit_Ch04_10
+  Comment: Ch04_10 인스턴스 퇴장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FadeOut
+      Duration: 1500
+    - Type: AddQuestGoalAmount
+    - Type: Wait
+      Duration: 1000
+    - Type: FadeIn
+      Duration: 1500
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 1575
+  Name: InstanceEnter_Ch05_18
+  Comment: Ch05_18 인스턴스 입장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -494
+        Y: 399
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch05_18_03
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 1069
+  Name: InstanceExit_Ch05_18
+  Comment: Ch05_18 인스턴스 퇴장
+  Behavior:
+    - Type: ShowSequencerLetterbox
+    - Type: CastSkill
+      Skill: DisableAutoMode
+    - Type: DisableInput
+    - Type: FocusCamera
+      TargetLocation:
+        X: -470
+        Y: 406
+      Duration: 3000
+    - Type: AddQuestGoalAmount
+    - Type: MoveTo
+      Area: Main_Ch05_18_09
+    - Type: Wait
+      Duration: 1000
+    - Type: ResetCamera
+      Duration: 1000
+    - Type: EnableInput
+    - Type: HideSequencerLetterbox
+    - Type: ToggleQuestAutoMode
+- Id: 1389
+  Name: Tutorial_BasicCombat
+  Comment: 기본 전투 튜토리얼
+  Behavior:
+    - Type: PauseStart
+    - Type: AttentionUI
+      Path: $MainHUD$.Battle.BtnSearchTarget.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_BasicCombatGuide01
+    - Type: InteractionNPC
+      Npc: Tutorial_Melee_Arem_01
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_BasicCombatGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.Battle.Attack.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_BasicCombatGuide03
+    - Type: PauseEnd
+- Id: 16414
+  Name: Tutorial_UsePotion
+  Comment: 물약 사용 튜토리얼
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.Potion.BtnPotion
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_UsePotionGuide01
+    - Type: FocusUI
+      Path: $MainHUD$.PotionSetting.Contents.Toggle
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_UsePotionGuide02
+      CheckPointGoal: true
+    - Type: AttentionUI
+      Path: "$MainHUD$.PotionSetting.Contents.ItemList[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_UsePotionGuide03
+    - Type: AttentionUI
+      Path: $MainHUD$.PotionSetting.Contents.SliderPanel
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_UsePotionGuide04
+    - Type: FocusUI
+      Path: $MainHUD$.PotionSetting.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_UsePotionGuide05
+- Id: 24000
+  Name: Tutorial_EquipItem
+  Comment: 장비 착용 튜토리얼
+  ByClass:
+    - Class: Fighter
+      Behavior: Tutorial_EquipItem_Fighter
+    - Class: Ranger
+      Behavior: Tutorial_EquipItem_Ranger
+    - Class: Sorcerer
+      Behavior: Tutorial_EquipItem_Sorcerer
+    - Class: Assassin
+      Behavior: Tutorial_EquipItem_Assasin
+- Id: 14172
+  Name: Tutorial_EquipItem_Fighter
+  Comment: 장비 착용 튜토리얼_파이터
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Lsword_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide03
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Sword_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide04
+    - Type: AttentionUI
+      Path: $MainHUD$.Left.Contents.EquipInfo.EquipWeapon.EquipItemBtn
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide05
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide06
+- Id: 10561
+  Name: Tutorial_EquipItem_Ranger
+  Comment: 장비 착용 튜토리얼_레인저
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Bow_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide03
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Cbow_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide04
+    - Type: AttentionUI
+      Path: $MainHUD$.Left.Contents.EquipInfo.EquipWeapon.EquipItemBtn
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide05
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide06
+- Id: 21022
+  Name: Tutorial_EquipItem_Sorcerer
+  Comment: 장비 착용 튜토리얼_소서러
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Staff_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide03
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Orb_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide04
+    - Type: AttentionUI
+      Path: $MainHUD$.Left.Contents.EquipInfo.EquipWeapon.EquipItemBtn
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide05
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide06
+- Id: 13744
+  Name: Tutorial_EquipItem_Assasin
+  Comment: 장비 착용 튜토리얼_어쌔신
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_TwinDaggers_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide03
+    - Type: FocusItem
+      Item: Item_Equip_Weapon_Katana_G1_T01_N1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide04
+    - Type: AttentionUI
+      Path: $MainHUD$.Left.Contents.EquipInfo.EquipWeapon.EquipItemBtn
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide05
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_EquipItemGuide06
+- Id: 13231
+  Name: Tutorial_LearnSkill
+  Comment: 스킬 학습 튜토리얼
+  ByClass:
+    - Class: Fighter
+      Behavior: Tutorial_LearnSkill_Fighter
+    - Class: Ranger
+      Behavior: Tutorial_LearnSkill_Ranger
+    - Class: Sorcerer
+      Behavior: Tutorial_LearnSkill_Sorcerer
+    - Class: Assassin
+      Behavior: Tutorial_LearnSkill_Assasin
+- Id: 3120
+  Name: Tutorial_LearnSkill_Fighter
+  Comment: 스킬 학습 튜토리얼_파이터
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_SkillBook_A_G1_T2_C1_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide03
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide04
+- Id: 12069
+  Name: Tutorial_LearnSkill_Ranger
+  Comment: 스킬 학습 튜토리얼_레인저
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_SkillBook_A_G1_T2_C2_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide03
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide04
+- Id: 14851
+  Name: Tutorial_LearnSkill_Sorcerer
+  Comment: 스킬 학습 튜토리얼_소서러
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_SkillBook_A_G1_T2_C3_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide03
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide04
+- Id: 12219
+  Name: Tutorial_LearnSkill_Assasin
+  Comment: 스킬 학습 튜토리얼_어쌔신
+  Behavior:
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Inventory
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide01
+    - Type: Wait
+      Duration: 1000
+    - Type: FocusItem
+      Item: Item_SkillBook_A_G1_T2_C4_Bounded
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide02
+    - Type: FocusUI
+      Path: $MainHUD$.ItemInfo.ItemInfo.Button4.Button
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide03
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_LearnSkillGuide04
+- Id: 15923
+  Name: Tutorial_AutoQuest
+  Comment: 퀘스트 자동 진행
+  Behavior:
+    - Type: FocusUI
+      Path: $MainHUD$.QuickQuest.QuickQuestListView
+      Tooltip:
+        SubDescription: Quest_Behavior_ToolTip_Quest_Button
+- Id: 15251
+  Name: Tutorial_UseSkill
+  Comment: 스킬 사용 튜토리얼
+  Behavior:
+    - Type: PauseStart
+    - Type: FocusUI
+      Path: "$MainHUD$.QuickSlot.QuickSlotBtnNamedSlot.QuickSlotItemList[2].Skill"
+      Tooltip:
+        SubDescription: TESTDATA
+    - Type: PauseEnd
+- Id: 18906
+  Name: Tutorial_RegistSkill
+  Comment: 튜토리얼 사용 스킬 등록
+  ByClass:
+    - Class: Fighter
+      Behavior: Tutorial_RegistSkill_Fighter
+    - Class: Ranger
+      Behavior: Tutorial_RegistSkill_Ranger
+    - Class: Sorcerer
+      Behavior: Tutorial_RegistSkill_Sorcerer
+    - Class: Assassin
+      Behavior: Tutorial_RegistSkill_Assasin
+  AllowedAddress: Tutorial_Instance_Bridge
+- Id: 7996
+  Name: Tutorial_RegistSkill_Fighter
+  Comment: 튜토리얼 사용 스킬 등록_파이터
+  AllowedAddress: Tutorial_Instance_Bridge
+  Behavior:
+    - Type: RegistQuickSlot
+      TutorialQuickSlot:
+        - SlotSkill: Tutorial_Fighter_GroundSlam
+          SlotNumber: 1
+        - SlotSkill: Tutorial_Fighter_Disillusion
+          SlotNumber: 2
+        - SlotSkill: Tutorial_Fighter_SpellCancle
+          SlotNumber: 3
+        - SlotSkill: Tutorial_Fighter_BladeStorm
+          SlotNumber: 4
+        - SlotSkill: Tutorial_Fighter_Pulling
+          SlotNumber: 5
+        - SlotSkill: Tutorial_Fighter_SpinSlash
+          SlotNumber: 6
+        - SlotSkill: Tutorial_Fighter_BlowStrike
+          SlotNumber: 7
+        - SlotSkill: Tutorial_Fighter_HorizontalSlash
+          SlotNumber: 8
+- Id: 7997
+  Name: Tutorial_RegistSkill_Ranger
+  Comment: 튜토리얼 사용 스킬 등록_레인저
+  AllowedAddress: Tutorial_Instance_Bridge
+  Behavior:
+    - Type: RegistQuickSlot
+      TutorialQuickSlot:
+        - SlotSkill: Tutorial_Ranger_Judgement
+          SlotNumber: 1
+        - SlotSkill: Tutorial_Ranger_Enrage
+          SlotNumber: 2
+        - SlotSkill: Tutorial_Ranger_ExplosionArrow
+          SlotNumber: 3
+        - SlotSkill: Tutorial_Ranger_ChargeBind
+          SlotNumber: 4
+        - SlotSkill: Tutorial_Ranger_Focus
+          SlotNumber: 5
+        - SlotSkill: Tutorial_Ranger_BindingArrow
+          SlotNumber: 6
+        - SlotSkill: Tutorial_Ranger_FlashArrow
+          SlotNumber: 7
+        - SlotSkill: Tutorial_Ranger_PiercingArrow
+          SlotNumber: 8
+- Id: 7998
+  Name: Tutorial_RegistSkill_Sorcerer
+  Comment: 튜토리얼 사용 스킬 등록_소서러
+  AllowedAddress: Tutorial_Instance_Bridge
+  Behavior:
+    - Type: RegistQuickSlot
+      TutorialQuickSlot:
+        - SlotSkill: Tutorial_Sorcerer_Blackhole
+          SlotNumber: 1
+        - SlotSkill: Tutorial_Sorcerer_Advent
+          SlotNumber: 2
+        - SlotSkill: Tutorial_Sorcerer_FlameStorm
+          SlotNumber: 3
+        - SlotSkill: Tutorial_Sorcerer_DisHealth
+          SlotNumber: 4
+        - SlotSkill: Tutorial_Sorcerer_Stalk
+          SlotNumber: 5
+        - SlotSkill: Tutorial_Sorcerer_Acceleration
+          SlotNumber: 6
+        - SlotSkill: Tutorial_Sorcerer_EnergyBolt
+          SlotNumber: 7
+        - SlotSkill: Tutorial_Sorcerer_FocusedExplosion
+          SlotNumber: 8
+- Id: 7999
+  Name: Tutorial_RegistSkill_Assasin
+  Comment: 튜토리얼 사용 스킬 등록_어쌔신
+  AllowedAddress: Tutorial_Instance_Bridge
+  Behavior:
+    - Type: RegistQuickSlot
+      TutorialQuickSlot:
+        - SlotSkill: Tutorial_Assassin_SoulCleave
+          SlotNumber: 1
+        - SlotSkill: Tutorial_Assassin_Condemnation
+          SlotNumber: 2
+        - SlotSkill: Tutorial_Assassin_Eradication
+          SlotNumber: 3
+        - SlotSkill: Tutorial_Assassin_BladeRush
+          SlotNumber: 4
+        - SlotSkill: Tutorial_Assassin_MultiFlurry
+          SlotNumber: 5
+        - SlotSkill: Tutorial_Assassin_ShadowChase
+          SlotNumber: 6
+        - SlotSkill: Tutorial_Assassin_DoubleSlash
+          SlotNumber: 7
+        - SlotSkill: Tutorial_Assassin_WoundSlash
+          SlotNumber: 8
+- Id: 12735
+  Name: Tutorial_RemoveSkill
+  Comment: 튜토리얼 사용 스킬 제거
+  AllowedAddress: Tutorial_Instance_Bridge
+  Behavior:
+    - Type: RemoveQuickSlot
+      TutorialQuickSlot:
+        - SlotNumber: 1
+        - SlotNumber: 2
+        - SlotNumber: 3
+        - SlotNumber: 4
+        - SlotNumber: 5
+        - SlotNumber: 6
+        - SlotNumber: 7
+        - SlotNumber: 8
+- Id: 12736
+  Name: Tutorial_OpenTutorialGuide
+  Comment: 튜토리얼 입력 가이드 오픈
+  Behavior:
+    - Type: EnableInput
+    - Type: OpenTutorialGuide
+      TutorialGuideParameter:
+        UIPath: /Game/UI/Tutorial/TutorialMouseKeyboard.TutorialMouseKeyboard_C
+        Tooltip: Tutorial_Tooltip_ContriolGuide01
+        Setting: PC
+- Id: 12737
+  Name: Tutorial_CloseTutorialGuide
+  Comment: 튜토리얼 입력 가이드 오픈
+  Behavior:
+    - Type: EnableInput
+    - Type: CloseTutorialGuide
+- Id: 13643
+  Name: PlayEffect_Test
+  Comment: 이펙트 출력 테스트
+  Behavior:
+    - Type: PlayEffect
+      Name: Building_Main_Effect
+      Npc: NPC_Commander_01
+      Path: /Game/EffectActions/VAE_Etc_Quest_Destination.VAE_Etc_Quest_Destination
+    - Type: Wait
+      Duration: 2000
+    - Type: EndEffect
+      Name: Building_Main_Effect
+- Id: 2227
+  Name: Tutorial_SkillQucikSlotRegist
+  Comment: 스킬 퀵슬롯 등록 튜토리얼
+  ExceptionUIList:
+    - Name: SkillBookHUD
+  Behavior:
+    - Type: Wait
+      Duration: 2500
+    - Type: FocusUI
+      Path: $MainHUD$.TopMenu.Skill
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide01
+    - Type: FocusUI
+      Path: "$MainHUD$.Right.Contents.SkillList[0]"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide02
+    - Type: FocusUI
+      Path: "$MainHUD$.QuickSlot.QuickSlotBtnNamedSlot.QuickSlotItemList[0].SlotSwitcher"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide03
+    - Type: DragUI
+      Path: "$MainHUD$.QuickSlot.QuickSlotBtnNamedSlot.QuickSlotItemList[0].SlotSwitcher"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide04
+    - Type: AttentionUI
+      Path: "$MainHUD$.Right.Contents.SkillList[0].BtnAuto"
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide05
+    - Type: FocusUI
+      Path: $MainHUD$.Right.BtnClose
+      Tooltip:
+        SubDescription: Tutorial_Tooltip_SkillRegistGuide06

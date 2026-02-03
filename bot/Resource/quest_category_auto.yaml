@@ -1,0 +1,13 @@
+- Id: 1
+  Name: Main
+  Comment: 메인
+  QuestChaptersByCategoryTitleText: UIWord_Quest_Chapter
+  DisableOfflineMode: true
+- Id: 3
+  Name: Tutorial
+  Comment: 튜토리얼
+  QuestChaptersByCategoryTitleText: UIWord_Tutorial_Chapter
+- Id: 50
+  Name: Request
+  Comment: 의뢰
+  TeleportAndAutoQuestWhenCompletedByAuto: true

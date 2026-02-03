@@ -1,0 +1,29 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Icon:
+      type: string
+    Title:
+      type: string
+      ref: description
+    Description:
+      type: string
+      ref: description
+    UIType:
+      type: string
+    CanStack: # true일 경우 다른 알럿들과 함께 순차 출력 / false일 경우 즉시 출력
+      type: boolean
+      default: true
+  required:
+    - Id
+    - Name
+    - Description
+    - UIType

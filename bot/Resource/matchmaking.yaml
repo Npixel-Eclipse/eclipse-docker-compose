@@ -1,0 +1,84 @@
+- Id: 1
+  Name: Battleground_Faction_HighRiver_20v20
+  Comment: 하이리버 전투 20v20
+  Type: Battleground
+  OpenTime:
+    - Day: SUNDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: MONDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: TUESDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: WEDNESDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: THURSDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: FRIDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+    - Day: SATURDAY
+      OpenTime: 15:00
+      CloseTime: 22:00
+  BlockLand:
+    - WorldBoss
+    - Quest
+    - Tutorial
+    - TutorialInstance
+    - ChallengeDungeon
+    - BattleGround_Faction_HighRiver_Group1
+    - Challenge_Dungeon_Polluted_Lake_1F
+    - Challenge_Dungeon_Monkey_Playground_1F
+    - Challenge_Dungeon_Undead_Mine_1F
+    - FieldDun_Blood_Shed_F1
+    - FieldDun_Blood_Shed_F2
+    - FieldDun_Kulika_Undying_Lands_F1
+    - FieldDun_Kulika_Undying_Lands_F2
+    - FieldDun_Kulika_Undying_Lands_F3
+    - FieldDun_Kulika_Undying_Lands_F4
+    - FieldDun_Kulika_Undying_Lands_F5
+    - FieldDun_Abrion_Tower_F1
+    - FieldDun_Abrion_Tower_F2
+    - FieldDun_Abrion_Tower_F3
+    - FieldDun_Abrion_Tower_F4
+    - FieldDun_Abrion_Tower_F5
+    - FieldDun_Abrion_Tower_F6
+    - FieldDun_Abrion_Tower_F7
+    - FieldDun_Breath_of_Gaia_Ondor_F1
+    - FieldDun_Breath_of_Gaia_Ondor_F2
+    - FieldDun_Breath_of_Gaia_Ondor_F3
+    - FieldDun_Breath_of_Gaia_Ondor_F4
+    - FieldDun_Breath_of_Gaia_Ondor_F5
+    - FieldDun_Holy_Patria_Lesbos_Sanctum_F1
+    - WorldBoss_Dungeon_Kraka
+  Team:
+    - Id: 1
+      MinimumPlayer: 10
+      MaximumPlayer: 10
+      StartSkill: Battleground_Enter_Team1
+      Buff:
+        - Random_Location_EnterTeleport_Block_Buff
+      ResultSkill: BattlegroundResult
+      EndSkill: Battleground_Goodbye
+    - Id: 2
+      MinimumPlayer: 10
+      MaximumPlayer: 10
+      StartSkill: Battleground_Enter_Team2
+      Buff:
+        - Random_Location_EnterTeleport_Block_Buff
+      ResultSkill: BattlegroundResult
+      EndSkill: Battleground_Goodbye
+  MatchRateProperty: CombatPoint
+  SearchRange: 10000
+  Expansion:
+    - Comment: 1분 이후 전투력 관계 없도록 설정
+      WaitSecond: 60
+      ExpansionValue: 100000000
+    - Comment: 테스트용
+      WaitSecond: 10
+      ExpansionValue: 100000000
+  MinimumPlayerWaitTime: 10

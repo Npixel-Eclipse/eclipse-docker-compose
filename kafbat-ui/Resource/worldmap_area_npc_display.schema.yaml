@@ -1,0 +1,45 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - NpcInfo
+  properties: 
+    Id: #worldmap_area.yaml 월드맵 에어리어 id
+      type: integer
+      minimum: 1
+    Name: #worldmap_area.yaml 월드맵 에어리어 Name
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    NpcInfo: #npc 정보
+      type: array
+      dynamic_property: true
+      items:
+        type: object
+        additionalProperties: false
+        properties: 
+            Npc:
+              type: string
+              ref: npc
+            DropItem:
+              type: string
+              ref: drop_item
+    DisplayItems: #표시할 아이템 정보
+      type: array
+      dynamic_property: true
+      items:
+        type: object
+        additionalProperties: false
+        properties: 
+          ItemID:
+            type: string
+            ref: item
+          BossOnly:
+            type: boolean
+          AbyssOnly:
+            type: boolean
+
+

@@ -1,0 +1,83 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Comment
+    - Matchmaking
+    - PlayerInfo
+    - Scenario
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+      visible: true
+    # 매칭룰을 선택하기 위한 매치메이킹 정보
+    Matchmaking:
+      type: string
+      ref: matchmaking
+    # 매칭에 테스트 할 유저 정보 정의
+    PlayerInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Name
+          - PcClass
+          - MatchRate
+        properties:
+          # 유저 ID
+          ## ※ 시나리오에서 사용해야 하므로 간결하게 작성하는 것이 용이함.
+          Id:
+            type: integer
+            minimum: 1
+          # 유저 이름
+          ## 결과 화면에서 표시되므로 쉬운 이름을 사용하는 것이 용이함.
+          Name:
+            type: string
+          # 클래스 정보
+          PcClass:
+            type: string
+          # MMR
+          ## matchmaking에 입력된 Property의 값 (전투력 등)
+          MatchRate:
+            type: integer
+    Scenario:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Action
+        properties:
+          # 액션
+          ## SLEEP : N초를 흘림
+          ## MATCH : 매칭 시도
+          ## SLEEP_AND_MATCH : N초를 흘리고 매칭 시도
+          ## QUEUE : 플레이어를 큐에 넣음
+          Action:
+            type: string
+            enum:
+              - SLEEP
+              - MATCH
+              - SLEEP_AND_MATCH
+              - QUEUE
+          # 액션 파라미터
+          ## 파라미터가 필요한 액션:
+          ### SLEEP : N초
+          ### SLEEP_AND_MATCH : N초
+          ### QUEUE : PlayerInfo에 정의한 플레이어 Id
+          ## 파라미터가 필요하지 않은 액션은 0 등 아무거나 넣어도 무방
+          IntegerParameter:
+            type: integer
+            visible: true

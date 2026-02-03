@@ -1,0 +1,64 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - QuestCategory
+    - QuestType
+    - Description
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    QuestCategory:
+      type: string
+      ref: quest_category
+    QuestType:
+      type: string
+      enum:
+        - Main
+        - Story
+        - Sub
+        - Daily
+        - Weekly
+        - ChallengeDungeon
+        - Tutorial
+        - TutorialRequire
+    Description:
+      type: string
+      ref: description
+    DefaultTabState:
+      type: boolean
+      default: false
+    Discardable:
+      type: boolean
+      default: true
+
+    #챕터를 포함시키려면 quest_chapter.yaml 작업 및 추가 코드 작업이 필요합니다.
+    #이클립스클라 - 김정홍 에게 문의 부탁드립니다
+    ContainChapter:
+      type: boolean
+      default: false
+
+    Icon:
+      type: string
+    VisibleInTab:
+      type: boolean
+      default: true
+
+    #'클릭해서 수락하세요' 상태일때 HUD에도 뜨는지에 대한 옵션. false면 수락한 후에 뜸.
+    ShowInHudWhenInActive:
+      type: boolean
+      default: true
+
+    ShowCompletePopup:
+      type: boolean
+      default: true

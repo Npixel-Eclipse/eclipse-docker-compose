@@ -1,0 +1,60 @@
+- Id: 101
+  Name: Attack_Uncommon
+  Condition:
+    - Category: Attack
+      Amount: 80
+- Id: 391
+  Name: Attack_Rare
+  Condition:
+    - Category: Attack
+      Amount: 150
+- Id: 9
+  Name: Attack_Epic
+  Condition:
+    - Category: Attack
+      Amount: 250
+- Id: 570
+  Name: Attack_Legendary
+  Condition:
+    - Category: Attack
+      Amount: 450
+- Id: 7
+  Name: Defense_Uncommon
+  Condition:
+    - Category: Defense
+      Amount: 80
+- Id: 354
+  Name: Defense_Rare
+  Condition:
+    - Category: Defense
+      Amount: 150
+- Id: 613
+  Name: Defense_Epic
+  Condition:
+    - Category: Defense
+      Amount: 250
+- Id: 310
+  Name: Defense_Legendary
+  Condition:
+    - Category: Defense
+      Amount: 450
+- Id: 747
+  Name: Support_Uncommon
+  Condition:
+    - Category: Support
+      Amount: 25
+- Id: 116
+  Name: Support_Rare
+  Condition:
+    - Category: Support
+      Amount: 50
+- Id: 154
+  Name: Support_Epic
+  Condition:
+    - Category: Support
+      Amount: 75
+- Id: 1253
+  Name: Support_Legendary
+  Condition:
+    - Category: Support
+      Amount: 100

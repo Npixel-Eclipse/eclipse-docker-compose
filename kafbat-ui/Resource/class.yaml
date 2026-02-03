@@ -1,0 +1,181 @@
+- Id: 1
+  Name: Fighter
+  Description: Fighter
+  Group: Melee
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+    - BroadcastPkPointBuff
+  BaseProperties:
+    - PropertyPreset: Class_Common_Base
+    - PropertyPreset: Class_Fighter_Base
+  NormalAttack:
+    - Skill: Fighter_NormalAttack
+  ItemCategory: Item_Equip_Weapon_Fighter
+  ModelAsset: PC001
+  Icon: /Game/UIIcon/Class/ClassFighter.ClassFighter
+  StartTerritory: Instance_Tutorial_Bridge_Spawn01
+  BasicGivenItems:
+    - Id: 20
+      Name: Item_Potential_Page1
+    - Id: 21
+      Name: Item_Potential_Page2
+    - Id: 22
+      Name: Item_Potential_Page3
+  ClassDescription: UIWord_Lobby_CharacteClassFighter
+  TitleDescription: UIWord_Lobby_Sin_Fighter
+  ShortStyleDescription: UIWord_Lobby_Shortinfo_Fighter
+  StyleDescription: UIWord_Lobby_Info_Fighter
+  MainSkillItems:
+    - Learned_Skill_MainSkill_Fighter_Crash
+    - Learned_Skill_MainSkill_Fighter_Pulling
+    - Learned_Skill_MainSkill_Fighter_GroundSlam
+  Abilities:
+    - Description: StatNamePower
+      Level: 4
+      LevelColor: Blue
+    - Description: StatNameDefence
+      Level: 5
+      LevelColor: Yellow
+    - Description: StatNameRange
+      Level: 1
+      LevelColor: Blue
+    - Description: StatNameSupport
+      Level: 2
+      LevelColor: Blue
+- Id: 2
+  Name: Ranger
+  Description: Ranger
+  Group: Range
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+    - BroadcastPkPointBuff
+  BaseProperties:
+    - PropertyPreset: Class_Common_Base
+    - PropertyPreset: Class_Ranger_Base
+  NormalAttack:
+    - Skill: Ranger_NormalAttack
+  ItemCategory: Item_Equip_Weapon_Ranger
+  ModelAsset: PC002
+  Icon: /Game/UIIcon/Class/ClassRanger.ClassRanger
+  StartTerritory: Instance_Tutorial_Bridge_Spawn01
+  BasicGivenItems:
+    - Id: 20
+      Name: Item_Potential_Page1
+    - Id: 21
+      Name: Item_Potential_Page2
+    - Id: 22
+      Name: Item_Potential_Page3
+  ClassDescription: UIWord_Lobby_CharacteClassRanger
+  TitleDescription: UIWord_Lobby_Sin_Ranger
+  ShortStyleDescription: UIWord_Lobby_Shortinfo_Ranger
+  StyleDescription: UIWord_Lobby_Info_Ranger
+  MainSkillItems:
+    - Learned_Skill_MainSkill_Ranger_BearTrap
+    - Learned_Skill_MainSkill_Ranger_HoldTrap
+    - Learned_Skill_MainSkill_Ranger_Judgement
+  Abilities:
+    - Description: StatNamePower
+      Level: 4
+      LevelColor: Blue
+    - Description: StatNameDefence
+      Level: 1
+      LevelColor: Blue
+    - Description: StatNameRange
+      Level: 5
+      LevelColor: Yellow
+    - Description: StatNameSupport
+      Level: 1
+      LevelColor: Blue
+- Id: 3
+  Name: Sorcerer
+  Description: Sorcerer
+  Group: Magic
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+    - BroadcastPkPointBuff
+  BaseProperties:
+    - PropertyPreset: Class_Common_Base
+    - PropertyPreset: Class_Sorcerer_Base
+  NormalAttack:
+    - Skill: Sorcerer_NormalAttack
+  ItemCategory: Item_Equip_Weapon_Sorcerer
+  ModelAsset: PC003
+  Icon: /Game/UIIcon/Class/ClassWizard.ClassWizard
+  StartTerritory: Instance_Tutorial_Bridge_Spawn01
+  BasicGivenItems:
+    - Id: 20
+      Name: Item_Potential_Page1
+    - Id: 21
+      Name: Item_Potential_Page2
+    - Id: 22
+      Name: Item_Potential_Page3
+  ClassDescription: UIWord_Lobby_CharacteClassSorcery
+  TitleDescription: UIWord_Lobby_Sin_Sorcerer
+  ShortStyleDescription: UIWord_Lobby_Shortinfo_Sorcerer
+  StyleDescription: UIWord_Lobby_Info_Sorcerer
+  MainSkillItems:
+    - Learned_Skill_MainSkill_Sorcerer_PerfectHeal
+    - Learned_Skill_MainSkill_Sorcerer_Stalk
+    - Learned_Skill_MainSkill_Sorcerer_Blackhole
+  Abilities:
+    - Description: StatNamePower
+      Level: 3
+      LevelColor: Blue
+    - Description: StatNameDefence
+      Level: 3
+      LevelColor: Blue
+    - Description: StatNameRange
+      Level: 3
+      LevelColor: Blue
+    - Description: StatNameSupport
+      Level: 5
+      LevelColor: Yellow
+- Id: 4
+  Name: Assassin
+  Description: Assassin
+  Group: Melee
+  BaseBuffs:
+    - Bora_CastBuff
+    - SharingSight_CastBuff
+    - BroadcastPkPointBuff
+  BaseProperties:
+    - PropertyPreset: Class_Common_Base
+    - PropertyPreset: Class_Assassin_Base
+  NormalAttack:
+    - Skill: Assassin_NormalAttack_Double
+    - Skill: Assassin_NormalAttack
+  ItemCategory: Item_Equip_Weapon_Assassin
+  ModelAsset: PC004
+  Icon: /Game/UIIcon/Class/ClassAssassin.ClassAssassin
+  StartTerritory: Instance_Tutorial_Bridge_Spawn01
+  BasicGivenItems:
+    - Id: 20
+      Name: Item_Potential_Page1
+    - Id: 21
+      Name: Item_Potential_Page2
+    - Id: 22
+      Name: Item_Potential_Page3
+  ClassDescription: UIWord_Lobby_CharacteClassAssassin
+  TitleDescription: UIWord_Lobby_Sin_Assassin
+  ShortStyleDescription: UIWord_Lobby_Shortinfo_Assassin
+  StyleDescription: UIWord_Lobby_Info_Assassin
+  MainSkillItems:
+    - Learned_Skill_MainSkill_Assassin_DeathMark
+    - Learned_Skill_MainSkill_Assassin_DarkShadow
+    - Learned_Skill_MainSkill_Assassin_SoulCleave
+  Abilities:
+    - Description: StatNamePower
+      Level: 4
+      LevelColor: Blue
+    - Description: StatNameDefence
+      Level: 5
+      LevelColor: Yellow
+    - Description: StatNameRange
+      Level: 1
+      LevelColor: Blue
+    - Description: StatNameSupport
+      Level: 2
+      LevelColor: Blue

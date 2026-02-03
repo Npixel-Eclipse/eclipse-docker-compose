@@ -1,0 +1,12 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.guild";
+option java_outer_classname = "CommonGuildProto";
+
+message GuildMark {
+  int64 frame = 1;
+  int64 symbol = 2;
+  string frame_color = 3;
+}

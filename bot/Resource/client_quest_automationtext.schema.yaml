@@ -1,0 +1,26 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    TextKey:
+      type: string
+      enum:
+        - TargetName
+        - GoalAmount
+        - TargetAddress
+        - Grade
+        - EnchantLevel
+        - BuildingLevel
+        - RankThreshhold
+        - Merchant
+ 
+  required:
+    - Id
+    - Name

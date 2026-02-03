@@ -1,0 +1,289 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.party";
+option java_outer_classname = "PartyServiceProto";
+
+import "google/protobuf/timestamp.proto";
+import "Common/callback.proto";
+import "Common/battle_common.proto";
+import "Common/party_common.proto";
+import "Server/session.proto";
+
+package party;
+
+// 파티 핀 포인트 (서버 저장용, sharer_character_uuid 포함)
+message PartyPinPointCache {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  common.ProtoCoordinate coordinate = 3;
+  int64 party_id = 4;
+  string sharer_name = 5;
+  google.protobuf.Timestamp created_at = 6;
+  string sharer_character_uuid = 7;
+}
+
+message ConnectionCache {
+  message Connection {
+      string character_uuid = 1;
+      bool is_connected = 2;
+  }
+  repeated Connection connections = 1;
+}
+
+// key = character_uuid, value = party_id 형태로
+// 어떤 캐릭터가 현재 어느 파티에 속해있는지를 저장
+message PartyIdCache {
+  message PartyId {
+      string character_uuid = 1;
+      int64 party_id = 2;
+      bool is_disconnected = 3;
+
+  }
+  repeated PartyId party_ids = 1;
+}
+
+// Party StateStore 구성에 사용
+message PartyCache {
+    message PartyMember {
+        session.Session session = 1;
+        optional int64 disconnect_at = 2; // unix epoch millis
+        int64 sequence = 3; // 파티 내 번호
+    }
+    message InviteeWithTTL {
+        session.Session invitee = 1;
+        int64 valid_until = 2; // unix epoch millis
+    }
+    int64 id = 1;
+    repeated PartyMember members = 2;
+    int32 hostIndex = 3;
+    common.PartyRule rule = 4;
+    repeated InviteeWithTTL inviting_members = 5;
+    repeated PartyPinPointCache pins = 6;
+}
+
+// 특정 유저가 초대 받은 파티들 목록
+message InvitationCache {
+    message InvitedParty {
+        int64 party_id = 1;
+        int64 valid_until = 2; // unix epoch millis
+        string character_uuid = 3; // 같은 계정 내의 캐릭터
+    }
+    repeated InvitedParty invited_parties = 1;
+}
+
+// key = party_id
+message PartyCommand {
+    oneof command {
+        PartyInfoCommand party_info_command = 1;
+        RemoveInviteeCommand remove_invitee_command = 2;
+        ConnectedUserCommand connected_user_command = 3;
+        DisconnectedUserCommand disconnected_user_command = 4;
+        GetPartyInfoCommand get_party_info_command = 5;
+        CancelInvitationCommand cancel_invitation_command = 6;
+        CreatePartyCommand create_party_command = 7;
+        AcceptInvitationCommand accept_invitation_command = 8;
+        BroadcastToParty broadcast_to_party = 10;
+        CheatCommand cheat_command = 99;
+    }
+}
+
+message Member {
+    string character_uuid = 1;
+    int32 x = 2;
+    int32 y = 3;
+    int64 maxHp = 4;
+    int64 hp = 5;
+    int64 maxMp = 6;
+    int64 mp = 7;
+    int32 classId = 8;
+    int64 instance_id = 9;
+    bool not_exist = 10;
+    string land_name = 11;
+}
+
+message PartyInfoCommand {
+    string connected_user = 1;
+    repeated Member members = 2;
+}
+
+message RemoveInviteeCommand {
+    session.Session invitee = 1;
+    int64 party_id = 2;
+}
+
+// 유저가 다시 접속했을 때, 만약 파티 정보가 유지되어있다면
+// 클라에게 다시 파티 정보를 보내주어야함
+message ConnectedUserCommand {
+    string character_uuid = 1;
+}
+
+message DisconnectedUserCommand {
+    string character_uuid = 1;
+}
+
+message GetPartyInfoCommand {
+    int64 request_account_id = 4;
+    string request_character_uuid = 2;
+    common.CallbackCommand callback = 3;
+}
+
+// 초대 수락을 시간 내에 안누른 경우 서버에서 자동 취소하기 위함
+message CancelInvitationCommand {
+    string invitee = 1;
+}
+
+message CreatePartyCommand {
+    string host = 1;
+    string invitee = 2;
+    repeated Member members = 3;
+}
+
+message AcceptInvitationCommand {
+    string inviter = 1;
+    string invitee = 2;
+    repeated Member members = 3;
+}
+
+message CheatCommand {
+    string command = 1;
+}
+
+message UpdatePartyIdCommand {
+  string character_uuid = 1;
+  optional int64 party_id = 2;
+}
+
+message PartyMemberUpdatedEvent {
+    int64 party_id = 1;
+    repeated Member members = 2;
+
+    message Member {
+        string character_uuid = 1;
+        string character_name = 2;
+    }
+}
+
+message BroadcastToParty {
+    bytes event = 1;
+    repeated string excluded_character_uuid = 2;
+}
+
+// key: AccountId
+message PartyAccountCommand {
+    string character_uuid = 1;
+
+    oneof command {
+        GetPartyInfo get_party_info = 10;
+        SettingInfo setting_info = 11;
+        AddInvitedParty add_invited_party = 12;
+        RemoveInvitedParty remove_invited_party = 13;
+        UpdatePartyId update_party_id = 14;
+        ValidateParty validate_party = 15;
+        ForwardedCommand forwarded_command = 16;
+        ForwardRequestByParty forward_request_by_party = 17;
+    }
+
+    message GetPartyInfo {
+        common.CallbackCommand callback = 1;
+    }
+
+    // 세팅 응답 값은 kafka header에 key = SettingResponse에 들어 있음
+    message SettingInfo {}
+
+    // InvitationCache에 나를 초대한 파티 추가
+    message AddInvitedParty {
+        int64 party_id = 1;
+        int64 valid_until = 2;
+    }
+
+    // InvitationCache에서 나를 초대한 파티들 제거하기 위함
+    message RemoveInvitedParty {
+        repeated int64 party_ids = 1;
+        int64 my_party_id = 2;
+        bool remove_all = 3;
+        bool without_notify = 4; // 클라에게 알리지 않음
+    }
+
+    message UpdatePartyId {
+        optional int64 party_id = 1;
+    }
+
+    message ValidateParty {
+        bool forward_by_target_party_id = 1;
+        bool check_max_invitation = 2;
+        bool check_party_exist = 3;
+        string target_name = 4;
+        session.Session requester = 5;
+        ForwardedRequest callback_request = 6;
+    }
+
+    message ForwardedCommand {
+        optional int64 party_id = 1;
+        oneof command {
+            bytes FrontCommand = 2;
+            bytes BattleCommand = 3;
+        }
+    }
+
+    message ForwardRequestByParty {
+        // 해당 target이 속한 party_id로 command를 포워딩함
+        string target_character_uuid = 1;
+        session.Session requester_session = 2;
+        bytes FrontRequest = 3;
+    }
+}
+
+message ForwardedRequest {
+    // validation이 성공한 후 다시 request를 처리하는 경우에 쓰임
+    message Context {
+        session.Session target_session = 1;
+        bool is_validation_failed = 2;
+        int64 party_id = 3;
+    }
+    session.Session session = 1;
+    bytes request = 2;
+    optional Context context = 3;
+}
+
+message PartyResponse {
+    PartyResult result = 1;
+
+    oneof response {
+        GetPartyInfo get_party_info = 10;
+    }
+
+    enum PartyResult {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    message GetPartyInfo {
+        int64 request_account_id = 4;
+        string request_character_uuid = 2;
+        optional Party party = 3;
+
+        message Party {
+            int64 party_id = 1;
+            repeated Member members = 2;
+
+            message Member {
+                int64 account_id = 4;
+                string character_uuid = 2;
+                bool host = 3;
+            }
+        }
+    }
+}
+
+message PartyMemberIOEvent {
+    int64 account_id = 5;
+    string character_uuid = 2;
+    Type type = 3;
+    int64 party_id = 4;
+
+    enum Type {
+        JOIN = 0;
+        LEAVE = 1;
+    }
+}

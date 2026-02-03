@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.bridge.reply";
+option java_outer_classname = "ServerBridgeReplyProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package bridge_reply;
+
+enum BridgeReplyResult {
+  SUCCESS = 0;
+  FAIL = 1;
+}
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+
+message BridgeReply {
+  optional bytes reply_wait_uuid = 1;
+
+  oneof reply {
+    // general
+
+    // stove
+    StoveItemBoxReward stove_item_box_reward = 100;
+    StoveBillingPurchase stove_billing_purchase = 101;
+    StoveBillingVoided stove_billing_voided = 102;
+  }
+
+  message StoveItemBoxReward {
+    Result result = 1;
+    optional string error_message = 2;
+
+    enum Result {
+      SUCCESS = 0;
+      FAIL = 1;
+      FAIL_ITEM_NOT_FOUND = 2;
+      FAIL_CHARACTER_NOT_FOUND = 3;
+      FAIL_MESSAGE_DECRYPTION = 4;
+      FAIL_DUPLICATED_TRANSACTION_ID = 5;
+    }
+  }
+
+  message StoveBillingPurchase {
+    Result result = 1;
+    optional string error_message = 2;
+
+    enum Result {
+      SUCCESS = 0;
+      FAIL = 1;
+      FAIL_ITEM_NOT_FOUND = 2;
+      FAIL_BUY_CONDITION = 3; // 구매 요건이 충족되지 않음. (레벨제한, 구매제한 등)
+      FAIL_DUPLICATED_PURCHASE_UID = 4;
+    }
+  }
+
+  message StoveBillingVoided {
+    Result result = 1;
+    optional string error_message = 2;
+
+    enum Result {
+      SUCCESS = 0;
+      FAIL = 1;
+    }
+  }
+}

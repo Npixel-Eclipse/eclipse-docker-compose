@@ -1,0 +1,67 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Asset:
+      type: string
+    DamageFontAsset:
+      type: string
+    Emotions:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - SkillInfo
+        properties: 
+            SkillInfo:
+              type: string
+              ref: skill
+            Icon:
+              type: string
+            Name:
+              type: string
+              ref: description
+            description:
+              type: string
+              ref: description
+    OverrideEffect:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - SourceEffect
+          - ChangeEffect
+        properties: 
+            SourceEffect:
+              type: string
+              ref: effect
+            ChangeEffect:
+              type: string
+              ref: effect
+    OverrideProjectile:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - SourceProjectile
+          - ChangeProjectile
+        properties: 
+            SourceProjectile:
+              type: string
+              ref: projectile
+            ChangeProjectile:
+              type: string
+              ref: projectile 

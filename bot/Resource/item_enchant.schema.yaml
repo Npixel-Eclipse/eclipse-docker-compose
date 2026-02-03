@@ -1,0 +1,169 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - TargetProperty
+    - Rule
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    Comment:
+      type: string
+    TargetProperty:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    BaseEnchantCostItem: # 강화 비용 아이템
+      type: string
+      ref: item
+      visible: true
+    BaseEnchantCost: # 강화 비용
+      type: integer
+      minimum: 1
+      visible: true
+    Cost: # 강화 비용
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - From
+          - EnchantCostItem
+          - EnchantCost
+        properties:
+          From:
+            type: integer
+          EnchantCostItem: # From 단계 강화 비용 아이템
+            type: string
+            ref: item
+            visible: true
+          EnchantCost: # From 단계 강화 비용
+            type: integer
+            minimum: 1
+            visible: true
+    Material: # 강화 재료
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - From
+        properties:
+          From:
+            type: integer
+          MaterialItem:
+            type: string
+            ref: item
+            visible: true
+          Grade:
+            type: string
+            ref: grade
+          Category:
+            type: string
+            ref: item_category
+          SameAsTargetItem:
+            type: boolean
+          Amount:
+            type: integer
+            default: 1
+            visible: true
+    Rule:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - From
+          - To
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          From:
+            type: integer
+            visible: true
+          To:
+            type: integer
+            visible: true
+          Vaporize:
+            type: boolean
+            visible: true
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+    RewardItem: # 강화 실패 시 보상 아이템
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - From
+          - To
+          - Item
+          - Amount
+        properties:
+          From:
+            type: integer
+          To:
+            type: integer
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+    Expand: # 강화 레벨 확장 규칙 정의
+      visible: true
+      type: array
+      items:
+        type: object
+        required: 
+          - Step
+          - ExpandAt
+          - ExpandCostItem
+          - ExpandCost
+        properties:
+          Step: # 강화 레벨 확장 단계
+            type: integer
+            minimum: 1
+          ExpandAt: # 강화 레벨 확장 구간
+            type: integer
+            minimum: 1
+          ExpandCostItem: # 강화 레벨 확장 비용 아이템
+            type: string
+            ref: item
+          ExpandCost: # 강화 레벨 확장 비용
+            type: integer
+            minimum: 1            
+          MaterialItem: # 강화 레벨 확장 재료 아이템
+            type: string
+            ref: item
+          MaterialItemProbability: # MaterialItem 사용시 강화 레벨 확장 확률
+            visible: true
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+          MaterialItemAmount: # MaterialItem 사용시 소모 수량
+            type: integer
+            default: 1
+          SelfSameItem: # 강화 대상 아이템을 소모하여 강화 레벨 확장
+            type: boolean            
+          SelfSameItemProbability: # SelfSameItem 사용시 강화 레벨 확장 확률
+            visible: true
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+          SelfSameItemAmount: # SelfSameItem 사용시 소무 수량
+            type: integer
+            default: 1

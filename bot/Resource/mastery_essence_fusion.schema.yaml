@@ -1,0 +1,59 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - InputSkill
+    - InputMasteryEssence
+    - OutputItem
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type:
+        - string
+        - number
+    # Deprecated: Will be removed in future version. Use InputSkill instead.
+    Input:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - MasteryEssence
+        properties:
+          MasteryEssence:
+            type: string
+            ref: mastery_essence
+    InputSkill:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - MaterialItem
+          - Summary
+          - SubSummary
+        properties:
+          MaterialItem:
+            type: string
+            ref: item
+          Summary:
+            type: string
+            ref: description
+          SubSummary:
+            type: string
+            ref: description
+    InputMasteryEssence:
+      type: string
+      ref: mastery_essence
+    OutputItem:
+      type: string
+      ref: item

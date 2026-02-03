@@ -1,0 +1,113 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - RerollItem
+    - RecipeOutput
+    - Cost
+    - Duration
+    - FirstSelectFreeCount
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    # 다시뽑기 아이템
+    ## 다시뽑기 아이템은 유일하게 설정되어야 한다.
+    ## - A를 여기에 적었다면, 또 다시 A가 입력되면 안 된다.
+    RerollItem:
+      type: string
+      ref: item
+    # 다시뽑기 회차 및 재화
+    Cost:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - RerollLevel
+          - Currency
+          - Amount
+          - CategorySelect
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          # 회차
+          RerollLevel:
+            type: integer
+            minimum: 1
+          # 재화
+          Currency:
+            type: string
+            ref: item
+          # 재화량
+          Amount:
+            type: integer
+            minimum: 0
+          # 해당 회차 카테고리 선택 가능 여부
+          CategorySelect:
+            type: string
+            enum: [ Random, Select ]
+            default: Random
+    # 다시 뽑기시 무료로 카테고리를 선택해 뽑기 가능한 횟수
+    FirstSelectFreeCount:
+      type: integer
+      minimum: 0
+      default: 0
+    # 다시뽑기 가능 시간 (분)
+    Duration:
+      type: integer
+      minimum: 1
+    # 다시뽑기 아이템을 통해 선택할 수 있는 RecipeOutput 목록
+    ## 여기에 기록된 RecipeOutput 중 하나를 골라서 다시뽑기를 진행할 수 있다.
+    ### 예시) 1개만 입력되면 고를 수 있는 것이 하나이므로 골라서 다시뽑기 하는 것이 아니다.
+    ###       N개가 입력되면 N개중 하나를 골라서 다시뽑기한다.
+    RecipeOutput:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - RecipeOutput
+          - Comment
+          - CategorySelect
+        properties:
+          # 다시뽑기에 사용할 Recipe Output
+          ## 복수개의 그룹을 지정하면 안 됨.
+          ## - 다시뽑기는 반드시 하나만 다시 뽑혀야 하므로.
+          ## - 복수개의 그룹이 존재하는 Recipe Output이 지정된 경우 아이템서버가 부팅되지 않도록 설정함.
+          RecipeOutput:
+            type: string
+            ref: recipe_output
+          # 다시뽑기에 사용할 방법
+          ### Random: 랜덤뽑기
+          ### Select: 카테고리선택후 뽑기
+          CategorySelect:
+            type: string
+            enum:
+              - Random
+              - Select
+            default: Random
+          # 다시뽑기에 선택할 표시용 카테고리
+          ## RecipeOutput이 1개일 경우 설정하지 않아도 됨.
+          DisplayCategory:
+            type: string
+            ref: item_category
+          Comment:
+            type: string
+    # 선택 다시뽑기 시 선택할 수 있는 개수
+    ## 설정 시 [선택 다시뽑기] 기회를 제공함
+    ## 미설정(또는 0) 시 [선택 다시뽑기] 기회를 제공하지 않음
+    OutputItemSelectCount:
+      type: integer
+      default: 0

@@ -1,0 +1,94 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    UICategoryTabs: #아이템 인벤토리 탭 정보.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:     
+          Type: #탭에 해당하는 아이템의 카테고리
+            type: string
+            enum:
+              - All
+              - Equip
+              - ConsumeForBuff
+              - Craft
+              - Etc
+          Comment:
+            type: string
+          Icon:
+            type: string
+          ItemCategories: #탭에 해당하는 아이템의 카테고리
+            type: array
+            items:
+              type: string
+              ref: item_category
+    EmptySlotIcon:
+      type: string
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - CancelSelected
+              - DeleteConfirmSelected
+              - DisassembleConfirmSelected
+              - DisassembleAlertPopupTitle
+              - DisassembleAlertPopupMain
+              - DisassembleAlertPopupDesc
+              - DeleteAlertPopupTitle
+              - DeleteAlertPopupMain
+              - DeleteAlertPopupDesc
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MinGradeCarefully
+          Value:
+            type: integer
+    InventoryItemFilter:
+      type: string
+      ref: client_item_filter
+    EquipableItemCategories:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ItemCategory:
+            type: string
+            ref: item_category
+          SubItemCategories:
+            type: array
+            items:
+              type: string
+              ref: item_category
+  required:
+  - Id
+  - Name
+  - EmptySlotIcon
+  - InventoryItemFilter
+  - EquipableItemCategories

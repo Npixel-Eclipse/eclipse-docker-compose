@@ -1,0 +1,58 @@
+- Id: 1
+  Name: Lobby
+  Constants:
+    - Name: MinCharacterNameLength
+      Value: MinCharacterNameLength
+    - Name: MaxCharacterNameLength
+      Value: MaxCharacterNameLength
+    - Name: MaxAlnumCharacterNameLength
+      Value: MaxAlnumCharacterNameLength
+    - Name: MaxClassAbilityLevel
+      Value: MaxClassAbilityLevel
+    - Name: MaxLobbyCharacterSlotCount
+      Value: MaxLobbyCharacterSlotCount
+    - Name: CharacterDeleteDelayDays
+      Value: CharacterDeleteDelayDays
+    - Name: LastLogoutMaxDurationInDays
+      Value: LastLogoutMaxDurationInDays
+  CharacterSlotExpansionSystemMessage: UIWord_SystemMsg_Lobby_CharacterSlotExpansion
+  LobbyInfos:
+    - Type: CombatPoint
+      Description: UIWordCombatPoint
+    - Type: Polymorph
+      Description: UIWordPolymorph
+      DefaultValueDescription: UIWord_Lobby_CharacterPolyDefault
+    - Type: Weapon
+      Description: UIWord_Lobby_CharacterWeaponPoly
+      DefaultValueDescription: UIWord_Lobby_CharacterWeaponPolyDefault
+    - Type: Guild
+      Description: UIWord_GUILD
+      DefaultValueDescription: UIWord_Lobby_CharacterGulidDefault
+    - Type: Disposition
+      Description: UIWord_Disposition
+    - Type: Location
+      Description: UIWord_Lobby_Location
+      DefaultValueDescription: UIWord_Lobby_CharacterSelectNone
+      IsCharacterInfo: false
+    - Type: LastLogout
+      Description: UIWord_Connection_Info
+      IsCharacterInfo: false
+  CharacterSelectionLobby:
+    DataLayerName: SelectionPreview
+    CharacterExtraActionType: Select_Idle
+    CustomViewTargetName: LobbyPreview
+    PreviewActorName: SelectionPreviewCharacter
+  CharacterCreationLobby:
+    DataLayerName: Create_game_character
+  ServerListUITab:
+    - Group: RecommendedServerList
+      Description: UIWord_ServerList_RecommendedServers
+    - Group: ServerList
+      Description: UIWord_ServerList_AllServers
+    - Group: OwnedChracterServerList
+      Description: UIWord_ServerList_OwnedChracterServers
+
+ 
+
+
+

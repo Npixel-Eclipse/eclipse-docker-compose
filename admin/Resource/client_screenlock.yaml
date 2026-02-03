@@ -1,0 +1,6 @@
+- Id: 1
+  UIType: Combination
+  Animation: Change
+- Id: 2
+  UIType: Combination
+  Animation: ResetCount

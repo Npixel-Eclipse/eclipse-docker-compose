@@ -1,0 +1,54 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    HistoryTabType:
+      type: string
+      enum:
+        - None
+        - All
+        - Purchase
+        - Sell
+    TradeTabType:
+      type: string
+      enum:
+        - None
+        - Purchase
+        - Sell
+        - Private
+        - History
+    PrivateSearchTabType:
+      type: string
+      enum:
+        - None
+        - SearchAllUser
+        - SearchGuildMembers
+        - SearchFriendMembers
+    Priority:
+      type: integer
+    Description:
+      type: string
+      ref: description
+    Icon:
+      type: string
+    TradeCategorys:
+      type: array
+      items:
+        type: string
+        ref: trade_category
+    ContentLimit:
+      type: string
+      ref: content_limit
+  required:
+    - Id
+    - Name

@@ -1,0 +1,12 @@
+- Id: 1
+  Name: Sub
+  MaxActiveQuestCount: 50
+  MaxActiveOrCompletedQuestCount: 50
+- Id: 87
+  Name: Daily
+  MaxActiveQuestCount: 10
+  MaxActiveOrCompletedQuestCount: 10
+- Id: 46
+  Name: Weekly
+  MaxActiveQuestCount: 10
+  MaxActiveOrCompletedQuestCount: 10

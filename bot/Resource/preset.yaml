@@ -1,0 +1,87 @@
+- Id: 1
+  Name: ItemPreset
+  Comment: 아이템 프리셋
+  SlotItem: ExpandedPresetSlotCount
+  DefaultSlotCount: 2
+  MaxSlotCount: 4
+  UseApplyCoolTime: true
+  ApplyCoolTime: 5
+  SlotSetting:
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+- Id: 2
+  Name: MasteryPreset
+  Comment: 숙련도 프리셋
+  SlotItem: ExpandedMasteryPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+- Id: 3
+  Name: SkillPreset
+  Comment: 스킬 프리셋
+  SlotItem: ExpandedSkillPresetSlotCount
+  DefaultSlotCount: 3
+  MaxSlotCount: 5
+  UseSave: false
+  SlotSetting:
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot5
+      SlotNumber: 5
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+- Id: 4
+  Name: PotentialPreset
+  Comment: 잠재력 프리셋
+  SlotItem: ExpandedPotentialPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  UseSave: false
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+- Id: 5
+  Name: MasterPreset
+  Comment: 통합 프리셋
+  SlotItem: ExpandedPotentialPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyDiamond
+      CurrencyAmount: 100

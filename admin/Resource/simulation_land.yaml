@@ -1,0 +1,34 @@
+# Simulation 테스트용 Land 정의
+
+- Id: 9999
+  Name: Simulation
+  Comment: 기본 시뮬레이션 테스트 Land (무제한)
+  LandGroup: Simulation
+  DeleteOnEmpty: false
+
+- Id: 10000
+  Name: Simulation_Instance_Limit2_DeleteOnEmpty
+  Comment: 최대 2명, 빈 채널 삭제
+  LandGroup: Simulation
+  LimitPopulation: 2
+  DeleteOnEmpty: true
+
+- Id: 10001
+  Name: Simulation_Instance_Limit2
+  Comment: 최대 2명, 빈 채널 유지
+  LandGroup: Simulation
+  LimitPopulation: 2
+  DeleteOnEmpty: false
+
+- Id: 10002
+  Name: Simulation_SingleInstance
+  Comment: 1인 인스턴스
+  LandGroup: Simulation
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+
+- Id: 9998
+  Name: SimulationTown
+  Comment: 시뮬레이션 마을 Land (TownBuff 적용)
+  LandGroup: Simulation
+  DeleteOnEmpty: false

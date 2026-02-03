@@ -1,0 +1,150 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    ClientConstants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - NoUseTitle
+              - NoApplyTitle
+              - NoScornCount
+              - NoTraceCount
+              - ReactFailGold
+              - WinHintText
+              - LoseHintText
+              - TitleReddot
+              - PvpLogReddot
+              - BuffCharacterTitle
+              - BuffScornTitle
+              - BuffRankingMark
+              - BuffRankingPriority
+              - PropertyLogId
+              - PropertyLeftScorn
+              - SearchCharacterHintText
+              - SearchGuildHintText
+              - ClassFilterAllText
+          Value:
+            type: string
+          IntValue:
+            type: integer
+          DescValue:
+            type: string
+            ref: description
+          SystemMessageValue: 
+            type: string
+            ref: system_message
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - ScornMessageDisplaySeconds
+              - RankingLevelLimit
+          Value:
+            type: string
+            ref: constants
+          IntValue:
+            type: integer
+    CostConstants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - TraceCost
+              - WantedCost
+              - ScornMessage
+              - ScornTitle
+              - ScornEmoji
+          Cost: 
+            type: string
+            ref: record_pklog_action_cost        
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Ranking
+              - RankingSub
+              - PvP
+          SubGroup:
+            type: string
+            enum:
+              - Level
+              - Power
+              - PvP
+              - GuildLevel
+              - GuildPower
+              - MyServer
+              - AllServer
+              - AllLog
+              - MyLog
+              - GuildLog
+              - WantedLog
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          Reddot:
+            type: string
+            ref: notification
+          RankingType:
+            type: integer
+          FilterType:
+            type: integer
+          RankingTabType:
+            type: string
+            enum:
+              - Character
+              - Guild
+          BuffPopupTitle:
+            type: string
+            ref: description
+        required:
+          - Group
+          - SubGroup
+          - TabIndex
+    EmojiInfo:
+      type: object
+      additionalProperties: false
+      properties:
+        DataTableAsset:
+          type: string
+        RowNameCondition:
+          type: array
+          items:
+            type: string
+  required:
+    - Id
+    - Name

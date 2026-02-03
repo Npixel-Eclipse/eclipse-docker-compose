@@ -1,0 +1,54 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - System
+        - World
+        - Party
+        - Whisper
+        - Guild
+        - Local
+        - Server
+    Comment:
+      type: string      
+    Description:
+      type: string
+      ref: description      
+    DelegateTopic:
+      type: string
+    UserNicknameTextStyle: #C 유저이름 텍스트 스타일
+      type: string
+      ref: richtext_display
+    MessageTextStyle: #C 메시지 텍스트 스타일
+      type: string
+      ref: richtext_display
+    ShowUserNickname: #C 유저이름 표시 여부
+      type: boolean
+      default: true
+    ContentLimit:
+      type: string
+      ref: content_limit
+    Shortcut: #C 단축어
+      type: array
+      items:
+        type: string
+    DisplayOrder: #C 표시 순서로 작은 값일수록 이전에 표시되고 큰 값일수록 뒤에 표시
+      type: integer
+      default: 0 
+    ShowSpeechBubble: #C 말풍선으로 표시 여부
+      type: boolean
+      default: false
+    ShowServerName: #C 서버명 표시 여부
+      type: boolean
+      default: false
+  required:
+    - Id
+    - Name

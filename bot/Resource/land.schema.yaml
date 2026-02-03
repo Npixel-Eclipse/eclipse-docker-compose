@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - LandGroup
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    LandGroup:
+      type: string
+    # Land 인구 제한
+    ## 전장에서 설정 금지
+    LimitPopulation:
+      type: integer
+      minimum: 1
+    # 인구가 0명이 되면 삭제
+    ## 전장에서 설정 금지
+    DeleteOnEmpty:
+      type: boolean
+    # 시야 관련 기능 사용 여부(SightWall, 고저차)
+    EnableSight:
+      type: boolean
+    # 전장 여부
+    Battleground:
+      type: boolean
+    # 서버 구동 시 기본 생성 여부
+    DefaultCreate:
+      type: boolean

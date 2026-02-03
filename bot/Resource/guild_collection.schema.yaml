@@ -1,0 +1,175 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Rewards
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Icon:
+      type: string
+    Title:
+      type: string
+      ref: description
+    Category:
+      type: string
+      ref: guild_collection_category
+      visible: true
+    BuffDescription:
+      type: string
+      ref: description
+    Cost:
+      type: array
+      visible: true
+      items:
+        type: object
+        properties:
+          Level:
+            type: integer
+          GuildItem:
+            type: string
+            ref: guild_item
+          Amount:
+            type: integer
+    LimitGuildLevel:
+      type: integer
+    Prerequisites:
+      type: array
+      items:
+        type: object
+        required:
+          - Collection
+          - Level
+        properties:
+          Collection:
+            type: string
+            ref: guild_collection
+          Level:
+            type: integer
+    Progress:
+      visible: true
+      type: array
+      items:
+        type: object
+        required:
+          - Level
+          - Amount
+        properties:
+          Level:
+            visible: true
+            type: integer
+          Amount:
+            visible: true
+            type: integer
+    Contribute:
+      visible: true
+      type: array
+      items:
+        type: object
+        required:
+          - ContributeType
+          - Contribute
+        properties:
+          ContributeType:
+            type: string
+            enum:
+              - Contribute
+              - AdditionalContribute
+          Contribute:
+            type: string
+            ref: guild_contribute
+    Rewards:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - RewardType
+        properties:
+          RewardType:
+            type: string
+            enum:
+              - ContentLimit
+              - AddMaxMember
+              - GuildMark
+              - Quest
+              - Buff
+              - UnlockMerchandise
+              - UnlockGuildRaidSacrifice
+              - IncreasePurchaseLimit
+              - DecreaseContributeRechargeTime
+              - IncreaseContributeMaxCount
+              - IncreaseContributeRewards
+              - IncreaseHostileCount
+              - IncreaseAllianceCount
+              - DecreaseAcquireCollectionCost
+          Level:
+            type: integer
+          Content:
+            type: string
+            ref: content_limit
+            visible: true
+          AddMaxMember:
+            type: integer
+            minimum: 1
+            visible: true
+          GuildMark:
+            type: string
+            ref: guild_mark
+            visible: true
+          Quest:
+            type: string
+            ref: quest
+            visible: true
+          Buff:
+            type: string
+            ref: buff
+            visible: true
+          Merchant:
+            type: string
+            ref: item_merchant
+            visible: true            
+          Merchandise:
+            type: string
+            ref: item_merchandise
+            visible: true
+          AddendBuyAmount:
+            visible: true
+            type: integer
+            default: -1
+          GuildRaid:
+            type: string
+            ref: guild_raid
+            visible: true            
+          DecreaseContributeRechargeTime:
+            visible: true
+            type: integer
+          IncreaseContributeMaxCount:
+            visible: true
+            type: integer
+          IncreaseContributeRewards: # 길드 연구 지원 보상 % 증가
+            type: string
+            default: 0%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+          IncreaseHostileCount:
+            visible: true
+            type: integer
+          IncreaseAllianceCount:
+            visible: true
+            type: integer
+          DecreaseAcquireCollectionCost:
+            visible: true
+            type: string
+            default: 0%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$

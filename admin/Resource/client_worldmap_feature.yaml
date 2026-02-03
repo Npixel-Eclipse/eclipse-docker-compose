@@ -1,0 +1,60 @@
+- Id: 1
+  Name: WorldMap
+  FavoriteID: WorldMapTeleportAddress
+  UITypes:
+    - UIType: PartyMemberInfo
+      ZOrder: 1
+      Value: WorldMapPartyMemberIcon
+    - UIType: AbyssInfo
+      Value: AbyssWorldMapIcon
+    - UIType: BossInfo
+      Value: AbyssWorldMapIcon
+    - UIType: MapPinPoint
+      Value: MapPinPoint
+      ZOrder: 2
+    - UIType: WorldBossInfo
+      Value: WorldBossWorldMapIcon
+  ConstantValue:
+    - Name: MinScale
+      Value: "0.3%"
+    - Name: MaxScale
+      Value: "1.15%"
+    - Name: ScaleStep
+      IntValue: 3
+    - Name: DefaultIndex
+      IntValue: 1
+  WorldmapRightTab:
+    - Name: ItemInfo
+      Description: UIWord_WorldMap_DropItemInfo
+    - Name: MonterInfo
+      Description: UIWord_WorldMap_MonsterInfo
+  WorldmapAreaInfoTab:
+    - Name: All
+      Description: UIWord_WorldMap_Tab_All
+    - Name: Saved
+      Description: UIWord_WorldMap_Tab_SaveLocation
+  WorldMapUIState:
+    - Index: 0
+      ShowIconType:
+      - County
+      - HotSpot
+      - Abyss
+    - Index: 1
+      ShowIconType:
+      - County
+      - Abyss
+    - Index: 2
+      ShowIconType: 
+      - Province
+      - Abyss
+  PositionSharedDescription: HyperLink_WorldMapShare
+  WorldMapClipping:
+    - Left: 1000.0
+      Right: 1000.0
+      Top: 3000.0
+      Bottom: 0.0
+  WorldMapTooltipText:
+    - Name: WorldBoss
+      Description: UIWord_WorldMap_Tooltip_WorldBoss
+    - Name: Abyss
+      Description: UIWord_WorldMap_Tooltip_Abyss

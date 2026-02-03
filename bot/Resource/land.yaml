@@ -1,0 +1,371 @@
+- Id: 1
+  Name: Eldar
+  Comment: 엘다르
+  LandGroup: Home
+  DefaultCreate: true
+- Id: 3
+  Name: Challenge
+  Comment: 오염된 호숫가
+  LandGroup: Home
+  LimitPopulation: 1
+- Id: 289
+  Name: WorldBoss
+  Comment: 월드 보스 던전
+  LandGroup: Home
+  DefaultCreate: true
+- Id: 24
+  Name: Quest
+  Comment: 퀘스트 인스턴스
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 553
+  Name: Quest_Instance_001
+  Comment: 퀘스트 인스턴스 바리탄 경비초소 (할리반)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 4309
+  Name: Quest_Instance_002
+  Comment: 퀘스트 인스턴스 블러드쉐드 (나샤르 에보)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 273
+  Name: Quest_Instance_003
+  Comment: 퀘스트 인스턴스 대발파회 채광지 (헬거스)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 3966
+  Name: Quest_Instance_004
+  Comment: 퀘스트 인스턴스 소이산맥 광산촌 (크리스티나)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 5007
+  Name: Quest_Instance_005
+  Comment: 퀘스트 인스턴스 홀룰루 동굴 (샤를레)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 5148
+  Name: Quest_Instance_006
+  Comment: 퀘스트 인스턴스 바리탄 성채 (성서기사단장)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 1773
+  Name: Quest_Instance_007
+  Comment: 퀘스트 인스턴스 야만족장 토우렌 자매 (웨이브)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 993
+  Name: Quest_Instance_008
+  Comment: 퀘스트 인스턴스 아르칸다르 교단 (아르칸다르)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 1951
+  Name: Quest_Instance_009
+  Comment: 퀘스트 인스턴스 시체 협곡 (엔키두)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 1285
+  Name: Quest_Instance_010
+  Comment: 퀘스트 인스턴스 루아흐 강변 (하락말록)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 2526
+  Name: Quest_Instance_011
+  Comment: 퀘스트 인스턴스 승전의 탑 (언데드 안다룬)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 4796
+  Name: Quest_Instance_012
+  Comment: 퀘스트 인스턴스 황금 계곡 (페트리아 기사)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 2679
+  Name: Quest_Instance_013
+  Comment: 퀘스트 인스턴스 아스타로트 가문 (베르)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 348
+  Name: Quest_Instance_014
+  Comment: 퀘스트 인스턴스 바빌나방여왕 (바빌나방여왕)
+  LandGroup: QuestInstance
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 46
+  Name: Tutorial
+  Comment: 튜토리얼 성소 모션 적용 인스턴스
+  LandGroup: Home
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 847
+  Name: TutorialInstance
+  Comment: 튜토리얼 인스턴스
+  LandGroup: Home
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 2924
+  Name: TutorialInstanceSequence
+  Comment: 튜토리얼 인스턴스 연출
+  LandGroup: Home
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 4341
+  Name: MalleusPilgrimageRoute
+  Comment: 말레우스 순례길 인스턴스
+  LandGroup: Home
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 1947
+  Name: Scene
+  Comment: 연출 인스턴스
+  LandGroup: Home
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 9999
+  Name: Simulation
+  Comment: 서버 시뮬레이션 환경
+  LandGroup: Home
+  LimitPopulation: 20
+- Id: 5
+  Name: ChallengeDungeon
+  Comment: 도전 던전을 위한 채널
+  LandGroup: Dungeon
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 6
+  Name: South_Varitan
+  Comment: 남부 바리탄(20명 인스턴스)
+  LandGroup: Home
+  LimitPopulation: 200
+- Id: 100
+  Name: FieldDun_Blood_Shed_F1
+  Comment: 블러드쉐드 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 101
+  Name: FieldDun_Blood_Shed_F2
+  Comment: 블러드쉐드 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 102
+  Name: FieldDun_Kulika_Undying_Lands_F1
+  Comment: 구리가라 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 103
+  Name: FieldDun_Kulika_Undying_Lands_F2
+  Comment: 구리가라 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 104
+  Name: FieldDun_Kulika_Undying_Lands_F3
+  Comment: 구리가라 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 105
+  Name: FieldDun_Kulika_Undying_Lands_F4
+  Comment: 구리가라 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 106
+  Name: FieldDun_Kulika_Undying_Lands_F5
+  Comment: 구리가라 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 114
+  Name: FieldDun_Abrion_Tower_F1
+  Comment: 아브리온 탑 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 115
+  Name: FieldDun_Abrion_Tower_F2
+  Comment: 아브리온 탑 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 116
+  Name: FieldDun_Abrion_Tower_F3
+  Comment: 아브리온 탑 3층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 117
+  Name: FieldDun_Abrion_Tower_F4
+  Comment: 아브리온 탑 4층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 118
+  Name: FieldDun_Abrion_Tower_F5
+  Comment: 아브리온 탑 5층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 119
+  Name: FieldDun_Abrion_Tower_F6
+  Comment: 아브리온 탑 6층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 120
+  Name: FieldDun_Abrion_Tower_F7
+  Comment: 아브리온 탑 7층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 121
+  Name: FieldDun_Breath_of_Gaia_Ondor_F1
+  Comment: 가이아 온도르의 숨결 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 122
+  Name: FieldDun_Breath_of_Gaia_Ondor_F2
+  Comment: 가이아 온도르의 숨결 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 123
+  Name: FieldDun_Breath_of_Gaia_Ondor_F3
+  Comment: 가이아 온도르의 숨결 3층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 124
+  Name: FieldDun_Breath_of_Gaia_Ondor_F4
+  Comment: 가이아 온도르의 숨결 4층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 125
+  Name: FieldDun_Breath_of_Gaia_Ondor_F5
+  Comment: 가이아 온도르의 숨결 5층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 126
+  Name: FieldDun_Holy_Patria_Lesbos_Sanctum_F1
+  Comment: 성녀 페트리아 레스보스 신단 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 890
+  Name: WorldBoss_Dungeon_Kraka
+  Comment: 월드 보스 크라카
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 130
+  Name: Challenge_Dungeon_Polluted_Lake_1F
+  Comment: 도전 던전 오염된 호숫가 1층
+  LandGroup: Dungeon
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 131
+  Name: Challenge_Dungeon_Monkey_Playground_1F
+  Comment: 도전 던전 원숭이 놀이터 1층
+  LandGroup: Dungeon
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 132
+  Name: Challenge_Dungeon_Undead_Mine_1F
+  Comment: 도전 던전 언데드 광산 1층
+  LandGroup: Dungeon
+  LimitPopulation: 1
+  DeleteOnEmpty: true
+- Id: 133
+  Name: Daily_Dungeon_Ruined_Castle_1F
+  Comment: 데일리 던전 폐허가 된 성 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 134
+  Name: Daily_Dungeon_Mining_Area_1F
+  Comment: 데일리 던전 광산 지구 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 135
+  Name: Daily_Dungeon_Undead_Temple_1F
+  Comment: 데일리 던전 언데드 신전 1층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 136
+  Name: Daily_Dungeon_Ruined_Castle_2F
+  Comment: 데일리 던전 폐허가 된 성 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 137
+  Name: Daily_Dungeon_Mining_Area_2F
+  Comment: 데일리 던전 광산 지구 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 138
+  Name: Daily_Dungeon_Undead_Temple_2F
+  Comment: 데일리 던전 언데드 신전 2층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 139
+  Name: Daily_Dungeon_Ruined_Castle_3F
+  Comment: 데일리 던전 폐허가 된 성 3층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 140
+  Name: Daily_Dungeon_Mining_Area_3F
+  Comment: 데일리 던전 광산 지구 3층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 141
+  Name: Daily_Dungeon_Undead_Temple_3F
+  Comment: 데일리 던전 언데드 신전 3층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 142
+  Name: Daily_Dungeon_Ruined_Castle_4F
+  Comment: 데일리 던전 폐허가 된 성 4층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 143
+  Name: Daily_Dungeon_Mining_Area_4F
+  Comment: 데일리 던전 광산 지구 4층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 144
+  Name: Daily_Dungeon_Undead_Temple_4F
+  Comment: 데일리 던전 언데드 신전 4층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 145
+  Name: Daily_Dungeon_Ruined_Castle_5F
+  Comment: 데일리 던전 폐허가 된 성 5층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 146
+  Name: Daily_Dungeon_Mining_Area_5F
+  Comment: 데일리 던전 광산 지구 5층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 147
+  Name: Daily_Dungeon_Undead_Temple_5F
+  Comment: 데일리 던전 언데드 신전 5층
+  LandGroup: Dungeon
+  DefaultCreate: true
+- Id: 2657
+  Name: Fortress
+  Comment: 요새
+  LandGroup: Fortress
+  LimitPopulation: 1
+- Id: 2658
+  Name: GuildFortress
+  Comment: 길드 요새
+  LandGroup: GuildFortress
+  LimitPopulation: 1
+- Id: 1833
+  Name: BattleGround_Faction_HighRiver_Group1
+  Comment: 전장 진영전 하이리버 그룹1
+  LandGroup: Battleground
+  EnableSight: true
+  Battleground: true
+- Id: 969
+  Name: BossSpawn_Charle_Entrails
+  Comment: "[필드보스]샤를레 내부"
+  LandGroup: Dungeon
+  LimitPopulation: 20
+  DeleteOnEmpty: true

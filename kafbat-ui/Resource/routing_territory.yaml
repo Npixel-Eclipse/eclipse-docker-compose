@@ -1,0 +1,261 @@
+- Id: 2051
+  Name: RoutingTerritory_Field_to_Town
+  Routing:
+    - FromTerritory: Restart_From_Var_Que_Main01_01
+      ToTerritory: Restart_to_Var_Que_Main01
+    - FromTerritory: Restart_From_Var_Que_Main02_01
+      ToTerritory: Restart_to_Var_Que_Main02
+    - FromTerritory: Restart_From_Var_Que_Main02_02
+      ToTerritory: Restart_to_Var_Que_Main02
+    - FromAddress: Var_Wastes_LascanoFortress
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_CliffofPurity
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_KarsaPlains
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_VaritanOuterWatchpost
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_MaregraWrecks
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_PalleboRemnantsCamp
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_CarmenoBanditDen
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Wastes_HolyOrderForwardBase
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_SilentRotValley
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_CremisiMines
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_PortPalmir
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_BlackRindWoods
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_MilanCitadel
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_CastianMercenaryPost
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_CastiaLuminaryII
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_EscaronExcavation
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Blightlands_ImperialLogging
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: Var_Subjugate_VigiliPlain
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_VigiliFarmlands
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_VaritanCitadel
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_HolyOrderCheckpoint
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_MareliceHarbor
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_RubroCartelPost
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_HolyOrderGarrison
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_ImperialQuarry
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_TheForsakenBluffs
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_EvoFamilyRuins
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_BloodSoakedSealAltar_1F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Var_Subjugate_BloodSoakedSealAltar_2F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_CastiaSurveyPost
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ForestOutskirts
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ErmaelOuterwoods
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ArkesylOuterRim
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ArkesylMidlands
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ArkesylLowerRuins
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_GardenOfTheOath
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_LakeOfRemembrance
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Ele_Sacredforest_ElessirHeartlands
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: Eld_Dawnbough_NasharOuterwardRuins
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_MirageVale
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_NasharRefuge
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_BelkarSedimentField
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_BelkarRockland
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_LandofKarakan
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_BelkarDeepstrata
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_EldarGarrison
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_LakeofEncroachment
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+      ToTerritory: Restart_To_EastEldar_NasyarShelter
+    - FromAddress: Eld_Heartwood_ElsarVillage
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_SpiritCrossing
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_ForsakenElsarShrine
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_EverslumberMarsh
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_SilentreachForest
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_TheSlumberedShore
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_AshenForestofLoss
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Heartwood_BlackveilBasin
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_WeepingMarsh
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_LandofBrokenVows
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_NasharSepulcher
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_GrunzarRotlands
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_SnikraHideout
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_SunkenLands
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_RuachRiverbank
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: Eld_Shadowbloom_GorgeoftheLeftBehind
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: DailyDun_RuinedCastle_1F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_RuinedCastle_2F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_RuinedCastle_3F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_RuinedCastle_4F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_RuinedCastle_5F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_MiningArea_1F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_MiningArea_2F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_MiningArea_3F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_MiningArea_4F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_MiningArea_5F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_UndeadTemple_1F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_UndeadTemple_2F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_UndeadTemple_3F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_UndeadTemple_4F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: DailyDun_UndeadTemple_5F
+      ToTerritory: Restart_To_Varitan_BrotherhoodFortress
+    - FromAddress: South_Castia_Breath_of_Gaia_Ondor_01
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: South_Castia_Breath_of_Gaia_Ondor_02
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: South_Castia_Breath_of_Gaia_Ondor_03
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: South_Castia_Breath_of_Gaia_Ondor_04
+      ToTerritory: Restart_To_Elsar
+    - FromAddress: South_Castia_Breath_of_Gaia_Ondor_05
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_SouthCastia01
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_SouthCastia02
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_WestCastia01
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_EastCastia01
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_EastCastia02
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_EastCastia03
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_Challenge01
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromTerritory: Restart_From_Challenge02
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromTerritory: Restart_From_Challenge03
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_01
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_02
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_03
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_04
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_05
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_06
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_East_Castia_Abrion_Tower_07
+      ToTerritory: Restart_To_Elsar
+    - FromTerritory: Restart_From_WorldBossKraka
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_RuinedCastle_1F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_RuinedCastle_2F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_RuinedCastle_3F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_RuinedCastle_4F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_RuinedCastle_5F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_MiningArea_1F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_MiningArea_2F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_MiningArea_3F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_MiningArea_4F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_MiningArea_5F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_UndeadTemple_1F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_UndeadTemple_2F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_UndeadTemple_3F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_UndeadTemple_4F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: DailyDun_UndeadTemple_5F
+      ToTerritory: Restart_To_Varitan_Castle
+    - FromAddress: TestAddress_Secured
+      ToTerritory: BattleTestZone
+    - FromAddress: TestAddress_Battle
+      ToTerritory: BattleTestZone
+    - FromAddress: Guild_Fortress_TrainingGround
+      ToTerritory: Restart_To_Guild_Fortress_02
+    - FromAddress: Guild_Fortress_Raid
+      ToTerritory: Restart_To_Guild_Fortress_01
+    - FromAddress: Guild_Fortress_Lobby
+      ToTerritory: Restart_To_Guild_Fortress_01
+    - FromTerritory: Instance_Restart_From_Var_Halivan_01
+      ToTerritory: WorldMap_Var_Wastes_LascanoFortress

@@ -1,0 +1,64 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  staticProperties: true
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Descriptions:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - Confirmed_NoCategory
+          Value:
+            type: string
+            ref: description
+    InventoryInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - None
+              - Polymorph #외형
+              - WeaponPolymorph #외형무기
+          Inventory: #인벤토리
+            type: string
+            ref: inventory
+          Description:
+            type: string
+            ref: description
+    ItemPropertyInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - None
+              - ItemId #현재 뽑힌 아이템 ID
+              - ExpiredAt #다시뽑기 만료(자동확정) 시간
+              - RerollCount #다시뽑기를 실행했던 회수
+              - PreviousItemId #이전 다시뽑기에 뽑혔던 아이템 ID
+              - IsFreeSelect #다시뽑기 무료 여부.
+              - CannotChange #더이상 다시뽑기를 진행할 수 없을 경우.
+          Name:
+            type: string
+  required:
+    - Id
+    - Name

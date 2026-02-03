@@ -1,0 +1,14 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.callback";
+option java_outer_classname = "CommonCallbackProto";
+
+import "Common/kafka_key_common.proto";
+
+message CallbackCommand {
+  bytes command = 1;
+  string topic = 2;
+  optional common.KafkaKey change_key = 3;
+}

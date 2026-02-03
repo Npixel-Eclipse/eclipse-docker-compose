@@ -1,0 +1,193 @@
+- Id: 1
+  Name: Equip_Common
+  Comment: 장비 - 일반
+  Setting:
+    - bStorageEquipCommon
+  Grade: Common
+  Category: Item_Equip
+- Id: 98
+  Name: Equip_Uncommon
+  Comment: 장비 - 고급
+  Setting:
+    - bStorageEquipUncommon
+  Grade: Uncommon
+  Category: Item_Equip
+- Id: 15
+  Name: Equip_Rare
+  Comment: 장비 - 희귀
+  Setting:
+    - bStorageEquipRare
+  Grade: Rare
+  Category: Item_Equip
+- Id: 237
+  Name: Equip_Epic
+  Comment: 장비 - 영웅
+  Setting:
+    - bStorageEquipEpic
+  Grade: Epic
+  Category: Item_Equip
+- Id: 31
+  Name: Equip_Legendary
+  Comment: 장비 - 전설
+  Setting:
+    - bStorageEquipLegendary
+  Grade: Legendary
+  Category: Item_Equip
+- Id: 415
+  Name: SkillBook_Common
+  Comment: 스킬북 - 일반
+  Setting:
+    - bStorageSkillBookCommon
+  Grade: Common
+  Category: Skill_Book
+- Id: 582
+  Name: SkillBook_Uncommon
+  Comment: 스킬북 - 고급
+  Setting:
+    - bStorageSkillBookUncommon
+  Grade: Uncommon
+  Category: Skill_Book
+- Id: 166
+  Name: SkillBook_Rare
+  Comment: 스킬북 - 희귀
+  Setting:
+    - bStorageSkillBookRare
+  Grade: Rare
+  Category: Skill_Book
+- Id: 225
+  Name: SkillBook_Epic
+  Comment: 스킬북 - 영웅
+  Setting:
+    - bStorageSkillBookEpic
+  Grade: Epic
+  Category: Skill_Book
+- Id: 80
+  Name: SkillBook_Legendary
+  Comment: 스킬북 - 전설
+  Setting:
+    - bStorageSkillBookLegendary
+  Grade: Legendary
+  Category: Skill_Book
+- Id: 227
+  Name: Expendables_Healing
+  Comment: 소모품 - 체력 회복 물약
+  Setting:
+    - bStorageExpendablesHpPotion
+  Category: Item_Misc_Healing
+- Id: 609
+  Name: Expendables_Buff
+  Comment: 소모품 - 버프
+  Setting:
+    - bStorageExpendablesBuff
+  Category: Item_Misc_Empower
+- Id: 1148
+  Name: Expendables_Teleport
+  Comment: 소모품 - 이동 주문서
+  Setting:
+    - bStorageExpendablesTeleport
+  Category: Item_Misc_TeleportScroll
+- Id: 645
+  Name: Expendables_Recharge
+  Comment: 소모품 - 던전 시간의 시계
+  Setting:
+    - bStorageExpendablesDungeonCharge
+  Category: Item_Misc_Recharge
+- Id: 694
+  Name: Expendables_Merge
+  Comment: 소모품 - 합성 재료
+  Setting:
+    - bStorageExpendablesMerge
+  Category: Item_Misc_Upgrade_Merge
+- Id: 737
+  Name: Growth_Enchant
+  Comment: 성장 재료 - 장비 강화 주문서
+  Setting:
+    - bStorageGrowthEnchant
+  Category: Item_Misc_Upgrade_Enchant
+- Id: 717
+  Name: Growth_Engrave
+  Comment: 성장 재료 - 세공석
+  Setting:
+    - bStorageGrowthEngrave
+  Category: Item_Misc_Upgrade_Engrave
+- Id: 1104
+  Name: Growth_SkillEnchant
+  Comment: 성장 재료 - 스킬 강화석
+  Setting:
+    - bStorageGrowthSkillEnchant
+  Category: Item_Misc_Upgrade_Skill_Enchant
+- Id: 1259
+  Name: Growth_Mastery
+  Comment: 성장 재료 - 숙련도
+  Setting:
+    - bStorageGrowthMastery
+  Category: Item_Misc_Mastery
+- Id: 576
+  Name: Collection_IncompleteMaterial
+  Comment: 수집 재료 - 미완료 수집 재료
+  Setting:
+    - bStorageCollectionIncomplete
+  Category: Item_Misc_Collection
+  IncompleteCollectionMaterial: true
+- Id: 962
+  Name: Collection_CompleteMaterial
+  Comment: 수집 재료 - 완료 수집 재료
+  Setting:
+    - bStorageCollectionComplete
+  Category: Item_Misc_Collection
+  CompleteCollectionMaterial: true
+- Id: 2376
+  Name: Collection_IncompleteEquip
+  Comment: 수집 재료 - 미완료 수집 장비
+  Setting:
+    - bStorageCollectionEquipIncomplete
+  Category: Item_Equip
+  IncompleteCollectionMaterial: true
+- Id: 209
+  Name: Collection_CompleteEquip
+  Comment: 수집 재료 - 완료 수집 장비
+  Setting:
+    - bStorageCollectionEquipComplete
+  Category: Item_Equip
+  CompleteCollectionMaterial: true
+- Id: 82
+  Name: Craft_Common
+  Comment: 제작 및 건설 재료 - 일반
+  Setting:
+    - bStorageCraftCommon
+  Grade: Common
+  Category: Item_Craft
+- Id: 1141
+  Name: Craft_Uncommon
+  Comment: 제작 및 건설 재료 - 고급
+  Setting:
+    - bStorageCraftUncommon
+  Grade: Uncommon
+  Category: Item_Craft
+- Id: 1142
+  Name: Craft_Rare
+  Comment: 제작 및 건설 재료 - 희귀
+  Setting:
+    - bStorageCraftRare
+  Grade: Rare
+  Category: Item_Craft
+- Id: 1010
+  Name: Craft_Epic
+  Comment: 제작 및 건설 재료 - 영웅
+  Setting:
+    - bStorageCraftEpic
+  Grade: Epic
+  Category: Item_Craft
+- Id: 2397
+  Name: Craft_Legendary
+  Comment: 제작 및 건설 재료 - 전설
+  Setting:
+    - bStorageCraftLegendary
+  Grade: Legendary
+  Category: Item_Craft
+- Id: 1940
+  Name: Fortress_Timeacceleration
+  Comment: 성소 - 가속
+  Setting:
+    - bStorageFortressFast
+  Category: Item_Misc_Timeacceleration

@@ -1,0 +1,838 @@
+- Id: 2
+  Name: Polymorph
+  Comment: 초월
+  TitleDescription: UIWordPolymorph
+  SummaryDescription: UIWord_Ascension_Unlock
+  SystemMessage: ContentLimitLock
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconPolymorph.AlertIconPolymorph
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4
+  Name: Combination
+  Comment: 서판 조합
+  TitleDescription: UIWordCombination
+  SummaryDescription: UIWord_SystemMsg_CombinationUnlock
+  SystemMessage: ContentLimitQuestAchievement
+  Icon: /Game/UIIcon/Alert/AlertIconCombination.AlertIconCombination
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 621
+  Name: Combination_Eldar
+  Comment: 서판 조합 엘다르 탭
+  TitleDescription: UIWordCombination
+  SummaryDescription: UIWord_SystemMsg_CombinationUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconCombination.AlertIconCombination
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3250
+  Name: Combination_Castia
+  Comment: 서판 조합 카스티아 탭
+  TitleDescription: UIWordCombination
+  SummaryDescription: UIWord_SystemMsg_CombinationUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconCombination.AlertIconCombination
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 7
+  Name: HuntingZone
+  Comment: 영토 소유
+  TitleDescription: UIWord_Menu_HuntingZone
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 2388
+  Name: Guild
+  Comment: 길드
+  TitleDescription: UIWord_GUILD
+  SystemMessage: ContentLimitQuest
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 100
+  Name: GuildTrait
+  Comment: 길드 연구
+  TitleDescription: UIWord_GuildPrivilege_AcquireGuildTrait
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_Trait
+  SystemMessage: UIWord_SystemMsg_Guild_LimitCondition
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 101
+  Name: GuildMerchant
+  Comment: 길드 상점
+  TitleDescription: UIWord_Guild_Shop
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_Shop
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 565
+  Name: GuildQuest
+  Comment: 길드 퀘스트
+  TitleDescription: UIWord_Guild_Quest
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_Quest
+  SystemMessage: UIWord_SystemMsg_Guild_LimitCondition
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 1602
+  Name: GuildHuntingZone
+  Comment: 길드 영토 소유
+  TitleDescription: UIWord_Menu_HuntingZone
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Guild
+- Id: 2391
+  Name: GuildStorage
+  Comment: 길드 창고
+  TitleDescription: UIWord_Guild_Storage
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_Storage
+  SystemMessage: UIWord_SystemMsg_Guild_LimitCondition
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 2392
+  Name: GuildFortress
+  Comment: 길드 요새
+  TitleDescription: UIWord_Guild_Fortress
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_Fortress
+  SystemMessage: UIWord_SystemMsg_Guild_LimitCondition
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 2395
+  Name: GuildFortressEnter
+  Comment: 길드 요새 개방
+  TitleDescription: UIWord_Guild_FortressEnter
+  SummaryDescription: UIWord_SystemMsg_GuildContent_Limit_FortressEnter
+  SystemMessage: UIWord_SystemMsg_Guild_LimitCondition
+  Icon: /Game/UIIcon/Alert/AlertIconGuild.AlertIconGuild
+  OwnerBound: Guild
+- Id: 239
+  Name: Awakening
+  Comment: 각성
+  TitleDescription: Item_Name_Awakening
+  SummaryDescription: UIWord_SystemMsg_AwakeningUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/MenuIconAwakening_Sprite.MenuIconAwakening_Sprite
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Account
+- Id: 3850
+  Name: MainBuildingUpgrade
+  Comment: 성좌 증축 조건
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 213
+  Name: ExpBuilding
+  Comment: 경험치 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 674
+  Name: GoldBuilding
+  Comment: 골드 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 992
+  Name: MasteryBuilding
+  Comment: 숙련도 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 1049
+  Name: PolymorphBuilding
+  Comment: 초월 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 132
+  Name: Statue_Awareness
+  Comment: 자각의 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3894
+  Name: Statue_Awareness_Build
+  Comment: 자각의 성물 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2169
+  Name: Statue_Awakening
+  Comment: 각성의 성물
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 1552
+  Name: Statue_Awakening_Build
+  Comment: 각성의 성물 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 106
+  Name: Seongso_Management
+  Comment: 성소 현황 버튼
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6515
+  Name: Request
+  Comment: 의뢰
+  TitleDescription: QuestCategory_Daily
+  SummaryDescription: UIWord_SystemMsg_RequestUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconRequest.AlertIconRequest
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 579
+  Name: Request_Varitan_Subjugate
+  Comment: "[의뢰] 바리탄 침탈지대 "
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 44
+  Name: Request_Rainwood
+  Comment: "[의뢰] 레인 우드"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 26
+  Name: Request_Eldar_Dawnbough
+  Comment: "[의뢰] 엘다르 여명지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 1356
+  Name: Request_Eldar_Heartwood
+  Comment: "[의뢰] 엘다르 중심지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 273
+  Name: Request_Eldar_Shadowbloom
+  Comment: "[의뢰] 엘다르 그늘지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 2197
+  Name: Request_East_Castia
+  Comment: "[의뢰] 동부 카스티아"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 732
+  Name: Request_West_Castia
+  Comment: "[의뢰] 서부 카스티아"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 5299
+  Name: Request_Varitan_Subjugate_Weekly
+  Comment: "[의뢰] 바리탄 침탈지대 "
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 6986
+  Name: Request_Rainwood_Weekly
+  Comment: "[의뢰] 레인 우드"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 2020
+  Name: Request_Eldar_Dawnbough_Weekly
+  Comment: "[의뢰] 엘다르 여명지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 8352
+  Name: Request_Eldar_Heartwood_Weekly
+  Comment: "[의뢰] 엘다르 중심지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 6342
+  Name: Request_Eldar_Shadowbloom_Weekly
+  Comment: "[의뢰] 엘다르 그늘지대"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 8483
+  Name: Request_East_Castia_Weekly
+  Comment: "[의뢰] 동부 카스티아"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 965
+  Name: Request_West_Castia_Weekly
+  Comment: "[의뢰] 서부 카스티아"
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 77
+  Name: Trade
+  Comment: 거래소
+  TitleDescription: UIWord_Menu_Exchange
+  SummaryDescription: UIWord_Trade_Unlock
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconTrade.AlertIconTrade
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 78
+  Name: Solidarity
+  Comment: 결속
+  TitleDescription: UIWord_Menu_Exchange
+  SummaryDescription: UIWord_Trade_Unlock
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconSolidarity.AlertIconSolidarity
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Account
+- Id: 2299
+  Name: Battleground
+  Comment: 전장
+  TitleDescription: UIWordDungeonBattleField
+  SummaryDescription: UIWord_SystemMsg_BattlegroundUnlock
+  SystemMessage: ContentLimitLevel20
+  Icon: /Game/UIIcon/Alert/AlertIconBattleGround.AlertIconBattleGround
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 2506
+  Name: WorldMap
+  Comment: 월드맵
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 401
+  Name: ItemFlow
+  Comment: 획득처/사용처
+  SystemMessage: ContentLimitLockUse
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 5193
+  Name: BMShop
+  Comment: BM상점
+  TitleDescription: UIWord_BMShop
+  SummaryDescription: UIWord_SystemMsg_BMShopUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconBMShop.AlertIconBMShop
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 2393
+  Name: SeasonPass
+  Comment: 시즌패스
+  TitleDescription: UIWord_BMShop_SeasonPass
+  SummaryDescription: UIWord_SystemMsg_SeasonPassUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconSeasonPass.AlertIconSeasonPass
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 234
+  Name: ReturnToHome
+  Comment: "귀환 & 성소 나가기"
+  SystemMessage: ContentLimitLockUse
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 1676
+  Name: Dungeon
+  Comment: 던전
+  TitleDescription: UIWord_Menu_Dungeon
+  SummaryDescription: UIWord_SystemMsg_DungeonUnlock
+  SystemMessage: ContentLimitLevel15
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconDungeon.AlertIconDungeon
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 3532
+  Name: Collection
+  Comment: 수집
+  TitleDescription: UIWord_Menu_Collection
+  SummaryDescription: UIWord_SystemMsg_CollectionUnlock
+  SystemMessage: ContentLimitQuest
+  Icon: /Game/UIIcon/Alert/AlertIconCollection.AlertIconCollection
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 3895
+  Name: Menu_Quest
+  Comment: 퀘스트 메뉴 버튼 제한
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 692
+  Name: Statue_Gold_Varitan_Blightlands_Build
+  Comment: 황금 성물(바리탄 잠식지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 1069
+  Name: Statue_Gold_East_Roc_Build
+  Comment: 황금 성물(동부 카스티아) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4820
+  Name: Statue_Gold_Varitan_Subjugate_Build
+  Comment: 황금 성물(바리탄 침탈지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2918
+  Name: Statue_Ironore_Varitan_Blightlands_Build
+  Comment: 철광석 성물(바리탄 잠식지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2574
+  Name: Statue_Ironore_East_Roc_Build
+  Comment: 철광석 성물(동부 카스티아) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4207
+  Name: Statue_Ironore_Varitan_Subjugate_Build
+  Comment: 철광석 성물(바리탄 침탈지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3138
+  Name: Statue_Fur_Varitan_Blightlands_Build
+  Comment: 모피 성물(바리탄 잠식지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2382
+  Name: Statue_Fur_East_Roc_Build
+  Comment: 모피 성물(동부 카스티아) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 915
+  Name: Statue_Fur_Varitan_Subjugate_Build
+  Comment: 모피 성물(바리탄 침탈지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 366
+  Name: Statue_Wood_Varitan_Blightlands_Build
+  Comment: 나무 성물(바리탄 잠식지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4891
+  Name: Statue_Wood_East_Roc_Build
+  Comment: 나무 성물(동부 카스티아) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2041
+  Name: Statue_Wood_Varitan_Subjugate_Build
+  Comment: 나무 성물(바리탄 침탈지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 5247
+  Name: Statue_Bone_Varitan_Blightlands_Build
+  Comment: 뼈 성물(바리탄 잠식지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2998
+  Name: Statue_Bone_East_Roc_Build
+  Comment: 뼈 성물(동부 카스티아) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 1035
+  Name: Statue_Bone_Varitan_Subjugate_Build
+  Comment: 뼈 성물(바리탄 침탈지대) 재건 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 1036
+  Name: TradePrivate
+  Comment: 개인 거래
+  SystemMessage: ContentLimitLevel35
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 1308
+  Name: Chat_World
+  Comment: 전체채팅
+  SystemMessage: ContentLimitLevel15
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 1569
+  Name: NoticeBoard
+  Comment: 공지
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 3678
+  Name: OfflineMode
+  Comment: 무접속 플레이
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 2159
+  Name: Test_Item_Craft_Achievement_Prerequisite
+  Comment: 테스트용 특정 제작 아이템 조건 (누적)
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6141
+  Name: Test_Item_Craft_Quest_Prerequisite
+  Comment: 테스트용 특정 제작 아이템 조건 (퀘스트)
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4055
+  Name: Test_Item_BM_Prerequisite
+  Comment: 테스트용 특정 상점 아이템 조건
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2890
+  Name: Test_Monster_Achievement_Prerequisite
+  Comment: 테스트용 특정 몬스터 조건 (누적)
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 2160
+  Name: Test_Monster_Quest_Prerequisite
+  Comment: 테스트용 특정 몬스터 조건 (퀘스트)
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6697
+  Name: Building_Statue_Main
+  Comment: 성좌 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6558
+  Name: Building_Statue_Exp
+  Comment: 경험의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4199
+  Name: Building_Statue_Gold
+  Comment: 골드의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6238
+  Name: Building_Statue_Awareness
+  Comment: 자각의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3583
+  Name: Building_Statue_Awakening
+  Comment: 각성의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3755
+  Name: Building_Statue_DungeonItem
+  Comment: 시간의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4510
+  Name: Building_Statue_WeaponPolymorph
+  Comment: 외형의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6939
+  Name: Building_Statue_Polymorph
+  Comment: 초월의 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 844
+  Name: Building_Statue_BuffItem
+  Comment: 소모품 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4471
+  Name: Building_Statue_BM01
+  Comment: BM01 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 3050
+  Name: Building_Statue_BM02
+  Comment: BM02 성물 재건 조건 체크
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4985
+  Name: Menu_EclipsTime_Btn
+  Comment: 이클립스 타임 버튼
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 9999
+  Name: Update
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 4916
+  Name: Building_Statue_Main_Require
+  Comment: 성좌 재건 조건
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 4392
+  Name: Potential_Page1
+  Comment: 잠재력 메뉴 및 1 페이지
+  TitleDescription: UIWord_Potential
+  SummaryDescription: UIWord_Potential_Unlock
+  SystemMessage: ContentLimitLevel5
+  Icon: /Game/UIIcon/Alert/AlertIconPotential.AlertIconPotential
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 5554
+  Name: Potential_Page2
+  Comment: 잠재력 2 페이지
+  TitleDescription: UIWord_Potential
+  SummaryDescription: UIWord_Potential_Page_Unlock
+  SystemMessage: ContentLimitLevel15
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconPotential.AlertIconPotential
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 6863
+  Name: Potential_Page3
+  Comment: 잠재력 3 페이지
+  TitleDescription: UIWord_Potential
+  SummaryDescription: UIWord_Potential_Page_Unlock
+  SystemMessage: ContentLimitLevel20
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconPotential.AlertIconPotential
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+  OnlyClientLimit: true
+- Id: 6864
+  Name: Skin
+  Comment: 스킨
+  TitleDescription: UIWord_Polymorph_Skin
+  SummaryDescription: UIWord_Skin_Unlock
+  SystemMessage: ContentLimitLock
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconSkin.AlertIconSkin
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 6865
+  Name: WeaponPolymorph
+  Comment: 무기 외형
+  TitleDescription: RecipeCategory_Secret_WeaponPolymorphCard
+  SummaryDescription: UIWord_WeaponPolymorph_Unlock
+  SystemMessage: ContentLimitLock
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconPolymorphWeapon.AlertIconPolymorphWeapon
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Server
+- Id: 779
+  Name: Mastery
+  Comment: 전투 특성
+  TitleDescription: UIWord_Menu_Exchange
+  SummaryDescription: UIWord_Trade_Unlock
+  SystemMessage: ContentLimitQuest
+  ShowAlert: false
+  Icon: /Game/UIIcon/Alert/AlertIconTrade.AlertIconTrade
+  Quest: ContentLimit_CharacterLevel01
+  OwnerBound: Character
+- Id: 6977
+  Name: Auto_Button
+  Comment: Auto 버튼
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 242
+  Name: QuickSlot
+  Comment: 퀵슬롯
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 8088
+  Name: Auto_Potion
+  Comment: 물약 자동 사용 설정
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 6008
+  Name: Skill_Fusion
+  Comment: 스킬 창의 융합 버튼
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 7350
+  Name: Event
+  Comment: 이벤트
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 7626
+  Name: Craft
+  Comment: 제작
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 2594
+  Name: Achievement
+  Comment: 업적
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 2781
+  Name: Mail
+  Comment: 우편
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 9615
+  Name: Relationship
+  Comment: 관계
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 1426
+  Name: Statistic
+  Comment: 통계(준비 중)
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 912
+  Name: Schedule
+  Comment: 스케줄(준비 중)
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 5831
+  Name: Party
+  Comment: 파티
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 7817
+  Name: Preset
+  Comment: 프리셋
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 9182
+  Name: Skill
+  Comment: 스킬
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 10341
+  Name: Inventory
+  Comment: 인벤토리
+  SystemMessage: Preset_SystemMsg_SysButton
+  ShowAlert: false
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 913
+  Name: Event_Banner
+  Comment: 이벤트 배너
+  SystemMessage: Preset_SystemMsg_SysButton
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 3616
+  Name: Menu_Sanctum
+  Comment: 메뉴 성소 버튼
+  SystemMessage: Preset_SystemMsg_SysButton
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 6507
+  Name: Character_Information
+  Comment: 캐릭터 정보
+  SystemMessage: Preset_SystemMsg_SysButton
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 5516
+  Name: Ranking
+  Comment: 순위
+  SystemMessage: Preset_SystemMsg_SysButton
+  OwnerBound: Character
+  DevUnlocked: true
+- Id: 8381
+  Name: PVP
+  Comment: PVP 창
+  SystemMessage: Preset_SystemMsg_SysButton
+  OwnerBound: Character
+  DevUnlocked: true

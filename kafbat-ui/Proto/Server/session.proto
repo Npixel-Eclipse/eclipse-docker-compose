@@ -1,0 +1,35 @@
+syntax = "proto3";
+import "Common/websocket.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.session";
+option java_outer_classname = "SessionServiceProto";
+
+package session;
+
+message Session {
+  reserved 16, 17, 20, 21;
+  int64 account_id = 25;
+  string session_key = 2;
+  optional string character_uuid = 3;
+  optional int64 publisher_character_id = 6;
+  optional string character_name = 4;
+  optional int64 character_class = 5;
+  string publisher_world_id = 27;
+  optional string current_battle = 22;
+  optional string current_front = 23;
+  optional string last_battle = 24;
+  string server = 26;
+  optional bool offline_mode = 28;
+  int64 skip_wait_timeout = 29;
+  string role = 30;
+}
+
+message ClientInfo {
+  reserved 3, 6, 7, 9, 10, 11, 12;
+  string ip_address = 1;
+  string device_id = 2; // 로그 기록 시점의 Device ID (e.g. 79100289481 / 7910029411 / ...)
+  string os = 4; // 로그 기록 시점의 OS 정보 (e.g. android / os / ...)
+  string os_version = 5; // 로그 기록 시점의 OS 버전 정보 (14 / 18.1 / ...)
+  string version = 8; // 로그 기록 시점의 클라이언트 버전 정보
+}

@@ -1,0 +1,128 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+          Value:
+            type: string
+            ref: constants
+    Descriptions:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+          Value:
+            type: string
+            ref: description
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Category
+              - BattleGroundCategory
+              - ChallengeRewardTab
+              - BattleGroundRewardTab
+          DungeonTypeIndex: #ref dungeon type
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Locked:
+            type: boolean
+            default: false
+          ContentLimit:
+            type: string
+            ref: content_limit
+          RedDotName:
+            type: string
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Comment:
+            type: string
+          Name:
+            type: string
+            ref: description
+        required:
+          - Group
+    DungeonInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Dungeontype:
+            type: string #ref dungeon type
+          Description:
+            type: string
+            ref: description
+    RefreshDescription:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          RefreshType:
+            type: string #ref dungeon type
+          Description:
+            type: string
+            ref: description
+    RewardInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          RewardRate:
+            type: integer
+          FlagColor:
+            type: string
+            Default: Blue
+            enum:
+              - Blue
+              - Red
+              - Purple
+    BossNpcType:
+      type: string
+      ref: npc_type
+    InterServerLandGroup:
+      type: string
+      ref: land_group
+    CongestionSmoothDesc:
+      type: string
+      ref: description
+    CongestionCommonDesc:
+      type: string
+      ref: description
+    CongestionConfusionDesc:
+      type: string
+      ref: description
+    CongestionSaturationDesc:
+      type: string
+      ref: description
+          
+  required:
+    - Id
+    - Name

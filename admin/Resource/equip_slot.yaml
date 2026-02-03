@@ -1,0 +1,1249 @@
+- Id: 5
+  Name: Helmet
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Helmet
+  Description: ItemCategory1Item_HelmDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty00_Sprite.EquipEmpty00_Sprite
+  Comment: "[캐릭터] 투구"
+- Id: 1
+  Name: Weapon
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Weapon
+  Description: ItemCategory1Item_WeaponDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty10_Sprite.EquipEmpty10_Sprite
+  Comment: "[캐릭터] 무기"
+- Id: 2
+  Name: Cape
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Cape
+  Description: ItemCategory1Item_CapeDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty01_Sprite.EquipEmpty01_Sprite
+  Comment: "[캐릭터] 망토"
+- Id: 7
+  Name: SubWeapon
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: SubWeapon
+  Description: ItemCategory1Item_SubWeaponDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty11_Sprite.EquipEmpty11_Sprite
+  Comment: "[캐릭터] 보조무기"
+  UseType: unused
+- Id: 10
+  Name: Suit
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Suit
+  Description: ItemCategory1Item_SuitDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty03_Sprite.EquipEmpty03_Sprite
+  Comment: "[캐릭터] 상의"
+- Id: 6
+  Name: Necklace
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Necklace
+  Description: ItemCategory1Item_NecklaceDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty07_Sprite.EquipEmpty07_Sprite
+  Comment: "[캐릭터] 목걸이"
+- Id: 484
+  Name: Bracelet
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Bracelet
+  Description: ItemCategory1Item_BraceletDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty15_Sprite.EquipEmpty15_Sprite
+  Comment: "[캐릭터] 팔찌"
+  UseType: unused
+- Id: 956
+  Name: Pants
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Pants
+  Description: ItemCategory1Item_PantsDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty02_Sprite.EquipEmpty02_Sprite
+  Comment: "[캐릭터] 하의"
+- Id: 279
+  Name: Belt
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Belt
+  Description: ItemCategory1Item_BeltDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty09_Sprite.EquipEmpty09_Sprite
+  Comment: "[캐릭터] 벨트"
+- Id: 9
+  Name: Boots
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Boots
+  Description: ItemCategory1Item_BootsDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty05_Sprite.EquipEmpty05_Sprite
+  Comment: "[캐릭터] 신발"
+- Id: 4
+  Name: Gloves
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Gloves
+  Description: ItemCategory1Item_GlovesDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty04_Sprite.EquipEmpty04_Sprite
+  Comment: "[캐릭터] 장갑"
+- Id: 8
+  Name: Ring1
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Ring1
+  Description: ItemCategory1Item_RingDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty08_Sprite.EquipEmpty08_Sprite
+  Comment: "[캐릭터] 반지 슬롯 1"
+- Id: 1258
+  Name: Ring2
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Ring2
+  Description: ItemCategory1Item_RingDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty08_Sprite.EquipEmpty08_Sprite
+  Comment: "[캐릭터] 반지 슬롯 2"
+  UseType: unused
+- Id: 901
+  Name: Earring1
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Earring1
+  Description: ItemCategory1Item_EarringDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty06_Sprite.EquipEmpty06_Sprite
+  Comment: "[캐릭터] 귀걸이1"
+- Id: 749
+  Name: Earring2
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Earring2
+  Description: ItemCategory1Item_EarringDesc
+  Icon: /Game/UI/CharInfo_SP/EquipEmpty06_Sprite.EquipEmpty06_Sprite
+  Comment: "[캐릭터] 귀걸이2"
+  UseType: unused
+- Id: 1129
+  Name: Polymorph
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: Polymorph
+  Description: UIWordPolymorph
+  Icon: /Game/UI/CharInfo_SP/EquipEmptyAppearance_Sprite.EquipEmptyAppearance_Sprite
+  EquipMessage: SuccessPolymorph
+  UnequipMessage: UnEquipPolymorph
+  Comment: "[캐릭터] 초월 카드"
+  Breakable: false
+- Id: 1642
+  Name: PolymorphSkin
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: PolymorphSkin
+  Description: UIWord_Polymorph_Skin
+  Icon: /Game/UI/CharInfo_SP/EquipEmptySkin_Sprite.EquipEmptySkin_Sprite
+  EquipMessage: SuccessEquipSkin
+  UnequipMessage: UnEquipSkin
+  Comment: "[캐릭터] 스킨"
+  Breakable: false
+- Id: 1009
+  Name: WeaponPolymorph
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Type: WeaponPolymorph
+  Description: UIWord_WeaponPolymorph
+  Icon: /Game/UI/CharInfo_SP/EquipEmptyWeapon_Sprite.EquipEmptyWeapon_Sprite
+  EquipMessage: SuccessWeaponPolymorph
+  UnequipMessage: UnEquipWeaponPolymorph
+  Comment: "[캐릭터] 무기 외형"
+  Breakable: false
+  MultiEquipPolicy: ItemCategoryParent
+- Id: 135
+  Name: LostItem
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Comment: "[캐릭터] 손실 아이템"
+  Breakable: false
+- Id: 1168
+  Name: LostExperience
+  Category: Default_Equipment_Slot
+  LimitType: Character
+  Comment: "[캐릭터] 손실 경험치"
+  Breakable: false
+- Id: 2841
+  Name: Solidarity_Exp_Slot_Page1_01
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 2383
+  Name: Solidarity_Exp_Slot_Page1_02
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 3549
+  Name: Solidarity_Exp_Slot_Page1_03
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 242
+  Name: Solidarity_Exp_Slot_Page1_04
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 3017
+  Name: Solidarity_Exp_Slot_Page1_05
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 2200
+  Name: Solidarity_Exp_Slot_Page1_06
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 2864
+  Name: Solidarity_Exp_Slot_Page1_07
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 413
+  Name: Solidarity_Exp_Slot_Page1_08
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 386
+  Name: Solidarity_Exp_Slot_Page1_09
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 124
+  Name: Solidarity_Exp_Slot_Page1_10
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 4488
+  Name: Solidarity_Exp_Slot_Page1_11
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 1421
+  Name: Solidarity_Exp_Slot_Page1_12
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 408
+  Name: Solidarity_Exp_Slot_Page1_13
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 1598
+  Name: Solidarity_Exp_Slot_Page1_14
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 776
+  Name: Solidarity_Exp_Slot_Page1_15
+  Category: Solidarity_Exp_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 경험치_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 4249
+  Name: Solidarity_Gold_Slot_Page1_01
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 982
+  Name: Solidarity_Gold_Slot_Page1_02
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 3152
+  Name: Solidarity_Gold_Slot_Page1_03
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 2103
+  Name: Solidarity_Gold_Slot_Page1_04
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 4116
+  Name: Solidarity_Gold_Slot_Page1_05
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 3722
+  Name: Solidarity_Gold_Slot_Page1_06
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 4246
+  Name: Solidarity_Gold_Slot_Page1_07
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 3790
+  Name: Solidarity_Gold_Slot_Page1_08
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 4704
+  Name: Solidarity_Gold_Slot_Page1_09
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 261
+  Name: Solidarity_Gold_Slot_Page1_10
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 1077
+  Name: Solidarity_Gold_Slot_Page1_11
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 2183
+  Name: Solidarity_Gold_Slot_Page1_12
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 6122
+  Name: Solidarity_Gold_Slot_Page1_13
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 158
+  Name: Solidarity_Gold_Slot_Page1_14
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 134
+  Name: Solidarity_Gold_Slot_Page1_15
+  Category: Solidarity_Gold_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 골드_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 6143
+  Name: Solidarity_Awareness_Slot_Page1_01
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 5128
+  Name: Solidarity_Awareness_Slot_Page1_02
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 3877
+  Name: Solidarity_Awareness_Slot_Page1_03
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 5039
+  Name: Solidarity_Awareness_Slot_Page1_04
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 1108
+  Name: Solidarity_Awareness_Slot_Page1_05
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 5436
+  Name: Solidarity_Awareness_Slot_Page1_06
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 4266
+  Name: Solidarity_Awareness_Slot_Page1_07
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 6494
+  Name: Solidarity_Awareness_Slot_Page1_08
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 3885
+  Name: Solidarity_Awareness_Slot_Page1_09
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 4806
+  Name: Solidarity_Awareness_Slot_Page1_10
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 2247
+  Name: Solidarity_Awareness_Slot_Page1_11
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 7372
+  Name: Solidarity_Awareness_Slot_Page1_12
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 7554
+  Name: Solidarity_Awareness_Slot_Page1_13
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 7248
+  Name: Solidarity_Awareness_Slot_Page1_14
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 2598
+  Name: Solidarity_Awareness_Slot_Page1_15
+  Category: Solidarity_Awareness_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 자각_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 4243
+  Name: Solidarity_Awakening_Slot_Page1_01
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 103
+  Name: Solidarity_Awakening_Slot_Page1_02
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 5456
+  Name: Solidarity_Awakening_Slot_Page1_03
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 1019
+  Name: Solidarity_Awakening_Slot_Page1_04
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 6727
+  Name: Solidarity_Awakening_Slot_Page1_05
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 5207
+  Name: Solidarity_Awakening_Slot_Page1_06
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 7023
+  Name: Solidarity_Awakening_Slot_Page1_07
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 1357
+  Name: Solidarity_Awakening_Slot_Page1_08
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 6052
+  Name: Solidarity_Awakening_Slot_Page1_09
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 7338
+  Name: Solidarity_Awakening_Slot_Page1_10
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 7663
+  Name: Solidarity_Awakening_Slot_Page1_11
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 5752
+  Name: Solidarity_Awakening_Slot_Page1_12
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 9108
+  Name: Solidarity_Awakening_Slot_Page1_13
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 11
+  Name: Solidarity_Awakening_Slot_Page1_14
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 3201
+  Name: Solidarity_Awakening_Slot_Page1_15
+  Category: Solidarity_Awakening_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 각성_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 6094
+  Name: Solidarity_DungeonItem_Slot_Page1_01
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 8568
+  Name: Solidarity_DungeonItem_Slot_Page1_02
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 5542
+  Name: Solidarity_DungeonItem_Slot_Page1_03
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 13530
+  Name: Solidarity_DungeonItem_Slot_Page1_04
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 15548
+  Name: Solidarity_DungeonItem_Slot_Page1_05
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 5678
+  Name: Solidarity_DungeonItem_Slot_Page1_06
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 14306
+  Name: Solidarity_DungeonItem_Slot_Page1_07
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 12326
+  Name: Solidarity_DungeonItem_Slot_Page1_08
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 778
+  Name: Solidarity_DungeonItem_Slot_Page1_09
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 2175
+  Name: Solidarity_DungeonItem_Slot_Page1_10
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 8294
+  Name: Solidarity_DungeonItem_Slot_Page1_11
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 7119
+  Name: Solidarity_DungeonItem_Slot_Page1_12
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 4560
+  Name: Solidarity_DungeonItem_Slot_Page1_13
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 6864
+  Name: Solidarity_DungeonItem_Slot_Page1_14
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 5477
+  Name: Solidarity_DungeonItem_Slot_Page1_15
+  Category: Solidarity_DungeonItem_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 던전 아이템_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 3512
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_01
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 8539
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_02
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 5504
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_03
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 6018
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_04
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 16648
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_05
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 9440
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_06
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 9556
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_07
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 125
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_08
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 11615
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_09
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 9145
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_10
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 13441
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_11
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 5670
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_12
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 2454
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_13
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 5976
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_14
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 13497
+  Name: Solidarity_WeaponPolymorph_Slot_Page1_15
+  Category: Solidarity_WeaponPolymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 무기 외형_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 1967
+  Name: Solidarity_Polymorph_Slot_Page1_01
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 1138
+  Name: Solidarity_Polymorph_Slot_Page1_02
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 915
+  Name: Solidarity_Polymorph_Slot_Page1_03
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 265
+  Name: Solidarity_Polymorph_Slot_Page1_04
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 1006
+  Name: Solidarity_Polymorph_Slot_Page1_05
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 720
+  Name: Solidarity_Polymorph_Slot_Page1_06
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 926
+  Name: Solidarity_Polymorph_Slot_Page1_07
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 1288
+  Name: Solidarity_Polymorph_Slot_Page1_08
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 2449
+  Name: Solidarity_Polymorph_Slot_Page1_09
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 1250
+  Name: Solidarity_Polymorph_Slot_Page1_10
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 423
+  Name: Solidarity_Polymorph_Slot_Page1_11
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 1779
+  Name: Solidarity_Polymorph_Slot_Page1_12
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 1535
+  Name: Solidarity_Polymorph_Slot_Page1_13
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 1207
+  Name: Solidarity_Polymorph_Slot_Page1_14
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 710
+  Name: Solidarity_Polymorph_Slot_Page1_15
+  Category: Solidarity_Polymorph_Slot_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 초월_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 919
+  Name: Solidarity_BuffItem_Page1_01
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 1
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_01_일반 이상 (더미 데이터)"
+- Id: 9540
+  Name: Solidarity_BuffItem_Page1_02
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 2
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_02_일반 이상 (더미 데이터)"
+- Id: 8219
+  Name: Solidarity_BuffItem_Page1_03
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 3
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_03_일반 이상 (더미 데이터)"
+- Id: 4558
+  Name: Solidarity_BuffItem_Page1_04
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 4
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_04_일반 이상 (더미 데이터)"
+- Id: 14553
+  Name: Solidarity_BuffItem_Page1_05
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 5
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 9
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_05_고급 이상 (더미 데이터)"
+- Id: 11165
+  Name: Solidarity_BuffItem_Page1_06
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 6
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 10
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_06_고급 이상 (더미 데이터)"
+- Id: 11794
+  Name: Solidarity_BuffItem_Page1_07
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 7
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 11
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_07_고급 이상 (더미 데이터)"
+- Id: 914
+  Name: Solidarity_BuffItem_Page1_08
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 8
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_08_고급 이상 (더미 데이터)"
+- Id: 16098
+  Name: Solidarity_BuffItem_Page1_09
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 9
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_09_희귀 이상 (더미 데이터)"
+- Id: 2080
+  Name: Solidarity_BuffItem_Page1_10
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 10
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_10_희귀 이상 (더미 데이터)"
+- Id: 5091
+  Name: Solidarity_BuffItem_Page1_11
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 11
+  SolidarityGrade: Rare
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_11_희귀 이상 (더미 데이터)"
+- Id: 8071
+  Name: Solidarity_BuffItem_Page1_12
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 12
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 12
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_12_영웅 이상 (더미 데이터)"
+- Id: 14255
+  Name: Solidarity_BuffItem_Page1_13
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 13
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 13
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_13_영웅 이상 (더미 데이터)"
+- Id: 15870
+  Name: Solidarity_BuffItem_Page1_14
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 14
+  SolidarityGrade: Epic
+  SolidarityBuildingUnlockLevel: 14
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_14_영웅 이상 (더미 데이터)"
+- Id: 16189
+  Name: Solidarity_BuffItem_Page1_15
+  Category: Solidarity_BuffItem_Page1
+  LimitType: Character
+  SlotOrder: 15
+  SolidarityGrade: Legendary
+  SolidarityBuildingUnlockLevel: 15
+  Type: Solidarity
+  Comment: "[성물 결속] 소모품_1페이지_15_전설 이상 (더미 데이터)"
+- Id: 10960
+  Name: Divinity_Drop_Slot1
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 1
+  Type: Divinity
+  Comment: "[권능] 유물 1번슬롯"
+- Id: 8835
+  Name: Divinity_Drop_Slot2
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 2
+  Type: Divinity
+  Comment: "[권능] 유물 2번슬롯"
+- Id: 894
+  Name: Divinity_Drop_Slot3
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 3
+  Type: Divinity
+  Comment: "[권능] 유물 3번슬롯"
+- Id: 609
+  Name: Divinity_Drop_Slot4
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 4
+  Type: Divinity
+  Comment: "[권능] 유물 4번슬롯"
+- Id: 1952
+  Name: Divinity_Drop_Slot5
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 5
+  Type: Divinity
+  Comment: "[권능] 유물 5번슬롯"
+- Id: 2242
+  Name: Divinity_Drop_Slot6
+  Category: Default_Divinity_Drop_Slot
+  LimitType: Character
+  SlotOrder: 6
+  Type: Divinity
+  Comment: "[권능] 유물 6번슬롯"
+- Id: 10342
+  Name: Divinity_Craft_Slot1
+  Category: Default_Divinity_Craft_Slot
+  LimitType: Character
+  SlotOrder: 7
+  Type: Divinity
+  Comment: "[권능] 제물 1번슬롯"
+- Id: 9719
+  Name: Divinity_Craft_Slot2
+  Category: Default_Divinity_Craft_Slot
+  LimitType: Character
+  SlotOrder: 8
+  Type: Divinity
+  Comment: "[권능] 제물 2번슬롯"
+- Id: 777
+  Name: Divinity_Craft_Slot3
+  Category: Default_Divinity_Craft_Slot
+  LimitType: Character
+  SlotOrder: 9
+  Type: Divinity
+  Comment: "[권능] 제물 3번슬롯"

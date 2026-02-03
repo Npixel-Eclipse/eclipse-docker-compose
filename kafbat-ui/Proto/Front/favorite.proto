@@ -1,0 +1,147 @@
+syntax = "proto3";
+package eclipse.client.favorite;
+
+import "Common/battle_common.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.favorite";
+option java_outer_classname = "ClientFavoriteProto";
+
+enum FavoriteResult {
+  FAIL = 0; // 실패 (자세한 원인 없음)
+  SUCCESS = 1; // 성공
+  FAIL_DUPLICATED = 2; // 이미 즐겨찾기에 등록된 항목
+  FAIL_NOT_FOUND = 3; // 즐겨찾기에 등록되지 않은 항목
+  FAIL_AMOUNT_LIMIT_EXCEED = 4; // 더 이상 등록할 수 없음
+  FAIL_NOT_SUPPORT = 5; // favorite 리소스에 존재하지 않음
+  SUCCESS_SET = 6;
+  SUCCESS_RESET = 7;
+
+  SUCCESS_CONFIRM_PIN_POINT_LIST = 8;
+  SUCCESS_CONFIRM_ADD_PIN_POINT = 9;
+  SUCCESS_CONFIRM_REMOVE_PIN_POINT = 10;
+  FAIL_PIN_POINT_LIMIT_EXCEED = 11;
+  FAIL_PIN_POINT_NOT_FOUND = 12;
+}
+
+// 개인 핀 포인트
+message PinPoint {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  common.ProtoCoordinate coordinate = 3;
+  google.protobuf.Timestamp created_at = 4;
+}
+
+message FavoriteRequest {
+  oneof request {
+    List list = 1;
+    Set set = 2;
+    Reset reset = 3;
+    MultiSet multi_set = 4;
+    MultiReset multi_reset = 5;
+
+    // 핀 포인트
+    PinPointList pin_point_list = 6;
+    AddPinPoint add_pin_point = 7;
+    RemovePinPoint remove_pin_point = 8;
+  }
+
+  message List {
+    int64 favorite_id = 1;
+  }
+
+  message Set {
+    int64 favorite_id = 1;
+    int64 target_id = 2;
+  }
+
+  message Reset {
+    int64 favorite_id = 1;
+    int64 target_id = 2;
+  }
+
+  message MultiSet {
+    repeated Set set = 1;
+  }
+
+  message MultiReset {
+    repeated Reset reset = 1;
+  }
+
+  // 개인 핀 포인트 목록 조회
+  message PinPointList {}
+
+  // 개인 핀 포인트 등록
+  message AddPinPoint {
+    int64 address_id = 1;
+    common.ProtoCoordinate coordinate = 2;
+  }
+
+  // 개인 핀 포인트 삭제
+  message RemovePinPoint {
+    int64 pin_id = 1;
+  }
+}
+
+message FavoriteEvent {
+  oneof event {
+    List list = 1;
+    Set set = 2;
+    Reset reset = 3;
+    MultiSet multi_set = 4;
+    MultiReset multi_reset = 5;
+
+    // 핀 포인트 응답
+    ConfirmPinPointList confirm_pin_point_list = 6;
+    ConfirmAddPinPoint confirm_add_pin_point = 7;
+    ConfirmRemovePinPoint confirm_remove_pin_point = 8;
+  }
+
+  message List {
+    int64 favorite_id = 1;
+    repeated Target target = 2;
+
+    message Target {
+      int64 target_id = 1;
+      int64 register_timestamp = 2;
+    }
+  }
+
+  message Set {
+    int64 favorite_id = 1;
+    int64 target_id = 2;
+    FavoriteResult result = 3;
+  }
+
+  message Reset {
+    int64 favorite_id = 1;
+    int64 target_id = 2;
+    FavoriteResult result = 3;
+  }
+
+  message MultiSet {
+    repeated Set set = 1;
+  }
+
+  message MultiReset {
+    repeated Reset reset = 1;
+  }
+
+  // 개인 핀 포인트 목록 응답
+  message ConfirmPinPointList {
+    repeated PinPoint pins = 1;
+  }
+
+  // 개인 핀 포인트 등록 응답
+  message ConfirmAddPinPoint {
+    FavoriteResult result = 1;
+    PinPoint added = 2;
+  }
+
+  // 개인 핀 포인트 삭제 응답
+  message ConfirmRemovePinPoint {
+    FavoriteResult result = 1;
+    int64 pin_id = 2;
+  }
+}

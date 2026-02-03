@@ -1,0 +1,310 @@
+- Id: 1
+  Name: BMPolymorphCardCompensation
+  RepeatRoundFrom: 2
+  Reward:
+    - Round: 1
+      Step: 1
+      Condition: 10
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 1
+    - Round: 1
+      Step: 1
+      Condition: 20
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 2
+    - Round: 1
+      Step: 1
+      Condition: 30
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 3
+    - Round: 1
+      Step: 1
+      Condition: 40
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 4
+    - Round: 1
+      Step: 1
+      Condition: 50
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 5
+    - Round: 1
+      Step: 2
+      Condition: 60
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 6
+    - Round: 1
+      Step: 2
+      Condition: 70
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 7
+    - Round: 1
+      Step: 2
+      Condition: 80
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 8
+    - Round: 1
+      Step: 2
+      Condition: 90
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 9
+    - Round: 1
+      Step: 3
+      Condition: 100
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 10
+    - Round: 1
+      Step: 3
+      Condition: 110
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 11
+    - Round: 1
+      Step: 3
+      Condition: 120
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 12
+    - Round: 1
+      Step: 4
+      Condition: 130
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 13
+    - Round: 1
+      Step: 4
+      Condition: 140
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 14
+    - Round: 1
+      Step: 5
+      Condition: 150
+      Item: Item_Cardpack_Transcendence_G3_T1_01_Bounded
+      Amount: 15
+    - Round: 2
+      Step: 1
+      Condition: 10
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 1
+    - Round: 2
+      Step: 1
+      Condition: 20
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 2
+    - Round: 2
+      Step: 1
+      Condition: 30
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 3
+    - Round: 2
+      Step: 1
+      Condition: 40
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 4
+    - Round: 2
+      Step: 1
+      Condition: 50
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 5
+    - Round: 2
+      Step: 2
+      Condition: 60
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 6
+    - Round: 2
+      Step: 2
+      Condition: 70
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 7
+    - Round: 2
+      Step: 2
+      Condition: 80
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 8
+    - Round: 2
+      Step: 2
+      Condition: 90
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 9
+    - Round: 2
+      Step: 3
+      Condition: 100
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 10
+    - Round: 2
+      Step: 3
+      Condition: 110
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 11
+    - Round: 2
+      Step: 3
+      Condition: 120
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 12
+    - Round: 2
+      Step: 4
+      Condition: 130
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 13
+    - Round: 2
+      Step: 4
+      Condition: 140
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 14
+    - Round: 2
+      Step: 5
+      Condition: 150
+      Item: Item_Cardpack_Transcendence_G4_T1_01_Bounded
+      Amount: 15
+  CountItem: BMCompensation_Count_01
+- Id: 15
+  Name: BMWeaponPolymorphCardCompensation
+  RepeatRoundFrom: 2
+  Reward:
+    - Round: 1
+      Step: 1
+      Condition: 10
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 1
+    - Round: 1
+      Step: 1
+      Condition: 20
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 2
+    - Round: 1
+      Step: 1
+      Condition: 30
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 3
+    - Round: 1
+      Step: 1
+      Condition: 40
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 4
+    - Round: 1
+      Step: 1
+      Condition: 50
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 5
+    - Round: 1
+      Step: 2
+      Condition: 60
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 6
+    - Round: 1
+      Step: 2
+      Condition: 70
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 7
+    - Round: 1
+      Step: 2
+      Condition: 80
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 8
+    - Round: 1
+      Step: 2
+      Condition: 90
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 9
+    - Round: 1
+      Step: 3
+      Condition: 100
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 10
+    - Round: 1
+      Step: 3
+      Condition: 110
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 11
+    - Round: 1
+      Step: 3
+      Condition: 120
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 12
+    - Round: 1
+      Step: 4
+      Condition: 130
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 13
+    - Round: 1
+      Step: 4
+      Condition: 140
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 14
+    - Round: 1
+      Step: 5
+      Condition: 150
+      Item: Item_Cardpack_Weaponpolymorph_G3_T1_01_Bounded
+      Amount: 15
+    - Round: 2
+      Step: 1
+      Condition: 10
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 1
+    - Round: 2
+      Step: 1
+      Condition: 20
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 2
+    - Round: 2
+      Step: 1
+      Condition: 30
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 3
+    - Round: 2
+      Step: 1
+      Condition: 40
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 4
+    - Round: 2
+      Step: 1
+      Condition: 50
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 5
+    - Round: 2
+      Step: 2
+      Condition: 60
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 6
+    - Round: 2
+      Step: 2
+      Condition: 70
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 7
+    - Round: 2
+      Step: 2
+      Condition: 80
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 8
+    - Round: 2
+      Step: 2
+      Condition: 90
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 9
+    - Round: 2
+      Step: 3
+      Condition: 100
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 10
+    - Round: 2
+      Step: 3
+      Condition: 110
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 11
+    - Round: 2
+      Step: 3
+      Condition: 120
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 12
+    - Round: 2
+      Step: 4
+      Condition: 130
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 13
+    - Round: 2
+      Step: 4
+      Condition: 140
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 14
+    - Round: 2
+      Step: 5
+      Condition: 150
+      Item: Item_Cardpack_Weaponpolymorph_G4_T1_01_Bounded
+      Amount: 15
+  CountItem: BMCompensation_Count_02

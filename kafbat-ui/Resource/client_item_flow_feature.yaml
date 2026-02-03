@@ -1,0 +1,105 @@
+- Id: 1
+  FlowType: Gathering
+  HyperLinkDesc: UIWord_HyperLink_ItemFlow
+  NoneHyperLinkDesc: UIWord_HyperLink_ItemFlow_Empty
+  PropertyType:
+    - Type: Monster
+      Description: UIWord_DropArea_1
+      PopupSummary: UIWord_DropArea_Comment_1
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_HuntingZone_Sprite.MapSymbol_HuntingZone_Sprite
+      DungeonIcon: /Game/UIIcon/MapSymbol/MapSymbol_Dungeon_Sprite.MapSymbol_Dungeon_Sprite
+      NameDesc: Desc_WorldMap_PointName
+      DungeonTypePriority:
+        - Normal
+        - World
+        - Event
+        - Inter
+        - Challenge
+        - BattleGround
+    - Type: BasicMerchant
+      Description: UIWord_DropArea_2
+      PopupSummary: UIWord_DropArea_Comment_2
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Village_Sprite.MapSymbol_Village_Sprite
+    - Type: EventMerchant
+      Description: UIWord_DropArea_3
+      PopupSummary: UIWord_DropArea_Comment_2
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Village_Sprite.MapSymbol_Village_Sprite
+    - Type: GuildMerchant
+      Description: UIWord_DropArea_4
+      PopupSummary: UIWord_DropArea_Comment_2
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Village_Sprite.MapSymbol_Village_Sprite
+    - Type: Craft
+      Description: UIWord_DropArea_5
+      PopupSummary: UIWord_DropArea_Comment_4
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Craft_Sprite.MapSymbol_Craft_Sprite
+    - Type: Disassemble
+      Description: UIWord_DropArea_9
+      OpenContents: false
+      OpenPopup: false
+    - Type: BmShop
+      Description: UIWord_DropArea_6
+      PopupSummary: UIWord_DropArea_Comment_3
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Gold_Sprite.MapSymbol_Gold_Sprite
+      ItemPriority:
+        - Gold
+        - Diamond
+        - Mileage
+      BMShopCategoryPriority:
+        - Package
+        - Monthly
+        - Gacha
+        - Gold
+        - Mileage
+    - Type: HuntingZoneShop
+      Description: UIWord_DropArea_7
+      PopupSummary: UIWord_DropArea_Comment_5
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Flag_Sprite.MapSymbol_Flag_Sprite
+    - Type: HuntingZoneGroupShop
+      Description: UIWord_DropArea_7
+      PopupSummary: UIWord_DropArea_Comment_5
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Flag_Sprite.MapSymbol_Flag_Sprite
+    - Type: GuildDonation
+      Description: UIWord_DropArea_10
+      OpenPopup: false
+    - Type: GuildQuest
+      Description: UIWord_DropArea_11
+      PopupSummary: UIWord_DropArea_Comment_7
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_GuildQuest_Sprite.MapSymbol_GuildQuest_Sprite
+    - Type: Building
+      Description: UIWord_DropArea_8
+      PopupSummary: UIWord_DropArea_Comment_6
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Fortress_Sprite.MapSymbol_Fortress_Sprite
+    - Type: Achievement
+      Description: UIWord_DropArea_14
+      PopupSummary: UIWord_DropArea_Comment_8
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Achievement_Sprite.MapSymbol_Achievement_Sprite
+- Id: 2
+  FlowType: Usage
+  PropertyType:
+    - Type: Craft
+      Description: UIWord_UseArea_1
+      PopupSummary: UIWord_UseArea_Comment_1
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Craft_Sprite.MapSymbol_Craft_Sprite
+      AllowedResultType:
+        - ResultType: Success
+    - Type: EventMerchant
+      Description: UIWord_UseArea_2
+      PopupSummary: UIWord_UseArea_Comment_2
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol__Village_Sprite.MapSymbol_Village_Sprite
+    - Type: GuildMerchant
+      Description: UIWord_UseArea_3
+      PopupSummary: UIWord_UseArea_Comment_2
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol__Village_Sprite.MapSymbol_Village_Sprite
+    - Type: HuntingZoneBid
+      Description: UIWord_UseArea_4
+      PopupSummary: UIWord_UseArea_Comment_3
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Flag_Sprite.MapSymbol_Flag_Sprite
+    - Type: HuntingZoneBidCurrency
+      Description: UIWord_UseArea_6
+      PopupSummary: UIWord_UseArea_Comment_5
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Flag_Sprite.MapSymbol_Flag_Sprite
+    - Type: Building
+      Description: UIWord_UseArea_5
+      PopupSummary: UIWord_UseArea_Comment_4
+      DefaultIcon: /Game/UIIcon/MapSymbol/MapSymbol_Fortress_Sprite.MapSymbol_Fortress_Sprite
+      NameDesc: Desc_WorldMap_PointName

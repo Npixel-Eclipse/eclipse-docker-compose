@@ -1,0 +1,64 @@
+services:
+  kafka-connect-1:
+    image: bitnami/kafka:3.9
+    ports:
+      - "38083:8083"  # REST API 포트
+    command:
+      - /opt/bitnami/kafka/bin/connect-distributed.sh
+      - /bitnami/kafka/config/connect-distributed.properties
+    environment:
+      - BITNAMI_DEBUG=true
+      - KAFKA_OPTS=-Djava.security.auth.login.config=/opt/bitnami/kafka/config/connect_jaas.conf
+      - CONNECT_REST_ADVERTISED_HOST_NAME=connect-1
+      - CONNECT_REST_ADVERTISED_PORT=38083
+      - CONNECT_REST_ADVERTISED_LISTENER=http://0.0.0.0:38083
+    volumes:
+      - ./kafka-connect-1-data:/bitnami/kafka
+      - ./plugins:/bitnami/plugins
+      - ./connect_jaas.conf:/opt/bitnami/kafka/config/connect_jaas.conf
+    networks:
+      - kafka-network
+
+  kafka-connect-2:
+    image: bitnami/kafka:3.9
+    ports:
+      - "38084:8083"  # REST API 포트
+    command:
+      - /opt/bitnami/kafka/bin/connect-distributed.sh
+      - /bitnami/kafka/config/connect-distributed.properties
+    environment:
+      - BITNAMI_DEBUG=true
+      - KAFKA_OPTS=-Djava.security.auth.login.config=/opt/bitnami/kafka/config/connect_jaas.conf
+      - CONNECT_REST_ADVERTISED_HOST_NAME=connect-2
+      - CONNECT_REST_ADVERTISED_PORT=38084
+      - CONNECT_REST_ADVERTISED_LISTENER=http://0.0.0.0:38084
+    volumes:
+      - ./kafka-connect-2-data:/bitnami/kafka
+      - ./plugins:/bitnami/plugins
+      - ./connect_jaas.conf:/opt/bitnami/kafka/config/connect_jaas.conf
+    networks:
+      - kafka-network
+
+  kafka-connect-3:
+    image: bitnami/kafka:3.9
+    ports:
+      - "38085:8083"  # REST API 포트
+    command:
+      - /opt/bitnami/kafka/bin/connect-distributed.sh
+      - /bitnami/kafka/config/connect-distributed.properties
+    environment:
+      - BITNAMI_DEBUG=true
+      - KAFKA_OPTS=-Djava.security.auth.login.config=/opt/bitnami/kafka/config/connect_jaas.conf
+      - CONNECT_REST_ADVERTISED_HOST_NAME=connect-3
+      - CONNECT_REST_ADVERTISED_PORT=38085
+      - CONNECT_REST_ADVERTISED_LISTENER=http://0.0.0.0:38085
+    volumes:
+      - ./kafka-connect-3-data:/bitnami/kafka
+      - ./plugins:/bitnami/plugins
+      - ./connect_jaas.conf:/opt/bitnami/kafka/config/connect_jaas.conf
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    driver: bridge

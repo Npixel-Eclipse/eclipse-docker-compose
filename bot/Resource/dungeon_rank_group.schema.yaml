@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Dungeon
+    - DungeonName
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Comment:
+      type: string
+    Dungeon:
+      type: string
+      ref: dungeon
+    DungeonName: # mail 에 던전 이름 출력 시 필요
+      type: string
+      ref: description      
+    RankReward:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Rank
+          - Item
+          - Amount
+        properties:
+          Rank:
+            type: integer        
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+            minimum: 1

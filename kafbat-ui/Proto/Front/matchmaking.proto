@@ -1,0 +1,90 @@
+syntax = "proto3";
+package eclipse.client.matchmaking;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.matchmaking";
+option java_outer_classname = "ClientMatchmakingProto";
+
+enum MatchResult {
+  FAIL = 0;
+  SUCCESS = 1;
+  FAIL_ALREADY_MATCH_STARTED = 2; // [MatchEvent.Start] 이미 매칭중이어서 실패
+  FAIL_NOT_PARTY_LEADER = 3; // [MatchEvent.Start] 파티장이 아님
+  FAIL_MATCH_NOT_OPENED = 4; // [MatchEvent.Start] 오픈 시간이 아님
+  FAIL_MATCH_NOT_STARTED = 5; // [MatchEvent.Stop] 매칭중이 아니어서 실패
+  FAIL_NOT_ALLOW_PARTY = 6; // [MatchEvent.Start] 파티에 가입한 경우 매칭할 수 없음
+  FAIL_ONLY_ALLOW_PARTY = 7; // 파티에 가입한 경우에만 매칭할 수 있음
+  FAIL_NOT_ALLOW_LAND = 8; // [본인:MatchEvent.Start, 파티원:MatchEvent.Stop] 매칭할 수 없는 지역에서 매칭을 시도함
+  SUCCESS_MATCHED = 9; // [MatchEvent.Stop] 매칭이 완료되었으므로 매칭이 종료됨.
+  SUCCESS_USER_CANCEL = 10; // [MatchEvent.Stop] 유저의 매칭 취소 요청이 성공함.
+  SUCCESS_MATCH_CLOSED = 11; // [MatchEvent.Stop] 매칭 시간이 종료됨.
+  SUCCESS_PARTY_CHANGED = 12; // [MatchEvent.Stop] 매칭 도중 파티 상태가 변경됨
+  SUCCESS_LAND_CHANGED = 13; // [MatchEvent.Stop] 매칭 도중 랜드 위치가 변경됨
+  SUCCESS_PC_DEAD = 14; // [MatchEvent.Stop] 매칭 도중 캐릭터가 사망함
+  SUCCESS_OFFLINE = 15; // [MatchEvent.Stop] 매칭 도중 캐릭터가 로그아웃함 (자신 또는 파티원)
+  FAIL_NOT_ENOUGH_DUNGEON_REMAIN_COUNT = 16; // 자신 또는 파티원의 입장 회수가 부족함
+  SUCCESS_NOT_ENOUGH_LEVEL = 17; // [MatchEvent.Stop] 매칭 시도 시 플레이어의 레벨이 부족함. (자신 또는 파티원)
+  SUCCESS_NOT_ENOUGH_COMBAT_POINT = 18; // [MatchEvent.Stop] 매칭 시도 시 플레이어의 전투력이 부족함. (자신 또는 파티원)
+}
+
+message MatchRequest {
+  oneof request {
+    Start start = 1;
+    Stop stop = 2;
+    QueryStatus query_status = 3;
+  }
+
+  message Start {
+    oneof target {
+      int64 matchmaking_id = 1;
+      int64 dungeon_id = 2;
+    }
+  }
+
+  message Stop {
+    oneof target {
+      int64 matchmaking_id = 1;
+      int64 dungeon_id = 2;
+    }
+  }
+
+  message QueryStatus {
+
+  }
+}
+
+message MatchEvent {
+  oneof event {
+    Start start = 1;
+    Stop stop = 2;
+    Status status = 3;
+  }
+
+  message Start {
+    MatchResult result = 1;
+    oneof target {
+      int64 matchmaking_id = 2;
+      int64 dungeon_id = 3;
+    }
+  }
+
+  message Stop {
+    MatchResult result = 1;
+    oneof target {
+      int64 matchmaking_id = 2;
+      int64 dungeon_id = 4;
+    }
+  }
+
+  message Status {
+    repeated Target targets = 1;
+
+    message Target {
+      oneof target {
+        int64 matchmaking_id = 1;
+        int64 dungeon_id = 2;
+      }
+      bool matching = 3; // true: 매칭중, false: 매칭중이지 않음
+    }
+  }
+}

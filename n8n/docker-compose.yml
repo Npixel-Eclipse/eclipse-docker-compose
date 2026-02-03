@@ -1,0 +1,39 @@
+services:
+  n8n:
+    build: .
+    container_name: eclipse-n8n
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - p4_ticket_data:/home/node/p4_tickets
+      - p4_workspace_data:/home/node/p4_workspace
+      - /home/npx-ecl/docs:/home/docs
+    depends_on:
+      - mongo # n8n이 mongo보다 늦게 시작하도록 설정
+    networks:
+      - rag_network
+    env_file:
+      - .env
+      - p4.env
+
+  mongo:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    env_file:
+      - mongo.env
+    networks:
+      - rag_network
+
+volumes:
+  n8n_data:
+  p4_ticket_data:
+  p4_workspace_data:
+  mongo_data:
+
+networks:
+  rag_network:
+    external: true

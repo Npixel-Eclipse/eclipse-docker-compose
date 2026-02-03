@@ -1,0 +1,46 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ItemCategory
+    - Grade
+    - Enchant
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      minLength: 1
+    ItemCategory:
+      type: string
+      ref: item_category
+    Grade:
+      type: string
+      ref: grade
+    Enchant:
+      type: object
+      additionalProperties: false
+      required:
+        - Level
+      properties:
+        Level:
+          type: integer
+          default: 0
+        # 성공시 출력할 시스템 메시지, 설정 하지 않으면 출력하지 않음
+        SuccessMessage:
+          type: string
+          ref: system_message
+          visible: true
+        # 실패시 출력할 시스템 메시지, 설정 하지 않으면 출력하지 않음
+        FailureMessage:
+          type: string
+          ref: system_message
+          visible: true
+
+
+

@@ -1,0 +1,1863 @@
+- Topic: log.output
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: log 서버에 의해 aggregation 된 스마게로 전달되는 로그 포맷
+  UpdatedAt: 2025-03-15
+- Topic: "*.ranking.event"
+  MessageType: Protobuf
+  ProtoFile: Front/ranking.proto
+  ProtoMessage: RankingEvent
+  Comment: "[기록실] Ranking -> Front"
+  UpdatedAt: 2024-09-12
+- Topic: "*-battleLevel-level-snapshot-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[채팅] Pc 레벨 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-buffConsumer.1-state-snapshot-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/buff.proto
+  ProtoMessage: BuffStatus
+  Comment: "[버프] 버프 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-guildAccountStream-guild-session-cache-store-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[길드] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-guildExpiryStream-guild-expire-cache-store-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildCache
+  Comment: "[길드] 길드 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-guildMembers-KSTREAM-TOTLE-0000000007-repartition"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[길드] GuildMembers Streams 리파티션"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-guildMembers-guildMembers-snapshot-changelog"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[길드] 길드:길드원 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-guildMembers-guildUuid-snapshot-changelog"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[길드] 캐릭터:길드ID KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-handleFrontRequest-*.session.entity-STATE-STORE-0000000001-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[거래소] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*-handleReRegister-*.session.entity-STATE-STORE-0000000001-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[거래소] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*-handleSelling-*.session.entity-STATE-STORE-0000000001-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[거래소] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*-partyMembers-KSTREAM-TOTLE-0000000007-repartition"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[채팅] PartyMembers Streams 리파티션"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-partyMembers-partyMembers-snapshot-changelog"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[채팅] 파티:파티원 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-partyMembers-partyUuid-snapshot-changelog"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[채팅] 캐릭터:파티ID KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-processHuntingZoneRequest-hunting-zone-account-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[사냥터소유] 세션 KTable (InteractiveQuery 전용)"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processHuntingZoneRequest-hunting-zone-session-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[사냥터소유] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processBattleCommand-hunting-zone-metric-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/hunting_zone.proto
+  ProtoMessage: HuntingZoneCache
+  Comment: "[사냥터소유] 사냥터 통계 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processMetricCommand-hunting-zone-metric-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/hunting_zone.proto
+  ProtoMessage: HuntingZoneCache
+  Comment: "[사냥터소유] 사냥터 통계 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processForwarded-party-state-store-changelog"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[파티] 파티 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processPartyCommand-party-state-store-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: PartyCache
+  Comment: "[파티] 파티 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-30
+- Topic: "*.quest.processor-pc-property-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: PcPropertyCache
+  Comment: "[퀘스트] 캐릭터 프로퍼티 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*-guildStream-guild-timer-store-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildTimerCache
+  Comment: "[길드] 길드의 여러 종료 시간 값을 저장해둔 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-09-11
+- Topic: "*.quest.processor-guild-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: GuildCache
+  Comment: "[퀘스트] 길드 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-character-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: CharacterInfoCache
+  Comment: "[퀘스트] 퀘스트 캐릭터 정보 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-level-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: PcLevelCache
+  Comment: "[퀘스트] 레벨 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-quest-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestCache
+  Comment: "[퀘스트] 퀘스트 캐시"
+  InternalTopic: true
+  Cache: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-session-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[퀘스트] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-territory-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: TerritoryCache
+  Comment: "[퀘스트] Territory 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-item-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: ItemCache
+  Comment: "[퀘스트] 아이템 캐시"
+  InternalTopic: true
+  Cache: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-building-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: BuildingCache
+  Comment: "[퀘스트] 건물 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-item-collection-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: ItemCollectionCache
+  Comment: "[퀘스트] 수집 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-mastery-essence-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: MasteryEssenceCache
+  Comment: "[퀘스트] 숙련도 근원 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+- Topic: "*.quest.processor-session-state-store-dev-1-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[퀘스트] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2025-05-13
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*.quest.processor-hunting-zone-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: HuntingZoneCache
+  Comment: "[퀘스트] 헌팅존 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-06-04
+- Topic: "*.quest.processor-quest-category-refresh-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestCategoryRefreshLevelCache
+  Comment: "[퀘스트] 퀘스트 새로고침 레벨 캐시"
+  InternalTopic: true
+  UpdatedAt: 2025-06-04
+- Topic: "*-processRequest-hunting-zone-account-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[사냥터소유] 세션 KTable (InteractiveQuery 전용)"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processRequest-hunting-zone-session-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[사냥터소유] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: ApplicationId 변경
+- Topic: "*-processToken-hunting-zone-token-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/hunting_zone.proto
+  ProtoMessage: TokenCache
+  Comment: "[사냥터소유] 결정석 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-processTradeRequest-trade-session-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[거래소] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-sessionEntity-session-snapshot-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[채팅] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-setting-session-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[설정] 세션 KTable"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*-setting-setting-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/setting.proto
+  ProtoMessage: SettingCache
+  Comment: "[설정] 설정 캐시"
+  InternalTopic: true
+  UpdatedAt: 2024-06-29
+- Topic: "*.battle.command"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: BattleCommand
+  Comment: "[배틀] Command"
+  Producer:
+    - HuntingZone
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.command.initialize.dungeon"
+  MessageType: Protobuf
+  ProtoFile: Server/dungeon.proto
+  ProtoMessage: DungeonEvent
+  Comment: "[던전] 던전 Welcome Reply Command"
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+  Deleted: true
+  DeleteReason: 토픽 이름 변경
+- Topic: "*.battle.command.item"
+  MessageType: Protobuf
+  ProtoFile: Server/Battle/battle_item.proto
+  ProtoMessage: BattleItemCommand
+  Comment: "[배틀] 아이템 Command"
+  Producer:
+    - Item
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.command.party"
+  MessageType: Protobuf
+  ProtoFile: Server/Battle/battle_party.proto
+  ProtoMessage: BattlePartyCommand
+  Comment: "[배틀] 파티 Command"
+  Producer:
+    - Party
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.command.quest"
+  MessageType: Protobuf
+  ProtoFile: Server/Battle/battle_quest.proto
+  ProtoMessage: BattleQuestCommand
+  Comment: "[배틀] 퀘스트 Command"
+  Producer:
+    - Quest
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.command.update.guild-member"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: GuildMemberUpdate
+  Comment: "[배틀] 길드원 갱신 Command"
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: "?"
+- Topic: "*.battle.command.welcome.dungeon"
+  MessageType: Protobuf
+  ProtoFile: Server/dungeon.proto
+  ProtoMessage: DungeonEvent
+  Comment: "[던전] 던전 Welcome Reply Command"
+  Producer:
+    - Store
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.level.notify"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcLevelEvent
+  Comment: "[배틀] Pc 레벨 변화 Event"
+  Producer:
+    - Battle
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 토픽 이름 변경
+- Topic: "*.battle.pc.level.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcLevelEvent
+  Comment: "[배틀] Pc 레벨 변화 Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Chat
+    - Guild
+    - Item
+    - Lobby
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.pc.address.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcAddressEvent
+  Comment: pc 위치 정보
+  Producer:
+    - Battle
+  Consumer:
+    - Item
+  UpdatedAt: 2025-07-09
+- Topic: "*.battle.pc.max-level.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcLevelEvent
+  Comment: "[배틀] Pc 최대레벨 변화 Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Item
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.pc.properties.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcPropertyEvent
+  Comment: "[배틀] Pc Property 변화 스킬 Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.battle.started.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: BattleStart
+  Comment: "[배틀] 배틀서버 시작 Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Store
+    - HuntingZone
+  UpdatedAt: 2025-06-20
+- Topic: "*.battle.started.reply"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: BattleStartReply
+  Comment: "[버프] 배틀서버 시작 Reply"
+  Producer:
+    - Store
+  Consumer:
+    - Battle
+  UpdatedAt: 2025-06-20
+- Topic: "*.battle.welcome.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: Welcome
+  Comment: "[배틀] Welcome Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Guild
+    - Postbox
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.broadcast.event"
+  MessageType: Protobuf
+  ProtoFile: Front/broadcast.proto
+  ProtoMessage: BroadcastEvent
+  Comment: "[Broadcast] Broadcast Event"
+  Producer:
+    - Front
+  Consumer:
+    - Item
+  UpdatedAt: 2024-06-30
+- Topic: "*.buff.command"
+  MessageType: Protobuf
+  ProtoFile: Server/buff.proto
+  ProtoMessage: BuffCommand
+  Comment: "[버프] Command"
+  Producer:
+    - Battle
+    - Lobby
+  Consumer:
+    - Store
+  UpdatedAt: 2024-06-30
+- Topic: "*.buff.reply"
+  MessageType: Protobuf
+  ProtoFile: Server/buff.proto
+  ProtoMessage: BuffCommand
+  Comment: "[버프] Store -> Battle"
+  Producer:
+    - Store
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-06-30
+- Topic: "*.cheat.request"
+  MessageType: Protobuf
+  ProtoFile: Common/cheat.proto
+  ProtoMessage: CheatRequest
+  Comment: "[치트] Front -> All"
+  Producer:
+    - Front
+  Consumer:
+    - Battle
+    - Guild
+    - Item
+    - Notification
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.dungeon.command.update"
+  MessageType: Protobuf
+  ProtoFile: Server/dungeon.proto
+  ProtoMessage: DungeonCommand
+  Comment: "[던전] Command"
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 던전 토픽 통합
+- Topic: "*.dungeon.command.welcome"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[던전] Welcome Command (Battle -> Store)"
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 던전 토픽 통합
+- Topic: "*.dungeon.command"
+  MessageType: Protobuf
+  ProtoFile: Server/dungeon.proto
+  ProtoMessage: DungeonCommand
+  Comment: "[던전] Command"
+  Producer:
+    - Battle
+    - Item
+  Consumer:
+    - Dungeon
+  UpdatedAt: 2024-10-25
+- Topic: "*.dungeon.request"
+  MessageType: Protobuf
+  ProtoFile: Front/dungeon.proto
+  ProtoMessage: DungeonRequest
+  Comment: "[던전] Front -> Dungeon"
+  Producer:
+    - Front
+  Consumer:
+    - Dungeon
+  UpdatedAt: 2024-10-25
+- Topic: "*.dungeon.event"
+  MessageType: Protobuf
+  ProtoFile: Front/dungeon.proto
+  ProtoMessage: DungeonEvent
+  Comment: "[던전] Dungeon -> Front"
+  Producer:
+    - Dungeon
+  Consumer:
+    - Front
+  UpdatedAt: 2024-10-25
+- Topic: "*.favorite-favorite-active-timestamp-store-changelog"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[즐겨찾기] 마지막 업데이트 시간"
+  InternalTopic: true
+  Producer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.favorite-favorite-store-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/favorite.proto
+  ProtoMessage: FavoriteCache
+  Comment: "[즐겨찾기] 즐겨찾기 캐시"
+  InternalTopic: true
+  Producer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.favorite.command"
+  MessageType: Protobuf
+  ProtoFile: Server/favorite.proto
+  ProtoMessage: FavoriteCommand
+  Comment: "[즐겨찾기] Command"
+  Consumer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.favorite.event"
+  MessageType: Protobuf
+  ProtoFile: Front/favorite.proto
+  ProtoMessage: FavoriteEvent
+  Comment: "[즐겨찾기] Favorite -> Front"
+  Producer:
+    - Notification
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.quest.*.processor-quest-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestCache
+  Comment: "[퀘스트] 퀘스트 캐시"
+  InternalTopic: true
+  Cache: true
+  UpdatedAt: 2025-05-21
+- Topic: "*.favorite.request"
+  MessageType: Protobuf
+  ProtoFile: Front/favorite.proto
+  ProtoMessage: FavoriteRequest
+  Comment: "[즐겨찾기] Front -> Favorite"
+  Producer:
+    - Front
+  Consumer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.guild-member.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: GuildMemberUpdate
+  Comment: "[길드] 길드원 변경 Event"
+  Producer:
+    - Guild
+  Consumer:
+    - Battle
+    - HuntingZone
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.account.command"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildAccountCommand
+  Comment: "[길드] Account Command (Key: AccountUuid)"
+  Producer:
+    - Guild
+    - Item
+    - Lobby
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.command"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildCommand
+  Comment: "[길드] Command (Key: GuildId)"
+  Producer:
+    - Guild
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.command.disband"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: ReserveDisband
+  Comment: "[길드] 해산 Command"
+  Producer:
+    - Guild
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.command.proposal.expiry"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildCache/AllyProposalExpiry
+  Comment: "[길드] 우호/적대길드 초대 종료"
+  Producer:
+    - Guild
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.event"
+  MessageType: Protobuf
+  ProtoFile: Front/guild.proto
+  ProtoMessage: GuildEvent
+  Comment: "[길드] Guild -> Front"
+  Producer:
+    - Guild
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.guild.info.reply"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[길드] Guild 처리에 필요한 정보를 다른 서비스로부터 취합"
+  Producer:
+    - Item
+    - Battle
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.members.notify"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[길드] 길드원 목록 Event (채팅서버에서 길드원 캐싱)"
+  Producer:
+    - Guild
+  Consumer:
+    - Chat
+  UpdatedAt: 2024-06-30
+- Topic: "*.guild.request"
+  MessageType: Protobuf
+  ProtoFile: Front/guild.proto
+  ProtoMessage: GuildRequest
+  Comment: "[길드] Front -> Guild"
+  Producer:
+    - Front
+  Consumer:
+    - Guild
+  UpdatedAt: 2024-06-29
+- Topic: "*.hunting-zone.command"
+  MessageType: Protobuf
+  ProtoFile: Server/hunting_zone.proto
+  ProtoMessage: HuntingZoneCommand
+  Comment: "[사냥터소유] Command"
+  Producer:
+    - Battle
+    - HuntingZone
+    - Item
+  Consumer:
+    - HuntingZone
+  UpdatedAt: 2024-06-30
+- Topic: "*.hunting-zone.event"
+  MessageType: Protobuf
+  ProtoFile: Front/hunting_zone.proto
+  ProtoMessage: HuntingZoneEvent
+  Comment: "[사냥터소유] HuntingZone -> Front"
+  Producer:
+    - HuntingZone
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.hunting-zone.request"
+  MessageType: Protobuf
+  ProtoFile: Front/hunting_zone.proto
+  ProtoMessage: HuntingZoneRequest
+  Comment: "[사냥터소유] Front -> HuntingZone"
+  Producer:
+    - Front
+  Consumer:
+    - HuntingZone
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.command"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: ItemCommand
+  Comment: "[아이템] Command"
+  Producer:
+    - Battle
+    - Guild
+    - HuntingZone
+    - Item
+    - Lobby
+    - Notification
+    - Postbox
+    - Quest
+    - Trade
+  Consumer:
+    - Item
+  UpdatedAt: 2024-06-30
+- Topic: "*.item.event"
+  MessageType: Protobuf
+  ProtoFile: Front/item.proto
+  ProtoMessage: ItemEvent
+  Comment: "[아이템] Item -> Front"
+  Producer:
+    - Item
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-*.session.entity-STATE-STORE-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[아이템] 세션 KTable"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-npc-shop-limit-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: NpcShopLimitCache
+  Comment: "[아이템] 상점 구매 제한 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2025-06-20
+- Topic: "*.item.item-processor-addend-buy-amount-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: AddendBuyAmountCache
+  Comment: "[아이템] 상점 구매 가산항 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2025-08-07
+- Topic: "*.item.item-processor-bm-shop-limit-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: BmShopLimitCache
+  Comment: "[아이템] BM 상점 구매 제한 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-bm-shop-limit-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: BmShopLimitCache
+  Comment: "[아이템] BM 상점 구매 제한 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-07-29
+- Topic: "*.item.item-processor-bm-shop-storage-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: BmShopStorageCache
+  Comment: "[아이템] BM 상점 보관함 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-item-cache*changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: ItemCache
+  Comment: "[아이템] 아이템 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-inventory-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: InventoryCache
+  Comment: "[아이템] 인벤토리 캐시"
+  InternalTopic: true
+  Cache: true
+  Producer:
+    - Item
+  UpdatedAt: 2025-01-13
+- Topic: "*.item.item-processor-item-collection-storage-cache-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: ItemCollectionCache
+  Comment: "[아이템] 아이템 수집 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-item-order-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: ItemOrderCache
+  Comment: "[아이템] 아이템 정렬 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-quest-world-map-area-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: QuestWorldMapAreaCache
+  Comment: "[아이템] 퀘스트 수행지역 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: "?"
+- Topic: "*.item.item-processor-recipe-failure-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: RecipeFailureCache
+  Comment: "[아이템] 레시피 천장 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.recipe-processor-recipe-limit-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/Item/item_recipe.proto
+  ProtoMessage: RecipeLimitCache
+  Comment: "[아이템] 레시피 제한 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.item.item-processor-buffered-battle-item-cache-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: BufferedBattleItemCache
+  Comment: "[아이템] 배틀 아이템 버퍼 캐시"
+  InternalTopic: true
+  Producer:
+    - Item
+  UpdatedAt: 2024-11-14
+- Topic: "*.item.recipe.command"
+  MessageType: Protobuf
+  ProtoFile: Server/Item/item_recipe.proto
+  ProtoMessage: RecipeCommand
+  Comment: "[아이템] Recipe Command (Key: RecipeOutputId)"
+  Producer:
+    - Item
+  Consumer:
+    - Item
+  UpdatedAt: 2024-06-30
+- Topic: "*.item.request"
+  MessageType: Protobuf
+  ProtoFile: Front/item.proto
+  ProtoMessage: ItemRequest
+  Comment: "[아이템] Front -> Item"
+  Producer:
+    - Front
+  Consumer:
+    - Item
+  UpdatedAt: 2024-06-29
+- Topic: "*.lobby.command.character.buff"
+  MessageType: Protobuf
+  ProtoFile: Server/buff.proto
+  ProtoMessage: BuffCommand
+  Comment: "[로비] 캐릭터 선택 시 Buff 정보 수신"
+  Producer:
+    - Store
+  Consumer:
+    - Lobby
+  UpdatedAt: 2024-06-30
+- Topic: "*.lobby.command.character.disconnect"
+  MessageType: Protobuf
+  ProtoFile: Server/lobby.proto
+  ProtoMessage: CharacterDisconnect
+  Comment: "[로비] Battle 로그아웃 시 Pc 정보 수신"
+  Producer:
+    - Battle
+  Consumer:
+    - Lobby
+  UpdatedAt: 2024-06-30
+- Topic: "*.lobby.command.character.guild"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: CharacterGuildReply
+  Comment: "[로비] 캐릭터 선택 시 Guild 정보 수신"
+  Producer:
+    - Guild
+  Consumer:
+    - Lobby
+  UpdatedAt: 2024-06-30
+- Topic: "*.lobby.command.character.item"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: CharacterItemReply
+  Comment: "[로비] 캐릭터 선택 시 Item 정보 수신"
+  Producer:
+    - Item
+  Consumer:
+    - Lobby
+  UpdatedAt: 2024-06-30
+- Topic: "*.lobby.command.server"
+  MessageType: Protobuf
+  ProtoFile: Server/lobby.proto
+  ProtoMessage: Server
+  Comment: "[로비] ★설명입력필요★"
+  Consumer:
+    - Lobby
+  UpdatedAt: 2024-06-29
+- Topic: "*.notification-notification-store-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/notification.proto
+  ProtoMessage: NotificationCache
+  Comment: "[레드닷] 레드닷 캐시"
+  InternalTopic: true
+  Producer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.notification.command"
+  MessageType: Protobuf
+  ProtoFile: Server/notification.proto
+  ProtoMessage: NotificationCommand
+  Comment: "[레드닷] Command"
+  Producer:
+    - Postbox
+    - Item
+  Consumer:
+    - Notification
+  UpdatedAt: 2024-06-30
+- Topic: "*.notification.event"
+  MessageType: Protobuf
+  ProtoFile: Front/notification.proto
+  ProtoMessage: NotificationEvent
+  Comment: "[레드닷] Notification -> Front"
+  Producer:
+    - Notification
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.notification.request"
+  MessageType: Protobuf
+  ProtoFile: Front/notification.proto
+  ProtoMessage: NotificationRequest
+  Comment: "[레드닷] Front -> Notification"
+  Producer:
+    - Front
+  Consumer:
+    - Notification
+  UpdatedAt: 2024-06-29
+- Topic: "*.party.command"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: PartyCommand
+  Comment: "[파티] Command"
+  Producer:
+    - Battle
+    - Party
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-30
+- Topic: "*.party.command.forward"
+  MessageType: Protobuf
+  ProtoFile: Front/party.proto
+  ProtoMessage: PartyRequest
+  Comment: "[파티] Request를 Command로 포워딩"
+  Producer:
+    - Party
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-30
+- Topic: "*.party.command.member"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: PartyMemberCommand
+  Comment: "[파티] 파티원의 버프/위치/HP/MP등의 정보 전달"
+  Producer:
+    - Battle
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-30
+- Topic: "*.party.command.party-member-info"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[파티] deprecated"
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.command.update.buff"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: MemberBuff
+  Comment: "[파티] 파티원의 버프 정보 수신"
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.command.update.coordinate"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: MemberCoordinate
+  Comment: "[파티] 파티원의 위치 정보 수신"
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.command.update.hp"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: MemberHp
+  Comment: "[파티] 파티원의 HP 정보 수신"
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.command.update.mp"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: MemberMp
+  Comment: "[파티] 파티원의 MP 정보 수신"
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.event"
+  MessageType: Protobuf
+  ProtoFile: Front/party.proto
+  ProtoMessage: PartyEvent
+  Comment: "[파티] Party -> Front"
+  Producer:
+    - Party
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-30
+- Topic: "*.party.leave"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[파티] deprecated"
+  UpdatedAt: 2024-06-29
+  Deleted: true
+- Topic: "*.party.members.notify"
+  MessageType: Json
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[파티] 파티원 변경 Event"
+  Producer:
+    - Party
+  Consumer:
+    - Chat
+  UpdatedAt: 2024-06-30
+- Topic: "*.party.request"
+  MessageType: Protobuf
+  ProtoFile: Front/party.proto
+  ProtoMessage: PartyRequest
+  Comment: "[파티] Party -> Front"
+  Producer:
+    - Front
+  Consumer:
+    - Party
+  UpdatedAt: 2024-06-29
+- Topic: "*.quest.command"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestCommand
+  Comment: "[퀘스트] Command"
+  Producer:
+    - Battle
+    - Item
+    - Party
+    - Quest
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-06-30
+- Topic: "*.quest.event"
+  MessageType: Protobuf
+  ProtoFile: Front/quest.proto
+  ProtoMessage: QuestEvent
+  Comment: "[퀘스트] Quest -> Front"
+  Producer:
+    - Quest
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.quest.request"
+  MessageType: Protobuf
+  ProtoFile: Front/quest.proto
+  ProtoMessage: QuestRequest
+  Comment: "[퀘스트] Front -> Quest"
+  Producer:
+    - Front
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-06-29
+- Topic: "*.session.disconnect.event"
+  MessageType: Other
+  ProtoFile: NONE
+  ProtoMessage: NONE
+  Comment: "[배틀] PC 로그아웃 Event"
+  Producer:
+    - Battle
+  Consumer:
+    - Item
+    - Party
+  UpdatedAt: 2024-06-30
+- Topic: "*.session.entity"
+  MessageType: Protobuf
+  ProtoFile: Server/session.proto
+  ProtoMessage: Session
+  Comment: "[세션] 세션 변동 Event"
+  Producer:
+    - Session
+  Consumer:
+    - Item
+    - Chat
+    - Guild
+    - HuntingZone
+    - Quest
+    - Store
+    - Party
+    - Trade
+  UpdatedAt: 2024-06-30
+- Topic: "*-process-setting-setting-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/setting.proto
+  ProtoMessage: SettingCache
+  Comment: "[설정] 설정 캐시"
+  UpdatedAt: 2024-07-01
+- Topic: "*.setting.command"
+  MessageType: Protobuf
+  ProtoFile: Server/setting.proto
+  ProtoMessage: SettingCommand
+  Comment: "[설정] Command"
+  Producer:
+    - Battle
+  Consumer:
+    - Store
+  UpdatedAt: 2024-06-30
+- Topic: "*.setting.reply"
+  MessageType: Protobuf
+  ProtoFile: Server/setting.proto
+  ProtoMessage: ServerSettingEvent
+  Comment: "[설정] Setting -> Battle"
+  Producer:
+    - Store
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-07-01
+- Topic: "*.setting.replace.event"
+  MessageType: Protobuf
+  ProtoFile: Server/setting.proto
+  ProtoMessage: ServerSettingEvent
+  Comment: "[설정] Setting Replace Event"
+  UpdatedAt: 2024-07-01
+- Topic: "*.setting.event"
+  MessageType: Protobuf
+  ProtoFile: Front/setting.proto
+  ProtoMessage: SettingEvent
+  Comment: "[설정] Setting -> Front"
+  UpdatedAt: 2024-07-01
+- Topic: "*.setting.request"
+  MessageType: Protobuf
+  ProtoFile: Front/setting.proto
+  ProtoMessage: SettingRequest
+  Comment: "[설정] Front -> Setting"
+  UpdatedAt: 2024-07-01
+- Topic: "*.trade.command"
+  MessageType: Protobuf
+  ProtoFile: Server/trade.proto
+  ProtoMessage: TradeCommand
+  Comment: "[거래소] Command"
+  Producer:
+    - Item
+    - Trade
+  Consumer:
+    - Trade
+  UpdatedAt: 2024-06-30
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*.trade.command.buy.item"
+  MessageType: Protobuf
+  ProtoFile: Server/trade.proto
+  ProtoMessage: BuyTradeItemReply
+  Comment: "[거래소] 구매 (deprecated 240410)"
+  Consumer:
+    - Trade
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*.trade.command.re-register"
+  MessageType: Protobuf
+  ProtoFile: Server/trade.proto
+  ProtoMessage: ReRegisterTradeReply
+  Comment: "[거래소] 재등록 (deprecated 240410)"
+  Consumer:
+    - Trade
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*.trade.command.sell.item"
+  MessageType: Protobuf
+  ProtoFile: Server/trade.proto
+  ProtoMessage: SellTradeItemReply
+  Comment: "[거래소] 판매등록 (deprecated 240410)"
+  Consumer:
+    - Trade
+  UpdatedAt: 2024-06-29
+  Deleted: true
+  DeleteReason: 거래소 토픽 통합
+- Topic: "*.trade.event"
+  MessageType: Protobuf
+  ProtoFile: Front/trade.proto
+  ProtoMessage: TradeEvent
+  Comment: "[거래소] Trade -> Front"
+  Producer:
+    - Trade
+  Consumer:
+    - Front
+  UpdatedAt: 2024-06-29
+- Topic: "*.trade.request"
+  MessageType: Protobuf
+  ProtoFile: Front/trade.proto
+  ProtoMessage: TradeRequest
+  Comment: "[거래소] Front -> Trade"
+  Producer:
+    - Front
+  Consumer:
+    - Trade
+  UpdatedAt: 2024-06-29
+- Topic: "*.chat.command"
+  MessageType: Protobuf
+  ProtoFile: Server/chat.proto
+  ProtoMessage: ChatCommand
+  Comment: "[채팅] Command"
+  Producer:
+    - Guild
+    - Party
+    - Session
+    - Lobby
+  Consumer:
+    - Chat
+  UpdatedAt: 2024-07-08
+- Topic: "*.chat.event"
+  MessageType: Protobuf
+  ProtoFile: Server/chat.proto
+  ProtoMessage: ChatEvent
+  Comment: "[채팅] Command"
+  Producer:
+    - Chat
+  Consumer:
+    - Item
+  UpdatedAt: 2024-07-08
+- Topic: "*.chat.command.message"
+  MessageType: Protobuf
+  ProtoFile: Server/chat.proto
+  ProtoMessage: ChatMessageCommand
+  Comment: "[채팅] 채팅 메시지 Command"
+  Producer:
+    - Chat
+    - Item
+  Consumer:
+    - Chat
+  UpdatedAt: 2024-07-08
+- Topic: "*.chat.command.message.delegate.local"
+  MessageType: Protobuf
+  ProtoFile: Server/chat.proto
+  ProtoMessage: ChatMessageCommand
+  Comment: "[채팅] 채팅 메시지 Command (배틀 위임)"
+  Producer:
+    - Chat
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-07-08
+- Topic: "*.cooltime.command"
+  MessageType: Protobuf
+  ProtoFile: Server/cool_time.proto
+  ProtoMessage: CoolTimeCommand
+  Comment: "[스킬쿨타임 저장소] Battle -> Store"
+  UpdatedAt: 2024-07-01
+- Topic: "*.cooltime.reply"
+  MessageType: Protobuf
+  ProtoFile: Server/cool_time.proto
+  ProtoMessage: CoolTimeCommand
+  Comment: "[쿨타임 저장소] Store -> Battle"
+  Producer:
+    - Store
+  Consumer:
+    - Battle
+  UpdatedAt: 2024-07-06
+- Topic: "*.ranking.command.update"
+  MessageType: Protobuf
+  ProtoFile: Server/ranking.proto
+  ProtoMessage: RankingUpdateCommand
+  Comment: "[기록실] Ranking"
+  Producer:
+    - Battle
+  UpdatedAt: 2024-07-23
+- Topic: "*.ranking.request"
+  MessageType: Protobuf
+  ProtoFile: Front/ranking.proto
+  ProtoMessage: RankingRequest
+  Comment: "[기록실] Front -> Ranking"
+  UpdatedAt: 2024-11-15
+- Topic: "*.ranking.display-info.event"
+  MessageType: Protobuf
+  ProtoFile: Server/ranking.proto
+  ProtoMessage: RankingDisplayInfoEvent
+  Comment: "[기록실] 표기해야할 랭킹 정보"
+  UpdatedAt: 2024-11-08
+- Topic: "*.party.members.notify"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: PartyMemberEvent
+  Comment: "[파티] 파티원 변경 Event"
+  Producer:
+    - Party
+  Consumer:
+    - Chat
+  UpdatedAt: 2024-06-30
+- Topic: "*.matchmaking.account.command"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/account_command.proto
+  ProtoMessage: MatchmakingAccountCommand
+  Comment: "[매치메이킹] 계정 Command"
+  Producer:
+    - Battle
+    - Matchmaking
+    - Party
+  Consumer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.match.command"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/match_command.proto
+  ProtoMessage: MatchmakingMatchCommand
+  Comment: "[매치메이킹] 매치 Command"
+  Producer:
+    - Matchmaking
+  Consumer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.queue.command"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/queue_command.proto
+  ProtoMessage: MatchmakingQueueCommand
+  Comment: "[매치메이킹] 매칭큐 Command"
+  Producer:
+    - Matchmaking
+  Consumer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.request"
+  MessageType: Protobuf
+  ProtoFile: Front/matchmaking.proto
+  ProtoMessage: MatchRequest
+  Comment: "[매치메이킹] Front -> Matchmaking"
+  Producer:
+    - Front
+  Consumer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.event"
+  MessageType: Protobuf
+  ProtoFile: Front/matchmaking.proto
+  ProtoMessage: MatchEvent
+  Comment: "[매치메이킹] Matchmaking -> Front"
+  Producer:
+    - Matchmaking
+  Consumer:
+    - Front
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.account-processor-account-state*"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/account_state.proto
+  ProtoMessage: MatchmakingAccountState
+  Comment: "[매치메이킹] 계정 캐시"
+  InternalTopic: true
+  Producer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.match-processor-match-state*"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/match_state.proto
+  ProtoMessage: MatchmakingMatchState
+  Comment: "[매치메이킹] 매치 캐시"
+  InternalTopic: true
+  Producer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.matchmaking.queue-processor-queue-state*"
+  MessageType: Protobuf
+  ProtoFile: Server/Matchmaking/queue_state.proto
+  ProtoMessage: MatchmakingQueueState
+  Comment: "[매치메이킹] 매칭큐 캐시"
+  InternalTopic: true
+  Producer:
+    - Matchmaking
+  UpdatedAt: 2024-08-21
+- Topic: "*.fortress.command"
+  MessageType: Protobuf
+  ProtoFile: Server/fortress.proto
+  ProtoMessage: FortressCommand
+  Comment: "[성소] 성소 Command"
+  Producer:
+    - Fortress
+  Consumer:
+    - Fortress
+  UpdatedAt: 2024-09-26
+- Topic: "*.fortress.building.info.event"
+  MessageType: Protobuf
+  ProtoFile: Server/fortress.proto
+  ProtoMessage: BuildingInfo
+  Comment: "[성소] 성물 정보 이벤트"
+  Producer:
+    - Fortress
+  Consumer:
+    - Quest
+    - Guild
+  UpdatedAt: 2024-10-17
+- Topic: "*.fortress.event"
+  MessageType: Protobuf
+  ProtoFile: Front/fortress.proto
+  ProtoMessage: FortressEvent
+  Comment: "[성소] 성소 Event"
+  UpdatedAt: 2024-09-26
+- Topic: "*-process-fortress-fortress-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/fortress.proto
+  ProtoMessage: FortressCache
+  Comment: "[성소] 성소 캐쉬"
+  UpdatedAt: 2024-11-04
+- Topic: "*.fortress.request"
+  MessageType: Protobuf
+  ProtoFile: Front/fortress.proto
+  ProtoMessage: FortressRequest
+  Comment: "[성소] 성소 Request"
+  UpdatedAt: 2024-12-02
+- Topic: "*.pklog.request"
+  MessageType: Protobuf
+  ProtoFile: Front/pklog.proto
+  ProtoMessage: PkLogRequest
+  Comment: "[기록실] Front -> PkLog"
+  Producer:
+    - Front
+  Consumer:
+    - PkLog
+  UpdatedAt: 2024-10-14
+- Topic: "*.pklog.event"
+  MessageType: Protobuf
+  ProtoFile: Front/pklog.proto
+  ProtoMessage: PkLogEvent
+  Comment: "[기록실] PkLog -> Front"
+  Producer:
+    - PkLog
+  Consumer:
+    - Front
+  UpdatedAt: 2024-10-14
+- Topic: "*.popup.event"
+  MessageType: Protobuf
+  ProtoFile: Front/popup.proto
+  ProtoMessage: PopupEvent
+  Comment: "[팝업] 공용 팝업 이벤트"
+  Producer:
+    - Quest
+    - Item
+  Consumer:
+    - Front
+  UpdatedAt: 2024-10-21
+- Topic: "*.item.completed.item.collection.event"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: CompletedItemCollectionEvent
+  Comment: "[아이템] 완료된 아이템 컬랙션 이벤트"
+  Producer:
+    - Item
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-10-24
+- Topic: "*.process.event"
+  MessageType: Protobuf
+  ProtoFile: Server/process.proto
+  ProtoMessage: ShutdownEvent
+  Comment: "[프로세스] 프로세스 종료 발생 기록 이벤트"
+  Producer:
+    - Store
+  Consumer:
+    - Dungeon
+  UpdatedAt: 2024-10-25
+- Topic: "*.item.mastery.essence.statistic.event"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: MasteryEssenceStatisticEvent
+  Comment: "[아이템] 숙련도 통계 이벤트"
+  Producer:
+    - Item
+  Consumer:
+    - Quest
+  UpdatedAt: 2025-01-15
+- Topic: "*.party.member.io.event"
+  MessageType: Protobuf
+  ProtoFile: Server/party.proto
+  ProtoMessage: PartyMemberIOEvent
+  Comment: "[파티] 가입 또는 탈퇴 이벤트"
+  Producer:
+    - Party
+  Consumer:
+    - Matchmaking
+  UpdatedAt: 2024-10-30
+- Topic: "*.battle.pc.land.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcLandEvent
+  Comment: "[배틀] Pc의 Land 변동 이벤트"
+  Producer:
+    - Battle
+  Consumer:
+    - Matchmaking
+    - Quest
+  UpdatedAt: 2024-10-30
+- Topic: "*.quest.unlocked.content.event"
+  MessageType: Protobuf
+  ProtoFile: Common/content_limit.proto
+  ProtoMessage: UnlockedContentEvent
+  Comment: "[퀘스트] 해금된 컨텐츠 이벤트"
+  Producer:
+    - Quest
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-10-30
+- Topic: "*.battle.pc.dead.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcDeadEvent
+  Comment: "[배틀] Pc 사망 이벤트"
+  Producer:
+    - Battle
+  Consumer:
+    - Matchmaking
+    - Quest
+  UpdatedAt: 2024-10-31
+- Topic: "*.battle.pc.killed.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: PcKilledEvent
+  Comment: "[배틀] Pc 살해 이벤트"
+  Producer:
+    - Battle
+  UpdatedAt: 2024-12-31
+- Topic: "*.content-limit.request"
+  MessageType: Protobuf
+  ProtoFile: Front/content_limit.proto
+  ProtoMessage: ContentLimitRequest
+  Comment: "[컨텐츠 제한] Front -> All"
+  Producer:
+    - Front
+  Consumer:
+    - Quest
+  UpdatedAt: 2024-11-01
+- Topic: "*.content-limit.event"
+  MessageType: Protobuf
+  ProtoFile: Front/content_limit.proto
+  ProtoMessage: ContentLimitEvent
+  Comment: "[컨텐츠 제한] All -> Front"
+  Producer:
+    - Quest
+  Consumer:
+    - Front
+  UpdatedAt: 2024-11-01
+- Topic: "*.guild.info.event"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildInfoEvent
+  Comment: "[길드] Guild -> All"
+  UpdatedAt: 2024-12-03
+- Topic: "*.guild.member.event"
+  MessageType: Protobuf
+  ProtoFile: Server/guild.proto
+  ProtoMessage: GuildMemberEvent
+  Comment: "[길드] Guild -> All"
+  UpdatedAt: 2024-11-20
+- Topic: "*.mail.request"
+  MessageType: Protobuf
+  ProtoFile: Front/mail.proto
+  ProtoMessage: MailRequest
+  Comment: "[우편] Front -> Mail"
+  UpdatedAt: 2024-11-22
+- Topic: "*.mail.event"
+  MessageType: Protobuf
+  ProtoFile: Front/mail.proto
+  ProtoMessage: MailEvent
+  Comment: "[우편] Mail -> Front"
+  UpdatedAt: 2024-11-22
+- Topic: "*.mail.command"
+  MessageType: Protobuf
+  ProtoFile: Server/mail.proto
+  ProtoMessage: MailCommand
+  Comment: "[우편] All -> Mail"
+  UpdatedAt: 2024-11-22
+- Topic: bulk.mail.policy.event
+  MessageType: Protobuf
+  ProtoFile: Server/admin.proto
+  ProtoMessage: BulkMailPolicy
+  Comment: "[우편] 대량 우편 전송 정책"
+  UpdatedAt: 2025-06-22
+- Topic: "*.quest.unlocked.content.event"
+  MessageType: Protobuf
+  ProtoFile: Server/content_limit.proto
+  ProtoMessage: UnlockedContentEvent
+  Comment: "[컨텐츠 제한] Quest -> All"
+  UpdatedAt: 2024-11-26
+- Topic: "*.battle.command.dungeon"
+  MessageType: Protobuf
+  ProtoFile: Server/Battle/battle_dungeon.proto
+  ProtoMessage: BattleDungeonCommand
+  Comment: "[던전] Dungeon -> Battle"
+  UpdatedAt: 2024-11-26
+- Topic: "*.pklog.command"
+  MessageType: Protobuf
+  ProtoFile: Server/pklog.proto
+  ProtoMessage: PkLogCommand
+  Comment: "[PkLog] PkLog Command"
+  UpdatedAt: 2025-04-22
+- Topic: "*.pklog.command.account"
+  MessageType: Protobuf
+  ProtoFile: Server/pklog.proto
+  ProtoMessage: PkLogAccountCommand
+  Comment: "[PkLog] PkLog Account Command"
+  UpdatedAt: 2025-04-22
+- Topic: "*.pklog.request"
+  MessageType: Protobuf
+  ProtoFile: Front/pklog.proto
+  ProtoMessage: PkLogRequest
+  Comment: "[PkLog] Front -> PkLog"
+  UpdatedAt: 2025-02-27
+- Topic: "*.quest.*.processor-item-state-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: ItemCache
+  Comment: "[퀘스트] 아이템 캐시"
+  InternalTopic: true
+  Cache: true
+  UpdatedAt: 2025-05-21
+- Topic: "*.pklog.event"
+  MessageType: Protobuf
+  ProtoFile: Front/pklog.proto
+  ProtoMessage: PkLogEvent
+  Comment: "[PkLog] PkLog -> Front"
+  UpdatedAt: 2025-03-14
+- Topic: battle.policy.event
+  MessageType: Protobuf
+  ProtoFile: Server/admin.proto
+  ProtoMessage: BattlePolicy
+  Comment: "[관리자] battle 리스트"
+  Producer:
+    - Admin
+  Consumer:
+    - Session
+    - Lobby
+    - HuntingZone
+  UpdatedAt: 2024-12-20
+- Topic: server.policy.event
+  MessageType: Protobuf
+  ProtoFile: Server/admin.proto
+  ProtoMessage: ServerPolicy
+  Comment: "[관리자] server 리스트"
+  Producer:
+    - Admin
+  Consumer:
+    - Lobby
+  UpdatedAt: 2025-06-12
+- Topic: content.policy.event
+  MessageType: Protobuf
+  ProtoFile: Server/admin.proto
+  ProtoMessage: ContentPolicy
+  Comment: "[관리자] 컨텐츠 정책"
+  Producer:
+    - Admin
+  Consumer:
+    - Item
+    - Dungeon
+  UpdatedAt: 2025-11-23
+- Topic: "*.battle.info.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: BattleInfo
+  Comment: "[배틀] 1초에 한 번씩 보내는 배틀 정보(인구수, 대기열 등)"
+  Producer:
+    - Battle
+  Consumer:
+    - Store
+    - Lobby
+  UpdatedAt: 2025-05-27
+- Topic: "*.lobby.info.event"
+  MessageType: Protobuf
+  ProtoFile: Server/lobby.proto
+  ProtoMessage: LobbyInfo
+  Comment: "[로비] 1초에 한 번씩 보내는 로비 정보(서버 당 인구수 등)"
+  Producer:
+    - Lobby
+  Consumer:
+    - Lobby
+  UpdatedAt: 2025-06-08
+- Topic: "*.lobby.character.name.event"
+  MessageType: Protobuf
+  ProtoFile: Server/lobby.proto
+  ProtoMessage: CharacterNameUpdateEvent
+  Comment: "[로비] 캐릭터 닉네임 변경 Event"
+  Producer:
+    - Lobby
+  Consumer:
+    - Trade
+    - Chat
+    - Guild
+    - PkLog
+  UpdatedAt: 2025-04-08
+- Topic: "*.bridge.command"
+  MessageType: Protobuf
+  ProtoFile: Server/Bridge/command.proto
+  ProtoMessage: BridgeCommand
+  Comment: "[퍼블리셔연동] Command"
+  Producer:
+    - Bridge
+  Consumer:
+    - Bridge
+  UpdatedAt: 2025-03-07
+- Topic: "*.bridge.reply.*"
+  MessageType: Protobuf
+  ProtoFile: Server/Bridge/reply.proto
+  ProtoMessage: BridgeReply
+  Comment: "[퍼블리셔연동] Reply"
+  Producer:
+    - Bridge
+  Consumer:
+    - Bridge
+  UpdatedAt: 2025-03-07
+- Topic: "*.log.event"
+  MessageType: Protobuf
+  ProtoFile: Server/Log/log.proto
+  ProtoMessage: LogEvent
+  Comment: "[로그] All -> Log"
+  UpdatedAt: 2025-04-17
+- Topic: "*.tracking.command"
+  MessageType: Protobuf
+  ProtoFile: Server/tracking.proto
+  ProtoMessage: TrackingCommand
+  Comment: "[ALL] 트래킹"
+  UpdatedAt: 2025-06-03
+- Topic: "*.battle.worldmapicon.event"
+  MessageType: Protobuf
+  ProtoFile: Server/battle.proto
+  ProtoMessage: WorldMapIconSyncEvent
+  Comment: "[배틀] battle 간 월드맵 아이콘 동기화를 위한 토픽"
+  Producer:
+    - Battle
+  Consumer:
+    - Battle
+  UpdatedAt: 2025-08-01
+- Topic: "*.item.db.command"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: ItemDbCommand
+  Comment: "[아이템] 아이템 서버 저장용"
+  UpdatedAt: 2025-08-12
+- Topic: "*.quest.db.command"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestDbCommand
+  Comment: "[아이템] 퀘스트 서버 저장용"
+  UpdatedAt: 2025-08-12
+- Topic: "*.item.item-processor-buffered-record-cache-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/item.proto
+  ProtoMessage: BufferedRecordCache
+  Comment: "[아이템] 아이템 서버 요청 버퍼"
+  UpdatedAt: 2025-08-12
+- Topic: "*.quest.quest.processor-buffered-quest-record-store-dev-*-changelog"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: BufferedQuestRecordCache
+  Comment: "[퀘스트] 퀘스트 서버 요청 버퍼"
+  UpdatedAt: 2025-08-12
+- Topic: "*.quest.complete.event"
+  MessageType: Protobuf
+  ProtoFile: Server/quest.proto
+  ProtoMessage: QuestCompleteEvent
+  Comment: "[퀘스트] 퀘스트 완료 이벤트"
+  Producer:
+    - Quest
+  Consumer:
+    - Item
+  UpdatedAt: 2025-11-24

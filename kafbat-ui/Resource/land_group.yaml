@@ -1,0 +1,43 @@
+- Id: 1
+  Name: Home
+  Comment: 홈
+  BattleType: Home
+- Id: 2
+  Name: Dungeon
+  Comment: 던전
+  BattleType: Home
+- Id: 3
+  Name: DungeonInter
+  Inter: true
+  Comment: 인터서버 - 블러드쉐드
+  BattleType: DungeonInter
+- Id: 289
+  Name: DungeonInter2
+  Inter: true
+  Comment: 인터서버 - 구리가라 불멸지
+  BattleType: DungeonInter
+- Id: 76
+  Name: DungeonInter3
+  Inter: true
+  Comment: 인터서버 - 가이아의 숨결
+  BattleType: DungeonInter
+- Id: 4
+  Name: Fortress
+  Comment: 성소
+  BattleType: Home
+- Id: 5
+  Name: GuildFortress
+  Comment: 길드 성소
+  BattleType: Home
+- Id: 6
+  Name: Battleground
+  Comment: 전장
+  BattleType: Home
+- Id: 7
+  Name: QuestInstance
+  Comment: 퀘스트 인스턴스
+  BattleType: Home
+- Id: 322
+  Name: TutorialInstance
+  Comment: 퀘스트 인스턴스
+  BattleType: TutorialInstance

@@ -1,0 +1,39 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.setting";
+option java_outer_classname = "CommonSettingProto";
+
+message Value {
+  oneof value {
+    int64 int_value = 1;
+    // 클라가 보내면 현재 다 저장중이기 때문에 클라와 길이 혹은 크기 협의 필요
+    string string_value = 2;
+    bool bool_value = 3;
+    int64 decimal_value = 4;
+  }
+}
+
+message SettingKeyValue{
+  string key = 1;
+  Value value = 2;
+}
+
+message SettingKeyValues {
+  // 자동 구매 설정, 채팅 탭, 채팅 메크로에 사용
+  // 값의 크기는 클라와 협의 필요
+  repeated SettingKeyValue key_values = 1;
+}
+
+message SettingValue {
+  oneof setting_value {
+    Value value = 1;
+    SettingKeyValues array_value = 2;
+  }
+}
+
+message Setting {
+  int64 key = 1;
+  SettingValue value = 2;
+}

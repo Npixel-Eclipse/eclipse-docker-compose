@@ -1,0 +1,118 @@
+ * Serving Flask app 'bytebase_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.121.91:5010
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 372-867-653
+192.168.20.205 - - [30/Apr/2025 10:48:39] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [30/Apr/2025 10:48:55] "POST / HTTP/1.1" 200 -
+192.168.20.205 - - [30/Apr/2025 10:49:13] "POST / HTTP/1.1" 200 -
+192.168.20.205 - - [30/Apr/2025 10:57:50] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [30/Apr/2025 10:57:51] "GET / HTTP/1.1" 200 -
+192.168.20.204 - - [30/Apr/2025 10:59:31] "GET / HTTP/1.1" 200 -
+192.168.20.204 - - [30/Apr/2025 10:59:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.205 - - [30/Apr/2025 11:00:23] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [30/Apr/2025 11:00:35] "POST / HTTP/1.1" 200 -
+192.168.20.208 - - [30/Apr/2025 11:01:50] "GET / HTTP/1.1" 200 -
+192.168.20.208 - - [30/Apr/2025 11:01:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.208 - - [30/Apr/2025 11:02:00] "POST / HTTP/1.1" 200 -
+192.168.20.208 - - [30/Apr/2025 11:02:32] "POST / HTTP/1.1" 200 -
+ * Serving Flask app 'bytebase_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.121.91:5010
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 292-576-645
+192.168.20.209 - - [30/Apr/2025 16:57:29] "GET / HTTP/1.1" 200 -
+192.168.20.209 - - [30/Apr/2025 16:57:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.209 - - [30/Apr/2025 16:57:39] "POST / HTTP/1.1" 200 -
+192.168.20.205 - - [07/May/2025 09:57:07] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [07/May/2025 09:57:56] "POST / HTTP/1.1" 200 -
+192.168.20.205 - - [16/May/2025 16:20:58] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [16/May/2025 16:20:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.205 - - [16/May/2025 16:21:19] "POST / HTTP/1.1" 200 -
+ * Serving Flask app 'bytebase_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.121.91:5010
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 143-256-606
+192.168.20.205 - - [19/May/2025 16:13:39] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [19/May/2025 16:13:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Serving Flask app 'bytebase_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.121.91:5010
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 143-256-606
+192.168.20.205 - - [19/May/2025 16:16:01] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [21/May/2025 10:51:26] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [21/May/2025 10:51:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.214 - - [21/May/2025 10:51:42] "POST / HTTP/1.1" 200 -
+192.168.20.214 - - [21/May/2025 10:51:44] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [21/May/2025 10:51:52] "POST / HTTP/1.1" 200 -
+ * Detected change in '/home/npx-ecl/deploy/bytebase_changelog/bytebase_app.py', reloading
+error [Errno 2] No such file or directory: 'output/eclipse-schema-info-2025-05-21-다운로드.zip'
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 143-256-606
+ * Serving Flask app 'bytebase_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5010
+ * Running on http://192.168.121.91:5010
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 280-263-376
+192.168.20.205 - - [21/May/2025 16:56:37] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [21/May/2025 16:56:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.205 - - [21/May/2025 16:56:53] "POST / HTTP/1.1" 200 -
+192.168.20.205 - - [22/May/2025 15:57:10] "GET / HTTP/1.1" 200 -
+192.168.20.205 - - [22/May/2025 15:57:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.214 - - [26/May/2025 21:50:19] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [26/May/2025 21:50:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.214 - - [26/May/2025 21:50:40] "POST / HTTP/1.1" 200 -
+192.168.20.214 - - [26/May/2025 23:36:10] "POST / HTTP/1.1" 200 -
+192.168.20.215 - - [29/May/2025 21:37:50] "GET / HTTP/1.1" 200 -
+192.168.20.215 - - [29/May/2025 21:37:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.215 - - [29/May/2025 21:38:23] "POST / HTTP/1.1" 200 -
+192.168.20.215 - - [30/May/2025 10:32:40] "GET / HTTP/1.1" 200 -
+192.168.20.215 - - [30/May/2025 10:32:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.208 - - [30/May/2025 11:03:41] "GET / HTTP/1.1" 200 -
+192.168.20.208 - - [30/May/2025 11:03:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.208 - - [30/May/2025 11:04:25] "POST / HTTP/1.1" 200 -
+192.168.20.214 - - [30/May/2025 11:48:27] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [30/May/2025 11:48:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.214 - - [30/May/2025 14:08:53] "GET / HTTP/1.1" 200 -
+192.168.20.214 - - [30/May/2025 14:10:10] "POST / HTTP/1.1" 200 -
+192.168.20.215 - - [30/May/2025 14:56:50] "GET / HTTP/1.1" 200 -
+192.168.20.215 - - [30/May/2025 14:56:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.209 - - [30/May/2025 16:39:33] "GET / HTTP/1.1" 200 -
+192.168.20.209 - - [30/May/2025 16:39:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.209 - - [30/May/2025 16:40:02] "POST / HTTP/1.1" 200 -
+192.168.20.208 - - [02/Jun/2025 11:19:53] "GET / HTTP/1.1" 200 -
+192.168.20.208 - - [02/Jun/2025 11:20:08] "POST / HTTP/1.1" 200 -
+192.168.20.204 - - [10/Jun/2025 16:37:43] "GET / HTTP/1.1" 200 -
+192.168.20.204 - - [10/Jun/2025 16:37:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.209 - - [26/Jun/2025 11:54:06] "GET / HTTP/1.1" 200 -
+192.168.20.209 - - [26/Jun/2025 11:54:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.20.209 - - [26/Jun/2025 11:55:30] "POST / HTTP/1.1" 200 -
+192.168.20.209 - - [26/Jun/2025 11:56:15] "POST / HTTP/1.1" 200 -

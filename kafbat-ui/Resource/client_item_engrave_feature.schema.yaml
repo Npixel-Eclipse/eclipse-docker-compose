@@ -1,0 +1,80 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    AutoPlayAnimationSpeed:
+      type: number
+      default: 2.0
+      minimum: 0.1
+    UITargetItemTabs: #타겟 아이템 인벤토리 탭 정보.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:     
+          Type:
+            type: string
+            ref: item_category
+          Comment:
+            type: string
+          Icon:
+            type: string
+          MaterialItemCategories: #탭에 해당하는 재료 아이템의 카테고리로 순서에 따라 정렬.
+            type: array
+            items:
+              type: string
+              ref: item_category  
+    ItemFilter: #아이템 필터 정보
+      type: string
+      ref: client_item_filter
+    DescriptionInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Result_EngraveSuccess                   # 세공 성공
+              - Result_SlotOpenSuccess                  # 슬롯 오픈 성공
+              - Result_EngraveFail                      # 세공 실패
+              - Result_SlotOpenFail                     # 슬롯 오픈 실패
+              - Engrave_Caution                         # 강화 시도시 경고
+              - Engrave_NeedMoreMaterial                # 재료 부족
+              - Engrave_NeedSelection                   # 대상 선택 요구
+              - Engrave_OptionGroup0                    # 세공 그룹이 정해지지 않은 옵션 카테고리 이름
+              - Engrave_OptionGroupN                    # 세공 그룹이 있는 옵션 카테고리 이름
+              - Engrave_ExistStat                       # 세공시 기존 능력치가 사라진다는 안내
+              - Engrave_EquipmentAcquire                # 세공 대상 선택을 요구하는 안내
+              - Engrave_Possible                        # 세공 가능한 상태 안내
+              - Engrave_Notice_NeedSelection            # 세공 대상 선택 안하고 세공 버튼 눌렀을때의 시스템 메시지
+              - Engrave_Notice_NeedMoreCost             # 필요 코스트가 충족되지 않은 상태에서 세공 버튼 눌렀을때의 시스템 메시지
+              - Engrave_Notice_NeedOpenedSlot           # 개방된 슬롯이 없는 상태에서 세공 버튼 눌렀을때의 시스템 메시지
+              - Engrave_MaterialListEmpty_WithTarget    # 세공 재료 리스트가 비어있는 경우 (세공 대상이 선택되어 있는 상태)
+              - Engrave_MaterialListEmpty_NoTarget      # 세공 재료 리스트가 비어있는 경우 (세공 대상이 선택되어 있지 않은 상태)
+              - Engrave_ModeTabName_Engraving           # 세공 모드 탭 이름 (세공)
+              - Engrave_ModeTabName_SlotOpen            # 세공 모드 탭 이름 (슬롯 개방)
+              - Engrave_NoLockedSlot                    # 잠겨있는 슬롯이 더 이상 없음
+              - Engrave_SlotOpenPossible                # 슬롯 오픈 가능 상태 안내
+              - Engrave_SlotOpenNeedTarget              # 슬롯 오픈 대상 선택 요구
+              - Engrave_SlotOpenNeedMaterial            # 슬롯 오픈 재료 선택 요구
+              - Engrave_Notice_SlotOpenNeedSelection    # 대상 선택 안하고 슬롯 오픈 버튼 눌렀을때의 시스템 메시지
+              - Engrave_Notice_SlotOpenCompleted        # 모든 슬롯이 이미 오픈되있는 상태에서 슬롯 오픈 버튼 눌렀을때의 시스템 메시지
+              - Engrave_ItemInfo_LockedSlot             # 아이템 툴팁에서 잠겨있는 세공 슬롯에 대한 안내
+              - Engrave_ItemInfo_EmptySlot              # 아이템 툴팁에서 비어있는 세공 슬롯에 대한 안내
+          Description:
+            type: string
+            ref: description
+          TextStyleKey:
+            type: string
+  required:
+    - Id
+    - Name

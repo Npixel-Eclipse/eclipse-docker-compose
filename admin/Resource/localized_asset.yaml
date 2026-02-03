@@ -1,0 +1,232 @@
+- Id: 61
+  Name: Collection_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Collection_Guide01.Collection_Guide01
+  Comment: 수집 가이드 1
+- Id: 142
+  Name: Collection_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Collection_Guide02.Collection_Guide02
+  Comment: 수집 가이드 2
+- Id: 144
+  Name: Collection_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Collection_Guide03.Collection_Guide03
+  Comment: 수집 가이드 3
+- Id: 1758
+  Name: Collection_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Collection_Guide04.Collection_Guide04
+  Comment: 수집 가이드 4
+- Id: 132
+  Name: Trade_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Trade_Guide01.Trade_Guide01
+  Comment: 거래소 가이드 1
+- Id: 650
+  Name: Trade_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Trade_Guide02.Trade_Guide02
+  Comment: 거래소 가이드 2
+- Id: 4111
+  Name: Trade_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Trade_Guide03.Trade_Guide03
+  Comment: 거래소 가이드 3
+- Id: 3311
+  Name: Trade_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Trade_Guide04.Trade_Guide04
+  Comment: 거래소 가이드 4
+- Id: 442
+  Name: Trade_Guide05
+  Ko_KR: /Game/UIIcon/Guide/Trade_Guide05.Trade_Guide05
+  Comment: 거래소 가이드 5
+- Id: 708
+  Name: BMShop_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/BmShop_Guide01.BmShop_Guide01
+  Comment: BM상점 가이드 1
+- Id: 846
+  Name: BMShop_Guide_02
+  Ko_KR: /Game/UIIcon/Guide/BmShop_Guide01.BmShop_Guide01
+  Comment: BM상점 가이드 2
+- Id: 1908
+  Name: BMShop_Guide_03
+  Ko_KR: /Game/UIIcon/Guide/BmShop_Guide02.BmShop_Guide02
+  Comment: BM상점 가이드 3
+- Id: 1208
+  Name: BMShop_Guide_04
+  Ko_KR: /Game/UIIcon/Guide/BmShop_Guide03.BmShop_Guide03
+  Comment: BM상점 가이드 4
+- Id: 923
+  Name: Mastery_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide01.Mastery_Guide01
+  Comment: 전투 특성 가이드 1
+- Id: 991
+  Name: Mastery_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide02.Mastery_Guide02
+  Comment: 전투 특성 가이드 2
+- Id: 1073
+  Name: Mastery_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide03.Mastery_Guide03
+  Comment: 전투 특성 가이드 3
+- Id: 1964
+  Name: Mastery_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide04.Mastery_Guide04
+  Comment: 전투 특성 가이드 4
+- Id: 1881
+  Name: Mastery_Guide05
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide05.Mastery_Guide05
+  Comment: 전투 특성 가이드 5
+- Id: 679
+  Name: Mastery_Guide06
+  Ko_KR: /Game/UIIcon/Guide/Mastery_Guide06.Mastery_Guide06
+  Comment: 전투 특성 가이드 6
+- Id: 1145
+  Name: CraftMaterial_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Guide_Trade01.Guide_Trade01
+  Comment: 기초 재료 가이드 1
+- Id: 758
+  Name: Engrave_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Engrave_Guide01.Engrave_Guide01
+  Comment: 세공 가이드1
+- Id: 2019
+  Name: Engrave_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Engrave_Guide02.Engrave_Guide02
+  Comment: 세공 가이드2
+- Id: 1822
+  Name: Awakening_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Guide_Awakening01.Guide_Awakening01
+  Comment: 각성의 불꽃 가이드1
+- Id: 2698
+  Name: Awakening_Guide_02
+  Ko_KR: /Game/UIIcon/Guide/Guide_Awakening02.Guide_Awakening02
+  Comment: 각성의 불꽃 가이드2
+- Id: 2749
+  Name: Awakening_Guide_03
+  Ko_KR: /Game/UIIcon/Guide/Guide_Awakening03.Guide_Awakening03
+  Comment: 각성의 불꽃 가이드3
+- Id: 3224
+  Name: Awakening_Guide_04
+  Ko_KR: /Game/UIIcon/Guide/Guide_Awakening04.Guide_Awakening04
+  Comment: 각성의 불꽃 가이드4
+- Id: 1211
+  Name: FusionSkill_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Fusion_Guide01.Fusion_Guide01
+  Comment: 스킬 융합 가이드1
+- Id: 2856
+  Name: FusionSkill_Guide_02
+  Ko_KR: /Game/UIIcon/Guide/Fusion_Guide02.Fusion_Guide02
+  Comment: 스킬 융합 가이드2
+- Id: 1594
+  Name: FusionSkill_Guide_03
+  Ko_KR: /Game/UIIcon/Guide/Fusion_Guide03.Fusion_Guide03
+  Comment: 스킬 융합 가이드3
+- Id: 666
+  Name: FusionSkill_Guide_04
+  Ko_KR: /Game/UIIcon/Guide/Fusion_Guide04.Fusion_Guide04
+  Comment: 스킬 융합 가이드4
+- Id: 1525
+  Name: Guild_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide01.Guild_Guide01
+  Comment: 길드 가이드1
+- Id: 3931
+  Name: Guild_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide02.Guild_Guide02
+  Comment: 길드 가이드2
+- Id: 478
+  Name: Guild_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide03.Guild_Guide03
+  Comment: 길드 가이드3
+- Id: 3240
+  Name: Guild_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide04.Guild_Guide04
+  Comment: 길드 가이드4
+- Id: 3206
+  Name: Guild_Guide05
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide05.Guild_Guide05
+  Comment: 길드 가이드5
+- Id: 2271
+  Name: Guild_Guide06
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide06.Guild_Guide06
+  Comment: 길드 가이드6
+- Id: 4915
+  Name: Guild_Guide07
+  Ko_KR: /Game/UIIcon/Guide/Guild_Guide07.Guild_Guide07
+  Comment: 길드 가이드7
+- Id: 3914
+  Name: BattleGround_Guide01
+  Ko_KR: /Game/UIIcon/Guide/BattleGround_Guide01.BattleGround_Guide01
+  Comment: 전장 가이드1
+- Id: 2341
+  Name: BattleGround_Guide02
+  Ko_KR: /Game/UIIcon/Guide/BattleGround_Guide02.BattleGround_Guide02
+  Comment: 전장 가이드2
+- Id: 4060
+  Name: BattleGround_Guide03
+  Ko_KR: /Game/UIIcon/Guide/BattleGround_Guide03.BattleGround_Guide03
+  Comment: 전장 가이드3
+- Id: 2582
+  Name: Polymorph_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Polymorph_Guide01.Polymorph_Guide01
+  Comment: 초월 가이드
+- Id: 4277
+  Name: PolymorphGrowth_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Guide_Polyorph02.Guide_Polyorph02
+  Comment: 초월 성장 가이드1
+- Id: 1279
+  Name: PolymorphGrowth_Guide_02
+  Ko_KR: /Game/UIIcon/Guide/Guide_Polyorph03.Guide_Polyorph03
+  Comment: 초월 성장 가이드2
+- Id: 903
+  Name: WeaponPolymorph_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Guide_WeaponPolyorph01.Guide_WeaponPolyorph01
+  Comment: 무기 외형 가이드
+- Id: 3356
+  Name: WeaponPolymorphGrowth_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Guide_WeaponPolyorph02.Guide_WeaponPolyorph02
+  Comment: 무기 외형 성장 가이드1
+- Id: 4674
+  Name: WeaponPolymorphGrowth_Guide_02
+  Ko_KR: /Game/UIIcon/Guide/Guide_WeaponPolyorph03.Guide_WeaponPolyorph03
+  Comment: 무기 외형 성장 가이드2
+- Id: 1685
+  Name: Combination_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Combination_Guide01.Combination_Guide01
+  Comment: 서판 조합 가이드1
+- Id: 3226
+  Name: Combination_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Combination_Guide02.Combination_Guide02
+  Comment: 서판 조합 가이드2
+- Id: 3430
+  Name: Combination_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Combination_Guide03.Combination_Guide03
+  Comment: 서판 조합 가이드3
+- Id: 3383
+  Name: Combination_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Combination_Guide04.Combination_Guide04
+  Comment: 서판 조합 가이드4
+- Id: 716
+  Name: Combination_Guide05
+  Ko_KR: /Game/UIIcon/Guide/Combination_Guide05.Combination_Guide05
+  Comment: 서판 조합 가이드5
+- Id: 1093
+  Name: Fortress_Guide01
+  Ko_KR: /Game/UIIcon/Guide/Sanctum_Guide01.Sanctum_Guide01
+  Comment: 성소 가이드
+- Id: 4649
+  Name: Fortress_Guide02
+  Ko_KR: /Game/UIIcon/Guide/Sanctum_Guide02.Sanctum_Guide02
+  Comment: 성소 가이드
+- Id: 2774
+  Name: Fortress_Guide03
+  Ko_KR: /Game/UIIcon/Guide/Sanctum_Guide03.Sanctum_Guide03
+  Comment: 성소 가이드
+- Id: 4323
+  Name: Fortress_Guide04
+  Ko_KR: /Game/UIIcon/Guide/Sanctum_Guide04.Sanctum_Guide04
+  Comment: 성소 가이드
+- Id: 4690
+  Name: Fortress_Guide05
+  Ko_KR: /Game/UIIcon/Guide/Sanctum_Guide05.Sanctum_Guide05
+  Comment: 성소 가이드
+- Id: 5355
+  Name: FortressSolidarity_Guide_01
+  Ko_KR: /Game/UIIcon/Guide/Solidarity_Guide01.Solidarity_Guide01
+  Comment: 성소 결속 가이드
+- Id: 4424
+  Name: FSkillPriority_Guide01
+  Ko_KR: /Game/UIIcon/Guide/SkillPriority_Guide01.SkillPriority_Guide01
+  Comment: 스킬 사용 우선 순위

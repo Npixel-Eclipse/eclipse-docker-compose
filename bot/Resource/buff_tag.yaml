@@ -1,0 +1,11 @@
+# Buff Tag 정의
+# 여러 버프를 하나의 태그로 묶어서 관리
+# skill.yaml의 RetainBuffs/RemoveBuffs에서 UnitType: Tag로 참조 가능
+# - Id: 1
+#   Name: Example_Tag
+#   Comment: 예시 태그 (실제 사용 시 수정 필요)
+#   Buffs:
+#     - Example_Buff_A
+#     - Example_Buff_B_Base   # Example_Buff_B_Child 적용
+#     - Example_Buff_C_Child  # Example_Buff_C_Base 미적용
+[]

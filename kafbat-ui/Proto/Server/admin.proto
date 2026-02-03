@@ -1,0 +1,100 @@
+syntax = "proto3";
+package admin;
+import "Common/item_common.proto";
+import "Common/mail_common.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.admin";
+option java_outer_classname = "AdminServiceProto";
+
+// key = battle name
+message BattlePolicy {
+  reserved 1;
+  string display_name = 2;
+  // battle_type.yaml의 Name
+  string type = 3;
+  bool home = 7;
+  bool recommended = 8;
+  bool is_new = 9;
+  string url = 4; //
+  bool tls = 6;
+  // 여기에 포함되어 있는 배틀로만 이동할 수 있으며
+  // session.proto의 Session 메시지의 current_battle
+  repeated string links = 5;
+  int64 max_population = 10;
+  bool maintenance = 11;
+}
+
+// key = server name
+message ServerPolicy {
+  string publisher_world_id = 1;
+  int64 max_population = 2;
+}
+
+// key: mail uuid
+message BulkMailPolicy {
+  string name = 1;
+  common.MailType mail_type = 2;
+  string title = 3;
+  string content = 4;
+  string sender = 5;
+  repeated common.Item items = 6;
+  google.protobuf.Timestamp sent_at = 7;
+  google.protobuf.Timestamp valid_until = 8;
+  int64 min_level = 9;
+  int64 max_level = 10;
+}
+
+// key: forbidden_word_key (format: "{type}:{word}")
+message ForbiddenWordPolicy {
+  string word = 1;
+  string type = 2; // NAME 또는 CHAT
+  string registered_by = 3;
+  google.protobuf.Timestamp registered_at = 4;
+}
+
+message ContentPolicy {
+  oneof policy {
+    BmShopPolicy bm_shop_policy = 1;
+    DungeonRateEventPolicy dungeon_rate_event_policy = 2;
+    CongestionThresholdPolicy congestion_threshold_policy = 3;
+  }
+
+  message BmShopPolicy {
+    message Product {
+      int64 bm_shop_product_id = 1;
+      bool recommended = 2;
+    }
+    repeated Product products = 1;
+  }
+
+  message DungeonRateEventPolicy {
+    message Event {
+      int64 dungeon_id = 1;
+      int64 multiplier = 2;
+      google.protobuf.Timestamp start_time = 3;
+      google.protobuf.Timestamp end_time = 4;
+    }
+    repeated Event events = 1;
+  }
+
+  message CongestionThresholdPolicy {
+    double low_threshold = 1;
+    double high_threshold = 2;
+  }
+}
+
+// 인게임 제재 이벤트
+// key: account_id
+message RestrictionEvent {
+  enum EventType {
+    CREATED = 0;
+    RELEASED = 1;
+  }
+  EventType event_type = 1;
+  string character_uuid = 2;
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp end_time = 4;
+  string server_name = 5;
+}

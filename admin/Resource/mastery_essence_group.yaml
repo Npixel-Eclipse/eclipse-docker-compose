@@ -1,0 +1,9 @@
+- Id: 1
+  Name: Activable_Count_One
+  MaxActiveCount: 1
+- Id: 2
+  Name: Activable_Count_Two
+  MaxActiveCount: 2
+- Id: 3
+  Name: Activable_Count_Three
+  MaxActiveCount: 3

@@ -1,0 +1,32 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ContentType
+    - TargetItem
+    - ResetCostItem
+    - ResetCostAmount
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    ContentType:
+      type: string
+      enum:
+        - Awakening
+        - Awareness
+    TargetItem:
+      type: string
+      ref: item
+    ResetCostItem:
+      type: string
+      ref: item
+    ResetCostAmount:
+      type: integer

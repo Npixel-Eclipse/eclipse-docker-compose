@@ -1,0 +1,57 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required: 
+    - Id
+    - Name
+    - Rule
+    - LockCountLimit
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Desc:
+      type: string
+      ref: description
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    BgIndex: #배경 Index ( CombineContents_Combine 내부의 BGSwitcher 스위처 변경용 )
+      type: integer
+      Default: 0
+    Next: # 고급 조합식 입력용
+      type: string
+      ref: item_combination
+      visible: true
+    AddLimit:
+      type: integer
+    AddChangeCount:
+      type: integer
+    AddCostItem:
+      type: string
+      ref: item
+    AddCostAmount:
+      type: integer
+    ResetCostItem:
+      type: string
+      ref: item
+    ResetCostAmount:
+      type: integer
+    ChangeMaxCount:
+      type: integer
+    UnlockCostItem:
+      type: string
+      ref: item
+    UnlockCostAmount:
+      type: integer
+    LockCountLimit:
+      type: integer
+    Rule:
+      type: array
+      items:
+        type: string
+        ref: item_combination_rule

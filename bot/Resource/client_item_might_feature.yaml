@@ -1,0 +1,71 @@
+- Id: 1
+  Name: ItemMightFeature
+  UITargetItemTabs:
+    - Type: Item_Equip
+      Comment: 전체 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAll_Sprite.TabIconAll_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Might_Weapon
+        - Item_Misc_Upgrade_Might_Armor
+        - Item_Misc_Upgrade_Might_Accessory
+        - Item_Misc_Upgrade_Engrave_SlotOpen_Might
+    - Type: Item_Equip_WeaponBase_Weapon
+      Comment: 무기 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Engrave_SlotOpen_Might
+        - Item_Misc_Upgrade_Might_Weapon
+    - Type: Item_Equip_Armor
+      Comment: 방어구 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconArmour_Sprite.TabIconArmour_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Might_Armor
+        - Item_Misc_Upgrade_Engrave_SlotOpen_Might
+    - Type: Item_Equip_Accessory
+      Comment: 악세사리 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAcc_Sprite.TabIconAcc_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Might_Accessory
+        - Item_Misc_Upgrade_Engrave_SlotOpen_Might
+  ItemFilter: Might
+  DescriptionInfos:
+    - Type: Result_SlotOpenSuccess
+      Description: UIWord_Might_SlotOpenComplete
+    - Type: Result_MightSuccess
+      Description: UIWord_Might_CompleteText
+    - Type: Result_MightFail
+      Description: UIWord_Might_CompleteText
+    - Type: Result_SlotOpenFail
+      Description: UIWord_Might_SlotOpenFail
+    - Type: Might_NeedSelection
+      Description: UIWord_Might_IngredientDesc
+    - Type: Might_Notice_NeedSelection
+      Description: UIWord_SystemMsg_MightFailIngredient
+    - Type: Might_Notice_NeedMoreCost
+      Description: UIWord_SystemMsg_MightFailGold
+    - Type: Might_Notice_NeedSlotOpen
+      Description: UIWord_SystemMsg_Might_SlotAllClose
+    - Type: Might_Notice_SlotOpenCompleted
+      Description: UIWord_SystemMsg_Might_SlotAllOpen
+    - Type: Might_ExistStat
+      Description: UIWord_Might_MightDesc
+    - Type: Might_EquipmentAcquire
+      Description: UIWord_Might_IngredientItemDesc
+    - Type: Might_Possible
+      Description: UIWord_Might_Desc
+    - Type: Might_MaterialListEmpty_WithTarget
+      Description: UIWordEquipMight_NoMaterialRegisteredItem
+    - Type: Might_MaterialListEmpty_NoTarget
+      Description: UIWord_Might_FailIngredient
+    - Type: Might_ModeTabName_Might
+      Description: UIWord_Might_MightTab
+    - Type: Might_ModeTabName_SlotOpen
+      Description: UIWord_Might_SlotOpenTab
+    - Type: Might_NoLockedSlot
+      Description: UIWord_MightSlotOpen_SlotAllOpenDesc
+    - Type: Might_SlotOpenPossible
+      Description: UIWord_MightSlotOpen_SlotOpenDesc
+    - Type: Might_SlotOpenNeedTarget
+      Description: UIWord_MightSlotOpen_IngredientItemDesc
+    - Type: Might_SlotOpenNeedMaterial
+      Description: UIWord_MightSlotOpen_IngredientDesc

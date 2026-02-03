@@ -1,0 +1,24 @@
+- Id: 1
+  Name: Neutral
+  Comment: 중립
+  Min: 0
+  Max: 500
+  Step: 0
+  Buff:
+    - Buff: Simulation_Disposition_Neutral
+- Id: 2
+  Name: Justice_Step01
+  Comment: 정의 1단계
+  Min: 501
+  Max: 10000
+  Step: 1
+  Buff:
+    - Buff: Simulation_Disposition_Justice1
+- Id: 6
+  Name: Outlaw_Step01
+  Comment: 무법 1단계
+  Min: -10000
+  Max: -1
+  Step: 1
+  Buff:
+    - Buff: Simulation_Disposition_Outlaw1

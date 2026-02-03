@@ -1,0 +1,3517 @@
+- Name: probability
+  Description: 실제 확률 검증을 위한 로그
+  Type: message
+- Name: probability.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: probability.rate_id
+  Description: 확률 ID. 파일명_Id_컬럼명_그룹. 아이템 강화에서는 그룹 대신 From 사용.
+  Type: string
+- Name: probability.rate_version
+  Description: 확률버전. constants.yaml의 RateVersion 값을 사용
+  Type: string
+- Name: probability.rate_dtl_id
+  Description: 확률상세 ID. 파일명_Id_컬럼명_세부항목Id. 실패인 경우 세부항목 Id는 0으로 적재
+  Type: string
+- Name: game_health_check
+  Description: 현재 접속중인 인원 로그. 5분마다 한번씩 남음
+  Type: message
+- Name: game_health_check.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: game_health_check.concurrent_users
+  Description: 접속 인원. 무접속 플레이 인원을 포함
+  Type: int64
+- Name: game_health_check.offline_mode_users
+  Description: 무접속 플레이 인원
+  Type: int64
+- Name: game_health_check.concurrent_users_by_nation
+  Description: 국가별 접속 인원
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: value
+      Description: 국가코드
+      ColumnType: string
+    - ColumnName: count
+      Description: 접속인원
+      ColumnType: int64
+- Name: game_health_check.concurrent_users_by_os
+  Description: OS별 접속 인원
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: value
+      Description: OS
+      ColumnType: string
+    - ColumnName: count
+      Description: 접속인원
+      ColumnType: int64
+- Name: item_change
+  Description: 아이템 변동
+  Type: message
+- Name: item_change.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: item_change.item_type
+  Description: 아이템 카테고리 Id
+  Type: int64
+  Ref: item_category
+- Name: item_change.item_cd
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: item_change.amount_before
+  Description: 변동 전 수량
+  Type: int64
+- Name: item_change.amount_current
+  Description: 변동 후 수량
+  Type: int64
+- Name: item_change.change_type
+  Description: 삭제 및 사용 USE / 생성 및 획득 GET
+  Type: string
+- Name: item_change.change_reason_cd
+  Description: 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: currency_change
+  Description: 재화 변동
+  Type: message
+- Name: currency_change.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: currency_change.currency_type
+  Description: 아이템 카테고리 Id
+  Type: int64
+  Ref: item_category
+- Name: currency_change.currency_cd
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: currency_change.amount_before
+  Description: 변동 전 수량
+  Type: int64
+- Name: currency_change.amount_current
+  Description: 변동 후 수량
+  Type: int64
+- Name: currency_change.change_type
+  Description: 삭제 및 사용 USE / 생성 및 획득 GET
+  Type: string
+- Name: currency_change.change_reason_cd
+  Description: 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: game_login
+  Description: 클라이언트가 로비에 접속할 때 찍히는 로그
+  Type: message
+- Name: game_login.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: game_logout
+  Description: 클라이언트가 로비에서 접속을 끊을 때 찍는 로그
+  Type: message
+- Name: game_logout.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reload_resource
+  Description: yaml 리로드. 서버가 켜진 상태에서 yaml파일을 다시 로드할 때 찍히는 로그
+  Type: message
+- Name: reload_resource.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reload_resource.service_name
+  Description: 서버 종류
+  Type: string
+  Ref: log_service_name
+- Name: reload_resource.file_name
+  Description: 다시 로드 한 yaml 파일 명
+  Type: string
+- Name: create_item
+  Description: 아이템 생성
+  Type: message
+- Name: create_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: create_item.item_uuid
+  Description: 아이템 UUID
+  Type: string
+- Name: create_item.item_id
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: create_item.amount
+  Description: 아이템 수량
+  Type: int64
+- Name: create_item.inventory_id
+  Description: 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: create_item.properties
+  Description: 아이템의 속성
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: key
+      Description: 속성 이름
+      ColumnType: string
+    - ColumnName: value
+      Description: 속성 값
+      ColumnType: string
+    - ColumnName: grade_id
+      Description: 부여된 속성의 등급
+      ColumnType: int64
+      Ref: grade
+    - ColumnName: lock
+      Description: 속성 잠금 여부
+      ColumnType: bool
+    - ColumnName: symbol_id
+      Description: 이 속성이 어떤 심볼에 의해 부여되었는지
+      ColumnType: int64
+      Ref: symbol
+    - ColumnName: group_id
+      Description: 속성의 그룹 번호
+      ColumnType: int64
+    - ColumnName: category
+      Description: 속성을 묶어서 관리하기 위한 속성 카테고리
+      ColumnType: string
+      Ref: log_property_category
+- Name: create_item.delete_time
+  Description: 아이템 삭제 일자
+  Type: string
+- Name: create_item.expire_time
+  Description: 아이템 만료 일자. 만료된 아이템은 사용할 수 없고 유저가 직접 삭제
+  Type: string
+- Name: create_item.reason
+  Description: 아이템 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: update_item
+  Description: 아이템 변동
+  Type: message
+- Name: update_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_item.item_uuid
+  Description: 아이템 UUID
+  Type: string
+- Name: update_item.item_id
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: update_item.amount_before
+  Description: 아이템 수량 변동 전
+  Type: int64
+- Name: update_item.amount
+  Description: 아이템 수량 변동 후
+  Type: int64
+- Name: update_item.inventory_id_before
+  Description: 아이템 변동 전 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: update_item.inventory_id
+  Description: 아이템 변동 후 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: update_item.deleted_properties
+  Description: 삭제된 아이템 속성
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: key
+      Description: 속성 이름
+      ColumnType: string
+    - ColumnName: value
+      Description: 속성 값
+      ColumnType: string
+    - ColumnName: grade_id
+      Description: 부여된 속성의 등급
+      ColumnType: int64
+      Ref: grade
+    - ColumnName: lock
+      Description: 속성 잠금 여부
+      ColumnType: bool
+    - ColumnName: symbol_id
+      Description: 이 속성이 어떤 심볼에 의해 부여되었는지
+      ColumnType: int64
+      Ref: symbol
+    - ColumnName: group_id
+      Description: 속성의 그룹 번호
+      ColumnType: int64
+    - ColumnName: category
+      Description: 속성을 묶어서 관리하기 위한 속성 카테고리
+      ColumnType: string
+      Ref: log_property_category
+- Name: update_item.created_properties
+  Description: 생성된 아이템 속성
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: key
+      Description: 속성 이름
+      ColumnType: string
+    - ColumnName: value
+      Description: 속성 값
+      ColumnType: string
+    - ColumnName: grade_id
+      Description: 부여된 속성의 등급
+      ColumnType: int64
+      Ref: grade
+    - ColumnName: lock
+      Description: 속성 잠금 여부
+      ColumnType: bool
+    - ColumnName: symbol_id
+      Description: 이 속성이 어떤 심볼에 의해 부여되었는지
+      ColumnType: int64
+      Ref: symbol
+    - ColumnName: group_id
+      Description: 속성의 그룹 번호
+      ColumnType: int64
+    - ColumnName: category
+      Description: 속성을 묶어서 관리하기 위한 속성 카테고리
+      ColumnType: string
+      Ref: log_property_category
+- Name: update_item.reason
+  Description: 아이템 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: delete_item
+  Description: 아이템 삭제
+  Type: message
+- Name: delete_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delete_item.item_uuid
+  Description: 아이템 UUID
+  Type: string
+- Name: delete_item.item_id
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: delete_item.inventory_id
+  Description: 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: delete_item.reason
+  Description: 아이템 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: delete_item.amount_before
+  Description: 아이템 수량 변동 전
+  Type: int64
+- Name: delete_item.amount
+  Description: 아이템 수량 변동 후
+  Type: int64
+- Name: sort_inventory
+  Description: 인벤토리 정렬
+  Type: message
+- Name: sort_inventory.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: sort_inventory.inventory_id
+  Description: 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: sort_inventory.sort_method
+  Description: 정렬 방법
+  Type: enum
+  Ref: log_sort_method
+- Name: expand_inventory
+  Description: 인벤토리 칸 수 확장
+  Type: message
+- Name: expand_inventory.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: expand_inventory.inventory_id
+  Description: 인벤토리 Id
+  Type: int64
+  Ref: inventory
+- Name: expand_inventory.expend_level_before
+  Description: 확장 전 칸 수
+  Type: int64
+- Name: expand_inventory.expend_level
+  Description: 확장 후 칸 수
+  Type: int64
+- Name: equip_item
+  Description: 장비 장착/해제
+  Type: message
+- Name: equip_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: equip_item.equip_slot_id
+  Description: 장착 슬롯 Id
+  Type: int64
+  Ref: equip_slot
+- Name: equip_item.from_item_uuid
+  Description: 해제되는 아이템 UUID
+  Type: string
+- Name: equip_item.from_item_id
+  Description: 해제되는 아이템 Id
+  Type: int64
+  Ref: item
+- Name: equip_item.to_item_uuid
+  Description: 장착되는 아이템 UUID
+  Type: string
+- Name: equip_item.to_item_id
+  Description: 장착되는 아이템 Id
+  Type: int64
+  Ref: item
+- Name: enchant_item
+  Description: 장비 강화. 아이템의 속성 값을 변화시킴
+  Type: message
+- Name: enchant_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: enchant_item.enchant_id
+  Description: 아이템 강화 Id
+  Type: int64
+  Ref: item_enchant
+- Name: enchant_item.material_item_id
+  Description: 강화 재료 아이템 Id
+  Type: int64
+  Ref: item
+- Name: enchant_item.consumed_materials
+  Description: "강화 재료 소모. item_enchant.yaml의 Cost는 무조건 소모되고, Materials에 설정값이 없으면 material_item_id가 한 개 소모되고, 있으면 material_item_id 대신 Materials에 설정된 아이템에 소모됨"
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: enchant_item.target_item_uuid
+  Description: 강화 대상 아이템 UUID
+  Type: string
+- Name: enchant_item.target_item_id
+  Description: 강화 대상 아이템 Id
+  Type: int64
+  Ref: item
+- Name: enchant_item.target_property
+  Description: 강화 대상 아이템 속성
+  Type: string
+- Name: enchant_item.enchant_sequence
+  Description: 강화 레벨 변동 순서
+  Type: "int64[]"
+- Name: enchant_item.enchant_result
+  Description: 강화 결과
+  Type: enum
+  Ref: log_enchant_result
+- Name: engrave_item
+  Description: 아이템 세공. 기존 속성들을 제거하고 새로운 속성을 부여함
+  Type: message
+- Name: engrave_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: engrave_item.engrave_id
+  Description: 아이템 세공 Id
+  Type: int64
+  Ref: item_engrave
+- Name: engrave_item.material_item_id
+  Description: 세공 재료 아이템 Id
+  Type: int64
+  Ref: item
+- Name: engrave_item.consumed_materials
+  Description: "강화 재료 소모. item_engrave.yaml의 AdditionalMaterialItem은 무조건 소모되고, CostItem은 LockCost가 세팅되지 않은 경우 Cost만큼 소모되고, 세팅된 경우 세팅값 만큼 소모됨. Lock 기능은 현재 조합식에서 사용 중"
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: engrave_item.mastery_essence_id
+  Description: 세공 재료 아이템 대신 숙련도를 대상으로 하는 경우. 숙련도 Id
+  Type: int64
+  Ref: mastery_essence
+- Name: engrave_item.target_item_uuid
+  Description: 세공 대상 아이템 UUID
+  Type: string
+  Ref: item
+- Name: engrave_item.property_category
+  Description: 세공 대상 아이템의 속성 카테고리
+  Type: string
+  Ref: log_property_category
+- Name: engrave_item.changed_properties
+  Description: 세공 후 대상 아이템의 속성 변화
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: key
+      Description: 속성 이름
+      ColumnType: string
+    - ColumnName: value
+      Description: 속성 값
+      ColumnType: string
+    - ColumnName: grade_id
+      Description: 부여된 속성의 등급
+      ColumnType: int64
+      Ref: grade
+    - ColumnName: lock
+      Description: 속성 잠금 여부
+      ColumnType: bool
+    - ColumnName: symbol_id
+      Description: 이 속성이 어떤 심볼에 의해 부여되었는지
+      ColumnType: int64
+      Ref: symbol
+    - ColumnName: group_id
+      Description: 속성의 그룹 번호
+      ColumnType: int64
+    - ColumnName: category
+      Description: 속성을 묶어서 관리하기 위한 속성 카테고리
+      ColumnType: string
+      Ref: log_property_category
+- Name: lock_item
+  Description: 아이템 잠금
+  Type: message
+- Name: lock_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: lock_item.item_id
+  Description: 잠금 대상 아이템 Id
+  Type: int64
+  Ref: item
+- Name: lock_item.item_uuid
+  Description: 잠금 대상 아이템 UUID
+  Type: string
+- Name: lock_item.locked
+  Description: 잠금 설정/해제 여부
+  Type: bool
+- Name: lock_property
+  Description: 아이템 속성 잠금
+  Type: message
+- Name: lock_property.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: lock_property.item_id
+  Description: 잠금 대상 아이템 Id
+  Type: int64
+  Ref: item
+- Name: lock_property.item_uuid
+  Description: 잠금 대상 아이템 UUID
+  Type: string
+- Name: lock_property.key
+  Description: 잠금 대상 아이템 속성 이름
+  Type: string
+- Name: lock_property.locked
+  Description: 잠금 설정/해제 여부
+  Type: bool
+- Name: impose_death_penalty
+  Description: 사망 패널티
+  Type: message
+- Name: impose_death_penalty.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: impose_death_penalty.broken_items
+  Description: 손상/복구 아이템 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 손상 아이템을 복구해주는 복구 아이템의 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: target_item_uuid
+      Description: 사망 패널티로 손상된 아이템의 UUID
+      ColumnType: string
+    - ColumnName: target_item_id
+      Description: 손상 아이템 id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: gold_cost
+      Description: 골드 복구 비용
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아 복구 비용
+      ColumnType: int64
+- Name: impose_death_penalty.evicted_broken_items
+  Description: 슬롯 개수 제한으로 사라진 손상/복구 아이템 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 손상 아이템을 복구해주는 복구 아이템의 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: target_item_uuid
+      Description: 사망 패널티로 손상된 아이템의 UUID
+      ColumnType: string
+    - ColumnName: target_item_id
+      Description: 손상 아이템 id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: gold_cost
+      Description: 골드 복구 비용
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아 복구 비용
+      ColumnType: int64
+- Name: impose_death_penalty.lost_experiences
+  Description: 손상/복구 경험치 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 경험치 복구 아이템 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 경험치 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: experience
+      Description: 경험치
+      ColumnType: int64
+    - ColumnName: gold_cost
+      Description: 골드 복구 비용
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아 복구 비용
+      ColumnType: int64
+- Name: impose_death_penalty.evicted_lost_experiences
+  Description: 슬롯 개수 제한으로 사라진 손상/복구 경험치 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 경험치 복구 아이템 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 경험치 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: experience
+      Description: 경험치
+      ColumnType: int64
+    - ColumnName: gold_cost
+      Description: 골드 복구 비용
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아 복구 비용
+      ColumnType: int64
+- Name: restore_death_penalty_item
+  Description: 사망 패널티 아이템 복구
+  Type: message
+- Name: restore_death_penalty_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: restore_death_penalty_item.broken_items
+  Description: 손상/복구 아이템 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 손상 아이템을 복구해주는 복구 아이템의 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: target_item_uuid
+      Description: 사망 패널티로 손상된 아이템의 UUID
+      ColumnType: string
+    - ColumnName: target_item_id
+      Description: 손상 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: free_restoration
+      Description: 무료 복구 여부
+      ColumnType: bool
+    - ColumnName: free_restoration_item_cost
+      Description: 무료 복구 아이템으로 복구하는 경우 사용한 아이템 개수
+      ColumnType: int64
+    - ColumnName: gold_cost
+      Description: 골드로 복구하는 경우 그 비용. 골드 복구 횟수는 일일 제한이 있음
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아로 복구하는 경우 그 비용. 다이아 복구는 일일 횟수 제한 없음
+      ColumnType: int64
+- Name: restore_death_penalty_item.free_restoration_count_before
+  Description: 복구 전 일일 무료 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_item.free_restoration_count
+  Description: 복구 후 일일 무료 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_item.gold_restoration_count_before
+  Description: 복구 전 일일 골드 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_item.gold_restoration_count
+  Description: 복구 후 일일 골드 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_experience
+  Description: 사망 패널티 경험치 복구
+  Type: message
+- Name: restore_death_penalty_experience.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: restore_death_penalty_experience.lost_experiences
+  Description: 손상/복구 경험치 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: restoration_item_uuid
+      Description: 경험치 복구 아이템 UUID
+      ColumnType: string
+    - ColumnName: restoration_item_id
+      Description: 복구 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: experience
+      Description: 경험치
+      ColumnType: int64
+    - ColumnName: free_restoration
+      Description: 무료 복구 여부
+      ColumnType: bool
+    - ColumnName: free_restoration_item_cost
+      Description: 무료 복구 아이템으로 복구하는 경우 사용한 아이템 개수
+      ColumnType: int64
+    - ColumnName: gold_cost
+      Description: 골드로 복구하는 경우 그 비용. 골드 복구 횟수는 일일 제한이 있음
+      ColumnType: int64
+    - ColumnName: diamond_cost
+      Description: 다이아로 복구하는 경우 그 비용. 다이아 복구는 일일 횟수 제한 없음
+      ColumnType: int64
+- Name: restore_death_penalty_experience.free_restoration_count_before
+  Description: 복구 전 일일 무료 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_experience.free_restoration_count
+  Description: 복구 후 일일 무료 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_experience.gold_restoration_count_before
+  Description: 복구 전 일일 골드 복구 횟수
+  Type: int64
+- Name: restore_death_penalty_experience.gold_restoration_count
+  Description: 복구 후 일일 골드 복구 횟수
+  Type: int64
+- Name: buy_item
+  Description: 아이템 구매
+  Type: message
+- Name: buy_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: buy_item.item_merchant_id
+  Description: 아이템 상인 Id
+  Type: int64
+  Ref: item_merchant
+- Name: buy_item.item_merchandise_id
+  Description: 아이템 물품 Id
+  Type: int64
+  Ref: item_merchandise
+- Name: buy_item.item_id
+  Description: 구매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: buy_item.count
+  Description: 구매 횟수. item_merchandise.yaml의 Amount만큼 아이템이 지급됨
+  Type: int64
+- Name: buy_item.purchased_count_before
+  Description: 구매 전 누적 구매 횟수
+  Type: int64
+- Name: buy_item.purchased_count
+  Description: 구매 후 누적 구매 횟수
+  Type: int64
+- Name: buy_item.cost_item_id
+  Description: 구매 재화 아이템 Id
+  Type: int64
+  Ref: item
+- Name: buy_item.cost
+  Description: 구매 가격
+  Type: int64
+- Name: sell_item
+  Description: 아이템 판매
+  Type: message
+- Name: sell_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: sell_item.item_merchant_id
+  Description: 아이템 상인 Id
+  Type: int64
+  Ref: item_merchant
+- Name: sell_item.item_merchandise_id
+  Description: 아이템 물품 Id
+  Type: int64
+  Ref: item_merchandise
+- Name: sell_item.item_id
+  Description: 판매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: sell_item.item_uuid
+  Description: 판매 아이템 UUID
+  Type: string
+- Name: sell_item.amount
+  Description: 판매 수량
+  Type: int64
+- Name: sell_item.cost_item_id
+  Description: 판매 재화 아이템 Id
+  Type: int64
+  Ref: item
+- Name: sell_item.cost
+  Description: 판매 가격
+  Type: int64
+- Name: buy_bm_shop_product
+  Description: BM 상점 아이템 구매
+  Type: message
+- Name: buy_bm_shop_product.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: buy_bm_shop_product.bm_shop_product_id
+  Description: BM 상점 상품 Id. 기간 판매 상품의 경우 새로운 Id를 발급해서 사용할 예정
+  Type: int64
+  Ref: bm_shop_product
+- Name: buy_bm_shop_product.amount
+  Description: 구매 수량
+  Type: int64
+- Name: buy_bm_shop_product.limit_before
+  Description: 구매 전 구매 제한 수량. 초기화 상품의 경우 초기화 후 첫 구매 시 0으로 세팅됨
+  Type: int64
+- Name: buy_bm_shop_product.limit
+  Description: 구매 후 구매 제한 수량
+  Type: int64
+- Name: buy_bm_shop_product.max_limit
+  Description: 최대 구매 제한 수량
+  Type: int64
+- Name: buy_bm_shop_product.item_cost
+  Description: 구매 재화 및 가격 (인게임 재화 소모)
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_name
+      Description: 재화 아이템 이름
+      ColumnType: string
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: buy_bm_shop_product.currency_cost
+  Description: 구매 통화 및 가격 (빌링 결제)
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: currency
+      Description: 구매 통화
+      ColumnType: string
+    - ColumnName: price
+      Description: 가격
+      ColumnType: string
+- Name: buy_bm_shop_product.tid
+  Description: TID (인게임 재화로 구매한 경우 랜덤 UUID)
+  Type: string
+- Name: buy_bm_shop_product.product_uuid
+  Description: 상품 UUID
+  Type: string
+- Name: take_bm_shop_product
+  Description: BM 상점 아이템 수령 (현금 상품)
+  Type: message
+- Name: take_bm_shop_product.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: take_bm_shop_product.bm_shop_product_id
+  Description: BM 상점 상품 Id
+  Type: int64
+  Ref: bm_shop_product
+- Name: take_bm_shop_product.bm_shop_product_uuid
+  Description: 상품 UUID
+  Type: string
+- Name: take_bm_shop_product.amount
+  Description: 수량
+  Type: int64
+- Name: get_recipe
+  Description: "레시피 아웃풋 획득 (럭키백, 뽑기권, 분해, 스킬 학습 등). recipe_output을 바로 획득"
+  Type: message
+- Name: get_recipe.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: get_recipe.material_item_id
+  Description: 재료로 소모한 아이템 Id
+  Type: int64
+  Ref: item
+- Name: get_recipe.material_item_uuid
+  Description: 재료로 소모한 아이템 UUID
+  Type: string
+- Name: get_recipe.selected_output_ids
+  Description: 유저가 선택한 레시피의 Output Id (recipe_output의 Id가 아님에 주의)
+  Type: "int64[]"
+  Ref: recipe_output
+- Name: get_recipe.recipe_output_id
+  Description: 레시피 아웃풋 Id
+  Type: int64
+  Ref: recipe_output
+- Name: get_recipe.outputs
+  Description: 지급된 레시피 아웃풋
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id. 선택한 보상 정보
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: result_type
+      Description: 레시피 결과 타입
+      ColumnType: enum
+      Ref: log_recipe_result
+    - ColumnName: item_id
+      Description: 레시피 결과 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 결과 아이템 수량
+      ColumnType: int64
+    - ColumnName: properties
+      Description: 결과 아이템이 가진 아이템 속성 (create_item 로그의 properties와 같은 포맷)
+      ColumnType: "object[]"
+    - ColumnName: re_roll_item_id
+      Description: 다시뽑기 아이템 Id
+      ColumnType: int64
+      Ref: item
+- Name: get_recipe.repeat
+  Description: 실제 반복 횟수 (인벤토리 공간 부족으로 요청한 횟수보다 작을 수도 있음)
+  Type: int64
+- Name: get_recipe.requested_repeat
+  Description: 유저가 요청한 반복 횟수
+  Type: int64
+- Name: execute_recipe
+  Description: "레시피 인풋으로 레시피 아웃풋 획득 (제작, 합성 등). recipe_input의 재료를 소모하면서 recipe_output을 획득"
+  Type: message
+- Name: execute_recipe.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: execute_recipe.recipe_input_id
+  Description: 레시피 인풋 Id
+  Type: int64
+  Ref: recipe_input
+- Name: execute_recipe.recipe_output_id
+  Description: 레시피 아웃풋 Id
+  Type: int64
+  Ref: recipe_output
+- Name: execute_recipe.outputs
+  Description: 지급된 레시피 아웃풋
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id. 선택한 보상 정보
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: result_type
+      Description: 레시피 결과 타입
+      ColumnType: enum
+      Ref: log_recipe_result
+    - ColumnName: item_id
+      Description: 레시피 결과 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 결과 아이템 수량
+      ColumnType: int64
+    - ColumnName: properties
+      Description: 결과 아이템이 가진 아이템 속성 (create_item 로그의 properties와 같은 포맷)
+      ColumnType: "object[]"
+    - ColumnName: re_roll_item_id
+      Description: 다시뽑기 아이템 Id
+      ColumnType: int64
+      Ref: item
+- Name: execute_recipe.repeat
+  Description: 반복 횟수
+  Type: int64
+- Name: create_re_roll_recipe
+  Description: 레시피 다시뽑기 아이템 생성
+  Type: message
+- Name: create_re_roll_recipe.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: create_re_roll_recipe.re_role_item_id
+  Description: 다시뽑기 아이템 Id
+  Type: int64
+  Ref: item
+- Name: create_re_roll_recipe.re_role_item_uuid
+  Description: 다시뽑기 아이템 UUID
+  Type: string
+- Name: create_re_roll_recipe.recipe_output_id
+  Description: 레시피 아웃풋 Id
+  Type: int64
+  Ref: recipe_output
+- Name: create_re_roll_recipe.output
+  Description: 레시피의 Output 컬럼 내부 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+  Ref: recipe_output
+- Name: proceed_re_roll_recipe
+  Description: 레시피 다시뽑기 아이템 변경
+  Type: message
+- Name: proceed_re_roll_recipe.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: proceed_re_roll_recipe.re_role_item_uuid
+  Description: 다시뽑기 아이템 UUID
+  Type: string
+- Name: proceed_re_roll_recipe.previous_recipe_output_id
+  Description: 기존에 선택된 레시피의 Output Id (recipe_output의 Id가 아님에 주의)
+  Type: int64
+  Ref: recipe_output
+- Name: proceed_re_roll_recipe.next_recipe_output_id
+  Description: 선택된 레시피의 Output Id (recipe_output의 Id가 아님에 주의)
+  Type: int64
+  Ref: recipe_output
+- Name: proceed_re_roll_recipe.previous_output
+  Description: 다시뽑기 전 레시피의 Output 컬럼 내부 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+  Ref: recipe_output
+- Name: proceed_re_roll_recipe.next_output
+  Description: 다시뽑기 후 레시피의 Output 컬럼 내부 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+  Ref: recipe_output
+- Name: confirm_re_roll_recipe
+  Description: 다시뽑기 아이템을 일반 아이템으로 변경 (다시뽑기 확정)
+  Type: message
+- Name: confirm_re_roll_recipe.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: confirm_re_roll_recipe.re_roll_item_uuid
+  Description: 다시뽑기 아이템 UUID
+  Type: string
+- Name: confirm_re_roll_recipe.recipe_output_id
+  Description: 다시뽑기 레시피 아웃풋 Id
+  Type: int64
+  Ref: recipe_output
+- Name: confirm_re_roll_recipe.output
+  Description: 확정된 레시피의 Output 컬럼 내부 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: id
+      Description: recipe_output.yaml의 Output 컬럼 내 Id
+      ColumnType: int64
+      Ref: recipe_output
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+  Ref: recipe_output
+- Name: disassemble_item
+  Description: 아이템 분해
+  Type: message
+- Name: disassemble_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: disassemble_item.item_id
+  Description: 분해되는 아이템 Id
+  Type: int64
+  Ref: item
+- Name: disassemble_item.item_uuid
+  Description: 분해되는 아이템 UUID
+  Type: string
+- Name: disassemble_item.amount
+  Description: 분해 수량
+  Type: int64
+- Name: disassemble_item.recipe_output_id
+  Description: 분해 결과 지급을 위한 레시피 아웃풋 Id
+  Type: int64
+  Ref: recipe_output
+- Name: register_item_collection
+  Description: 수집 아이템 등록
+  Type: message
+- Name: register_item_collection.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: register_item_collection.item_collection_point_id
+  Description: 아이템 컬렉션 포인트 Id
+  Type: int64
+  Ref: item_collection_point
+- Name: register_item_collection.registration_id
+  Description: 아이템 컬렉션 포인트 Registration의 Id
+  Type: int64
+  Ref: item_collection_point
+- Name: register_item_collection.amount
+  Description: 등록 수량
+  Type: int64
+- Name: register_item_collection.replacement_id
+  Description: 교체 등록을 위한 아이템 컬렉션 교체 Id
+  Type: int64
+  Ref: item_collection_replacement
+- Name: save_preset
+  Description: 프리셋 저장. 현재 착용 장비를 특정 프리셋에 저장
+  Type: message
+- Name: save_preset.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: save_preset.preset_num
+  Description: 프리셋 번호
+  Type: int64
+- Name: save_preset.items
+  Description: 프리셋에 저장된 아이템
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: item_uuid
+      Description: 아이템 UUID
+      ColumnType: string
+    - ColumnName: equip_slot_id
+      Description: 장착 슬롯 Id
+      ColumnType: int64
+      Ref: equip_slot
+- Name: apply_preset
+  Description: 프리셋 적용. 프리셋대로 현재 착용 장비를 변경
+  Type: message
+- Name: apply_preset.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: apply_preset.preset_num
+  Description: 프리셋 번호
+  Type: int64
+- Name: apply_preset.items
+  Description: 적용된 프리셋 아이템
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: item_uuid
+      Description: 아이템 UUID
+      ColumnType: string
+    - ColumnName: equip_slot_id
+      Description: 장착 슬롯 Id
+      ColumnType: int64
+      Ref: equip_slot
+- Name: expand_preset
+  Description: 프리셋 개수 증가
+  Type: message
+- Name: expand_preset.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: expand_preset.count_before
+  Description: 변경 전 프리셋 개수
+  Type: int64
+- Name: expand_preset.count
+  Description: 변경 후 프리셋 개수
+  Type: int64
+- Name: expand_preset.slot_count_item_id
+  Description: 슬롯 변경에 사용한 아이템 Id
+  Type: int64
+  Ref: item
+- Name: expand_preset.slot_count_item_uuid
+  Description: 슬롯 변경에 사용한 아이템 UUID
+  Type: string
+- Name: update_mastery_experience
+  Description: 숙련도 경험치 변동
+  Type: message
+- Name: update_mastery_experience.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_mastery_experience.item_category_id
+  Description: 숙련도 아이템 카테고리 Id
+  Type: int64
+  Ref: item_category
+- Name: update_mastery_experience.item_id
+  Description: 숙련도 아이템 Id
+  Type: int64
+  Ref: item
+- Name: update_mastery_experience.item_uuid
+  Description: 숙련도 아이템 UUID
+  Type: string
+- Name: update_mastery_experience.amount_before
+  Description: 이전 숙련도 경험치
+  Type: int64
+- Name: update_mastery_experience.amount
+  Description: 이후 숙련도 경험치
+  Type: int64
+- Name: update_mastery_level
+  Description: 숙련도 레벨 변경. 무기 기본 공격으로 경험치를 쌓다가 레벨이 오름
+  Type: message
+- Name: update_mastery_level.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_mastery_level.item_category_id
+  Description: 숙련도 아이템 카테고리 Id
+  Type: string
+  Ref: item_category
+- Name: update_mastery_level.item_id
+  Description: 숙련도 아이템 Id
+  Type: int64
+  Ref: item
+- Name: update_mastery_level.item_uuid
+  Description: 숙련도 아이템 UUID
+  Type: string
+- Name: update_mastery_level.level_before
+  Description: 변경 전 레벨
+  Type: int64
+- Name: update_mastery_level.level
+  Description: 변경 후 레벨
+  Type: int64
+- Name: activate_mastery_essence
+  Description: 숙련도 활성화
+  Type: message
+- Name: activate_mastery_essence.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: activate_mastery_essence.item_category_id
+  Description: 숙련도 아이템 카테고리 Id
+  Type: int64
+  Ref: item_category
+- Name: activate_mastery_essence.item_id
+  Description: 숙련도 아이템 Id
+  Type: int64
+  Ref: item
+- Name: activate_mastery_essence.item_uuid
+  Description: 숙련도 아이템 UUID
+  Type: string
+- Name: activate_mastery_essence.mastery_essence_id
+  Description: 숙련도 Id
+  Type: int64
+  Ref: mastery_essence
+- Name: reset_mastery_essence
+  Description: 숙련도 초기화
+  Type: message
+- Name: reset_mastery_essence.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reset_mastery_essence.item_category_id
+  Description: 숙련도 아이템 카테고리 Id
+  Type: int64
+  Ref: item_category
+- Name: reset_mastery_essence.item_id
+  Description: 숙련도 아이템 Id
+  Type: int64
+  Ref: item
+- Name: reset_mastery_essence.item_uuid
+  Description: 숙련도 아이템 UUID
+  Type: string
+- Name: reset_mastery_essence.mastery_essence_id
+  Description: 숙련도 Id
+  Type: int64
+  Ref: mastery_essence
+- Name: transfer_mastery_essence
+  Description: 숙련도 이전
+  Type: message
+- Name: transfer_mastery_essence.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: transfer_mastery_essence.material_item_id
+  Description: 숙련도 이전 재료 아이템 Id
+  Type: int64
+  Ref: item
+- Name: transfer_mastery_essence.material_item_uuid
+  Description: 숙련도 이전 재료 아이템 UUID
+  Type: string
+- Name: transfer_mastery_essence.from_item_category_id
+  Description: 원본 숙련도 아이템의 카테고리
+  Type: int64
+  Ref: item_category
+- Name: transfer_mastery_essence.from_experience_before
+  Description: 원본 숙련도 아이템의 이전 경험치
+  Type: int64
+- Name: transfer_mastery_essence.from_experience
+  Description: 원본 숙련도 아이템의 이후 경험치
+  Type: int64
+- Name: transfer_mastery_essence.to_item_category_id
+  Description: 대상 숙련도 아이템의 카테고리
+  Type: int64
+  Ref: item_category
+- Name: transfer_mastery_essence.to_experience_before
+  Description: 대상 숙련도 아이템의 이전 경험치
+  Type: int64
+- Name: transfer_mastery_essence.to_experience
+  Description: 대상 숙련도 아이템의 이후 경험치
+  Type: int64
+- Name: fusion_mastery_essence
+  Description: 스킬 융합
+  Type: message
+- Name: fusion_mastery_essence.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: fusion_mastery_essence.mastery_essence_fusion_id
+  Description: 스킬 융합 Id
+  Type: int64
+  Ref: mastery_essence_fusion
+- Name: fusion_mastery_essence.enchant_level
+  Description: 융합 스킬 레벨
+  Type: int64
+- Name: un_fusion_mastery_essence
+  Description: 스킬 융합 해제
+  Type: message
+- Name: un_fusion_mastery_essence.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: un_fusion_mastery_essence.mastery_essence_fusion_id
+  Description: 스킬 융합 Id
+  Type: int64
+  Ref: mastery_essence_fusion
+- Name: add_combination_count
+  Description: 조합식 최대 횟수 증가
+  Type: message
+- Name: add_combination_count.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: add_combination_count.combination_item_id
+  Description: 조합식 아이템 Id. 이 아이템의 카테고리(item.yaml의 Category)로 조합식 탭을 구별함
+  Type: int64
+  Ref: item
+- Name: add_combination_count.combination_item_uuid
+  Description: 조합식 아이템 UUID
+  Type: string
+- Name: add_combination_count.combination_add_count
+  Description: 현재까지 증가한 횟수. 무한정 증가할 수 없어 증가값을 기록해 두어야 함
+  Type: int64
+- Name: add_combination_count.material_item_id
+  Description: 새로 생성되는 조합식을 돌릴 때 필요한 재료 아이템의 Id
+  Type: int64
+  Ref: item
+- Name: add_combination_count.material_item_uuid
+  Description: 새로 생성되는 조합식을 돌릴 때 필요한 재료 아이템의 UUID
+  Type: string
+- Name: add_combination_count.material_item_amount
+  Description: 생성된 재료 아이템의 개수
+  Type: int64
+- Name: add_combination_count.cost_base_item_id
+  Description: 비용 아이템 Id
+  Type: int64
+  Ref: item
+- Name: add_combination_count.cost_item_amount
+  Description: 비용
+  Type: int64
+- Name: reset_combination
+  Description: 조합식 초기화
+  Type: message
+- Name: reset_combination.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reset_combination.combination_item_id
+  Description: 조합식 아이템 Id
+  Type: int64
+  Ref: item
+- Name: reset_combination.combination_item_uuid
+  Description: 조합식 아이템 UUID
+  Type: string
+- Name: reset_combination.combination_engrave_id
+  Description: 조합식 아이템 세공 Id
+  Type: int64
+  Ref: item_engrave
+- Name: reset_combination.material_item_id
+  Description: 재료 아이템 Id
+  Type: int64
+  Ref: item
+- Name: reset_combination.material_item_uuid
+  Description: 재료 아이템 UUID
+  Type: string
+- Name: reset_combination.material_item_amount
+  Description: 재료 아이템 수량
+  Type: int64
+- Name: reset_combination.cost_base_item_id
+  Description: 비용 아이템 Id
+  Type: int64
+  Ref: item
+- Name: reset_combination.cost_item_amount
+  Description: 비용
+  Type: int64
+- Name: unlock_combination
+  Description: 조합식 잠금 해제 - 하나의 조합식 탭을 해제하여 사용
+  Type: message
+- Name: unlock_combination.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: unlock_combination.combination_engrave_id
+  Description: 조합식 아이템 세공 Id
+  Type: int64
+  Ref: item_engrave
+- Name: unlock_combination.combination_item_id
+  Description: 조합식 아이템 Id
+  Type: int64
+  Ref: item
+- Name: unlock_combination.combination_item_uuid
+  Description: 조합식 아이템 UUID
+  Type: string
+- Name: unlock_combination.material_item_id
+  Description: 재료 아이템 Id
+  Type: int64
+  Ref: item
+- Name: unlock_combination.material_item_uuid
+  Description: 재료 아이템 UUID
+  Type: string
+- Name: unlock_combination.material_item_amount
+  Description: 재료 아이템 수량
+  Type: int64
+- Name: unlock_combination.cost_item_base_id
+  Description: 비용 아이템 Id
+  Type: int64
+  Ref: item
+- Name: unlock_combination.cost_item_amount
+  Description: 비용
+  Type: int64
+- Name: teleport
+  Description: 텔레포트
+  Type: message
+- Name: teleport.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: teleport.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: teleport.from_channel_id
+  Description: 목적지 채널 아이디. 랜드가 같아도 채널 아이디가 다르면 만날 수 없음
+  Type: string
+- Name: teleport.from_address_id
+  Description: 이전 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: teleport.from_x
+  Description: 이전 x 좌표
+  Type: int64
+- Name: teleport.from_y
+  Description: 이전 y 좌표
+  Type: int64
+- Name: teleport.to_channel_id
+  Description: 목적지 채널 아이디. 랜드가 같아도 채널 아이디가 다르면 만날 수 없음
+  Type: string
+- Name: teleport.to_address_id
+  Description: 이후 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: teleport.to_x
+  Description: 이후 x 좌표
+  Type: int64
+- Name: teleport.to_y
+  Description: 이후 y 좌표
+  Type: int64
+- Name: teleport.new_battle_name
+  Description: 텔레포트로 battle 서버를 이동하는 경우 새로운 battle 서버의 이름
+  Type: string
+- Name: enter_land
+  Description: 랜드 입장
+  Type: message
+- Name: enter_land.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: enter_land.channel_id
+  Description: 채널 아이디
+  Type: string
+- Name: enter_land.address_id
+  Description: 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: enter_land.x
+  Description: 입장 x 좌표
+  Type: int64
+- Name: enter_land.y
+  Description: 입장 y 좌표
+  Type: int64
+- Name: enter_land.first_connect
+  Description: "로그인 후 첫 접속인지 여부. session_id가 새로 생성된 후 첫 battle 접속 때만 true이고, 그 이후 배틀 이동이나 망전환 등에서는 false"
+  Type: bool
+- Name: leave_land
+  Description: 랜드 퇴장
+  Type: message
+- Name: leave_land.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: leave_land.channel_id
+  Description: 채널 아이디
+  Type: string
+- Name: leave_land.address_id
+  Description: 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: leave_land.x
+  Description: 퇴장 x 좌표
+  Type: int64
+- Name: leave_land.y
+  Description: 퇴장 y 좌표
+  Type: int64
+- Name: move_land
+  Description: 랜드 이동
+  Type: message
+- Name: move_land.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: move_land.channel_id_before
+  Description: 이전 채널 아이디
+  Type: string
+- Name: move_land.address_id_before
+  Description: 이전 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: move_land.x_before
+  Description: 이전 x 좌표
+  Type: int64
+- Name: move_land.y_before
+  Description: 이후 y 좌표
+  Type: int64
+- Name: move_land.channel_id
+  Description: 이후 채널 아이디
+  Type: string
+- Name: move_land.address_id
+  Description: 이후 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: move_land.x
+  Description: 이후 x 좌표
+  Type: int64
+- Name: move_land.y
+  Description: 이후 y 좌표
+  Type: int64
+- Name: die
+  Description: 사망
+  Type: message
+- Name: die.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: die.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: die.killer_npc_id
+  Description: 죽인 npc의 Id
+  Type: int64
+  Ref: npc
+- Name: die.killer_pc_character_uuid
+  Description: 죽인 pc의 캐릭터 UUID
+  Type: string
+- Name: die.address_id
+  Description: 사망 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: die.x
+  Description: 사망 x 좌표
+  Type: int64
+- Name: die.y
+  Description: 사망 y 좌표
+  Type: int64
+- Name: kill_boss
+  Description: 보스 몬스터 죽임
+  Type: message
+- Name: kill_boss.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: kill_boss.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: kill_boss.npc_id
+  Description: 보스 NPC Id
+  Type: int64
+  Ref: npc
+- Name: kill_boss.top_contribution_character_uuid
+  Description: 아이템 루팅 권한이 있는 캐릭터의 UUID
+  Type: string
+- Name: kill_boss.top_contribution_party_id
+  Description: 아이템 루팅 권한이 있는 파티의 ID
+  Type: int64
+- Name: kill_boss.team_id
+  Description: 전장에서 보스를 잡는 경우 팀의 아이디
+  Type: int64
+- Name: drop_item
+  Description: 아이템 드롭
+  Type: message
+- Name: drop_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: drop_item.npc_id
+  Description: NPC Id
+  Type: int64
+  Ref: npc
+- Name: drop_item.address_id
+  Description: 드롭 위치의 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: drop_item.item_id
+  Description: 드롭된 아이템 Id
+  Type: int64
+  Ref: item
+- Name: drop_item.amount
+  Description: 드롭 수량
+  Type: int64
+- Name: revive
+  Description: 부활
+  Type: message
+- Name: revive.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: revive.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: revive.address_id
+  Description: 부활 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: revive.x
+  Description: 부활 x 좌표
+  Type: int64
+- Name: revive.y
+  Description: 부활 y 좌표
+  Type: int64
+- Name: get_experience
+  Description: 경험치 획득
+  Type: message
+- Name: get_experience.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: get_experience.experience_before
+  Description: 이전 경험치
+  Type: int64
+- Name: get_experience.experience
+  Description: 이후 경험치
+  Type: int64
+- Name: get_experience.level_before
+  Description: 이전 레벨
+  Type: int64
+- Name: get_experience.level
+  Description: 이후 레벨
+  Type: int64
+- Name: lose_experience
+  Description: 경험치 손실
+  Type: message
+- Name: lose_experience.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: lose_experience.experience_before
+  Description: 이전 경험치
+  Type: int64
+- Name: lose_experience.experience
+  Description: 이후 경험치
+  Type: int64
+- Name: lose_experience.level_before
+  Description: 이후 경험치
+  Type: int64
+- Name: lose_experience.level
+  Description: 이전 레벨
+  Type: int64
+- Name: upsert_quick_slot
+  Description: 퀵슬롯 추가/등록
+  Type: message
+- Name: upsert_quick_slot.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: upsert_quick_slot.quick_slot_index
+  Description: 퀵슬롯 인덱스. 자동 사용 물약의 경우 음수를 사용하고 나머지는 양수 사용
+  Type: int64
+- Name: upsert_quick_slot.skill_id
+  Description: 등록된 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: upsert_quick_slot.base_item_id
+  Description: 등록된 아이템 Id
+  Type: int64
+  Ref: item
+- Name: upsert_quick_slot.is_auto
+  Description: 자동사용 여부
+  Type: bool
+- Name: clear_quick_slot
+  Description: 퀵슬롯 삭제
+  Type: message
+- Name: clear_quick_slot.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: clear_quick_slot.quick_slot_index
+  Description: 퀵슬롯 인덱스
+  Type: int64
+- Name: change_pk_point
+  Description: PK 점수 변동
+  Type: message
+- Name: change_pk_point.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_pk_point.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: change_pk_point.pk_point_before
+  Description: 이전 PK 포인트
+  Type: int64
+- Name: change_pk_point.pk_point
+  Description: 이후 PK 포인트
+  Type: int64
+- Name: change_combat_point
+  Description: 전투력 변동
+  Type: message
+- Name: change_combat_point.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_combat_point.skill_id
+  Description: 스킬 Id
+  Type: int64
+  Ref: skill
+- Name: change_combat_point.combat_point_before
+  Description: 이전 전투력
+  Type: int64
+- Name: change_combat_point.combat_point
+  Description: 이후 전투력
+  Type: int64
+- Name: change_combat_point.property_name
+  Description: 전투력 변동을 유발한 스탯의 이름
+  Type: string
+- Name: change_combat_point.property_value_before
+  Description: 전투력 변동을 유발한 스탯의 이전 값
+  Type: int64
+- Name: change_combat_point.property_value
+  Description: 전투력 변동을 유발한 스탯의 이후 값
+  Type: int64
+- Name: score_battleground
+  Description: 전장 점수 획득
+  Type: message
+- Name: score_battleground.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: score_battleground.battleground_id
+  Description: 배틀그라운드 Id
+  Type: int64
+  Ref: battleground
+- Name: score_battleground.score_before
+  Description: 이전 점수
+  Type: int64
+- Name: score_battleground.score
+  Description: 이후 점수
+  Type: int64
+- Name: score_battleground.repeat_kill_count_before
+  Description: 이전 연속 킬 횟수
+  Type: int64
+- Name: score_battleground.repeat_kill_count
+  Description: 이후 연속 킬 횟수
+  Type: int64
+- Name: score_battleground.team_id
+  Description: 팀 아이디
+  Type: int64
+- Name: score_battleground.team_score_before
+  Description: 이전 팀 점수
+  Type: int64
+- Name: score_battleground.team_score
+  Description: 이후 팀 점수
+  Type: int64
+- Name: score_battleground.opponent_score_before
+  Description: 상대방의 이전 팀 점수
+  Type: int64
+- Name: score_battleground.opponent_score
+  Description: 상대방의 이후 팀 점수
+  Type: int64
+- Name: score_battleground.opponent_repeat_kill_count_before
+  Description: 상대방의 이전 연속 킬 횟수
+  Type: int64
+- Name: score_battleground.opponent_repeat_kill_count
+  Description: 상대방의 이후 연속 킬 횟수
+  Type: int64
+- Name: score_battleground.opponent_team_id
+  Description: 상대방의 팀 아이디
+  Type: int64
+- Name: score_battleground.opponent_team_score_before
+  Description: 상대방의 이전 팀 점수
+  Type: int64
+- Name: score_battleground.opponent_team_score
+  Description: 상대방의 이후 팀 점수
+  Type: int64
+- Name: sell_trade
+  Description: 거래소 판매
+  Type: message
+- Name: sell_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: sell_trade.trade_uuid
+  Description: 거래 UUID
+  Type: string
+- Name: sell_trade.item_uuid
+  Description: 판매 아이템 UUID
+  Type: string
+- Name: sell_trade.item_id
+  Description: 판매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: sell_trade.amount
+  Description: 판매 수량
+  Type: int64
+- Name: sell_trade.trade_price
+  Description: 판매 가격 (전체 수량 합산 가격)
+  Type: int64
+- Name: sell_trade.register_at
+  Description: 실제 판매 등록 시점
+  Type: string
+- Name: sell_trade.buyer_character_uuid
+  Description: 구매자 캐릭터 UUID. 개인 거래가 아니라면 기록되지 않음
+  Type: string
+- Name: sell_trade.guild_id
+  Description: 길드 판매 시 길드 Id
+  Type: int64
+- Name: sell_trade.item_enchant_level
+  Description: 아이템 강화 레벨
+  Type: int64
+- Name: sell_trade.week_average_price
+  Description: 주간 평균 시세. 소수점이 있어 string 타입으로 출력
+  Type: string
+- Name: buy_trade
+  Description: 거래소 구매
+  Type: message
+- Name: buy_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: buy_trade.trade_uuid
+  Description: 거래 UUID
+  Type: string
+- Name: buy_trade.item_uuid
+  Description: 판매 아이템 UUID
+  Type: string
+- Name: buy_trade.item_id
+  Description: 판매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: buy_trade.amount
+  Description: 판매 수량
+  Type: int64
+- Name: buy_trade.trade_price
+  Description: 구매 가격 (전체 수량 합산 가격)
+  Type: int64
+- Name: buy_trade.settlement_price
+  Description: 수수료를 제외한 정산 가격 (판매자가 정산 받을 가격)
+  Type: int64
+- Name: buy_trade.guild_id
+  Description: 길드 거래 구매 시 길드 Id
+  Type: int64
+- Name: buy_trade.item_enchant_level
+  Description: 아이템 강화 레벨
+  Type: int64
+- Name: buy_trade.week_average_price
+  Description: 주간 평균 시세. 소수점이 있어 string 타입으로 출력
+  Type: string
+- Name: reject_trade
+  Description: 로그가 발생한 서버 이름. 길드 거래에서만 구매 거절이 가능
+  Type: message
+- Name: reject_trade.trade_uuid
+  Description: 거래 UUID
+  Type: string
+- Name: reject_trade.item_uuid
+  Description: 판매 아이템 UUID
+  Type: string
+- Name: reject_trade.item_id
+  Description: 판매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: reject_trade.amount
+  Description: 판매 수량
+  Type: int64
+- Name: re_register_trade
+  Description: 판매 물품 재등록. 개인거래는 재등록 기능이 없음
+  Type: message
+- Name: re_register_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: re_register_trade.total_registration_fee
+  Description: 총 판매 수수료
+  Type: int64
+- Name: re_register_trade.trades
+  Description: 재등록 목록
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: trade_uuid
+      Description: 거래 UUID
+      ColumnType: string
+    - ColumnName: item_uuid
+      Description: 아이템 UUID
+      ColumnType: string
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+    - ColumnName: trade_price
+      Description: 전체 수량 합산 가격
+      ColumnType: int64
+    - ColumnName: register_at
+      Description: 실제 등록 시점
+      ColumnType: string
+- Name: withdraw_trade
+  Description: 판매 기간 만료된 상품 다시 회수
+  Type: message
+- Name: withdraw_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: withdraw_trade.trades
+  Description: 판매 취소 목록
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: trade_uuid
+      Description: 거래 UUID
+      ColumnType: string
+    - ColumnName: item_uuid
+      Description: 아이템 UUID
+      ColumnType: string
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: cancel_trade
+  Description: 판매 취소. 취소는 단일 취소만 가능함
+  Type: message
+- Name: cancel_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: cancel_trade.trade_uuid
+  Description: 거래 UUID
+  Type: string
+- Name: cancel_trade.item_uuid
+  Description: 판매 아이템 UUID
+  Type: string
+- Name: cancel_trade.item_id
+  Description: 판매 아이템 Id
+  Type: int64
+  Ref: item
+- Name: cancel_trade.amount
+  Description: 판매 수량
+  Type: int64
+- Name: settle_trade
+  Description: 거래소 정산
+  Type: message
+- Name: settle_trade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: settle_trade.total_settlement_price
+  Description: 총 정산 가격
+  Type: int64
+- Name: settle_trade.trades
+  Description: 정산 품목
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: trade_uuid
+      Description: 거래 UUID
+      ColumnType: string
+    - ColumnName: item_uuid
+      Description: 아이템 UUID
+      ColumnType: string
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: send_mail
+  Description: 우편 전송. 수신자가 우편을 받을 수 있는 상태가 됨
+  Type: message
+- Name: send_mail.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: send_mail.mail_uuid
+  Description: 우편 UUID
+  Type: string
+- Name: send_mail.mail_type
+  Description: 우편 종류
+  Type: enum
+  Ref: log_mail_type
+- Name: send_mail.recipient
+  Description: 수신자 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: account_id
+      Description: 수신자의 계정 아이디 (스토브 GUID)
+      ColumnType: int64
+    - ColumnName: character_uuid
+      Description: 수신자의 캐릭터 UUID. 캐릭터 우편인 경우에만 적재됨
+      ColumnType: string
+    - ColumnName: server
+      Description: 수신자의 서버. 서버 우편인 경우에만 적재됨
+      ColumnType: string
+- Name: send_mail.attachments
+  Description: 첨부 아이템
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: receive_mail
+  Description: 우편 수신. 우편의 아이템을 인벤토리로 옮기는 것
+  Type: message
+- Name: receive_mail.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: receive_mail.mail_uuid
+  Description: 우편 UUID
+  Type: string
+- Name: receive_mail.mail_type
+  Description: 우편 종류
+  Type: enum
+  Ref: log_mail_type
+- Name: receive_mail.attachments
+  Description: 첨부 아이템
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 수량
+      ColumnType: int64
+- Name: send_letter
+  Description: 편지 전송
+  Type: message
+- Name: send_letter.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: send_letter.letter_uuid
+  Description: 편지 UUID
+  Type: string
+- Name: send_letter.from_character_name
+  Description: 송신자 캐릭터 명
+  Type: string
+- Name: send_letter.from_guild_name
+  Description: 송신자 캐릭터의 길드 명
+  Type: string
+- Name: send_letter.from_server
+  Description: 송신자 캐릭터 없이 서버가 보낸 편지인지 여부
+  Type: bool
+- Name: send_letter.to_account_id
+  Description: 수신자 계정 아이디 (스토브 GUID)
+  Type: int64
+- Name: send_letter.to_character_uuid
+  Description: 수신자의 캐릭터 UUID
+  Type: string
+- Name: send_letter.to_guild
+  Description: 길드 대상 우편인지 여부
+  Type: bool
+- Name: read_letter
+  Description: 편지 읽음
+  Type: message
+- Name: read_letter.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: read_letter.letter_uuid
+  Description: 편지 UUID
+  Type: string
+- Name: delete_letter
+  Description: 편지 삭제
+  Type: message
+- Name: delete_letter.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delete_letter.letter_uuid
+  Description: 편지 UUID
+  Type: string
+- Name: try_matching
+  Description: 전장 매칭 시도. matching은 매칭 행위 자체를 의미
+  Type: message
+- Name: try_matching.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: try_matching.matchmaking_id
+  Description: 매치메이킹 Id
+  Type: int64
+  Ref: matchmaking
+- Name: try_matching.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: try_matching.matching_rate
+  Description: 매칭 점수 (MMR)
+  Type: int64
+- Name: succeed_matching
+  Description: 매칭 성공
+  Type: message
+- Name: succeed_matching.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: succeed_matching.matchmaking_id
+  Description: 매치메이킹 Id
+  Type: int64
+  Ref: matchmaking
+- Name: succeed_matching.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: succeed_matching.matching_rate
+  Description: 매칭 점수 (MMR)
+  Type: int64
+- Name: join_matching
+  Description: 매칭 참여
+  Type: message
+- Name: join_matching.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: join_matching.matchmaking_id
+  Description: 매치메이킹 Id
+  Type: int64
+  Ref: matchmaking
+- Name: join_matching.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: join_matching.match_uuid
+  Description: 경기 UUID
+  Type: string
+- Name: join_matching.team_id
+  Description: 팀 아이디
+  Type: int64
+- Name: join_matching.matching_rate
+  Description: 매칭 점수 (MMR)
+  Type: int64
+- Name: start_match
+  Description: 경기 시작. match는 매치가 된 전장을 의미
+  Type: message
+- Name: start_match.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: start_match.matchmaking_id
+  Description: 매치메이킹 Id
+  Type: int64
+  Ref: matchmaking
+- Name: start_match.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: start_match.match_uuid
+  Description: 경기 UUID
+  Type: string
+- Name: start_match.teams
+  Description: 팀 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: team_id
+      Description: 팀 아이디
+      ColumnType: int64
+    - ColumnName: player_count
+      Description: 팀 인원
+      ColumnType: int64
+- Name: delete_match
+  Description: 경기 종료
+  Type: message
+- Name: delete_match.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delete_match.matchmaking_id
+  Description: 매치메이킹 Id
+  Type: int64
+  Ref: matchmaking
+- Name: delete_match.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: delete_match.match_uuid
+  Description: 경기 UUID
+  Type: string
+- Name: delete_match.reason
+  Description: 경기 종료 사유
+  Type: enum
+  Ref: log_match_reason
+- Name: delete_match.teams
+  Description: 팀 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: team_id
+      Description: 팀 아이디
+      ColumnType: int64
+    - ColumnName: score
+      Description: 점수
+      ColumnType: int64
+    - ColumnName: result
+      Description: 경기 결과
+      ColumnType: enum
+      Ref: log_match_result
+- Name: delete_match.players
+  Description: 팀원 정보
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: team_id
+      Description: 팀 아이디
+      ColumnType: int64
+    - ColumnName: account_id
+      Description: 계정 아이디 (스토브 GUID)
+      ColumnType: int64
+    - ColumnName: character_uuid
+      Description: 캐릭터 UUID
+      ColumnType: string
+    - ColumnName: scores
+      Description: 점수 및 연속 킬 횟수 등 획득 정보 모음. string key와 int64 value를 가지는 object의 array
+      ColumnType: "object[]"
+    - ColumnName: result
+      Description: 경기 결과
+      ColumnType: enum
+      Ref: log_match_result
+- Name: game_guid_register
+  Description: 약관 동의 시점 후 처음 게임 접속
+  Type: message
+- Name: game_guid_register.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: game_cuid_register
+  Description: 캐릭터 생성
+  Type: message
+- Name: game_cuid_register.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: game_cuid_register.name
+  Description: 캐릭터 이름
+  Type: string
+- Name: game_cuid_register.class_id
+  Description: 캐릭터 직업
+  Type: int64
+  Ref: class
+- Name: game_cuid_register.server
+  Description: 캐릭터 생성 서버 이름
+  Type: string
+- Name: enter_character
+  Description: 캐릭터 입장
+  Type: message
+- Name: enter_character.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: enter_character.server
+  Description: 접속하려는 서버
+  Type: string
+- Name: reserve_character_deletion
+  Description: 캐릭터 삭제 예약
+  Type: message
+- Name: reserve_character_deletion.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reserve_character_deletion.delete_at
+  Description: 삭제 예정 시각
+  Type: string
+- Name: cancel_delete_character
+  Description: 캐릭터 삭제 예약 취소
+  Type: message
+- Name: cancel_delete_character.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: cancel_delete_character.delete_at
+  Description: 삭제 예정 시각
+  Type: string
+- Name: expand_character_slot
+  Description: 캐릭터 슬롯 확장
+  Type: message
+- Name: expand_character_slot.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: expand_character_slot.slot_count_before
+  Description: 이전 캐릭터 슬롯 수
+  Type: int64
+- Name: expand_character_slot.slot_count_after
+  Description: 이후 캐릭터 슬롯 수
+  Type: int64
+- Name: create_chat_channel
+  Description: 채팅 채널 생성
+  Type: message
+- Name: create_chat_channel.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: create_chat_channel.channel_name
+  Description: "채팅 채널 이름. {도메인 명}:{식별자} 형태. 서버 채팅의 경우 서버 이름"
+  Type: string
+- Name: create_chat_channel.channel_type_id
+  Description: 채팅 채널 타입 Id
+  Type: int64
+  Ref: chat_channel_type
+- Name: delete_chat_channel
+  Description: 채팅 채널 삭제
+  Type: message
+- Name: delete_chat_channel.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delete_chat_channel.channel_name
+  Description: 채팅 채널 이름
+  Type: string
+- Name: delete_chat_channel.chat_channel_type_id
+  Description: 채팅 채널 타입 Id
+  Type: int64
+  Ref: chat_channel_type
+- Name: join_chat_channel
+  Description: 채팅 채널 입장
+  Type: message
+- Name: join_chat_channel.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: join_chat_channel.channel_name
+  Description: 채팅 채널 이름
+  Type: string
+- Name: leave_chat_channel
+  Description: 채팅 채널 퇴장
+  Type: message
+- Name: leave_chat_channel.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: leave_chat_channel.channel_name
+  Description: 채팅 채널 이름
+  Type: string
+- Name: send_chat
+  Description: 채팅 메시지 전송
+  Type: message
+- Name: send_chat.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: send_chat.channel_name
+  Description: 채팅 채널 이름
+  Type: string
+- Name: send_chat.chat_channel_type_id
+  Description: 채팅 채널 타입 Id
+  Type: int64
+  Ref: chat_channel_type
+- Name: send_chat.chat_type_id
+  Description: 채팅 타입 Id
+  Type: int64
+  Ref: chat_type
+- Name: send_chat.message
+  Description: 채팅 메시지
+  Type: string
+- Name: send_direct_chat
+  Description: 귓속말 전송. 채팅 채널 없이 메시지 전송
+  Type: message
+- Name: send_direct_chat.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: send_direct_chat.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: send_direct_chat.chat_type_id
+  Description: 채팅 타입 Id
+  Type: int64
+  Ref: chat_type
+- Name: send_direct_chat.message
+  Description: 채팅 메시지
+  Type: string
+- Name: block_chat
+  Description: 채팅 차단
+  Type: message
+- Name: block_chat.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: block_chat.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: unblock_chat
+  Description: 채팅 차단 해제
+  Type: message
+- Name: unblock_chat.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: unblock_chat.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: upgrade_building_started
+  Description: 성물 재건/증축 시작
+  Type: message
+- Name: upgrade_building_started.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: upgrade_building_started.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: upgrade_building_started.level_before
+  Description: 이전 성물 레벨. 재건일 땐 안쌓이고 증축인 경우에만 쌓임
+  Type: int64
+- Name: upgrade_building_started.level
+  Description: 업그레이드 목표 레벨
+  Type: int64
+- Name: upgrade_building_started.construction_queue
+  Description: 사용하고 있는 대기열 번호
+  Type: int64
+- Name: upgrade_building_finished
+  Description: 성물 재건/증축 완료
+  Type: message
+- Name: upgrade_building_finished.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: upgrade_building_finished.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: upgrade_building_finished.level_before
+  Description: 이전 레벨
+  Type: int64
+- Name: upgrade_building_finished.level
+  Description: 레벨
+  Type: int64
+- Name: upgrade_building_finished.construction_queue
+  Description: 사용한 대기열 번호
+  Type: int64
+- Name: reduce_building_upgrade
+  Description: 성물 재건/증축 시간 감소 (축원서 사용)
+  Type: message
+- Name: reduce_building_upgrade.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reduce_building_upgrade.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: reduce_building_upgrade.reduced_time
+  Description: 사용한 축원서의 총 감소시간 (초)
+  Type: int64
+- Name: reduce_building_upgrade.actual_reduced_time
+  Description: 실제 재건/증축 감소 시간 (초)
+  Type: int64
+- Name: harvest_building
+  Description: 성물 수확
+  Type: message
+- Name: harvest_building.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: harvest_building.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: harvest_building.items
+  Description: 아이템의 속성
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 아이템 개수
+      ColumnType: int64
+- Name: harvest_building.level
+  Description: 성물 레벨
+  Type: int64
+- Name: expand_construction_queue
+  Description: 대기열 추가
+  Type: message
+- Name: expand_construction_queue.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: expand_construction_queue.construction_queue_before
+  Description: 추가 전 대기열 수
+  Type: int64
+- Name: expand_construction_queue.construction_queue
+  Description: 추가 후 대기열 수
+  Type: int64
+- Name: help_building
+  Description: 성물 재건/증축 지원
+  Type: message
+- Name: help_building.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: help_building.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: help_building.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: help_building.target_account_id
+  Description: 대상 계정 아이디 (스토브 GUID)
+  Type: int64
+- Name: help_building.help_count
+  Description: 빌딩이 지원 받은 횟수
+  Type: int64
+- Name: help_building.additional_help_count
+  Description: 추가로 지원 받을 수 있는 횟수
+  Type: int64
+- Name: instant_harvest_building_use
+  Description: 즉시 수확 아이템 사용
+  Type: message
+- Name: instant_harvest_building_use.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: instant_harvest_building_use.building_name
+  Description: 사용된 건물 이름
+  Type: string
+- Name: instant_harvest_building_use.building_level
+  Description: 사용된 건물 레벨
+  Type: int64
+- Name: instant_harvest_building_reward
+  Description: 즉시 수확 보상 획득
+  Type: message
+- Name: instant_harvest_building_reward.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: instant_harvest_building_reward.items
+  Description: 획득한 보상 목록
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_name
+      Description: 아이템 이름
+      ColumnType: string
+    - ColumnName: amount
+      Description: 아이템 개수
+      ColumnType: int64
+- Name: help_my_building
+  Description: 성물 재건/증축 지원 요청
+  Type: message
+- Name: help_my_building.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: help_my_building.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: help_my_building.building_id
+  Description: 건물 Id
+  Type: int64
+  Ref: building
+- Name: help_my_building.help_request_count
+  Description: 재건/증축 지원 요청을 할 수 있는 횟수
+  Type: int64
+- Name: create_guild
+  Description: 길드 생성
+  Type: message
+- Name: create_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: create_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: create_guild.name
+  Description: 길드명
+  Type: string
+- Name: create_guild.introduction
+  Description: 길드 소개 문구
+  Type: string
+- Name: create_guild.guild_mark_frame_id
+  Description: 길드 마크 프레임 Id
+  Type: int64
+  Ref: guild_mark
+- Name: create_guild.guild_mark_symbol_id
+  Description: 길드 마크 심볼 Id
+  Type: int64
+  Ref: guild_mark
+- Name: create_guild.guild_mark_color
+  Description: 길드 마크 색상
+  Type: string
+  Ref: guild_mark_color
+- Name: create_guild.guild_join_type
+  Description: 길드 가입 형태
+  Type: enum
+  Ref: log_guild_join_type
+- Name: create_guild.password
+  Description: 길드 가입 비밀번호
+  Type: string
+- Name: disband_guild
+  Description: 길드 해산
+  Type: message
+- Name: disband_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: disband_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: join_guild
+  Description: 길드 가입
+  Type: message
+- Name: join_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: join_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: request_join_guild
+  Description: 길드 가입 승인 요청
+  Type: message
+- Name: request_join_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: request_join_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: reply_join_guild
+  Description: 길드 가입 승인/거절
+  Type: message
+- Name: reply_join_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reply_join_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: reply_join_guild.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: reply_join_guild.denied
+  Description: 승인 거절 여부
+  Type: bool
+- Name: cancel_request_join_guild
+  Description: 길드 가입 승인 요청 취소
+  Type: message
+- Name: cancel_request_join_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: cancel_request_join_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: leave_guild
+  Description: 길드 탈퇴
+  Type: message
+- Name: leave_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: leave_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: banish_guild
+  Description: 길드 추방
+  Type: message
+- Name: banish_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: banish_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: banish_guild.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: propose_ally_guild
+  Description: 길드 동맹 요청
+  Type: message
+- Name: propose_ally_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: propose_ally_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: propose_ally_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: cancel_propose_ally_guild
+  Description: 길드 동맹 요청 취소
+  Type: message
+- Name: cancel_propose_ally_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: cancel_propose_ally_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: cancel_propose_ally_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: reply_ally_guild
+  Description: 길드 동맹 요청 수락/거절
+  Type: message
+- Name: reply_ally_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reply_ally_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: reply_ally_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: reply_ally_guild.denied
+  Description: 승인 거절 여부
+  Type: bool
+- Name: dis_ally_guild
+  Description: 길드 동맹 해제
+  Type: message
+- Name: dis_ally_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: dis_ally_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: dis_ally_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: add_hostile_guild
+  Description: 적대 길드 등록
+  Type: message
+- Name: add_hostile_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: add_hostile_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: add_hostile_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: propose_hostile_guild
+  Description: 적대 길드 등록 요청
+  Type: message
+- Name: propose_hostile_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: propose_hostile_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: propose_hostile_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: propose_hostile_guild.reason
+  Description: 적대 길드 등록 요청 사유
+  Type: string
+- Name: decline_hostile_guild_proposal
+  Description: 적대 길드 등록 요청 거절
+  Type: message
+- Name: decline_hostile_guild_proposal.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: decline_hostile_guild_proposal.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: decline_hostile_guild_proposal.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: remove_hostile_guild
+  Description: 적대 길드 등록 해제
+  Type: message
+- Name: remove_hostile_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: remove_hostile_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: remove_hostile_guild.target_guild_id
+  Description: 대상 길드 아이디
+  Type: int64
+- Name: update_guild_info
+  Description: 길드 정보 업데이트
+  Type: message
+- Name: update_guild_info.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_guild_info.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: update_guild_info.guild_join_type
+  Description: 길드 가입 형태
+  Type: enum
+  Ref: log_guild_join_type
+- Name: update_guild_info.introduction_before
+  Description: 이전 길드 소개 문구
+  Type: string
+- Name: update_guild_info.introduction
+  Description: 이후 길드 소개 문구
+  Type: string
+- Name: update_guild_info.notice_before
+  Description: 이전 길드 공지사항
+  Type: string
+- Name: update_guild_info.notice
+  Description: 이후 길드 공지사항
+  Type: string
+- Name: update_guild_info.guild_mark_frame_id_before
+  Description: 이전 길드 마크 프레임 Id
+  Type: int64
+  Ref: guild_mark
+- Name: update_guild_info.guild_mark_frame_id
+  Description: 이후 길드 마크 프레임 Id
+  Type: int64
+  Ref: guild_mark
+- Name: update_guild_info.guild_mark_symbol_id_before
+  Description: 이전 길드 마크 심볼 Id
+  Type: int64
+  Ref: guild_mark
+- Name: update_guild_info.guild_mark_symbol_id
+  Description: 이후 길드 마크 심볼 Id
+  Type: int64
+  Ref: guild_mark
+- Name: update_guild_info.guild_mark_color_before
+  Description: 이전 길드 마크 색상
+  Type: string
+  Ref: guild_mark_color
+- Name: update_guild_info.guild_mark_color
+  Description: 이후 길드 마크 색상
+  Type: string
+  Ref: guild_mark_color
+- Name: update_guild_info.password_before
+  Description: 이전 길드 가입 비밀번호
+  Type: string
+- Name: update_guild_info.password
+  Description: 이후 길드 가입 비밀번호
+  Type: string
+- Name: update_guild_member_role
+  Description: 길드원 등급 변경
+  Type: message
+- Name: update_guild_member_role.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_guild_member_role.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: update_guild_member_role.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: update_guild_member_role.guild_role_id_before
+  Description: 이전 길드 등급 Id
+  Type: int64
+  Ref: guild_role
+- Name: update_guild_member_role.guild_role_id
+  Description: 이후 길드 등급 Id
+  Type: int64
+  Ref: guild_role
+- Name: delegate_guild_master
+  Description: 길드장 변경
+  Type: message
+- Name: delegate_guild_master.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delegate_guild_master.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: delegate_guild_master.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: update_guild_member_introduction
+  Description: 길드원 소개 문구 변경
+  Type: message
+- Name: update_guild_member_introduction.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_guild_member_introduction.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: update_guild_member_introduction.introduction
+  Description: 길드원 소개 문구
+  Type: string
+- Name: contribute_guild
+  Description: 길드 기여도 변화
+  Type: message
+- Name: contribute_guild.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: contribute_guild.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: contribute_guild.contribution
+  Description: 기여도
+  Type: int64
+- Name: contribute_guild.weekly_contribution
+  Description: 주간 기여도
+  Type: int64
+- Name: contribute_guild.total_contribution
+  Description: 총 기여도
+  Type: int64
+- Name: contribute_guild.reason
+  Description: 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: change_guild_item
+  Description: 길드 아이템 변동
+  Type: message
+- Name: change_guild_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_guild_item.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: change_guild_item.item_id
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: change_guild_item.item_uuid
+  Description: 아이템 UUID
+  Type: string
+- Name: change_guild_item.amount_before
+  Description: 변동 전 수량
+  Type: int64
+- Name: change_guild_item.amount
+  Description: 변동 후 수량
+  Type: int64
+- Name: change_guild_item.reason
+  Description: 변동 사유
+  Type: enum
+  Ref: log_reason
+- Name: acquire_guild_collection
+  Description: 길드 연구 완료
+  Type: message
+- Name: acquire_guild_collection.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: acquire_guild_collection.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: acquire_guild_collection.guild_collection_id
+  Description: 길드 연구 Id
+  Type: int64
+  Ref: guild_collection
+- Name: contribute_guild_collection
+  Description: 길드 연구 지원
+  Type: message
+- Name: contribute_guild_collection.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: contribute_guild_collection.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: contribute_guild_collection.guild_collection_id
+  Description: 길드 연구 Id
+  Type: int64
+  Ref: guild_collection
+- Name: contribute_guild_collection.level
+  Description: 길드 연구 레벨
+  Type: int64
+- Name: contribute_guild_collection.progress
+  Description: 길드 연구 진행도
+  Type: int64
+- Name: contribute_guild_collection.achieved_at
+  Description: 길드 연구 지원 후 다음 연구 지원 횟수 계산을 위한 시각
+  Type: string
+- Name: contribute_additional_guild_collection
+  Description: 길드 연구 추가 지원
+  Type: message
+- Name: contribute_additional_guild_collection.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: contribute_additional_guild_collection.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: contribute_additional_guild_collection.guild_collection_id
+  Description: 길드 연구 Id
+  Type: int64
+  Ref: guild_collection
+- Name: contribute_additional_guild_collection.level
+  Description: 길드 연구 레벨
+  Type: int64
+- Name: contribute_additional_guild_collection.progress
+  Description: 길드 연구 진행도
+  Type: int64
+- Name: promote_contribute_guild_collection
+  Description: 길드 연구 추천
+  Type: message
+- Name: promote_contribute_guild_collection.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: promote_contribute_guild_collection.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: promote_contribute_guild_collection.guild_collection_id
+  Description: 길드 연구 Id
+  Type: int64
+  Ref: guild_collection
+- Name: promote_contribute_guild_collection.level
+  Description: 길드 연구 레벨
+  Type: int64
+- Name: promote_contribute_guild_collection.promote
+  Description: 추천 여부
+  Type: bool
+- Name: store_to_guild_storage
+  Description: 길드 창고 보관
+  Type: message
+- Name: store_to_guild_storage.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: store_to_guild_storage.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: store_to_guild_storage.item_id
+  Description: 아이템 Id
+  Type: int64
+  Ref: item
+- Name: store_to_guild_storage.item_uuid
+  Description: 아이템 UUID
+  Type: string
+- Name: store_to_guild_storage.amount
+  Description: 수량
+  Type: int64
+- Name: start_quest
+  Description: "퀘스트 시작. 메인퀘스트, 업적, 의뢰, 이벤트, 시즌패스 등. 자동 시작 퀘스트의 경우 찍히지 않음"
+  Type: message
+- Name: start_quest.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: start_quest.quest_id
+  Description: 퀘스트 Id
+  Type: int64
+  Ref: quest
+- Name: start_quest.quest_category_id
+  Description: 퀘스트 카테고리 Id
+  Type: int64
+  Ref: quest_category
+- Name: complete_quest
+  Description: 퀘스트 완료
+  Type: message
+- Name: complete_quest.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: complete_quest.quest_id
+  Description: 퀘스트 Id
+  Type: int64
+  Ref: quest
+- Name: complete_quest.quest_category_id
+  Description: 퀘스트 카테고리 Id
+  Type: int64
+  Ref: quest_category
+- Name: complete_quest.step
+  Description: 퀘스트 완료 횟수. quest.yaml Goal의 StepAmount마다 보상을 받을 수 있는데 지금 몇 번째 스텝인지
+  Type: int64
+- Name: stop_quest
+  Description: 퀘스트 포기
+  Type: message
+- Name: stop_quest.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: stop_quest.quest_id
+  Description: 퀘스트 Id
+  Type: int64
+  Ref: quest
+- Name: stop_quest.quest_category_id
+  Description: 퀘스트 카테고리 Id
+  Type: int64
+  Ref: quest_category
+- Name: refresh_quest
+  Description: 퀘스트 목록 새로받기. 의뢰 새로고침 등
+  Type: message
+- Name: refresh_quest.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: refresh_quest.quest_category_id
+  Description: 퀘스트 카테고리 Id
+  Type: int64
+  Ref: quest_category
+- Name: refresh_quest.quest_ids_before
+  Description: 새로고침 전 퀘스트 목록. 20개가 넘으면 로그 분리 필요. 현재 데이터로는 넘지 않음
+  Type: "int64[]"
+- Name: refresh_quest.quest_ids
+  Description: 새로고침 후 퀘스트 목록. 20개가 넘으면 로그 분리 필요. 현재 데이터로는 넘지 않음
+  Type: "int64[]"
+- Name: change_pk_score
+  Description: PK 점수 변경
+  Type: message
+- Name: change_pk_score.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_pk_score.victim_character_uuid
+  Description: 사망자 캐릭터 UUID
+  Type: string
+- Name: change_pk_score.victim_guild_id
+  Description: 사망자 길드 아이디
+  Type: int64
+- Name: change_pk_score.victim_score_before
+  Description: 사망자 PK 전 PK 점수
+  Type: int64
+- Name: change_pk_score.victim_score
+  Description: 사망자 PK 후 PK 점수
+  Type: int64
+- Name: change_pk_score.killer
+  Description: 킬러 정보
+  Type: object
+  ArrayDescription:
+    - ColumnName: character_uuid
+      Description: 킬러 캐릭터 UUID
+      ColumnType: string
+    - ColumnName: guild_id
+      Description: 킬러 길드 아이디
+      ColumnType: int64
+    - ColumnName: pk_score_before
+      Description: 킬러 PK 전 PK 점수
+      ColumnType: int64
+    - ColumnName: pk_score
+      Description: 킬러 PK 후 PK 점수
+      ColumnType: int64
+- Name: change_pk_score.assistants
+  Description: 도움 정보. 최대 3건
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: character_uuid
+      Description: 도움 캐릭터 UUID
+      ColumnType: string
+    - ColumnName: guild_id
+      Description: 도움 길드 아이디
+      ColumnType: int64
+    - ColumnName: pk_score_before
+      Description: 도움 PK 전 PK 점수
+      ColumnType: int64
+    - ColumnName: pk_score
+      Description: 도움 PK 후 PK 점수
+      ColumnType: int64
+- Name: auto_attack
+  Description: 자동 사냥 시작
+  Type: message
+- Name: auto_attack.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: auto_attack.x
+  Description: x 좌표
+  Type: int64
+- Name: auto_attack.y
+  Description: y 좌표
+  Type: int64
+- Name: auto_attack.address_id
+  Description: 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: auto_attack.channel_id
+  Description: 채널 아이디
+  Type: string
+- Name: counter_attack
+  Description: 반격. PC에게 공격받은 경우 마지막 공격자를 타겟하는 기능
+  Type: message
+- Name: counter_attack.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: counter_attack.x
+  Description: x 좌표
+  Type: int64
+- Name: counter_attack.y
+  Description: y 좌표
+  Type: int64
+- Name: counter_attack.address_id
+  Description: 어드레스 Id
+  Type: int64
+  Ref: address
+- Name: counter_attack.channel_id
+  Description: 채널 아이디
+  Type: string
+- Name: counter_attack.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: counter_attack.reaction_time_millis
+  Description: 공격 받은 시점으로부터 반격까지 걸린 시간
+  Type: int64
+- Name: scorn_character
+  Description: 캐릭터 멸시
+  Type: message
+- Name: scorn_character.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: scorn_character.target_character_uuid
+  Description: 멸시 대상 캐릭터 UUID
+  Type: string
+- Name: scorn_character.target_guild_id
+  Description: 멸시 대상 길드 아이디
+  Type: int64
+- Name: scorn_character.description
+  Description: 멸시 메시지
+  Type: string
+- Name: scorn_character.emoji
+  Description: 멸시 이모지
+  Type: string
+- Name: scorn_character.record_pklog_scorn_id
+  Description: 멸시 Id
+  Type: int64
+  Ref: record_pklog_scorn
+- Name: scorn_character.left_scorn
+  Description: 멸시 남은 횟수
+  Type: int64
+- Name: scorn_character.expire_time
+  Description: 멸시 만료 시각
+  Type: string
+- Name: trace_character
+  Description: 날 죽인 사람 추적
+  Type: message
+- Name: trace_character.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: trace_character.target_character_uuid
+  Description: 날 죽인 사람 캐릭터 UUID
+  Type: string
+- Name: trace_character.target_guid_id
+  Description: 날 죽인 사람의 길드 아이디
+  Type: int64
+- Name: want_character
+  Description: 날 죽인 사람 척살령
+  Type: message
+- Name: want_character.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: want_character.pk_log_uuid
+  Description: 척살령을 요청한 pk log의 UUID
+  Type: string
+- Name: want_character.requester_guild_id
+  Description: 척살령을 요청한 사람의 길드 id
+  Type: int64
+- Name: change_ranking
+  Description: 랭킹 변동. 1000위 이내 까지만 찍힘.
+  Type: message
+- Name: change_ranking.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_ranking.ranking_type
+  Description: 해당하는 랭킹 타입
+  Type: string
+- Name: change_ranking.ranking_before
+  Description: 이전 랭킹
+  Type: int64
+- Name: change_ranking.ranking
+  Description: 이후 랭킹
+  Type: int64
+- Name: change_ranking.score_before
+  Description: 이전 점수
+  Type: int64
+- Name: change_ranking.score
+  Description: 이후 점수
+  Type: int64
+- Name: chagne_ranking.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: change_guild_ranking
+  Description: 길드 랭킹 변동
+  Type: message
+- Name: change_guild_ranking.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: int64
+- Name: change_guild_ranking.ranking_before
+  Description: 이전 길드 랭킹
+  Type: int64
+- Name: change_guild_ranking.ranking
+  Description: 이후 길드 랭킹
+  Type: int64
+- Name: change_guild_ranking.point_before
+  Description: 이전 길드 포인트
+  Type: int64
+- Name: change_guild_ranking.point
+  Description: 이후 길드 포인트
+  Type: int64
+- Name: change_guild_ranking.guild_id
+  Description: 길드 아이디
+  Type: int64
+- Name: change_ranking.guild_id
+  Description: 길드 id
+  Type: int64
+- Name: change_ranking_buffs
+  Description: 랭킹 버프 변동
+  Type: message
+- Name: change_ranking_buffs.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_ranking_buffs.ranking_type
+  Description: 해당하는 랭킹 타입
+  Type: string
+- Name: change_ranking.record_ranking_id_before
+  Description: 이전 기록실 랭킹 id
+  Type: int64
+  Ref: record_ranking
+- Name: change_ranking_buffs.record_ranking_id
+  Description: 현재 기록실 랭킹 id
+  Type: int64
+  Ref: record_ranking
+- Name: change_ranking_title
+  Description: 랭킹 칭호 변경
+  Type: message
+- Name: change_ranking_title.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_ranking_title.record_ranking_id_before
+  Description: 이전 기록실 랭킹 Id
+  Type: int64
+  Ref: record_ranking
+- Name: change_ranking_title.record_ranking_id
+  Description: 이후 기록실 랭킹 Id
+  Type: int64
+  Ref: record_ranking
+- Name: check_in_dungeon
+  Description: 던전 입장
+  Type: message
+- Name: check_in_dungeon.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: check_in_dungeon.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: check_out_dungeon
+  Description: 던전 퇴장
+  Type: message
+- Name: check_out_dungeon.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: check_out_dungeon.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: start_challenge
+  Description: 도전 던전 시작
+  Type: message
+- Name: start_challenge.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: start_challenge.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: end_challenge
+  Description: 도전 던전 종료
+  Type: message
+- Name: end_challenge.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: end_challenge.dungeon_id
+  Description: 던전 Id
+  Type: int64
+  Ref: dungeon
+- Name: end_challenge.play_time_millis
+  Description: 던전 플레이 시간 (ms)
+  Type: int64
+- Name: end_challenge.rank
+  Description: 도전 던전 랭킹
+  Type: int64
+- Name: end_challenge.success
+  Description: 도전 던전 성공 여부
+  Type: bool
+- Name: create_party
+  Description: 파티 생성
+  Type: message
+- Name: create_party.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: create_party.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: create_party.sequence
+  Description: 파티원 번호
+  Type: int64
+- Name: invite_party
+  Description: 파티 초대 요청
+  Type: message
+- Name: invite_party.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: invite_party.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: invite_party.invitee_character_uuid
+  Description: 초대받는 캐릭터의 UUID
+  Type: string
+- Name: confirm_party_invitation
+  Description: 파티 초대 응답
+  Type: message
+- Name: confirm_party_invitation.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: confirm_party_invitation.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: confirm_party_invitation.inviter_character_uuid
+  Description: 초대한 캐릭터의 UUID
+  Type: string
+- Name: confirm_party_invitation.accepted
+  Description: 수락 여부
+  Type: bool
+- Name: confirm_party_invitation.join_expire_at
+  Description: 파티 초대 만료 시각
+  Type: string
+- Name: confirm_party_invitation.sequence
+  Description: 파티 초대를 수락한 경우 파티원 번호
+  Type: int64
+- Name: cancel_party_invitation
+  Description: 파티 초대 취소. 파티 응답이 오기 전에 파티장이 취소하는 경우
+  Type: message
+- Name: cancel_party_invitation.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: cancel_party_invitation.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: cancel_party_invitation.invitee_character_uuid
+  Description: 초대받는 캐릭터의 UUID
+  Type: string
+- Name: leave_party
+  Description: 파티 탈퇴
+  Type: message
+- Name: leave_party.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: leave_party.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: leave_party.disconnect
+  Description: n분 동안 접속 종료로 인한 파티 탈퇴인지 여부
+  Type: bool
+- Name: disband_party
+  Description: 파티 해산
+  Type: message
+- Name: disband_party.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: disband_party.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: delegate_guild_master.auto
+  Description: 자동 위임 시 true
+  Type: bool
+- Name: delegate_party_host
+  Description: 파티장 위임
+  Type: message
+- Name: delegate_party_host.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: delegate_party_host.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: delegate_party_host.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: banish_party
+  Description: 파티에서 추방
+  Type: message
+- Name: banish_party.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: banish_party.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: banish_party.target_character_uuid
+  Description: 대상 캐릭터 UUID
+  Type: string
+- Name: change_party_rule
+  Description: 파티 규칙 변경. 현재는 아이템 루팅 방식 변경만 있음
+  Type: message
+- Name: change_party_rule.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: change_party_rule.party_id
+  Description: 파티 아이디
+  Type: int64
+- Name: change_party_rule.party_rule
+  Description: 파티 규칙
+  Type: enum
+  Ref: log_party_rule
+- Name: bid_request_hunting_zone
+  Description: 영토 입찰 요청 (입찰을 하기 전에 길드 마스터 등이 입찰 지정을 해야함)
+  Type: message
+- Name: bid_request_hunting_zone.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: bid_request_hunting_zone.current_main_season
+  Description: 로그가 발생했을 때의 메인 시즌
+  Type: int64
+- Name: bid_request_hunting_zone.current_sub_season
+  Description: 로그가 발생했을 때의 서브 시즌 (메인 시즌 끝났을 때는 0)
+  Type: int64
+- Name: bid_request_hunting_zone.character_uuid
+  Description: 입찰 요청한 캐릭터 UUID
+  Type: string
+- Name: bid_request_hunting_zone.hunting_zone_id
+  Description: 입찰 요청한 영토 Id
+  Type: int64
+  Ref: hunting_zone
+- Name: bid_hunting_zone
+  Description: 영토 입찰
+  Type: message
+- Name: bid_hunting_zone.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: bid_hunting_zone.current_main_season
+  Description: 로그가 발생했을 때의 메인 시즌
+  Type: int64
+- Name: bid_hunting_zone.current_sub_season
+  Description: 로그가 발생했을 때의 서브 시즌 (메인 시즌 끝났을 때는 0)
+  Type: int64
+- Name: bid_hunting_zone.character_uuid
+  Description: 입찰한 캐릭터 UUID
+  Type: string
+- Name: bid_hunting_zone.guild_id
+  Description: 입찰한 길드 ID
+  Type: int64
+- Name: bid_hunting_zone.hunting_zone_id
+  Description: 입찰한 영토 Id
+  Type: int64
+  Ref: hunting_zone
+- Name: bid_hunting_zone.bid_amount
+  Description: 입찰한 수량
+  Type: int64
+- Name: update_hunting_zone_owner
+  Description: 영토 소유 길드 변경된 경우
+  Type: message
+- Name: update_hunting_zone_owner.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: update_hunting_zone_owner.current_main_season
+  Description: 로그가 발생했을 때의 메인 시즌
+  Type: int64
+- Name: update_hunting_zone_owner.current_sub_season
+  Description: 로그가 발생했을 때의 서브 시즌 (메인 시즌 끝났을 때는 0)
+  Type: int64
+- Name: update_hunting_zone_owner.owner_main_season
+  Description: 소유 길드가 된 시즌의 메인 시즌
+  Type: int64
+- Name: update_hunting_zone_owner.owner_sub_season
+  Description: 소유 길드가 된 시즌의 서브 시즌
+  Type: int64
+- Name: update_hunting_zone_owner.owner_guild_id
+  Description: 소유 길드 ID. 0이면 길드 해산 등으로 소유 길드가 없어진 것
+  Type: int64
+- Name: update_hunting_zone_owner.hunting_zone_id
+  Description: 소유한 영토 Id
+  Type: int64
+  Ref: hunting_zone
+- Name: reward_hunting_zone_group_resource
+  Description: 영토를 소유한 경우 권역 내 쌓인 자원을 보상 받을 때
+  Type: message
+- Name: reward_hunting_zone_group_resource.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reward_hunting_zone_group_resource.current_main_season
+  Description: 로그가 발생했을 때의 메인 시즌
+  Type: int64
+- Name: reward_hunting_zone_group_resource.current_sub_season
+  Description: 로그가 발생했을 때의 서브 시즌 (메인 시즌 끝났을 때는 0)
+  Type: int64
+- Name: reward_hunting_zone_group_resource.owner_main_season
+  Description: 소유 길드가 된 시즌의 메인 시즌
+  Type: int64
+- Name: reward_hunting_zone_group_resource.owner_sub_season
+  Description: 소유 길드가 된 시즌의 서브 시즌
+  Type: int64
+- Name: reward_hunting_zone_group_resource.owner_guild_id
+  Description: 소유 길드 ID
+  Type: int64
+- Name: reward_hunting_zone_group_resource.hunting_zone_id
+  Description: 보상을 받은 영토 Id
+  Type: int64
+  Ref: hunting_zone
+- Name: reward_hunting_zone_group_resource.gold_amount
+  Description: 권역 내 쌓인 전체 골드 중 일정 비율에 따라 받은 금액 (수수료 차감 된 후 금액)
+  Type: int64
+- Name: reward_hunting_zone_group_resource.gold_fee
+  Description: 골드 수수료
+  Type: int64
+- Name: reward_hunting_zone_item
+  Description: 영토를 소유한 경우 입찰 1등으로 소유하게 되는 길드에게 주는 아이템 보상
+  Type: message
+- Name: reward_hunting_zone_item.host_name
+  Description: 로그가 발생한 서버 이름
+  Type: string
+- Name: reward_hunting_zone_item.current_main_season
+  Description: 로그가 발생했을 때의 메인 시즌
+  Type: int64
+- Name: reward_hunting_zone_item.current_sub_season
+  Description: 로그가 발생했을 때의 서브 시즌 (메인 시즌 끝났을 때는 0)
+  Type: int64
+- Name: reward_hunting_zone_item.owner_main_season
+  Description: 소유 길드가 된 시즌의 메인 시즌
+  Type: int64
+- Name: reward_hunting_zone_item.owner_sub_season
+  Description: 소유 길드가 된 시즌의 서브 시즌
+  Type: int64
+- Name: reward_hunting_zone_item.owner_guild_id
+  Description: 소유 길드 ID
+  Type: int64
+- Name: reward_hunting_zone_item.hunting_zone_id
+  Description: 보상을 받은 영토 Id
+  Type: int64
+  Ref: hunting_zone
+- Name: reward_hunting_zone_item.items
+  Description: 보상 아이템들
+  Type: "object[]"
+  ArrayDescription:
+    - ColumnName: item_id
+      Description: 아이템 Id
+      ColumnType: int64
+      Ref: item
+    - ColumnName: amount
+      Description: 아이템 수량
+      ColumnType: int64
+- Name: reward_hunting_zone_item.guild_members
+  Description: 보상을 받을 당시에 있던 길드원들의 캐릭터 UUID
+  Type: "string[]"

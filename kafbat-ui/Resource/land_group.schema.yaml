@@ -1,0 +1,24 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - BattleType
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    Inter:
+      type: boolean
+      default: false
+    Comment:
+      type: string
+    BattleType:
+      type: string
+      ref: battle_type

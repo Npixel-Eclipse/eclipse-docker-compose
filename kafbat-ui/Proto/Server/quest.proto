@@ -1,0 +1,647 @@
+syntax = "proto3";
+package quest;
+import "Common/item_common.proto";
+import "Common/property.proto";
+import "Common/kafka_key_common.proto";
+import "Common/callback.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.quest";
+option java_outer_classname = "QuestServiceProto";
+
+enum GoalType {
+  reserved 19, 29, 35, 42, 59, 67;
+  MONSTER_KILL = 0;
+  MOVE = 1;
+  LEVEL = 2;
+  TALK = 3;
+  USE_ITEM = 4;
+  GET_ITEM = 5;
+  PLAYER_KILL = 6;
+  ATTEND = 7;
+  COMPLETE_QUEST_CATEGORY = 8;
+  USE_ITEM_CATEGORY = 9;
+  GET_ITEM_CATEGORY = 10;
+  DISASSEMBLE_ITEM = 11;
+  CRAFT_ITEM = 12;
+  CRAFT_ITEM_CATEGORY = 13;
+  ENCHANT_ITEM = 14;
+  ENCHANT_ITEM_CATEGORY = 15;
+  GUILD_JOIN = 16;
+  PARTY_JOIN = 17;
+  COMPLETE_QUEST = 18;
+  PLAYER_DEAD = 20;
+  CHARACTER_STAT = 21;
+  MONSTER_KILL_BY_GROUP = 22;
+  DISASSEMBLE_ITEM_CATEGORY = 23;
+  RECIPE_MERGE = 24;
+  ENGRAVE_ITEM = 25;
+  ENGRAVE_ITEM_CATEGORY = 26;
+  MANUAL_MOVE = 27;
+  ENTER_PORTAL = 28;
+  LEAVE_LAND = 30;
+  BUILDING_CONSTRUCTION_COMPLETE = 31;
+  HARVEST_PRODUCE = 32;
+  HOLD_ITEM = 33;
+  BUILDING_CONSTRUCTION_START = 34;
+  DUNGEON_COMPLETE = 36;
+  GUILD_ATTEND = 37;
+  CONSUME_ITEM = 38;
+  ATTEND_ELAPSED_DAYS = 39;
+  BEHAVIOR = 40;
+  COMPLETED_ITEM_COLLECTION = 41;
+  HOSTILE_PLAYER_KILL = 43;
+  BATTLEGROUND_PLAYER_KILL = 44;
+  BATTLEGROUND_WIN = 45;
+  FORTRESS_SUPPORT = 46;
+  FORTRESS_SUPPORT_REQUEST = 47;
+  DUNGEON_RANKING = 48;
+  COMPLETED_ITEM_COLLECTION_CATEGORY_COUNT = 49;
+  COMBINATION_TRY = 50;
+  COMBINATION_MATCH = 51;
+  GUILD_CONTRIBUTION = 52;
+  GUILD_WEEKLY_CONTRIBUTION = 53;
+  CONTRIBUTE_GUILD_COLLECTION = 54;
+  EXPAND_ENCHANT_ITEM = 55;
+  EXPAND_ENCHANT_ITEM_CATEGORY = 56;
+  SELL_ITEM = 57;
+  SELL_ITEM_CATEGORY = 58;
+  ITEM_COLLECTION_CLEARED = 62;
+  BATTLEGROUND_PLAY = 63;
+  BATTLEGROUND_LOSS = 64;
+  BUY_ITEM = 65;
+  BUY_ITEM_CATEGORY = 66;
+  BUY_BM_SHOP_PRODUCT = 68;
+  NPC_INTERACTION = 69;
+}
+
+enum QuestState {
+  INACTIVE = 0;
+  ACTIVE = 1;
+  COMPLETED = 2;
+}
+
+message Goal {
+  reserved 5;
+  int64 id = 1;
+  int64 amount = 2;
+  int64 step = 3;
+  google.protobuf.Timestamp last_refresh = 4;
+}
+
+message Quest {
+  reserved 6, 4;
+  int64 quest_id = 1;
+  QuestState state = 2;
+  repeated Goal goals = 3;
+  google.protobuf.Timestamp created_at = 5;
+  optional int64 reward_rate = 7;
+}
+
+message Item {
+  bytes uuid = 1;
+  int64 item_id = 2;
+  optional int64 enchant_level = 3;
+  int64 amount = 4;
+}
+
+message OwnerProto {
+  oneof owner {
+    Account account = 1;
+    Guild guild = 2;
+  }
+  message Account {
+    int64 account_id = 1;
+    string character_uuid = 2;
+    string server = 3;
+  }
+  message Guild {
+    int64 guild_id = 1;
+  }
+}
+
+message AllCaches {
+  reserved 9, 7, 8;
+  QuestCache quest_cache = 1;
+  PcPropertyCache pc_property_cache = 2;
+  PcLevelCache pc_level_cache = 3;
+  GuildCache guild_cache = 4;
+  ItemCache item_cache = 5;
+  ItemCollectionCache item_collection_cache = 6;
+  QuestCategoryRefreshLevelCache quest_category_refresh_level_cache = 10;
+  UnlockedContentLimitCache unlocked_content_limit_cache = 12;
+  BuildingCache building_cache = 13;
+  CharacterInfoCache character_info_cache = 14;
+}
+
+message BufferedQuestRecordCache {
+  repeated QuestRecord quest_records = 1;
+  repeated string db_job_ids = 2;
+
+  message QuestRecord {
+    common.KafkaKey key = 1;
+    int64 timestamp = 2;
+    repeated Header headers = 3;
+    bytes character_uuid = 4;
+    oneof value {
+      bytes command = 5;
+      bytes request = 6;
+    }
+  }
+
+  message Header {
+    string key = 1;
+    bytes value = 2;
+  }
+}
+
+message QuestCache {
+  reserved 4, 5, 8, 10, 11, 12, 13, 1003, 1004, 1002, 9, 14;
+  repeated Quest quests = 1;
+  google.protobuf.Timestamp last_content_init_at = 2;
+  google.protobuf.Timestamp last_period_processed_at = 3;
+  google.protobuf.Timestamp auto_quest_requested_at = 6;
+  int64 auto_quest_id = 7;
+  string auto_quest_category_auto_name = 15;
+  int64 last_changed_at = 1000;
+  google.protobuf.Timestamp last_synced_at = 1001;
+  OwnerProto owner = 1005;
+}
+
+message PcPropertyCache {
+  int64 account_id = 3;
+  string character_uuid = 1;
+  repeated common.Property properties = 2;
+}
+
+message PcLevelCache {
+  reserved 3;
+  int64 account_id = 4;
+  string character_uuid = 1;
+  int64 level = 2;
+  //int64 max_level = 3;
+}
+
+message GuildCache {
+  int64 account_id = 7;
+  string character_uuid = 1;
+  optional GuildInfo guild_info = 2;
+
+  message GuildInfo {
+    reserved 2, 3;
+    int64 guild_id = 1;
+    //int64 guild_honor = 2; deprecated
+    //google.protobuf.Timestamp guild_honor_last_refresh = 3; deprecated
+    int64 guild_contribution = 4;
+    int64 guild_weekly_contribution = 5;
+  }
+}
+
+
+message ItemCache {
+  reserved 1, 3, 4;
+  int64 account_id = 5;
+  string character_uuid = 6;
+  repeated Item items = 2;
+}
+
+message CharacterInfoCache {
+  string character_uuid = 1;
+  int64 class_id = 2;
+  string server = 3;
+}
+
+message BuildingCache {
+  int64 account_id = 3;
+  string character_uuid = 1;
+  repeated Building buildings = 2;
+}
+
+message ItemCollectionCache {
+  int64 account_id = 2;
+  string character_uuid = 1;
+  repeated CompletedItemCollectionCategory completed_item_collection_categories = 3;
+}
+
+message QuestCategoryRefreshLevelCache {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  repeated QuestCategoryRefreshLevelProto QuestCategoryRefreshLevels = 3;
+
+  message QuestCategoryRefreshLevelProto {
+    int64 quest_category_id = 1;
+    int64 level = 2;
+    google.protobuf.Timestamp created_at = 3;
+  }
+}
+
+message UnlockedContentLimitCache {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string server = 3;
+  repeated int64 unlocked_content_limit_ids = 4;
+}
+
+message Building {
+  string building_name = 1;
+  int64 building_level = 2;
+}
+
+message EnchantInfo {
+  int64 level = 1;
+  bool success = 2;
+}
+
+message CompletedItemCollectionCategory {
+  string item_collection_category_name = 1;
+  repeated string item_collection_names = 2;
+}
+
+
+message QuestCommand {
+  reserved 29, 31, 13, 21, 22, 35, 2003, 37, 8, 45, 54, 25, 49;
+  oneof command {
+    ItemUpdateCommand item_update_command = 1;
+    EngraveGoalUpdateCommand engrave_goal_update_command = 2;
+    EnchantSuccessGoalUpdateCommand enchant_success_goal_update_command = 3;
+    GoalUpdateCommand goal_update_command = 4;
+    EnchantFailureGoalUpdateCommand enchant_failure_goal_update_command = 5;
+    SaveCommand save_command = 6;
+    LevelUpdateCommand level_update_command = 7;
+    AutoQuestSelectionCommand auto_quest_selection_command = 9;
+    CraftGoalUpdateCommand craft_goal_update_command = 10;
+    TerritoryUpdateCommand territory_update_command = 11;
+    InitializeItemCacheCommand initialize_item_cache_command = 12;
+    BuildingConstructionStartCommand building_construction_start_command = 14;
+    GuildAttendGoalUpdateCommand guild_attend_goal_update_command = 15;
+    HandleItemConsumeSuccessCommand handle_item_consume_success_command = 16;
+    HandleItemConsumeFailureCommand handle_item_consume_failure_command = 17;
+    PcPropertyUpdateCommand pc_property_update_command = 18;
+    BuildingUpdateCommand building_update_command = 19;
+    MonsterKillGoalUpdateCommand monster_kill_goal_update_command = 20;
+    GiveQuestCommand give_quest_command = 23;
+    CompletedItemCollectionUpdateCommand completed_item_collection_update_command = 24;
+    HandlePlayerKillCommand handle_player_kill_command = 26;
+    DungeonRankingUpdateCommand dungeon_ranking_update_command = 27;
+    RefreshQuestCategoryCommand refresh_quest_category_command = 28;
+    MergeGoalUpdateCommand merge_goal_update_command = 30;
+    GuildMemberUpdateCommand guild_member_update_command = 32;
+    ContentInitializationCommand content_initialization_command = 33;
+    FetchActiveQuestTargetsCommand fetch_active_quest_targets_command = 34;
+    SyncQuestCommand sync_quest_command = 36;
+    PcLandUpdateCommand pc_land_update_command = 38;
+    CompletedQuestGoalUpdateCommand completed_quest_goal_update_command = 39;
+    CompleteQuestWithSlotSuccessCommand complete_quest_with_slot_success_command = 40;
+    CompleteQuestWithSlotFailureCommand complete_quest_with_slot_failure_command = 41;
+    CompleteQuestCommand complete_quest_command = 42;
+    CombinationUpdateCommand combination_update_command = 43;
+    GuildContributionUpdateCommand guild_contribution_update_command = 44;
+    PushGuildQuestListCommand push_guild_quest_list_command = 46;
+    PushQuestEventToFront push_quest_event_to_front = 47;
+    ExpandEnchantGoalUpdateCommand expand_enchant_goal_update_command = 48;
+    BattlegroundResultCommand battleground_result_command = 51;
+    LoadedCache loaded_cache = 52; // for db load
+    BuyItemGoalUpdateCommand buy_item_goal_update_command = 53;
+    BuyBmShopProductGoalUpdateCommand buy_bm_shop_product_goal_update_command = 55;
+    NpcInteractionGoalUpdateCommand npc_interaction_goal_update_command = 56;
+    StopAutoQuestCommand stop_auto_quest_command = 57;
+    AddCommand add_command = 2000; // for test
+    RemoveCommand remove_command = 2001; // for test
+    RefreshAttendCommand refresh_attend_command = 2002; // for test
+    InitializeQuestCreatedAtCommand initialize_quest_created_at_command = 2004; // for test
+    ResetQuestCategoryCommand reset_quest_category_command = 2005; // for test
+    SkipTutorialCommand skip_tutorial_command = 2006; // for cheat
+    UnlockContentLimitCommand unlock_content_limit_command = 2007; // for cheat
+    AttendOnDateCommand attend_on_date_command = 2008; // for test
+    PrintQuestChainCommand print_quest_chain_command = 2009; // for cheat
+    CompleteHudGoalCommand complete_hud_goal_command = 2010; // for cheat
+    SaveAllQuestCacheCommand save_all_quest_cache_command = 2011; // for test
+    ResetAllAchievementsCommand reset_all_achievements_command = 2012; // for cheat
+    ResetRequestLimitCommand reset_request_limit_command = 2013; // for cheat
+  }
+
+  string character_uuid = 10000;
+
+  message GoalUpdateCommand {
+    GoalType goal_type = 1;
+    repeated string targets = 2;
+    int64 amount = 3;
+  }
+
+  message CommunityUpdateCommand{
+    GoalType goal_type = 1;
+    string target_name = 2;
+    int64 amount = 3;
+  }
+
+  message SaveCommand {
+    bool keep_cache = 1;
+  }
+  message LevelUpdateCommand {
+    int64 level = 1;
+  }
+  message AutoQuestSelectionCommand {
+    reserved 1, 4;
+    google.protobuf.Timestamp requested_at = 2;
+    oneof selection_target {
+      int64 quest_id = 3;
+      string quest_category_auto_name = 7;
+    }
+    common.CallbackCommand callback_command_on_success = 5;
+    common.CallbackCommand callback_command_on_failure = 6;
+  }
+  message StopAutoQuestCommand {
+    google.protobuf.Timestamp requested_at = 1;
+  }
+  message PcPropertyUpdateCommand {
+    repeated common.Property properties = 1;
+  }
+  message ResetQuestCategoryCommand {
+    int64 quest_category_id = 1;
+  }
+  message MonsterKillGoalUpdateCommand {
+    string target_name = 1;
+    repeated string target_group_names = 2;
+    int64 amount = 3;
+    string npc_type_name = 4;
+  }
+
+  message ItemUpdateCommand {
+    repeated ChangedItem changed_items = 1;
+    common.Reason reason = 2;
+    message ChangedItem {
+      string uuid = 1;
+      int64 item_id = 2;
+      optional int64 enchant_level = 3;
+      int64 amount = 4;
+      int64 change_amount = 5;
+    }
+  }
+
+  message CraftGoalUpdateCommand {
+    optional int64 item_id = 1; // RecipeOutput이 Category만 지정 된 경우 해당 값이 없을 수 있습니다. (ex. 변신 합성)
+    repeated RecipeResult recipe_results = 2;
+
+    message RecipeResult {
+      string recipe_result_type = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message GuildMemberUpdateCommand {
+    optional int64 guild_id = 1;
+  }
+
+  message ContentInitializationCommand {}
+
+  message FetchActiveQuestTargetsCommand {}
+
+  message SyncQuestCommand {
+    repeated string quests = 1;
+  }
+
+  message GuildHonorUpdateCommand{
+    int64 guild_id = 1;
+    int64 honor = 2;
+    google.protobuf.Timestamp last_refresh = 3;
+  }
+
+  message PcLandUpdateCommand {
+    string land_name = 1;
+  }
+
+  message CompletedQuestGoalUpdateCommand {
+    //repeated int64 quest_ids = 1;
+    repeated QuestCompletionDetail quest_completion_details = 2;
+    message QuestCompletionDetail {
+      int64 quest_id = 1;
+      int64 complete_count = 2;
+    }
+  }
+
+  message QuestCompletionDetail {
+    Quest previous_quest = 1;
+    int64 complete_count = 2;
+  }
+
+  message CompleteQuestWithSlotSuccessCommand {
+    repeated QuestCompletionDetail quest_completion_details = 1;
+    optional int64 guild_id = 2;
+    google.protobuf.Timestamp requested_at = 3;
+    optional int64 auto_quest_trigger_id = 4;
+  }
+
+  message CompleteQuestWithSlotFailureCommand {
+    repeated QuestCompletionDetail quest_completion_details = 1;
+    optional int64 guild_id = 2;
+    google.protobuf.Timestamp requested_at = 3;
+    optional int64 auto_quest_trigger_id = 4;
+  }
+  message CompleteQuestCommand {
+    repeated int64 quest_ids = 1;
+    bool prevent_repeat = 2; // prevent_repeat 값이 true인 경우 반복 완료를 막는다.
+    google.protobuf.Timestamp auto_quest_requested_at = 4;
+    optional int64 auto_quest_trigger_id = 5;
+  }
+
+  message CombinationUpdateCommand {
+    //repeated MatchedCombination matched_combination = 1;
+    string combination_grade = 2; // 고급 조합식(Uncommon), 일반 조합식(Common)
+    string combination_name = 3;
+    int64 matched_count = 4;
+
+//    message MatchedCombination {
+//      string grade = 1;
+//      string combination_grade = 2; // 고급 조합식, 일반 조합식
+//      int64 count = 3;
+//    }
+  }
+
+  message EngraveGoalUpdateCommand {
+    int64 item_id = 1;
+    int64 enchant_level = 2;
+  }
+
+  message EnchantSuccessGoalUpdateCommand {
+    int64 item_id = 1;
+    repeated int64 enchant_level_sequence = 2;
+  }
+
+  message EnchantFailureGoalUpdateCommand {
+    int64 item_id = 1;
+    int64 previous_enchant_level = 2;
+  }
+
+  message RefreshQuestCategoryCommand {
+    int64 quest_category_id = 1;
+    int64 previous_level = 2;
+    int64 next_level = 3;
+  }
+
+  message MergeGoalUpdateCommand {
+    string recipe_output_name = 1;
+    repeated RecipeResult recipe_results = 2;
+
+    message RecipeResult {
+      string recipe_result_type = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message TerritoryCheckCommand {
+    int64 quest_id = 1;
+  }
+  message TerritoryUpdateCommand {
+    repeated string territories = 1;
+  }
+  message AddCommand {// Test용
+    int64 quest_id = 1;
+    bool ignore_if_have = 2;
+  }
+  message RemoveCommand {// Test용
+    int64 quest_id = 1;
+  }
+  message FetchQuestCategoryCommand {
+    int64 quest_category_id = 1;
+  }
+  message ListHudCommand {}
+  message ResetPeriodicQuestCommand {}
+  message RefreshAttendCommand {}
+  message ListCommand {
+    repeated int64 quest_category_ids = 1;
+  }
+  message InitializeQuestCreatedAtCommand {
+    int64 quest_category_id = 1;
+  }
+  message InitializeItemCacheCommand {
+    repeated Item items = 1;
+  }
+  message BuildingConstructionCompleteCommand {
+    string building_name = 1;
+    int64 building_level = 2;
+  }
+  message BuildingConstructionStartCommand {
+    string building_name = 1;
+    int64 next_building_level = 2;
+  }
+  message BuildingUpdateCommand {
+    repeated Building buildings = 1;
+  }
+  message GuildAttendGoalUpdateCommand {
+  }
+  message HandleItemConsumeSuccessCommand {
+    int64 quest_id = 1;
+    int64 goal_id = 2;
+    int64 previous_goal_amount = 3;
+    int64 expected_goal_amount = 4;
+  }
+  message HandleItemConsumeFailureCommand {
+    int64 quest_id = 1;
+    int64 goal_id = 2;
+  }
+  message GiveQuestCommand {
+    reserved 1;
+    repeated Quest give_quests = 2;
+    message Quest {
+      string quest_name = 1;
+      optional int64 reward_rate = 2;
+    }
+  }
+  message CompletedItemCollectionUpdateCommand {
+    repeated CompletedItemCollectionCategory completed_item_collection_categories = 1;
+    repeated CompletedItemCollectionCategory new_completed_item_collection_categories = 2;
+  }
+  message HandlePlayerKillCommand {
+    bool is_hostile = 1;
+    bool on_battleground = 2;
+  }
+  message DungeonRankingUpdateCommand {
+    int64 ranking = 1;
+    repeated string dungeon_names = 2;
+  }
+  message SkipTutorialCommand {
+  }
+  message UnlockContentLimitCommand {
+  }
+  message AttendOnDateCommand {
+    google.protobuf.Timestamp date = 1;
+  }
+  message PrintQuestChainCommand {
+    int64 quest_id = 1;
+  }
+  message CompleteHudGoalCommand {
+  }
+  message SaveAllQuestCacheCommand {
+  }
+  message ResetAllAchievementsCommand {
+  }
+  message ResetRequestLimitCommand {
+  }
+  message PushQuestEventToFront {
+    bytes quest_event = 1;
+  }
+  message GuildContributionUpdateCommand {
+    int64 guild_id = 1;
+    int64 contribution = 2;
+    int64 weekly_contribution = 3;
+  }
+  message PushGuildQuestListCommand {
+    int64 account_id = 1;
+    string character_uuid = 2;
+  }
+  message ExpandEnchantGoalUpdateCommand {
+    int64 item_id = 1;
+    int64 expand_step = 2;
+    bool success = 3;
+  }
+  message BattlegroundResultCommand {
+    bool is_win = 1;
+  }
+  message LoadedCache {
+    string jobId = 1;
+    AllCaches allCaches = 2;
+    string characterUuid = 3;
+  }
+  message BuyItemGoalUpdateCommand {
+    repeated BuyItem buy_items = 1;
+    message BuyItem {
+      int64 item_id = 1;
+      int64 amount = 2;
+      string merchant = 3;
+    }
+  }
+  message BuyBmShopProductGoalUpdateCommand {
+    repeated Product products = 1;
+    message Product {
+      string product_name = 1;
+      int64 amount = 2;
+    }
+  }
+  message NpcInteractionGoalUpdateCommand {
+    string npc_name = 1;
+    string npc_interaction_name = 2;
+  }
+}
+
+message QuestDbCommand {
+  string characterUuid = 1;
+
+  oneof command {
+    LoadDb load_db = 2;
+    SaveDb save_db = 3;
+  }
+}
+
+message LoadDb {
+  string jobId = 1;
+}
+message SaveDb {
+  AllCaches all_caches = 1;
+}
+
+message QuestCompleteEvent {
+  string character_uuid = 1;
+  repeated int64 quest_ids = 2;
+  google.protobuf.Timestamp completed_at = 3;
+}

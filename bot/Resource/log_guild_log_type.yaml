@@ -1,0 +1,27 @@
+- Name: JOIN
+  Comment: 길드 가입
+  Value: 0
+- Name: LEAVE
+  Comment: 길드 탈퇴
+  Value: 1
+- Name: BANISH
+  Comment: 길드 강퇴
+  Value: 2
+- Name: CHANGE_ROLE
+  Comment: 등급 변경
+  Value: 3
+- Name: GUILD_LEVEL_UP
+  Comment: 길드 레벨업
+  Value: 4
+- Name: HOSTILE
+  Comment: 적대 길드 등록
+  Value: 5
+- Name: DIS_HOSTILE
+  Comment: 적대 길드 등록 해제
+  Value: 6
+- Name: ALLY
+  Comment: 동맹 길드 등록
+  Value: 7
+- Name: DIS_ALLY
+  Comment: 동맹 길드 등록 해제
+  Value: 8

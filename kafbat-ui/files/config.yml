@@ -1,0 +1,16 @@
+server:
+  port: 18080
+
+kafka:
+  clusters:
+    - name: "공용 클러스터"
+      bootstrapServers: 192.168.121.91:9092,192.168.121.91:9093,192.168.121.91:9094
+      serde:
+      - name: "EclipseProtoSerde"
+        className: com.eclipse.KuiProtoSerde.KafbatUiProtoSerde
+        filePath: ./kui-proto-serde-1.4-SNAPSHOT.jar
+        properties:
+          resourceFileName: server_kafka_topic.yaml
+      - name: "EclipseKafkaKeySerde"
+        className: com.eclipse.KuiProtoSerde.KafbatUiKafkaKeySerde
+        filePath: ./kui-proto-serde-1.4-SNAPSHOT.jar

@@ -1,0 +1,487 @@
+syntax = "proto3";
+package battle;
+import "Common/property.proto";
+import "Common/server_time.proto";
+import "Common/guild_common.proto";
+import "Common/battle_common.proto";
+import "Common/item_common.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.battle";
+option java_outer_classname = "BattleServiceProto";
+
+// * -> battle
+message BattleCommand {
+  oneof message {
+    ChangeAddress change_address = 1;
+    common.UpsertBuff upsert_buff = 3;
+
+    NotifyInventoryEvent notify_inventory_event = 4; // 순수하게 inventory event만 전달
+
+    // Battleground
+    BattlegroundCommand.CreateSession create_battleground_session = 100;
+    BattlegroundCommand.EnterSession enter_battleground_session = 101;
+
+    // Matchmaking
+    MatchmakingCommand.AggregateMatchRateForStart aggregate_match_rate_for_start = 300;
+
+    common.SkillRequestFrom skill_request_from = 400;
+    common.TeleportRequestFrom teleport_request_from = 401;
+
+    // Guild
+    GuildItemEvent guild_item_event = 410;
+    SpawnGuildRaidSacrifice spawn_guild_raid_sacrifice = 411;
+
+    // buff
+    LoadBuffReply load_buff_reply = 500;
+    LoadAccountBuffReply load_account_buff_reply = 501;
+
+    // offline_mode
+    LoadOfflineModeReply load_offline_mode_reply = 550;
+
+    // schedule_state
+    LoadScheduleStateReply load_schedule_state_reply = 560;
+
+    // PkLog
+    ValidatePkLogTraceable validate_pk_log_traceable = 600;
+
+    // Ranking
+    UpdatePvpSeasonInfo update_pvp_season_info = 700;
+
+    // Weapon
+    UpdateWeaponItemId update_weapon_item_id = 800;
+
+    // relation
+    UpsertRelation upsert_relation = 900;
+
+
+
+    // User Activity (Front -> Battle for idle timeout tracking)
+    UserActivity user_activity = 901;
+
+    // 성소 서버에서 일괄 수확 후 혹은 새로운 성소가 건설 되었을 때 옴
+    NextHarvestFinish next_harvest_finish = 902;
+  }
+  reserved 1000;
+}
+
+// Front -> Battle: User activity notification for idle timeout tracking
+// key: account_id
+message UserActivity {
+  int64 account_id = 1;
+  int64 timestamp_ms = 2;
+  string message_name = 3;
+}
+
+message ChangeAddress {
+  int64 address_id = 1;
+  repeated common.Property insert_properties = 2;
+  repeated common.Property remove_properties = 3; // only key is required
+  repeated string insert_welcome_skills = 4;
+  repeated string remove_welcome_skills = 5;
+}
+
+message BattleStart {
+  string battle_name = 3;
+  string reply_topic = 4;
+  string msg_key = 100;
+}
+
+message BattleStartReply {
+  string msg_key = 1;
+  common.AtTime elapsed_time = 2;
+  int64 influx_index = 3;
+}
+
+message Welcome {
+  string character_uuid = 1;
+  string current_battle = 2; // 나중에 welcome consumer가 통합되면 reply_topic으로 변경 가능
+  bool character_created = 3;
+  string identifier = 4;
+}
+
+message BattleInfo {
+  message Land {
+    string name = 1;
+    int64 population = 2;
+  }
+  message LimitedItem {
+    int64 base_item_id = 1;
+    int64 remaining_amount = 2;
+  }
+  message Population {
+    string server_name = 1;
+    int64 population = 2;  
+  }
+
+  repeated Land lands = 100;
+  common.AtTime elapsed_time = 101;
+  int64 current_influx_index = 102;
+  int64 max_influx_index = 103;
+  reserved 104;
+  repeated LimitedItem limited_items = 105;
+  string identifier = 106; // 배틀 서버가 새로 뜰 때마다 값이 달라짐
+  int64 max_population = 107;
+  string cookie_name = 108;  // ALB sticky session 쿠키 이름
+  string cookie_value = 109; // ALB sticky session 쿠키 값 (서버 시작 시 생성)
+  bool auto_scaled = 110;
+  repeated Population populations = 111;
+}
+
+message BattleGroupInfo {
+  repeated BattleInfo battle_infos = 1;
+}
+
+
+message PcPropertyEvent {
+  string character_uuid = 1;
+  string character_name = 2;
+  repeated common.Property properties = 3;
+}
+
+message PcClass {
+  string class_name = 1;
+  string character_uuid = 2;
+}
+
+// 배틀서버 로그인 시, 레벨 변동이 있을 시 발송됨.
+message PcLevelEvent {
+  string character_uuid = 1;
+  string character_name = 2;
+
+  int32 level = 3;
+  int32 previous_level = 7;
+  ChangeType level_change_type = 4;
+
+  int32 max_level = 5;
+  ChangeType max_level_change_type = 6;
+
+  enum ChangeType {
+    NOT_CHANGED = 0; // 변화 없음.
+    UP = 1; // 레벨업
+    DOWN = 2; // 레벨다운
+  }
+}
+
+// 최대 레벨 변동이 있을 시 발송됨
+message PcMaxLevelEvent {
+  string character_uuid = 1;
+  string character_name = 2;
+  int32 level = 3;
+}
+
+message PcAddressEvent {
+  enum AddressType {
+    NONE = 0;
+    TOWN = 1;
+  }
+  AddressType address_type = 1;
+}
+
+// Land 변동이 있을 시 발송 됨
+message PcLandEvent {
+  string character_uuid = 1;
+  string land_name = 2;
+}
+
+// exp change event
+message PcExpEvent {
+  string character_uuid = 1;
+  int64 exp = 2;
+  int64 previous_exp = 3;
+  int64 max_level = 4;
+}
+
+message PcDeadEvent {
+  string character_uuid = 1;
+}
+
+message PcKilledEvent {
+  message PlayerInfo {
+    int64 account_id = 6;
+    bytes character_uuid = 1;
+    string name = 2;
+    optional int64 guild_id = 3;
+    optional string guild_name = 4;
+    optional common.GuildMark guild_mark = 5;
+    int64 max_level = 7;
+
+  }
+
+  message Assailant {
+    PlayerInfo player = 1;
+    int64 dealt_damage = 2;
+    int64 pk_score = 3;
+    int64 pk_score_before = 4;
+    int64 pk_score_after = 5;
+  }
+
+  message Victim{
+    PlayerInfo player = 1;
+    double loss_experience_ratio = 2;
+    int64 loss_experience = 3;
+    reserved 4;
+    repeated Item loss_items = 5;
+    int64 loss_pk_score = 6;
+    int64 level_at_death = 7;
+    int64 pk_score_before = 8;
+    int64 pk_score_after = 9;
+  }
+
+  message Item{
+    int64 item_id = 1;
+    int64 amount = 2;
+    repeated common.Property properties = 3;
+  }
+
+  Victim victim = 1;
+  Assailant killer = 2;
+  repeated Assailant assistants = 3;
+  string current_battle = 4;
+}
+
+// character command topic message from session server.
+message CharacterCommand {
+  oneof message {
+    Initialize  initialize = 1;
+    Delete      delete = 2;
+  }
+
+  message Initialize {
+    string account_uuid = 1;
+    string character_uuid = 2;
+    string session_key = 3;
+    string character_name = 4;
+    int32 class = 5;
+  }
+
+  message RemoveConnection {
+    string session_key = 1;
+  }
+
+  message Delete {
+
+  }
+}
+
+message GuildMemberUpdate {
+  string name = 1;
+  GuildSummary guild_summary = 2;
+  repeated int64 ally_guilds = 3;
+  repeated int64 hostile_guilds = 4;
+  EventType event = 5;
+  bool is_guild_master = 6;
+  optional google.protobuf.Timestamp joined_at = 7;
+
+  enum EventType {
+    NOTHING = 0;
+    SUBSCRIBE = 1;
+    CREATE = 2;
+    JOIN = 3;
+    LEAVE = 4;
+    BANISH = 5;
+    DISBAND = 6;
+    HOSTILE = 7;
+    DISHOSTILE = 8;
+    ALLY = 9;
+    DISALLY = 10;
+    CHANGE_ROLE = 11;
+  }
+
+  message GuildSummary {
+    int64 id = 1;
+    string name = 2;
+    common.GuildMark mark = 3;
+  }
+}
+
+message MatchmakingCommand {
+  // key: Account Uuid
+  // note: bulk 처리 할 수 없음. matchmaking 서버에서 받을 때 키를 변경해야 함.
+  message AggregateMatchRateForStart {
+    string character_uuid = 1;
+    repeated string property_name = 2;
+    bytes matchmaking_account_command_start = 3;
+  }
+}
+
+message BattlegroundCommand {
+  // key: Match UUID
+  message CreateSession {
+    string dungeon_name = 1;
+    repeated Team teams = 2;
+
+    message Team {
+      int64 team_id = 1;
+      repeated Player players = 2;
+      optional string start_skill_name = 3;
+      repeated string buff_name = 4;
+      optional string result_skill_name = 6;
+      optional string end_skill_name = 5;
+    }
+
+    message Player {
+      int64 account_id = 4;
+      string character_uuid = 2;
+      string character_name = 3;
+    }
+  }
+
+  // key: Account UUID
+  message EnterSession {
+    string character_uuid = 1;
+    string battleground_session_id = 2;
+  }
+}
+
+message NotifyInventoryEvent {
+  common.InventoryEvent inventory_event = 1;
+}
+
+message GuildItemEvent {
+  message Item {
+    string item_name = 1;
+    int64 amount = 2;
+    string uuid = 3;
+    google.protobuf.Timestamp updated_at = 4;
+  }
+  string character_uuid = 1;
+  repeated Item items = 2;
+  common.Reason reason = 3;
+}
+
+// 길드 레이드 희생 제물 소환 요청
+message SpawnGuildRaidSacrifice {
+  message Normal {
+  }
+  message Retry {
+    message NpcState {
+      int64 npc_id = 1;
+      int64 hp = 2;
+      int64 max_hp = 3;
+    }
+    repeated NpcState enemy_states = 1;
+  }
+
+  int64 guild_id = 1;
+  int64 guild_raid_id = 2;
+  bool jump_guild_raid = 3;
+  oneof raid_mode {
+    Normal normal = 20;
+    Retry retry = 21;
+  }
+}
+
+message LoadBuffReply {
+  string character_uuid = 1;
+  repeated common.BuffEvent buff_events = 2;
+  common.UpsertBuff current_buffs = 3;
+}
+
+message LoadAccountBuffReply {
+  repeated common.BuffEvent buff_events = 1;
+}
+
+message LoadOfflineModeReply {
+  int64 account_id = 1;
+  common.OfflineMode offline_mode = 2;
+}
+
+message LoadScheduleStateReply {
+  int64 account_id = 1;
+  // Inlined from schedule_state.ScheduleState to avoid transitive dependency
+  int64 auto_supply_remain_sec = 2;   // 남은 자동 보급 시간 (초)
+  int64 auto_supply_last_update = 3;  // 마지막 업데이트 타임스탬프
+  bool is_running = 4;                // 스케줄 실행 중 여부
+}
+
+// key: killer account id
+message ValidatePkLogTraceable {
+  string pk_log_uuid = 1;
+  int64 killer_account_id = 2;
+  string killer_character_uuid = 3;
+  int64 tracer_account_id = 4;
+  string tracer_character_uuid = 5;
+  int32 range = 6;
+}
+
+// key : battle name
+message UpdatePvpSeasonInfo {
+  int64 season = 1;
+  string server_name = 2;
+}
+
+message SessionCommand {
+  string target_battle = 1;
+
+  oneof command {
+    TransportOfflineMode transport_offline_mode = 2;
+  }
+
+  message TransportOfflineMode {
+    int64 account_id = 1;
+    string session_key = 2;
+    string character_uuid = 3;
+    string character_name = 4;
+    int64 character_class = 5;
+    google.protobuf.Duration remain_time = 6;
+    string role = 7;
+    string nation = 8;
+    string server = 9;
+  }
+
+  // todo: 접속 시 broadcasting -> 배틀에서는 자신 소유가 아닌 pc 제거
+}
+
+// WorldMapIcon cross-battle synchronization message (서버간 통신용)
+message WorldMapIconSyncEvent {
+  message AbyssIcon {
+    int64 object_id = 1;
+    int64 npc_id = 2;
+    common.ProtoCoordinate coordinate = 3;
+    int64 address_id = 4;
+    int64 land_id = 5;
+  }
+
+  message BossIcon {
+    int64 object_id = 1;
+    int64 npc_id = 2;
+    common.ProtoCoordinate coordinate = 3;
+    int64 address_id = 4;
+    int64 land_id = 5;
+  }
+
+  // For compact topic: complete current state of all icons in this battle
+  repeated AbyssIcon abyss_icons = 1; // 현재 battle의 모든 Abyss 아이콘
+  repeated BossIcon boss_icons = 2;   // 현재 battle의 모든 Boss 아이콘 (필드보스/던전보스 통합)
+}
+
+// ranking -> battle 서버 통신용
+message PkScoreResetEvent{
+  int64 season = 1;
+  string server_name = 2;
+}
+
+message UpdateWeaponItemId {
+  string character_uuid = 1;
+  int64 weapon_item_id = 2;
+}
+
+message UpsertRelation {
+  string character_uuid = 1;
+  repeated Context old_context = 2; // 삭제 시 사용
+  repeated Context new_context = 3; // 추가 시 사용
+
+  message Context {
+    string key = 1;
+    string value = 2;
+  }
+}
+
+message NextHarvestFinish {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  google.protobuf.Timestamp next_harvest_finish_at = 3;
+}

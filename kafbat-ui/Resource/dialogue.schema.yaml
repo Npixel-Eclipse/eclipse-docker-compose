@@ -1,0 +1,90 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Dialogues
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    
+    #다이얼로그가 출력되는 타이밍 설정
+    DisplayTiming:
+      type: string
+      default: Accept
+      enum:
+        - Accept #수락 시
+        - SpecificGoalAmount #Goal을 Amount만큼 달성했을 때
+        - Complete #완료 시
+        - CompleteReward #퀘스트 완료 보상을 수령했을 떄
+    
+    #DisplayTiming이 SpecificGoalAmount일 때, Amount를 정의
+    DisplayTimingGoalAmount:
+      type: integer
+      default: 0
+      minimum: 0
+
+    #DialogueType 정의
+    DialogueType:
+      type: string
+      default: Mini
+      enum:
+        - Mini
+        - Normal
+        - Tutorial
+  
+    #다이얼로그 세부 설정
+    Dialogues:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - SpeakerName
+          - Content
+          - PageEndTime
+          - PrintGuaranteeTime
+          - CanSkip
+        properties:
+          
+          #다이얼로그 화자의 이름 정의
+          SpeakerName:
+            type: string
+            ref: description
+            visible: true
+          
+          #다이얼로그 초상화 경로
+          #/Game/UIIcon/NPCPortrait/파일명.파일명 (ex. /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy)
+          PortraitIcon:
+            type: string
+          
+          #다이얼로그의 내용
+          #다이얼로그에서 사용하는 description 강조기능(ex. Blue00, Green00 등)은
+          #사용시 앞에 /를 붙여야 작동함. 그외 description은 기존 룰대로 적용
+          Content:
+            type: string
+            ref: description
+            visible: true
+          
+          #해당 다이얼로그가 출력되는 시간. 초 단위.
+          PageEndTime:
+            type: number
+          
+          #해당 다이얼로그를 스킵할 수 없는 최소 보장 출력 시간. 초 단위.
+          PrintGuaranteeTime:
+            type: number
+          
+          #해당 다이얼로그의 스킵 여부. true, false로 설정.
+          CanSkip:
+            type: boolean
+            default: true
+
+    #내부 확인을 위한 코멘트
+    Comment:
+      type: string

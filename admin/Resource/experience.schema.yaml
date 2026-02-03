@@ -1,0 +1,19 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Level
+    - CumulativeMaxExperience
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Level:
+      type: integer
+      minimum: 1
+    CumulativeMaxExperience:
+      type: integer
+      minimum: 1

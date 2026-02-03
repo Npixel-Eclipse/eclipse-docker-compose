@@ -1,0 +1,54 @@
+version: "3.3"
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: jenkins-dashboard-db
+    environment:
+      POSTGRES_USER: jenkins_user
+      POSTGRES_PASSWORD: jenkins_password
+      POSTGRES_DB: jenkins_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jenkins_user -d jenkins_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: jenkins-dashboard-backend
+    environment:
+      FRONTEND_URL: http://jenkins-status.eclipsestudio.co.kr
+      DATABASE_URL: postgresql://jenkins_user:jenkins_password@postgres:5432/jenkins_db
+      JENKINS_URL: http://192.168.121.101:8080
+      JENKINS_API_TOKEN: waterfog:114f51cb5d6f415745aee07d8ebe336200
+      JENKINS_JOB_PATH: view/Server/job/Build-Server-Docker-All
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://192.168.121.91:4000
+    container_name: jenkins-dashboard-frontend
+    environment:
+      NEXT_PUBLIC_API_URL: http://192.168.121.91:4000
+      API_URL: http://backend:4000
+    ports:
+      - "3009:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

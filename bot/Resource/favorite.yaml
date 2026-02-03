@@ -1,0 +1,36 @@
+- Id: 1
+  Name: WorldMapTeleportAddress
+  Comment: "[월드맵시스템] 자주 텔레포트하는 위치"
+  MaximumAmount: 100
+- Id: 2
+  Name: CraftRecipe
+  Comment: "[제작시스템] 제작 레시피"
+  MaximumAmount: 100
+- Id: 3
+  Name: Polymorph
+  Comment: "[초월시스템] 초월"
+  MaximumAmount: 100
+- Id: 4
+  Name: WeaponPolymorph
+  Comment: "[외형시스템] 무기외형"
+  MaximumAmount: 100
+- Id: 5
+  Name: TradeItem
+  Comment: "[거래소시스템] 즐겨찾기 아이템"
+  MaximumAmount: 100
+- Id: 6
+  Name: Achievement
+  Comment: "[업적시스템] 업적"
+  MaximumAmount: 100
+- Id: 7
+  Name: Collection
+  Comment: "[수집시스템] 수집"
+  MaximumAmount: 100
+- Id: 8
+  Name: Awakening
+  Comment: "[각성시스템] 각성"
+  MaximumAmount: 100
+- Id: 9
+  Name: Stat
+  Comment: "[캐릭터정보] 스탯"
+  MaximumAmount: 30

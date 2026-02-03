@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    RerunMaxTimeMS:
+      type: integer
+      default: 2000
+    GoalType:
+      type: string
+      ref: quest_goal_type
+  required:
+    - Id

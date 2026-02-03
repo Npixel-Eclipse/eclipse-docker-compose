@@ -1,0 +1,31 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Level
+    - CumulativeMaxExperience
+    - ItemCategory
+    - MasteryPoint
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Level:
+      type: integer
+      minimum: 0
+    CumulativeMaxExperience:
+      type: integer
+      minimum: 1
+    ItemCategory:
+      type: string
+      ref: item_category
+    MasteryPoint: # 레벨업 시 얻는 마스터리 포인트
+      type: integer
+      minimum: 0

@@ -1,0 +1,9 @@
+services:
+  bytebase-changelog:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: bytebase-changelog
+    network_mode: host
+    volumes:
+      - ./output:/output

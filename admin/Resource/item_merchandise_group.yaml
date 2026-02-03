@@ -1,0 +1,69 @@
+- Id: 1
+  Name: Basic_Goods_Merchandises
+  Type: Buy
+  Comment: 기본 잡화 상품 리스트
+- Id: 4
+  Name: Basic_SkillBook_Merchandises
+  Type: Buy
+  Comment: 기본 스킬북 상품 리스트
+  UITab:
+    - Name: UIWordAll
+      Description: UIWordAll
+      Group:
+        - Public
+        - Fighter
+        - Ranger
+        - Sorcerer
+        - Assassin
+    - Name: Fighter
+      TabIndex: 1
+      Description: Fighter
+      Class: Fighter
+      Group:
+        - Public
+        - Fighter
+    - Name: Ranger
+      TabIndex: 2
+      Description: Ranger
+      Class: Ranger
+      Group:
+        - Public
+        - Ranger
+    - Name: Sorcerer
+      TabIndex: 3
+      Description: Sorcerer
+      Class: Sorcerer
+      Group:
+        - Public
+        - Sorcerer
+    - Name: Assassin
+      TabIndex: 4
+      Description: Assassin
+      Class: Assassin
+      Group:
+        - Public
+        - Assassin
+- Id: 5
+  Name: Basic_Union_Merchandises
+  Type: Buy
+  Comment: 기본 아이템 통합 상품 리스트
+- Id: 864
+  Name: Basic_BattleGround_Merchandises
+  Type: Buy
+  Comment: 전장의 증표 상인 상품 리스트
+- Id: 2007
+  Name: Basic_Challenge_Merchandises
+  Type: Buy
+  Comment: 도전 던전 상인 상품 리스트
+- Id: 252
+  Name: Basic_Ancient_Merchandises
+  Type: Buy
+  Comment: 고대 증표 상인 상품 리스트
+- Id: 2877
+  Name: Basic_Sell_Merchandises
+  Type: Sell
+  Comment: 판매용 상점그룹
+- Id: 4046
+  Name: Guild_Merchandises
+  Type: Buy
+  Comment: 길드 상인 상품 리스트

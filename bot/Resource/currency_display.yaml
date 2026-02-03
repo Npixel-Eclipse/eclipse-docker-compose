@@ -1,0 +1,47 @@
+- Id: 1
+  Name: Main
+  DefaultTopBar: true
+  DisplayCurrency:
+    - CurrencyItem: CurrencyDiamond
+    - CurrencyItem: CurrencyGold
+- Id: 2
+  Name: ListDetails
+  PreviewCount: 3
+  DisplayCurrency:
+    - CurrencyItem: CurrencyDiamond
+    - CurrencyItem: CurrencyGold
+    - CurrencyItem: CurrencyMileage
+    - CurrencyItem: CurrencyGuildCoin
+    - CurrencyItem: CurrencyBattleGroundToken
+- Id: 3
+  Name: Guild
+  UITypeName: GuildMain
+  DisplayCurrency:
+    - CurrencyItem: Guild_Point
+      HasGuild: true
+- Id: 4
+  Name: HuntingZone
+  UITypeName: HuntingZone
+- Id: 5
+  Name: InGameShop
+- Id: 6
+  Name: Awakening
+  UITypeName: Awakening
+- Id: 7
+  Name: Fortress
+  Address: TestFortress_01
+  DisplayCurrency:
+    - CurrencyItem: CurrencySeongsoQueue
+    - CurrencyItem: CurrencySupport
+      HasGuild: true
+- Id: 8
+  Name: FortressPreview
+  UITypeName: FortressPreviewMainHUD
+  DisplayCurrency:
+    - CurrencyItem: CurrencySeongsoQueue
+    - CurrencyItem: CurrencySupport
+      HasGuild: true
+- Id: 9
+  Name: BMShop
+  UITypeName: BMShop
+

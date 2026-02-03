@@ -1,0 +1,241 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    GuildCollectionBenefitCategory:
+      type: string
+      ref: guild_collection_category
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MaxMemberCount
+              - RequiredLevelOnCreate
+              - RequiredGoldOnCreate
+              - MaxAllyCount
+              - MaxHostileCount
+              - MaxAllyProposalCount
+              - RedAlertRemainTimeSeconds
+          Value:
+            type: string
+            ref: constants
+          IntValue:
+            type: integer
+    Descriptions:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - GuildList
+              - CreateGuild
+              - GuildMember
+              - GuildRoleNormal
+              - GuildRoleMaster
+              - GuildRoleSubMaster
+              - GuildRoleRoyal
+              - Conncted
+              - DoNotConnected
+          Value:
+            type: string
+            ref: description
+    GuildItem:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - None
+              - Exp
+          GuildItemID:
+            type: string
+            ref: guild_item
+    GuildCollectionRewardFormat:      
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - ContentLimit
+              - AddMaxMember
+              - GuildMark
+              - Quest
+              - Buff
+              - UnlockMerchandise
+              - IncreasePurchaseLimit
+              - DecreaseContributeRechargeTime
+              - IncreaseContributeMaxCount
+              - IncreaseContributeRewards
+              - IncreaseHostileCount
+              - IncreaseAllianceCount
+              - DecreaseAcquireCollectionCost
+              - DistributionMethodType
+          FormatDescription:
+            type: string
+            ref: description
+    GuildStorageContentDescription:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ContentType:
+            type: string
+            enum:
+              - None
+              - HuntingZone
+              - Boss
+              - Auction
+          Description:
+            type: string
+            ref: description
+    AdditionalContribute:
+      type: string
+      ref: guild_contribute
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Join
+              - Main
+              - Proposal
+              - Mark
+              - Support
+              - Tech
+              - Management
+              - Log
+              - Storage
+              - Auction
+              - DistributionType
+              - StorageDistribution
+              - RaidReward
+          SubGroup:
+            type: string
+            enum:
+              - Create
+              - GuildList
+              - WaitApplyGuildList
+              - Summary
+              - MemberList
+              - Dungeon
+              - Quest
+              - Ranking
+              - Auction
+              - Shop
+              - Log_All
+              - Log_Guild
+              - Log_Relation
+              - Log_Tech
+              - Hostile
+              - Ally
+              - Proposal
+              - Frame
+              - Symbol
+              - MySupport
+              - MemberSupport
+              - Storage
+              - Storage_Storage
+              - Storage_Sell
+              - Storage_Share
+              - Storage_Log
+              - Tech
+              - Tech_Guild
+              - Tech_Battle
+              - Tech_Tactics
+              - Management_Info
+              - Management_Mark
+              - Management_Privilege
+              - DistributionType_Genaral
+              - StorageDistribution_Equal
+              - StorageDistribution_Point
+              - StorageDistribution_BossKill
+              - Auction_Main
+              - Auction_Log
+              - RaidReward_Reward
+              - RaidReward_Rank
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Enable:
+            type: boolean
+            default: true
+          Locked:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          GuildCollectionCategory:
+            type: string
+            ref: guild_collection_category
+          Description:
+            type: string
+            ref: description
+          SubDescription:
+            type: string
+            ref: description
+          ContentLimit: #컨텐츠 리밋
+            type: string
+            ref: content_limit
+          Privilege:
+            type: string
+            visible: true
+            enum:
+              - None
+              - UpdateInfo
+              - ApproveGuildJoin
+              - UpdatePrivilege
+              - UpdateRole
+              - BanishGuild
+              - AcquireGuildTrait # 연구 추천 및 연구 레벨 상승에 대한 권한
+              - ManageGuildRelation
+              - InviteGuild
+              - StorageStore # 길드 창고 보관 권한
+              - SellAndWithdraw # 길드 창고 판매 및 회수 권한
+              - Distribute # 길드 창고 일반 분배 권한
+            default: None
+          Comment:
+            type: string 
+    Merchant:
+      type: string
+      ref: item_merchant
+    GuildFortressUnlockCollection:
+      type: string
+      ref: guild_collection
+    GuildRaidMonsterSpawner:
+      type: string
+      ref: npc
+    GuildFortressAddress:
+      type: string
+      ref: address
+  required:
+    - Id
+    - Name

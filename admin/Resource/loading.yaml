@@ -1,0 +1,34 @@
+- Id: 1
+  Name: Loading
+  BG:
+    - Id: 1
+      Asset: /Game/UI/Loading_SP/Tex/Loading05.Loading05
+      MainDescription: Loading_Story_MainDesc05
+      SubDescription: Loading_Story_SubDesc05
+    - Id: 5
+      Asset: /Game/UI/Loading_SP/Tex/Loading04.Loading04
+      MainDescription: Loading_Story_MainDesc04
+      SubDescription: Loading_Story_SubDesc04
+    - Id: 9
+      Asset: /Game/UI/Loading_SP/Tex/Loading03.Loading03
+      MainDescription: Loading_Story_MainDesc03
+      SubDescription: Loading_Story_SubDesc03
+    - Id: 13
+      Asset: /Game/UI/Loading_SP/Tex/Loading02.Loading02
+      MainDescription: Loading_Story_MainDesc02
+      SubDescription: Loading_Story_SubDesc02
+    - Id: 17
+      Asset: /Game/UI/Loading_SP/Tex/Loading01.Loading01
+      MainDescription: Loading_Story_MainDesc01
+      SubDescription: Loading_Story_SubDesc01
+  Tooltip:
+    - Id: 61
+      Description: Loading_Tooltip02
+    - Id: 70
+      Description: Loading_Tooltip03
+    - Id: 495
+      Description: Loading_Tooltip07
+    - Id: 331
+      Description: Loading_Tooltip10
+    - Id: 669
+      Description: Loading_Tooltip11

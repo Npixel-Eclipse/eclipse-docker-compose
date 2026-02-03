@@ -1,0 +1,9 @@
+- Id: 1
+  Name: ItemSystem
+  Constants:
+    - Name: EnchantLevel
+      Value: EnchantLevel
+  EnchantedItemNameDesc: UIWord_Enchanted_Item_Name
+  EnchantedPolymorphNameDesc: UIWord_Enchanted_Polymorph_Name
+  SkillInventory: Skill
+  QuickItemEquipPopupMaintainingTime: 7.5

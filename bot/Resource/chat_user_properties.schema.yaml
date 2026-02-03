@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - guild_name
+        - guild_frame
+        - guild_frame_color
+        - guild_symbol
+        - ranking_mark_ids
+    MessageDisplay:
+      type: boolean
+      default: false
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - Comment
+    - MessageDisplay

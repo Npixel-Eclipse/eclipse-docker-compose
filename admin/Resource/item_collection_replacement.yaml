@@ -1,0 +1,14 @@
+- Id: 1
+  Name: TEST_Replacement
+  Comment: 대체품
+  Replacement:
+    - Id: 1
+      ReplacementItem: Item_Grown_Santuary_G1_T1_01
+    - Id: 2
+      ReplacementItem: Item_Grown_Santuary_G1_T1_01
+    - Id: 3
+      ReplacementItem: Item_Grown_Santuary_G1_T1_01
+    - Id: 4
+      ReplacementItem: Item_Grown_Santuary_G1_T1_01
+    - Id: 5
+      ReplacementItem: Item_Grown_Santuary_G1_T1_01

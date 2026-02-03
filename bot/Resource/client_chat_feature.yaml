@@ -1,0 +1,21 @@
+- Id: 1
+  Name: Chat
+  ChatMacroMaxCount: 9
+  DefaultMacro:
+    - Text: Chatting_Macro_Default01
+    - Text: Chatting_Macro_Default02
+    - Text: Chatting_Macro_Default03
+  InputHintDescription: UIWord_Chat_InputGuide
+  ChatTimeFormatDescription: UIWord_Chat_DateTimeFormat
+  ChatTypeInfo:
+    - ChatType: Whisper
+      InputSenderUserNameHintDescription: UIWord_Chat_WhisperUserInputGuide
+      SenderUserNameFormatDescription: UIWord_Chat_WhisperSenderUserNameFormat
+  EmojiInfo:
+    DataTableAsset: /Game/Common/UI/RichText_ImgDataTable.RichText_ImgDataTable
+    RowNameCondition: ChatEmoji
+    ChatEmojiFormatDescription: UIWord_Chat_Emoji_Format
+    ChatEmojiPrefix: <img id=
+  ItemInfo:
+    ChatLinkedDisplayItemFormatDescription: UIChat_LinkedDisplayItem_Format
+    ChatLinkedItemFormatDescription: UIChat_LinkedItem_Format

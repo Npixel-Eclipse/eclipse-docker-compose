@@ -1,0 +1,67 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    comment:
+      type: string
+    Mapcomment: #월드맵 코멘트 [월드맵] [포탈] 2종으로 구분
+      type: string 
+    PointType:
+      type: string
+      ref: worldmap_area_point_type
+    DisplayTerritory: #월드맵 / 던전맵에 지역 위치 표기용 territory
+      type: string
+      ref: territory
+    ArrivalTerritory:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Territory
+        properties:
+          Territory:
+            type: string
+            ref: territory
+    DisplayName: #던전 입구 이름 설정용, 던전 입구 외에는 DisplayAddress컬럼을 참조하여 Address 이름을 출력 
+      type: string 
+      ref: description
+    TeleportType: # 미입력 시 월드맵 텔레포트 제약 조건 없음
+      type: string
+      enum:
+        - Quest
+    CostItem:
+      type: string
+      ref: item
+      default: CurrencyGold
+    TeleportCost:
+      type: integer
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명 또는 /Game/UIIcon/Skill/파일명.파일명
+      type: string
+    RejectClientRequest:
+      type: boolean
+    DisplayAddress:
+      type: string
+      ref: address          
+    RecommendLevel: 
+      type: integer
+    DropItem: # 던전 층 대표 아이템, 데이터 순으로 정렬
+      type: array
+      items:
+        type: string
+        ref: item
+    DefaultSelect: # 월드맵, 영토관리에서 디폴트로 선택할 값
+      type: boolean
+    WorldBossSchedule: #월드보스 스케쥴 정보
+      type: string
+      ref: npc_spawn_schedule
+  required:
+    - Id
+    - Name

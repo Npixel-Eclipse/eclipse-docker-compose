@@ -1,0 +1,73 @@
+- Id: 1
+  Name: FortressHarvestAccelerationAll
+  BuffType: HarvestAcceleration
+  BuffProperty: FortressHarvestAcceleration_ALL
+  BuildingTarget:
+    Type: ALL
+- Id: 2
+  Name: FortressHarvestAccelerationStatueGoldSeongso
+  BuffType: HarvestAcceleration
+  BuffProperty: FortressHarvestAcceleration_Statue_Gold_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Gold_Seongso
+- Id: 3
+  Name: FortressHarvestAccelerationStatueAwakeningSeongso
+  BuffType: HarvestAcceleration
+  BuffProperty: FortressHarvestAcceleration_Statue_Awakening_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Awakening_Seongso
+- Id: 11
+  Name: FortressProductAmountAll
+  BuffType: ProductAmount
+  BuffProperty: FortressProductAmount_ALL
+  BuildingTarget:
+    Type: ALL
+- Id: 12
+  Name: FortressProductAmountStatueGoldSeongso
+  BuffType: ProductAmount
+  BuffProperty: FortressProductAmount_Statue_Gold_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Gold_Seongso
+- Id: 13
+  Name: FortressProductAmountStatueAwakeningSeongso
+  BuffType: ProductAmount
+  BuffProperty: FortressProductAmount_Statue_Awakening_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Awakening_Seongso
+- Id: 21
+  Name: FortressProductionTimeAll
+  BuffType: ProductionTime
+  BuffProperty: FortressProductionTime_ALL
+  BuildingTarget:
+    Type: ALL
+- Id: 22
+  Name: FortressProductionTimeStatueAwakeningSeongso
+  BuffType: ProductionTime
+  BuffProperty: FortressProductionTime_Statue_Awakening_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Awakening_Seongso
+- Id: 31
+  Name: FortressConstructionTimeAll
+  BuffType: ConstructionTime
+  BuffProperty: FortressConstructionTime_ALL
+  BuildingTarget:
+    Type: ALL
+- Id: 32
+  Name: FortressConstructionTimeStatueGoldSeongso
+  BuffType: ConstructionTime
+  BuffProperty: FortressConstructionTime_Statue_Gold_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Gold_Seongso
+- Id: 33
+  Name: FortressConstructionTimeStatueAwakeningSeongso
+  BuffType: ConstructionTime
+  BuffProperty: FortressConstructionTime_Statue_Awakening_Seongso
+  BuildingTarget:
+    Type: SINGLE
+    Building: Statue_Awakening_Seongso

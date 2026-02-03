@@ -1,0 +1,493 @@
+- Id: 1
+  Name: EnchantSkill
+  Comment: 스킬강화 확률
+  ContentType: EnchantSkill
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 2
+  Name: EnchantItem
+  Comment: 아이템강화 확률
+  ContentType: EnchantItem
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 4
+  Name: PolymorphSkin
+  Comment: 초월 확률
+  ContentType: PolymorphSkin
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 5
+  Name: EngraveItem
+  Comment: 세공 확률
+  ContentType: EngraveItem
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 6
+  Name: CraftItem
+  Comment: 제작 확률
+  ContentType: CraftItem
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 7
+  Name: BMShop
+  Comment: BM 확률
+  ContentType: BMShop
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 8
+  Name: Merge
+  Comment: 합성 확률
+  ContentType: Merge
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 9
+  Name: KeyboardGuide
+  Comment: 조작키 가이드
+  ContentType: KeyboardGuide
+  Guide:
+    - Id: 1
+      Name: Keyboard_Guide_01
+      LocalizedAsset: Keyboard_Guide_01
+      Description: UIWord_Keyboard_Guide_01
+    - Id: 2
+      Name: Keyboard_Guide_02
+      LocalizedAsset: Keyboard_Guide_02
+      Description: UIWord_Keyboard_Guide_02
+    - Id: 3
+      Name: Keyboard_Guide_03
+      LocalizedAsset: Keyboard_Guide_03
+      Description: UIWord_Keyboard_Guide_03
+    - Id: 4
+      Name: Keyboard_Guide_04
+      LocalizedAsset: Keyboard_Guide_04
+      Description: UIWord_Keyboard_Guide_04
+    - Id: 288
+      Name: Keyboard_Guide_05
+      LocalizedAsset: Keyboard_Guide_05
+      Description: UIWord_Keyboard_Guide_05
+- Id: 10
+  Name: CollectionGuide
+  Comment: 수집 가이드
+  ContentType: CollectionGuide
+  Guide:
+    - Id: 1
+      Name: Collection_Guide_01
+      LocalizedAsset: Collection_Guide_01
+      Description: UIWord_Collection_Guide_01
+    - Id: 2
+      Name: Collection_Guide_02
+      LocalizedAsset: Collection_Guide_02
+      Description: UIWord_Collection_Guide_02
+    - Id: 3
+      Name: Collection_Guide_03
+      LocalizedAsset: Collection_Guide_03
+      Description: UIWord_Collection_Guide_03
+- Id: 11
+  Name: MergeGuide
+  Comment: 합성 가이드
+  ContentType: MergeGuide
+  GuideFirstSetting: MergeGuideFirst
+  Guide:
+    - Id: 1
+      Name: Merge_Guide_01
+      LocalizedAsset: Merge_Guide_01
+      Description: UIWord_Merge_Guide_01
+    - Id: 2
+      Name: Merge_Guide_02
+      LocalizedAsset: Merge_Guide_02
+      Description: UIWord_Merge_Guide_02
+    - Id: 3
+      Name: Merge_Guide_03
+      LocalizedAsset: Merge_Guide_03
+      Description: UIWord_Merge_Guide_03
+- Id: 12
+  Name: MasteryGuide
+  Comment: 숙련도 가이드
+  ContentType: MasteryGuide
+  Guide:
+    - Id: 1
+      Name: Mastery_Guide_01
+      LocalizedAsset: Mastery_Guide_01
+      Description: UIWord_Mastery_Guide_01
+    - Id: 34
+      Name: Mastery_Guide_02
+      LocalizedAsset: Mastery_Guide_02
+      Description: UIWord_Mastery_Guide_02
+    - Id: 2
+      Name: Mastery_Guide_03
+      LocalizedAsset: Mastery_Guide_03
+      Description: UIWord_Mastery_Guide_03
+    - Id: 3
+      Name: Mastery_Guide_04
+      LocalizedAsset: Mastery_Guide_04
+      Description: UIWord_Mastery_Guide_04
+    - Id: 221
+      Name: Mastery_Guide_05
+      LocalizedAsset: Mastery_Guide_05
+      Description: UIWord_Mastery_Guide_05
+    - Id: 58
+      Name: FusionSkill_Guide_01
+      LocalizedAsset: FusionSkill_Guide_01
+      Description: UIWord_FusionSkill_Guide_01
+    - Id: 438
+      Name: FusionSkill_Guide_02
+      LocalizedAsset: FusionSkill_Guide_02
+      Description: UIWord_FusionSkill_Guide_02
+    - Id: 456
+      Name: FusionSkill_Guide_03
+      LocalizedAsset: FusionSkill_Guide_03
+      Description: UIWord_FusionSkill_Guide_03
+    - Id: 685
+      Name: FusionSkill_Guide_04
+      LocalizedAsset: FusionSkill_Guide_04
+      Description: UIWord_FusionSkill_Guide_04
+- Id: 13
+  Name: HuntingZoneGuide
+  Comment: 영토 관리 가이드
+  ContentType: HuntingZoneGuide
+  GuideFirstSetting: HuntingZoneGuideFirst
+  Guide:
+    - Id: 1
+      Name: HuntingZone_Guide_01
+      LocalizedAsset: HuntingZone_Guide_01
+      Description: UIWord_HuntingZone_Guide_01
+    - Id: 99
+      Name: HuntingZone_Guide_02
+      LocalizedAsset: HuntingZone_Guide_01
+      Description: UIWord_HuntingZone_Guide_02
+    - Id: 80
+      Name: HuntingZone_Guide_03
+      LocalizedAsset: HuntingZone_Guide_01
+      Description: UIWord_HuntingZone_Guide_03
+    - Id: 27
+      Name: HuntingZone_Guide_04
+      LocalizedAsset: HuntingZone_Guide_01
+      Description: UIWord_HuntingZone_Guide_04
+    - Id: 118
+      Name: HuntingZone_Guide_05
+      LocalizedAsset: HuntingZone_Guide_01
+      Description: UIWord_HuntingZone_Guide_05
+- Id: 15
+  Name: TradeGuide
+  Comment: 거래소 가이드
+  ContentType: TradeGuide
+  GuideFirstSetting: TradeGuideFirst
+  Guide:
+    - Id: 1
+      Name: Trade_Guide_01
+      LocalizedAsset: Trade_Guide_01
+      Description: UIWord_Trade_Guide_01
+    - Id: 99
+      Name: Trade_Guide_02
+      LocalizedAsset: Trade_Guide_02
+      Description: UIWord_Trade_Guide_02
+- Id: 16
+  Name: BMShopGuide
+  Comment: BM 상점 가이드
+  ContentType: BMShopGuide
+  GuideFirstSetting: BMShopGuideFirst
+  Guide:
+    - Id: 1
+      Name: BMShop_Guide_01
+      LocalizedAsset: BMShop_Guide_01
+      Description: UIWord_BMShop_Guide_01
+    - Id: 99
+      Name: BMShop_Guide_02
+      LocalizedAsset: BMShop_Guide_02
+      Description: UIWord_BMShop_Guide_02
+    - Id: 56
+      Name: BMShop_Guide_03
+      LocalizedAsset: BMShop_Guide_03
+      Description: UIWord_BMShop_Guide_03
+    - Id: 13
+      Name: BMShop_Guide_04
+      LocalizedAsset: BMShop_Guide_04
+      Description: UIWord_BMShop_Guide_04
+- Id: 17
+  Name: CraftMaterialGuide
+  Comment: 기초 재료 가이드
+  Guide:
+    - Id: 1
+      Name: CraftMaterial_Guide_01
+      LocalizedAsset: Trade_Guide_01
+      Description: UIWord_CraftMaterial_Guide_01
+- Id: 18
+  Name: TimeAccelerationGuide
+  Comment: 가속 축원서 가이드
+  Guide:
+    - Id: 1
+      Name: BMShop_Guide_01
+      LocalizedAsset: BMShop_Guide_01
+      Description: UIWord_BMShop_Guide_01
+    - Id: 99
+      Name: BMShop_Guide_02
+      LocalizedAsset: BMShop_Guide_02
+      Description: UIWord_BMShop_Guide_02
+- Id: 19
+  Name: ItemRandomOption
+  Comment: 아이템 랜덤옵션 확률
+  ContentType: ItemRandomOption
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 20
+  Name: RequestRefresh
+  Comment: 의뢰 새로고침 확률
+  ContentType: RequestRefresh
+  Url: https://static-pubcomm.onstove.com/live/eclipse/probability/probability.html
+- Id: 21
+  Name: Mastery_Tutorial
+  Comment: 숙련도 튜토리얼
+  TutorialType: Mastery_Tutorial
+  GuideFirstSetting: Mastery_Tutorial
+- Id: 22
+  Name: FlameAwakening_Tutorial
+  Comment: 각성의 불꽃 튜토리얼
+  TutorialType: FlameAwakening_Tutorial
+  GuideFirstSetting: FlameAwakening_Tutorial
+- Id: 23
+  Name: RuneCombine_Tutorial
+  Comment: 서판 조합 튜토리얼
+  TutorialType: RuneCombine_Tutorial
+  GuideFirstSetting: RuneCombine_Tutorial
+- Id: 24
+  Name: PolymorphSkinMerge_Tutorial
+  Comment: 초월/무기외형 합성 튜토리얼
+  TutorialType: PolymorphSkinMerge_Tutorial
+  GuideFirstSetting: PolymorphSkinMerge_Tutorial
+- Id: 25
+  Name: PolymorphSkinEnchant_Tutorial
+  Comment: 초월/무기외형 성장 튜토리얼
+  TutorialType: PolymorphSkinEnchant_Tutorial
+  GuideFirstSetting: PolymorphSkinEnchant_Tutorial
+- Id: 26
+  Name: FirstEnterAfterGuildJoin_Tutorial
+  Comment: 길드 가입 후 최초로 길드 화면에 입장 튜토리얼
+  TutorialType: FirstEnterAfterGuildJoin_Tutorial
+  GuideFirstSetting: FirstEnterAfterGuildJoin_Tutorial
+- Id: 27
+  Name: FirstEnterGuildResearchTabAfterUnlock_Tutorial
+  Comment: 길드 연구 탭의 잠금이 풀리고 최초로 탭에 진입 했을 때 튜토리얼
+  TutorialType: FirstEnterGuildResearchTabAfterUnlock_Tutorial
+  GuideFirstSetting: FirstEnterGuildResearchTabAfterUnlock_Tutorial
+- Id: 28
+  Name: FirstClickFlameAbsorptionFirst_Tutorial
+  Comment: 자각의 불꽃 ‘흡수’ 버튼 최초 클릭 튜토리얼
+  TutorialType: FirstClickFlameAbsorptionFirst_Tutorial
+  GuideFirstSetting: FirstClickFlameAbsorptionFirst_Tutorial
+- Id: 29
+  Name: FirstClickInventorySortFirst_Tutorial
+  Comment: 인벤토리의 정렬 드랍다운 버튼 해금 시 최초 클릭 튜토리얼
+  TutorialType: FirstClickInventorySortFirst_Tutorial
+  GuideFirstSetting: FirstClickInventorySortFirst_Tutorial
+- Id: 30
+  Name: ItemRandomOption_Tutorial
+  Comment: 아이템 랜덤 옵션 튜토리얼
+  TutorialType: ItemRandomOption_Tutorial
+  GuideFirstSetting: ItemRandomOption_Tutorial
+- Id: 31
+  Name: RequestRefresh_Tutorial
+  Comment: 의뢰 튜토리얼
+  TutorialType: RequestRefresh_Tutorial
+  GuideFirstSetting: RequestRefresh_Tutorial
+- Id: 32
+  Name: Achievement_Tutorial
+  Comment: 업적 튜토리얼
+  TutorialType: Achievement_Tutorial
+  GuideFirstSetting: Achievement_Tutorial
+- Id: 33
+  Name: FusionSkill_Tutorial
+  Comment: 스킬 융합 튜토리얼
+  TutorialType: FusionSkill_Tutorial
+  GuideFirstSetting: FusionSkill_Tutorial
+- Id: 34
+  Name: EclipseTime_Tutorial
+  Comment: 이클립스 타임 튜토리얼
+  TutorialType: EclipseTime_Tutorial
+  GuideFirstSetting: EclipseTime_Tutorial
+- Id: 35
+  Name: Trade_Tutorial
+  Comment: 거래소 튜토리얼
+  TutorialType: Trade_Tutorial
+  GuideFirstSetting: Trade_Tutorial
+- Id: 36
+  Name: EngraveGuide_Tutorial
+  Comment: 세공 튜토리얼
+  TutorialType: EngraveGuide_Tutorial
+  GuideFirstSetting: EngraveGuide_Tutorial
+- Id: 37
+  Name: Craft_Tutorial
+  Comment: 제작 튜토리얼
+  TutorialType: Craft_Tutorial
+  GuideFirstSetting: Craft_Tutorial
+- Id: 38
+  Name: BMShop_Tutorial
+  Comment: 상점 튜토리얼
+  TutorialType: BMShop_Tutorial
+  GuideFirstSetting: BMShop_Tutorial
+- Id: 39
+  Name: Collection_Tutorial
+  Comment: 수집 튜토리얼
+  TutorialType: Collection_Tutorial
+  GuideFirstSetting: Collection_Tutorial
+- Id: 40
+  Name: Fortress_Tutorial
+  Comment: 성소 튜토리얼
+  TutorialType: Fortress_Tutorial
+  GuideFirstSetting: Fortress_Tutorial
+- Id: 41
+  Name: EngraveGuide
+  Comment: 세공 가이드
+  ContentType: EngraveGuide
+  Guide:
+    - Id: 1
+      Name: Engrave_Guide_01
+      LocalizedAsset: Engrave_Guide_01
+      Description: UIWord_Engrave_Guide_01
+    - Id: 99
+      Name: Engrave_Guide_02
+      LocalizedAsset: Engrave_Guide_02
+      Description: UIWord_Engrave_Guide_02
+    - Id: 56
+      Name: Engrave_Guide_03
+      LocalizedAsset: Engrave_Guide_03
+      Description: UIWord_Engrave_Guide_03
+    - Id: 13
+      Name: Engrave_Guide_04
+      LocalizedAsset: Engrave_Guide_04
+      Description: UIWord_Engrave_Guide_04
+- Id: 42
+  Name: BattleGroundGuide
+  Comment: 전장 가이드
+  ContentType: BattleGroundGuide
+  Guide:
+    - Id: 1
+      Name: BattleGround_Guide_01
+      LocalizedAsset: BattleGround_Guide_01
+      Description: UIWord_BattleGround_Guide_01
+    - Id: 99
+      Name: BattleGround_Guide_02
+      LocalizedAsset: BattleGround_Guide_02
+      Description: UIWord_BattleGround_Guide_02
+    - Id: 56
+      Name: BattleGround_Guide_03
+      LocalizedAsset: BattleGround_Guide_03
+      Description: UIWord_BattleGround_Guide_03
+- Id: 43
+  Name: AwakeningGuide
+  Comment: 각성 가이드
+  ContentType: AwakeningGuide
+  Guide:
+    - Id: 1
+      Name: Awakening_Guide_01
+      LocalizedAsset: Awakening_Guide_01
+      Description: UIWord_Awakening_Guide_01
+    - Id: 99
+      Name: Awakening_Guide_02
+      LocalizedAsset: Awakening_Guide_02
+      Description: UIWord_Awakening_Guide_02
+    - Id: 56
+      Name: Awakening_Guide_03
+      LocalizedAsset: Awakening_Guide_03
+      Description: UIWord_Awakening_Guide_03
+    - Id: 13
+      Name: Awakening_Guide_04
+      LocalizedAsset: Awakening_Guide_04
+      Description: UIWord_Awakening_Guide_04
+- Id: 44
+  Name: CombinationGuide
+  Comment: 조합식 가이드
+  ContentType: CombinationGuide
+  Guide:
+    - Id: 1
+      Name: Combination_Guide_01
+      LocalizedAsset: Combination_Guide_01
+      Description: UIWord_Combination_Guide_01
+    - Id: 99
+      Name: Combination_Guide_02
+      LocalizedAsset: Combination_Guide_02
+      Description: UIWord_Combination_Guide_02
+    - Id: 56
+      Name: Combination_Guide_03
+      LocalizedAsset: Combination_Guide_02
+      Description: UIWord_Combination_Guide_03
+    - Id: 39
+      Name: Combination_Guide_04
+      LocalizedAsset: Combination_Guide_03
+      Description: UIWord_Combination_Guide_04
+    - Id: 79
+      Name: Combination_Guide_05
+      LocalizedAsset: Combination_Guide_04
+      Description: UIWord_Combination_Guide_05
+- Id: 45
+  Name: FortressGuide
+  Comment: 성소 가이드
+  ContentType: FortressGuide
+  Guide:
+    - Id: 1
+      Name: Fortress_Guide_01
+      LocalizedAsset: Fortress_Guide_01
+      Description: UIWord_Fortress_Guide_01
+- Id: 46
+  Name: GuildGuide
+  Comment: 길드 가이드
+  ContentType: GuildGuide
+  Guide:
+    - Id: 1
+      Name: Guild_Guide_01
+      LocalizedAsset: Guild_Guide_01
+      Description: UIWord_Guild_Guide_01
+    - Id: 99
+      Name: Guild_Guide_02
+      LocalizedAsset: Guild_Guide_02
+      Description: UIWord_Guild_Guide_02
+    - Id: 56
+      Name: Guild_Guide_03
+      LocalizedAsset: Guild_Guide_03
+      Description: UIWord_Guild_Guide_03
+    - Id: 13
+      Name: Guild_Guide_04
+      LocalizedAsset: Guild_Guide_04
+      Description: UIWord_Guild_Guide_04
+    - Id: 332
+      Name: Guild_Guide_05
+      LocalizedAsset: Guild_Guide_05
+      Description: UIWord_Guild_Guide_05
+- Id: 47
+  Name: FortressSolidarityGuide
+  Comment: 성소 결속 가이드
+  ContentType: FortressSolidarityGuide
+  Guide:
+    - Id: 1
+      Name: FortressSolidarity_Guide_01
+      LocalizedAsset: FortressSolidarity_Guide_01
+      Description: UIWord_FortressSolidarity_Guide_01
+- Id: 48
+  Name: PolymorphGuide
+  Comment: 초월 / 외형 가이드
+  ContentType: PolymorphGuide
+  Guide:
+    - Id: 1
+      Name: Polymorph_Guide_01
+      LocalizedAsset: Polymorph_Guide_01
+      Description: UIWord_Polymorph_Guide_01
+    - Id: 99
+      Name: PolymorphGrowth_Guide_01
+      LocalizedAsset: PolymorphGrowth_Guide_01
+      Description: UIWord_PolymorphGrowth_Guide_01
+    - Id: 56
+      Name: PolymorphGrowth_Guide_02
+      LocalizedAsset: PolymorphGrowth_Guide_02
+      Description: UIWord_PolymorphGrowth_Guide_02
+    - Id: 39
+      Name: WeaponPolymorph_Guide_01
+      LocalizedAsset: WeaponPolymorph_Guide_01
+      Description: UIWord_WeaponPolymorph_Guide_01
+    - Id: 79
+      Name: WeaponPolymorphGrowth_Guide_01
+      LocalizedAsset: WeaponPolymorphGrowth_Guide_01
+      Description: UIWord_WeaponPolymorphGrowth_Guide_01
+    - Id: 34
+      Name: WeaponPolymorphGrowth_Guide_02
+      LocalizedAsset: WeaponPolymorphGrowth_Guide_02
+      Description: UIWord_WeaponPolymorphGrowth_Guide_02
+- Id: 49
+  Name: SkillPrioritySetting
+  Comment: 스킬 자동 사용 우선 순위 가이드
+  ContentType: SkillPriorityGuide
+  Guide:
+    - Id: 1
+      Name: FSkillPriority_Guide_01
+      LocalizedAsset: Fortress_Guide_01
+      Description: UIWord_Fortress_Guide_01

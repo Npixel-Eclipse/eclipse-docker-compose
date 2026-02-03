@@ -1,0 +1,182 @@
+- Id: 1
+  Name: MonsterKill
+  Comment: "몬스터 처치,타겟에 NPC.yaml NAME 입력 (사냥해야하는 몬스터)"
+  SupportsAutoQuest: true
+- Id: 2
+  Name: Move
+  Comment: "이동, 타겟에 territory.yaml NAME 입력 (이동해야하는 테레토리)"
+  SupportsAutoQuest: true
+- Id: 3
+  Name: Level
+  Comment: 레벨 달성
+- Id: 4
+  Name: Talk
+  Comment: 대화
+  SupportsAutoQuest: true
+- Id: 5
+  Name: UseItem
+  Comment: "아이템 사용, 타겟에 Item.yaml name 입력 (사용해야하는 아이템)"
+- Id: 6
+  Name: GetItem
+  Comment: "아이템 획득, 타겟에 Item.yaml name 입력 (회득해야하는 아이템)"
+- Id: 7
+  Name: PlayerKill
+  Comment: 유저 킬
+- Id: 8
+  Name: Attend
+  Comment: 접속했을 때만 출석 체크(출석 패스 보상)
+- Id: 9
+  Name: CompleteQuestCategory
+  Comment: "퀘스 완료,타겟에 Qust_Category.yaml name 입력 (완료해야하는 퀘스트 카테고리)"
+- Id: 14
+  Name: EnchantItem
+  Comment: "아이템 강화,타겟에 Item.yaml name 입력 (강화해야하는 아이템)"
+- Id: 15
+  Name: EnchantItemCategory
+  Comment: "아이템 강화, 타겟에 Item_Category.yaml name 입력 (강화해야하는 아이템 카테고리)"
+- Id: 16
+  Name: GetItemCategory
+  Comment: "아이템 획득,타겟에 Item_Category.yaml name 입력 (회득해야하는 아이템 카테고리)"
+- Id: 17
+  Name: UseItemCategory
+  Comment: "아이템 사용, 타겟에  Item_Category.yaml name 입력 (사용해야하는 아이템 카테고리)"
+- Id: 18
+  Name: CraftItem
+  Comment: "아이템 제작, 타겟에 Item.yaml name 입력 (제작해야하는 아이템)"
+- Id: 19
+  Name: CraftItemCategory
+  Comment: "아이템 제작, 타겟에  Item_Category.yaml name 입력 (제작해야하는 아이템 카테고리)"
+- Id: 20
+  Name: GuildJoin
+  Comment: 길드 가입 및 생성
+- Id: 21
+  Name: PartyJoin
+  Comment: 파티 가입 및 생성
+- Id: 22
+  Name: CompleteQuest
+  Comment: "퀘스트 완료,타겟에 Qust.yaml name 입력 (완료해야하는 퀘스트)"
+- Id: 23
+  Name: MonsterKillByGroup
+  Comment: "지역 별 몬스터 처치, 타겟에 npc_group.yaml name 입력 (잡아야하는 지역)"
+  SupportsAutoQuest: true
+- Id: 24
+  Name: DisassembleItemCategory
+  Comment: "아이템 분해, 타겟에  Item_Category.yaml name 입력 (분해해야하는 아이템 카테고리)"
+- Id: 25
+  Name: RecipeMerge
+  Comment: "아이템 합성, 타겟에  recipe_output.yaml name 입력 (합성해야하는 레시피)"
+- Id: 26
+  Name: EngraveItem
+  Comment: "아이템 세공, 타겟에 Item.yaml name 입력 (세공해야하는 아이템)"
+- Id: 27
+  Name: EngraveItemCategory
+  Comment: "아이템 세공, 타겟에 Item_Category.yaml name 입력 (세공해야하는 아이템 카테고리)"
+- Id: 28
+  Name: PlayerDead
+  Comment: 유저 사망
+- Id: 30
+  Name: CharacterStat
+  Comment: "스텟 달성, 타겟에 stat.yaml name 입력 (스텟 이름 입력)"
+- Id: 31
+  Name: ManualMove
+- Id: 32
+  Name: EnterPortal
+  SupportsAutoQuest: true
+- Id: 34
+  Name: LeaveLand
+- Id: 35
+  Name: BuildingConstructionComplete
+- Id: 36
+  Name: HarvestProduce
+  SupportsAutoQuest: true
+- Id: 37
+  Name: HoldItem
+  Comment: 시즌 패스에 사용하는 골타입으로 해금에 필요한 아이템을 설정하는 골타입
+- Id: 38
+  Name: BuildingConstructionStart
+- Id: 40
+  Name: DungeonComplete
+- Id: 41
+  Name: GuildAttend
+  Comment: 길드 출석
+  FromClient: true
+- Id: 42
+  Name: ConsumeItem
+  Comment: "시즌 패스에 사용, 다이아로 강제 레벨업하는데 사용하는 골타입"
+- Id: 43
+  Name: AttendElapsedDays
+  Comment: 접속과 관계없이 출석 체크(데일리 패스 일차 별 보상)
+- Id: 44
+  Name: Behavior
+  FromClient: true
+  GoalAmountVisible: false
+- Id: 45
+  Name: CompletedItemCollection
+- Id: 47
+  Name: HostilePlayerKill
+- Id: 50
+  Name: FortressSupport
+- Id: 51
+  Name: FortressSupportRequest
+- Id: 52
+  Name: DungeonRanking
+- Id: 53
+  Name: CompletedItemCollectionCategoryCount
+- Id: 54
+  Name: CombinationTry
+  Comment: 조합식 시도
+- Id: 55
+  Name: CombinationMatch
+  Comment: 조합식 달성
+- Id: 56
+  Name: GuildContribution
+  Comment: 길드 기여도
+- Id: 57
+  Name: GuildWeeklyContribution
+  Comment: 길드 주간 기여도
+- Id: 58
+  Name: ContributeGuildCollection
+  Comment: 길드 컬렉션 기여
+- Id: 59
+  Name: ExpandEnchantItem
+  Comment: "아이템 돌파, 타겟에 Item.yaml name 입력 (돌파해야하는 아이템)"
+- Id: 60
+  Name: ExpandEnchantItemCategory
+  Comment: "아이템 돌파, 타겟에 Item_Category.yaml name 입력 (돌파해야하는 아이템 카테고리)"
+- Id: 61
+  Name: BattlegroundWin
+  Comment: 전장 승리
+- Id: 62
+  Name: SellItem
+  Comment: "아이템 판매, 타겟에 Item.yaml name 입력 (판매해야하는 아이템)"
+- Id: 63
+  Name: SellItemCategory
+  Comment: "아이템 판매, 타겟에 Item_Category.yaml name 입력 (판매해야하는 아이템 카테고리)"
+- Id: 67
+  Name: ItemCollectionCleared
+  Comment: "아이템 수집 완료 (Edge), 타겟에 collection_category.yaml name 입력 (수집 카테고리), 미입력 시 모든 수집 카테고리를 대상으로 함"
+- Id: 68
+  Name: BattlegroundPlay
+  Comment: 전장 플레이 (Edge)
+- Id: 69
+  Name: BattlegroundLoss
+  Comment: 전장 패배 (Edge)
+- Id: 70
+  Name: BuyItem
+  Comment: "아이템 구매, 타겟에 Item.yaml name 입력 (구매해야하는 아이템)"
+- Id: 71
+  Name: BuyItemCategory
+  Comment: "아이템 구매, 타겟에 Item_Category.yaml name 입력 (구매해야하는 아이템 카테고리)"
+- Id: 73
+  Name: BuyBmShopProduct
+  Comment: "BM 상품 구매, 타겟에 bm_shop_product의 Name 입력"
+- Id: 74
+  Name: NpcInteraction
+  Comment: "NPC 인터랙션, 타겟에 npc.yaml name 입력, NpcInteraction에 npc_interaction.yaml name 입력"
+  SupportsAutoQuest: true
+- Id: 75
+  Name: BattlegroundPlayerKill
+  Comment: 전장 플레이어 킬
+- Id: 76
+  Name: DisassembleItem
+  Comment: "아이템 분해, 타겟에 Item.yaml name 입력 (분해해야하는 아이템)"

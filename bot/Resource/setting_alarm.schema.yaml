@@ -1,0 +1,44 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    DelayDuration:      # 사운드 끝난 후 n초마다 반복 재생 (단위 : ms)
+      type: integer
+      minimum: 0
+    VibrateIntensity:   # 진동 세기
+      type: integer
+      minimum: 0
+      maximum: 100
+    VibrateDuration:   # n초 동안 진동 (단위 : ms)
+      type: integer
+      minimum: 0
+    VibrateRepeatWaitTime:   # 진동 끝난 후 n초마다 반복 진동 (단위 : ms)
+      type: integer
+      minimum: 0
+    SoundSet:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Index
+          - Asset
+        properties:
+          Index:
+            type: integer
+            minimum: 0
+          Asset:
+            type: string

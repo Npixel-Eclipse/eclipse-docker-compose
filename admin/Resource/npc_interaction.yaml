@@ -1,0 +1,36 @@
+- Id: 1
+  Name: SampleNpcInteraction
+  Comment: 샘플 NPC 인터렉션
+  InteractionMotionSkill: TutorialBossSkill_Charle_NormalAttack
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon01_Sprite.NPCInteractionIcon01_Sprite
+  ProgressBarDesc: UIWord_Scorn
+- Id: 40
+  Name: Test_Quest_Interaction
+  Comment: "[테스트] 퀘스트 인터렉션"
+  InteractionMotionSkill: Quest_Interaction02_Skill01
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon01_Sprite.NPCInteractionIcon01_Sprite
+  ProgressBarDesc: UIWord_Scorn
+- Id: 18
+  Name: Test_Interaction
+  Comment: "[테스트] 테스트 NPC 인터렉션"
+  InteractionMotionSkill: Test_Interaction_Skill
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon02_Sprite.NPCInteractionIcon02_Sprite
+  ProgressBarDesc: UIWord_Scorn
+- Id: 125
+  Name: Test_Interaction_Npc01
+  Comment: "[테스트] 테스트 NPC 인터렉션 01"
+  InteractionMotionSkill: Test_Interaction_Skill01
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon02_Sprite.NPCInteractionIcon02_Sprite
+  ProgressBarDesc: UIWord_Scorn
+- Id: 306
+  Name: Tutorial_Quest_Interaction01
+  Comment: "[튜토리얼] 시체 더미를 뒤지는 인터렉션"
+  InteractionMotionSkill: Quest_Interaction02_Skill01
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon02_Sprite.NPCInteractionIcon02_Sprite
+  ProgressBarDesc: UIWord_Tutorial_Quest_Interaction01
+- Id: 479
+  Name: Tutorial_Quest_Interaction02
+  Comment: "[튜토리얼] 상자 더미를 뒤지는 인터렉션"
+  InteractionMotionSkill: Quest_Interaction02_Skill01
+  InteractionIcon: /Game/UI/BattleHUD_SP/NPCInteractionIcon02_Sprite.NPCInteractionIcon02_Sprite
+  ProgressBarDesc: UIWord_Tutorial_Quest_Interaction02

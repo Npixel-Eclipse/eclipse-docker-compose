@@ -1,0 +1,36 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    SlotGroup:
+      required:
+        - Type
+        - SlotCategory
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+          SlotCategory:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                ItemCategory:
+                  type: string
+                  ref: item_category
+  required:
+    - Id
+    - Name

@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  redis-node-1:
+    image: redis:7.2.4-alpine
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
+    ports:
+      - "7001:6379"
+    volumes:
+      - redis-data-1:/data
+    networks:
+      - redis-cluster-network
+
+  redis-node-2:
+    image: redis:7.2.4-alpine
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
+    ports:
+      - "7002:6379"
+    volumes:
+      - redis-data-2:/data
+    networks:
+      - redis-cluster-network
+
+  redis-node-3:
+    image: redis:7.2.4-alpine
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
+    ports:
+      - "7003:6379"
+    volumes:
+      - redis-data-3:/data
+    networks:
+      - redis-cluster-network
+
+networks:
+  redis-cluster-network:
+    driver: bridge
+
+volumes:
+  redis-data-1:
+  redis-data-2:
+  redis-data-3:

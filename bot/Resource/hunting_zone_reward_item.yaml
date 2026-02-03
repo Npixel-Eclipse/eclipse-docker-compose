@@ -1,0 +1,40 @@
+- Id: 446
+  Name: Reward_HuntingZone_Area_1
+  DesignComment: 바리탄 북부 - 나무 계곡
+  Reward:
+    - Item: CurrencyDiamond
+      Amount: 10000
+    - Item: CurrencyGold
+      Amount: 1000000
+- Id: 62
+  Name: Reward_HuntingZone_Area_2
+  DesignComment: 바리탄 북부 - 바리탄 성서 수도회
+  Reward:
+    - Item: CurrencyGold
+      Amount: 600000
+- Id: 742
+  Name: Reward_HuntingZone_Area_3
+  DesignComment: 바리탄 북부 - 락헤드 국경 수비대
+  Reward:
+    - Item: CurrencyGold
+      Amount: 400000
+- Id: 226
+  Name: Reward_HuntingZone_Area_4
+  DesignComment: 레인우드 - 홀룰루 동굴
+  Reward:
+    - Item: CurrencyDiamond
+      Amount: 10000
+    - Item: CurrencyGold
+      Amount: 1000000
+- Id: 857
+  Name: Reward_HuntingZone_Area_5
+  DesignComment: 레인우드 - 난쟁이 도굴꾼 소굴
+  Reward:
+    - Item: CurrencyGold
+      Amount: 600000
+- Id: 41
+  Name: Reward_HuntingZone_Area_6
+  DesignComment: 레인우드 - 제국 연구 초소
+  Reward:
+    - Item: CurrencyGold
+      Amount: 400000

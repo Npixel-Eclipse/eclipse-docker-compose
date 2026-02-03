@@ -1,0 +1,550 @@
+- Id: 1
+  Name: Epic_Item_Goal
+  Comment: 영웅 등급 외형
+  Grade: Epic
+  Category: Polymorph_Card
+- Id: 382
+  Name: PolymorphCard_Common
+  Comment: "[보유효과-초월] 일반"
+  Grade: Common
+  Category: Polymorph_Card
+- Id: 580
+  Name: PolymorphCard_Uncommon
+  Comment: "[보유효과-초월] 고급"
+  Grade: Uncommon
+  Category: Polymorph_Card
+- Id: 21
+  Name: PolymorphCard_Rare
+  Comment: "[보유효과-초월] 희귀"
+  Grade: Rare
+  Category: Polymorph_Card
+- Id: 448
+  Name: PolymorphCard_Epic
+  Comment: "[보유효과-초월] 영웅"
+  Grade: Epic
+  Category: Polymorph_Card
+- Id: 359
+  Name: PolymorphCard_Legendary
+  Comment: "[보유효과-초월] 전설"
+  Grade: Legendary
+  Category: Polymorph_Card
+- Id: 982
+  Name: PolymorphCard_Myth
+  Comment: "[보유효과-초월] 신화"
+  Grade: Myth
+  Category: Polymorph_Card
+- Id: 953
+  Name: PolymorphCard_Skin_Common
+  Comment: "[보유효과-초월_스킨] 일반"
+  Grade: Common
+  Category: Polymorph_Skin
+- Id: 565
+  Name: PolymorphCard_Skin_Uncommon
+  Comment: "[보유효과-초월_스킨] 고급"
+  Grade: Uncommon
+  Category: Polymorph_Skin
+- Id: 31
+  Name: PolymorphCard_Skin_Rare
+  Comment: "[보유효과-초월_스킨] 희귀"
+  Grade: Rare
+  Category: Polymorph_Skin
+- Id: 664
+  Name: PolymorphCard_Skin_Epic
+  Comment: "[보유효과-초월_스킨] 영웅"
+  Grade: Epic
+  Category: Polymorph_Skin
+- Id: 831
+  Name: PolymorphCard_Skin_Legendary
+  Comment: "[보유효과-초월_스킨] 전설"
+  Grade: Legendary
+  Category: Polymorph_Skin
+- Id: 1647
+  Name: PolymorphCard_Level_Common
+  Comment: "[보유효과-초월_레벨] 일반"
+  Grade: Common
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 456
+  Name: PolymorphCard_Level_Uncommon
+  Comment: "[보유효과-초월_레벨] 고급"
+  Grade: Uncommon
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 960
+  Name: PolymorphCard_Level_Rare
+  Comment: "[보유효과-초월_레벨] 희귀"
+  Grade: Rare
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 1271
+  Name: PolymorphCard_Level_Epic
+  Comment: "[보유효과-초월_레벨] 영웅"
+  Grade: Epic
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 1929
+  Name: PolymorphCard_Level_Legendary
+  Comment: "[보유효과-초월_레벨] 전설"
+  Grade: Legendary
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 2245
+  Name: PolymorphCard_Level_Myth
+  Comment: "[보유효과-초월_레벨] 신화"
+  Grade: Myth
+  Category: Polymorph_Card
+  TargetProperty: EnchantLevel
+- Id: 2320
+  Name: WeaponPolymorph_Common
+  Comment: "[보유효과-무기외형] 일반"
+  Grade: Common
+  Category: WeaponPolymorph
+- Id: 2418
+  Name: WeaponPolymorph_Uncommon
+  Comment: "[보유효과-무기외형] 고급"
+  Grade: Uncommon
+  Category: WeaponPolymorph
+- Id: 2660
+  Name: WeaponPolymorph_Rare
+  Comment: "[보유효과-무기외형] 희귀"
+  Grade: Rare
+  Category: WeaponPolymorph
+- Id: 3162
+  Name: WeaponPolymorph_Epic
+  Comment: "[보유효과-무기외형] 영웅"
+  Grade: Epic
+  Category: WeaponPolymorph
+- Id: 2273
+  Name: WeaponPolymorph_Legendary
+  Comment: "[보유효과-무기외형] 전설"
+  Grade: Legendary
+  Category: WeaponPolymorph
+- Id: 2693
+  Name: WeaponPolymorph_Myth
+  Comment: "[보유효과-무기외형] 신화"
+  Grade: Myth
+  Category: WeaponPolymorph
+- Id: 214
+  Name: PolymorphWeapon_Level_Common
+  Comment: "[보유효과-무기외형_레벨] 일반"
+  Grade: Common
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 736
+  Name: PolymorphWeapon_Level_Uncommon
+  Comment: "[보유효과-무기외형_레벨] 고급"
+  Grade: Uncommon
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 1434
+  Name: PolymorphWeapon_Level_Rare
+  Comment: "[보유효과-무기외형_레벨] 희귀"
+  Grade: Rare
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 2186
+  Name: PolymorphWeapon_Level_Epic
+  Comment: "[보유효과-무기외형_레벨] 영웅"
+  Grade: Epic
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 1440
+  Name: PolymorphWeapon_Level_Legendary
+  Comment: "[보유효과-무기외형_레벨] 전설"
+  Grade: Legendary
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 278
+  Name: PolymorphWeapon_Level_Myth
+  Comment: "[보유효과-무기외형_레벨] 신화"
+  Grade: Myth
+  Category: WeaponPolymorph
+  TargetProperty: EnchantLevel
+- Id: 931
+  Name: Awakening_Total_Level
+  Comment: "[총합효과-각성] 단계 총합"
+  Grade: Common
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: TotalLevel
+- Id: 1136
+  Name: Awakening_Total_Legendary
+  Comment: "[등급효과-각성] 전설"
+  Grade: Legendary
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: Legendary
+- Id: 1309
+  Name: Awakening_Total_Epic
+  Comment: "[등급효과-각성] 영웅"
+  Grade: Epic
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: Epic
+- Id: 608
+  Name: Awakening_Total_Rare
+  Comment: "[등급효과-각성] 희귀"
+  Grade: Rare
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: Rare
+- Id: 1580
+  Name: Awakening_Total_Uncommon
+  Comment: "[등급효과-각성] 고급"
+  Grade: Uncommon
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: Uncommon
+- Id: 801
+  Name: Awakening_Total_Expand
+  Comment: "[총합효과-각성] 해방 총합"
+  Grade: Common
+  Category: Item_Misc_Upgrade_Awakening
+  TargetProperty: ExpandCount_Awakening
+- Id: 8793
+  Name: Item_Equip_Armor_G4_T11_Type1_S1
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T11_Type1_S1
+- Id: 3044
+  Name: Item_Equip_Armor_G4_T12_Type1_S1
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T12_Type1_S1
+- Id: 3931
+  Name: Item_Equip_Armor_G5_T07_Type1_S1
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T07_Type1_S1
+- Id: 3729
+  Name: Item_Equip_Armor_G5_T08_Type1_S1
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T08_Type1_S1
+- Id: 4846
+  Name: Item_Equip_Accessory_G4_T07_Type1_S1
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T07_Type1_S1
+- Id: 9145
+  Name: Item_Equip_Accessory_G4_T08_Type1_S1
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T08_Type1_S1
+- Id: 4681
+  Name: Item_Equip_Accessory_G5_T05_Type1_S1
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T05_Type1_S1
+- Id: 7528
+  Name: Item_Equip_Accessory_G5_T06_Type1_S1
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T06_Type1_S1
+- Id: 9732
+  Name: Item_Equip_Armor_G4_T11_Type2_S2
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T11_Type2_S2
+- Id: 2940
+  Name: Item_Equip_Armor_G4_T12_Type2_S2
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T12_Type2_S2
+- Id: 7578
+  Name: Item_Equip_Armor_G5_T07_Type2_S2
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T07_Type2_S2
+- Id: 4304
+  Name: Item_Equip_Armor_G5_T08_Type2_S2
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T08_Type2_S2
+- Id: 2695
+  Name: Item_Equip_Accessory_G4_T07_Type2_S2
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T07_Type2_S2
+- Id: 8235
+  Name: Item_Equip_Accessory_G4_T08_Type2_S2
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T08_Type2_S2
+- Id: 10130
+  Name: Item_Equip_Accessory_G5_T05_Type2_S2
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T05_Type2_S2
+- Id: 9344
+  Name: Item_Equip_Accessory_G5_T06_Type2_S2
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T06_Type2_S2
+- Id: 5366
+  Name: Item_Equip_Armor_G4_T11_Type3_S3
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T11_Type3_S3
+- Id: 7539
+  Name: Item_Equip_Armor_G4_T12_Type3_S3
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T12_Type3_S3
+- Id: 9535
+  Name: Item_Equip_Armor_G5_T07_Type3_S3
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T07_Type3_S3
+- Id: 4228
+  Name: Item_Equip_Armor_G5_T08_Type3_S3
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T08_Type3_S3
+- Id: 3720
+  Name: Item_Equip_Accessory_G4_T07_Type3_S3
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T07_Type3_S3
+- Id: 10719
+  Name: Item_Equip_Accessory_G4_T08_Type3_S3
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T08_Type3_S3
+- Id: 10563
+  Name: Item_Equip_Accessory_G5_T05_Type3_S3
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T05_Type3_S3
+- Id: 6234
+  Name: Item_Equip_Accessory_G5_T06_Type3_S3
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T06_Type3_S3
+- Id: 8664
+  Name: Item_Equip_Armor_G4_T11_Type2_S4
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T11_Type2_S4
+- Id: 643
+  Name: Item_Equip_Armor_G4_T12_Type2_S4
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Armor_G4_T12_Type2_S4
+- Id: 2942
+  Name: Item_Equip_Armor_G5_T07_Type2_S4
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T07_Type2_S4
+- Id: 3699
+  Name: Item_Equip_Armor_G5_T08_Type2_S4
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Armor_G5_T08_Type2_S4
+- Id: 12196
+  Name: Item_Equip_Accessory_G4_T07_Type4_S4
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T07_Type4_S4
+- Id: 366
+  Name: Item_Equip_Accessory_G4_T08_Type4_S4
+  Comment: 세트 장비
+  Grade: Epic
+  EquipItemSet: Equip_Accessory_G4_T08_Type4_S4
+- Id: 494
+  Name: Item_Equip_Accessory_G5_T05_Type4_S4
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T05_Type4_S4
+- Id: 10024
+  Name: Item_Equip_Accessory_G5_T06_Type4_S4
+  Comment: 세트 장비
+  Grade: Legendary
+  EquipItemSet: Equip_Accessory_G5_T06_Type4_S4
+- Id: 5739
+  Name: Solidarity_Exp_Rare
+  Comment: "[결속 레벨 효과] 경험 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_Exp_Seongso
+  TargetProperty: EnchantLevel
+- Id: 6442
+  Name: Solidarity_Exp_Epic
+  Comment: "[결속 레벨 효과] 경험 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_Exp_Seongso
+  TargetProperty: EnchantLevel
+- Id: 1891
+  Name: Solidarity_Exp_Legendary
+  Comment: "[결속 레벨 효과] 경험 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_Exp_Seongso
+  TargetProperty: EnchantLevel
+- Id: 4930
+  Name: Solidarity_Exp_Myth
+  Comment: "[결속 레벨 효과] 경험 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_Exp_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2055
+  Name: Solidarity_Gold_Rare
+  Comment: "[결속 레벨 효과] 골드 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_Gold_Seongso
+  TargetProperty: EnchantLevel
+- Id: 3242
+  Name: Solidarity_Gold_Epic
+  Comment: "[결속 레벨 효과] 골드 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_Gold_Seongso
+  TargetProperty: EnchantLevel
+- Id: 3533
+  Name: Solidarity_Gold_Legendary
+  Comment: "[결속 레벨 효과] 골드 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_Gold_Seongso
+  TargetProperty: EnchantLevel
+- Id: 3124
+  Name: Solidarity_Gold_Myth
+  Comment: "[결속 레벨 효과] 골드 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_Gold_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2953
+  Name: Solidarity_Awareness_Rare
+  Comment: "[결속 레벨 효과] 자각 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_Awareness_Seongso
+  TargetProperty: EnchantLevel
+- Id: 547
+  Name: Solidarity_Awareness_Epic
+  Comment: "[결속 레벨 효과] 자각 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_Awareness_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2027
+  Name: Solidarity_Awareness_Legendary
+  Comment: "[결속 레벨 효과] 자각 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_Awareness_Seongso
+  TargetProperty: EnchantLevel
+- Id: 7976
+  Name: Solidarity_Awareness_Myth
+  Comment: "[결속 레벨 효과] 자각 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_Awareness_Seongso
+  TargetProperty: EnchantLevel
+- Id: 4881
+  Name: Solidarity_Awakening_Rare
+  Comment: "[결속 레벨 효과] 각성 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_Awakening_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2460
+  Name: Solidarity_Awakening_Epic
+  Comment: "[결속 레벨 효과] 각성 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_Awakening_Seongso
+  TargetProperty: EnchantLevel
+- Id: 5027
+  Name: Solidarity_Awakening_Legendary
+  Comment: "[결속 레벨 효과] 각성 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_Awakening_Seongso
+  TargetProperty: EnchantLevel
+- Id: 95
+  Name: Solidarity_Awakening_Myth
+  Comment: "[결속 레벨 효과] 각성 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_Awakening_Seongso
+  TargetProperty: EnchantLevel
+- Id: 4089
+  Name: Solidarity_DungeonItem_Rare
+  Comment: "[결속 레벨 효과] 던전 아이템 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_DungeonItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 8581
+  Name: Solidarity_DungeonItem_Epic
+  Comment: "[결속 레벨 효과] 던전 아이템 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_DungeonItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 9450
+  Name: Solidarity_DungeonItem_Legendary
+  Comment: "[결속 레벨 효과] 던전 아이템 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_DungeonItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 9675
+  Name: Solidarity_DungeonItem_Myth
+  Comment: "[결속 레벨 효과] 던전 아이템 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_DungeonItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 7298
+  Name: Solidarity_WeaponPolymorph_Rare
+  Comment: "[결속 레벨 효과] 무기 외형 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_WeaponPolymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 1602
+  Name: Solidarity_WeaponPolymorph_Epic
+  Comment: "[결속 레벨 효과] 무기 외형 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_WeaponPolymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 1016
+  Name: Solidarity_WeaponPolymorph_Legendary
+  Comment: "[결속 레벨 효과] 무기 외형 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_WeaponPolymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2353
+  Name: Solidarity_WeaponPolymorph_Myth
+  Comment: "[결속 레벨 효과] 무기 외형 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_WeaponPolymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 5475
+  Name: Solidarity_Polymorph_Rare
+  Comment: "[결속 레벨 효과] 초월 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_Polymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2801
+  Name: Solidarity_Polymorph_Epic
+  Comment: "[결속 레벨 효과] 초월 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_Polymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 7634
+  Name: Solidarity_Polymorph_Legendary
+  Comment: "[결속 레벨 효과] 초월 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_Polymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 6709
+  Name: Solidarity_Polymorph_Myth
+  Comment: "[결속 레벨 효과] 초월 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_Polymorph_Seongso
+  TargetProperty: EnchantLevel
+- Id: 8946
+  Name: Solidarity_BuffItem_Rare
+  Comment: "[결속 레벨 효과] 소모품 성물_희귀"
+  Grade: Rare
+  EquipSolidarityBuilding: Statue_BuffItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 1237
+  Name: Solidarity_BuffItem_Epic
+  Comment: "[결속 레벨 효과] 소모품 성물_영웅"
+  Grade: Epic
+  EquipSolidarityBuilding: Statue_BuffItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 2741
+  Name: Solidarity_BuffItem_Legendary
+  Comment: "[결속 레벨 효과] 소모품 성물_전설"
+  Grade: Legendary
+  EquipSolidarityBuilding: Statue_BuffItem_Seongso
+  TargetProperty: EnchantLevel
+- Id: 10433
+  Name: Solidarity_BuffItem_Myth
+  Comment: "[결속 레벨 효과] 소모품 성물_신화"
+  Grade: Myth
+  EquipSolidarityBuilding: Statue_BuffItem_Seongso
+  TargetProperty: EnchantLevel

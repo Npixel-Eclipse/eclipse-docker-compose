@@ -1,0 +1,407 @@
+- Id: 1
+  Name: FieldDun_Blood_Shed
+  Floor:
+    - Floor: 1
+      Land: FieldDun_Blood_Shed_F1
+      Description: UIWordDungeonLevel1
+      Address: Var_Subjugate_BloodSoakedSealAltar_1F
+      WorldMapArea: WorldMap_SouthVar_Dun_Bloodshed_F1
+      Level: 1
+      LimitLevel: 1
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 10500
+    - Floor: 2
+      Land: FieldDun_Blood_Shed_F2
+      Description: UIWordDungeonLevel2
+      Address: Var_Subjugate_BloodSoakedSealAltar_2F
+      WorldMapArea: WorldMap_SouthVar_Dun_Bloodshed_F2
+      Level: 1
+      LimitLevel: 1
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 20700
+  Resource: FieldDun_Blood_Shed
+  DungeonName: Dungeon_Name_02
+  DungeonDescription: Dungeon_Description_02
+  Icon: /Game/UIIcon/Dungeon/Dungeon_BloodShed.Dungeon_BloodShed
+  DisplayEntrance: WorldMap_SouthVar_Dun_Bloodshed
+  DisplayOrder: 1
+  Type: Normal
+  Comment: 블러드 쉐드
+- Id: 2
+  Name: FieldDun_Kulika_Undying_Lands
+  Floor:
+    - Floor: 1
+      Land: FieldDun_Kulika_Undying_Lands_F1
+      Description: UIWordDungeonLevel1
+      Address: Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+      WorldMapArea: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands_F1
+      Level: 35
+      LimitLevel: 35
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 16400
+    - Floor: 2
+      Land: FieldDun_Kulika_Undying_Lands_F2
+      Description: UIWordDungeonLevel2
+      Address: Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+      WorldMapArea: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands_F2
+      Level: 39
+      LimitLevel: 39
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 19300
+    - Floor: 3
+      Land: FieldDun_Kulika_Undying_Lands_F3
+      Description: UIWordDungeonLevel3
+      Address: Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+      WorldMapArea: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands_F3
+      Level: 46
+      LimitLevel: 46
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 26000
+    - Floor: 4
+      Land: FieldDun_Kulika_Undying_Lands_F4
+      Description: UIWordDungeonLevel4
+      Address: Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+      WorldMapArea: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands_F4
+      Level: 53
+      LimitLevel: 53
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 31700
+    - Floor: 5
+      Land: FieldDun_Kulika_Undying_Lands_F5
+      Description: UIWordDungeonLevel5
+      Address: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+      WorldMapArea: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands_F5
+      Level: 60
+      LimitLevel: 60
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 42000
+  Resource: FieldDun_Kulika_Undying_Lands
+  DungeonName: Dungeon_Name_01
+  DungeonDescription: Dungeon_Description_01
+  Icon: /Game/UIIcon/Dungeon/Dungeon_Gurigara.Dungeon_Gurigara
+  DisplayEntrance: WorldMap_Eld_Dawnbough_Dun_kulikas_Undying_Lands
+  DisplayOrder: 2
+  Type: Normal
+  Comment: 구리가라 불멸지
+- Id: 261
+  Name: FieldDun_Breath_of_Gaia_Ondor
+  Floor:
+    - Floor: 1
+      Land: FieldDun_Breath_of_Gaia_Ondor_F1
+      Description: UIWordDungeonLevel1
+      Address: South_Castia_Breath_of_Gaia_Ondor_01
+      WorldMapArea: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor_F1
+      Level: 55
+      LimitLevel: 55
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 33500
+    - Floor: 2
+      Land: FieldDun_Breath_of_Gaia_Ondor_F2
+      Description: UIWordDungeonLevel2
+      Address: South_Castia_Breath_of_Gaia_Ondor_02
+      WorldMapArea: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor_F2
+      Level: 59
+      LimitLevel: 59
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 37600
+    - Floor: 3
+      Land: FieldDun_Breath_of_Gaia_Ondor_F3
+      Description: UIWordDungeonLevel3
+      Address: South_Castia_Breath_of_Gaia_Ondor_03
+      WorldMapArea: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor_F3
+      Level: 63
+      LimitLevel: 63
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 46300
+    - Floor: 4
+      Land: FieldDun_Breath_of_Gaia_Ondor_F4
+      Description: UIWordDungeonLevel4
+      Address: South_Castia_Breath_of_Gaia_Ondor_04
+      WorldMapArea: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor_F4
+      Level: 67
+      LimitLevel: 67
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 52200
+    - Floor: 5
+      Land: FieldDun_Breath_of_Gaia_Ondor_F5
+      Description: UIWordDungeonLevel5
+      Address: South_Castia_Breath_of_Gaia_Ondor_05
+      WorldMapArea: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor_F5
+      Level: 71
+      LimitLevel: 71
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 57500
+  Resource: FieldDun_Breath_of_Gaia_Ondor
+  DungeonName: Dungeon_Name_Breath_of_Gaia_Ondor
+  DungeonDescription: Dungeon_Description_Breath_of_Gaia_Ondor
+  Icon: /Game/UIIcon/Dungeon/Dungeon_BreathOfGaiaOndor.Dungeon_BreathOfGaiaOndor
+  DisplayEntrance: WorldMap_South_Roc_Dun_Breath_of_Gaia_Ondor
+  DisplayOrder: 3
+  Type: Normal
+  Comment: 가이아 온도르의 숨결
+- Id: 581
+  Name: Challenge_Dungeon_Polluted_Lake
+  Floor:
+    - Floor: 1
+      Land: Challenge_Dungeon_Polluted_Lake_1F
+      Description: Dungeon_Name_Challenge_Floor
+      Address: Dungeon_Challenge_Polluted_Lake
+      WorldMapArea: WorldMap_Challenge_Polluted_Lake
+      AdditionalEnter: WorldMap_Challenge_Polluted_Lake_AdditionalEnter
+      Level: 10
+      LimitLevel: 10
+      RecommandCombatPoint: 2900
+  Resource: Challenge_Dungeon_Polluted_Lake
+  CountDown: 3
+  DungeonName: Dungeon_Name_Challenge_01
+  DungeonDescription: Dungeon_Description_Challenge01
+  Icon: /Game/UIIcon/Dungeon/Dungeon_PollutedLake.Dungeon_PollutedLake
+  AlertIcon: /Game/UI/Alert_SP/AlertIconChallengeDungeon_Sprite.AlertIconChallengeDungeon_Sprite
+  AlertDescription: Dungeon_Challenge_Polluted_Lake_Desc
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayQuestCategory: ChallengeDungeon_Week
+  Type: Challenge
+  DungeonMapType: WorldMap
+  Quest: ChallengeDungeon_Polluted_Lake_Quest
+  Comment: 도전 던전 오염된 호숫가
+- Id: 513
+  Name: Challenge_Dungeon_Monkey_Playground
+  Floor:
+    - Floor: 1
+      Land: Challenge_Dungeon_Monkey_Playground_1F
+      Description: Dungeon_Name_Challenge_Floor
+      Address: Dungeon_Challenge_Monkey_Playground
+      WorldMapArea: WorldMap_Challenge_Monkey_Playground
+      AdditionalEnter: WorldMap_Challenge_Monkey_Playground_AdditionalEnter
+      Level: 20
+      LimitLevel: 20
+      RecommandCombatPoint: 6900
+  Resource: Challenge_Dungeon_Monkey_Playground
+  CountDown: 3
+  DungeonName: Dungeon_Name_Challenge_02
+  DungeonDescription: Dungeon_Description_Challenge02
+  Icon: /Game/UIIcon/Dungeon/Dungeon_MonkeyPlayground.Dungeon_MonkeyPlayground
+  AlertIcon: /Game/UI/Alert_SP/AlertIconChallengeDungeon_Sprite.AlertIconChallengeDungeon_Sprite
+  AlertDescription: Dungeon_Challenge_Monkey_Playground_Desc
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayQuestCategory: ChallengeDungeon_Week
+  Type: Challenge
+  DungeonMapType: WorldMap
+  Quest: ChallengeDungeon_Monkey_Playground_Quest
+  Comment: 도전 던전 원숭이 놀이터
+- Id: 268
+  Name: Challenge_Dungeon_Undead_Mine
+  Floor:
+    - Floor: 1
+      Land: Challenge_Dungeon_Undead_Mine_1F
+      Description: Dungeon_Name_Challenge_Floor
+      Address: Dungeon_Challenge_Undead_Mine
+      WorldMapArea: WordlMap_Challenge_Undead_Mine
+      AdditionalEnter: WordlMap_Challenge_Undead_Mine_AdditionalEnter
+      Level: 30
+      LimitLevel: 30
+      RecommandCombatPoint: 13600
+  Resource: Challenge_Dungeon_Undead_Mine
+  CountDown: 3
+  DungeonName: Dungeon_Name_Challenge_03
+  DungeonDescription: Dungeon_Description_Challenge03
+  Icon: /Game/UIIcon/Dungeon/Dungeon_UndeadMine.Dungeon_UndeadMine
+  AlertIcon: /Game/UI/Alert_SP/AlertIconChallengeDungeon_Sprite.AlertIconChallengeDungeon_Sprite
+  AlertDescription: Dungeon_Challenge_Undead_Mine_Desc
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayQuestCategory: ChallengeDungeon_Week
+  Type: Challenge
+  DungeonMapType: WorldMap
+  Quest: ChallengeDungeon__Undead_Mine_Quest
+  Comment: 도전 던전 언데드 광산
+- Id: 1021
+  Name: Daily_DailyDun_RuinedCastle
+  Floor:
+    - Floor: 1
+      Land: Daily_DailyDun_RuinedCastle_1F
+      Description: UIWordDungeonLevel1
+      Address: DailyDun_RuinedCastle_1F
+      WorldMapArea: WorldMap_Daily_DailyDun_RuinedCastle_1F
+      Level: 25
+      LimitLevel: 25
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 10500
+    - Floor: 2
+      Land: Daily_DailyDun_RuinedCastle_2F
+      Description: UIWordDungeonLevel2
+      Address: DailyDun_RuinedCastle_2F
+      WorldMapArea: WorldMap_Daily_DailyDun_RuinedCastle_2F
+      Level: 36
+      LimitLevel: 36
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 17300
+    - Floor: 3
+      Land: Daily_DailyDun_RuinedCastle_3F
+      Description: UIWordDungeonLevel3
+      Address: DailyDun_RuinedCastle_3F
+      WorldMapArea: WorldMap_Daily_DailyDun_RuinedCastle_3F
+      Level: 47
+      LimitLevel: 47
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 26200
+    - Floor: 4
+      Land: Daily_DailyDun_RuinedCastle_4F
+      Description: UIWordDungeonLevel4
+      Address: DailyDun_RuinedCastle_4F
+      WorldMapArea: WorldMap_Daily_DailyDun_RuinedCastle_4F
+      Level: 58
+      LimitLevel: 58
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 36900
+    - Floor: 5
+      Land: Daily_DailyDun_RuinedCastle_5F
+      Description: UIWordDungeonLevel5
+      Address: DailyDun_RuinedCastle_5F
+      WorldMapArea: WorldMap_Daily_DailyDun_RuinedCastle_5F
+      Level: 69
+      LimitLevel: 69
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 52300
+  Resource: Daily_DailyDun_RuinedCastle
+  DungeonName: Dungeon_Name_Daily_Ruined_Castle
+  DungeonDescription: Dungeon_Description_Daily_Ruined_Castle
+  Icon: /Game/UIIcon/Dungeon/Dungeon_MineDistrict.Dungeon_MineDistrict
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayOrder: 4
+  Type: Event
+  Comment: 무법 성채
+- Id: 1038
+  Name: Daily_DailyDun_MiningArea
+  Floor:
+    - Floor: 1
+      Land: Daily_DailyDun_MiningArea_1F
+      Description: UIWordDungeonLevel1
+      Address: DailyDun_MiningArea_1F
+      WorldMapArea: WorldMap_Daily_DailyDun_MiningArea_1F
+      Level: 28
+      LimitLevel: 28
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 12500
+    - Floor: 2
+      Land: Daily_DailyDun_MiningArea_2F
+      Description: UIWordDungeonLevel2
+      Address: DailyDun_MiningArea_2F
+      WorldMapArea: WorldMap_Daily_DailyDun_MiningArea_2F
+      Level: 39
+      LimitLevel: 39
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 19300
+    - Floor: 3
+      Land: Daily_DailyDun_MiningArea_3F
+      Description: UIWordDungeonLevel3
+      Address: DailyDun_MiningArea_3F
+      WorldMapArea: WorldMap_Daily_DailyDun_MiningArea_3F
+      Level: 50
+      LimitLevel: 50
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 29400
+    - Floor: 4
+      Land: Daily_DailyDun_MiningArea_4F
+      Description: UIWordDungeonLevel4
+      Address: DailyDun_MiningArea_4F
+      WorldMapArea: WorldMap_Daily_DailyDun_MiningArea_4F
+      Level: 61
+      LimitLevel: 61
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 41900
+    - Floor: 5
+      Land: Daily_DailyDun_MiningArea_5F
+      Description: UIWordDungeonLevel5
+      Address: DailyDun_MiningArea_5F
+      WorldMapArea: WorldMap_Daily_DailyDun_MiningArea_5F
+      Level: 72
+      LimitLevel: 72
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 57300
+  Resource: Daily_DailyDun_MiningArea
+  DungeonName: Dungeon_Name_Daily_Mining_Area
+  DungeonDescription: Dungeon_Description_Daily_Mining_Area
+  Icon: /Game/UIIcon/Dungeon/Dungeon_MiningSite.Dungeon_MiningSite
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayOrder: 5
+  Type: Event
+  Comment: 버려진 채굴지
+- Id: 336
+  Name: Daily_DailyDun_UndeadTemple
+  Floor:
+    - Floor: 1
+      Land: Daily_DailyDun_UndeadTemple_1F
+      Description: UIWordDungeonLevel1
+      Address: DailyDun_UndeadTemple_1F
+      WorldMapArea: WorldMap_Daily_DailyDun_UndeadTemple_1F
+      Level: 31
+      LimitLevel: 31
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 14200
+    - Floor: 2
+      Land: Daily_DailyDun_UndeadTemple_2F
+      Description: UIWordDungeonLevel2
+      Address: DailyDun_UndeadTemple_2F
+      WorldMapArea: WorldMap_Daily_DailyDun_UndeadTemple_2F
+      Level: 42
+      LimitLevel: 42
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 22100
+    - Floor: 3
+      Land: Daily_DailyDun_UndeadTemple_3F
+      Description: UIWordDungeonLevel3
+      Address: DailyDun_UndeadTemple_3F
+      WorldMapArea: WorldMap_Daily_DailyDun_UndeadTemple_3F
+      Level: 53
+      LimitLevel: 53
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 31700
+    - Floor: 4
+      Land: Daily_DailyDun_UndeadTemple_4F
+      Description: UIWordDungeonLevel4
+      Address: DailyDun_UndeadTemple_4F
+      WorldMapArea: WorldMap_Daily_DailyDun_UndeadTemple_4F
+      Level: 64
+      LimitLevel: 64
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 45900
+    - Floor: 5
+      Land: Daily_DailyDun_UndeadTemple_5F
+      Description: UIWordDungeonLevel5
+      Address: DailyDun_UndeadTemple_5F
+      WorldMapArea: WorldMap_Daily_DailyDun_UndeadTemple_5F
+      Level: 75
+      LimitLevel: 75
+      DefaultHasDeathPenalty: true
+      RecommandCombatPoint: 60700
+  Resource: Daily_DailyDun_UndeadTemple
+  DungeonName: Dungeon_Name_Daily_Undead_Temple
+  DungeonDescription: Dungeon_Description_Daily_Undead_Temple
+  Icon: /Game/UIIcon/Dungeon/Dungeon_UndeadTemple.Dungeon_UndeadTemple
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  DisplayOrder: 6
+  Type: Event
+  Comment: 언데드 신전
+- Id: 826
+  Name: BattleGround_Faction_HighRiver
+  Floor:
+    - Floor: 1
+      Land: BattleGround_Faction_HighRiver_Group1
+      Description: UIWordDungeonLevel1
+      Address: BattleGround_Faction_HighRiver_Group1
+      WorldMapArea: BattleGround_Faction_HighRiver_Group1
+      Level: 20
+      LimitLevel: 20
+      DefaultCanPk: true
+      RecommandCombatPoint: 6900
+  Resource: BattleGround_Faction_HighRiver
+  AutoDecreaseCount: false
+  DungeonName: BattleGround_Name_Faction_HighRiver
+  DungeonDescription: BattleGround_Description_Faction_HighRiver
+  Icon: /Game/UIIcon/Dungeon/BattleGround_HighRiver.BattleGround_HighRiver
+  ScheduleAlert: BattleGroundStartAlert
+  DisplayEntrance: WorldMap_Var_Subjugate_VaritanCitadel
+  Type: BattleGround
+  Battleground: Battleground_PvPvE_EncroachedUndergroundCastle
+  Matchmaking: Battleground_Faction_HighRiver_20v20
+  Comment: "[전장] 하이리버 전투"

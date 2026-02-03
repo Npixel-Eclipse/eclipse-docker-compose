@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[0-9]+$
+    Comment:
+      type: string
+    ViewUIPopupType:
+      type: string
+      enum:
+        - Terms
+        - OperationalPolicy
+        - PrivacyPolicy
+        - CustomerSupport
+        - FAQ
+  required:
+    - Id
+    - Name

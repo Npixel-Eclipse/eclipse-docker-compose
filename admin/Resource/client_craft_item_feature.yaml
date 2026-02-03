@@ -1,0 +1,35 @@
+- Id: 1
+  Name: CraftItem
+  SearchMainTab: Search
+  SearchSubTab: SearchSub
+  FavoriteMainTab: Favorite
+  FavoriteSubTab: FavoriteSub
+  Favorite: CraftRecipe
+  LimitAmountDesc: UIWord_Craft_GuideType_LimitAmount
+  LimitCountUnitDesc:
+    - UIWord_Craft_GuideType_LimitCountUnit_Character
+    - UIWord_Craft_GuideType_LimitCountUnit_Server
+    - UIWord_Craft_GuideType_LimitCountUnit_Allserver
+  LimitCountRefreshDesc:
+    - UIWord_Craft_GuideType_LimitRefresh_Daily
+    - UIWord_Craft_GuideType_LimitRefresh_Weekly
+    - UIWord_Craft_GuideType_LimitRefresh_Monthly
+  LimitOutputUnitDesc:
+    - UIWord_Craft_GuideType_LimitOutputUnit_Server
+    - UIWord_Craft_GuideType_LimitOutputUnit_AllServer
+  LimitOutputRefreshDesc:
+    - UIWord_Craft_GuideType_LimitRefresh_Daily
+    - UIWord_Craft_GuideType_LimitRefresh_Weekly
+    - UIWord_Craft_GuideType_LimitRefresh_Monthly
+  PaybackResultTypeDesc:
+    - UIWord_Craft_ResultType_SuccessPayback
+    - UIWord_Craft_ResultType_FailurePayback
+  PaybackTargetDesc:
+    - UIWord_Craft_PaybackTarget_Self
+    - UIWord_Craft_PaybakcTarget_Guild
+  FailMessage_NotEnoughMaterial: CraftFail_Material
+  FailMessage_OverLimitPartial: CraftFail_OverLimit_Partial
+  FailMessage_OverLimit: CraftFail_OverLimit
+  FailMessage_OverCount: CraftFail_OverCount
+  FailMessage_NotInFeriod: CraftFail_Date
+  FailMessage_InventoryFull: CraftFail_Inventory

@@ -1,0 +1,36 @@
+- Id: 1
+  Type: frame
+  Name: FrameColor01
+  Rgb: FFFFFFFF
+  DefaultSelect: true
+  Comment: 프레임 빨강
+- Id: 2
+  Type: frame
+  Name: FrameColor02
+  Rgb: D76D0AFF
+  Comment: 프레임 주황
+- Id: 3
+  Type: frame
+  Name: FrameColor03
+  Rgb: 3A9150FF
+  Comment: 프레임 초록
+- Id: 4
+  Type: frame
+  Name: FrameColor04
+  Rgb: DAC020FF
+  Comment: 프레임 노랑
+- Id: 5
+  Type: frame
+  Name: FrameColor05
+  Rgb: 454BD7FF
+  Comment: 프레임 파랑
+- Id: 6
+  Type: frame
+  Name: FrameColor06
+  Rgb: 313131FF
+  Comment: 프레임 검정
+- Id: 7
+  Type: frame
+  Name: FrameColor07
+  Rgb: AA69D7FF
+  Comment: 프레임 보라

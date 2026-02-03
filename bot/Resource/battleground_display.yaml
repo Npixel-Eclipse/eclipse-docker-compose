@@ -1,0 +1,5 @@
+- Id: 1
+  Name: EncroachedUndergroundCastle
+  Comment: 잠식된 지하 성
+  Target: Battleground_PvPvE_EncroachedUndergroundCastle
+  Matchmaking: Battleground_Faction_HighRiver_20v20

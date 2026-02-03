@@ -1,0 +1,59 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    Comment:
+      type: string
+    IsNonSleepAi: #해당 컬럼은 서버팀만 수정 해야합니다. 서버 성능과도 연관되어 있습니다. 기본적으로 해당 컬럼은 false로 설정 되어있어야 합니다.
+      type: boolean
+    IsMonster:
+      type: boolean
+    IsMerchant:
+      type: boolean
+    IsPortal:
+      type: boolean
+    IsQuest:
+      type: boolean
+    IsBuilding:
+      type: boolean
+    IsBattleground:
+      type: boolean
+    IsTeleporter:
+      type: boolean
+    IsNonMerchant:
+      type: boolean
+    IsInteractionNpc: #상호작용 npc에게 붙이는 프로퍼티/ 해당 프로퍼티가 있으면 타겟 아웃라인이 초록색으로 고정
+      type: boolean
+
+    RepresentativeIconType: #리소스 경로 가이드: /Game/UIIcon/MapSymbol/파일명.파일명
+      type: string
+      enum:
+        - None
+        - Named
+        - Abyss
+        - Boss
+        - WorldBoss
+
+    TitleDisplayType:    # 타이틀 표기 위치 설정 - 입력하지 않으면 출력되지 않음
+      type: string
+      enum:
+        - None
+        - NamePlate
+        - TargetInfo
+        - All
+
+    DisplayTextStyle:    # 네임플레이트, 타겟 정보 텍스트 색상 지정
+      type: string
+      ref: richtext_display
+

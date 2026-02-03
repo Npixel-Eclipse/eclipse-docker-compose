@@ -1,0 +1,19 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.party";
+option java_outer_classname = "CommonPartyProto";
+
+enum PartyInfoType {
+  INVITE = 0;
+  ACCEPT_INVITATION = 1;
+  CREATE = 2;
+  CONNECTED = 3;
+}
+
+enum PartyRule {
+  PERSONAL = 0;
+  SEQUENCE = 1;
+  RANDOM = 2;
+}

@@ -1,0 +1,56 @@
+- Id: 1
+  Name: Ranking Display Info
+  Processor:
+    ApplicationId: processChatRankingDisplayInfoEvent
+    Topic: ranking.display-info.event
+    Type: USER_PROPERTY
+  Protobuf:
+    ProtoPath: ../../Proto/server/ranking.proto
+    MessageType: ranking.RankingDisplayInfoEvent
+    MappingKeys:
+      - ranking_mark_ids
+    MappingProtoFields:
+      - chatting_mark_ids
+    UserIdProtoField: character_uuid
+- Id: 14
+  Name: Guild Member Event
+  Processor:
+    ApplicationId: processChatGuildMemberEvent
+    Topic: guild.member.event
+    Type: USER_PROPERTY
+  Protobuf:
+    ProtoPath: ../../Proto/server/guild.proto
+    MessageType: guild.GuildMemberEvent
+    MappingKeys:
+      - guild_name
+      - guild_frame
+      - guild_symbol
+      - guild_frame_color
+    MappingProtoFields:
+      - guild_name
+      - guild_mark.frame
+      - guild_mark.symbol
+      - guild_mark.frame_color
+    UserIdProtoField: character_uuid
+    UpsertWhenNoEventType: true
+    UpdateEventTypeKey: reason
+    UpsertEventValues:
+      - JOIN
+      - SUBSCRIBE
+    DeleteEventValues:
+      - BANISH
+      - LEAVE
+      - DISBAND
+- Id: 15
+  Name: Server Display Name Event
+  Processor:
+    ApplicationId: processChatServerDisplayNameEvent
+    Topic: battle.policy.event
+    Type: SERVER_DISPLAY_NAME
+    UseComputerNamePrefix: false
+    ConsumerMode: ASSIGN_SEEK
+  Protobuf:
+    ProtoPath: ../../Proto/Server/admin.proto
+    MessageType: admin.BattlePolicy
+    ServerNameKeyField: battle_name
+    DisplayNameProtoField: display_name

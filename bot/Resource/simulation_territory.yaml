@@ -1,0 +1,18 @@
+- Id: 10000000000
+  Name: Simulation_Basic_Spawn_Territory
+  StartX: -31
+  StartY: -537
+  EndX: 32
+  EndY: -476
+  IsClientSpawn: false
+  Land: Simulation
+  Comment: 테스트 환경 스폰
+- Id: 10000000000
+  Name: Simulation_Performance_Spawn_Territory
+  StartX: -10
+  StartY: -517
+  EndX: 10
+  EndY: -486
+  IsClientSpawn: false
+  Land: Simulation
+  Comment: 테스트 환경 좁은 범위로 스폰

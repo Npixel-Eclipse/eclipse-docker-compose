@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.favorite";
+option java_outer_classname = "ServerFavoriteProto";
+
+package favorite;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+// Kafka Streams를 통한 명령
+message FavoriteCommand {
+  string character_uuid = 1;
+
+  oneof command {
+    // Internal
+    SyncToDatabase sync_to_database = 10;
+  }
+
+  // 현재 캐시를 데이터베이스로 동기화
+  message SyncToDatabase {
+    // true: StateStore를 비움, false: StateStore를 비우지 않음
+    bool with_unload_cache = 1;
+    // 스케줄러가 관찰한 lastUpdateDate - staleness guard 용 (deprecated, cache_version으로 대체 예정)
+    google.protobuf.Timestamp observed_last_update_date = 2;
+    // 스케줄러가 관찰한 cache_version - staleness guard 용
+    int64 observed_cache_version = 3;
+  }
+}
+
+// 즐겨찾기
+message Favorite {
+  optional int64 database_id = 1;
+  bool is_deleted = 2;
+
+  int64 favorite_id = 10;
+  int64 target_id = 11;
+  google.protobuf.Timestamp create_date = 12;
+}
+
+// 즐겨찾기 캐시
+message FavoriteCache {
+  // internal
+  string cache_id = 1;
+
+  // owner
+  int64 account_id = 12;
+  string character_uuid = 11;
+
+  // favorite
+  map<int64, Favorites> favorite_by_id = 20;
+
+  message Favorites {
+    int64 favorite_id = 1;
+    repeated Favorite favorite = 2;
+  }
+
+  // 개인 핀 포인트
+  repeated PinPointCache pins = 30;
+
+  // internal
+  google.protobuf.Timestamp last_update_date = 99;
+  google.protobuf.Timestamp last_db_synced_at = 100;
+  bool dirty = 101;
+  int64 cache_version = 102;
+}
+
+// 개인 핀 포인트 캐시
+message PinPointCache {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  int32 coordinate_x = 3;
+  int32 coordinate_y = 4;
+  google.protobuf.Timestamp created_at = 5;
+
+  // internal
+  optional int64 database_id = 97;
+  bool is_deleted = 98;
+  bool dirty = 99;
+}

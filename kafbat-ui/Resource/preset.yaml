@@ -1,0 +1,230 @@
+- Id: 1
+  Name: ItemPreset
+  Comment: 아이템 프리셋
+  NameDesc: UIWord_Preset_Equip
+  DisplayOrder: 1
+  SlotItem: ExpandedPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+- Id: 2
+  Name: MasteryPreset
+  Comment: 숙련도 프리셋
+  NameDesc: UIWord_Preset_Mastery
+  DisplayOrder: 6
+  SlotItem: ExpandedMasteryPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+- Id: 3
+  Name: SkillPreset
+  Comment: 스킬 프리셋
+  NameDesc: UIWord_Preset_Skill
+  DisplayOrder: 5
+  SlotItem: ExpandedSkillPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+- Id: 4
+  Name: PotentialPreset
+  Comment: 잠재력 프리셋
+  NameDesc: UIWord_Preset_Awareness
+  DisplayOrder: 7
+  SlotItem: ExpandedPotentialPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  ContentLimit: Potential_Page1
+- Id: 5
+  Name: MasterPreset
+  Comment: 통합 프리셋
+  SlotItem: ExpandedMasterPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 5
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot5
+      SlotNumber: 5
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+- Id: 6
+  Name: CombinationPreset
+  Comment: 서판 조합 프리셋
+  NameDesc: UIWord_Preset_Combination
+  DisplayOrder: 8
+  SlotItem: ExpandedCombinationPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  ContentLimit: Combination
+- Id: 7
+  Name: PolymorphPreset
+  Comment: 폴리모프 프리셋
+  NameDesc: UIWord_Preset_Polymorph
+  DisplayOrder: 2
+  SlotItem: ExpandedPolymorphPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  AdditionalInfoUIType: Polymorph
+  ContentLimit: Polymorph
+- Id: 8
+  Name: WeaponPolymorphPreset
+  Comment: 무기외형 프리셋
+  NameDesc: UIWord_Preset_Appearance
+  DisplayOrder: 3
+  SlotItem: ExpandedWeaponPolymorphPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  AdditionalInfoUIType: WeaponPolymorph
+  ContentLimit: WeaponPolymorph
+- Id: 9
+  Name: SkinPreset
+  Comment: 스킨 프리셋
+  NameDesc: UIWord_Preset_Skin
+  DisplayOrder: 4
+  SlotItem: ExpandedSkinPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  AdditionalInfoUIType: Skin
+  ContentLimit: Skin
+- Id: 10
+  Name: DivinityPreset
+  Comment: 권능 프리셋
+  NameDesc: UIWord_Preset_Might
+  DisplayOrder: 9
+  SlotItem: ExpandedDivinityPresetSlotCount
+  DefaultSlotCount: 1
+  MaxSlotCount: 4
+  SlotSetting:
+    - Name: Slot2
+      SlotNumber: 2
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot3
+      SlotNumber: 3
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+    - Name: Slot4
+      SlotNumber: 4
+      CurrencyItem: CurrencyGold
+      CurrencyAmount: 1000
+  ApplyCoolTime: 1
+  ContentLimit: Update

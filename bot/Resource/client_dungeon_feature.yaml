@@ -1,0 +1,62 @@
+- Id: 1
+  Name: Dungeon
+  UITab:
+    - Group: Category
+      DungeonTypeIndex: 2
+      DefaultTab: true
+      RedDotName: None
+      Icon: /Game/UI/Dungeon_SP/TabIcon00.TabIcon00
+      Comment: 이벤트
+    - Group: Category
+      RedDotName: None
+      Icon: /Game/UI/Dungeon_SP/TabIcon01.TabIcon01
+      Comment: 일반
+    - Group: Category
+      DungeonTypeIndex: 4
+      RedDotName: ChallengeDungeonWeekly
+      Icon: /Game/UI/Dungeon_SP/TabIcon03.TabIcon03
+      Comment: 도전던전
+    - Group: BattleGroundCategory
+      DungeonTypeIndex: 7
+      DefaultTab: true
+      Icon: /Game/UI/Dungeon_SP/TabIcon04.TabIcon04
+      Comment: 전장
+    - Group: ChallengeRewardTab
+      Comment: 랭킹
+      Name: UIWord_Menu_Ranking
+    - Group: ChallengeRewardTab
+      Comment: 랭킹 보상
+      Name: UIWord_HuntingZone_RewardTab
+    - Group: BattleGroundRewardTab
+      Comment: 승리 보상
+      Name: UIWord_BattleField_RewardInformation_Win
+    - Group: BattleGroundRewardTab
+      Comment: 패배 보상
+      Name: UIWord_BattleField_RewardInformation_Lose
+  DungeonInfo:
+    - Dungeontype: Normal
+      Description: UIWordDungeonNormalType
+    - Dungeontype: Party
+      Description: UIWordDungeonPartyType
+    - Dungeontype: Event
+      Description: UIWordDungeonEventType
+    - Dungeontype: World
+      Description: UIWordDungeonWorldBossType
+    - Dungeontype: Challenge
+      Description: UIWordDungeonChallenge
+    - Dungeontype: Guild
+      Description: UIWordDungeonGuildType
+    - Dungeontype: Inter
+      Description: UIWordDungeonInterType
+    - Dungeontype: BattleGround
+      Description: UIWordDungeonBattleField
+  RefreshDescription:
+    - Description: UIWord_BattleField_RefreshType_Daily
+    - Description: UIWord_BattleField_RefreshType_Weekly
+  RewardInfo:
+    - RewardRate: 1
+      FlagColor: Purple
+    - RewardRate: 3
+      FlagColor: Blue
+    - RewardRate: 5
+      FlagColor: Red

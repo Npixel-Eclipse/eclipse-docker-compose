@@ -1,0 +1,103 @@
+syntax = "proto3";
+package ranking;
+
+import "Common/ranking_common.proto";
+import "Common/property.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.ranking";
+option java_outer_classname = "rankingServiceProto";
+
+message RankingUpdateCommand{
+  reserved 1;
+  oneof Command{
+    Guild guild = 2;
+    Dungeon dungeon = 3;
+    Character character = 4; // 캐릭터 관련
+  }
+}
+
+message Guild{
+  oneof Info{
+    common.ScoreUpdate score_update = 1;
+    GuildMasterChange guild_master_change = 2;
+    GuildDisband guild_disband = 3;
+  }
+
+  message GuildMasterChange{
+    int64 guild_id = 1;
+    string master_name = 2;
+  }
+
+  message GuildDisband{
+    int64 guild_id = 1;
+  }
+}
+
+message Dungeon{
+  int64 account_id = 1;
+  string character_uuid = 2;
+
+  message Record {
+    string dungeon_name = 3;
+    int64 play_time_millis = 4;
+  }
+  optional Record record = 5;
+}
+
+message Character{
+  oneof Info{
+    common.ScoreUpdate score_update = 1;
+    ExpUpdate exp_update = 2;
+  }
+  
+  message ExpUpdate{
+    string character_uuid = 1;
+    int64 exp = 2;
+  }
+}
+
+message RankingBatchCommand{
+  enum BatchType{
+    RECORD_ROOM_RANKING = 0 [deprecated = true];
+    RECORD_ROOM_REWARD = 1 [deprecated = true];
+    RECORD_ROOM_PVP_POINT_RESET = 2 [deprecated = true];
+    GUILD_RANKING_UPDATE = 3 [deprecated = true];
+    DUNGEON_RANKING_REWARD = 4;
+    RANKING_UPDATE = 5;
+    RANKING_REWARD = 6;
+    PVP_SCORE_RESET = 7;
+  }
+}
+
+message RankingDisplayInfoEvent{
+  string character_uuid = 1;
+  repeated int64 chatting_mark_ids = 2; // buff.yaml에서 읽어온 buff_id
+}
+
+message SessionStatus{
+  map<string, SessionInfo> info_by_character_uuid = 1;
+
+  message SessionInfo{
+    string character_name = 1;
+    int32 character_class = 2;
+    string current_battle = 3;
+    string server_name = 4;
+  }
+}
+message GuildMemberStatus{
+  map<string, GuildInfo> info_by_character_uuid = 1;
+  message GuildInfo{
+    int64 guild_id = 1;
+    string guild_name = 2;
+    int64 frame = 3;
+    int64 symbol = 4;
+    string frame_color = 5;
+  }
+}
+
+message GuildRankingEvent {
+  int64 guild_id = 1;
+  int64 rank = 2;
+}
+

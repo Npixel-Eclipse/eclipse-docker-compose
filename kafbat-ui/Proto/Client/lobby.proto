@@ -1,0 +1,304 @@
+syntax = "proto3";
+package clientLobby;
+
+import "Common/websocket.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.client.lobby";
+option java_outer_classname = "ClientLobbyProto";
+
+enum Congestion {
+  LOW = 0;
+  MEDIUM = 1;
+  HIGH = 2;
+}
+
+message LobbyRequest {
+  oneof request {
+    Heartbeat heartbeat = 100;
+    Disconnect disconnect = 12;
+    BattleListRequest battle_list_request = 9;
+    BattleSelectRequest battle_select_request = 13;
+    CharacterListRequest character_list_request = 3;
+    CharacterSelectRequest character_select_request = 4;
+    CreateCharacterRequest create_character_request = 5;
+    EnterCharacterRequest enter_character_request = 6;
+    DeleteCharacterRequest delete_character_request = 7;
+    DeleteCharacterCancelRequest delete_character_cancel_request = 8;
+    CancelWaitRequest cancel_wait_request = 11;
+  }
+
+  message Heartbeat {}
+  message Disconnect {}
+}
+
+message LobbyEvent {
+  oneof event {
+    HeartbeatReply heartbeat_reply = 100;
+    ConnectEvent connect_event = 2;
+    DisconnectEvent disconnect_event = 10;
+    BattleListEvent battle_list_event = 9;
+    BattleSelectReply battle_select_reply = 13;
+    CharacterListReply character_list_reply = 3;
+    CharacterSelectReply character_select_reply = 4;
+    CreateCharacterReply create_character_reply = 5;
+    EnterCharacterReply enter_character_reply = 6;
+    DeleteCharacterReply delete_character_reply = 7;
+    DeleteCharacterCancelReply delete_character_cancel_reply = 8;
+    WaitEvent wait_event = 11;
+    CancelWaitReply cancel_wait_reply = 12;
+  }
+
+  message HeartbeatReply {
+    google.protobuf.Timestamp timestamp = 1;
+  }
+}
+
+message ClientLobbyResult {
+  enum Code {
+    OK = 0;
+    INVALID_REQUEST = 1;
+    EMAIL_NOT_FOUND = 2;
+    INVALID_PASSWORD = 3;
+    INVALID_TOKEN = 4;
+    NAME_TAKEN = 5;
+    CHARACTER_LIMIT = 6;
+    CHARACTER_NOT_FOUND = 7;
+    SESSION_ALREADY_EXISTS = 8;
+    VOIDED_PURCHASE_EXISTS = 9; // 비정상 환불내역 존재
+    WAIT = 10;
+    MAINTENANCE = 11;
+    WAIT_BATTLE = 12;
+    UNHEALTHY_SERVER = 13; // front 또는 battle 헬스체크 실패
+    INVALID_LENGTH = 14;
+    ALL_NUMBER = 15;
+    CONTAINS_SPACE = 16;
+    SPECIAL_CHARACTER = 17;
+    CONTAINS_FORBIDDEN_WORD = 18;  // 금칙어 포함
+    RESTRICT_ACCOUNT = 19; // 제재된 계정
+
+    INTERNAL_SERVER_ERROR = 99;
+  }
+
+  Code code = 1;
+  string message = 2;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginReply {
+  ClientLobbyResult result = 1;
+  string token = 2;
+  bytes account_uuid = 3;
+  int64 account_id = 4;
+}
+
+message ConnectEvent {
+  google.protobuf.Timestamp timestamp = 1;
+  int64 local_time_offset = 2;
+
+  message LastBattle {
+    string name = 1;
+    string display_name = 2;
+    Congestion congestion = 3;
+    bool maintenance = 4;
+  }
+
+  oneof event {
+    EnterCharacterReply enter_character_reply = 6;
+    LastBattle last_battle = 7;
+  }
+}
+
+message DisconnectEvent {
+  google.protobuf.Timestamp timestamp = 1;
+  int64 local_time_offset = 2;
+  common.WebSocketCloseCode reason = 3;
+}
+
+message BattleListRequest {
+}
+
+message BattleListEvent {
+  message Battle {
+    reserved 3;
+    string name = 1;
+    string display_name = 2;
+    bool recommended = 4;
+    bool maintenance = 5;
+    bool can_create_character = 6;
+    Congestion congestion = 7;
+    bool is_new = 8;
+  }
+
+  repeated Battle battles = 1; // 변경된 battle 정보만 전송될 수도 있음
+  repeated CharacterInfo characters = 2;
+}
+
+message CharacterInfo {
+  reserved 6, 7;
+
+  string uuid = 1;
+  string name = 2;
+  int64 level = 3;
+  int64 class_type = 4;
+  int64 last_address_id = 5;
+  google.protobuf.Timestamp last_logout = 9;
+  google.protobuf.Timestamp delete_date = 10;
+  string battle = 8;
+}
+
+message BattleSelectRequest {
+  string battle = 1;
+}
+
+message BattleSelectReply {
+  ClientLobbyResult result = 1;
+}
+
+message CharacterListRequest {
+  optional string battle = 1;
+}
+
+message CharacterListReply {
+  reserved 4;
+  ClientLobbyResult result = 1;
+  int64 total_slot_count = 2;
+  repeated CharacterInfo characters = 3;
+}
+
+message CharacterSelectInfo {
+  message Buff {
+    int64 combat_point = 1;
+    int64 pk_point = 2;
+  }
+  message Item {
+    int64 polymorph_item_id = 1;
+    int64 polymorph_enchant_level = 11;
+
+    int64 weapon_polymorph_item_id = 2;
+    int64 weapon_polymorph_enchant_level = 12;
+
+    int64 weapon_item_id = 3;
+    int64 polymorph_skin_item_id = 4;
+  }
+  message Guild {
+    message GuildMark {
+      int64 frame = 1;
+      int64 symbol = 2;
+      string frame_color = 3;
+    }
+    string name = 1;
+    GuildMark mark = 2;
+  }
+  oneof info {
+    Buff buff = 1;
+    Item item = 2;
+    Guild guild = 3;
+  }
+}
+
+message CharacterSelectRequest {
+  string character_uuid = 1;
+}
+
+message CharacterSelectReply {
+  ClientLobbyResult result = 1;
+  string character_uuid = 2;
+  CharacterSelectInfo character = 3;
+}
+
+message CharacterCreateInfo {
+  reserved 6;
+
+  string uuid = 1;
+  string name = 2;
+  int64 class_type = 3;
+  int64 level = 4;
+  google.protobuf.Timestamp create_date = 8;
+  string battle = 7;
+}
+
+message CreateCharacterRequest {
+  string name = 1;
+  int64 class_type = 2;
+  string battle = 3;
+}
+
+message CreateCharacterReply {
+  ClientLobbyResult result = 1;
+  CharacterCreateInfo character = 2;
+}
+
+message DeleteCharacterRequest {
+  string character_uuid = 1;
+}
+
+message DeleteCharacterReply {
+  reserved 3;
+
+  ClientLobbyResult result = 1;
+  string character_uuid = 2;
+  google.protobuf.Timestamp delete_date = 4;
+}
+
+message DeleteCharacterCancelRequest {
+  string character_uuid = 1;
+}
+
+message DeleteCharacterCancelReply {
+  ClientLobbyResult result = 1;
+  string character_uuid = 2;
+}
+
+message EnterCharacterRequest {
+  string character_uuid = 1;
+}
+
+message EnterCharacterReply {
+  ClientLobbyResult result = 1;
+
+  string character_uuid = 19;
+  string character_name = 2;
+  string session_key = 3;
+
+  string battle_url = 14;
+  bool battle_tls = 23;
+
+  string front_url = 15;
+  bool front_tls = 24;
+
+  string chat_url = 16;
+  bool chat_tls = 25;
+
+  string battle_name = 17;
+  string battle_display_name = 18;
+
+  bool offline_mode = 22;
+  bool need_confirm = 26;
+
+  optional string publisher_world_id = 20;
+  optional int64 publisher_character_id = 21;
+
+  repeated Cookie cookies = 27;
+}
+
+message Cookie {
+  string key = 1;
+  string value = 2;
+}
+
+message CancelWaitRequest {
+}
+
+message CancelWaitReply {
+  ClientLobbyResult result = 1;
+}
+
+message WaitEvent {
+  int64 waiters = 1;
+}

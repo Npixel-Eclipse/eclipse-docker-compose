@@ -1,0 +1,89 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - MonsterKill
+        - Move
+        - Level
+        - Talk
+        - UseItem
+        - GetItem
+        - PlayerKill
+        - Attend
+        - CompleteQuestCategory
+        - DisassembleItem
+        - CraftItem
+        - CraftItemCategory
+        - EnchantItem
+        - EnchantItemCategory
+        - UseItemCategory
+        - GetItemCategory
+        - GuildJoin
+        - PartyJoin
+        - CompleteQuest
+        - PlayerDead
+        - CharacterStat
+        - MonsterKillByGroup
+        - DisassembleItemCategory
+        - RecipeMerge
+        - EngraveItem
+        - EngraveItemCategory
+        - ManualMove
+        - EnterPortal
+        - LeaveLand
+        - BuildingConstructionComplete
+        - HarvestProduce
+        - HoldItem
+        - BuildingConstructionStart
+        - DungeonComplete
+        - GuildAttend
+        - ConsumeItem
+        - AttendElapsedDays
+        - Behavior
+        - CompletedItemCollection
+        - HostilePlayerKill
+        - BattlegroundPlayerKill
+        - BattlegroundWin
+        - FortressSupport
+        - FortressSupportRequest
+        - DungeonRanking
+        - CompletedItemCollectionCategoryCount
+        - CombinationTry
+        - CombinationMatch
+        - GuildContribution
+        - GuildWeeklyContribution
+        - ContributeGuildCollection
+        - ExpandEnchantItem
+        - ExpandEnchantItemCategory
+        - SellItem
+        - SellItemCategory
+        - AwakeningCategoryTotalLevel
+        - AwakeningCategoryTotalExpandStep
+        - ItemCollectionCleared
+        - BattlegroundPlay
+        - BattlegroundLoss
+        - BuyItem
+        - BuyItemCategory
+        - BuyBmShopProduct
+        - NpcInteraction
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    SupportsAutoQuest:
+      type: boolean
+    FromClient:
+      type: boolean
+    GoalAmountVisible:
+      type: boolean
+      default: true

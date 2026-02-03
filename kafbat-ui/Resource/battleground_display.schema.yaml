@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Target
+    - Matchmaking
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+      visible: true
+    # 대상 전장
+    Target:
+      type: string
+      ref: battleground
+    # 매치메이킹 규칙
+    Matchmaking:
+      type: string
+      ref: matchmaking

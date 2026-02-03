@@ -1,0 +1,204 @@
+syntax = "proto3";
+package trade;
+import "Common/item_common.proto";
+import "Common/property.proto";
+import "Common/callback.proto";
+import "google/protobuf/timestamp.proto";
+import "Common/kafka_key_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.trade";
+option java_outer_classname = "TradeServiceProto";
+
+enum TradeCommandResultCode {
+  FAIL = 0;
+  SUCCESS = 1;
+  FAIL_NOT_ENOUGH_DIA = 2;
+  FAIL_NOT_ENOUGH_GOLD = 3;
+  FAIL_NOT_ENOUGH_ITEM = 4;
+  FAIL_NOT_FOUND_ITEM = 5;
+  FAIL_INVALID_AMOUNT = 6;
+  FAIL_NOT_TRADABLE = 7;
+  FAIL_ITEM_LOCKED = 8;
+  FAIL_NOT_ENOUGH_INVENTORY_SLOT = 9;
+}
+
+message TradeCommand {
+  oneof command {
+    BuyCommand buy_command = 1;
+    SellCommand sell_command = 2;
+    ReRegisterCommand re_register_command = 3;
+    CancelCommand cancel_command = 5;
+    WithdrawCommand withdraw_command = 6;
+    ChangeTradeStatusCommand change_trade_status_command = 7;
+    SearchUserCommand search_user_command = 8;
+    ForwardEventCommand forward_event_command = 9;
+    SellGroupItemCommand sell_group_item_command = 10;
+    ListGroupItemCommand list_group_item_command = 11;
+    BuyRequestCommand buy_request_command = 12;
+    BuyRejectCommand buy_reject_command = 13;
+    AggregationCommand aggregation_command = 14;
+    UpdateItemPriceSummaryCommand update_item_price_summary_command = 16;
+  }
+}
+
+// [Command] Item -> Trade (key = trade_uuid)
+message BuyCommand {
+  bytes deprecated_account_uuid = 1;
+  int64 account_id = 6;
+  bytes character_uuid = 2;
+  int64 price = 3; // 거래소 아이템 구매 실패시 롤백에 필요함
+  repeated bytes reserved_inventory_slot_uuids = 5;
+
+  optional common.CallbackCommand callback_command_on_success = 4;
+  optional common.CallbackCommand callback_command_on_failure = 7;
+  TradeCommandResultCode result_code = 99;
+}
+
+// [Command] Item -> Trade (key = seller_account_id)
+message SellCommand {
+  bytes trade_uuid = 1;
+  optional int64 item_db_id = 2;
+  bytes item_uuid = 3;
+  int64 amount = 4;
+  int64 price = 5;
+  int64 item_id = 6;
+  int32 grade = 7;
+  int32 enchant_level = 8;
+  int32 engrave_cnt = 9;
+  int64 category_id = 10;
+  repeated common.Property properties = 11;
+  int64 registration_fee_item_id = 24;
+  int64 registration_fee = 13;
+  bytes character_uuid = 14;
+  google.protobuf.Timestamp delete_time = 21;
+  string server = 22;
+  optional bytes target_character_uuid = 23;
+  TradeCommandResultCode result_code = 99;
+}
+
+// [Command] Item -> Trade (key = seller_account_id)
+message ReRegisterCommand {
+  repeated bytes trade_uuid = 1;
+  int64 total_registration_fee = 2;
+  bytes character_uuid = 3;
+  TradeCommandResultCode result_code = 99;
+}
+
+// [Command] Item -> Trade (key = account_id)
+message CancelCommand {
+  bytes character_uuid = 1;
+  bytes trade_uuid = 2;
+  repeated bytes reserved_inventory_slot_uuids = 3;
+  int64 account_id = 4;
+
+  optional common.CallbackCommand callback_command_on_success = 5;
+  optional common.CallbackCommand callback_command_on_failure = 6;
+  optional common.KafkaKey return_item_key = 7;
+  optional string return_inventory = 8;
+  TradeCommandResultCode result_code = 99;
+}
+
+// [Command] Item -> Trade (key = account_id)
+message WithdrawCommand {
+  bytes character_uuid = 1;
+  repeated bytes trade_uuid = 2;
+  repeated bytes reserved_inventory_slot_uuids = 3;
+
+  optional common.CallbackCommand callback_command_on_success = 4;
+  optional common.CallbackCommand callback_command_on_failure = 5;
+  string return_inventory = 6;
+  int64 account_id = 7;
+  TradeCommandResultCode result_code = 99;
+}
+
+// [Command] Trade -> Trade (key = server_name)
+message ChangeTradeStatusCommand {}
+
+// [Command] Trade -> Trade (key = target_account_id)
+message SearchUserCommand {
+  int64 account_id = 1;
+  bytes character_uuid = 2;
+  string server = 3;
+  int64 target_account_id = 4;
+  string target_character_name = 5;
+  bytes target_character_uuid = 6;
+  optional google.protobuf.Timestamp target_last_login = 7;
+  int64 class_id = 8;
+}
+
+// [Command] Trade -> Trade (key = account_id)
+message ForwardEventCommand {
+  bytes trade_event = 1;
+  bytes character_uuid = 2;
+}
+
+message SellGroupItemCommand {
+  string item_uuid = 1;
+  int64 amount = 2;
+  int64 price = 3;
+  string buyer_character_uuid = 4;
+  int64 seller_account_id = 5;
+  string seller_character_uuid = 6;
+  string server = 7;
+  common.CallbackCommand callback_command_on_success = 8;
+  common.CallbackCommand callback_command_on_failure = 9;
+}
+
+// trade_common.proto 내의 GroupItemListEvent 메시지가 header에 포함
+// header key = GROUP_ITEM_LIST_EVENT
+message ListGroupItemCommand {
+  oneof group {
+    int64 guild = 1;
+  }
+  common.CallbackCommand callback_command_on_success = 2;
+}
+
+// [Command] Guild -> Trade (key = g_guild_id)
+message BuyRequestCommand {
+  repeated string trade_uuid = 1;
+  int64  buyer_account_id = 2;
+  string buyer_character_uuid = 3;
+  int64 guild_id = 4;
+
+  common.CallbackCommand callback_command_on_success = 5;
+  common.CallbackCommand callback_command_on_failure = 6;
+}
+
+// [Command] Guild -> Trade (key = g_guild_id)
+message BuyRejectCommand {
+  string trade_uuid = 1;
+  int64  buyer_account_id = 2;
+  string buyer_character_uuid = 3;
+  int64 guild_id = 4;
+
+  common.CallbackCommand callback_command_on_success = 5;
+  common.CallbackCommand callback_command_on_failure = 6;
+  common.KafkaKey return_item_key = 7;
+  string return_inventory = 8;
+}
+
+// [Command] Trade -> Trade (key = server + item_id)
+message AggregationCommand {
+  string server = 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+  int32 enchant_level = 4;
+  int32 grade = 5;
+  double unit_price = 6;
+  google.protobuf.Timestamp item_delete_time = 7;
+  google.protobuf.Timestamp trade_expire_time = 8;
+  bytes trade_uuid = 9;
+  repeated common.Property item_properties = 11;
+  bool should_exclude = 12;
+  bool is_purchased = 13;
+}
+
+message UpdateItemPriceSummaryCommand {
+  string server = 1;
+  int64 item_id = 2;
+  int32 enchant_level = 3;
+  double unit_price = 4;
+  double min_price_by_enchant_level = 5;
+  double max_price_by_enchant_level = 6;
+}

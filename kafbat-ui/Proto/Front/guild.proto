@@ -1,0 +1,1433 @@
+syntax = "proto3";
+package eclipse.client.guild;
+
+import "Common/guild_common.proto";
+import "Common/item_common.proto";
+import "Common/battle_common.proto";
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.guild";
+option java_outer_classname = "ClientGuildProto";
+
+enum GuildResultCode {
+  INVALID = 0;
+  SUCCESS = 1;
+  SUCCESS_CONFIRM_INFO = 2;
+  SUCCESS_CONFIRM_CREATE = 3;
+  SUCCESS_CONFIRM_JOIN = 4;
+  SUCCESS_CONFIRM_LEAVE = 5;
+  SUCCESS_CONFIRM_INFO_LIST = 6;
+  SUCCESS_CONFIRM_ALLY_PROPOSAL = 7;
+  SUCCESS_CONFIRM_CANCEL_ALLY_PROPOSAL = 8;
+  SUCCESS_CONFIRM_REPLY_ALLY_ACCEPT = 9;
+  SUCCESS_CONFIRM_REPLY_ALLY_DENY = 10;
+  SUCCESS_CONFIRM_DISALLY = 11;
+  SUCCESS_CONFIRM_HOSTILE = 12;
+  SUCCESS_CONFIRM_DISHOSTILE = 13;
+  SUCCESS_CONFIRM_BANISH = 14;
+  SUCCESS_CONFIRM_UPDATE_GUILD_INFO = 17;
+  SUCCESS_CONFIRM_UPDATE_MEMBER_ROLE = 20;
+  SUCCESS_CONFIRM_DELEGATE_GUILD_MASTER = 21;
+  SUCCESS_CONFIRM_UPDATE_MEMBER_INTRODUCTION = 22;
+  SUCCESS_CONFIRM_APPLY_FOR_JOIN = 23;
+  SUCCESS_CONFIRM_REPLY_APPLY_FOR_JOIN = 24;
+  SUCCESS_CONFIRM_APPLY_FOR_JOIN_LIST = 25;
+  SUCCESS_CONFIRM_RECEIVED_APPLY_FOR_JOIN_LIST = 26;
+  SUCCESS_CONFIRM_CANCEL_APPLY_FOR_JOIN = 27;
+  SUCCESS_CONFIRM_COLLECTION_LIST = 28;
+  SUCCESS_CONFIRM_ACQUIRE_COLLECTION = 29;
+  SUCCESS_CONFIRM_MEMBER_LIST = 31;
+  SUCCESS_CONFIRM_CURRENCY_LIST = 33;
+  SUCCESS_CONFIRM_HOSTILE_PROPOSAL = 35;
+  SUCCESS_CONFIRM_DECLINE_HOSTILE_PROPOSAL = 36;
+  SUCCESS_CONFIRM_HOSTILE_PROPOSAL_LIST = 37;
+  SUCCESS_CONFIRM_HELP_LIST = 38;
+  SUCCESS_CONFIRM_HELP = 39;
+  SUCCESS_CONFIRM_GET_TARGET_INFO = 40;
+  SUCCESS_CONFIRM_CHECK_CREATE = 41;
+  SUCCESS_CONFIRM_DISBAND = 42;
+  SUCCESS_CONFIRM_RELATION_LIST = 43;
+  SUCCESS_CONFIRM_GUILD_LOG_LIST = 44;
+  SUCCESS_CONFIRM_CONTRIBUTE_COLLECTION = 45;
+  SUCCESS_CONFIRM_ADDITIONAL_CONTRIBUTE_COLLECTION = 46;
+  SUCCESS_CONFIRM_PROMOTE_CONTRIBUTE_COLLECTION = 47;
+  SUCCESS_CONFIRM_STORAGE_STORE = 48;
+  SUCCESS_CONFIRM_STORAGE_SELL = 49;
+  SUCCESS_CONFIRM_SELL_LIST = 50;
+  SUCCESS_CONFIRM_DISTRIBUTE_CURRENCY = 51;
+  SUCCESS_CONFIRM_STORAGE_MANAGE_LIST = 52;
+  SUCCESS_CONFIRM_DISTRIBUTION_CONTRIBUTE_LIST = 53;
+  SUCCESS_CONFIRM_STORAGE_EXPAND = 54;
+  SUCCESS_CONFIRM_CANCEL_SELL = 55;
+  SUCCESS_CONFIRM_BUY = 56;
+  SUCCESS_CONFIRM_BUY_REJECT = 57;
+  SUCCESS_CONFIRM_WITHDRAW = 58;
+  SUCCESS_AUCTION_FINISH = 59;
+  SUCCESS_AUCTION_CANCEL = 60;
+  SUCCESS_CONFIRM_PIN_POINT_LIST = 61;
+  SUCCESS_CONFIRM_ADD_PIN_POINT = 62;
+  SUCCESS_CONFIRM_REMOVE_PIN_POINT = 63;
+
+  FAIL = 100;
+  // 길드 공용
+  FAIL_INVALID_REQUEST = 101;
+  FAIL_FORBIDDEN = 102; // 권한 없음 -> ex) 길드장이나 부길드장의 기능을 길드원 등이 이용하려할 때
+  FAIL_NOT_QUALIFIED = 103; // 자격 없음
+  FAIL_NOT_A_GUILD_MEMBER = 104;
+  FAIL_DOES_NOT_HAVE_GUILD = 105;
+  FAIL_GUILD_NOT_FOUND = 106;
+  FAIL_TARGET_GUILD_NOT_FOUND = 107;
+  FAIL_GUILD_LEVEL_NOT_ENOUGH = 108;
+  FAIL_ROLE_IS_FULL = 109;
+  FAIL_GUILD_PENALTY = 110;
+  FAIL_PRIVILEGE_CANNOT_BE_ASSIGNED = 111;
+  FAIL_INSUFFICIENT_ITEM = 112;
+  FAIL_INVALID_LENGTH = 113;
+  FAIL_CONTENT_LIMIT_LOCKED = 114;
+  FAIL_ALL_NUMBER = 115;
+  FAIL_NOT_ENOUGH_GUILD_STORAGE_SLOT = 116; // 길드 창고 슬롯 부족
+
+  // 길드 생성
+  FAIL_GUILD_NAME_ALREADY_EXISTS = 201;
+  FAIL_INSUFFICIENT_GOLD = 202;
+  FAIL_INSUFFICIENT_LEVEL = 203;
+  FAIL_ALREADY_HAVE_GUILD = 204;
+  FAIL_INVALID_GUILD_NAME = 205;
+  FAIL_NOT_FOUND_GUILD_MARK = 206;
+  FAIL_INVALID_GUILD_MARK = 207;
+  FAIL_INVALID_GUILD_NAME_LENGTH = 208;
+  FAIL_INVALID_GUILD_NAME_SPACE = 209;
+  FAIL_INVALID_GUILD_NAME_SPECIAL_CHARACTER = 210;
+  FAIL_INVALID_GUILD_INTRO_LENGTH = 211;
+  FAIL_CONTAINS_FORBIDDEN_WORD = 212;  // 금칙어 포함
+  FAIL_GUILD_PASSWORD_REQUIRED = 213; // 암호 가입 시 비밀번호가 비어 있는 경우
+
+  // 길드 가입
+  FAIL_GUILD_IS_FULL = 301;
+  FAIL_ALREADY_JOIN_APPLIED = 302;
+  FAIL_GUILD_PASSWORD_NOT_MATCH = 303;
+
+  // 길드 가입 신청
+  FAIL_GUILD_ALREADY_APPLIED = 351;
+  FAIL_GUILD_APPLY_IS_FULL = 352;
+  FAIL_NOT_FOUND_JOIN_REQUEST = 353;
+  FAIL_GUILD_RECEIVED_APPLY_IS_FULL = 354; // 길드 가입 요청 받을 수 있는 최대 횟수를 초과 시
+
+  // 길드 탈퇴
+  FAIL_YOU_ARE_GUILD_MASTER = 401;
+
+  // 길드 추방
+  FAIL_INVALID_TARGET = 501;
+  FAIL_TARGET_MEMBER_NOT_FOUND = 502;
+  FAIL_TARGET_MEMBER_IS_MASTER = 503;
+
+  // 길드 해체
+  FAIL_GUILD_ALREADY_DISBANDED = 601;
+  FAIL_GUILD_MEMBERS_LEFT = 602;
+  FAIL_GUILD_STORAGE_ITEM_EXIST = 603; // 길드 창고 및 길드 판매 아이템이 남은 경우
+  FAIL_GUILD_DISTRIBUTION_LEFT = 604; // 길드 분배 가능한 재화가 남은 경우
+  FAIL_GUILD_AUCTION_EXIST = 605; // 길드 경매에 등록된 아이템이 남은 경우
+
+  // 길드 동맹
+  FAIL_EXCEED_MAX_ALLY_PROPOSAL_COUNT = 701;
+  FAIL_EXCEED_MAX_ALLY_PROPOSAL_COUNT_OF_TARGET = 702; // 상대방 길드가 최대 제안 받는 갯수를 초과한 상태
+  FAIL_EXCEED_MAX_ALLY_COUNT = 703;
+  FAIL_EXCEED_MAX_ALLY_COUNT_OF_TARGET = 704;
+  FAIL_ALREADY_ALLIED = 705;
+  FAIL_ALREADY_PROPOSED = 706;
+  FAIL_ALREADY_ALLY_PROPOSE_CANCELED = 707;
+  FAIL_ALLY_PROPOSAL_TIME_OUT = 708;
+  FAIL_ALLY_PROPOSAL_NOT_FOUND = 709;
+  FAIL_IN_HOSTILE = 710;
+
+  // 길드 적대
+  FAIL_EXCEED_MAX_HOSTILE_COUNT = 801;
+  FAIL_ALLIED_GUILD = 802;
+  FAIL_ALREADY_HOSTILE = 803;
+  FAIL_ALREADY_NOT_HOSTILE = 804;
+  FAIL_HOSTILE_PROPOSAL_NOT_FOUND = 805;
+  FAIL_ALREADY_REQUESTED_HOSTILE_PROPOSAL = 806;
+  FAIL_IN_ALLY = 807;
+  FAIL_IN_ALLY_PROPOSAL = 808;
+
+  FAIL_EXPIRE_PK_TIME = 809; // 대응 시간 종료 시 실패 메시지
+
+  // 길드 컬렉션 == 특성
+  FAIL_COLLECTION_NOT_FOUND = 901;
+  FAIL_COLLECTION_ALREADY_ACQUIRED = 902;
+  FAIL_COLLECTION_FORBIDDEN = 903;
+  FAIL_PREV_COLLECTION_REQUIRED = 904;
+  FAIL_NOT_ENOUGH_GUILD_ITEM = 905;
+  FAIL_TOO_MANY_GUILD_MEMBER = 907;
+  FAIL_PROGRESS_NOT_ENOUGH = 908; // 목표치를 아직 채우지 못했는데 컬렉션을 습득하려고 할 때
+  FAIL_PROGRESS_ENOUGH = 909; // 이미 목표치를 다 채웠을 때
+  FAIL_CONTRIBUTE_COUNT_NOT_ENOUGH = 910; // 지원 횟수를 초과한 경우
+  FAIL_ALREADY_PROMOTED = 911; // 이미 길드 연구를 추천한 경우
+  FAIL_NOT_PROMOTED = 912; // 추천되지 않은 연구를 추천 해제하려고 할 때
+  FAIL_NOT_ENOUGH_ITEM_FOR_CONTRIBUTE = 913; // 지원에 필요한 아이템이 부족한 경우
+  FAIL_NOT_ENOUGH_ITEM_FOR_ADDITIONAL_CONTRIBUTE = 914; // 추가 지원에 필요한 아이템이 부족한 경우
+  FAIL_NOT_ENOUGH_ITEM_SLOT = 915; // 지원 보상에 필요한 인벤토리 슬롯이 부족한 경우
+  FAIL_MAX_COLLECTION_LEVEL = 916; // 컬렉션 레벨이 최대 레벨일 때
+
+  // 지원 관련 실패 코드
+  FAIL_NO_HELP_NEEDED = 1001; // 지원 한 곳이 없을 경우 사용
+  FAIL_NO_SLOT_FOR_HELP_REWARD = 1002;
+
+  // 길드 거래 관련 코드
+  FAIL_NOT_SAME_GUILD = 1101;
+
+  // 길드 분배 관련 실패 코드
+  FAIL_NOT_ENOUGH_CURRENCY = 1201;
+  FAIL_NO_USEFUL_DISTRIBUTION = 1202;
+
+  // 길드 경매
+  FAIL_AUCTION_INSUFFICIENT_ITEM = 1301;
+  FAIL_AUCTION_LOW_PRICE = 1302;
+  FAIL_AUCTION_ALREADY_HIGHEST_BIDDER = 1303;
+
+  // 길드 핀 포인트
+  FAIL_PIN_POINT_NOT_FOUND = 1401;
+  FAIL_PIN_POINT_NO_PERMISSION = 1402;
+
+  // 길드 레이드
+  FAIL_RAID_COLLECTION = 1501; // 수집 되지 않은 길드 레이드
+  FAIL_RAID_OVER_MAX_DIFFICULTY_LEVEL = 1502; // 도적 가능한 최대 길드 레이드 난이도 초과
+  FAIL_RAID_PREV_DIFFICULTY_NOT_COMPLETED = 1503; // 이전 난이도 길드 레이드 들이 COMPLETE 되지 않음
+  FAIL_RAID_CANT_JUMP = 1504; // 점프 도전 불가능한 길드 레이드
+  FAIL_RAID_TRY_COUNT_NOT_ENOUGH = 1505; // 길드 레이드 도전 가능 횟수 부족
+  FAIL_RAID_ALREADY_COMPLETED = 1506; // 이미 COMPLETE 된 길드 레이드 시도
+  FAIL_RAID_SACRIFICE_ALREADY_SPAWNED = 1507; // 길드 레이드 제물 이미 소환 상태
+  FAIL_RAID_NOT_FOUND = 1508; // 길드 레이드 정보를 찾을 수 없음
+}
+
+enum GuildRequestConfirmStatus {
+  UNSPECIFIED = 0;
+  DENY = 1;
+  ACCEPT = 2;
+}
+
+enum GuildJoinType {
+  INVALID_TYPE = 0;
+  IMMEDIATE = 1;
+  APPROVAL = 2;
+  PASSWORD = 3;
+}
+
+enum GuildProposalStatus{
+  NONE = 0;
+  PROPOSED = 1;
+  SUBMITTED = 2;
+  ALLIANCE = 3;
+  HOSTILE = 4;
+}
+
+enum GuildJoinApplyStatus{
+  JOIN_APPLY_NONE = 0;
+  APPLIED = 1;
+  DENIED = 2;
+  IMMEDIATELY_JOIN = 3; // 즉시 가입 길드의 경우
+  APPLY_JOIN = 4; // 가입 신청하는 길드의 경우
+  PASSWORD_JOIN = 5; // 암호 가입 길드의 경우
+}
+
+// 다른 타입과 겹치는 경우를 방지하기 위해서
+// LOG를 뒤에 붙여줌
+enum GuildLogType {
+  INVALID_LOG = 0;
+  JOIN_LOG = 1;
+  LEAVE_LOG = 2;
+  BANISH_LOG = 3;
+  CHANGE_ROLE_LOG = 4;
+  GUILD_LEVEL_UP_LOG = 5;
+  HOSTILE_LOG = 6;
+  DISHOSTILE_LOG = 7;
+  ALLY_LOG = 8;
+  DISALLY_LOG = 9;
+  COLLECTION_LEVEL_UP_LOG = 10;
+}
+
+enum CurrencyType {
+  CURRENCY_NONE = 0;
+  DIAMOND = 99;
+  GOLD = 100;
+}
+
+enum ContentType {
+  CONTENT_NONE = 0;
+  CONTENT_HUNTING_ZONE = 1;
+  CONTENT_BOSS = 2;
+  CONTENT_AUCTION = 3;
+}
+
+enum CurrencyDistributionType {
+  EQUAL = 0;
+  CONTRIBUTION = 1;
+  BOSS = 2;
+  HUNTING_ZONE_POINT = 3;
+}
+
+enum StorageManageItemType {
+  STORAGE_MANAGE_ITEM_TYPE_INVALID = 0;
+  STORAGE_MANAGE_ITEM_TYPE_PURCHASE = 1; // 구매
+  STORAGE_MANAGE_ITEM_TYPE_SELL = 2;     // 판매
+  STORAGE_MANAGE_ITEM_TYPE_STORE = 3;    // 보관
+  STORAGE_MANAGE_ITEM_TYPE_DISTRIBUTE = 4; // 분배
+  STORAGE_MANAGE_ITEM_TYPE_ACQUIRE = 5;  // 획득
+  STORAGE_MANAGE_ITEM_TYPE_AUCTION_REGISTER = 6;  // 경매 등록
+  STORAGE_MANAGE_ITEM_TYPE_AUCTION_CANCEL = 7;  // 경매 등록 취소
+}
+
+enum SellStatus {
+  PENDING = 0;
+  REGISTERED = 1;
+  SUCCEEDED = 2;
+  FAILED = 3;
+}
+
+enum AuctionStatus {
+  AUCTION_PENDING = 0; // 등록 대기중
+  AUCTION_BIDDING = 1; // 남은 시간 출력. 경매 내역의 등록
+  AUCTION_WIN = 2; // 입찰 중 버튼 출력. 경매 내역의 낙찰
+  AUCTION_LOSE = 3; // 입찰금 회수 버튼 출력
+  AUCTION_FINISH = 4; // 물품 회수 버튼 출력. 경매 내역의 유찰
+  AUCTION_CANCEL = 5; // 취소
+}
+
+message GuildInfo {
+  int64 id = 1;
+  string name = 2;
+  string master_name = 3;
+  string sub_master_name = 4;
+  string introduction = 5;
+  string notice = 6;
+  common.GuildMark mark = 7;
+  int64 member_count = 8;
+  int64 level = 9;
+  GuildJoinType join_type = 11;
+  int64 experience = 12;
+  int64 max_member_count = 13;
+  repeated GuildPrivilege privileges = 14;
+  string password = 15;
+}
+
+message GuildListInfo {
+  GuildInfo info = 1;
+  GuildJoinApplyStatus join_apply_status = 2;
+}
+
+message GuildInfoSummary {
+  int64 id = 1;
+  string name = 2;
+  string master_name = 3;
+  common.GuildMark mark = 5;
+  int64 level = 7;
+}
+
+message GuildPrivilege {
+  string role = 1;
+  // guild_role.yaml의 Privilege 갯수 만큼의 길이
+  repeated string privilege = 2;
+}
+
+message GuildMember {
+  string name = 1;
+  string role = 2;
+  int32 class_type = 3;
+  int64 total_contribution = 4;
+  int64 weekly_contribution = 5;
+  string introduction = 6;
+  bool online = 7;
+  int64 guild_id = 8;
+  string character_uuid = 9;
+  google.protobuf.Timestamp disconnected_at = 10;
+  int64 level = 11;
+  int64 combat_point = 12;
+}
+
+message ApplyMember{
+  string name = 1;
+  string character_uuid = 2;
+  int32 class_type = 3;
+  bool online = 4;
+  google.protobuf.Timestamp disconnected_at = 5;
+  int64 level = 6;
+  int64 combat_point = 7;
+}
+
+message GuildLog {
+  message Param {
+    string key = 1;
+    string value = 2;
+  }
+  repeated Param params = 1;
+  GuildLogType type = 2;
+  google.protobuf.Timestamp created_at = 3;
+}
+
+message Distribution {
+  int64 gold_amount = 1;
+  int64 dia_amount = 2;
+  string character_uuid = 3;
+}
+
+message GuildRaid {
+  message Contributor {
+    string character_name = 1;
+    int64 amount = 2;
+  }
+
+  message NpcStatus {
+    int64 total_npc_hp = 1;
+    int64 total_npc_max_hp = 2;
+  }
+
+  int64 guild_raid_id = 1;
+  // 클라에서 마지막 클리어 시간 기준으로 기본 선택 길드 레이드 결정. null 일 경우 아직 정복하지 못한 길드 레이드
+  optional google.protobuf.Timestamp last_complete_time = 2;
+  int64 remain_try_count = 3;
+  repeated Contributor contributors = 6;
+  optional NpcStatus npc_status = 7;
+}
+
+// 길드 핀 포인트
+message GuildPinPoint {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  common.ProtoCoordinate coordinate = 3;
+  int64 guild_id = 4;
+  string sharer_name = 5;
+  google.protobuf.Timestamp created_at = 6;
+}
+
+message GuildRequest {
+  message GetInfoList {
+    string search = 1;
+    bool immediate = 2; // 즉시 가입 필터 적용 여부
+  }
+
+  message GetInfo {}
+
+  message GetTargetInfo {
+    int64 guild_id = 1;
+  }
+
+  message RelationList {
+  }
+
+  message GuildLogList {}
+
+  message CurrencyList {}
+
+  message MemberList {}
+
+  message UpdateGuildInfo {
+    optional GuildJoinType join_type = 1;
+    // 길드 소개 최대 30자
+    optional string introduction = 2;
+    // 길드 공지 사항 최대 100자
+    optional string notice = 3;
+    optional common.GuildMark mark = 4;
+    // guild_role.yaml의 갯수 만큼이 최대 길이
+    repeated GuildPrivilege privileges = 5;
+    // 암호 변경
+    optional string password = 6;
+  }
+
+  message UpdateMemberRole {
+    string character_uuid = 1;
+    string role = 2;
+  }
+
+  message DelegateGuildMaster {
+    string character_uuid = 1;
+  }
+
+  message UpdateMemberIntroduction {
+    // 자기 소개 최대 14자
+    string introduction = 1;
+  }
+
+  message CheckCreate {
+    string name = 1;
+    string introduction = 2;
+    common.GuildMark mark = 3;
+    GuildJoinType join_type = 4;
+    optional string password = 5;
+  }
+
+  message Create {
+    // 길드 이름 최대 12자
+    string name = 1;
+    // 길드 소개 최대 30자
+    string introduction = 2;
+    common.GuildMark mark = 3;
+    GuildJoinType join_type = 4;
+    string password = 5;
+  }
+
+  message Join {
+    int64 guild_id = 1;
+    optional string password = 2;
+  }
+
+  message ApplyForJoin {
+    int64 guild_id = 1;
+  }
+
+  message ReplyApplyForJoin {
+    string target_character_uuid = 1;
+    GuildRequestConfirmStatus confirm_status = 2;
+  }
+
+  message ApplyForJoinList {}
+
+  message ReceivedApplyForJoinList {}
+
+  message CancelApplyForJoin {
+    int64 guild_id = 1;
+  }
+
+
+  message Leave {}
+
+  message Disband {}
+
+  message Banish {
+    string target_character_uuid = 2;
+  }
+
+  message AllyProposal {
+    // 길드 이름 최대 12자
+    string target_guild_name = 1;
+  }
+
+  message CancelAllyProposal {
+    int64 target_guild_id = 1;
+  }
+
+  message ReplyAlly {
+    int64 proposer_guild_id = 1; // 제안한 길드
+    GuildRequestConfirmStatus confirm_status = 2;
+  }
+
+  message Disally {
+    int64 target_guild_id = 1;
+  }
+
+  message Hostile {
+    repeated string target_guild_name = 1;
+  }
+
+  message HostileProposal {
+    int64 target_guild_id = 1;
+    // 적대 요청 사유 최대 50자
+    string reason = 2;
+    bytes pk_record_id = 3;
+  }
+
+  message DeclineHostileProposal {
+    repeated int64 target_guild_id = 1;
+  }
+
+  message HostileProposalList {}
+
+  message Dishostile {
+    int64 target_guild_id = 1;
+  }
+
+  // 길드 컬렉션 == 길드 연구
+  message CollectionList {}
+
+  message AcquireCollection {
+    int64 collection_id = 1;
+  }
+
+  message ContributeCollection {
+    int64 collection_id = 1;
+  }
+
+  message AdditionalContributeCollection {
+    int64 collection_id = 1;
+  }
+
+  // 길드 연구 추천
+  message PromoteContributeCollection {
+    int64 collection_id = 1;
+    bool promote = 2;
+  }
+
+  // 길드 레이드 목록 조회
+  message GuildRaidList {}
+
+  // 길드 레이드 상태 조회
+  message GuildRaidStatus {}
+
+  // 길드 레이드 희생 제물 소환 요청
+  message SpawnGuildRaidSacrifice {
+    int64 guild_raid_id = 1;
+    bool jump_guild_raid = 2;
+  }
+
+  message HelpList {}
+  message Help {}
+
+  // 길드 창고 아이템 리스트 - 인벤토리 이벤트로 응답
+  message StorageItemList {}
+  // 길드 창고 인벤토리 확장 - confirm 응답과 인벤토리 이벤트 (기존 인벤토리 확장이 item으로 처리)
+  message StorageExpand {
+    int64 target_expand_level = 1;
+  }
+  // 길드 창고 보관 - 요청자는 confirm 응답, 모든 길드원은 인벤토리 이벤트
+  message StorageStore {
+    string item_uuid = 1;
+    int64 amount = 2;
+  }
+  // 길드 창고 아이템 판매 - 요청자는 confirm 응답, 모든 길드원은 인벤토리 이벤트 (창고 내 아이템 차감에 대해서, 판매 아이템 리스트는 따로 요청 필요)
+  message StorageSell {
+    string item_uuid = 1;
+    int64 amount = 2;
+    string character_uuid = 3; // 대상 길드원 uuid
+    int64 price = 4;
+  }
+  // 길드 창고 판매 아이템 리스트 - 요청자는 confirm 응답, 모든 길드원 인벤토리 이벤트
+  message SellList {}
+
+  // 길드 창고 아이템 판매 등록 취소 - 요청자는 confirm 응답, 창고로 아이템이 증가할 때 모든 길드원은  인벤토리 이벤트
+  message StorageCancelSell {
+    string trade_uuid = 1;
+  }
+  // 길드 창고 아이템 구매 - 요청자는 confirm 응답, 모든 길드원은 인벤토리 이벤트
+  message Buy {
+    string trade_uuid = 1;
+  }
+
+  message BuyReject {
+    string trade_uuid = 1;
+  }
+
+  message Withdraw {
+    repeated string trade_uuid = 1;
+  }
+
+  // 길드 창고 재화 분배 - 요청자는 confirm 응답, 인벤토리 이벤트
+  // 분배 재화는 다이아와 골드로 한정
+  // 재화 분배 타입
+  // 균등, 주간 기여도, 길드 보스 참여도, 영토 소유 포인트
+  message DistributeCurrency {
+    repeated Distribution distributions = 1;
+  }
+  // 길드 창고 관리 내역 리스트 - 페이지네이션 가능 - 요청자는 confirm 응답
+  message StorageManageList {
+    int64 page = 1;
+  }
+  // 길드 단위 퀘스트 조회
+  message GuildQuestList {}
+
+  // 길드 분배 탭에서 기여 목록
+  message DistributionContributeList {}
+
+  // 길드 경매 목록 조회
+  message ListAuction {}
+
+  // 경매 등록
+  message StartAuction {
+    string item_uuid = 1;
+    int64 amount = 2;
+    int64 start_price = 3;
+  }
+
+  message CancelAuction {
+    string auction_uuid = 1;
+  }
+
+  // 입찰
+  message BidAuction {
+    string auction_uuid = 1;
+    int64 price = 2;
+  }
+
+  // 입찰금 회수
+  message LoseAuction {
+    string auction_uuid = 1;
+  }
+
+  // 물품 회수
+  message FinishAuction {
+    oneof action {
+      string auction_uuid = 1;
+      bool all = 2;
+    }
+  }
+
+  message ListAuctionHistory {
+    int64 page = 1;
+  }
+
+  oneof request {
+    GetInfoList get_info_list = 1;
+    GetInfo get_info = 2;
+    Create create = 3;
+    Join join = 4;
+    Leave leave = 5;
+    Banish banish = 7;
+    AllyProposal ally_proposal = 8;
+    CancelAllyProposal cancel_ally_proposal = 9;
+    ReplyAlly reply_ally = 10;
+    Disally disally = 11;
+    Hostile hostile = 12;
+    Dishostile dishostile = 13;
+    UpdateGuildInfo update_guild_info = 15;
+    UpdateMemberRole update_member_role = 18;
+    DelegateGuildMaster delegate_guild_master = 19;
+    UpdateMemberIntroduction update_member_introduction = 20;
+    ApplyForJoin apply_for_join = 21;
+    ReplyApplyForJoin reply_apply_for_join = 22;
+    ApplyForJoinList apply_for_join_list = 23;
+    ReceivedApplyForJoinList received_apply_for_join_list = 24;
+    CancelApplyForJoin cancel_apply_for_join = 25;
+    MemberList member_list = 26;
+    CheckCreate check_create = 27;
+
+    Disband disband = 28;
+
+    GetTargetInfo get_target_info = 41;
+    RelationList relation_list = 42;
+
+    GuildLogList guild_log_list = 51;
+
+    CollectionList collection_list = 101;
+    AcquireCollection acquire_collection = 102;
+
+    CurrencyList currency_list = 104;
+    HostileProposal hostile_proposal = 106;
+    DeclineHostileProposal decline_hostile_proposal = 107;
+    HostileProposalList hostile_proposal_list = 108;
+
+    ContributeCollection contribute_collection = 111;
+    AdditionalContributeCollection additional_contribute_collection = 112;
+    PromoteContributeCollection promote_contribute_collection = 113;
+
+    HelpList help_list = 151;
+    Help help = 152;
+
+    StorageItemList storage_item_list = 161;
+    StorageExpand storage_inventory_expand = 162;
+    StorageStore storage_store = 163;
+    StorageSell storage_sell = 164;
+    StorageCancelSell storage_cancel_sell = 165;
+    Buy buy = 166;
+    DistributeCurrency distribute_currency = 167;
+    StorageManageList storage_manage_list = 168;
+    SellList sell_list = 169;
+
+    GuildQuestList guild_quest_list = 171;
+
+    DistributionContributeList distribution_contribute_list = 182;
+
+    BuyReject buy_reject = 191;
+    Withdraw withdraw = 192;
+
+    ListAuction list_auction = 201;
+    StartAuction start_auction = 202;
+    CancelAuction cancel_auction = 203;
+    BidAuction bid_auction = 204;
+    LoseAuction lose_auction = 205;
+    FinishAuction finish_auction = 206;
+    ListAuctionHistory list_auction_history = 207;
+
+    GuildRaidList guild_raid_list = 231;
+    GuildRaidStatus guild_raid_status = 232;
+    SpawnGuildRaidSacrifice spawn_guild_raid_sacrifice = 233;
+
+    // 길드 핀 포인트
+    PinPointList pin_point_list = 241;
+    AddPinPoint add_pin_point = 242;
+    RemovePinPoint remove_pin_point = 243;
+  }
+
+  // 길드 핀 포인트 목록 조회
+  message PinPointList {}
+
+  // 길드 핀 포인트 등록 (권한 필요)
+  message AddPinPoint {
+    int64 address_id = 1;
+    common.ProtoCoordinate coordinate = 2;
+  }
+
+  // 길드 핀 포인트 삭제 (권한 필요)
+  message RemovePinPoint {
+    int64 pin_id = 1;
+  }
+}
+
+message GuildEvent {
+  message Proposal {
+    GuildInfoSummary guild_summary = 1;
+    int64 remain_time = 2; // 우호 혹은 적대의 경우 남은 시간 0
+    GuildProposalStatus status = 3;
+  }
+
+  message Collection {
+    int64 collection_id = 1;
+    int64 level = 2;
+    int64 progress = 3;
+    bool promoted = 4;
+  }
+
+  message GuildItem {
+    string character_uuid = 1; // 길드가 소유한 아이템의 경우 빈 string
+    int64 item_id = 2;
+    int64 amount = 3;
+    int64 weekly_amount = 4;
+  }
+
+  message ConfirmInfoList{
+    repeated GuildListInfo info_list = 1;
+  }
+
+  message ConfirmInfo {
+    GuildInfo info = 1;
+    google.protobuf.Timestamp penalty_end_time = 2;
+  }
+
+  message ConfirmGetTargetInfo {
+    GuildInfo info = 1;
+    repeated Collection collections = 2;
+  }
+
+  message ConfirmRelationList {
+    repeated Proposal relations = 1;
+  }
+
+  message ConfirmCurrencyList {
+    repeated GuildItem currencies = 1;
+  }
+
+  message ConfirmMemberList {
+    repeated GuildMember member_info = 1;
+  }
+
+  message ConfirmUpdateGuildInfo {
+    optional string introduction = 1;
+    optional string notice = 2;
+    optional GuildJoinType join_type = 3;
+    optional common.GuildMark mark = 4;
+    repeated GuildPrivilege privileges = 5;
+    optional string password = 6;
+  }
+
+  message ConfirmUpdateMemberRole {
+    string character_uuid = 1;
+    string role = 2;
+  }
+
+  message ConfirmDelegateGuildMaster {
+    string previous_guild_master_uuid = 1;
+    string current_guild_master_uuid = 2;
+  }
+
+  message ConfirmUpdateMemberIntroduction {
+    string introduction = 1;
+  }
+
+  message ConfirmCheckCreate {
+
+  }
+
+  message ConfirmCreate{
+    GuildInfo info = 1;
+    GuildMember self_member_info = 2;
+  }
+
+  message ConfirmJoin {
+    GuildInfo info = 1;
+    repeated  GuildMember member_info = 2;
+    repeated Proposal propose_list = 3;
+  }
+
+  message ConfirmApplyForJoin {
+    GuildInfo info = 1;
+  }
+
+  message ConfirmReplyApplyForJoin {
+    string target_character_uuid = 1;
+  }
+
+  message ConfirmApplyForJoinList {
+    repeated GuildListInfo guild_info_list = 1;
+  }
+
+  message ConfirmReceivedApplyForJoinList {
+    repeated ApplyMember apply_member_list = 1;
+  }
+
+  message ConfirmCancelApplyForJoin {
+    int64 guild_id = 1;
+    GuildJoinApplyStatus join_apply_status = 2;
+  }
+
+  message ConfirmLeave {
+  }
+
+  message ConfirmDisband {}
+
+  message ConfirmBanish {
+    string target_character_uuid = 3;
+  }
+
+  message ConfirmAllyProposal {
+    GuildInfoSummary target_guild_summary = 1;
+    int64 remain_time = 2;
+  }
+
+  message ConfirmCancelAllyProposal {
+    int64 target_guild_id = 1;
+  }
+
+  message ConfirmReplyAlly {
+    int64 target_guild_id = 1;
+  }
+
+  message ConfirmDisally {
+    int64 target_guild_id = 1;
+  }
+
+  message ConfirmHostile {
+    repeated GuildInfoSummary target_guild_summaries = 1;
+  }
+
+  message ConfirmHostileProposal {
+    int64 target_guild_id = 1;
+  }
+
+  message ConfirmDeclineHostileProposal {
+    repeated int64 target_guild_ids = 1;
+  }
+
+  message ConfirmHostileProposalList {
+    repeated HostileProposal hostile_proposals = 1;
+
+    message HostileProposal {
+      int64 target_guild_id = 1;
+      string requester_name = 2;
+      string target_guild_name = 3;
+      common.GuildMark target_guild_mark = 4;
+      string reason = 5;
+      GuildProposalStatus status = 6;
+      google.protobuf.Timestamp requested_at = 7;
+    }
+  }
+
+  message ConfirmDishostile {
+    int64 target_guild_id = 1;
+  }
+
+  message ConfirmCollectionList {
+    repeated Collection collections = 1;
+  }
+
+
+  message ConfirmContributeCollection {
+    int64 collection_id = 1;
+    int64 level = 2;
+    int64 progress = 3;
+    google.protobuf.Timestamp achieved_at = 4;
+    int64 contribute_remain_count = 5;
+    bool is_critical = 6;
+  }
+
+  message ConfirmAdditionalContributeCollection {
+    int64 collection_id = 1;
+    int64 level = 2;
+    int64 progress = 3;
+    bool is_critical = 4;
+  }
+
+  message ConfirmPromoteContributeCollection {
+    int64 collection_id = 1;
+    int64 level = 2;
+    bool promote = 3;
+  }
+
+  message ConfirmAcquireCollection {
+    Collection collection = 1;
+  }
+
+  message  Building{
+    string character_uuid = 1;
+    int64 building_id = 2;
+    int64 level = 3;
+
+    int64 max_help_count = 4;
+    int64 current_help_count = 5;
+    int64 additional_help_count = 6;
+    string help_uuid = 7;
+  }
+
+  message ConfirmGuildRaidList {
+    repeated GuildRaid guild_raids = 1;
+    int64 jump_guild_raid_id = 2;
+  }
+
+  message ConfirmHelpList {
+    repeated Building my_buildings = 1;
+    repeated Building buildings = 2;
+
+  }
+
+  message ConfirmHelp {
+    repeated Building helped_buildings = 1;
+  }
+
+  message ConfirmGuildLogList {
+    repeated GuildLog guild_logs = 1;
+  }
+
+  message ConfirmStorageExpand {
+    int64 target_expand_level = 1;
+  }
+
+  message ConfirmStorageStore {
+    string item_uuid = 1;
+    int64 amount = 2;
+  }
+
+  message ConfirmStorageSell {
+    string trade_uuid = 1;
+    string item_uuid = 2;
+    int64 amount = 3;
+    int64 price = 4;
+  }
+
+  message ConfirmSellList {
+    repeated TradeItem trade_items = 1;
+
+    message TradeItem {
+      string trade_uuid = 1;
+      common.Item item = 2;
+      int64 price = 3;
+      string seller_character_name = 4;
+      string seller_character_uuid = 5;
+      string buyer_character_name = 6;
+      string buyer_character_uuid = 7;
+
+      google.protobuf.Timestamp valid_until = 8;
+    }
+  }
+
+  message ConfirmCancelSell {
+    string trade_uuid = 1;
+  }
+
+  message ConfirmBuy {
+    string trade_uuid = 1;
+  }
+
+  message ConfirmBuyReject {
+    string trade_uuid = 1;
+  }
+
+  message ConfirmWithdraw {
+    repeated string trade_uuid = 1;
+  }
+
+  message ConfirmDistributeCurrency {
+    repeated Distribution distributions = 1;
+  }
+
+  message ConfirmStorageManageList {
+    repeated StorageManageItem storage_manage_item = 1;
+    int64 page = 2;
+    int64 max_page = 3; // 최대 페이지
+
+    message StorageManageItem {
+      StorageManageItemType type = 1;          // 구분
+      common.Item item = 2;           // 아이템 정보 (아이콘, 이름 포함 가정)
+      string character_name = 3;                    // 관련 유저 이름
+      CurrencyType currency_type = 4;
+      optional int64 amount = 5;               // 금액 (판매/분배)
+      optional ContentType content_type = 6;
+      google.protobuf.Timestamp timestamp = 7; // 시간
+    }
+  }
+
+  message ConfirmDistributionContributeList {
+    repeated DistributionContribute distribution_contributes = 1;
+    repeated DistributionContribute distribution_contributes_hunting_zone = 2;
+    google.protobuf.Timestamp auto_distributed_at = 3; // 자동 분배 시각
+
+    message DistributionContribute {
+      string character_uuid = 1; // 비어 있다면 삭제된 유저
+      string character_name = 2;
+      string role = 3;
+      int64 past_week_contribution = 4; // 지난 주 기여도
+      int64 bid_amount = 5; // 투자 포인트
+      bool left = 6; // 멤버가 길드에서 나갔는지 여부
+      int32 class_type = 7;
+      google.protobuf.Timestamp last_bid_at = 8;
+      int64 guild_raid_kill_count = 10; // 길드 레이드에서 처치 횟수
+    }
+  }
+
+  message UpdateGuildInfoEvent {
+    optional string introduction = 1;
+    optional string notice = 2;
+    optional GuildJoinType join_type = 3;
+    optional common.GuildMark mark = 4;
+    repeated GuildPrivilege privileges = 5;
+    optional string password = 6;
+  }
+
+  message UpdateMemberRoleEvent {
+    string character_uuid = 1;
+    string role = 2;
+  }
+
+  message DelegateGuildMasterEvent {
+    string previous_guild_master_uuid = 1;
+    string current_guild_master_uuid = 2;
+  }
+
+  message UpdateMemberIntroductionEvent {
+    string characterUuid = 1;
+    string introduction = 2;
+  }
+
+  message JoinEvent {
+    GuildMember join_member_info = 1;
+  }
+
+  message TargetJoinEvent {
+    int64 guild_id = 1;
+  }
+
+  message ApplyForJoinEvent {
+    ApplyMember apply_member_info = 1;
+  }
+
+  message CancelApplyForJoinEvent {
+    string character_uuid = 1;
+  }
+
+  message DenyJoinEvent {
+    string character_uuid = 1;
+  }
+
+  message TargetDenyJoinEvent {
+    int64 guild_id = 1;
+  }
+
+  message LeaveEvent{
+    string leave_character_uuid = 2;
+  }
+
+  message BanishEvent {
+    string target_character_uuid = 2;
+  }
+
+  message AcceptAllyEvent {
+    int64 target_guild_id = 1;
+  }
+  message TargetAcceptAllyEvent {
+    int64 guild_id = 1;
+  }
+
+  message DenyAllyEvent {
+    int64 target_guild_id = 1;
+  }
+  message TargetDenyAllyEvent {
+    int64 guild_id = 1;
+  }
+
+  message CancelAllyProposalEvent {
+    int64 target_guild_id = 1;
+  }
+  message TargetCancelAllyProposalEvent {
+    int64 guild_id = 1;
+  }
+
+  message AllyProposalEvent {
+    GuildInfoSummary target_guild_summary = 1;
+    int64 remain_time = 2;
+  }
+  message TargetAllyProposalEvent {
+    GuildInfoSummary guild_summary = 1;
+    int64 remain_time = 2;
+  }
+
+  message DisallyEvent {
+    int64 target_guild_id = 1;
+  }
+  message TargetDisallyEvent {
+    int64 guild_id = 1;
+  }
+
+  message HostileEvent {
+    repeated GuildInfoSummary target_guild_summaries = 1;
+  }
+
+  message HostileProposalEvent {
+    int64 target_guild_id = 1;
+    string reason = 2;
+  }
+
+  message DishostileEvent {
+    int64 target_guild_id = 1;
+  }
+
+  message ConnectEvent {
+    string character_uuid = 1;
+    string name = 2;
+  }
+
+  message DisconnectEvent {
+    string character_uuid = 1;
+    string name = 2;
+    google.protobuf.Timestamp disconnect_at = 3;
+  }
+
+  message ContributeCollectionEvent {
+    int64 collection_id = 1;
+    int64 level = 2;
+    int64 progress = 3;
+  }
+
+  message AcquireCollectionEvent {
+    repeated Collection collections = 1;
+  }
+
+  message GuildLogEvent {
+    GuildLog guild_log = 1;
+  }
+
+  // 길드 레이드 상태 정보. GuildRaidStatus 요청, 길드 레이드 시작/종료 시 이벤트 발생
+  message GuildRaidStatusEvent {
+    // 유휴 상태. 길드 레이드 진행중이지 않음.
+    message Idle {
+    }
+
+    // 길드 레이드 제물 소환 상태
+    message SacrificeSpawned {
+      int64 guild_raid_id = 1;
+      string summoner_character_name = 2; // 길드 레이드 제물 소환자
+    }
+
+    // 길드 레이드(보스) 진행 중인 guild raid id
+    message Active {
+      int64 guild_raid_id = 1;
+      google.protobuf.Timestamp end_time = 2; // db(guild_raid.sql) 저장된 complete_at 시각 전달
+    }
+
+    oneof status {
+      Idle idle = 1;
+      SacrificeSpawned sacrifice_spawned = 2;
+      Active active = 3;
+    }
+  }
+
+  // 길드 레이드 희생 제물 소환 요청 처리 응답
+  message SpawnGuildRaidSacrificeEvent {
+    int64 guild_raid_id = 1;
+  }
+
+  message HelpEvent {
+    repeated string add_help_uuids = 1;
+    repeated string delete_help_uuids = 2;
+  }
+
+  // 길드 연구로 인하여 achieved_at에 변경이 필요 할 때, 이벤트 발행
+  // max_contribute_count, recharge_time_per_contribute_count, join, banish, leave가 변경 되었을 때
+  message ChangeAchievedAt {
+    google.protobuf.Timestamp achieved_at = 1;
+    int64 recharge_time_per_contribute_second = 2; // 길드 연구 지원 충전 시간 (초)
+    int64 max_contribute_count = 3; // 길드 연구 지원 최대 횟수
+    int64 contribute_remain_count = 4; // 남은 지원 횟수
+  }
+
+  message PromoteCollectionEvent {
+    int64 collection_id = 1;
+  }
+
+  message Auction {
+    message Item {
+      string auction_uuid = 1;
+      common.Item item = 2;
+      string highest_bidder_name = 3;
+      int64 price = 4;
+      AuctionStatus auction_status = 5;
+      google.protobuf.Timestamp registered_at = 6;
+    }
+
+    repeated Item items = 1;
+  }
+
+  message LoseAuction {
+    int64 returned_price = 1;
+  }
+
+  message FinishAuction {
+    repeated string auction_uuids = 1;
+  }
+
+  message AuctionHistory {
+    message Item {
+      string auction_uuid = 1;
+      common.Item item = 2;
+      string highest_bidder_name = 3;
+      int64 price = 4;
+      AuctionStatus auction_status = 5;
+      google.protobuf.Timestamp finished_at = 6;
+    }
+
+    int64 page = 1;
+    int64 max_page = 2;
+    repeated Item items = 3;
+  }
+
+    // 길드 핀 포인트 목록 응답
+  message ConfirmPinPointList {
+    repeated GuildPinPoint pins = 1;
+  }
+
+  // 길드 핀 포인트 등록 응답
+  message ConfirmAddPinPoint {
+    GuildPinPoint pin = 1;
+  }
+
+  // 길드 핀 포인트 삭제 응답
+  message ConfirmRemovePinPoint {
+    int64 pin_id = 1;
+  }
+
+  // 길드 핀 포인트 등록 브로드캐스트
+  message PinPointAddEvent {
+    GuildPinPoint pin = 1;
+  }
+
+  // 길드 핀 포인트 삭제 브로드캐스트
+  message PinPointRemoveEvent {
+    int64 pin_id = 1;
+    string remover_name = 2;
+  }
+
+  oneof event {
+    ConfirmInfoList confirm_info_list = 1;
+    ConfirmInfo confirm_info = 2;
+    ConfirmCreate confirm_create = 3;
+    ConfirmJoin confirm_join = 4;
+    ConfirmLeave confirm_leave = 5;
+    ConfirmBanish confirm_banish = 7;
+    ConfirmAllyProposal confirm_ally_proposal = 8;
+    ConfirmCancelAllyProposal confirm_cancel_ally_proposal = 9;
+    ConfirmReplyAlly confirm_reply_ally = 10;
+    ConfirmDisally confirm_disally = 11;
+    ConfirmHostile confirm_hostile = 12;
+    ConfirmDishostile confirm_dishostile = 13;
+    ConfirmUpdateGuildInfo confirm_update_guild_info = 15;
+    ConfirmUpdateMemberRole confirm_update_member_role = 18;
+    ConfirmDelegateGuildMaster confirm_delegate_guild_master = 19;
+    ConfirmUpdateMemberIntroduction confirm_update_member_introduction = 20;
+    ConfirmApplyForJoin confirm_apply_for_join = 21;
+    ConfirmReplyApplyForJoin confirm_reply_apply_for_join = 22;
+    ConfirmApplyForJoinList confirm_apply_for_join_list = 23;
+    ConfirmReceivedApplyForJoinList confirm_received_apply_for_join_list = 24;
+    ConfirmCancelApplyForJoin confirm_cancel_apply_for_join = 25;
+    ConfirmCollectionList confirm_collection_list = 26;
+    ConfirmAcquireCollection confirm_acquire_collection = 27;
+    ConfirmMemberList confirm_member_list = 29;
+    ConfirmCurrencyList confirm_currency_list = 31;
+    ConfirmHostileProposal confirm_hostile_proposal = 33;
+    ConfirmDeclineHostileProposal confirm_decline_hostile_proposal = 34;
+    ConfirmHostileProposalList confirm_hostile_proposal_list = 35;
+    ConfirmCheckCreate confirm_check_create = 36;
+
+    ConfirmDisband confirm_disband = 37;
+
+
+    ConfirmGetTargetInfo confirm_get_target_info = 41;
+    ConfirmRelationList confirm_relation_list = 42;
+
+    ConfirmGuildLogList confirm_guild_log_list = 51;
+
+    ConfirmContributeCollection confirm_contribute_collection = 61;
+    ConfirmAdditionalContributeCollection confirm_additional_contribute_collection = 62;
+    ConfirmPromoteContributeCollection confirm_promote_contribute_collection = 63;
+
+    ConfirmHelpList confirm_help_list = 151;
+    ConfirmHelp confirm_help = 152;
+
+    ConfirmStorageExpand confirm_storage_expand = 161;
+    ConfirmStorageStore confirm_storage_store = 162;
+    ConfirmStorageSell confirm_storage_sell = 163;
+    ConfirmSellList confirm_sell_list = 164;
+    ConfirmCancelSell confirm_cancel_sell = 165;
+    ConfirmBuy confirm_buy = 166;
+    ConfirmDistributeCurrency confirm_distribute_currency = 167;
+    ConfirmStorageManageList confirm_storage_manage_list = 168;
+    ConfirmDistributionContributeList confirm_distribution_contribute_list = 169;
+
+    ConfirmBuyReject confirm_buy_reject = 170;
+    ConfirmWithdraw confirm_withdraw = 171;
+
+    ConfirmGuildRaidList confirm_guild_raid_list = 191;
+
+    JoinEvent join_event = 101;
+    LeaveEvent leave_event = 102;
+    BanishEvent banish_event = 104;
+    AcceptAllyEvent accept_ally_event = 105;
+    TargetAcceptAllyEvent target_accept_ally_event = 106;
+    DenyAllyEvent deny_ally_event = 107;
+    TargetDenyAllyEvent target_deny_ally_event = 108;
+    CancelAllyProposalEvent cancel_ally_proposal_event = 109;
+    TargetCancelAllyProposalEvent target_cancel_ally_proposal_event = 110;
+    AllyProposalEvent ally_proposal_event = 111;
+    TargetAllyProposalEvent target_ally_proposal_event = 112;
+    DisallyEvent disally_event = 113;
+    TargetDisallyEvent target_disally_event = 114;
+    HostileEvent hostile_event = 115;
+    DishostileEvent dishostile_event = 116;
+    ConnectEvent connect_event = 119;
+    DisconnectEvent disconnect_event = 120;
+    UpdateGuildInfoEvent update_guild_info_event = 121;
+    UpdateMemberRoleEvent update_member_role_event = 124;
+    DelegateGuildMasterEvent delegate_guild_master_event = 125;
+    UpdateMemberIntroductionEvent update_member_introduction_event = 126;
+    ApplyForJoinEvent apply_for_join_event = 127;
+    CancelApplyForJoinEvent cancel_apply_for_join_event = 128;
+    DenyJoinEvent deny_join_event = 129;
+    TargetDenyJoinEvent target_deny_join_event = 130;
+    TargetJoinEvent target_join_event = 131;
+    AcquireCollectionEvent acquire_collection_event = 132;
+    ContributeCollectionEvent contribute_collection_event = 133;
+
+    GuildLogEvent guild_log_event = 134;
+
+    ChangeAchievedAt change_achieved_at = 135;
+
+    HostileProposalEvent hostile_proposal_event = 136;
+
+    HelpEvent help_event = 141;
+
+    PromoteCollectionEvent promote_collection_event = 150;
+
+    Auction auction = 181;
+    LoseAuction lose_auction = 182;
+    FinishAuction finish_auction = 183;
+    AuctionHistory auction_history = 184;
+
+    GuildRaidStatusEvent guild_raid_status_event = 201;
+    SpawnGuildRaidSacrificeEvent spawn_guild_raid_sacrifice_event = 202;
+
+    // 길드 핀 포인트 - 본인 응답
+    ConfirmPinPointList confirm_pin_point_list = 211;
+    ConfirmAddPinPoint confirm_add_pin_point = 212;
+    ConfirmRemovePinPoint confirm_remove_pin_point = 213;
+
+    // 길드 핀 포인트 - 길드원 브로드캐스트
+    PinPointAddEvent pin_point_add_event = 214;
+    PinPointRemoveEvent pin_point_remove_event = 215;
+  }
+  optional GuildResultCode result_code = 1000;
+}

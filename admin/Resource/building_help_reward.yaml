@@ -1,0 +1,8 @@
+- Id: 1
+  Name: Reward1
+  Item: CurrencyGold
+  Amount: 100
+- Id: 61
+  Name: Reward2
+  GuildItem: Point
+  Amount: 100

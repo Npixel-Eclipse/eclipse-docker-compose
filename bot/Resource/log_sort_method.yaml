@@ -1,0 +1,8 @@
+- Name: DEFAULT
+  Value: 0
+- Name: GRADE
+  Value: 1
+- Name: DELETE_TIME
+  Value: 2
+- Name: ACQUIRE_TIME
+  Value: 3

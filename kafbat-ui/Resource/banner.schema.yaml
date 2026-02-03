@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    BannerAsset:
+      type: string
+    DisplayOrder: # 내림차순
+      type: integer
+    ShowMenuBanner:
+      type: boolean
+    UIClassName:
+      type: string
+    ContentLimitName:
+      type: string
+    MainTabIndex:
+      type: integer
+      default: -1
+    SubTabIndex:
+      type: integer
+      default: -1
+    OptiondData:
+      type: string     
+  required:
+    - Id
+    - Name
+    - BannerAsset
+    - ShowMenuBanner
+

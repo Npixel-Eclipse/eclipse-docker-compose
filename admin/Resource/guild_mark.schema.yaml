@@ -1,0 +1,32 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Category:
+      type: string
+      enum:
+        - Frame
+        - Symbol
+    Icon:
+      type: string
+    MaskTextureIcon:
+      type: string
+    DefaultSelect:
+      type: boolean
+    Default:
+      type: boolean
+    GuildFramBaseHidden:
+      type: boolean
+      default: false

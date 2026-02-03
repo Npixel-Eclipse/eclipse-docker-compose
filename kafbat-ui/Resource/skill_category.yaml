@@ -1,0 +1,180 @@
+- Id: 1
+  Name: System
+  Comment: 시스템
+  CheckPolymorphWeapon: false
+- Id: 2
+  Name: Item
+  Comment: 아이템
+  CheckPolymorphWeapon: false
+- Id: 3
+  Name: PotionItem
+  Comment: 물약류 아이템
+  CheckPolymorphWeapon: false
+- Id: 4
+  Name: ConsumeItem
+  Comment: 소모성 아이템
+  CheckPolymorphWeapon: false
+- Id: 5
+  Name: Walk
+  Comment: 이동
+  CheckPolymorphWeapon: false
+- Id: 6
+  Name: Teleport
+  Comment: 텔레포트
+  CheckPolymorphWeapon: false
+- Id: 7
+  Name: LocationTeleport
+  Comment: "정해진 테라토리로 이동 / 던전이동 주문서, 월드맵 이동"
+  CheckPolymorphWeapon: false
+- Id: 8
+  Name: TeleportToHomeTeleport
+  Comment: 귀환
+  CheckPolymorphWeapon: false
+- Id: 9
+  Name: EnterTeleport
+  Comment: 입장
+  CheckPolymorphWeapon: false
+- Id: 10
+  Name: ExitTeleport
+  Comment: 퇴장
+  CheckPolymorphWeapon: false
+- Id: 11
+  Name: Portal
+  Comment: 포탈
+  CheckPolymorphWeapon: false
+- Id: 12
+  Name: RandomTeleport
+  Comment: 랜덤 이동
+  CheckPolymorphWeapon: false
+- Id: 13
+  Name: TeleportSkill
+  Comment: 텔레포트 관련 PC/NPC 스킬
+  DisplayTab: Active
+  BGColor: Red
+  Description: UIWord_SkillCategory_DescActive
+  CheckPolymorphWeapon: false
+  ApplyCoolTimeReduceByBuff: true
+- Id: 14
+  Name: NoBlock
+  Comment: 제한하지 않는 스킬
+  DisplayTab: Active
+  BGColor: Red
+  Description: UIWord_SkillCategory_Defensive
+  CheckPolymorphWeapon: false
+  ApplyCoolTimeReduceByBuff: true
+- Id: 15
+  Name: NoBlockTeleport
+  Comment: 제한하지 않는 텔레포트
+  CheckPolymorphWeapon: false
+- Id: 16
+  Name: NoBlockSkill
+  Comment: 제한하지 않는 PC스킬
+  DisplayTab: Active
+  CheckPolymorphWeapon: false
+- Id: 17
+  Name: Passive
+  Comment: 패시브(지속) 스킬
+  DisplayTab: Passive
+  BGColor: Blue
+  Description: UIWord_SkillCategory_Passive
+  CheckPolymorphWeapon: false
+- Id: 18
+  Name: Active
+  Comment: 액티브
+  DisplayTab: Active
+  CheckPolymorphWeapon: false
+- Id: 19
+  Name: Activated
+  Comment: 발동 스킬
+  DisplayTab: Passive
+  BGColor: Green
+  Description: UIWord_SkillCategory_Activated
+  CheckPolymorphWeapon: false
+- Id: 20
+  Name: AttackSkill
+  Comment: 공격 스킬
+  DisplayTab: Active
+  BGColor: Red
+  Description: UIWord_SkillCategory_DescActive
+  CheckPolymorphWeapon: true
+  ApplyCoolTimeReduceByBuff: true
+- Id: 21
+  Name: Toggle
+  Comment: 토글 스킬
+  DisplayTab: Active
+  BGColor: Green
+  Description: UIWord_SkillCategory_Toggle
+  CheckPolymorphWeapon: false
+- Id: 22
+  Name: Magic
+  Comment: 버프 (buff와 혼동될 수 있어 Magic으로 사용)
+  DisplayTab: Active
+  BGColor: Green
+  Description: UIWord_SkillCategory_Buff
+  CheckPolymorphWeapon: true
+  ApplyCoolTimeReduceByBuff: true
+- Id: 24
+  Name: NormalAttack
+  Comment: 기본 공격
+  CheckPolymorphWeapon: true
+- Id: 25
+  Name: MonsterSkill
+  Comment: NPC 스킬
+  CheckPolymorphWeapon: false
+- Id: 26
+  Name: CanUseDied
+  Comment: 사망 시에도 사용 가능한 스킬
+  CheckPolymorphWeapon: false
+- Id: 27
+  Name: Quest
+  Comment: 퀘스트_쓰이는곳 없음
+  DisplayTab: Passive
+  CheckPolymorphWeapon: false
+- Id: 28
+  Name: Test
+  Comment: 테스트
+  CheckPolymorphWeapon: false
+- Id: 29
+  Name: Spawn
+  Comment: 스폰
+  CheckPolymorphWeapon: false
+- Id: 30
+  Name: Talk
+  Comment: NPC 대화
+  CheckPolymorphWeapon: false
+- Id: 31
+  Name: KeyPad
+  Comment: 키패드 (공포 상태이상으로 제한하기 위함)
+  CheckPolymorphWeapon: false
+- Id: 32
+  Name: HuntingZone_Ticket
+  Comment: 사냥터 소유
+  CheckPolymorphWeapon: false
+- Id: 33
+  Name: Battleground
+  Comment: 전장 시스템 스킬
+  CheckPolymorphWeapon: false
+- Id: 34
+  Name: QuitGame
+  Comment: 게임 종료
+  CheckPolymorphWeapon: false
+- Id: 35
+  Name: Dungeon
+  Comment: 던전 시스템 스킬
+  CheckPolymorphWeapon: false
+- Id: 36
+  Name: Skip
+  Comment: 스킵
+  CheckPolymorphWeapon: false
+- Id: 37
+  Name: QuestTeleport
+  Comment: 퀘스트 텔레포트
+  CheckPolymorphWeapon: false
+- Id: 38
+  Name: NpcInteraction
+  Comment: Npc인터렉션
+  CheckPolymorphWeapon: false
+- Id: 39
+  Name: SystemBlock
+  Comment: 시스템 스킬처럼 사용하지만, Block으로 구분하는 카테고리
+  CheckPolymorphWeapon: false

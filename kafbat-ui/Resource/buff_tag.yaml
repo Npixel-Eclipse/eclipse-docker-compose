@@ -1,0 +1,19 @@
+- Id: 1
+  Name: BuffTag_Special
+  Comment: 상태이상 버프
+  Buffs:
+    - Fighter_Crash_Stun
+    - Ranger_Annihilation_Stun
+    - Ranger_Judgement_Stun
+    - Ranger_DivineArcher_Stun
+    - Fighter_SlashWave_Stun
+    - Fighter_SilentKill_First_Stun
+    - Fighter_SilentKill_Second_Stun
+    - Fighter_GroundSlam_Stun
+    - Fighter_Excalibur_Stun
+    - Fighter_Excalibur_RadiusDamage_Stun
+- Id: 95
+  Name: Boss_WhiteDragonyung
+  Comment: 백룡 융 피격시 삭제 버프
+  Buffs:
+    - Boss_WhiteDragonyung_DeBuff

@@ -1,0 +1,112 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+  - Id
+  - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      # 기획 참고용 코멘트
+      type: string
+    TargetItem:
+      type: string
+      ref: item
+    ContentLimit:
+      type: string
+      ref: content_limit
+    PotentialSlot:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+        - Slot
+        - SlotEnchant
+        - Node
+        - DisplayOrder
+        - NameDesc
+        - LevelProperty
+        properties:
+          # potential_slot.yaml의 Name과 연결, 슬롯 발현 데이터 참조
+          Slot:
+            type: string
+            ref: potential_slot
+          # potential_slot_enchant.yaml의 Name과 연결, 슬롯(근원) 강화 데이터 참조
+          SlotEnchant:
+            type: string
+            ref: potential_slot_enchant
+          # UI의 노드를 번호 등으로 연결, 필요 시 좌표 정보 입력 컬럼도 추가 검토
+          Node:
+            type: integer
+          # 페이지 별 근원 순서
+          DisplayOrder:
+            type: integer
+          LevelProperty:
+            type: string
+          # 근원 이름
+          NameDesc:
+            type: string
+            ref: description
+          # 근원 아이콘 /Game/UIIcon/Potential/파일명.파일명
+          Icon:
+            type: string
+          # 기획 참고용 코멘트
+          Comment:
+            type: string
+    ManifestMaterial:
+      # 발현에 필요한 재료
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+        - Item
+        - Amount
+        - LockCount
+        properties:
+          Item:
+            # item.yaml의 Name과 연결, 발현에 필요한 재료 아이템
+            type: string
+            ref: item
+          Amount:
+            # 잠금 개수에 따라 필요한 재료 아이템 수량
+            type: integer
+            minimum: 1
+          LockCount:
+            # 잠금 개수
+            type: integer
+            minimum: 0
+    GradeMaxLevel:
+      # 등급별 최대 레벨
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+        - Grade
+        - MaxLevel
+        properties:
+          Grade:
+            # 등급, grade.yaml의 Name과 연결
+            type: string
+            ref: grade
+          MaxLevel:
+            # 등급 최대 레벨 (등급에 따라 강화 가능한 최대 레벨)
+            type: integer
+            minimum: 1
+    PageTitleDesc:
+      # 페이지 타이틀, description.yaml 참조
+      type: string
+      ref: description
+    PageTabDesc:
+      # 페이지 탭 이름, description.yaml 참조
+      type: string
+      ref: description

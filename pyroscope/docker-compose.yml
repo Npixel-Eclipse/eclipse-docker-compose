@@ -1,0 +1,13 @@
+services:
+  # Grafana Pyroscope 서비스
+  pyroscope:
+    # Grafana의 공식 최신 Pyroscope 이미지를 사용
+    image: grafana/pyroscope:latest
+    # 컨테이너의 이름을 'pyroscope'로 고정
+    container_name: pyroscope
+    # 재시작 정책: 사용자가 직접 중지하지 않는 한, 오류 발생 시 자동으로 재시작
+    # 호스트와 컨테이너의 포트를 연결 (웹 UI 접속용)
+    ports:
+      - "4040:4040"
+    restart: unless-stopped
+

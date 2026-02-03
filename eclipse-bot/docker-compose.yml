@@ -1,0 +1,28 @@
+services:
+  ai-workflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eclipse-bot
+    ports:
+      - "8000:8000"
+    environment:
+      - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - DEFAULT_MODEL=${DEFAULT_MODEL:-google/gemini-3-flash-preview}
+      - DATABASE_URL=postgresql+asyncpg://eclipse:dlzmfflqtm@host.docker.internal:5432/ai_workflow
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src:ro
+      - /data4/p4_workspace/Server-Linux-Agent:/data4/p4_workspace/Server-Linux-Agent
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

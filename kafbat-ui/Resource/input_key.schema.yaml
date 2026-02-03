@@ -1,0 +1,117 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - DisplayKey
+    - MappingKey
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name: 
+      type: string
+      enum:
+        - InputKey_A
+        - InputKey_B
+        - InputKey_C
+        - InputKey_D
+        - InputKey_E
+        - InputKey_F
+        - InputKey_G
+        - InputKey_H
+        - InputKey_I
+        - InputKey_J
+        - InputKey_K
+        - InputKey_L
+        - InputKey_M
+        - InputKey_N
+        - InputKey_O
+        - InputKey_P
+        - InputKey_Q
+        - InputKey_R
+        - InputKey_S
+        - InputKey_T
+        - InputKey_U
+        - InputKey_V
+        - InputKey_W
+        - InputKey_X
+        - InputKey_Y
+        - InputKey_Z
+        - InputKey_Zero
+        - InputKey_One
+        - InputKey_Two
+        - InputKey_Three
+        - InputKey_Four
+        - InputKey_Five
+        - InputKey_Six
+        - InputKey_Seven
+        - InputKey_Eight
+        - InputKey_Nine
+        - InputKey_NumPadZero
+        - InputKey_NumPadOne
+        - InputKey_NumPadTwo
+        - InputKey_NumPadThree
+        - InputKey_NumPadFour
+        - InputKey_NumPadFive
+        - InputKey_NumPadSix
+        - InputKey_NumPadSeven
+        - InputKey_NumPadEight
+        - InputKey_NumPadNine
+        - InputKey_Tilde
+        - InputKey_Hyphen
+        - InputKey_Equals
+        - InputKey_LeftBracket
+        - InputKey_RightBracket
+        - InputKey_Backslash
+        - InputKey_Semicolon
+        - InputKey_Apostrophe
+        - InputKey_Comma
+        - InputKey_Period
+        - InputKey_Slash
+        - InputKey_Add
+        - InputKey_Subtract
+        - InputKey_Multiply
+        - InputKey_Divide
+        - InputKey_Decimal
+        - InputKey_F1
+        - InputKey_F2
+        - InputKey_F3
+        - InputKey_F4
+        - InputKey_F5
+        - InputKey_F6
+        - InputKey_F7
+        - InputKey_F8
+        - InputKey_F9
+        - InputKey_F10
+        - InputKey_F11
+        - InputKey_F12
+        - InputKey_Escape
+        - InputKey_SpaceBar
+        - InputKey_Tab
+        - InputKey_Enter
+        - InputKey_Insert
+        - InputKey_Delete
+        - InputKey_PageUp
+        - InputKey_PageDown
+        - InputKey_End
+        - InputKey_Home
+        - InputKey_LeftShift
+        - InputKey_RightShift
+        - InputKey_LeftControl
+        - InputKey_RightControl
+        - InputKey_LeftAlt
+        - InputKey_RightAlt
+        - InputKey_Up
+        - InputKey_Down
+        - InputKey_Left
+        - InputKey_Right
+    DisplayKey:
+      type: string
+    MappingKey:
+      type: string
+    Asset: 
+      type: string

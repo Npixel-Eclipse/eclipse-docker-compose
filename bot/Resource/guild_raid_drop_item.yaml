@@ -1,0 +1,38 @@
+- Id: 1
+  Name: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  Comment: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  DropItems:
+    - Item: Item_Collection_Dungeon_Monster_G1_T1_128
+      Category: GuildStorage
+      Amount: 1
+      LootingDelayTime: 3000
+    - Item: Item_Grown_Transcend_Pass_G2_T1_02
+      Category: Participant
+      Amount: CalcDropItemAmount
+      Probability: "50%"
+      LootingDelayTime: 6000
+- Id: 2
+  Name: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  Comment: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  DropItemGroupSetups:
+    - Group: 1
+    - Group: 2
+      ProbabilityIncreaseRate: "3%"
+  DropItems:
+    - Item: Item_Collection_Dungeon_Monster_G1_T1_128
+      Group: 1
+      Category: GuildStorage
+      Amount: 1
+      LootingDelayTime: 3000
+    - Item: Item_Grown_Transcend_Pass_G2_T1_02
+      Group: 2
+      Category: Participant
+      Amount: CalcDropItemAmount
+      Probability: "30%"
+      LootingDelayTime: 6000
+    - Item: Item_Grown_Santuary_G3_T1_24_Storable
+      Group: 2
+      Category: Participant
+      Amount: CalcDropItemAmount
+      Probability: "70%"
+      LootingDelayTime: 6000

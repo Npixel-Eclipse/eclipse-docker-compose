@@ -1,0 +1,80 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Processor
+    - Protobuf
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      minLength: 1
+    Processor:
+      type: object
+      additionalProperties: false
+      required:
+        - ApplicationId
+        - Topic
+        - Type
+      properties:
+        ApplicationId:
+          type: string
+        Topic:
+          type: string
+        Type:
+          type: string
+          enum:
+            - USER_PROPERTY
+            - SERVER_DISPLAY_NAME
+        UseComputerNamePrefix:
+          type: boolean
+        ConsumerMode:
+          type: string
+          enum:
+            - STREAM
+            - ASSIGN_SEEK
+    Protobuf:
+      type: object
+      additionalProperties: false
+      required:
+        - ProtoPath
+        - MessageType
+      properties:
+        ProtoPath:
+          type: string
+        MessageType:
+          type: string
+        # USER_PROPERTY 전용
+        MappingKeys:
+          type: array
+          items:
+            type: string
+        MappingProtoFields:
+          type: array
+          items:
+            type: string
+        UserIdProtoField:
+          type: string
+        UpsertWhenNoEventType:
+          type: boolean
+        UpdateEventTypeKey:
+          type: string
+        UpsertEventValues:
+          type: array
+          items:
+            type: string
+        DeleteEventValues:
+          type: array
+          items:
+            type: string
+        # SERVER_DISPLAY_NAME 전용
+        ServerNameKeyField:
+          type: string
+        DisplayNameProtoField:
+          type: string

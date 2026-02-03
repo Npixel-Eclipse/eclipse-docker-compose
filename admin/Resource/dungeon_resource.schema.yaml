@@ -1,0 +1,59 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - RefreshDescription
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Refresh: #일일/주간 설정
+      type: string
+      enum:
+        - Daily
+        - Weekly
+    RefreshHour: # 0H ~ 24H
+      type: array
+      visible: true
+      items:
+        type: integer
+        minimum: 0
+        maximum: 23
+    UseTime: # 이용 시간(sec)
+      type: integer
+      minimum: 0
+    MaxRechargeTime: # 최대 충전 가능 이용 시간(sec)
+      type: integer
+      minimum: 0
+    UseCount: # 이용 횟수
+      type: integer
+      minimum: 0
+    MaxRechargeCount: # 최대 충전 가능 이용 횟수
+      type: integer
+      minimum: 0
+    ShowRemainTimeUI:
+      type: boolean
+      default: true
+    ResetRemainTime: # 퇴장시 UseTime 초기화 여부
+      type: boolean
+    RefreshDescription: # 초기화 시간 설명
+      type: string
+      ref: description
+    OpenTimeDescription: # 오픈 시간 설정
+      type: string
+      ref: description
+    TypeTitleDescription:
+      type: string
+      ref: description
+    TypeDescription:
+      type: string
+      ref: description
+    Comment:
+      type: string

@@ -1,0 +1,48 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Type
+    - OrderSetting
+    - EnabledSetting
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+      visible: true
+    Type:
+      type: string
+      enum:
+        - Quest
+        - Dungeon
+        - Fallback
+    QuestCategoryAuto:
+      type: string
+      ref: quest_category_auto
+    Dungeon:
+      type: string
+      ref: dungeon
+    DungeonDurationSetting:
+      type: string
+      ref: setting
+    DungeonFloorSetting:
+      type: string
+      ref: setting
+    FallbackWorldMapAreaSetting:
+      type: string
+      ref: setting
+    OrderSetting:
+      type: string
+      ref: setting
+    EnabledSetting:
+      type: string
+      ref: setting
+

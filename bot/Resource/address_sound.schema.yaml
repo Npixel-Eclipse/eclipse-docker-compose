@@ -1,0 +1,46 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  staticProperties: true
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    SoundChannel1: # TODO: $ref
+      type: object
+      additionalProperties: false
+      properties:
+        Asset: # 재생될 사운드로 /Game/Sound/Music/.../애셋명.애셋명
+          type: string
+        FadeInTime:
+          type: number
+          default: 3.0
+        FadeOutTime:
+          type: number
+          default: 2.0
+        IsParentless:
+          type: boolean
+          default: false
+    SoundChannel2: # TODO: $ref
+      type: object
+      additionalProperties: false
+      properties:
+        Asset: # 재생될 사운드로 /Game/Sound/Music/.../애셋명.애셋명
+          type: string
+        FadeInTime:
+          type: number
+          default: 3.0
+        FadeOutTime:
+          type: number
+          default: 2.0
+        IsParentless:
+          type: boolean
+          default: false

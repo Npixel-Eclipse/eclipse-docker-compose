@@ -1,0 +1,58 @@
+syntax = "proto3";
+package relation;
+
+import "Common/callback.proto";
+import "Common/guild_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.relation";
+option java_outer_classname = "RelationServiceProto";
+
+message RelationCommand {
+  oneof command {
+    IsBlockedUser is_blocked_user = 1;
+    IsFriendRequestBlockedSetting is_friend_request_blocked_setting = 2;
+    ConnectCommand connect_command = 3;
+    GuildUpdatedCommand guild_updated_command = 4;
+    BattleConnectedCommand battle_connected_command = 5;
+    DisconnectCommand disconnect_command = 6;
+  }
+}
+
+message IsBlockedUser {
+  string user_id = 1;
+  string target_user_name= 2;
+  common.CallbackCommand callback_on_success = 3;
+  common.CallbackCommand callback_on_failure = 4;
+}
+
+message IsFriendRequestBlockedSetting {
+  bool is_friend_request_blocked = 1;
+  string target_character_uuid = 2;
+}
+
+message ConnectCommand {
+  string character_uuid = 1;
+  string character_name = 2;
+  int64 character_class = 3;
+  string current_battle = 4;
+  string current_front = 5;
+}
+
+message DisconnectCommand {
+  string character_uuid = 1;
+  string character_name = 2;
+}
+
+message GuildUpdatedCommand {
+  int64 guild_id = 1;
+  string guild_name = 2;
+  common.GuildMark guild_mark = 3;
+  string character_uuid = 4;
+}
+
+message BattleConnectedCommand {
+  string character_uuid = 1;
+  string battle_name = 2;
+  bool character_created = 3;
+}

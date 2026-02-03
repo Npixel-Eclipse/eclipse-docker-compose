@@ -1,0 +1,52 @@
+syntax = "proto3";
+package schedule_state;
+
+import "Common/server_time.proto";
+
+// 스케줄 자동 보급 상태
+message ScheduleState {
+    int64 auto_supply_remain_sec = 1;   // 남은 자동 보급 시간 (초)
+    int64 auto_supply_last_update = 2;  // 마지막 업데이트 타임스탬프
+    bool is_running = 3;                // 스케줄 실행 중 여부
+}
+
+// Store 서버로 전송하는 스케줄 상태 커맨드
+message ScheduleStateCommand {
+    oneof message {
+        Load load = 1;
+        Start start = 2;
+        End end = 3;
+        // reserved 4; // Update - 서버 크래시 복구 로직으로 대체됨
+        Refresh refresh = 5;
+    }
+
+    // 스케줄 상태 로드 (플레이어 접속 시)
+    message Load {
+        int64 account_id = 1;
+        string server_name = 2;
+    }
+
+    // 스케줄 시작
+    message Start {
+        int64 account_id = 1;
+        string server_name = 2;
+        int64 auto_supply_remain_sec = 3;
+        int64 auto_supply_last_update = 4;
+        common.AtTime start_elapsed_time = 5;
+    }
+
+    // 스케줄 종료
+    message End {
+        int64 account_id = 1;
+        int64 auto_supply_remain_sec = 2;
+        int64 auto_supply_last_update = 3;
+        common.AtTime end_elapsed_time = 4;
+    }
+
+    // 일일 리프레시
+    message Refresh {
+        int64 account_id = 1;
+        int64 auto_supply_remain_sec = 2;
+        int64 auto_supply_last_update = 3;
+    }
+}

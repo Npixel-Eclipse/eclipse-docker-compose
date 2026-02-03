@@ -1,0 +1,13 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    ExposureTimeMilliSeconds:
+      type: integer
+  required:
+    - Id

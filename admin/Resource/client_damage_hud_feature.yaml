@@ -1,0 +1,63 @@
+- Id: 1
+  Name: DamageHUD
+  TopRightOffset: 100
+  BodyLeftOffset: 220
+  BodyRightOffset: 220
+  BottomOffset: 170
+  PositionInfo:
+    - Position: Top
+      UIType:
+        - Name: DamageFont_DoubleForOther
+        - Name: DamageFont_CriticalForOther
+        - Name: DamageFont_PerfectForOther
+        - Name: DamageFont_PerfectCriticalForOther
+        - Name: DamageFont_PerfectDoubleForOther
+      Comment: "Critical, Perfect"
+    - Position: Body
+      UIType:
+        - Name: DamageFont_NormalDamageForMe
+        - Name: DamageFont_EnhanceDamageForMe
+        - Name: DamageFont_NormalDamageForOther
+        - Name: DamageFont_EnhanceDamageForOther
+      RandomOffset:
+        HalfWidth: 40
+        HalfHeight: 30
+      Comment: Damage Number
+    - Position: TopRight
+      UIType:
+        - Name: DamageFont_RecoverHp
+        - Name: DamageFont_RecoverMp
+      RandomOffset:
+        HalfWidth: 7
+        HalfHeight: 15
+      Comment: Recovery
+    - Position: Bottom
+      UIType:
+        - Name: DamageFont_MissForOther
+        - Name: DamageFont_DodgeForMe
+        - Name: DamageFont_ImmuneForMe
+        - Name: DamageFont_ImmuneForOther
+        - Name: DamageFont_BlockForMe
+        - Name: DamageFont_BlockForOther
+      RandomOffset:
+        HalfWidth: 15
+        HalfHeight: 25
+      Comment: "Immune, Dodge, Block, Miss"
+    - Position: BottomDown
+      UIType:
+        - Name: DamageFont_AllySkill
+        - Name: DamageFont_AttackSkill
+      RandomOffset:
+        HalfWidth: 1
+        HalfHeight: 30
+      Comment: Skill
+    - Position: BodyLeft
+      UIType:
+        - Name: DamageFont_Debuff
+        - Name: DamageFont_SpecialDebuff
+      Comment: Debuf
+    - Position: BodyRight
+      UIType:
+        - Name: DamageFont_Buff
+        - Name: DamageFont_SpecialBuff
+      Comment: Buff

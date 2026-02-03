@@ -1,0 +1,30 @@
+- Id: 1
+  Name: ScornTitle
+  Comment: 멸시 칭호 비용
+  ConsumeItem: CurrencyDiamond
+  Cost: 100
+  Maximum: 1
+- Id: 63
+  Name: ScornMessage
+  Comment: 멸시 메시지 비용
+  ConsumeItem: CurrencyGold
+  Cost: 100000
+  Maximum: 1
+- Id: 85
+  Name: ScornEmoji
+  Comment: 멸시 이모티콘 비용
+  ConsumeItem: CurrencyGold
+  Cost: 200000
+  Maximum: 1
+- Id: 204
+  Name: Trace
+  Comment: 추적 비용
+  ConsumeItem: CurrencyDiamond
+  Cost: 100
+  Maximum: 3
+- Id: 205
+  Name: Wanted
+  Comment: 척살령 비용
+  ConsumeItem: CurrencyDiamond
+  Cost: 500
+  Maximum: 1

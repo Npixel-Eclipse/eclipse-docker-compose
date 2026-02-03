@@ -1,0 +1,1184 @@
+- Id: 10590
+  Name: CalcDropItemAmount
+  Comment: 아이템 드롭량 결정
+  Formula: "win(DropItemPenalty, sample(MinAmount, MaxAmount))"
+- Id: 5663
+  Name: ScanTarget
+  Comment: "[스캔] 스캔을 통한 타깃 스캔"
+  Formula: DistanceOrderScan
+- Id: 9977
+  Name: ScanEtcPc
+  Comment: 일반 PC 검색
+  Formula: "IsSameParty || IsHostileGuild || IsAllyGuild"
+- Id: 957
+  Name: DistanceOrderScan
+  Comment: "[스캔] 거리 순 타깃 스캔"
+  Formula: |
+    if( T_IsNotIncludeTargetScanning, 0,
+    if( IsScanFilterAltitudeOn == 0 || ( IsScanFilterAltitudeOn && T_Height - Height < 150 ),
+    ifs( IsScanPcOn && T_IsPc,
+    ifs( IsScanSamePartyOn && IsSameParty, 1,
+    IsScanHostileGuildOn && !IsInBattleground && IsHostileGuild, 1,
+    IsScanAllyGuildOn && !IsInBattleground && IsAllyGuild, 1,
+    IsScanHostileCharacterOn && IsInBattleground && !IsSameTeam, 1,
+    IsScanAllyCharacterOn && IsInBattleground && IsSameTeam, 1,
+    IsScanEtcPcOn && !IsInBattleground && !ScanEtcPc, 1 ),
+    IsScanNpcOn && T_IsMonster,
+    ifs( IsScanBossOn && T_IsBoss, 1,
+    IsScanQuestOn && IsQuestSymbolTarget, 1,
+    IsScanAggressiveOn && T_IsBoss == 0 && T_Aggressive, 1,
+    IsScanEtcNpcOn && T_IsBoss == 0, 1 ),
+    1, 0), 0 ) )
+- Id: 924
+  Name: IsScanTarget
+  Comment: 스캔 리스트의 자동공격 가능한 최우선 타겟
+  Formula: ScanTargetEntityId == T_EntityId
+- Id: 8249
+  Name: TargetKilled
+  Comment: 타겟 사망
+  Formula: "T_Hp <= 0 && T_B_Hp > 0"
+- Id: 13
+  Name: BlowAttackSpeedBonus
+  Comment: 최종 공격속도 추가량
+  Formula: "max( AttackSpeedBonusResult + if( IsPc, 500000, 0), ConstMinAttackSpeedRatio )"
+- Id: 2125
+  Name: TargetPcWhoAttackedMeByRandom
+  Comment: "[타깃] 나를 공격한 PC 중 랜덤"
+  Formula: "FAttackedPc && if((EntityId == T_EntityId), 11, rand(1, 10) )"
+- Id: 2129
+  Name: SummonBaseTarget
+  Comment: "[타깃] PC 소환수 기본 공식"
+  Formula: "( TargetAll && TargetMaster == 0 && NotNeutrality ) && if( T_IsPc, (T_CanPk && CanPk), T_IsMonster )"
+- Id: 9878
+  Name: RadiusTarget
+  Comment: "[타깃] 전장 - 기본 + 팀이 아닌 대상 , 일반 필드 - 적 + 마스터 Bora 상태, 적 PC인 경우 우선 순위 높도록 (최신)"
+  Formula: "( MainTargetEntityId == T_EntityId ) || if(Battleground, ( TargetAll && TargetMaster == 0 && NotNeutrality ) && !IsSameTeam, EnemyTarget )"
+- Id: 101007
+  Name: EnemyTarget
+  Comment: "[타깃] 적 범위, 소환수 타겟 공식 - 적 PC, 몬스터 (보라 상태, CanPk 상태)"
+  Formula: |
+    (NotMe && NotNeutrality && TargetMaster == 0)
+    && ( ( (T_CanPk && CanPk) && ( ( M_Bora > 0 || Bora > 0 ) || PcAngry ) && EnemyPc ) || T_IsMonster )
+- Id: 101907
+  Name: EnemyPc
+  Comment: "[타깃] 적 PC - 파티, 팀, 길드, 우호 길드가 아닌 대상 (일반 PC 포함)"
+  Formula: |
+    (NotMe && NotNeutrality && TargetMaster == 0)
+    && T_IsPc
+    && ( !IsSameParty && !IsAllyGuild && !IsSameGuild )
+- Id: 98977
+  Name: TargetTrapRadiusSearch
+  Comment: "[타깃] 덫이 적을 타겟 <- 마스터를 공격한 대상을 공격할 수 있도록 변경 필요"
+  Formula: "if( Battleground, RadiusEnemyNpc || (T_IsPc && NotMe && !IsSameTeam && TargetMaster == 0 && NotNeutrality && (T_CanPk && CanPk)), ( (T_IsPc && NotMe && (T_CanPk && CanPk) ) && TargetMaster == 0 && NotNeutrality && ( ( TargetRadiusEnemy01 == 0 && NormalPc == 0 ) || ( NormalPc && T_PcAngry > 0 ) ) ) || RadiusEnemyNpc )"
+- Id: 98738
+  Name: TargetBlackholeSearch
+  Comment: "[타깃] 블랙홀이 적을 타겟"
+  Formula: "if( Battleground, RadiusEnemyNpc || (T_IsPc && NotMe && !IsSameTeam && TargetMaster == 0 && NotNeutrality && (T_CanPk && CanPk)), ( (T_IsPc && NotMe && (T_CanPk && CanPk) ) && TargetMaster == 0 && NotNeutrality && ( ( TargetRadiusEnemy01 == 0 && NormalPc == 0 ) || ( NormalPc && T_PcAngry > 0 ) ) ) || RadiusEnemyNpc )"
+- Id: 1157
+  Name: TargetPcWhoAttackedMeByRandom2
+  Comment: "[타깃] PC 중 랜덤"
+  Formula: "T_IsPc && rand(1, 10)"
+- Id: 1230
+  Name: TargetPcByRandom
+  Comment: 주변 PC중 랜덤으로 타겟 변경
+  Formula: "IsPc && rand(1, 10)"
+- Id: 9843
+  Name: TargetNewFapcOtherwiseNeutral
+  Comment: "[타깃] 현재 타겟과 다른, 나를 공격한 PC 혹은 중립 PC"
+  Formula: "(T_EntityId != EntityId) && if(T_IsPc, if(IsSourceOfAngry, 1, 2), 0)"
+- Id: 9844
+  Name: TargetSourceOfAngryPC
+  Comment: 나를 공격한 PC
+  Formula: "T_IsPc && IsSourceOfAngry"
+- Id: 14
+  Name: FinalCastSpeedBonus
+  Comment: 최종 캐스팅 속도 추가량
+  Formula: "max(CastSpeedBonusResult + AddedCastSpeedBonus, ConstMinCastSpeedRatio)"
+- Id: 12098
+  Name: SearchAutoQuestTargetMonsterKill
+  Comment: "[타깃] 자동퀘스트에서의 MonsterKill인 경우 타깃 검색"
+  Formula: |
+    NotMe &&
+    if( TargetItem ,if( IsPreempted && IsPassedLootingDelayItem, if( SearchAutoTargetItem, 1, 0 ), 0 ),
+    if( T_IsNotIncludeTargetSearching, if( IsAutoQuestTarget, 12, 0 ),
+    if( MannerMode, MannerModeSet && SearchQuestAutoTargetMonster, SearchQuestAutoTargetMonster ) ) )
+- Id: 8063
+  Name: SearchMoveAutoQuestTargetMonsterKill
+  Comment: "[타깃] 이동중일 때 MonsterKill인 경우 자동 퀘스트 타깃 검색"
+  Formula: |
+    NotMe &&
+    if( T_IsNotIncludeTargetSearching, if( IsAutoQuestTarget, 12, 0 ),
+    T_IsMonster &&
+    ifs( FAttackedMob && IsAttackingMeMonsterOnAutoBattle, 11,
+    IsAutoQuestTarget, 12,
+    T_Aggressive && IsAggressiveMonsterOnAutoBattle, 13 ) )
+- Id: 12099
+  Name: SearchAutoQuestTargetNpcTalk
+  Comment: "[타깃] 자동퀘스트에서의 NpcTalk인 경우 타깃 검색"
+  Formula: |
+    NotMe &&
+    if( IsAutoQuestTarget, 1, 0)
+- Id: 59904
+  Name: SearchQuestAutoTargetMonster
+  Comment: "[타깃] 퀘스트 자동 상태에서의 몬스터 타깃 검색 나를 공격 중인 대상 -> 퀘스트 몬스터(필수) -> 일반 몬스터 순으로 타겟 (보스 몬스터는 타겟하지 않음)"
+  Formula: |
+    NotMe &&
+    if( T_IsNotIncludeTargetSearching, if( IsAutoQuestTarget, 12, 0 ),
+    T_IsMonster &&
+    ifs( FAttackedMob && IsAttackingMeMonsterOnAutoBattle, 11,
+    IsAutoQuestTarget, 12,
+    T_Aggressive && IsAggressiveMonsterOnAutoBattle, 13,
+    T_IsMonster, 14 ) )
+- Id: 15
+  Name: FinalMoveSpeedBonus
+  Comment: 최종 이동속도 추가량
+  Formula: "max( MoveSpeedBonusResult + if( IsPc, 500000, 400000), ConstMinMoveSpeedRatio)"
+- Id: 204
+  Name: PcAttackSkillTarget
+  Comment: 아군을 공격하지 않도록 설정하는 타겟 공식
+  Formula: "if( PcAllyNotMe, -1, TargetAll )"
+- Id: 11914
+  Name: PcAttackSkillTargetAndSelf
+  Comment: "[타깃] 나 아니면 적 (힐에 필요)"
+  Formula: "if( PcAllyNotMe, -1, TargetAllAndSelf )"
+- Id: 299
+  Name: TargetAlly
+  Comment: "[타깃] 미니게임 처럼 팀 구분이 있는 곳 에서의 동일한 팀 타깃"
+  Formula: "IsSameTeam && T_IsPc"
+- Id: 1614
+  Name: TargetPartyNotMe
+  Comment: "[타깃] 내가 아닌 파티원"
+  Formula: "IsSameParty && NotMe && T_IsPc"
+- Id: 1615
+  Name: TargetParty
+  Comment: "[타깃] 파티원 모두"
+  Formula: "IsSameParty && T_IsPc"
+- Id: 161578
+  Name: PCLevel0
+  Comment: 레벨 30이하
+  Formula: "if(Level < 30, 1, 0)"
+- Id: 161544
+  Name: PCLevel30
+  Comment: 레벨 30이상
+  Formula: "if(Level >= 30, 1, 0)"
+- Id: 1619
+  Name: TargetPartyAll
+  Comment: "[타깃] 파티원 모두"
+  Formula: "( TargetSelf || (IsSameParty && T_IsPc) ) && NotNeutrality"
+- Id: 10101
+  Name: PcAlly
+  Comment: "[타깃] 아군 PC - 나,파티,길드,우호,같은 팀"
+  Formula: "T_IsPc && ( TargetSelf || IsSameParty || IsAllyGuild || IsSameGuild || IsSameTeam )"
+- Id: 10102
+  Name: PcEnemy
+  Comment: "[타깃] 적군 PC - 아군이 아닌 대상"
+  Formula: "T_IsPc && PcAlly < 1"
+- Id: 10103
+  Name: PcAllyNotMe
+  Comment: "[타깃] 내가 아닌 아군 PC - 파티,길드,우호,같은 팀"
+  Formula: "NotMe && T_IsPc && ( IsSameParty || IsAllyGuild || IsSameGuild || IsSameTeam )"
+- Id: 101899
+  Name: TargetRadiusEnemy01
+  Comment: "[타깃] 내가 아닌 적 PC 범위 피해에 들어가는 공식01"
+  Formula: "TargetAll && ( IsSameTeam || IsSameParty || IsAllyGuild || IsSameGuild )"
+- Id: 107970
+  Name: NormalPc
+  Comment: "[타깃] 일반 PC"
+  Formula: "NotMe && T_IsPc && ( !IsSameTeam && !IsSameParty && !IsAllyGuild && !IsSameGuild && !IsHostileGuild ) "
+- Id: 101800
+  Name: NotNeutrality
+  Comment: "[타깃] 중립이 아닌 타겟"
+  Formula: "T_IsNeutralNpc == 0 && T_IsTrap == 0 && T_IsPortal == 0"
+- Id: 101897
+  Name: RadiusEnemyPc
+  Comment: "[타깃] 범위로 공격 가능한 타겟 PC - 전투 or 먼저 때린 대상"
+  Formula: "( ( T_IsPc && NotMe && (T_CanPk && CanPk) ) && (TargetMaster == 0 && NotNeutrality && TargetRadiusEnemy01 == 0 && NormalPc == 0) ) || ( NormalPc && T_PcAngry > 0 )"
+- Id: 118007
+  Name: RadiusEnemyNpc
+  Comment: "[타깃] 공격 가능한 타겟 NPC"
+  Formula: "T_IsMonster && NotNeutrality && NotMe && TargetMaster == 0"
+- Id: 10177
+  Name: TargetRadiusEnemy
+  Comment: "[타깃] 적 - 범위 스킬 타겟 범위"
+  Formula: "if( Battleground, RadiusEnemyNpc || (T_IsPc && NotMe && !IsSameTeam && TargetMaster == 0 && NotNeutrality && (T_CanPk && CanPk)) ,if( RadiusEnemyPc || RadiusEnemyNpc, 1, 0 ))"
+- Id: 16114
+  Name: TargetNotParty
+  Comment: "[타깃] 적 or파티원이 아님 & 내가 아님 & PC"
+  Formula: "( IsSameParty == 0 ) && NotMe && T_IsPc"
+- Id: 16108
+  Name: TargetNotPartyAll
+  Comment: "[타깃] 파티원이 아님 & 내가 아님 & PC/NPC"
+  Formula: "( IsSameParty == 0 ) && NotMe && ( T_IsPc || T_IsMonster )"
+- Id: 16109
+  Name: TargetPcNotParty
+  Comment: "[타깃] 파티원이 아님 & 내가 아님 & PC/NPC"
+  Formula: "( IsSameParty == 0 ) && NotMe && T_IsPc && ( T_IsNeutralNpc == 0 || T_IsMonster == 0 )"
+- Id: 11114
+  Name: TargetSelfOrEnemy
+  Comment: "[타깃] 나 아니면 적 (힐에 필요)"
+  Formula: "T_IsPc && (TargetSelf || TargetEnemy)"
+- Id: 19146
+  Name: TargetAllAndSelf
+  Comment: "[타깃] 나 아니면 적 (힐에 필요)"
+  Formula: "T_IsPc || T_IsMonster || TargetSelf"
+- Id: 2916
+  Name: TargetBodyObject
+  Comment: "[타깃] 여러 신체로 나뉘어진 오브젝트를 탐색"
+  Formula: T_IsBodyObject
+- Id: 1119
+  Name: TargetSpawned
+  Comment: "[타깃] 특정 NPC를 탐색"
+  Formula: T_IsSpawned
+- Id: 16
+  Name: CalcAttackSpeedDelay
+  Formula: ( 1M + BlowAttackSpeedBonus )
+- Id: 205
+  Name: TargetEnemy
+  Comment: "[타깃] 미니게임 처럼 팀 구분이 있는 곳 에서의 상대팀 타깃"
+  Formula: "(IsSameTeam == 0) && T_IsPc"
+- Id: 17
+  Name: CalcCastSpeedDelay
+  Formula: ( 1M + FinalCastSpeedBonus )
+- Id: 203
+  Name: TargetAll
+  Comment: "[타깃] 종류, 팀을 구분하지 않고 PC와 몬스터 대상을 타깃 (자기 자신은 제외)(아이템은 제외)"
+  Formula: "NotItem && NotMe && (T_IsPc || T_IsMonster)"
+- Id: 2033
+  Name: TargetAllIncludeMe
+  Comment: "[타깃] 종류, 팀을 구분하지 않고 PC와 몬스터 대상을 타깃 (아이템은 제외)"
+  Formula: "NotItem && (T_IsPc || T_IsMonster)"
+- Id: 208
+  Name: TargetAllAttack
+  Comment: "[타깃] 종류, 자신 포함 PC와 몬스터 대상을 타깃 (아이템은 제외)"
+  Formula: "NotItem && (T_IsPc || T_IsMonster)"
+- Id: 20378
+  Name: TargetAllHighHeight
+  Comment: "[타깃] 종류, 팀을 구분하지 않고 나보다 높은 고도의 PC와 몬스터 대상을 타깃 (아이템은 제외)"
+  Formula: "TargetHeightCheck && NotItem && NotMe && T_IsPc"
+- Id: 14787
+  Name: TargetPcInTown
+  Comment: "[타깃] PC이면서 마을여부를 확인"
+  Formula: "T_IsPc && T_IsTown"
+- Id: 14788
+  Name: TargetNpcInSameAddress
+  Comment: "[타깃] 같은 주소 내 중립 Npc인지 판단 (Npc는 Address를 갱신하지 않기 때문에 시작 주소로 판별)"
+  Formula: "T_IsNeutralNpc && CurrentAddressId > 0 && CurrentAddressId == T_StartingAddressId"
+- Id: 18
+  Name: CalcMoveSpeedDelay
+  Formula: ( 1M + FinalMoveSpeedBonus )
+- Id: 3123
+  Name: IsIncludeAutoRange
+  Comment: 타겟이 자동 사냥 범위내에 있는지 여부 확인
+  Formula: "if(AutoCombatRange == 0, 1, 0) || ((AutoCombatRange > 0) && (((( T_CoordinateX - AutoCombatBaseX ) ^ 2) + (( T_CoordinateY - AutoCombatBaseY ) ^ 2)) < (AutoCombatRange ^ 2)))"
+- Id: 31312
+  Name: IsMaxIncludeAutoRange
+  Comment: 타겟이 자동 사냥 범위내 여부 Max 범위 적용 설정 셀보다 +10
+  Formula: "if(AutoCombatRange == 0, 1, 0) || ((AutoCombatRange > 0) && (((( T_CoordinateX - AutoCombatBaseX ) ^ 2) + (( T_CoordinateY - AutoCombatBaseY ) ^ 2)) < ((AutoCombatRange + 20) ^ 2)))"
+- Id: 6497
+  Name: MannerModeSet
+  Comment: 매너모드 세팅
+  Formula: |
+    T_OccupantEntityId == EntityId || T_OccupantEntityId == 0
+    || if( MannerModeExcludeParty, IsOccupiedOfParty, 0 )
+    || if( MannerModeExcludeGuild, IsOccupiedOfGuild, 0 )
+    || if( MannerModeExcludeFriendly, IsOccupiedOfAllyGuild, 0 )
+    || if( MannerModeExcludeHostile, IsOccupiedOfHostileGuild, 0 )
+    || T_IsBoss
+    || ( T_MainTargetEntityId == EntityId )
+- Id: 500
+  Name: SearchAutoTarget
+  Comment: "[타깃] 자동 사냥에서의 타깃 검색 , 기본적으로 매너모드이며, MannerMode == 0 인 경우 매너모드 해제"
+  Formula: |
+    NotMe &&
+    if( TargetItem ,if( IsPreempted && IsPassedLootingDelayItem, if( SearchAutoTargetItem && IsMaxIncludeAutoRange, 1, 0 ), 0 ),
+    if( T_IsNotIncludeTargetSearching, 0, if( MannerMode, MannerModeSet && SearchAutoTargetMonster, SearchAutoTargetMonster ) ) )
+- Id: 778
+  Name: SearchAutoTargetItem
+  Comment: "[타깃] 자동 사냥에서의 아이템 타깃 검색 -> 모든 드랍아이템"
+  Formula: |
+    ( T_Item_Equip && ifs( GradeOfAcquireItem == 0, T_Grade > 0, GradeOfAcquireItem == 1, T_Grade > 1, GradeOfAcquireItem == 2, T_Grade > 2 ) )
+    || ( T_Item_Craft && ifs( GradeOfAcquireMaterial == 0, T_Grade > 0, GradeOfAcquireMaterial == 1, T_Grade > 1, GradeOfAcquireMaterial == 2, T_Grade > 2 ) )
+    || ( T_Item_Misc_Healing && AcquireHpPotion )
+    || ( T_Item_Equip == 0 && T_Item_Misc_Healing == 0 && T_Item_Craft == 0 )
+- Id: 501
+  Name: SearchAutoTargetMonster
+  Comment: "[타깃] 자동 사냥에서의 몬스터 타깃 검색 나를 공격 중인 대상 -> 퀘스트 몬스터 -> 일반 몬스터 순으로 타겟 (보스, 네임드 몬스터는 타겟하지 않음)"
+  Formula: |
+    T_IsMonster &&
+    ifs( FAttackedMob && IsAttackingMeMonsterOnAutoBattle, 11,
+    ( IsAutoQuestTarget || IsQuestSymbolTarget ) && IsQuestMonsterOnAutoBattle, if( IsIncludeAutoRange, 12, 0 ),
+    T_Aggressive && IsAggressiveMonsterOnAutoBattle, if( IsIncludeAutoRange, 13, 0 ),
+    T_IsMonster, if( IsIncludeAutoRange, 14, 0 ) )
+- Id: 7999
+  Name: SearchTargetAttack
+  Comment: "[타깃] 공격 버튼을 통한 타깃 검색"
+  Formula: "if( SubTargetEntityId, ChangeSubToMain, SearchAroundAttackTarget )"
+- Id: 799
+  Name: ChangeSubToMain
+  Comment: "[타깃] 공격 버튼을 통한 타깃 검색"
+  Formula: "if( NotMe && NotItem && T_IsNotIncludeTargetSearching == 0 && PcAllyNotMe, -1, 1 )"
+- Id: 504
+  Name: SearchAroundAttackTarget
+  Comment: "[타깃] 공격 버튼을 통한 타깃 검색"
+  Formula: |
+    NotMe && NotItem && T_IsNotIncludeTargetSearching == 0 &&
+    ifs(IsScanTarget && IsScanOnAttackTarget, 1,
+    T_IsPc, SearchTargetAttackIsPc,
+    T_IsMonster, SearchTargetAttackIsMonster )
+- Id: 59105
+  Name: SearchTargetAttackIsPc
+  Comment: "[타깃] 공격 버튼 - 전장 - 자신과 다른 팀, PC우선, 나를 공격 중인 대상 우선"
+  Formula: |
+    ifs( FAttackedPc && IsAttackingMePcOnAttackTarget, 2,
+    !IsInBattleground && IsHostileGuild && IsHostilePcOnAttackTarget, 3,
+    IsInBattleground && !IsSameTeam && IsHostilePcOnAttackTarget, 3,
+    !IsInBattleground && EnemyPc && IsAroundPcAttackTarget, 4 )
+- Id: 59109
+  Name: SearchTargetAttackIsMonster
+  Comment: "[타깃] 공격 버튼을 통한 몬스터 타깃 검색"
+  Formula: |
+    ifs( FrontTargetEntityId == T_EntityId, 10,
+    FAttackedMob && IsAttackingMeMonsterOnAttackTarget, 11,
+    ( IsAutoQuestTarget || IsQuestSymbolTarget ) && IsQuestMonsterOnAttackTarget, 12,
+    T_Aggressive && IsAggressiveMonsterOnAttackTarget, 13,
+    IsNormalMonserOnAttackTarget, 14 )
+- Id: 5011
+  Name: SearchTargetTab
+  Comment: "[타깃] 탭 버튼을 통한 타깃 검색"
+  Formula: |
+    NotMe && NotItem && T_IsNotIncludeTargetSearching == 0 &&
+    ifs( IsScanTarget && IsScanOnSearchTarget, 1,
+    T_IsPc, SearchTargetTabIsPc,
+    T_IsMonster, SearchTargetTabIsMonster )
+- Id: 50097
+  Name: OnlySearchAutoTargetItem
+  Comment: "[타깃] 자동 사냥에서의 아이템만 타겟 검색"
+  Formula: |
+    NotMe &&
+    if( TargetItem ,if( IsPreempted && IsPassedLootingDelayItem, if( SearchAutoTargetItem && IsMaxIncludeAutoRange, 1, 0 ), 0 ), 0 )
+- Id: 69105
+  Name: SearchTargetTabIsPc
+  Comment: "[타깃] 전장 - 자신과 다른 팀, PC우선, 나를 공격 중인 대상 우선"
+  Formula: |
+    ifs( FAttackedPc && IsAttackingMePcOnSearchTarget, 2,
+    !IsInBattleground && IsHostileGuild && IsHostilePcOnSearchTarget, 2,
+    IsInBattleground && !IsSameTeam && IsHostilePcOnSearchTarget, 2,
+    !IsInBattleground && EnemyPc && IsAroundPcOnSearchTarget, 2 )
+- Id: 59304
+  Name: SearchTargetTabIsMonster
+  Comment: "[타깃] 탭 버튼을 통한 몬스터 타깃 검색"
+  Formula: |
+    ifs( FrontTargetEntityId == T_EntityId, 2,
+    FAttackedMob && IsAttackingMeMonsterOnSearchTarget, 2,
+    ( IsAutoQuestTarget || IsQuestSymbolTarget ) && IsQuestMonsterOnSearchTarget, 2,
+    T_Aggressive && IsAggressiveMonsterOnSearchTarget, 2,
+    IsNormalMonsterOnSearchTarget, 2 )
+- Id: 19
+  Name: AttackNormalCalcAttackSpeed
+  Comment: 최종적인 일반 공격 속도 출력값
+  Formula: "AttackNormalDelay * 1M / CalcAttackSpeedDelay"
+- Id: 200
+  Name: TargetSelf
+  Comment: "[타깃] 자기자신을 타깃하기 위한 정보"
+  Formula: EntityId == T_EntityId
+- Id: 20
+  Name: Attack02CalcAttackSpeed
+  Formula: "Attack02Delay * 1M / CalcAttackSpeedDelay"
+- Id: 21
+  Name: Attack03CalcAttackSpeed
+  Formula: "Attack03Delay * 1M / CalcAttackSpeedDelay"
+- Id: 201
+  Name: TargetPc
+  Comment: "[타깃] PC를 타깃하기 위한 정보"
+  Formula: "T_IsPc && T_MasterEntityId == 0 && ( T_IsNeutralNpc || T_IsTrap || T_IsPortal ) == 0"
+- Id: 22
+  Name: Attack04CalcAttackSpeed
+  Formula: "Attack04Delay * 1M / CalcAttackSpeedDelay"
+- Id: 4673
+  Name: TargetPcNotMe
+  Comment: "[타깃] PC이면서 내가 아닌 대상"
+  Formula: "T_IsPc && NotMe"
+- Id: 2377
+  Name: TargetRadiusAlly
+  Comment: "[타겟]범위 스킬 아군공격하지 않는 공식"
+  Formula: "NotMe && ( TargetAll && PcAlly == 0 ) && T_IsNeutralNpc == 0"
+- Id: 1120
+  Name: TargetNotBossMonster
+  Comment: "[타깃] 보스 몬스터가 아닌 몬스터 대상"
+  Formula: "T_IsMonster && T_IsBoss == 0"
+- Id: 23
+  Name: AttackNormalCalcCastSpeed
+  Comment: 최종적인 스킬 캐스팅 속도 출력값
+  Formula: "AttackNormalDelay * 1M / CalcCastSpeedDelay"
+- Id: 24
+  Name: Attack02CalcCastSpeed
+  Formula: "Attack02Delay * 1M / CalcCastSpeedDelay"
+- Id: 207
+  Name: TargetPolymorph
+  Comment: "[타깃] 대상이 isPolymorph 프로퍼티를 보유한지 여부"
+  Formula: T_IsPolymorph == 1
+- Id: 25
+  Name: Attack03CalcCastSpeed
+  Formula: "Attack03Delay * 1M / CalcCastSpeedDelay"
+- Id: 206
+  Name: TargetUndead
+  Comment: "[타깃] 대상이 isUndead 프로퍼티를 보유한지 여부"
+  Formula: T_IsUndead == 1
+- Id: 26
+  Name: Attack04CalcCastSpeed
+  Formula: "Attack04Delay * 1M / CalcCastSpeedDelay"
+- Id: 202
+  Name: TargetItem
+  Comment: "[타깃] ITEM 을 타깃하기 위한 정보"
+  Formula: "T_ItemId > 0"
+- Id: 27
+  Name: SkillAtk01CalcAttackSpeed
+  Formula: "SkillAtk01Delay * 1M / CalcAttackSpeedDelay"
+- Id: 28
+  Name: SkillAtk02CalcAttackSpeed
+  Formula: "SkillAtk02Delay * 1M / CalcAttackSpeedDelay"
+- Id: 29
+  Name: SkillBuff01CalcAttackSpeed
+  Formula: "SkillBuff01Delay * 1M / CalcAttackSpeedDelay"
+- Id: 30
+  Name: SkillBuff02CalcAttackSpeed
+  Formula: "SkillBuff02Delay * 1M / CalcAttackSpeedDelay"
+- Id: 109
+  Name: CalcMpBurn
+  Formula: "min( T_Mp, DrainMp ) * -1"
+- Id: 31
+  Name: SkillAtk01CalcCastSpeed
+  Formula: "SkillAtk01Delay * 1M / CalcCastSpeedDelay"
+- Id: 114
+  Name: CalcTargetSkillDrainMpDmg
+  Formula: "min( T_Mp, SkillDrainMp ) * -1"
+- Id: 32
+  Name: SkillAtk02CalcCastSpeed
+  Formula: "SkillAtk02Delay * 1M / CalcCastSpeedDelay"
+- Id: 33
+  Name: SkillBuff01CalcCastSpeed
+  Formula: "SkillBuff01Delay * 1M / CalcCastSpeedDelay"
+- Id: 34
+  Name: SkillBuff02CalcCastSpeed
+  Formula: "SkillBuff02Delay * 1M / CalcCastSpeedDelay"
+- Id: 8871
+  Name: SkillBuff03CalcCastSpeed
+  Formula: "SkillBuff03Delay * 1M / CalcCastSpeedDelay"
+- Id: 8872
+  Name: SkillBuff04CalcCastSpeed
+  Formula: "SkillBuff04Delay * 1M / CalcCastSpeedDelay"
+- Id: 35
+  Name: MoveCalcMoveSpeed
+  Comment: 최종적인 이동 속도 출력값 _ 대각선 이동 시 약 1.4배 감소된 상태로 이동
+  Formula: "MoveDelay * 1M / CalcMoveSpeedDelay"
+- Id: 41
+  Name: CalcMonsterDmg
+  Comment: "[몬스터] 몬스터가 PC를 공격하기 위한 계산 (준비중)"
+  Formula: "if( FixedDamage > 0, FixedDamage * -1, MonsterTotalAttackDmg * -1)"
+- Id: 42
+  Name: CalcSkillDmg
+  Comment: "스킬에 설정된 DamageType 프로퍼티의 값을 이용하여, 각각의 근거리, 원거리, 마법 대미지 계산으로 분류하기 위한 공식."
+  Formula: "if( T_CountHp > 0, CalcSiegeDmg, CalcTotalStatSkillDmg )"
+- Id: 1
+  Name: ArrivedAtTarget
+  Comment: 타깃 위치로 이동 (시스템에서 사용)
+  Formula: "CoordinateX == TargetCoordinateX && CoordinateY == TargetCoordinateY"
+- Id: 55
+  Name: GetAddedDmg
+  Comment: "[영진] (공격력 v+) 추가 대미지 계산"
+  Formula: "AddedDamageResult + if( T_IsMonster, PvEAddedDamageResult, 0 ) + if( T_IsPc, PvPAddedDamageResult, 0 )"
+- Id: 797
+  Name: CalcInvokeSKillHitProb
+  Comment: "발동 스킬 명중 공식 -기본 공격 명중 * 발동 확률 값"
+  Formula: "max( 0, CalcAC * ProbBase ) >= rand(1, 1000000)"
+- Id: 79
+  Name: CalcSkillHitProb
+  Comment: "[스킬명중] 스킬에 설정된 ProbType 프로퍼티의 값을 이용하여, ProbType이 없는 경우 기본공격으로 취급, 1 == 기본 공격, 2 == 스킬 상태이상 공격, 3 == 사용하지 않음"
+  Formula: "if( ProbType == 1, CalcNormalAtkProb, if( ProbType == 2, CalcSkillAtkProb, if( ProbType == 3, CalcSkillDeBuffProb, CalcNormalAtkProb ) ) ) >= rand(1, 1000000)"
+- Id: 80
+  Name: CalcNormalAtkProb
+  Comment: "일반 공격 명중 확률 | 공식 AC 체크, 레이어 체크"
+  Formula: "1M * CalcAC"
+- Id: 81
+  Name: CalcSkillAtkProb
+  Comment: 상태이상 체크 공식 (스킬 적중 확률 - 상태이상 스탯 계산)
+  Formula: "max( 0, CalcPhySkillProb )"
+- Id: 87
+  Name: CalcPhySkillProb
+  Comment: "스킬 적중 확률 (기본 확률, 무기 특화 추가확률, 레벨 차이값)"
+  Formula: "max( ProbMin, min( ( CalcSpecialResistance ), ProbMax ) )"
+- Id: 89
+  Name: CalcLVProb
+  Comment: "레벨 체크 명중 확률 공식,  Pc, Npc인 경우를 나누어 Level과 NPCLevel 가져옴"
+  Formula: "if( IsPc, if( T_IsPc, Level - T_Level, Level - T_NPCLevel ), if( T_IsPc, NPCLevel - T_Level, NPCLevel - T_NPCLevel ) ) * ProbLevelMultiplier"
+- Id: 877
+  Name: CalcSkillDeBuffProb
+  Comment: "상태 이상 디버프 명중 확률 공식 -> 공격 명중 확률과 상태이상 명중 확률 공식을 동시에 계산한 값"
+  Formula: "CalcAC * CalcSkillAtkProb"
+- Id: 83
+  Name: CalcAC
+  Comment: "[영진] 최종 명중률"
+  Formula: "if(IsPc, if( T_IsPc, max( ConstACHitMinProb, min( IsPvELvHitPenalty , ConstACHitMaxProb ) ), max( ConstACHitMinProb, min(IsPvELvHitPenalty , 1M ) ) ) , max( ConstACHitMinProb, min(IsPvELvHitPenalty , 1M ) ) ) / 1M"
+- Id: 186
+  Name: GetHitChance
+  Comment: "[영진] 자신의 명중 계산"
+  Formula: "HitChanceResult + if( DamageType == 1, MeleeHitResult, if( DamageType == 2, RangeHitResult, MagicHitResult ) ) + if( T_IsMonster, PvEHitResult, 0 ) + if( T_IsPc, PvPHitResult, 0 ) + if( NormalAttackCheck == 1, NormalAttackHitResult, SkillHitResult ) "
+- Id: 86
+  Name: GetArmorClass
+  Comment: "[영진] 타겟의 방어 스탯 계산"
+  Formula: "T_ArmorClassResult + if( DamageType == 1, T_MeleeArmorClassResult, if( DamageType == 2, T_RangeArmorClassResult, T_MagicArmorClassResult )) + if( IsMonster == 1, T_PvEArmorClassResult, 0 )+ if( IsPc == 1, T_PvPArmorClassResult, 0 ) + if( NormalAttackCheck == 1, T_NormalAttackArmorClassResult, T_SkillArmorClassResult )"
+- Id: 91
+  Name: CalcSpecialResistance
+  Comment: "상태이상 적중 확률 계산 (0 == 기본, 1 == 스턴, 2 == 속박, 3 == 공포, 4 == 감속, 5 == 침묵, 6 == 도발, 7 == 수면, 8 == 결빙, 9 == 암흑, 10 ==부패)"
+  Formula: "max ( ProbBase + ProbAdd + CalcLVProb + ( SpecialHitAllResult - T_SpecialResistanceAllResult ) + if( RelativeSRType == 0, 0, if( RelativeSRType == 1, SpecialHitStunResult - T_SpecialResistanceStunResult, if( RelativeSRType == 2, SpecialHitHoldResult - T_SpecialResistanceHoldResult, if( RelativeSRType == 3, SpecialHitFearResult - T_SpecialResistanceFearResult, if( RelativeSRType == 4, SpecialHitSlowResult - T_SpecialResistanceSlowResult, if( RelativeSRType == 5, SpecialHitMuteResult - T_SpecialResistanceMuteResult, if( RelativeSRType == 6, SpecialHitTauntResult - T_SpecialResistanceTauntResult, if( RelativeSRType == 7, SpecialHitSleepResult - T_SpecialResistanceSleepResult, if( RelativeSRType == 8, SpecialHitFrostResult - T_SpecialResistanceFrostResult, if( RelativeSRType == 9, SpecialHitDarknessResult - T_SpecialResistanceDarknessResult, if( RelativeSRType == 10, SpecialHitCorruptionResult - T_SpecialResistanceCorruptionResult, 0 ))))))))))) , 0 )"
+- Id: 105
+  Name: CalcSiegeDmg
+  Formula: "( ( T_MaxHpResult / T_CountHp ) * ( SiegeDamageMultiplier + 1M / 1M ) ) * -1"
+- Id: 16404
+  Name: CalcCasterRange
+  Comment: "공격셀 포함 거리 계산 공식 - AddedAttackRange => 추가 사거리   ,활 == 석궁 보다 +2 하기 위함."
+  Formula: BaseCastRange + T_TargettedCastRange + AddedAttackRange
+- Id: 1061
+  Name: TrapSpawnMotionDelay
+  Formula: RamPageMotionDelay + 1500
+- Id: 106
+  Name: CalcHpRegen
+  Formula: T_HpRegenResult
+- Id: 107
+  Name: CalcMpRegen
+  Formula: T_MpRegenResult
+- Id: 108
+  Name: CalcExperience
+  Formula: "( ExperienceValue * ExpPenalty * ( 1M + ExperienceBonusResult ) ) / 1M"
+- Id: 110
+  Name: CalcCasterHp
+  Formula: "ExtractHp + min (T_Hp, DrainHp )"
+- Id: 111
+  Name: CalcCasterMp
+  Formula: "ExtractMp + min( T_Mp, DrainMp )"
+- Id: 112
+  Name: CalcSkillDrainHp
+  Formula: "SkillExtractHp + min( T_Hp, SkillDrainHp )"
+- Id: 113
+  Name: CalcSkillDrainMp
+  Formula: "SkillExtractMp + min( T_Mp, SkillDrainMp )"
+- Id: 304
+  Name: FAttackedMob
+  Comment: "[간소화] 나를 공격한 몬스터"
+  Formula: "T_IsMonster && IsSourceOfAngry"
+- Id: 502
+  Name: SearchDroppedItems
+  Comment: "[타깃] 드랍 아이템 획득 버튼 타깃팅"
+  Formula: "if( TargetItem ,if( IsPassedLootingDelayItem && IsPreempted, 1, if( IsPreempted, 2, 0 ) ), 0 )"
+- Id: 503
+  Name: SearchPC
+  Comment: "[타깃] 나를 공격한 PC 타깃 검색"
+  Formula: "T_IsPc && IsSourceOfAngry"
+- Id: 700
+  Name: All
+  Comment: "[타깃] 시스템에서 사용하는 전체 대상 타깃 정보 (아이템 포함)"
+  Formula: 1
+- Id: 701
+  Name: IsHpBelowMax
+  Comment: 물약 자동사용 체크
+  Formula: "if( OffHpLimitOnPvp, if( PcAngry > 0, if( Hp < MaxHpResult, 1, 0 ), CalcHpPotion ), CalcHpPotion )"
+- Id: 7977
+  Name: CalcHpPotion
+  Comment: 물약 자동 사용 수치
+  Formula: "Hp < MaxHpResult * (HpPotionHpLimit / 1e6)"
+- Id: 7009
+  Name: IsMpBelowMax
+  Comment: "[설정] 스킬 자동 사용 및 MP 설정"
+  Formula: |-
+    ( OffMpLimitOnPvp && PcAngry > 0 )
+    || if( IsTown,
+    if( UseBuffSkillOnSafetyZone == 0 && PcBuffSkillCheck, 0, if( MpLimitOnUseBuffSkill && PcBuffSkillCheck, 1, CalcMPMaintain ) ),
+    if( MpLimitOnUseBuffSkill && PcBuffSkillCheck, 1, CalcMPMaintain ) )
+- Id: 7910
+  Name: CalcMPMaintain
+  Comment: 버프 스킬 자동 사용 제한 수치
+  Formula: "Mp > ( MaxMp * ( UseSkillMpLimit / 1e6 ) )"
+- Id: 702
+  Name: FOccupation
+  Comment: "[매너모드] 남이 공격한 대상을 타깃으로 잡지 않는다"
+  Formula: "if( T_Attacked, T_IsAttacker, 1)"
+- Id: 301
+  Name: NotItem
+  Comment: "[간소화] 아이템이 아닌 대상"
+  Formula: TargetItem == 0
+- Id: 302
+  Name: Enemy
+  Comment: "[간소화] 나와 적인 PC - 적 적대 길드, 도살자"
+  Formula: IsSameTeam == 0
+- Id: 46744
+  Name: CalcHealthPotion
+  Comment: 회복 물약의 증가량 공식 <- 회복량이 0이하면 0으로 환산
+  Formula: "max( if( BlockHeal == 1, 0, CalcHealthPotion01 ), 0 )"
+- Id: 46741
+  Name: CalcHealthPotion01
+  Comment: "체력 회복 물약 증가 공식 <- (물약 치유량 + 회복률(%)에 의해 증가한 값 + 회복량에 의해 증가한 값) * 전체 물약 회복 감소률"
+  Formula: |-
+    int( ( HealBase * ( 1 + ( HealthPotionScaleResult / 1M ) ) + HealthPotionIncreaseResult )
+    * ( ( HealthPotionDecrease / 1M ) +1 ) )
+- Id: 467173
+  Name: CalcPcHealSkill
+  Comment: 회복 스킬의 증가량 공식 <- 회복량이 0이하면 0으로 환산
+  Formula: |-
+    int( ( ( AddedHealScale + 1M ) / 1M ) * ( ( MaxHp * ( HpPercentHeal / 1M ) ) +
+    ( Level * ( 4 / 1000 ) * ( AddedDamage + ifs( PcClass == 1, MeleeDamage, PcClass == 2, RangeDamage, PcClass == 3, MagicDamage ) ) ) ) / if( PeriodicSkillLoopTime < 1, 1, PeriodicSkillLoopTime ))
+- Id: 46749
+  Name: CalcHealSkill
+  Comment: 회복 스킬의 증가량 공식 <- 회복량이 0이하면 0으로 환산
+  Formula: "if( CalcHealSkill01 < 0 || BlockHeal == 1, 0, CalcHealSkill01 )"
+- Id: 46797
+  Name: CalcHealSkill01
+  Comment: "스킬 치유 + (치유량 증가율(%) + 받는 치유량 증가율(%))에 의해 증가한 값 (단, 자신에게는 받는 치유가 적용안됨))"
+  Formula: "int( HealBase * ( 1 + ( ( HealAdditionalPercent + if( NotMe, T_GetHealAdditionalPercent, 0 ) ) / 1M ) ) )"
+- Id: 469149
+  Name: CalcPerfectHeal
+  Comment: 회복 스킬의 증가량 공식 <- 회복량이 0이하면 0으로 환산
+  Formula: "if( CalcPerfectHeal01 < 0 || BlockHeal == 1, 0, CalcPerfectHeal01 )"
+- Id: 467197
+  Name: CalcPerfectHeal01
+  Comment: "스킬 치유 + (치유량 증가율(%) + 받는 치유량 증가율(%))에 의해 증가한 값 (단, 자신에게는 받는 치유가 적용안됨))"
+  Formula: "int( ( HealBase ) * ( 1 + ( ( HealAdditionalPercent + if( NotMe, T_GetHealAdditionalPercent, 0 ) ) / 1M ) ) )"
+- Id: 703
+  Name: IsNotAFK
+  Comment: 현재 잠수 상태인지 확인
+  Formula: "RecentPacketTime > (now - StartDelay)"
+- Id: 31770
+  Name: ChangeTauntTarget
+  Comment: 도발 타겟
+  Formula: G_OnlyYou_T_EntityId
+- Id: 704
+  Name: StartDelay
+  Comment: AKF 체크 딜레이
+  Formula: 10
+- Id: 7099
+  Name: PerfectProb
+  Comment: 퍼펙트 확률
+  Formula: "CalcPerfect01 || CalcPerfect02"
+- Id: 705
+  Name: CalcPerfect01
+  Comment: Perfect 출력 확률01
+  Formula: "CalcPerfectProb >= sample(1, 1000000)"
+- Id: 971
+  Name: CalcPerfectProb
+  Comment: 퍼펙트 피해 확률 계산 (확률 - 저항)
+  Formula: PerfectDamageProbabilityResult - T_PerfectDamageProbResistanceResult
+- Id: 9398
+  Name: CalcPerfect02
+  Comment: Perfect 출력 확률02
+  Formula: "int(sample(CalcTotalAttackDmg * (( 1M - ConstFinalMultiplier ) / 1M ), CalcTotalAttackDmg ) ) == int(CalcTotalAttackDmg)"
+- Id: 23542
+  Name: FinalAttackDmg
+  Comment: "[영진] 최종 대미지의 보정비율 연산"
+  Formula: "CalcTotalAttackDmg * if(IsPerfect, 1, sample(1M - ConstFinalMultiplier, 1M - 10000) / 1M )"
+- Id: 46479
+  Name: TargetIsSlowCheck
+  Comment: "대상이 슬로우 상태인지 체크 - IsStatusSlow > 0 인지 체크"
+  Formula: "if( T_IsStatusSlow > 0, 1, 0 )"
+- Id: 4645
+  Name: SkillAtk03CalcAttackSpeed
+  Formula: "100 * 1M / CalcAttackSpeedDelay"
+- Id: 11736
+  Name: SkillAtk04CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 5277
+  Name: SkillAtkCalcAttackSpeedCrash
+  Comment: 칼등치기 시전시간
+  Formula: "500 * 1M / CalcAttackSpeedDelay"
+- Id: 11738
+  Name: SkillAtk07CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10591
+  Name: SkillAtk05CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10597
+  Name: SkillAtk09CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10579
+  Name: SkillAtk11CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 52797
+  Name: SkillAtk12CalcAttackSpeed
+  Formula: "500 * 1M / CalcAttackSpeedDelay"
+- Id: 19736
+  Name: SkillAtk13CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 11797
+  Name: SkillAtk14CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10571
+  Name: SkillAtk15CalcAttackSpeed
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10598
+  Name: SkillAtkCalcAttackSpeedChargeBind
+  Comment: 파쇄 화살 공격 딜레이
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10071
+  Name: SkillAtkCalcAttackSpeedMultipleArrow
+  Comment: 쐐기 화살 공격 딜레이
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 67071
+  Name: SkillAtkCalcAttackSpeedExplosion
+  Comment: 공허 공격 딜레이
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 3463
+  Name: SkillBuffCalcCastSpeedHeal
+  Comment: 힐 시전 딜레이
+  Formula: "SkillBuffDelay * 1M / CalcCastSpeedDelay"
+- Id: 3163
+  Name: SkillBuffCalcCastSpeedRetention
+  Comment: 마력 권능 시전 딜레이
+  Formula: "SkillBuffDelay * 1M / CalcCastSpeedDelay"
+- Id: 66431
+  Name: SkillAtkCalcAttackSpeedDisHealth
+  Comment: 균열 공격 딜레이
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 10511
+  Name: TargetMaxHp
+  Comment: 타겟의 현재 HP퍼센트 (둠클리어 사용) 15퍼센트
+  Formula: "if( ( T_Hp + 10 ) * 15 / 100 > 10, ( ( T_Hp + 10 ) * -15 / 100 ) + 10, 0 )"
+- Id: 46621
+  Name: TargetMaxMpRetention
+  Comment: 타겟의 최대 MP퍼센트 (마력 권능 사용) 15퍼센트
+  Formula: "if( T_Mp + 25 >= 25 , if( T_Mp + 25 >= T_MaxMp * 15 / 100, ( T_MaxMp * -15 / 100 ) + 25, -1 * T_Mp ), 0 )"
+- Id: 20411
+  Name: TargetMaxHpRetentionHeal
+  Comment: 타겟의 최대 HP퍼센트 (마력 권능 사용) 15퍼센트 힐
+  Formula: "T_MaxHp * 15 / 100"
+- Id: 69411
+  Name: TargetMaxHpManaIceBolt
+  Comment: 타겟의 최대 MP퍼센트 (프리즈 사용) 5퍼센트
+  Formula: "( MaxMp * 5 / 100 )"
+- Id: 11236
+  Name: SkillAtkCalcAttackSpeedIceBolt
+  Comment: 프리즈 시전 시간
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 19936
+  Name: SkillAtkCalcAttackSpeedCurse
+  Comment: 저주 시전 시간
+  Formula: "300 * 1M / CalcAttackSpeedDelay"
+- Id: 98075
+  Name: MaxCharStat
+  Comment: 스탯 포인트 상한
+  Formula: 35
+- Id: 91035
+  Name: CombatArrowExecuteProbability
+  Comment: 연속사격 무기별 스킬 발동 확률
+  Formula: "if( ItemEquippedWeaponCrossBow > 0, 50000, 80000 )"
+- Id: 91217
+  Name: RechargingFocusProb
+  Comment: 발동 스킬의 총 공격력에 기반한 대미지
+  Formula: "ProbBase >= rand(1, 1000000)"
+- Id: 90077
+  Name: RechargingFocusDmg
+  Comment: "대상 현재 체력 5%"
+  Formula: "if( T_CountHp > 0, CalcSiegeDmg, T_Hp * ( 5 / 100 ) * -1 * ((1M + AddDmgScale) / 1M))"
+- Id: 67217
+  Name: RechargingFocusHeal
+  Comment: "RechargingFocusDmg 체력 회복 잃은 체력의 5%"
+  Formula: "( MaxHp - Hp ) * ( 5 / 100 )"
+- Id: 910017
+  Name: CalcActivatedTotalDamage
+  Comment: 발동 스킬의 총 공격력에 기반한 대미지
+  Formula: "if( T_CountHp > 0, CalcSiegeDmg, max( int( GetActivatedTotalDamage * ( ( AddDmgScale + 1M ) / 1M ) * ( rand( 9, 10 ) / 10 )  ), 0 ) * -1)"
+- Id: 910007
+  Name: GetActivatedTotalDamage
+  Comment: 발동 스킬의 총 공격력에 기반한 대미지 타입별 분류
+  Formula: "( AddedDamage + if( DamageType == 1, MeleeDamage, if( DamageType == 2, RangeDamage, if( DamageType == 3, MagicDamage, 0 ) ) ) ) * ( ActivatedTotalDamagePercent / 1M )"
+- Id: 10578
+  Name: PowerAttackDmgScale
+  Comment: "강베기 추가 피해 체크 (한손검 & NPC = 2% / 대검 & PC = 2% )"
+  Formula: "if( ItemEquippedWeaponSword > 0 && T_IsMonster,  ( 102 / 100 ), if( ItemEquippedWeaponTwoHandSword > 0 && T_IsPc, ( 102 / 100 ), 1 ) )"
+- Id: 117947
+  Name: FighterCounterDamage
+  Comment: 앙갚음 대미지
+  Formula: "if( ItemEquippedWeaponTwoHandSword > 0, CounterDamageTwoHandSword, if( ItemEquippedWeaponSword > 0, CounterDamageSword, 0 ) ) * (-1)"
+- Id: 177947
+  Name: CounterDamageTwoHandSword
+  Comment: "앙갚음 대검 대미지 => 받은 피해 30% or 자신의 무기 최대 피해 중 높은 값을 대미지로 치환"
+  Formula: "max( int( AttackedDamageValue * ( 3 / 10 ) ), WeaponMaxDamage )"
+- Id: 170778
+  Name: CounterDamageSword
+  Comment: "앙갚음 한손검 대미지 => 받은 피해 30% or 자신의 무기 최대 피해 중 높은 값을 대미지로 치환"
+  Formula: "max( int( AttackedDamageValue * ( 3 / 10 ) ), WeaponMaxDamage )"
+- Id: 277950
+  Name: AttackedDamageValue
+  Comment: 앙갚음 회복 레벨0
+  Formula: "L_ChangeHp * (-1)"
+- Id: 277949
+  Name: CounterHealTwoHandSword
+  Comment: "앙갚음 대검 회복 => 50% 방어"
+  Formula: "if( ItemEquippedWeaponTwoHandSword > 0 && AttackedDamageValue > 0, int( AttackedDamageValue * ( 5 / 10 ) ), 0 )"
+- Id: 277943
+  Name: CounterHealSword
+  Comment: "앙갚음 한손검 회복 => 100% 회피 및 무기 최대 피해 만큼 회복"
+  Formula: "if( ItemEquippedWeaponSword > 0 && AttackedDamageValue > 0, AttackedDamageValue + WeaponMaxDamage, 0)"
+- Id: 303
+  Name: FAttackedPc
+  Comment: "[간소화] 나를 공격한 PC"
+  Formula: "T_IsPc && IsSourceOfAngry"
+- Id: 29292
+  Name: IsNotHuntingPermitted
+  Comment: 사냥터 허가증 미보유 판별 공식
+  Formula: "TargetSelf && TargetPc && IsHuntingPermitted == 0"
+- Id: 570897
+  Name: TargetMaster
+  Formula: MasterEntityId == T_EntityId
+- Id: 18190
+  Name: IsSameAddress
+  Formula: "AddressId > 0 && AddressId==T_AddressId"
+- Id: 18192
+  Name: IsSameChannel
+  Formula: ChannelIdx==T_ChannelIdx
+- Id: 214
+  Name: IsAutoQuestTarget
+  Formula: "C_AutoQuestTarget_T_NpcId || ( ( ShouldCheckAutoQuestGroup || ShouldCheckAutoQuestType ) && ( if( ShouldCheckAutoQuestGroup, C_AutoQuestGroup_T_NpcGroupId, 1 ) && if( ShouldCheckAutoQuestType, C_AutoQuestType_T_NpcTypeId, 1 ) ) )"
+- Id: 2124
+  Name: IsQuestSymbolTarget
+  Formula: "C_QuestSymbolNpc_T_NpcId || C_QuestSymbolNpcGroup_T_NpcGroupId || C_QuestSymbolNpcType_T_NpcTypeId"
+- Id: 7476
+  Name: IsHuntingPermitted
+  Formula: "C_TaxAddressId_CurrentAddressId || C_ImmuneTaxAddressId_CurrentAddressId"
+- Id: 16796
+  Name: IsSourceOfAngry
+  Formula: C_Angry_T_EntityId
+- Id: 8295
+  Name: IsAttacker
+  Formula: C_Attacked_T_EntityId
+- Id: 31977
+  Name: ConcussionMpDrain
+  Comment: 빛의 쐐기 오브 Mp 회복 스킬의 SkillDrainMp 값
+  Formula: "if( T_Mp < SkillDrainMp, T_Mp, SkillDrainMp)"
+- Id: 31997
+  Name: FinalBlowStunCheck
+  Comment: 파이터 연속베기 - 기절인지 체크
+  Formula: "T_IsStatusStunned > 0"
+- Id: 31999
+  Name: FinalBlowNotStunCheck
+  Comment: 파이터 연속베기 - 기절이 아님을 체크
+  Formula: T_IsStatusStunned == 0
+- Id: 3130077
+  Name: ActivatedProb
+  Comment: 발동 스킬 공통 명중 확률 - ExecuteProbability에 입력
+  Formula: "( ProbBase + ProbAdd ) >= sample(1, 1000000)"
+- Id: 313971
+  Name: FlowOfEssenseDmg
+  Comment: 발동 스킬 공통 명중 확률 - ExecuteProbability에 입력
+  Formula: "if( T_CountHp > 0, CalcSiegeDmg, int( MaxMp * ( ( -7 ) / 100 ) * ( AddDmgScale +1M ) / 1M ))"
+- Id: 313931
+  Name: FlowOfEssenseDmgLevel5
+  Comment: 발동 스킬 공통 명중 확률 - ExecuteProbability에 입력
+  Formula: "if( T_CountHp > 0, CalcSiegeDmg, int( MaxMp * ( -1 / 10 ) * ( AddDmgScale +1M ) / 1M ))"
+- Id: 313347
+  Name: SpellCancleTwoHandSwordTime
+  Comment: 파이터 대검 심판의 검 차단 시간
+  Formula: "rand(3000, 5000) + BuffDuration"
+- Id: 313101
+  Name: SpellCancleSwordTime
+  Comment: 파이터 한손검 심판의 검 차단 시간
+  Formula: "rand(3000, 5000) + BuffDuration"
+- Id: 313174
+  Name: GroundSlamStunDuration
+  Comment: 파이터 파멸 질주 대검 기절 시간
+  Formula: "rand(2500, 4000) + BuffDuration"
+- Id: 313077
+  Name: GroundSlamSwordStunTime
+  Comment: 파이터 파멸 질주 한손검 기절 시간
+  Formula: "rand(2500, 4000) + BuffDuration"
+- Id: 313007
+  Name: GhostRunDuration
+  Comment: 파이터 유체화 지속시간
+  Formula: 1500 + BuffDuration
+- Id: 313008
+  Name: SoulContractDuration00
+  Comment: 파이터 소울 컨트렉트 무적 지속시간 0
+  Formula: 3000 + BuffDuration
+- Id: 313040
+  Name: SoulContractDuration01
+  Comment: 파이터 소울 컨트렉트 무적 지속시간 1
+  Formula: 4000 + BuffDuration
+- Id: 313041
+  Name: SoulContractDuration02
+  Comment: 파이터 소울 컨트렉트 무적 지속시간 2
+  Formula: 5000 + BuffDuration
+- Id: 313042
+  Name: SoulContractDuration03
+  Comment: 파이터 소울 컨트렉트 무적 지속시간 3
+  Formula: 6000 + BuffDuration
+- Id: 30497
+  Name: ChargeBindDurationBow
+  Comment: 레인저 파쇄 화살 활 지속 시간
+  Formula: "rand(2000, 4000) + BuffDuration"
+- Id: 36797
+  Name: ChargeBindDurationCrossBow
+  Comment: 레인저 파쇄 화살 석궁 지속 시간
+  Formula: 5000 + BuffDuration
+- Id: 36707
+  Name: BlinkDuration
+  Comment: 레인저 도약 지속 시간
+  Formula: 3000 + BuffDuration
+- Id: 34497
+  Name: DisHealthDuration
+  Comment: 소서러 균열 지속 시간
+  Formula: 6000 + BuffDuration
+- Id: 31404
+  Name: ExplosionDuration
+  Comment: 소서러 균열 지속 시간
+  Formula: "rand(1500, 3000) + BuffDuration"
+- Id: 397971
+  Name: CombatArrowProb
+  Comment: 레인저 연속사격 발동 확률 - 치명타 비례
+  Formula: "ProbBase >= rand(1, 1000000)"
+- Id: 99900
+  Name: CalcSkillCoolTime
+  Comment: CoolTimeReducePercent 적용해서 최종 쿨타임 계산
+  Formula: "GetSkillCoolTime - ( GetSkillCoolTime * CoolTimeReducePercentResult / 1M )"
+- Id: 19818
+  Name: GetDodgeClass
+  Comment: "[영진] 타겟의 회피 스탯"
+  Formula: "T_DodgeChanceResult + if( DamageType == 1, T_MeleeDodgeResult, if( DamageType == 2, T_RangeDodgeResult, T_MagicDodgeResult )) + if( IsMonster == 1, T_PvEDodgeResult, 0 ) + if( IsPc == 1, T_PvPDodgeResult, 0 ) + if( NormalAttackCheck == 1, T_NormalAttackDodgeResult, T_SkillDodgeResult )"
+- Id: 21670
+  Name: CalcReceivedDamageRate
+  Comment: "[영진] 방어력 -> 방어율 변환"
+  Formula: "min( 1 - ( CalcArmorClass / ( CalcArmorClass + 1000 ) ) , 1 )"
+- Id: 19241
+  Name: CalcDoubleProb
+  Comment: "[영진] 더블 발동 판단"
+  Formula: "max(GetDoubleProb - GetDoubleResistance, 0 ) >= sample( 1, 10000 )"
+- Id: 20238
+  Name: IsInBattleground
+  Comment: "[전장] 참여 여부"
+  Formula: "Battleground > 0"
+- Id: 16501
+  Name: IsInEncroachedUndergroundCastle
+  Comment: "[전장] 잠식된 지하 성 참여 여부"
+  Formula: Battleground == 1
+- Id: 90091
+  Name: CutOutHpDamage01
+  Comment: "[CCB스킬] 분쇄 최대 Hp 비례 대미지 레벨 1~4"
+  Formula: "if( T_CountHp > 0, 0, int(MaxHp * ( -1 / 100 )))"
+- Id: 90297
+  Name: CutOutHpDamage05
+  Comment: "[CCB스킬] 분쇄 최대 Hp 비례 대미지 레벨 5~9"
+  Formula: "if( T_CountHp > 0, 0, int(MaxHp * ( -3 / 100 )))"
+- Id: 90207
+  Name: CutOutHpDamage10
+  Comment: "[CCB스킬] 분쇄 최대 Hp 비례 대미지 레벨 10"
+  Formula: "if( T_CountHp > 0, 0, int(MaxHp * ( -5 / 100 )))"
+- Id: 20642
+  Name: ArkandarlimpidityNPCTarget
+  Comment: "[필드보스]아르칸다르 스킬04 투명NPC 타겟"
+  Formula: "T_ArkandarFourthBuff > 0"
+- Id: 6375
+  Name: ArkandarlimpiditySecondNPCTarget01
+  Comment: "[필드보스]아르칸다르 스킬02 투명NPC 타겟 01"
+  Formula: T_ArkandarSecondBuff == 1
+- Id: 9261
+  Name: ArkandarlimpiditySecondNPCTarget02
+  Comment: "[필드보스]아르칸다르 스킬02 투명NPC 타겟 02"
+  Formula: "T_ArkandarSecondBuff > 0"
+- Id: 12706
+  Name: ArkandarlimpiditySecondNPCTarget03
+  Comment: "[필드보스]아르칸다르 스킬02 투명NPC 타겟 03"
+  Formula: T_ArkandarSecondBuff == 3
+- Id: 22698
+  Name: CharleNormalAttacklimpidityNPCTarget
+  Comment: "[필드보스]샤를레 평타 02 투명NPC 타겟"
+  Formula: "T_CharleSecondNormalAttackBuff > 0"
+- Id: 226945
+  Name: CharleNeidanlimpidityTarget01
+  Comment: "[필드보스]샤를레 내단 전용 타겟 01"
+  Formula: "T_IsBoss && T_IsCharle && TargetBodyObject < 1 || T_IsCharleBodyObject > 0"
+- Id: 226984
+  Name: CharleNeidanlimpidityTarget02
+  Comment: "[필드보스]샤를레 내단 전용 타겟 02"
+  Formula: "T_IsBoss && T_IsCharle && TargetBodyObject < 1"
+- Id: 3121412
+  Name: CharleNeidanKickTarget
+  Comment: "[필드보스]샤를레 내단 추방 타겟"
+  Formula: "T_CharleNeidanPc < 1 && TargetPc"
+- Id: 19307
+  Name: VenatorialimpidityNPCTarget
+  Comment: "[필드보스]베나토리아 스킬 01 투명NPC 타겟"
+  Formula: "T_VenatoriaFirsthBuff > 0"
+- Id: 193087
+  Name: IsNasharEvo
+  Comment: "[던전보스]나샤르 에보 타겟"
+  Formula: "T_NasharEvoBuff > 0"
+- Id: 26965
+  Name: CalcTotalStatSkillDmg
+  Comment: "[영진] 전투 최초 분기"
+  Formula: "int( if ( IsCritical , (FinalAttackDmg * ( 1 + GetTotalDamageScale / 1M ) * ( 1 + ( ( ConstCriDmg + GetCriDmg ) / 1M ) ) ) , FinalAttackDmg * ( 1 + GetTotalDamageScale / 1M ) ) ) * -1 "
+- Id: 24250
+  Name: CalcTotalAttackDmg
+  Comment: "[영진] 최종 대미지"
+  Formula: "max( ( ( CalcAttackDmg * CalcAttackDmgScale * CalcSkillAttackDmgScale ) + CalcDmgReduction ) * CalcReceivedDamageRate * IsPvELvDmgPenalty ,0 )"
+- Id: 5282
+  Name: CalcAttackDmg
+  Comment: "[영진] 공격력 v+계산"
+  Formula: "(ClassDamage + GetAddedDmg)+ if( NormalAttackCheck == 1, NormalAttackDamageResult, SkillAttackDamageResult )"
+- Id: 25974
+  Name: ClassDamage
+  Comment: "[영진] (공격력 v+) 공격 타입에 따른 스탯 판단"
+  Formula: "if(DamageType == 1, MeleeDamageResult, if(DamageType == 2, RangeDamageResult, MagicDamageResult))"
+- Id: 19827
+  Name: CalcAttackDmgScale
+  Comment: "[영진] 공격력 v% 계산"
+  Formula: ((GetDmgScale - GetTargetDmgReduceScale + 1M) / 1M)
+- Id: 16982
+  Name: GetDmgScale
+  Comment: "[영진] (공격력 v%) 일반공격 대미지 증폭값 계산"
+  Formula: "DamageScaleResult + if(DamageType == 1, MeleeDamageScaleResult, if(DamageType == 2, RangeDamageScaleResult, MagicDamageScaleResult)) + if( T_IsMonster, PvEDamageScaleResult, 0) + if( T_IsPc, PvPDamageScaleResult, 0 ) + if(NormalAttackCheck == 1, NormalAttackDamageScaleResult, SkillDamageScaleResult )"
+- Id: 22351
+  Name: GetTargetDmgReduceScale
+  Comment: "[영진] (공격력v%) 타겟의 대미지 리덕션 스케일값 계산"
+  Formula: "T_DamageReduceScaleResult + if(DamageType == 1, T_MeleeDamageReduceScaleResult, if(DamageType == 2, T_RangeDamageReduceScaleResult, T_MagicDamageReduceScaleResult))+ if( IsPc == 1, T_PvPDamageReduceScaleResult, if( IsMonster == 1, T_PvEDamageReduceScaleResult, 0 ) ) + if( NormalAttackCheck == 1, T_NormalAttackDamageReduceScaleResult, T_SkillDamageReduceScaleResult )"
+- Id: 24196
+  Name: CalcSkillAttackDmgScale
+  Comment: "[영진] 스킬 공격 대미지"
+  Formula: (AddDmgScale + 1M) / 1M
+- Id: 25061
+  Name: CalcDmgReduction
+  Comment: "[영진] 대미지 리덕션 계산"
+  Formula: "min( GetDmgReductionIgnore - GetTargetDmgReduction , 0 )"
+- Id: 4406
+  Name: GetDmgReductionIgnore
+  Comment: "[영진] 공격자 대미지 리덕션 무시값 계산"
+  Formula: "DamageReductionIgnoreResult + if(DamageType == 1, MeleeDamageReductionIgnoreResult, if(DamageType == 2, RangeDamageReductionIgnoreResult, MagicDamageReductionIgnoreResult))+ if(T_IsMonster, PvEDamageReductionIgnoreResult, 0) + if(T_IsPc, PvPDamageReductionIgnoreResult , 0) + if( NormalAttackCheck == 1, NormalAttackDamageReductionIgnoreResult, SkillDamageReductionIgnoreResult )"
+- Id: 29996
+  Name: GetTargetDmgReduction
+  Comment: "[영진] 타겟의 대미지 리덕션 계산"
+  Formula: "T_DamageReductionResult + if(DamageType == 1, T_MeleeDamageReductionResult, if(DamageType == 2, T_RangeDamageReductionResult, T_MagicDamageReductionResult)) + if( IsMonster == 1, T_PvEDamageReductionResult, 0) + if( IsPc == 1, T_PvPDamageReductionResult , 0 ) + if( NormalAttackCheck == 1, T_NormalAttackDamageReductionResult, T_SkillDamageReductionResult )"
+- Id: 25395
+  Name: CalcCriProb
+  Comment: "[영진] 치명 확률 계산"
+  Formula: "max(GetCriProb - GetTargetCriResistance, 0 ) >= sample( 1, 10000 )"
+- Id: 30034
+  Name: GetTargetCriResistance
+  Comment: "[영진] 타겟의 치명 저항"
+  Formula: "T_CriticalResistanceResult + if( DamageType == 1, T_MeleeCriticalResistanceResult, if( DamageType == 2, T_RangeCriticalResistanceResult, T_MagicCriticalResistanceResult ) ) + if( IsMonster == 1, T_PvECriticalResistanceResult, 0 ) + if( IsPc == 1, T_PvPCriticalResistanceResult, 0 )"
+- Id: 6580
+  Name: GetCriDmg
+  Comment: "[영진] 타겟의 치명 대미지"
+  Formula: "max( CriticalDamageResult + if( DamageType == 1, MeleeCriticalDamageResult, if( DamageType == 2, RangeCriticalDamageResult, MagicCriticalDamageResult ) ) + if( T_IsMonster, PvECriticalDamageResult, 0 ) + if( T_IsPc, PvPCriticalDamageResult, 0 ) - GetCriDmgDR, 0 )"
+- Id: 15827
+  Name: GetCriDmgDR
+  Comment: "[영진] 타겟의 치명 대미지 저항"
+  Formula: "T_CriticalDamageReductionResult + if( DamageType == 1, T_MeleeCriticalDamageReductionResult, if( DamageType == 2, T_RangeCriticalDamageReductionResult, T_MagicCriticalDamageReductionResult ) ) + if( IsMonster == 1, T_PvECriticalDamageReductionResult, 0 ) + if( IsPc == 1, T_PvPCriticalDamageReductionResult, 0 )"
+- Id: 15052
+  Name: MonsterAttackDmg
+  Comment: "[영진] 몬스터 공격력"
+  Formula: "max ( ( ( ( ( ClassDamage + GetAddedDmg ) * CalcAttackDmgScale * CalcSkillAttackDmgScale) + CalcDmgReduction ) *  CalcReceivedDamageRate )  , 0 )"
+- Id: 26378
+  Name: MonsterAttackDmgMin
+  Comment: "[영진] 몬스터 최소 공격력"
+  Formula: "int(MonsterAttackDmg * (( 1M - 100000) / 1M))"
+- Id: 29539
+  Name: MonsterAttackDmgMax
+  Comment: "[영진] 몬스터 최대 공격력"
+  Formula: "int(MonsterAttackDmg * (( 1M + 100000) / 1M))"
+- Id: 22966
+  Name: MonsterTotalAttackDmg
+  Comment: "[영진] 몬스터 최종 공격력"
+  Formula: "int(sample(MonsterAttackDmgMin, MonsterAttackDmgMax) * IsMonsterLvDmgBuff * ( 1 + GetTotalDamageScale / 1M ) )"
+- Id: 31053
+  Name: IsPvELvDmgPenalty
+  Comment: "[영진]PC -> 몬스터 대미지 패널티"
+  Formula: "if (T_IsMonster && T_IsBoss == 0 && T_IsNamed == 0, if ( T_NPCLevel - Level > 20 , 500000 , if ( T_NPCLevel - Level < 0 , 1M , 1M -  ( (T_NPCLevel - Level ) * 25000 ) ) ) / 1M , 1 )"
+- Id: 1419
+  Name: IsMonsterLvDmgBuff
+  Comment: "[영진]몬스터 -> PC 대미지 증가"
+  Formula: "if ( NPCLevel - T_Level > 20 , 1500000 , if ( NPCLevel - T_Level < 0 , 1M ,1M + ( (NPCLevel - T_Level) * 25000) ) ) / 1M"
+- Id: 41781
+  Name: IsPvELvHitPenalty
+  Comment: "[영진] PC -> 몬스터 명중 패널티 ( 임시 )"
+  Formula: "if( T_IsMonster && T_IsBoss == 0 && T_NPCLevel - Level > 0 && T_IsNamed == 0   , CalcPvELvHitPenalty , CalcPvELvHitBase )"
+- Id: 6051
+  Name: CalcPvELvHitPenalty
+  Comment: "[영진] 몬스터의 레벨이 높을 때 명중 패널티 ( 임시 )"
+  Formula: "((GetHitChance - ( (T_NPCLevel - Level) * 4 ) - GetDodgeClass + 285) / 300 ) * 1M"
+- Id: 25608
+  Name: CalcPvELvHitBase
+  Comment: "[영진] 기본 명중"
+  Formula: "((GetHitChance - GetDodgeClass + 285) / 300 ) * 1M"
+- Id: 9374
+  Name: GetDoubleResistance
+  Comment: "[영진] 더블 저항"
+  Formula: "T_DoubleResistanceResult + if( DamageType == 1, T_MeleeDoubleResistanceResult, if( DamageType == 2, T_RangeDoubleResistanceResult, T_MagicDoubleResistanceResult) ) + if( IsMonster == 1, T_PvEDoubleResistanceResult, 0 ) + if( IsPc == 1, T_PvPDoubleResistanceResult, 0 )"
+- Id: 21641
+  Name: GetDoubleProb
+  Comment: "[영진] 더블 연산"
+  Formula: "DoubleProbabilityResult + if( DamageType == 1, MeleeDoubleProbabilityResult, if( DamageType == 2, RangeDoubleProbabilityResult, MagicDoubleProbabilityResult ) ) + if( T_IsMonster, PvEDoubleProbabilityResult, 0 ) + if( T_IsPc, PvPDoubleProbabilityResult, 0 )"
+- Id: 16932
+  Name: GetCriProb
+  Comment: "[영진] 치명 연산"
+  Formula: "CriticalProbabilityResult + if( DamageType == 1, MeleeCriticalProbabilityResult, if( DamageType == 2, RangeCriticalProbabilityResult, MagicCriticalProbabilityResult ) ) + if( T_IsMonster, PvECriticalProbabilityResult, 0 ) + if( T_IsPc, PvPCriticalProbabilityResult, 0 )"
+- Id: 13886
+  Name: IsPassedLootingDelayItem
+  Comment: 루팅 지연 시간이 지난 드롭 아이템인지 여부
+  Formula: "if( T_DropTime + T_LootingDelay < now , 1 , 0 )"
+- Id: 26257
+  Name: TargetPickUpItem
+  Comment: "[타깃] 드롭 아이템을 타깃하기 위한 정보"
+  Formula: TargetItem
+- Id: 14792
+  Name: BalthazarTarget
+  Comment: 발타자르 연출용 타겟
+  Formula: T_QuestVaritanGeneral01
+- Id: 27351
+  Name: GetTotalDamageReduceScale
+  Comment: 타겟의 최종 피해 증폭 저항
+  Formula: T_TotalDamageReduceScale
+- Id: 11720
+  Name: GetTotalDamageScale
+  Comment: 공격자 최종 피해 증폭 - 타겟의 최종 피해 증폭 저항
+  Formula: "max( TotalDamageScale - GetTotalDamageReduceScale, -900000 )"
+- Id: 13098
+  Name: SearchAutoQuestTargetOrItem
+  Comment: "[타깃] 자동퀘스트에서의 MonsterKill인 경우 Main 타겟과 아이템을 우선 검색"
+  Formula: |-
+    NotMe &&
+    if( TargetItem, OnlySearchAutoTargetItem, if( IsAutoQuestTarget, 12, 0 ) )
+- Id: 14856
+  Name: PvELvGap
+  Comment: 패널티 레벨
+  Formula: "if (T_IsMonster && T_IsBoss == 0 && T_IsNamed == 0, 1 , 0) * max(0, Level - T_NPCLevel)"
+- Id: 4919
+  Name: PvELvGapPenalty
+  Comment: 패널티 수치
+  Formula: "max((PvELvGap >= 10) / 2, 1 - int((PvELvGap / 10)) / 2)"
+- Id: 7586
+  Name: ExpPenalty
+  Comment: 경험치 패널티
+  Formula: PvELvGapPenalty
+- Id: 3994
+  Name: ExperienceValueResult
+  Comment: 경험치획득량
+  Formula: "ExperienceValue * ExpPenalty"
+- Id: 19662
+  Name: DropItemPenalty
+  Comment: 드랍 패널티(서버에서 드랍처리)
+  Formula: "PvELvGapPenalty * 10M "
+- Id: 11786
+  Name: GetPenetrationResistance
+  Comment: 타겟의 관통 저항 연산
+  Formula: "T_PenetrationResistanceResult + if( DamageType == 1, T_MeleePenetrationResistanceResult, if( DamageType == 2, T_RangePenetrationResistanceResult, T_MagicPenetrationResistanceResult) ) + if( IsMonster == 1, T_PvEPenetrationResistanceResult, 0 ) + if( IsPc == 1, T_PvPPenetrationResistanceResult, 0 )"
+- Id: 24162
+  Name: GetPenetration
+  Comment: 관통 연산
+  Formula: "PenetrationResult + if( DamageType == 1, MeleePenetrationResult, if( DamageType == 2, RangePenetrationResult, MagicPenetrationResult ) ) + if( T_IsMonster, PvEPenetrationResult, 0 ) + if( T_IsPc, PvPPenetrationResult, 0 ) "
+- Id: 3022
+  Name: CalcPenetration
+  Comment: 관통 비율화
+  Formula: "max( ConstPenetrationMin / 10000, min( 1, 1 - ( GetPenetration - GetPenetrationResistance ) / 10000 ) )"
+- Id: 6794
+  Name: CalcArmorClass
+  Comment: 관통율 환산
+  Formula: "GetArmorClass * CalcPenetration"
+- Id: 9697
+  Name: MultiHit
+  Comment: 연타 횟수
+  Formula: "max(MultiHitCount, 1)"

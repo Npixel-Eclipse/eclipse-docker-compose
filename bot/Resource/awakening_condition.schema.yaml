@@ -1,0 +1,29 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Condition
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Condition:
+      type: array
+      items:
+        type: object
+        required:
+          - Category
+          - Amount
+        properties:
+          Category:
+            type: string
+            ref: awakening_category
+          Amount:
+            type: integer

@@ -1,0 +1,46 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Reward
+    - CountItem
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    RepeatRoundFrom: # 마지막 Round에 갔을 때, 몇 번째 그룹부터 다시 시작할지 결정
+      type: integer
+      minimum: 1
+    Reward:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Round:
+            type: integer
+            minimum: 1
+          Step:
+            type: integer
+            minimum: 1
+          Condition:
+            type: integer
+            minimum: 1
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+            minimum: 1
+          Preview: # 소환 페이지에서 보상 정보를 보여줄지 말지 결정
+            type: boolean
+    CountItem: # 소환 횟수 카운팅을 위한 아이템 (유저에게는 보이지 않는 내부 구현을 위한 아이템)
+      type: string
+      ref: item

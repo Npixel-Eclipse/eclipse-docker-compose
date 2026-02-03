@@ -1,0 +1,59 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "PartyLogServiceProto";
+
+message CreateParty {
+  int64 party_id = 1;
+  int64 sequence = 2;
+}
+
+message InviteParty {
+  int64 party_id = 1;
+  string invitee_character_uuid = 2;
+}
+
+message ConfirmPartyInvitation {
+  int64 party_id = 1;
+  string inviter_character_uuid = 2;
+  bool accepted = 3;
+  string join_expire_at = 4;
+  int64 sequence = 5;
+}
+
+message CancelPartyInvitation {
+  int64 party_id = 1;
+  string invitee_character_uuid = 2;
+}
+
+message LeaveParty {
+  int64 party_id = 1;
+  bool disconnected = 2;
+}
+
+message DisbandParty {
+  int64 party_id = 1;
+}
+
+message DelegatePartyHost {
+  int64 party_id = 1;
+  string target_character_uuid = 2;
+}
+
+message BanishParty {
+  int64 party_id = 1;
+  string target_character_uuid = 2;
+}
+
+message ChangePartyRule {
+  enum PartyRule {
+    DEFAULT = 0;
+    SEQUENCE = 1;
+    RANDOM = 2;
+  }
+
+  int64 party_id = 1;
+  PartyRule party_rule = 2;
+}

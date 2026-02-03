@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.broadcast";
+option java_outer_classname = "ClientBroadcastProto";
+
+package eclipse.client.broadcast;
+
+message BroadcastEvent {
+  bytes event = 1;
+  uint32 field_number = 2;
+  repeated string target_world_names = 3;
+}

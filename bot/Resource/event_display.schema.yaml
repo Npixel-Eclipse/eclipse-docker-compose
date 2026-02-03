@@ -1,0 +1,42 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    QuestCategory:
+      type: string
+      ref: quest_category
+    EventType:
+      type: string
+      enum:
+        - Attendance
+        - Mission
+        - DailyMission
+    BannerAsset:
+      type: string
+    DisplayOrder: # 내림차순
+      type: integer
+    ShowMenuBanner:
+      type: boolean
+    SubTitle:
+      type: string
+      ref: description
+    Description:
+      type: string
+      ref: description
+  required:
+    - Id
+    - Name
+    - QuestCategory
+    - EventType
+    - BannerAsset
+

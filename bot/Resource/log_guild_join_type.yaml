@@ -1,0 +1,9 @@
+- Name: IMMEDIATE
+  Comment: 즉시 가입
+  Value: 0
+- Name: APPROVAL
+  Comment: 가입 승인 필요
+  Value: 1
+- Name: PASSWORD
+  Comment: 비밀번호 가입
+  Value: 2

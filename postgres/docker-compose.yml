@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+  # PostgreSQL 서비스
+  postgresql:
+    image: postgres:17
+    restart: always
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: eclipse
+      POSTGRES_PASSWORD: dlzmfflqtm
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  # pgAdmin 서비스
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    container_name: pgadmin4
+    depends_on:
+      - postgresql
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: eclipse@npixel.co.kr
+      PGADMIN_DEFAULT_PASSWORD: dlzmfflqtm
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+
+# 볼륨 정의
+volumes:
+  postgres-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/postgres-data
+  pgadmin-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/pgadmin-data

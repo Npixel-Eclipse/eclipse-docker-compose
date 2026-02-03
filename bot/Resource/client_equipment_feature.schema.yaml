@@ -1,0 +1,22 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    WeaponEquipSlot:
+      type: string
+      ref: equip_slot
+    SubWeaponEquipSlot:
+      type: string
+      ref: equip_slot
+  required:
+    - Id
+    - Name
+    - WeaponEquipSlot
+    - SubWeaponEquipSlot

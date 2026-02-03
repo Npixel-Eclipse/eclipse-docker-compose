@@ -1,0 +1,49 @@
+- Id: 1
+  Name: FortressRanking
+  Comment: 요새 랭킹
+  Type: Fortress
+  RankingRenewalTimeSeconds: 0
+  RewardRenewalTimeSeconds: 0
+  MaxDisplayRankingNumber: 0
+  MaxDisplayUserNumber: 0
+- Id: 2
+  Name: PvpRanking
+  Comment: PVP 랭킹
+  Type: PvP
+  RankingRenewalTimeSeconds: 0
+  RewardRenewalTimeSeconds: 0
+  MaxDisplayRankingNumber: 0
+  MaxDisplayUserNumber: 0
+- Id: 3
+  Name: CombatRanking
+  Comment: 전투력 랭킹
+  Type: Combat
+  RankingRenewalTimeSeconds: 0
+  RewardRenewalTimeSeconds: 0
+  MaxDisplayRankingNumber: 0
+  MaxDisplayUserNumber: 0
+- Id: 4
+  Name: RecordRoom
+  Comment: 기록실 랭킹
+  Type: RecordRoom
+  RankingRenewalTimeSeconds: 3600
+  RewardRenewalTimeSeconds: 86400
+  ResetTimeSeconds: 604800
+  MaxDisplayRankingNumber: 200
+  MaxDisplayUserNumber: 500
+- Id: 207
+  Name: Guild
+  Comment: 길드 경험치 랭킹
+  Type: Guild
+  RankingRenewalTimeSeconds: 1800
+  RewardRenewalTimeSeconds: 1800
+  MaxDisplayRankingNumber: 300
+  MaxDisplayUserNumber: 100
+- Id: 208
+  Name: Dungeon
+  Comment: 던전 랭킹
+  Type: Dungeon
+  RankingRenewalTimeSeconds: 0
+  RewardRenewalTimeSeconds: 86400
+  MaxDisplayRankingNumber: 5
+  MaxDisplayUserNumber: 5

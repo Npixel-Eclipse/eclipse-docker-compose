@@ -1,0 +1,34 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    CategoryType:
+      type: string      
+      pattern: ^[A-Z][A-Za-z0-9]*$
+      enum:
+        - Stat
+        - Text
+    CategoryValue:
+      type: string
+    RelatedStats:
+      type: array
+      items:
+        type: string
+    HideCategory:
+      type: boolean
+      default: false
+  required:
+    - Id
+    - Name
+    - CategoryType
+    - CategoryValue

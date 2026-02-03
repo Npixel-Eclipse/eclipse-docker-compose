@@ -1,0 +1,41 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Replacement
+  properties: 
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Replacement:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - ReplacementItem
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          ReplacementItem: # 대체 아이템 
+            type: string
+            ref: item
+          ReplacementEnchantLevel: # 대체 아이템 강화 레벨
+            type: integer
+            minimum: 0            
+          ReplacementAmount: # 대체 수량. 대체 수량이 설정 되면 일괄 등록만 가능.
+            type: integer
+            minimum: 1
+            default: 1

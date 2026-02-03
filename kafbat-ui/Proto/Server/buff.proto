@@ -1,0 +1,177 @@
+syntax = "proto3";
+package buff;
+
+import "google/protobuf/timestamp.proto";
+import "Common/property.proto";
+import "Common/server_time.proto";
+import "Common/battle_common.proto";
+import "Common/kafka_key_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.buff";
+option java_outer_classname = "StoreServiceProto";
+
+message BuffCommand {
+  string character_uuid = 1;
+  oneof command {
+    Load load = 2;
+    Update update = 3;
+    Unload unload = 4;
+    Query query = 5;
+    SyncToDatabase sync_to_database = 6;
+    LoadedBuff loaded_buff = 7;
+    LoadFailed load_failed = 8;
+  }
+
+
+  message Load {
+    string topic = 1;
+    string connection_id = 2; // UUID v7 기반 접속 ID (Welcome 버프 그룹핑용)
+    string identifier = 3; // battle instance identifier
+  }
+
+  message Update {
+    reserved 1;
+    oneof update_type {
+      BuffEvent buff_event = 2;
+      common.UpsertBuff upsert_buff = 3;
+      Logout logout = 4;
+    }
+  }
+
+  message Logout {
+    google.protobuf.Timestamp logout_at = 1;
+  }
+
+  message BuffEvent {
+    repeated common.BuffEvent buff_events = 1;
+  }
+
+  message Unload {
+  }
+
+  message Query {
+    string topic = 1;
+    repeated int64 query_buff_ids = 2;
+  }
+
+  message SyncToDatabase {
+    bool keep_cache = 1;
+  }
+}
+
+message LoadedBuff {
+  BuffStatus buff_status = 2;
+  string character_uuid = 3;
+}
+
+message LoadFailed {
+  string character_uuid = 1;
+  string error_message = 2;
+}
+
+enum BuffStateStoreStatus {
+  DISABLED = 0;
+  ENABLED = 1;
+  UPDATED = 2;
+}
+
+message BuffStatus {
+  BuffStateStoreStatus status = 1;
+  int64 account_id = 6;
+  string characterUuid = 3;
+  uint64 lastUpdated = 4;
+  map<int64, common.BuffEvent> buffEvents = 5;
+  optional common.UpsertBuff buff_info = 7;
+  uint64 last_sync_timestamp = 8;
+}
+
+message BufferedBuffCommandCache {
+  repeated BuffRecord buff_records = 1;
+
+  message BuffRecord {
+    common.KafkaKey key = 1;
+    int64 timestamp = 2;
+    repeated Header headers = 3;
+    string character_uuid = 4;
+    bytes command = 5;
+  }
+
+  message Header {
+    string key = 1;
+    bytes bytes_value = 2;
+  }
+}
+
+message BuffDbCommand {
+  string character_uuid = 1;
+
+  message SaveBuff {
+    int64 account_id = 1;
+    BuffStatus buff_status = 2;
+  }
+
+  message LoadBuff {
+    int64 account_id = 1;
+  }
+
+  oneof command {
+    SaveBuff save_buff = 2;
+    LoadBuff load_buff = 3;
+  }
+}
+
+
+message ComponentProperty {
+  reserved 1;
+
+  message DungeonTicket {
+    /*
+    던전 사용 상태
+    - DungeonTicket 있으면 현재 까지 던전 사용 상태 알 수 있음
+    */
+    reserved 2, 5, 6, 7, 8, 10, 12, 13;
+
+    int64 dungeon_id = 1;
+
+    // dungeon resource
+    int64 resource_id = 14;
+    common.AmountTime remain_time = 15;
+    optional common.AmountTime charging_time = 16;
+    optional int64 remain_count = 17;
+    optional int64 additional_count = 18;
+    optional int64 charging_count = 19; // 최대 충전 시간, 횟수 넘어 갈 경우 그냥 덮어쓰는 처리. 어뷰징 할 이유 없음.
+    optional google.protobuf.Timestamp refresh_at = 20;
+    google.protobuf.Timestamp update_at = 21;
+
+    // dungeon user state
+    int64 remain_resurrect_count = 100;
+    int64 complete_count = 101;
+    bool additional_enter = 102;
+    optional int64 challenge_start_at_millis = 103;
+    // bool skip_check_in = XXX;
+  }
+
+  message Comeback {
+    int64 land_id = 1;
+    int64 coordinate_x = 2;
+    int64 coordinate_y = 3;
+    optional string teleport_skill = 50;
+    optional int64 quest_id = 51;
+  }
+
+  message Arrival {
+    bool should_close_ui = 1;
+    int64 world_map_area_id = 2;
+  }
+
+  message PendingChainedSkill {
+    int64 skill_id = 1;
+  }
+
+  optional DungeonTicket dungeon_ticket = 2;
+
+  optional Comeback comeback = 10;
+  optional Arrival arrival = 11;
+  optional PendingChainedSkill pending_chained_skill = 12;
+}

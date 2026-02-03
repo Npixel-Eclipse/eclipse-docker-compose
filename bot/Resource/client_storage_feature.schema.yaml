@@ -1,0 +1,52 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    StoreItemText:
+      type: string
+      ref: description
+    StoreItemDescText:
+      type: string
+      ref: description
+    TakeItemText:
+      type: string
+      ref: description
+    TakeItemDescText:
+      type: string
+      ref: description
+    EmptySlotGrade:
+      type: string
+      ref: grade
+    AccountStorageID:
+      type: string
+      ref: inventory
+    BagInventoryID:
+      type: string
+      ref: inventory
+    IgnoredAmountInventories:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          InventoryID:
+            type: string
+            ref: inventory
+
+  required:
+    - Id
+    - Name
+    - StoreItemText
+    - StoreItemDescText
+    - TakeItemText
+    - TakeItemDescText
+    - EmptySlotGrade
+    - AccountStorageID
+    - BagInventoryID

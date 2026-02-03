@@ -1,0 +1,37 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    AppliedServerNames:
+      type: array
+      items:
+        type: string
+        minItems: 1
+        uniqueItems: true
+        default: ["default"]
+      description: 채팅 제한 정책이 적용될 서버 이름
+    ChatIntervalTime:
+      type: integer
+      minimum: 1
+    NumOfChatMessage:
+      type: integer
+      minimum: 1
+    ChatBanTime:
+      type: integer
+      minimum: 1
+  required:
+    - Id
+    - Name
+    - ChatIntervalTime
+    - NumOfChatMessage
+    - ChatBanTime
+    - AppliedServerNames

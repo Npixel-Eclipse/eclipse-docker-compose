@@ -1,0 +1,156 @@
+- Id: 1
+  Name: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  Comment: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  DropItemGroupSetups:
+    - Group: 1
+    - Group: 2
+    - Group: 3
+      GroupProbability: "50%"
+    - Group: 4
+      GroupProbability: "10%"
+  DropItems:
+    - Item: Item_Collection_Dungeon_Boss_G4_T1_01
+      Group: 1
+      Category: GuildStorage
+      Amount: 1
+      LootingDelayTime: 3
+    - Item: Item_Cardpack_Transcendence_G1_T1_01_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Cardpack_Weaponpolymorph_G1_T1_01_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Engrave_G1_T1_04_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Engrave_G1_T1_05_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Transcend_Pass_G3_T1_03_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Transcend_Pass_G4_T1_04_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+- Id: 2
+  Name: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  Comment: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  DropItemGroupSetups:
+    - Group: 1
+    - Group: 2
+    - Group: 3
+      GroupProbability: "50%"
+    - Group: 4
+      GroupProbability: "10%"
+  DropItems:
+    - Item: Item_Collection_Dungeon_Boss_G4_T1_01
+      Group: 1
+      Category: GuildStorage
+      Amount: 1
+      LootingDelayTime: 3
+    - Item: Item_Cardpack_Transcendence_G1_T1_01_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Cardpack_Weaponpolymorph_G1_T1_01_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Engrave_G1_T1_04_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Engrave_G1_T1_05_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Transcend_Pass_G3_T1_03_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_Transcend_Pass_G4_T1_04_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+- Id: 77
+  Name: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  Comment: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  DropItemGroupSetups:
+    - Group: 1
+    - Group: 2
+    - Group: 3
+      GroupProbability: "50%"
+    - Group: 4
+      GroupProbability: "10%"
+  DropItems:
+    - Item: Item_Collection_Dungeon_Boss_G4_T1_01
+      Group: 1
+      Category: GuildStorage
+      Amount: 1
+      LootingDelayTime: 3
+    - Item: Item_Equip_Accessory_Belt_G1_T01_Type0_N1_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Equip_Accessory_Belt_G1_T02_Type0_N1_Bounded
+      Group: 2
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_SkillEnchant_G1_T1_01_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_Grown_SkillEnchant_G2_T1_02_Bounded
+      Group: 3
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_SkillBook_P_G1_T2_All_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6
+    - Item: Item_SkillBook_P_G3_T1_All_Bounded
+      Group: 4
+      Category: Participant
+      Amount: 1
+      Probability: "50%"
+      LootingDelayTime: 6

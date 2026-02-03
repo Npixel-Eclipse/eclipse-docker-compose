@@ -1,0 +1,20 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    MaterialEffectOnHit:
+      type: boolean
+      default: true
+    MeshShakeOnHit: #피격 시 흔들리는 효과 On/Off 기능
+      type: boolean
+      default: true

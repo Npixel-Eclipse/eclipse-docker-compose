@@ -1,0 +1,81 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+    - Registration
+  properties: 
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    NameDesc:
+      type: string
+      ref: description
+    Comment:
+      type: string      
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string      
+    DisplayOrder:
+      type: integer
+      minimum: 1
+    Category:
+      type: string
+      ref: item_collection_category
+    ExpireDate:
+      type: string
+      format: date-time      
+    Registration:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - MaterialItem
+          - MaterialAmount
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          MaterialItem: # 재료 아이템 
+            type: string
+            ref: item    
+          MaterialEnchantLevel: # 재료 아이템 강화 레벨
+            type: integer
+            minimum: 0
+          MaterialAmount: # 재료 아이템 개수
+            type: integer
+            minimum: 1
+            default: 1
+          Replacement:
+            type: string
+            ref: item_collection_replacement
+    UnlockRewardBuff: # 등록하여 해금할 경우 보상 버프
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - RewardBuff
+          - UnlockAmount
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          RewardBuff: # 보상 버프 
+            type: string
+            ref: buff
+          UnlockAmount: # 등록 개수
+            type: integer
+            minimum: 1
+            maximum: 59 

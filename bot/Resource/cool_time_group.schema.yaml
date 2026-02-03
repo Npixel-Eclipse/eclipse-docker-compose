@@ -1,0 +1,18 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+        type: string
+        pattern: "^[a-zA-Z0-9_]*$"
+    GlobalCoolTime:
+      type: boolean
+      visible: true

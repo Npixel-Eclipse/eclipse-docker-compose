@@ -1,0 +1,213 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Floor
+    - Type
+    - Resource
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Floor: # 층 그룹핑
+      type: array
+      items:
+        type: object
+        required:
+          - Floor
+          - Land
+          - Address
+          - WorldMapArea
+        additionalProperties: false
+        properties:
+          Floor: # 층
+            type: integer
+            minimum: 1
+          Land: 
+            # - 던전/층 구분자 역할 수행. 
+            # - 각 던전/층 마다 고유한 값 설정 되어야 하며 중복 불가          
+            type: string
+            ref: land
+          Description:
+            type: string
+            ref: description
+          Address: # Address(Floor)
+            type: string
+            ref: address
+          WorldMapArea: # 이동 위치 결정 텔레포트 시 해당 위치로 이동
+            type: string
+            ref: worldmap_area
+          AdditionalEnter: # 추가 입장
+            type: string
+            ref: worldmap_area
+          Level: #해당 층의 권장 레벨 설정
+            type: integer
+            visible: true
+            minimum: 0
+          LimitLevel: #해당 층의 레벨 제한 설정
+            type: integer
+            visible: true
+            minimum: 0
+          DefaultCanPk: #기본 Pk 가능 상태
+            type: boolean
+            default: false
+          DefaultHasDeathPenalty: #기본 사망 패널티 상태
+            type: boolean
+            default: false
+          RecommandCombatPoint: #권장 전투력
+            type: integer
+          LimitCombatPoint: #해당 층의 전투력 설정
+            type: integer            
+    Resource: # 던전 사용에 필요한 자원들
+      type: string
+      ref: dungeon_resource
+    StartDayOfWeek: #주간 던전을 언제로 설정할지 (던전 오픈 기간) - Deprecated
+      type: string
+      enum:
+        - Sun
+        - Mon
+        - Tue
+        - Wed
+        - Thu
+        - Fri
+        - Sat
+    StartHour: # 열리는 시간 - Deprecated
+      type: integer
+      minimum: 0
+      maximum: 23
+    StartMinute: # 열리는 분 - Deprecated
+      type: integer
+      minimum: 0
+      maximum: 59
+    EndDayOfWeek: # 끝나는 요일 - Deprecated
+      type: string
+      enum:
+        - Sun
+        - Mon
+        - Tue
+        - Wed
+        - Thu
+        - Fri
+        - Sat
+    EndHour: # 닫히는 시간 - Deprecated
+      type: integer
+      minimum: 0
+      maximum: 23
+    EndMinute: # 닫히는 분 - Deprecated
+      type: integer
+      minimum: 0
+      maximum: 59
+    ResurrectCount: # 입장 시 부여되는 최대 부활 횟수
+      type: integer
+      minimum: 0
+    # 던전 오픈 시간
+    OpenTime:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Day
+        properties:
+          # 특정 요일 지정
+          ## EVERYDAY : 매일
+          ## 입력 유의사항: EVERYDAY와 다른 요일은 함께 설정할 수 없음.
+          Day:
+            type: string
+            enum:
+              - SUNDAY
+              - MONDAY
+              - TUESDAY
+              - WEDNESDAY
+              - THURSDAY
+              - FRIDAY
+              - SATURDAY
+              - EVERYDAY
+          # 오픈 시간
+          ## 오픈 시간과 종료 시간이 비어있다면 상시 오픈
+          OpenTime:
+            type: string
+            pattern: ^(0[0-9]|1[0-9]|2[0-3]):(0[1-9]|[0-5][0-9])$
+            visible: true
+          # 종료 시간
+          ## 오픈 시간과 종료 시간이 비어있다면 상시 오픈
+          CloseTime:
+            type: string
+            pattern: ^(0[0-9]|1[0-9]|2[0-3]):(0[1-9]|[0-5][0-9])$
+            visible: true
+      visible: true
+    EnterDuration: # 입장 시간 설정 (분 단위)
+      type: integer
+      minimum: 0
+    ExitDuration: # 퇴장 유예 시간 설정 (분 단위)
+      type: integer
+      minimum: 0
+    CountDown: # 시작까지 카운트 다운
+      type: integer
+      minimum: 0            
+    AutoDecreaseCount: # 이용 횟수 자동 차감
+      type: boolean
+      default: true
+    DungeonName: # 이름
+      type: string
+      ref: description
+    DungeonDescription: # 배경 설명
+      type: string
+      ref: description
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    ScheduleAlert: # 해당 스케쥴에 뜨는 알럿
+      type: string
+      ref: alert
+    AlertIcon: # 도전 던전 시작 알럿 리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    AlertDescription:  # 도전 던전 시작 알럿 Description
+      type: string
+      ref: description
+    DisplayEntrance: # 입장 하였을 때 월드맵에 표기할 위치
+      type: string
+      ref: worldmap_area
+    DisplayOrder: # 던전맵의 좌측 던전 리스트 정렬 순서(오름차순), 0이면 던전맵에 출력하지 않음
+      type: integer
+    DisplayQuestCategory:
+      type: string
+      ref: quest_category
+    Type: # 타입에 따라 탭으로 구분
+      type: string
+      enum:
+        - Normal        #0
+        - Party         #1
+        - Event         #2
+        - World         #3
+        - Challenge     #4
+        - Guild         #5
+        - Inter         #6
+        - BattleGround  #7
+        - Daily         #8
+    DungeonMapType: #미니맵 클릭 시, 출력되는 디폴트 맵 타입
+      type: string
+      default: DungeonMap
+      enum:
+        - None
+        - WorldMap
+        - DungeonMap
+    Battleground:
+      type: string
+      ref: battleground
+    Matchmaking:
+      type: string
+      ref: matchmaking
+    RankingGroup: # RankingGroup 단위로 던전 랭킹 관리
+      type: string
+    Quest:
+      type: string
+      ref: quest
+    Comment:
+      type: string

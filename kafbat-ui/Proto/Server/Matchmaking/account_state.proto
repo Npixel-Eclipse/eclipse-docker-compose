@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.matchmaking.account";
+option java_outer_classname = "ServerMatchmakingAccountStateProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package matchmaking_account_state;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+enum TicketState {
+  RESERVE = 0; // 매칭 요청은 했지만 아직 티켓을 받지 않음. (중복 매칭 예약 방지를 위한 lock)
+  ACTIVE = 1; // 매칭 큐에 입력되어 티켓이 활성화됨.
+}
+
+message MatchmakingAccountState {
+  repeated Ticket ticket = 1;
+
+  message Ticket {
+    string character_uuid = 1;
+    int64 matchmaking_id = 2;
+    optional int64 dungeon_id = 5;
+    string server_id = 6;
+    TicketState ticket_state = 3;
+    optional string ticket_uuid = 4;
+    string transaction_uuid_when_created = 1000;
+  }
+}
+
+message CharacterState {
+  repeated Character character = 1;
+  optional string online_character_uuid = 2;
+
+  message Character {
+    string character_uuid = 1;
+    optional string land_name = 11;
+  }
+}

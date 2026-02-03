@@ -1,0 +1,3461 @@
+- Id: 2
+  Name: UseSkillMpLimit
+  Comment: 설정
+- Id: 3
+  Name: PropertyFromPropertyYaml
+  Comment: 테스트용
+- Id: 4
+  Name: PcName
+  Comment: "Pc 이름 버프로 전달해서 사용, 공식에선 사용 못함."
+- Id: 400
+  Name: PcHomeServer
+  Comment: 캐릭터 서버 정보(홈)
+- Id: 5
+  Name: MainTargetObjectId
+  Comment: "메인 타겟 id 알려줄 때 사용, 공식에선 사용 못함."
+- Id: 6
+  Name: SubTargetObjectId
+  Comment: "서브 타겟 id 알려줄 때 사용, 공식에선 사용 못함."
+- Id: 570
+  Name: HudTargetObjectId
+  Comment: "클라이언트 HUD 타겟 ID 알려줄 때 사용, 공식에선 사용 못함."
+- Id: 83499
+  Name: HasWalkTarget
+  Comment: 좌표 타겟이 있는지
+- Id: 26387
+  Name: HasPadInput
+  Comment: 패드 입력을 하고 있는 상황인지
+- Id: 7
+  Name: Route
+  Comment: "길찾기 경로 정보 줄 때 사용, 공식에선 사용 못함."
+- Id: 9
+  Name: StackCount
+  Comment: "버프 스택 전달용, 서버에서는 `STACK_COUNT_PROPERTY_KEY` 값으로 사용 중, 공식에선 사용 못함."
+- Id: 10
+  Name: DirectionType
+  Comment: 8 방향 중 플레이어가 바라보는 방향
+- Id: 11
+  Name: QuickSlotIndex
+  Comment: "퀵슬롯 관련 정보, 공식에선 사용 못함."
+- Id: 12
+  Name: SkillId
+  Comment: "퀵슬롯 관련 정보, 공식에선 사용 못함."
+- Id: 13
+  Name: IsAuto
+  Comment: "퀵슬롯 관련 정보, 공식에선 사용 못함."
+- Id: 14
+  Name: FromEntityId
+  Comment: "골드나 경험치 획득 시 그 원천인 npc, 클라 연출 동기화에 사용, 공식에선 사용 못함."
+- Id: 15
+  Name: ChangeGold
+  Comment: "클라 표기용 획득 골드량, 공식에선 사용 못함."
+- Id: 16
+  Name: BonusGold
+  Comment: "클라 표기용 획득 보너스 골드량, 공식에선 사용 못함."
+- Id: 17
+  Name: ChangeExperience
+  Comment: "클라 표기용 획득 경험치량, 공식에선 사용 못함."
+- Id: 18
+  Name: BonusExperience
+  Comment: "클라 표기용 획득 보너스 경험치량, 공식에선 사용 못함."
+- Id: 19
+  Name: TeleportDestinationX
+  Comment: "텔레포트 시작 시 클라에 미리 알려주는 텔레포트 목적지 좌표 X, 공식에선 사용 못함."
+- Id: 20
+  Name: TeleportDestinationY
+  Comment: "텔레포트 시작 시 클라에 미리 알려주는 텔레포트 목적지 좌표 Y, 공식에선 사용 못함."
+- Id: 21
+  Name: TargetCoordinate
+  Comment: "클라 cross hair 표현에 사용하는 목적지 좌표 타입, 공식에선 사용 못함."
+- Id: 22
+  Name: TargetX
+  Comment: "클라 cross hair 표현에 사용하는 목적지 좌표 X, 공식에선 사용 못함."
+- Id: 23
+  Name: TargetY
+  Comment: "클라 cross hair 표현에 사용하는 목적지 좌표 Y, 공식에선 사용 못함."
+- Id: 24
+  Name: CoordinateX
+  Comment: 내 캐릭터의 x 좌표
+- Id: 25
+  Name: CoordinateY
+  Comment: 내 캐릭터의 y 좌표
+- Id: 26
+  Name: MainStateLevel
+  Comment: "성좌 레벨, 공식에선 사용 못함."
+- Id: 28
+  Name: Land
+  Comment: "land.yaml에서의 id, 공식에선 사용 못함."
+- Id: 30
+  Name: InstanceId
+  Comment: "채널/인스턴스 식별자, 공식에선 사용 못함."
+- Id: 31
+  Name: CharacterUuid
+  Comment: "캐릭터 UUID, 공식에선 사용 못함."
+- Id: 33
+  Name: GuildFrameColor
+  Comment: "길드 엠블렘 테두리 색상, 공식에선 사용 못함."
+- Id: 34
+  Name: IsGuildMaster
+  Type: boolean
+  Comment: "길드장 여부, 공식에선 사용 못함."
+- Id: 35
+  Name: GuildSymbol
+  Comment: "길드 엠블렘 심볼, 공식에선 사용 못함."
+- Id: 36
+  Name: GuildFrame
+  Comment: "길드 엠블렘 프레임, 공식에선 사용 못함."
+- Id: 37
+  Name: MoveType
+  Comment: "캐릭터 이동 타입(애니메이션/상태), 공식에선 사용 못함."
+- Id: 38
+  Name: BaseItemId
+  Comment: "퀵슬롯 등 표기용 기본 아이템 Id, 공식에선 사용 못함."
+- Id: 39
+  Name: NoClip
+  Type: boolean
+  Comment: 점유 및 지형을 포함한 충돌을 무시함
+- Id: 40
+  Name: BattlegroundRespawnArea
+  Comment: 전장 리스폰 지역
+- Id: 7379
+  Name: OffMpLimitOnPvp
+  Comment: 설정
+- Id: 5073
+  Name: MpLimitOnUseBuffSkill
+  Comment: 설정
+- Id: 6728
+  Name: UseBuffSkillOnSafetyZone
+  Comment: 설정
+- Id: 17216
+  Name: MannerMode
+  Comment: 설정
+- Id: 5155
+  Name: IsFindTargetRangeBorderless
+  Comment: 설정
+- Id: 87
+  Name: AcquireHpPotion
+  Comment: 설정
+- Id: 1
+  Name: IsScanSpecialOn
+  Comment: 설정
+- Id: 3922
+  Name: IsScanOutlaw
+  Comment: 설정
+- Id: 3920
+  Name: GradeOfAcquireItem
+  Comment: 설정
+- Id: 2737
+  Name: GradeOfAcquireMaterial
+  Comment: 설정
+- Id: 6020
+  Name: MannerModeExcludeParty
+  Comment: 설정
+- Id: 2771
+  Name: MannerModeExcludeGuild
+  Comment: 설정
+- Id: 4812
+  Name: MannerModeExcludeFriendly
+  Comment: 설정
+- Id: 13347
+  Name: MannerModeExcludeHostile
+  Comment: 설정
+- Id: 15961
+  Name: IsGetAutoHealingPotionOnOff
+  Comment: 설정
+- Id: 12587
+  Name: IsScanOnAttackTarget
+  Comment: 설정
+- Id: 11112
+  Name: IsAttackingMePcOnAttackTarget
+  Comment: 설정
+- Id: 20151
+  Name: IsHostilePcOnAttackTarget
+  Comment: 설정
+- Id: 444
+  Name: IsAroundPcAttackTarget
+  Comment: 설정
+- Id: 4859
+  Name: IsAttackingMeMonsterOnAttackTarget
+  Comment: 설정
+- Id: 13139
+  Name: IsQuestMonsterOnAttackTarget
+  Comment: 설정
+- Id: 20955
+  Name: IsAggressiveMonsterOnAttackTarget
+  Comment: 설정
+- Id: 8965
+  Name: IsNormalMonserOnAttackTarget
+  Comment: 설정
+- Id: 21728
+  Name: IsAttackingMeMonsterOnAutoBattle
+  Comment: 설정
+- Id: 985
+  Name: IsQuestMonsterOnAutoBattle
+  Comment: 설정
+- Id: 18133
+  Name: IsAggressiveMonsterOnAutoBattle
+  Comment: 설정
+- Id: 21065
+  Name: IsNormalMonsterOnAutoBattle
+  Comment: 설정 - 기본 설정으로 formula에서 사용 안함
+- Id: 13459
+  Name: IsScanOnSearchTarget
+  Comment: 설정
+- Id: 66600
+  Name: IsScanOnScanSearchTarget
+- Id: 20948
+  Name: IsAttackingMePcOnSearchTarget
+  Comment: 설정
+- Id: 6315
+  Name: IsHostilePcOnSearchTarget
+  Comment: 설정
+- Id: 13265
+  Name: IsAroundPcOnSearchTarget
+  Comment: 설정
+- Id: 18479
+  Name: IsAttackingMeMonsterOnSearchTarget
+  Comment: 설정
+- Id: 10740
+  Name: IsQuestMonsterOnSearchTarget
+  Comment: 설정
+- Id: 23401
+  Name: IsAggressiveMonsterOnSearchTarget
+  Comment: 설정
+- Id: 11435
+  Name: IsNormalMonsterOnSearchTarget
+  Comment: 설정
+- Id: 29
+  Name: IsScanBossOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 63
+  Name: IsScanEpicNpcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 41
+  Name: IsScanSiegeOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 328
+  Name: IsScanPcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 390
+  Name: IsScanBattlePcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 8
+  Name: IsScanAlertPcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 342
+  Name: IsScanSamePartyOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 541
+  Name: IsScanExternalServerOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 476
+  Name: IsScanHostileGuildOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 27
+  Name: IsScanAllyGuildOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 185
+  Name: IsScanHostileCharacterOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 3061
+  Name: IsScanAllyCharacterOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 1006
+  Name: IsScanEtcPcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 1199
+  Name: IsScanNpcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 522
+  Name: IsScanBattleNpcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 1383
+  Name: IsScanQuestOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 1583
+  Name: IsScanAggressiveOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 95
+  Name: IsScanEtcNpcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 924
+  Name: IsScanFilterAltitudeOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 73289
+  Name: IsScanFriendOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 76840
+  Name: IsScanEnemyOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 76899
+  Name: IsScanOutlawPcOn
+  Comment: 스캔 필터 용 프로퍼티
+- Id: 1663
+  Name: ScanOrderIndex
+- Id: 678
+  Name: HpPotionHpLimit
+  Comment: 체력 회복 물약을 사용할 최대 체력
+- Id: 927
+  Name: OffHpLimitOnPvp
+  Comment: 체력 회복 물약 pvp때는 체력 꽉 채울때 까지 쓰기
+- Id: 538
+  Name: SetPartyTargetOnAttack
+- Id: 550
+  Name: DisassembleFilterGradeCommon
+- Id: 551
+  Name: DisassembleFilterGradeUncommon
+- Id: 552
+  Name: DisassembleFilterGradeRare
+- Id: 553
+  Name: DisassembleFilterGradeEpic
+- Id: 554
+  Name: DisassembleFilterGradeLegendary
+- Id: 555
+  Name: DisassembleFilterEnchant
+- Id: 556
+  Name: DisassembleFilterEngrave
+- Id: 557
+  Name: InGameShopSaveAutoBuyItems
+- Id: 23096
+  Name: BossSecondPhase
+  Comment: Boss 프로퍼티
+- Id: 15931
+  Name: MasteryExperienceAmount
+  Comment: Mastery
+- Id: 2129
+  Name: VictoryMessage
+- Id: 180
+  Name: VictoryEmoji
+- Id: 76269
+  Name: DefeatMessage
+  Type: string
+- Id: 13598
+  Name: DefeatEmoji
+- Id: 181
+  Name: AutoCombatRange
+- Id: 19086
+  Name: EnchantLevel
+- Id: 7449
+  Name: Str
+  Comment: 스텟
+- Id: 6484
+  Name: Int
+  Comment: 스텟
+- Id: 990
+  Name: Dex
+  Comment: 스텟
+- Id: 7847
+  Name: Con
+  Comment: 스텟
+- Id: 10096
+  Name: Wis
+  Comment: 스텟
+- Id: 3738
+  Name: Luk
+  Comment: 스텟
+- Id: 7522
+  Name: AttackSpeedBonus
+  DisplayProperty: AttackSpeedBonus
+  DisplayPropertyIndex: 137
+  Comment: 전투력용 스탯
+- Id: 10049
+  Name: MoveSpeedBonus
+  DisplayProperty: MoveSpeedBonus
+  DisplayPropertyIndex: 138
+  Comment: 전투력용 스탯
+- Id: 2172
+  Name: CastSpeedBonus
+  DisplayProperty: CastSpeedBonus
+  DisplayPropertyIndex: 139
+  Comment: 전투력용 스탯
+- Id: 6293
+  Name: ExperienceBonus
+  DisplayProperty: ExperienceBonus
+  DisplayPropertyIndex: 142
+  Comment: 전투력용 스탯
+- Id: 9121
+  Name: MaxExperience
+  Comment: 스텟
+- Id: 5386
+  Name: BaseMasteryExperienceAmount
+  Comment: 스텟
+- Id: 7758
+  Name: BonusMasteryExperienceAmount
+  Comment: 스텟
+- Id: 5178
+  Name: GoldBonus
+  DisplayProperty: GoldBonus
+  DisplayPropertyIndex: 143
+  Comment: 전투력용 스탯
+- Id: 6332
+  Name: Level
+  Comment: 스텟
+- Id: 1989
+  Name: MaxLevel
+  Comment: 스텟
+- Id: 7076
+  Name: MaxHp
+  Comment: 전투력용 스탯
+- Id: 1313
+  Name: MaxMp
+  Comment: 전투력용 스탯
+- Id: 997
+  Name: ArmorClass
+  DisplayProperty: ArmorClass
+  DisplayPropertyIndex: 63
+  Comment: 전투력용 스탯
+- Id: 8489
+  Name: DamageReduction
+  DisplayProperty: DamageReduction
+  DisplayPropertyIndex: 95
+  Comment: 전투력용 스탯
+- Id: 4698
+  Name: WeaponMinDamage
+  DisplayProperty: WeaponMinDamage
+  DisplayPropertyIndex: 62
+  Comment: 전투력용 스탯
+- Id: 11202
+  Name: WeaponMaxDamage
+  DisplayProperty: WeaponMaxDamage
+  DisplayPropertyIndex: 61
+  Comment: 전투력용 스탯
+- Id: 11523
+  Name: PerfectDamageProbability
+  DisplayProperty: PerfectDamageProbability
+  DisplayPropertyIndex: 140
+  Comment: 전투력용 스탯
+- Id: 9099
+  Name: AddedDamage
+  DisplayProperty: AddedDamage
+  DisplayPropertyIndex: 53
+  Comment: 전투력용 스탯
+- Id: 630
+  Name: DamageScale
+  DisplayProperty: DamageScale
+  DisplayPropertyIndex: 71
+  Comment: 전투력용 스탯
+- Id: 474
+  Name: DamageReduceScale
+  DisplayProperty: DamageReduceScale
+  DisplayPropertyIndex: 79
+  Comment: 전투력용 스탯
+- Id: 3767
+  Name: DamageReductionIgnore
+  DisplayProperty: DamageReductionIgnore
+  DisplayPropertyIndex: 87
+  Comment: 전투력용 스탯
+- Id: 11310
+  Name: CriticalProbability
+  DisplayProperty: CriticalProbability
+  DisplayPropertyIndex: 29
+  Comment: 전투력용 스탯
+- Id: 8347
+  Name: CriticalDamage
+  DisplayProperty: CriticalDamage
+  DisplayPropertyIndex: 41
+  Comment: 전투력용 스탯
+- Id: 8291
+  Name: HitChance
+  DisplayProperty: HitChance
+  DisplayPropertyIndex: 1
+  Comment: 전투력용 스탯
+- Id: 12509
+  Name: MeleeHit
+  DisplayProperty: MeleeHit
+  DisplayPropertyIndex: 2
+  Comment: 전투력용 스탯
+- Id: 2421
+  Name: MeleeDamage
+  DisplayProperty: MeleeDamage
+  DisplayPropertyIndex: 54
+  Comment: 전투력용 스탯
+- Id: 4528
+  Name: MeleeDamageScale
+  DisplayProperty: MeleeDamageScale
+  DisplayPropertyIndex: 72
+  Comment: 전투력용 스탯
+- Id: 2810
+  Name: MeleeDamageReduceScale
+  DisplayProperty: MeleeDamageReduceScale
+  DisplayPropertyIndex: 80
+  Comment: 전투력용 스탯
+- Id: 4278
+  Name: MeleeCriticalDamage
+  DisplayProperty: MeleeCriticalDamage
+  DisplayPropertyIndex: 42
+  Comment: 전투력용 스탯
+- Id: 1423
+  Name: MeleeCriticalProbability
+  DisplayProperty: MeleeCriticalProbability
+  DisplayPropertyIndex: 30
+  Comment: 전투력용 스탯
+- Id: 3476
+  Name: RangeHit
+  DisplayProperty: RangeHit
+  DisplayPropertyIndex: 3
+  Comment: 전투력용 스탯
+- Id: 6859
+  Name: RangeDamage
+  DisplayProperty: RangeDamage
+  DisplayPropertyIndex: 55
+  Comment: 전투력용 스탯
+- Id: 13419
+  Name: RangeDamageScale
+  DisplayProperty: RangeDamageScale
+  DisplayPropertyIndex: 73
+  Comment: 전투력용 스탯
+- Id: 443
+  Name: RangeDamageReduceScale
+  DisplayProperty: RangeDamageReduceScale
+  DisplayPropertyIndex: 81
+  Comment: 전투력용 스탯
+- Id: 5665
+  Name: RangeCriticalDamage
+  DisplayProperty: RangeCriticalDamage
+  DisplayPropertyIndex: 43
+  Comment: 전투력용 스탯
+- Id: 8497
+  Name: RangeCriticalProbability
+  DisplayProperty: RangeCriticalProbability
+  DisplayPropertyIndex: 31
+  Comment: 전투력용 스탯
+- Id: 10394
+  Name: MagicHit
+  DisplayProperty: MagicHit
+  DisplayPropertyIndex: 4
+  Comment: 전투력용 스탯
+- Id: 7294
+  Name: MagicDamage
+  DisplayProperty: MagicDamage
+  DisplayPropertyIndex: 56
+  Comment: 전투력용 스탯
+- Id: 11991
+  Name: MagicDamageScale
+  DisplayProperty: MagicDamageScale
+  DisplayPropertyIndex: 74
+  Comment: 전투력용 스탯
+- Id: 9923
+  Name: MagicCriticalDamage
+  DisplayProperty: MagicCriticalDamage
+  DisplayPropertyIndex: 44
+  Comment: 전투력용 스탯
+- Id: 12572
+  Name: MagicCriticalProbability
+  DisplayProperty: MagicCriticalProbability
+  DisplayPropertyIndex: 32
+  Comment: 전투력용 스탯
+- Id: 4039
+  Name: MagicDamageReduceScale
+  DisplayProperty: MagicDamageReduceScale
+  DisplayPropertyIndex: 82
+  Comment: 전투력용 스탯
+- Id: 7544
+  Name: MagicDamageReduction
+  DisplayProperty: MagicDamageReduction
+  DisplayPropertyIndex: 98
+  Comment: 전투력용 스탯
+- Id: 11260
+  Name: PvPAddedDamage
+  DisplayProperty: PvPAddedDamage
+  DisplayPropertyIndex: 58
+  Comment: 전투력용 스탯
+- Id: 4672
+  Name: PvPDamageReduction
+  DisplayProperty: PvPDamageReduction
+  DisplayPropertyIndex: 100
+  Comment: 전투력용 스탯
+- Id: 3498
+  Name: PvPDamageReductionIgnore
+  DisplayProperty: PvPDamageReductionIgnore
+  DisplayPropertyIndex: 92
+  Comment: 전투력용 스탯
+- Id: 6686
+  Name: PvEHit
+  DisplayPropertyIndex: 5
+  Comment: 전투력용 스탯
+- Id: 7765
+  Name: PvEDamageReduction
+  DisplayProperty: PvEDamageReduction
+  DisplayPropertyIndex: 99
+  Comment: 전투력용 스탯
+- Id: 9535
+  Name: PvEAddedDamage
+  DisplayProperty: PvEAddedDamage
+  DisplayPropertyIndex: 57
+  Comment: 전투력용 스탯
+- Id: 8265
+  Name: PvEArmorClass
+  DisplayProperty: PvEArmorClass
+  DisplayPropertyIndex: 67
+  Comment: 전투력용 스탯
+- Id: 12296
+  Name: HpRegen
+  DisplayProperty: HpRegen
+  DisplayPropertyIndex: 129
+  Comment: 전투력용 스탯
+- Id: 8349
+  Name: MpRegen
+  DisplayProperty: MpRegen
+  DisplayPropertyIndex: 134
+  Comment: 전투력용 스탯
+- Id: 14798
+  Name: DrainHp
+  Comment: 스텟
+- Id: 13128
+  Name: DrainMp
+  Comment: 스텟
+- Id: 10386
+  Name: CountHp
+  Comment: 스텟
+- Id: 10074
+  Name: HealAdditionalPercent
+  Comment: 스텟
+- Id: 8040
+  Name: GetHealAdditionalPercent
+  Comment: 스텟
+- Id: 3409
+  Name: MpCostReducePercentBase
+  DisplayProperty: MpCostReducePercentBase
+  DisplayPropertyIndex: 135
+  Comment: 전투력용 스탯
+- Id: 14293
+  Name: CoolTimeReducePercentBase
+  DisplayProperty: CoolTimeReducePercentBase
+  DisplayPropertyIndex: 136
+  Comment: 전투력용 스탯
+- Id: 6858
+  Name: SpecialHitMute
+  DisplayProperty: SpecialHitMute
+  DisplayPropertyIndex: 117
+  Comment: 전투력용 스탯
+- Id: 3237
+  Name: SpecialHitFear
+  DisplayProperty: SpecialHitFear
+  DisplayPropertyIndex: 107
+  Comment: 전투력용 스탯
+- Id: 4166
+  Name: SpecialHitHold
+  DisplayProperty: SpecialHitHold
+  DisplayPropertyIndex: 113
+  Comment: 전투력용 스탯
+- Id: 753
+  Name: SpecialHitSlow
+  DisplayProperty: SpecialHitSlow
+  DisplayPropertyIndex: 115
+  Comment: 전투력용 스탯
+- Id: 13239
+  Name: SpecialHitStun
+  DisplayProperty: SpecialHitStun
+  DisplayPropertyIndex: 105
+  Comment: 전투력용 스탯
+- Id: 4037
+  Name: SpecialHitTaunt
+  DisplayProperty: SpecialHitTaunt
+  DisplayPropertyIndex: 109
+  Comment: 전투력용 스탯
+- Id: 6472
+  Name: SpecialHitDarkness
+  DisplayProperty: SpecialHitDarkness
+  DisplayPropertyIndex: 119
+  Comment: 전투력용 스탯
+- Id: 2628
+  Name: SpecialResistanceMute
+  DisplayProperty: SpecialResistanceMute
+  DisplayPropertyIndex: 118
+  Comment: 전투력용 스탯
+- Id: 15975
+  Name: SpecialResistanceFear
+  DisplayProperty: SpecialResistanceFear
+  DisplayPropertyIndex: 108
+  Comment: 전투력용 스탯
+- Id: 5332
+  Name: SpecialResistanceHold
+  DisplayProperty: SpecialResistanceHold
+  DisplayPropertyIndex: 114
+  Comment: 전투력용 스탯
+- Id: 15839
+  Name: SpecialResistanceSlow
+  DisplayProperty: SpecialResistanceSlow
+  DisplayPropertyIndex: 116
+  Comment: 전투력용 스탯
+- Id: 3674
+  Name: SpecialResistanceStun
+  DisplayProperty: SpecialResistanceStun
+  DisplayPropertyIndex: 106
+  Comment: 전투력용 스탯
+- Id: 2247
+  Name: SpecialResistanceTaunt
+  DisplayProperty: SpecialResistanceTaunt
+  DisplayPropertyIndex: 110
+  Comment: 전투력용 스탯
+- Id: 13377
+  Name: SpecialResistanceDarkness
+  DisplayProperty: SpecialResistanceDarkness
+  DisplayPropertyIndex: 120
+  Comment: 전투력용 스탯
+- Id: 11833
+  Name: DodgeChance
+  DisplayProperty: DodgeChance
+  DisplayPropertyIndex: 9
+  Comment: 전투력용 스탯
+- Id: 9967
+  Name: MeleeDodge
+  DisplayProperty: MeleeDodge
+  DisplayPropertyIndex: 10
+  Comment: 전투력용 스탯
+- Id: 2565
+  Name: RangeDodge
+  DisplayProperty: RangeDodge
+  DisplayPropertyIndex: 11
+  Comment: 전투력용 스탯
+- Id: 18550
+  Name: MagicDodge
+  DisplayProperty: MagicDodge
+  DisplayPropertyIndex: 12
+  Comment: 전투력용 스탯
+- Id: 9543
+  Name: PvEDodge
+  DisplayProperty: PvEDodge
+  DisplayPropertyIndex: 13
+  Comment: 전투력용 스탯
+- Id: 1086
+  Name: PvPDodge
+  DisplayProperty: PvPDodge
+  DisplayPropertyIndex: 14
+  Comment: 전투력용 스탯
+- Id: 14887
+  Name: NormalAttackDodge
+  DisplayProperty: NormalAttackDodge
+  DisplayPropertyIndex: 15
+  Comment: 전투력용 스탯
+- Id: 6975
+  Name: SkillDodge
+  DisplayProperty: SkillDodge
+  DisplayPropertyIndex: 16
+  Comment: 전투력용 스탯
+- Id: 10562
+  Name: DoubleProbability
+  DisplayProperty: DoubleProbability
+  Comment: 전투력용 스탯
+- Id: 4615
+  Name: MeleeDoubleProbability
+  DisplayProperty: MeleeDoubleProbability
+  Comment: 전투력용 스탯
+- Id: 17573
+  Name: RangeDoubleProbability
+  DisplayProperty: RangeDoubleProbability
+  Comment: 전투력용 스탯
+- Id: 7533
+  Name: MagicDoubleProbability
+  DisplayProperty: MagicDoubleProbability
+  Comment: 전투력용 스탯
+- Id: 1969
+  Name: PvEDoubleProbability
+  DisplayProperty: PvEDoubleProbability
+  Comment: 전투력용 스탯
+- Id: 7855
+  Name: PvPDoubleProbability
+  DisplayProperty: PvPDoubleProbability
+  Comment: 전투력용 스탯
+- Id: 11368
+  Name: DoubleResistance
+  DisplayProperty: DoubleResistance
+  Comment: 전투력용 스탯
+- Id: 65
+  Name: MeleeDoubleResistance
+  DisplayProperty: MeleeDoubleResistance
+  Comment: 전투력용 스탯
+- Id: 18264
+  Name: RangeDoubleResistance
+  DisplayProperty: RangeDoubleResistance
+  Comment: 전투력용 스탯
+- Id: 5942
+  Name: MagicDoubleResistance
+  DisplayProperty: MagicDoubleResistance
+  Comment: 전투력용 스탯
+- Id: 15328
+  Name: PvEDoubleResistance
+  DisplayProperty: PvEDoubleResistance
+  Comment: 전투력용 스탯
+- Id: 3695
+  Name: PvPDoubleResistance
+  DisplayProperty: PvPDoubleResistance
+  Comment: 전투력용 스탯
+- Id: 7767
+  Name: CombatPoint
+  Comment: 스텟
+- Id: 11316
+  Name: BaseCharStr
+  Comment: 스텟
+- Id: 10340
+  Name: CharStr
+  Comment: 스텟
+- Id: 13957
+  Name: BaseCharDex
+  Comment: 스텟
+- Id: 17958
+  Name: CharDex
+  Comment: 스텟
+- Id: 13145
+  Name: BaseCharCon
+  Comment: 스텟
+- Id: 8501
+  Name: CharCon
+  Comment: 스텟
+- Id: 16306
+  Name: BaseCharInt
+  Comment: 스텟
+- Id: 16360
+  Name: CharInt
+  Comment: 스텟
+- Id: 5558
+  Name: BaseCharWis
+  Comment: 스텟
+- Id: 5269
+  Name: CharWis
+  Comment: 스텟
+- Id: 9698
+  Name: BaseCharLuk
+  Comment: 스텟
+- Id: 14491
+  Name: CharLuk
+  Comment: 스텟
+- Id: 1896
+  Name: Item_HealthPotion_MaxCarryAmount
+  Comment: 합산 스탯
+- Id: 20797
+  Name: MeleeDamageReductionIgnore
+  DisplayProperty: MeleeDamageReductionIgnore
+  DisplayPropertyIndex: 88
+  Comment: 전투력용 스탯
+- Id: 14605
+  Name: RangeDamageReductionIgnore
+  DisplayProperty: RangeDamageReductionIgnore
+  DisplayPropertyIndex: 89
+  Comment: 전투력용 스탯
+- Id: 5233
+  Name: MagicDamageReductionIgnore
+  DisplayProperty: MagicDamageReductionIgnore
+  DisplayPropertyIndex: 90
+  Comment: 전투력용 스탯
+- Id: 20876
+  Name: MeleeDamageReduction
+  DisplayProperty: MeleeDamageReduction
+  DisplayPropertyIndex: 96
+  Comment: 전투력용 스탯
+- Id: 3381
+  Name: RangeDamageReduction
+  DisplayProperty: RangeDamageReduction
+  DisplayPropertyIndex: 97
+  Comment: 전투력용 스탯
+- Id: 15054
+  Name: MeleeArmorClass
+  DisplayProperty: MeleeArmorClass
+  DisplayPropertyIndex: 64
+  Comment: 전투력용 스탯
+- Id: 10766
+  Name: RangeArmorClass
+  DisplayProperty: RangeArmorClass
+  DisplayPropertyIndex: 65
+  Comment: 전투력용 스탯
+- Id: 7736
+  Name: MagicArmorClass
+  DisplayProperty: MagicArmorClass
+  DisplayPropertyIndex: 66
+  Comment: 전투력용 스탯
+- Id: 19555
+  Name: PvPArmorClass
+  DisplayProperty: PvPArmorClass
+  DisplayPropertyIndex: 68
+  Comment: 전투력용 스탯
+- Id: 15438
+  Name: PvPHit
+  DisplayProperty: PvPHit
+  DisplayPropertyIndex: 6
+  Comment: 전투력용 스탯
+- Id: 73
+  Name: PvEDamageReductionIgnore
+  DisplayProperty: PvEDamageReductionIgnore
+  DisplayPropertyIndex: 91
+  Comment: 전투력용 스탯
+- Id: 3614
+  Name: SpecialHitAll
+  DisplayProperty: SpecialHitAll
+  DisplayPropertyIndex: 103
+  Comment: 전투력용 스탯
+- Id: 118
+  Name: SpecialResistanceAll
+  DisplayProperty: SpecialResistanceAll
+  DisplayPropertyIndex: 104
+  Comment: 전투력용 스탯
+- Id: 16828
+  Name: CriticalResistance
+  DisplayProperty: CriticalResistance
+  DisplayPropertyIndex: 35
+  Comment: 전투력용 스탯
+- Id: 17271
+  Name: CriticalDamageReduction
+  DisplayProperty: CriticalDamageReduction
+  DisplayPropertyIndex: 47
+  Comment: 전투력용 스탯
+- Id: 6211
+  Name: MeleeCriticalResistance
+  DisplayProperty: MeleeCriticalResistance
+  DisplayPropertyIndex: 36
+  Comment: 전투력용 스탯
+- Id: 22946
+  Name: RangeCriticalResistance
+  DisplayProperty: RangeCriticalResistance
+  DisplayPropertyIndex: 37
+  Comment: 전투력용 스탯
+- Id: 18835
+  Name: MagicCriticalResistance
+  DisplayProperty: MagicCriticalResistance
+  DisplayPropertyIndex: 38
+  Comment: 전투력용 스탯
+- Id: 926
+  Name: MeleeCriticalDamageReduction
+  DisplayProperty: MeleeCriticalDamageReduction
+  DisplayPropertyIndex: 48
+  Comment: 전투력용 스탯
+- Id: 17214
+  Name: RangeCriticalDamageReduction
+  DisplayProperty: RangeCriticalDamageReduction
+  DisplayPropertyIndex: 49
+  Comment: 전투력용 스탯
+- Id: 6945
+  Name: MagicCriticalDamageReduction
+  DisplayProperty: MagicCriticalDamageReduction
+  DisplayPropertyIndex: 50
+  Comment: 전투력용 스탯
+- Id: 10320
+  Name: PvPCriticalProbability
+  DisplayProperty: PvPCriticalProbability
+  DisplayPropertyIndex: 34
+  Comment: 전투력용 스탯
+- Id: 13245
+  Name: PvPCriticalResistance
+  DisplayProperty: PvPCriticalResistance
+  DisplayPropertyIndex: 40
+  Comment: 전투력용 스탯
+- Id: 23154
+  Name: PvPCriticalDamage
+  DisplayProperty: PvPCriticalDamage
+  DisplayPropertyIndex: 46
+  Comment: 전투력용 스탯
+- Id: 16816
+  Name: PvPCriticalDamageReduction
+  DisplayProperty: PvPCriticalDamageReduction
+  DisplayPropertyIndex: 52
+  Comment: 전투력용 스탯
+- Id: 9970
+  Name: PvECriticalProbability
+  DisplayProperty: PvECriticalProbability
+  DisplayPropertyIndex: 33
+  Comment: 전투력용 스탯
+- Id: 17051
+  Name: PvECriticalResistance
+  DisplayProperty: PvECriticalResistance
+  DisplayPropertyIndex: 39
+  Comment: 전투력용 스탯
+- Id: 1448
+  Name: PvECriticalDamage
+  DisplayProperty: PvECriticalDamage
+  DisplayPropertyIndex: 45
+  Comment: 전투력용 스탯
+- Id: 1552
+  Name: PvECriticalDamageReduction
+  DisplayProperty: PvECriticalDamageReduction
+  DisplayPropertyIndex: 51
+  Comment: 전투력용 스탯
+- Id: 22570
+  Name: PvPDamageScale
+  DisplayProperty: PvPDamageScale
+  DisplayPropertyIndex: 76
+  Comment: 전투력용 스탯
+- Id: 8409
+  Name: PvEDamageScale
+  DisplayProperty: PvEDamageScale
+  DisplayPropertyIndex: 75
+  Comment: 전투력용 스탯
+- Id: 9696
+  Name: HealthPotionScale
+  DisplayProperty: HealthPotionScale
+  DisplayPropertyIndex: 131
+  Comment: 전투력용 스탯
+- Id: 22170
+  Name: HealthPotionIncrease
+  DisplayProperty: HealthPotionIncrease
+  DisplayPropertyIndex: 130
+  Comment: 전투력용 스탯
+- Id: 24919
+  Name: PerfectDamageProbResistance
+  DisplayProperty: PerfectDamageProbResistance
+  DisplayPropertyIndex: 141
+  Comment: 전투력용 스탯
+- Id: 7086
+  Name: SkillAttackDamage
+  DisplayProperty: SkillAttackDamage
+  DisplayPropertyIndex: 60
+  Comment: 전투력용 스탯
+- Id: 21574
+  Name: SkillDamageScale
+  DisplayProperty: SkillDamageScale
+  DisplayPropertyIndex: 78
+  Comment: 전투력용 스탯
+- Id: 860
+  Name: SkillDamageReduceScale
+  DisplayProperty: SkillDamageReduceScale
+  DisplayPropertyIndex: 86
+  Comment: 전투력용 스탯
+- Id: 17809
+  Name: NormalAttackDamage
+  DisplayProperty: NormalAttackDamage
+  DisplayPropertyIndex: 59
+  Comment: 전투력용 스탯
+- Id: 10500
+  Name: NormalAttackDamageScale
+  DisplayProperty: NormalAttackDamageScale
+  DisplayPropertyIndex: 77
+  Comment: 전투력용 스탯
+- Id: 4774
+  Name: NormalAttackDamageReduceScale
+  DisplayProperty: NormalAttackDamageReduceScale
+  DisplayPropertyIndex: 85
+  Comment: 전투력용 스탯
+- Id: 13348
+  Name: NormalAttackHit
+  DisplayProperty: NormalAttackHit
+  DisplayPropertyIndex: 7
+  Comment: 전투력용 스탯
+- Id: 17892
+  Name: NormalAttackArmorClass
+  DisplayProperty: NormalAttackArmorClass
+  DisplayPropertyIndex: 69
+  Comment: 전투력용 스탯
+- Id: 24250
+  Name: NormalAttackDamageReduction
+  DisplayProperty: NormalAttackDamageReduction
+  DisplayPropertyIndex: 101
+  Comment: 전투력용 스탯
+- Id: 19110
+  Name: PvEDamageReduceScale
+  DisplayProperty: PvEDamageReduceScale
+  DisplayPropertyIndex: 83
+  Comment: 전투력용 스탯
+- Id: 15273
+  Name: PvPDamageReduceScale
+  DisplayProperty: PvPDamageReduceScale
+  DisplayPropertyIndex: 84
+  Comment: 전투력용 스탯
+- Id: 23478
+  Name: SkillHit
+  DisplayProperty: SkillHit
+  DisplayPropertyIndex: 8
+  Comment: 전투력용 스탯
+- Id: 11566
+  Name: SkillArmorClass
+  DisplayProperty: SkillArmorClass
+  DisplayPropertyIndex: 70
+  Comment: 전투력용 스탯
+- Id: 14279
+  Name: SkillDamageReduction
+  DisplayProperty: SkillDamageReduction
+  DisplayPropertyIndex: 102
+  Comment: 전투력용 스탯
+- Id: 25509
+  Name: NormalAttackDamageReductionIgnore
+  DisplayProperty: NormalAttackDamageReductionIgnore
+  DisplayPropertyIndex: 93
+  Comment: 전투력용 스탯
+- Id: 16570
+  Name: SkillDamageReductionIgnore
+  DisplayProperty: SkillDamageReductionIgnore
+  DisplayPropertyIndex: 94
+  Comment: 전투력용 스탯
+- Id: 26821
+  Name: ConstACHitMaxProb
+  Comment: 스텟상수
+- Id: 7337
+  Name: ConstACHitMinProb
+  Comment: 스텟상수
+- Id: 21179
+  Name: ConstMinAttackSpeedRatio
+  Comment: 스텟상수
+- Id: 22458
+  Name: ConstMinCastSpeedRatio
+  Comment: 스텟상수
+- Id: 127
+  Name: ConstMinMoveSpeedRatio
+  Comment: 스텟상수
+- Id: 24852
+  Name: ConstFinalMultiplier
+  Comment: 스텟상수
+- Id: 21184
+  Name: ConstCriDmg
+  Comment: 스텟상수
+- Id: 22811
+  Name: CoefficientMaxHpByLevel
+  Comment: 스텟상수
+- Id: 18923
+  Name: CoefficientMaxMpByLevel
+  Comment: 스텟상수
+- Id: 3390
+  Name: CoefficientHpRegenByLevel
+  Comment: 스텟상수
+- Id: 4513
+  Name: CoefficientMpRegenByLevel
+  Comment: 스텟상수
+- Id: 18423
+  Name: AddedAttackRange
+  Comment: 전투 상수
+- Id: 23151
+  Name: ChaseRange
+  Comment: 전투 상수
+- Id: 6576
+  Name: Experience
+  Comment: 전투 상수
+- Id: 4732
+  Name: ExtractHp
+  Comment: 전투 상수
+- Id: 9307
+  Name: ExtractMp
+  Comment: 전투 상수
+- Id: 22383
+  Name: Fearcheck
+  Comment: 전투 상수
+- Id: 10061
+  Name: Hp
+  Comment: 전투 상수
+- Id: 23010
+  Name: Mp
+  Comment: 전투 상수
+- Id: 27046
+  Name: FixedDamage
+  Comment: 전투 상수
+- Id: 7869
+  Name: SiegeDamageMultiplier
+  Comment: 전투 상수
+- Id: 20127
+  Name: EntityId
+  Comment: 전투 상수
+- Id: 15979
+  Name: SummonerEntityId
+  Comment: 아이템 드랍 시 아이템 뱉는 몬스터 사망 연출이랑 아이템 드랍 연출 동기화를 위해 서버가 클라로 보내주는 값
+- Id: 21087
+  Name: MasterEntityId
+  Comment: 소환수나 투사체 데미지 표기나 이펙터 등등 처리를 위해 서버가 클라로 보내주는 값
+- Id: 4710
+  Name: PcClass
+  Comment: 전투 상수
+- Id: 3433
+  Name: Score
+  Comment: 전투 상수
+- Id: 6136
+  Name: NpcId
+  Comment: 전투 상수
+- Id: 23432
+  Name: NpcSpawnId
+  Comment: 전투 상수
+- Id: 14913
+  Name: TeamType
+  Comment: "전투 상수 (1=Team1, 2=Team2)"
+- Id: 3921
+  Name: ItemId
+  Comment: 드랍 아이템의 id
+- Id: 10803
+  Name: IsBoss
+  Comment: 전투 상수
+- Id: 28998
+  Name: IsArkandarDarkness
+  Comment: 전투 상수
+- Id: 8778
+  Name: IsNamed
+  Comment: 전투 상수
+- Id: 8846
+  Name: IsSummonMonster
+  Comment: 전투 상수
+- Id: 28772
+  Name: IsBodyObject
+  Type: boolean
+  Comment: 전투 상수
+- Id: 29277
+  Name: IsMonster
+  Comment: 전투 상수
+- Id: 30246
+  Name: IsNeutralNpc
+  Comment: 전투 상수
+- Id: 18355
+  Name: IsTrap
+  Comment: 전투 상수
+- Id: 11618
+  Name: IsPortal
+  Comment: 전투 상수
+- Id: 10978
+  Name: IsPc
+  Comment: 전투 상수
+- Id: 5479
+  Name: IsPolymorph
+  Comment: 전투 상수
+- Id: 29975
+  Name: IsSiegeObject
+  Comment: 전투 상수
+- Id: 6256
+  Name: IsUndead
+  Comment: 전투 상수
+- Id: 19298
+  Name: IsStatusStunned
+  Comment: 전투 상수
+- Id: 34583
+  Name: IsStatusSlow
+  Comment: 전투 상수
+- Id: 3668
+  Name: IsStatusCorruption
+  Comment: 전투 상수
+- Id: 8279
+  Name: IsNotIncludeTargetSearching
+  Comment: 전투 상수
+- Id: 7749
+  Name: IsNotIncludeTargetScanning
+  Comment: 전투 상수
+- Id: 1664
+  Name: IsTown
+  Type: boolean
+  Comment: 전투 상수
+- Id: 25790
+  Name: AttackNormalDelay
+  Comment: 전투 상수
+- Id: 11677
+  Name: Attack02Delay
+  Comment: 전투 상수
+- Id: 14249
+  Name: Attack03Delay
+  Comment: 전투 상수
+- Id: 13607
+  Name: Attack04Delay
+  Comment: 전투 상수
+- Id: 11411
+  Name: Attack05Delay
+  Comment: 전투 상수
+- Id: 13166
+  Name: Attack06Delay
+  Comment: 전투 상수
+- Id: 16867
+  Name: SkillAtk01Delay
+  Comment: 전투 상수
+- Id: 35629
+  Name: SkillAtk02Delay
+  Comment: 전투 상수
+- Id: 1137
+  Name: SkillBuff01Delay
+  Comment: 전투 상수
+- Id: 34319
+  Name: SkillBuff02Delay
+  Comment: 전투 상수
+- Id: 14819
+  Name: SkillBuff03Delay
+  Comment: 전투 상수
+- Id: 19072
+  Name: SkillBuff04Delay
+  Comment: 전투 상수
+- Id: 34862
+  Name: SpawnDelay
+  Comment: 전투 상수
+- Id: 20287
+  Name: MoveDelay
+  Comment: 전투 상수
+- Id: 34837
+  Name: IgnoreGainPkScore
+  Comment: 전투 상수
+- Id: 10034
+  Name: Angry
+  Type: boolean
+  Comment: 전투 상수
+- Id: 6589
+  Name: PcAngry
+  Type: boolean
+  Comment: 전투 상수
+- Id: 6590
+  Name: OccupantEntityId
+  Comment: 공격시 점유
+- Id: 6591
+  Name: OccupantPartyId
+  Comment: 공격시 점유
+- Id: 6592
+  Name: OccupantGuildId
+  Comment: 공격시 점유
+- Id: 30780
+  Name: PcAttacked
+  Type: boolean
+  Comment: 전투 상수
+- Id: 30781
+  Name: PcKilled
+  Type: boolean
+  Comment: PC에 의해 사망했을 때 받는 프로퍼티
+- Id: 74379
+  Name: PcAttacking
+  Type: boolean
+  Comment: 전투 상수
+- Id: 28841
+  Name: ItemEquippedWeaponSword
+  Comment: 전투 상수
+- Id: 33018
+  Name: ItemEquippedWeaponTwoHandSword
+  Comment: 전투 상수
+- Id: 4180
+  Name: ItemEquippedWeaponLongBow
+  Comment: 전투 상수
+- Id: 34376
+  Name: ItemEquippedWeaponCrossBow
+  Comment: 전투 상수
+- Id: 17017
+  Name: ItemEquippedWeaponStaff
+  Comment: 전투 상수
+- Id: 21431
+  Name: ItemEquippedWeaponOrb
+  Comment: 전투 상수
+- Id: 22040
+  Name: ItemEquippedWeaponAxe
+  Comment: 전투 상수
+- Id: 7590
+  Name: ItemEquippedWeaponKatana
+  Comment: 전투 상수
+- Id: 14315
+  Name: ItemEquippedWeaponTwinDaggers
+  Comment: 전투 상수
+- Id: 7864
+  Name: ItemEquippedWeaponTypeNum
+  Comment: 전투 상수
+- Id: 642
+  Name: Amount
+  Comment: 드랍 아이템의 수량
+- Id: 23866
+  Name: IsSpawned
+  Type: boolean
+  Comment: 전투 상수
+- Id: 6687
+  Name: PartyId
+  Comment: 전투 상수
+- Id: 6688
+  Name: PartyMaxLevel
+  Comment: 파티원 중 최고 레벨
+- Id: 17595
+  Name: GuildId
+  Comment: 전투 상수
+- Id: 35445
+  Name: GuildName
+  Type: string
+  Comment: 전투 상수
+- Id: 15544
+  Name: PkPoint
+  Comment: 전투 상수
+- Id: 26315
+  Name: PkScore
+  Comment: 전투 상수
+- Id: 45620
+  Name: PvpSeason
+  Comment: Pvp 시즌
+- Id: 36321
+  Name: MinPkPoint
+  Comment: 전투 상수
+- Id: 27168
+  Name: MaxPkPoint
+  Comment: 전투 상수
+- Id: 26529
+  Name: SkillBuffDelay
+  Comment: 전투 상수
+- Id: 1900
+  Name: Bora
+  Type: boolean
+  Comment: 전투 상수
+- Id: 5536
+  Name: DieDate
+  Comment: 전투 상수
+- Id: 23152
+  Name: DefaultMaxCarryAmount
+  Comment: 전투 상수
+- Id: 11050
+  Name: BlockHeal
+  Comment: 전투 상수
+- Id: 22179
+  Name: HealthPotionDecrease
+  Comment: 전투 상수
+- Id: 33179
+  Name: HealDecrease
+  Comment: 전투 상수
+- Id: 39091
+  Name: RamPageMotionDelay
+  Comment: 전투 상수
+- Id: 29003
+  Name: IsDeathMark
+  Comment: 전투 상수
+- Id: 18378
+  Name: SatyrosDDStack
+  Comment: 전투 상수
+- Id: 22681
+  Name: ArkandarFourthBuff
+  Comment: "[필드보스] 아르칸다르"
+- Id: 19908
+  Name: ArkandarFourthStrongBuff
+  Comment: "[필드보스] 아르칸다르"
+- Id: 37090
+  Name: ArkandarSecondBuff
+  Comment: "[필드보스] 아르칸다르"
+- Id: 22509
+  Name: ShroomSoldierMutate
+  Comment: 전투 상수
+- Id: 23592
+  Name: ImpossibleHpRegen
+  Comment: 전투 상수
+- Id: 23643
+  Name: IsCharle
+  Comment: "[필드보스] 샤를레"
+- Id: 3797
+  Name: IsCharleBodyObject
+  Comment: "[필드보스] 샤를레"
+- Id: 5512
+  Name: CharleNeidanPc
+  Comment: "[필드보스] 샤를레"
+- Id: 30956
+  Name: CharleSecondNormalAttackBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 16173
+  Name: CharleFifthBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 24521
+  Name: CharleFifthStrongBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 32590
+  Name: CharleDDStack
+  Comment: "[필드보스] 샤를레"
+- Id: 4880
+  Name: CharleGroggyBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 24927
+  Name: CharleGroggySecondBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 39452
+  Name: CharleStrongBuff
+  Comment: "[필드보스] 샤를레"
+- Id: 89421
+  Name: RemnantFirstSkillCheckBuff
+  Comment: "[필드보스]레마넌트"
+- Id: 31245
+  Name: RemnantThirdSkill
+  Comment: "[필드보스]레마넌트"
+- Id: 7403
+  Name: VenatoriaFirsthBuff
+  Comment: "[필드보스] 베나토리아"
+- Id: 10228
+  Name: VenatoriaFifthBuff
+  Comment: "[필드보스] 베나토리아"
+- Id: 30102
+  Name: VenatoriaFifthStrongBuff
+  Comment: "[필드보스] 베나토리아"
+- Id: 37035
+  Name: GurigaraBurnStack
+  Comment: "[일반던전보스]구리가라"
+- Id: 7289
+  Name: GurigaraObjectStack
+  Comment: "[일반던전보스]구리가라"
+- Id: 46121
+  Name: WhiteDragonyungDeBuffStack
+  Comment: "[일반던전보스]백룡 융"
+- Id: 46123
+  Name: WhiteDragonyungDeBuff
+  Comment: "[일반던전보스]백룡 융"
+- Id: 46124
+  Name: WhiteDragonyungStartingPoint
+  Comment: "[일반던전보스]백룡 융"
+- Id: 46125
+  Name: WhiteDragonyungThirdSkill
+  Comment: "[일반던전보스]백룡 융"
+- Id: 15619
+  Name: KalivraxSecondSkillTarget
+  Comment: "[필드보스]칼리브락스"
+- Id: 47985
+  Name: KalivraxFirstSkillTarget
+  Comment: "[필드보스]칼리브락스"
+- Id: 156178
+  Name: AncientKnightSkillStack
+  Comment: "[필드보스] 고대기사의갑주"
+- Id: 5929
+  Name: GurigaraSummonMonster
+  Type: boolean
+  Comment: "[일반던전보스]구리가라"
+- Id: 17867
+  Name: GurigaraSafetyZone
+  Comment: "[일반던전보스]구리가라"
+- Id: 25359
+  Name: RasereneEvoDDstack
+  Comment: "[일반던전보스]나샤르에보"
+- Id: 60061
+  Name: RasereneEvoHoldCheck
+  Comment: "[일반던전보스]나샤르에보"
+- Id: 165022
+  Name: RasereneEvoBuff
+  Comment: "[일반던전보스]나샤르에보"
+- Id: 40742
+  Name: RasereneEvoSkillAtk03BuffOn
+  Type: boolean
+  Comment: "[일반던전보스]나샤르에보"
+- Id: 105983
+  Name: RasereneEvoSkillAtk03BuffOff
+  Type: boolean
+  Comment: "[일반던전보스]나샤르에보"
+- Id: 7452
+  Name: LamiaCaptionDDstack
+  Comment: "[도전던전보스] "
+- Id: 34811
+  Name: LamiaCaptionDDTarget
+  Comment: "[도전던전보스] "
+- Id: 33750
+  Name: IsDead
+  Type: boolean
+  Comment: 전투 상수
+- Id: 10763
+  Name: SightRange
+  Comment: 전투 상수
+- Id: 18043
+  Name: SharingSightRange
+  Comment: 전투 상수
+- Id: 14352
+  Name: TargettedCastRange
+  Comment: 전투 상수
+- Id: 17334
+  Name: PartyTargetEntityId
+  Comment: 전투 상수
+- Id: 8130
+  Name: MonsterCheck
+  Comment: 전투 상수
+- Id: 34598
+  Name: Battleground
+  Comment: 전투 상수
+- Id: 24406
+  Name: BattlegroundTeam1
+  Comment: 전투 상수
+- Id: 36934
+  Name: BattlegroundTeam2
+  Comment: 전투 상수
+- Id: 20077
+  Name: QuestPropertyCheck
+  Comment: 전투 상수
+- Id: 18246
+  Name: QuestMagicSoldierStaff
+  Comment: 전투 상수
+- Id: 20423
+  Name: QuestMagicShroomSoldier
+  Comment: 전투 상수
+- Id: 26877
+  Name: QuestVaritanGeneral01
+  Comment: 전투 상수
+- Id: 22056
+  Name: IsMonkeyPlayground
+  Comment: 전투 상수
+- Id: 1218
+  Name: TutorialNPCVaritanHighBishop01
+  Comment: 전투 상수
+- Id: 9000
+  Name: CanPk
+  Type: boolean
+  Comment: 전투 상수
+- Id: 8363
+  Name: HasDeathPenalty
+  Type: boolean
+  Comment: 전투 상수
+- Id: 80310
+  Name: Peace
+  Type: boolean
+  Comment: 전투 상수
+- Id: 4757
+  Name: MaxStatPoint
+  Comment: 전투 상수
+- Id: 22936
+  Name: EquipWeaponId
+  Comment: 전투 상수
+- Id: 45550
+  Name: IsStunState
+  Comment: 전투 상수
+- Id: 60168
+  Name: IsFearState
+  Comment: 전투 상수
+- Id: 422
+  Name: IsTauntState
+  Comment: 전투 상수
+- Id: 15229
+  Name: IsPullState
+  Comment: 전투 상수
+- Id: 95272
+  Name: IsHoldState
+  Comment: 전투 상수
+- Id: 48876
+  Name: IsSlowState
+  Comment: 전투 상수
+- Id: 59105
+  Name: IsMuteState
+  Comment: 전투 상수
+- Id: 81925
+  Name: IsDarknessState
+  Comment: 전투 상수
+- Id: 76170
+  Name: IsPoisonState
+  Comment: 전투 상수
+- Id: 72563
+  Name: IsBleedingState
+  Comment: 전투 상수
+- Id: 21476
+  Name: IsBurnState
+  Comment: 전투 상수
+- Id: 14666
+  Name: TotalDamageScale
+  Comment: 스텟
+- Id: 39864
+  Name: TotalDamageReduceScale
+  Comment: 스텟
+- Id: 13144
+  Name: BaseCastRange
+  Comment: skill 프로퍼티
+- Id: 5011
+  Name: AddDmgScale
+  Comment: skill 프로퍼티
+- Id: 17234
+  Name: HealBase
+  Comment: skill 프로퍼티
+- Id: 10290
+  Name: HpPercentHeal
+  Comment: skill 프로퍼티
+- Id: 6177
+  Name: AddedHealScale
+  Comment: skill 프로퍼티
+- Id: 17587
+  Name: PeriodicSkillLoopTime
+  Comment: skill 프로퍼티
+- Id: 11196
+  Name: DmgDiceSpot
+  Comment: skill 프로퍼티
+- Id: 16982
+  Name: ProbAdd
+  Comment: skill 프로퍼티
+- Id: 21209
+  Name: HpCost
+  Comment: skill 프로퍼티
+- Id: 4529
+  Name: MpCost
+  Comment: skill 프로퍼티
+- Id: 1540
+  Name: AddedCoolTimeReduce
+  Comment: skill 프로퍼티
+- Id: 22522
+  Name: MaxTarget
+  Comment: skill 프로퍼티
+- Id: 21992
+  Name: SkillDrainHp
+  Comment: skill 프로퍼티
+- Id: 1202
+  Name: SkillDrainMp
+  Comment: skill 프로퍼티
+- Id: 5063
+  Name: AddedCastSpeedBonus
+  Comment: skill 프로퍼티
+- Id: 4621
+  Name: BuffDuration
+  Comment: skill 프로퍼티
+- Id: 10134
+  Name: Radius
+  Comment: skill 프로퍼티
+- Id: 27238
+  Name: StunAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 11875
+  Name: FearAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 27419
+  Name: TauntAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 39426
+  Name: PullAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 66324
+  Name: HoldAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 12097
+  Name: SlowAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 19314
+  Name: MuteAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 43653
+  Name: DarknessAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 55282
+  Name: PoisonAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 87309
+  Name: BleedingAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 23567
+  Name: BurnAddDmgScale
+  Comment: skill 프로퍼티
+- Id: 11258
+  Name: IsTalkable
+  Type: boolean
+  Comment: npc 프로퍼티
+- Id: 54609
+  Name: NPCLevel
+  Comment: npc 프로퍼티
+- Id: 22788
+  Name: Aggressive
+  Type: boolean
+  Comment: npc 프로퍼티_선공 여부
+- Id: 34671
+  Name: Invincible
+  Type: boolean
+  Comment: 버프 기능
+- Id: 32339
+  Name: ImmuneTargeted
+  Type: boolean
+  Comment: 버프 기능
+- Id: 40762
+  Name: ImmuneMainTargeted
+  Type: boolean
+  Comment: 버프 기능
+- Id: 30618
+  Name: IgnoreAttackedPenalty
+  Type: boolean
+  Comment: 버프 기능
+- Id: 28551
+  Name: IgnoreTerrainSight
+  Type: boolean
+  Comment: 버프 기능
+- Id: 7602
+  Name: Invisibility
+  Type: string
+  Comment: 버프 기능
+- Id: 25056
+  Name: Ghost
+  Type: boolean
+  Comment: 버프 기능
+- Id: 38567
+  Name: IgnoreSight
+  Type: boolean
+  Comment: 버프 기능
+- Id: 36699
+  Name: EclipseTime
+  Type: boolean
+  Comment: 버프 기능
+- Id: 9999
+  Name: TaxExperience
+  Comment: 서버 테스트용
+- Id: 40303
+  Name: HealthPotionAmount
+  DisplayProperty: HealthPotionAmount
+  DisplayPropertyIndex: 132
+  Comment: 전투력용 스탯
+- Id: 2489
+  Name: HitChanceBuff
+  Comment: 버프용 스탯
+- Id: 5554
+  Name: MeleeHitBuff
+  Comment: 버프용 스탯
+- Id: 37823
+  Name: RangeHitBuff
+  Comment: 버프용 스탯
+- Id: 22727
+  Name: MagicHitBuff
+  Comment: 버프용 스탯
+- Id: 20649
+  Name: PvEHitBuff
+  Comment: 버프용 스탯
+- Id: 24058
+  Name: PvPHitBuff
+  Comment: 버프용 스탯
+- Id: 5245
+  Name: NormalAttackHitBuff
+  Comment: 버프용 스탯
+- Id: 26921
+  Name: SkillHitBuff
+  Comment: 버프용 스탯
+- Id: 30353
+  Name: DodgeChanceBuff
+  Comment: 버프용 스탯
+- Id: 34699
+  Name: MeleeDodgeBuff
+  Comment: 버프용 스탯
+- Id: 86
+  Name: RangeDodgeBuff
+  Comment: 버프용 스탯
+- Id: 2896
+  Name: MagicDodgeBuff
+  Comment: 버프용 스탯
+- Id: 17324
+  Name: PvEDodgeBuff
+  Comment: 버프용 스탯
+- Id: 22713
+  Name: PvPDodgeBuff
+  Comment: 버프용 스탯
+- Id: 36783
+  Name: NormalAttackDodgeBuff
+  Comment: 버프용 스탯
+- Id: 22213
+  Name: SkillDodgeBuff
+  Comment: 버프용 스탯
+- Id: 33689
+  Name: DoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 13999
+  Name: MeleeDoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 29889
+  Name: RangeDoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 5496
+  Name: MagicDoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 4789
+  Name: PvEDoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 10683
+  Name: PvPDoubleProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 36495
+  Name: DoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 45806
+  Name: MeleeDoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 34762
+  Name: RangeDoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 10263
+  Name: MagicDoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 12058
+  Name: PvEDoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 6907
+  Name: PvPDoubleResistanceBuff
+  Comment: 버프용 스탯
+- Id: 42890
+  Name: CriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 36103
+  Name: MeleeCriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 34659
+  Name: RangeCriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 25250
+  Name: MagicCriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 25647
+  Name: PvECriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 2539
+  Name: PvPCriticalProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 16789
+  Name: CriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 39106
+  Name: MeleeCriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 40301
+  Name: RangeCriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 44374
+  Name: MagicCriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 4444
+  Name: PvECriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 14290
+  Name: PvPCriticalResistanceBuff
+  Comment: 버프용 스탯
+- Id: 38076
+  Name: CriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 6192
+  Name: MeleeCriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 48567
+  Name: RangeCriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 14031
+  Name: MagicCriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 27246
+  Name: PvECriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 19166
+  Name: PvPCriticalDamageBuff
+  Comment: 버프용 스탯
+- Id: 37139
+  Name: CriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 5123
+  Name: MeleeCriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 39265
+  Name: RangeCriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 4115
+  Name: MagicCriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 46596
+  Name: PvECriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 13324
+  Name: PvPCriticalDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 34480
+  Name: AddedDamageBuff
+  Comment: 버프용 스탯
+- Id: 25331
+  Name: MeleeDamageBuff
+  Comment: 버프용 스탯
+- Id: 17691
+  Name: RangeDamageBuff
+  Comment: 버프용 스탯
+- Id: 45152
+  Name: MagicDamageBuff
+  Comment: 버프용 스탯
+- Id: 34784
+  Name: PvEAddedDamageBuff
+  Comment: 버프용 스탯
+- Id: 22845
+  Name: PvPAddedDamageBuff
+  Comment: 버프용 스탯
+- Id: 34591
+  Name: NormalAttackDamageBuff
+  Comment: 버프용 스탯
+- Id: 20149
+  Name: SkillAttackDamageBuff
+  Comment: 버프용 스탯
+- Id: 4425
+  Name: WeaponMaxDamageBuff
+  Comment: 버프용 스탯
+- Id: 4399
+  Name: WeaponMinDamageBuff
+  Comment: 버프용 스탯
+- Id: 2044
+  Name: ArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 12512
+  Name: MeleeArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 4635
+  Name: RangeArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 36114
+  Name: MagicArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 10885
+  Name: PvEArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 48399
+  Name: PvPArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 15417
+  Name: NormalAttackArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 23831
+  Name: SkillArmorClassBuff
+  Comment: 버프용 스탯
+- Id: 8939
+  Name: DamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 45680
+  Name: MeleeDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 10647
+  Name: RangeDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 24774
+  Name: MagicDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 16673
+  Name: PvEDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 41699
+  Name: PvPDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 38703
+  Name: NormalAttackDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 47421
+  Name: SkillDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 52020
+  Name: DamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 28154
+  Name: MeleeDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 38171
+  Name: RangeDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 21666
+  Name: MagicDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 19705
+  Name: PvEDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 18902
+  Name: PvPDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 23267
+  Name: NormalAttackDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 29125
+  Name: SkillDamageReduceScaleBuff
+  Comment: 버프용 스탯
+- Id: 36086
+  Name: DamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 6474
+  Name: MeleeDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 50855
+  Name: RangeDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 44411
+  Name: MagicDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 34827
+  Name: PvEDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 52443
+  Name: PvPDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 15706
+  Name: NormalAttackDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 41074
+  Name: SkillDamageReductionIgnoreBuff
+  Comment: 버프용 스탯
+- Id: 7377
+  Name: DamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 3873
+  Name: MeleeDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 50514
+  Name: RangeDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 52075
+  Name: MagicDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 46707
+  Name: PvEDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 2804
+  Name: PvPDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 47972
+  Name: NormalAttackDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 29515
+  Name: SkillDamageReductionBuff
+  Comment: 버프용 스탯
+- Id: 6493
+  Name: SpecialHitAllBuff
+  Comment: 버프용 스탯
+- Id: 20937
+  Name: SpecialResistanceAllBuff
+  Comment: 버프용 스탯
+- Id: 19916
+  Name: SpecialHitStunBuff
+  Comment: 버프용 스탯
+- Id: 18283
+  Name: SpecialResistanceStunBuff
+  Comment: 버프용 스탯
+- Id: 53235
+  Name: SpecialHitHoldBuff
+  Comment: 버프용 스탯
+- Id: 49138
+  Name: SpecialResistanceHoldBuff
+  Comment: 버프용 스탯
+- Id: 12927
+  Name: SpecialHitFearBuff
+  Comment: 버프용 스탯
+- Id: 49204
+  Name: SpecialResistanceFearBuff
+  Comment: 버프용 스탯
+- Id: 33438
+  Name: SpecialHitSlowBuff
+  Comment: 버프용 스탯
+- Id: 38173
+  Name: SpecialResistanceSlowBuff
+  Comment: 버프용 스탯
+- Id: 2596
+  Name: SpecialHitMuteBuff
+  Comment: 버프용 스탯
+- Id: 33136
+  Name: SpecialResistanceMuteBuff
+  Comment: 버프용 스탯
+- Id: 40406
+  Name: SpecialHitTauntBuff
+  Comment: 버프용 스탯
+- Id: 1932
+  Name: SpecialResistanceTauntBuff
+  Comment: 버프용 스탯
+- Id: 13017
+  Name: SpecialHitDarknessBuff
+  Comment: 버프용 스탯
+- Id: 32035
+  Name: SpecialResistanceDarknessBuff
+  Comment: 버프용 스탯
+- Id: 29464
+  Name: MaxHpBuff
+  Comment: 버프용 스탯
+- Id: 7487
+  Name: HpRegenBuff
+  Comment: 버프용 스탯
+- Id: 34586
+  Name: HealthPotionIncreaseBuff
+  Comment: 버프용 스탯
+- Id: 15156
+  Name: HealthPotionScaleBuff
+  Comment: 버프용 스탯
+- Id: 6431
+  Name: HealthPotionAmountBuff
+  Comment: 버프용 스탯
+- Id: 28375
+  Name: MaxMpBuff
+  Comment: 버프용 스탯
+- Id: 9968
+  Name: MpRegenBuff
+  Comment: 버프용 스탯
+- Id: 49931
+  Name: MpCostReducePercentBuff
+  Comment: 버프용 스탯
+- Id: 5719
+  Name: CoolTimeReducePercentBuff
+  Comment: 버프용 스탯
+- Id: 12805
+  Name: AttackSpeedBonusBuff
+  Comment: 버프용 스탯
+- Id: 402
+  Name: MoveSpeedBonusBuff
+  Comment: 버프용 스탯
+- Id: 6925
+  Name: CastSpeedBonusBuff
+  Comment: 버프용 스탯
+- Id: 29832
+  Name: PerfectDamageProbabilityBuff
+  Comment: 버프용 스탯
+- Id: 5669
+  Name: PerfectDamageProbResistanceBuff
+  Comment: 버프용 스탯
+- Id: 32249
+  Name: ExperienceBonusBuff
+  Comment: 버프용 스탯
+- Id: 17677
+  Name: GoldBonusBuff
+  Comment: 버프용 스탯
+- Id: 17599
+  Name: HitChanceResult
+  Comment: 합산 스탯
+- Id: 20102
+  Name: MeleeHitResult
+  Comment: 합산 스탯
+- Id: 45762
+  Name: RangeHitResult
+  Comment: 합산 스탯
+- Id: 54166
+  Name: MagicHitResult
+  Comment: 합산 스탯
+- Id: 37426
+  Name: PvEHitResult
+  Comment: 합산 스탯
+- Id: 13734
+  Name: PvPHitResult
+  Comment: 합산 스탯
+- Id: 27788
+  Name: NormalAttackHitResult
+  Comment: 합산 스탯
+- Id: 26371
+  Name: SkillHitResult
+  Comment: 합산 스탯
+- Id: 27544
+  Name: DodgeChanceResult
+  Comment: 합산 스탯
+- Id: 52714
+  Name: MeleeDodgeResult
+  Comment: 합산 스탯
+- Id: 22646
+  Name: RangeDodgeResult
+  Comment: 합산 스탯
+- Id: 30003
+  Name: MagicDodgeResult
+  Comment: 합산 스탯
+- Id: 417
+  Name: PvEDodgeResult
+  Comment: 합산 스탯
+- Id: 11697
+  Name: PvPDodgeResult
+  Comment: 합산 스탯
+- Id: 17036
+  Name: NormalAttackDodgeResult
+  Comment: 합산 스탯
+- Id: 54767
+  Name: SkillDodgeResult
+  Comment: 합산 스탯
+- Id: 12793
+  Name: DoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 56572
+  Name: MeleeDoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 17310
+  Name: RangeDoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 44569
+  Name: MagicDoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 23381
+  Name: PvEDoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 53503
+  Name: PvPDoubleProbabilityResult
+  Comment: 합산 스탯
+- Id: 25696
+  Name: DoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 40001
+  Name: MeleeDoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 17167
+  Name: RangeDoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 35363
+  Name: MagicDoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 52839
+  Name: PvEDoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 56990
+  Name: PvPDoubleResistanceResult
+  Comment: 합산 스탯
+- Id: 53864
+  Name: CriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 6320
+  Name: MeleeCriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 61446
+  Name: RangeCriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 54536
+  Name: MagicCriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 27656
+  Name: PvECriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 15957
+  Name: PvPCriticalProbabilityResult
+  Comment: 합산 스탯
+- Id: 12530
+  Name: CriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 7609
+  Name: MeleeCriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 7176
+  Name: RangeCriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 39250
+  Name: MagicCriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 60108
+  Name: PvECriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 49899
+  Name: PvPCriticalResistanceResult
+  Comment: 합산 스탯
+- Id: 42337
+  Name: CriticalDamageResult
+  Comment: 합산 스탯
+- Id: 1563
+  Name: MeleeCriticalDamageResult
+  Comment: 합산 스탯
+- Id: 25839
+  Name: RangeCriticalDamageResult
+  Comment: 합산 스탯
+- Id: 7177
+  Name: MagicCriticalDamageResult
+  Comment: 합산 스탯
+- Id: 42777
+  Name: PvECriticalDamageResult
+  Comment: 합산 스탯
+- Id: 11551
+  Name: PvPCriticalDamageResult
+  Comment: 합산 스탯
+- Id: 59392
+  Name: CriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 47125
+  Name: MeleeCriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 27216
+  Name: RangeCriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 12426
+  Name: MagicCriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 15249
+  Name: PvECriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 23387
+  Name: PvPCriticalDamageReductionResult
+  Comment: 합산 스탯
+- Id: 662
+  Name: AddedDamageResult
+  Comment: 합산 스탯
+- Id: 3801
+  Name: MeleeDamageResult
+  Comment: 합산 스탯
+- Id: 29571
+  Name: RangeDamageResult
+  Comment: 합산 스탯
+- Id: 62870
+  Name: MagicDamageResult
+  Comment: 합산 스탯
+- Id: 2501
+  Name: PvEAddedDamageResult
+  Comment: 합산 스탯
+- Id: 32502
+  Name: PvPAddedDamageResult
+  Comment: 합산 스탯
+- Id: 22346
+  Name: NormalAttackDamageResult
+  Comment: 합산 스탯
+- Id: 52402
+  Name: SkillAttackDamageResult
+  Comment: 합산 스탯
+- Id: 5442
+  Name: WeaponMaxDamageResult
+  Comment: 합산 스탯
+- Id: 44452
+  Name: WeaponMinDamageResult
+  Comment: 합산 스탯
+- Id: 13349
+  Name: ArmorClassResult
+  Comment: 합산 스탯
+- Id: 55416
+  Name: MeleeArmorClassResult
+  Comment: 합산 스탯
+- Id: 41984
+  Name: RangeArmorClassResult
+  Comment: 합산 스탯
+- Id: 1615
+  Name: MagicArmorClassResult
+  Comment: 합산 스탯
+- Id: 12346
+  Name: PvEArmorClassResult
+  Comment: 합산 스탯
+- Id: 41232
+  Name: PvPArmorClassResult
+  Comment: 합산 스탯
+- Id: 4676
+  Name: NormalAttackArmorClassResult
+  Comment: 합산 스탯
+- Id: 65487
+  Name: SkillArmorClassResult
+  Comment: 합산 스탯
+- Id: 35967
+  Name: DamageScaleResult
+  Comment: 합산 스탯
+- Id: 7811
+  Name: MeleeDamageScaleResult
+  Comment: 합산 스탯
+- Id: 44699
+  Name: RangeDamageScaleResult
+  Comment: 합산 스탯
+- Id: 53658
+  Name: MagicDamageScaleResult
+  Comment: 합산 스탯
+- Id: 44510
+  Name: PvEDamageScaleResult
+  Comment: 합산 스탯
+- Id: 32416
+  Name: PvPDamageScaleResult
+  Comment: 합산 스탯
+- Id: 13137
+  Name: NormalAttackDamageScaleResult
+  Comment: 합산 스탯
+- Id: 55908
+  Name: SkillDamageScaleResult
+  Comment: 합산 스탯
+- Id: 58553
+  Name: DamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 48269
+  Name: MeleeDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 1863
+  Name: RangeDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 20371
+  Name: MagicDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 5905
+  Name: PvEDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 46434
+  Name: PvPDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 26170
+  Name: NormalAttackDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 63144
+  Name: SkillDamageReduceScaleResult
+  Comment: 합산 스탯
+- Id: 64660
+  Name: DamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 66067
+  Name: MeleeDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 10131
+  Name: RangeDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 4914
+  Name: MagicDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 19891
+  Name: PvEDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 8343
+  Name: PvPDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 8375
+  Name: NormalAttackDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 67612
+  Name: SkillDamageReductionIgnoreResult
+  Comment: 합산 스탯
+- Id: 21769
+  Name: DamageReductionResult
+  Comment: 합산 스탯
+- Id: 40438
+  Name: MeleeDamageReductionResult
+  Comment: 합산 스탯
+- Id: 17481
+  Name: RangeDamageReductionResult
+  Comment: 합산 스탯
+- Id: 18594
+  Name: MagicDamageReductionResult
+  Comment: 합산 스탯
+- Id: 3549
+  Name: PvEDamageReductionResult
+  Comment: 합산 스탯
+- Id: 48391
+  Name: PvPDamageReductionResult
+  Comment: 합산 스탯
+- Id: 47257
+  Name: NormalAttackDamageReductionResult
+  Comment: 합산 스탯
+- Id: 49892
+  Name: SkillDamageReductionResult
+  Comment: 합산 스탯
+- Id: 15760
+  Name: SpecialHitAllResult
+  Comment: 합산 스탯
+- Id: 32683
+  Name: SpecialResistanceAllResult
+  Comment: 합산 스탯
+- Id: 68931
+  Name: SpecialHitStunResult
+  Comment: 합산 스탯
+- Id: 23608
+  Name: SpecialResistanceStunResult
+  Comment: 합산 스탯
+- Id: 68169
+  Name: SpecialHitHoldResult
+  Comment: 합산 스탯
+- Id: 37094
+  Name: SpecialResistanceHoldResult
+  Comment: 합산 스탯
+- Id: 37449
+  Name: SpecialHitFearResult
+  Comment: 합산 스탯
+- Id: 47407
+  Name: SpecialResistanceFearResult
+  Comment: 합산 스탯
+- Id: 58955
+  Name: SpecialHitSlowResult
+  Comment: 합산 스탯
+- Id: 53395
+  Name: SpecialResistanceSlowResult
+  Comment: 합산 스탯
+- Id: 65165
+  Name: SpecialHitMuteResult
+  Comment: 합산 스탯
+- Id: 27019
+  Name: SpecialResistanceMuteResult
+  Comment: 합산 스탯
+- Id: 19382
+  Name: SpecialHitTauntResult
+  Comment: 합산 스탯
+- Id: 41233
+  Name: SpecialResistanceTauntResult
+  Comment: 합산 스탯
+- Id: 25732
+  Name: SpecialHitDarknessResult
+  Comment: 합산 스탯
+- Id: 17586
+  Name: SpecialResistanceDarknessResult
+  Comment: 합산 스탯
+- Id: 37766
+  Name: MaxHpResult
+  Comment: 합산 스탯
+- Id: 69009
+  Name: MaxHpBase
+  DisplayProperty: MaxHpBase
+  DisplayPropertyIndex: 128
+  Comment: 전투력용 스탯(변경 예정)
+- Id: 14550
+  Name: HpRegenResult
+  Comment: 합산 스탯
+- Id: 28045
+  Name: HealthPotionIncreaseResult
+  Comment: 합산 스탯
+- Id: 6479
+  Name: HealthPotionScaleResult
+  Comment: 합산 스탯
+- Id: 62262
+  Name: MaxMpResult
+  Comment: 합산 스탯
+- Id: 54252
+  Name: MaxMpBase
+  DisplayProperty: MaxMpBase
+  DisplayPropertyIndex: 133
+  Comment: 전투력용 스탯(변경 예정)
+- Id: 60440
+  Name: MpRegenResult
+  Comment: 합산 스탯
+- Id: 62376
+  Name: MpCostReducePercent
+  Comment: 합산 스탯
+- Id: 30820
+  Name: CoolTimeReducePercent
+  Comment: 합산 스탯
+- Id: 3902
+  Name: AttackSpeedBonusResult
+  Comment: 합산 스탯
+- Id: 28268
+  Name: MoveSpeedBonusResult
+  Comment: 합산 스탯
+- Id: 12186
+  Name: CastSpeedBonusResult
+  Comment: 합산 스탯
+- Id: 38993
+  Name: PerfectDamageProbabilityResult
+  Comment: 합산 스탯
+- Id: 68444
+  Name: PerfectDamageProbResistanceResult
+  Comment: 합산 스탯
+- Id: 241
+  Name: ExperienceBonusResult
+  Comment: 합산 스탯
+- Id: 59837
+  Name: CurrencyGoldBonus
+  Comment: 합산 스탯
+- Id: 61621
+  Name: NormalAttack
+  Comment: "[서버] 일반공격스킬"
+- Id: 56546
+  Name: Name
+  Comment: 엔티티이름
+- Id: 26771
+  Name: NpcName
+  Comment: npc 이름
+- Id: 74397
+  Name: DropItemName
+  Comment: 드랍템 이름
+- Id: 21842
+  Name: StartingPointX
+  Comment: battle 공식 평가용
+- Id: 63406
+  Name: StartingPointY
+  Comment: battle 공식 평가용
+- Id: 62930
+  Name: StartingAddressId
+  Comment: battle 공식 평가용
+- Id: 18705
+  Name: Height
+  Comment: battle 공식 평가용
+- Id: 2682
+  Name: StartingTerritoryId
+  Comment: battle 공식 평가용
+- Id: 16504
+  Name: Group
+  Comment: battle 공식 평가용
+- Id: 63725
+  Name: AutoQuestTarget
+  Comment: battle 공식 평가용
+- Id: 37134
+  Name: AutoQuestGroup
+  Comment: battle 공식 평가용
+- Id: 74037
+  Name: AutoQuestType
+  Comment: battle 공식 평가용
+- Id: 10877
+  Name: HuntingZoneId
+  Comment: battle 공식 평가용
+- Id: 7119
+  Name: TaxAddressId
+  Comment: battle 공식 평가용
+- Id: 57561
+  Name: ImmuneTaxAddressId
+  Comment: battle 공식 평가용
+- Id: 13628
+  Name: HostileGuild
+  Comment: battle 공식 평가용
+- Id: 1373
+  Name: AutoCombatBaseX
+  Comment: battle 공식 평가용
+- Id: 39023
+  Name: AutoCombatBaseY
+  Comment: battle 공식 평가용
+- Id: 75991
+  Name: Grade
+  Comment: "battle 공식 평가용, 드랍 아이템 등급"
+- Id: 4658
+  Name: IsProjectile
+  Comment: battle 공식 평가용
+- Id: 37464
+  Name: CurrentAddressId
+  Comment: battle 공식 평가용
+- Id: 22592
+  Name: AllyGuild
+  Comment: battle 공식 평가용
+- Id: 71248
+  Name: AllowedQuestWorldMapArea
+  Comment: battle 공식 평가용
+- Id: 48580
+  Name: ShouldCheckAutoQuestType
+  Comment: battle 공식 평가용
+- Id: 30445
+  Name: ShouldCheckAutoQuestGroup
+  Comment: battle 공식 평가용
+- Id: 30446
+  Name: QuestSymbolNpc
+  Comment: battle 공식 평가용
+- Id: 30447
+  Name: QuestSymbolNpcGroup
+  Comment: battle 공식 평가용
+- Id: 30448
+  Name: QuestSymbolNpcType
+  Comment: battle 공식 평가용
+- Id: 70301
+  Name: IsPartyHost
+  Comment: battle 공식 평가용
+- Id: 46745
+  Name: IsInSightEnabledLand
+  Comment: battle 공식 평가용
+- Id: 22243
+  Name: MaxCombatPoint
+  Comment: battle 공식 평가용
+- Id: 12675
+  Name: ExperienceValue
+  Comment: battle 공식 평가용
+- Id: 7600
+  Name: MinAmount
+  Comment: battle 공식 평가용
+- Id: 7551
+  Name: MaxAmount
+  Comment: battle 공식 평가용
+- Id: 72664
+  Name: NormalAttackCheck
+  Comment: 일반공격체크
+- Id: 44754
+  Name: ProbMin
+  Comment: 지울예정
+- Id: 72585
+  Name: IsDouble
+  Comment: 지울예정
+- Id: 34600
+  Name: DamageType
+  Comment: 지울예정
+- Id: 483
+  Name: ProbBase
+  Comment: 지울예정
+- Id: 46798
+  Name: PcBuffSkillCheck
+  Comment: 지울예정
+- Id: 25490
+  Name: ProbType
+  Comment: 지울예정
+- Id: 62248
+  Name: ProbLevelMultiplier
+  Comment: 지울예정
+- Id: 22817
+  Name: MainTargetEntityId
+  Comment: 공식에서 사용
+- Id: 24370
+  Name: SubTargetEntityId
+  Comment: 공식에서 사용
+- Id: 13565
+  Name: IsPerfect
+  Comment: 지울예정
+- Id: 67185
+  Name: Coordinate
+  Comment: 지울예정
+- Id: 8779
+  Name: IsCritical
+  Comment: 지울예정
+- Id: 69592
+  Name: RelativeSRType
+  Comment: 지울예정
+- Id: 77446
+  Name: ProbMax
+  Comment: 지울예정
+- Id: 36790
+  Name: NpcDamageType
+  Comment: 지울예정
+- Id: 41663
+  Name: TagetSelf
+  Comment: 로직 상에서 수정되어야하는데 안되는 것을 보임
+- Id: 16684
+  Name: AssistOrder
+  Comment: 지울예정
+- Id: 9531
+  Name: ScanTargetEntityId
+  Comment: 스캔 시 첫번째 타깃
+- Id: 9532
+  Name: ScanSubTargetEntityId
+  Comment: 스캔 시 서브 타깃
+- Id: 57407
+  Name: RecentPacketTime
+  Comment: 최근 패킷 타임
+- Id: 28205
+  Name: NextLevelExperience
+  Comment: 지울예정
+- Id: 10427
+  Name: DieCount
+  Comment: 지울예정
+- Id: 10429
+  Name: ItemGrade
+  Comment: 아이템 등급 (복구 비용 공식에서 사용)
+- Id: 17414
+  Name: FrontTargetEntityId
+  Comment: 지울예정
+- Id: 18975
+  Name: Item_Equip
+  Comment: item_category 값을 사용
+- Id: 81001
+  Name: Quest_Melee_ShroomSoldier_01
+  Comment: 지울예정
+- Id: 51829
+  Name: DropTime
+  Comment: 지울예정
+- Id: 48984
+  Name: Targetall
+  Comment: 로직 상에서 수정되어야하는데 안되는 것을 보임
+- Id: 5547
+  Name: NpcGroupId
+  Comment: 지울예정
+- Id: 71738
+  Name: ScanTarget
+  Comment: 지울예정
+- Id: 55863
+  Name: TestSandbag
+  Comment: 지울예정
+- Id: 58314
+  Name: GurigaraBombStack
+  Comment: 지울예정
+- Id: 59565
+  Name: NpcTypeId
+  Comment: 지울예정
+- Id: 77070
+  Name: Item_Craft
+  Comment: item_category 값을 사용
+- Id: 30267
+  Name: LootingDelay
+  Comment: 지울예정
+- Id: 58128
+  Name: Item_Misc_Healing
+  Comment: item_category 값을 사용
+- Id: 75023
+  Name: Item_Currency
+  Comment: item_category 값을 사용
+- Id: 50220
+  Name: Item_Misc
+  Comment: item_category 값을 사용
+- Id: 14201
+  Name: Item_Skill
+  Comment: item_category 값을 사용
+- Id: 58897
+  Name: Item_HealthPotion
+  Comment: item_category 값을 사용
+- Id: 64750
+  Name: Fire
+  Comment: 지울예정 - simulation 통과용
+- Id: 18462
+  Name: Ice
+  Comment: 지울예정 - simulation 통과용
+- Id: 24843
+  Name: HolyMoly
+  Comment: 지울예정 - simulation 통과용
+- Id: 24844
+  Name: OnlyYou
+  Comment: "OnlyLookAtMe 버프 프로퍼티를 받은 경우 대상은 OnlyYou 프로퍼티를 통해 자신을 공식 평가함, Target G_OnlyYou_T_EntityId 사용 시 결과 값으로 우선순위 반환"
+- Id: 49975
+  Name: HuntingZoneGoldBonusRate
+  Comment: 사냥터소유
+- Id: 1749
+  Name: HuntingZoneOwner
+  Comment: 사냥터소유
+- Id: 40516
+  Name: HuntingZoneOwnerGuildMaster
+  Comment: 사냥터소유
+- Id: 49543
+  Name: HuntingZoneLord
+  Comment: 사냥터소유
+- Id: 48951
+  Name: MaxCarryAmount
+  Comment: battle 공식 평가용
+- Id: 62380
+  Name: RNGSeed
+  Comment: battle 공식 평가용
+- Id: 79290
+  Name: L_ChangeHp
+  Comment: battle 공식 평가용
+- Id: 26463
+  Name: HpDelta
+  Comment: battle 공식 평가용
+- Id: 30822
+  Name: RecognitionRange
+  Comment: 시뮬레이션
+- Id: 74892
+  Name: FormulaBuffResultProperty
+  Comment: 시뮬레이션
+- Id: 4913
+  Name: TestHp
+  Comment: 시뮬레이션
+- Id: 4915
+  Name: DispositionLevel
+  Comment: 시뮬레이션 - Disposition 버프 레벨
+- Id: 41091
+  Name: NewBuffEquipSlot
+  Comment: 시뮬레이션
+- Id: 49253
+  Name: LSwordP3Essence15
+  Comment: 에센스
+- Id: 16186
+  Name: SwordP3Essence15
+  Comment: 에센스
+- Id: 29263
+  Name: SwordP1Essence15
+  Comment: 에센스
+- Id: 59892
+  Name: CbowP4Essence5
+  Comment: 에센스
+- Id: 11053
+  Name: BowP4Essence5
+  Comment: 에센스
+- Id: 27113
+  Name: SwordP3Essence5
+  Comment: 에센스
+- Id: 42199
+  Name: LSwordP3Essence5
+  Comment: 에센스
+- Id: 59834
+  Name: BowP1Essence15
+  Comment: 에센스
+- Id: 35925
+  Name: OrbP3Essence15
+  Comment: 에센스
+- Id: 32296
+  Name: LSwordP4Essence5
+  Comment: 에센스
+- Id: 42922
+  Name: StaffP1Essence15
+  Comment: 에센스
+- Id: 61523
+  Name: BowP3Essence5
+  Comment: 에센스
+- Id: 11615
+  Name: LSwordP2Essence15
+  Comment: 에센스
+- Id: 77469
+  Name: OrbP1Essence5
+  Comment: 에센스
+- Id: 33322
+  Name: StaffP1Essence5
+  Comment: 에센스
+- Id: 46530
+  Name: StaffP3Essence5
+  Comment: 에센스
+- Id: 75735
+  Name: OrbP3Essence5
+  Comment: 에센스
+- Id: 33340
+  Name: OfflineModeLimitUnlocked
+  Comment: battle 접속시 사용
+- Id: 7278
+  Name: AutoMode
+  Comment: battle 접속시 사용
+- Id: 54379
+  Name: ChannelEntityId
+  Comment: battle 접속시 사용
+- Id: 32726
+  Name: Limbo
+  Comment: battle 접속시 사용
+- Id: 68247
+  Name: ComponentProperty
+  Comment: battle 접속시 사용
+- Id: 23325
+  Name: Item_Misc_Consume
+  Comment: 지울예정 - simulation 통과용
+- Id: 33174
+  Name: Item
+  Comment: 지울예정 - simulation 통과용
+- Id: 56803
+  Name: SkinHideChangeModel
+  Comment: 스킨 외형  on/off
+- Id: 27201
+  Name: SkinHideAttackEffect
+  Comment: 스킨 공격 이펙트 on/off
+- Id: 20530
+  Name: SkinHideDamageFont
+  Comment: 스킨 대미지 폰트 on/off
+- Id: 38495
+  Name: Penetration
+  DisplayProperty: Penetration
+  DisplayPropertyIndex: 17
+  Comment: 전투력용 스탯
+- Id: 51295
+  Name: MeleePenetration
+  DisplayProperty: MeleePenetration
+  DisplayPropertyIndex: 18
+  Comment: 전투력용 스탯
+- Id: 6815
+  Name: RangePenetration
+  DisplayProperty: RangePenetration
+  DisplayPropertyIndex: 19
+  Comment: 전투력용 스탯
+- Id: 84039
+  Name: MagicPenetration
+  DisplayProperty: MagicPenetration
+  DisplayPropertyIndex: 20
+  Comment: 전투력용 스탯
+- Id: 71644
+  Name: PvEPenetration
+  DisplayProperty: PvEPenetration
+  DisplayPropertyIndex: 21
+  Comment: 전투력용 스탯
+- Id: 76403
+  Name: PvPPenetration
+  DisplayProperty: PvPPenetration
+  DisplayPropertyIndex: 22
+  Comment: 전투력용 스탯
+- Id: 67179
+  Name: PenetrationResistance
+  DisplayProperty: PenetrationResistance
+  DisplayPropertyIndex: 23
+  Comment: 전투력용 스탯
+- Id: 42904
+  Name: MeleePenetrationResistance
+  DisplayProperty: MeleePenetrationResistance
+  DisplayPropertyIndex: 24
+  Comment: 전투력용 스탯
+- Id: 31647
+  Name: RangePenetrationResistance
+  DisplayProperty: RangePenetrationResistance
+  DisplayPropertyIndex: 25
+  Comment: 전투력용 스탯
+- Id: 85541
+  Name: MagicPenetrationResistance
+  DisplayProperty: MagicPenetrationResistance
+  DisplayPropertyIndex: 26
+  Comment: 전투력용 스탯
+- Id: 56429
+  Name: PvEPenetrationResistance
+  DisplayProperty: PvEPenetrationResistance
+  DisplayPropertyIndex: 27
+  Comment: 전투력용 스탯
+- Id: 10577
+  Name: PvPPenetrationResistance
+  DisplayProperty: PvPPenetrationResistance
+  DisplayPropertyIndex: 28
+  Comment: 전투력용 스탯
+- Id: 70773
+  Name: PenetrationBuff
+  Comment: 버프용 스탯
+- Id: 18667
+  Name: MeleePenetrationBuff
+  Comment: 버프용 스탯
+- Id: 57078
+  Name: RangePenetrationBuff
+  Comment: 버프용 스탯
+- Id: 77170
+  Name: MagicPenetrationBuff
+  Comment: 버프용 스탯
+- Id: 71126
+  Name: PvEPenetrationBuff
+  Comment: 버프용 스탯
+- Id: 66586
+  Name: PvPPenetrationBuff
+  Comment: 버프용 스탯
+- Id: 37690
+  Name: PenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 50841
+  Name: MeleePenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 88085
+  Name: RangePenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 10155
+  Name: MagicPenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 66516
+  Name: PvEPenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 73678
+  Name: PvPPenetrationResistanceBuff
+  Comment: 버프용 스탯
+- Id: 48963
+  Name: PenetrationResult
+  Comment: 합산 스탯
+- Id: 23830
+  Name: MeleePenetrationResult
+  Comment: 합산 스탯
+- Id: 22481
+  Name: RangePenetrationResult
+  Comment: 합산 스탯
+- Id: 86945
+  Name: MagicPenetrationResult
+  Comment: 합산 스탯
+- Id: 82651
+  Name: PvEPenetrationResult
+  Comment: 합산 스탯
+- Id: 63381
+  Name: PvPPenetrationResult
+  Comment: 합산 스탯
+- Id: 3551
+  Name: PenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 70047
+  Name: MeleePenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 48160
+  Name: RangePenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 49735
+  Name: MagicPenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 71558
+  Name: PvEPenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 59973
+  Name: PvPPenetrationResistanceResult
+  Comment: 합산 스탯
+- Id: 12767
+  Name: ConstPenetrationMin
+  Comment: 관통 최소상수
+- Id: 76248
+  Name: CheckType
+  Comment: pvp 메시지 설정 체크 타입
+- Id: 15736
+  Name: MaxSightRange
+  Comment: 최대시야 범위
+- Id: 13487
+  Name: PotentialSlotLevel_1
+  Comment: 근원레벨
+- Id: 11294
+  Name: PotentialSlotLevel_2
+  Comment: 근원레벨
+- Id: 19898
+  Name: PotentialSlotLevel_3
+  Comment: 근원레벨
+- Id: 63092
+  Name: PotentialSlotLevel_4
+  Comment: 근원레벨
+- Id: 25529
+  Name: PotentialSlotLevel_5
+  Comment: 근원레벨
+- Id: 35856
+  Name: PotentialSlotLevel_6
+  Comment: 근원레벨
+- Id: 35859
+  Name: ToggleState
+  Comment: 토글 스킬의 상태를 위한 프로퍼티
+- Id: 25747
+  Name: PreviousToggleSkillId
+  Comment: "토글 스킬 id를 클라로 전달할 때 사용하는 property, inventory_event에 같이 감"
+- Id: 39464
+  Name: ResetEnchantCount
+  Comment: Enchant 초기화 횟수
+- Id: 32641
+  Name: CarvingSlot
+  Comment: 각인 슬롯 갯수
+- Id: 32642
+  Name: GuildJoinedAt
+  Comment: "길드 가입 날짜, 공식에선 사용 못함."
+- Id: 32643
+  Name: GuildRaidContributionAmount
+  Comment: 제거한 길드 레이드 몬스터에 대한 기여도 값(커스텀 프로퍼티)
+- Id: 76971
+  Name: SpecialHitPull
+  DisplayProperty: SpecialHitPull
+  DisplayPropertyIndex: 111
+  Comment: 전투력용 스탯
+- Id: 50648
+  Name: SpecialResistancePull
+  DisplayProperty: SpecialResistancePull
+  DisplayPropertyIndex: 112
+  Comment: 전투력용 스탯
+- Id: 14109
+  Name: SpecialHitPoison
+  DisplayProperty: SpecialHitPoison
+  DisplayPropertyIndex: 121
+  Comment: 전투력용 스탯
+- Id: 60720
+  Name: SpecialResistancePoison
+  DisplayProperty: SpecialResistancePoison
+  DisplayPropertyIndex: 122
+  Comment: 전투력용 스탯
+- Id: 61118
+  Name: SpecialHitBleeding
+  DisplayProperty: SpecialHitBleeding
+  DisplayPropertyIndex: 123
+  Comment: 전투력용 스탯
+- Id: 48441
+  Name: SpecialResistanceBleeding
+  DisplayProperty: SpecialResistanceBleeding
+  DisplayPropertyIndex: 124
+  Comment: 전투력용 스탯
+- Id: 15555
+  Name: SpecialHitBurn
+  DisplayProperty: SpecialHitBurn
+  DisplayPropertyIndex: 125
+  Comment: 전투력용 스탯
+- Id: 9212
+  Name: SpecialResistanceBurn
+  DisplayProperty: SpecialResistanceBurn
+  DisplayPropertyIndex: 126
+  Comment: 전투력용 스탯
+- Id: 78468
+  Name: SpecialHitPullBuff
+  Comment: 버프용 스탯
+- Id: 14162
+  Name: SpecialResistancePullBuff
+  Comment: 버프용 스탯
+- Id: 37824
+  Name: SpecialHitPoisonBuff
+  Comment: 버프용 스탯
+- Id: 75228
+  Name: SpecialResistancePoisonBuff
+  Comment: 버프용 스탯
+- Id: 24809
+  Name: SpecialHitBleedingBuff
+  Comment: 버프용 스탯
+- Id: 90032
+  Name: SpecialResistanceBleedingBuff
+  Comment: 버프용 스탯
+- Id: 43643
+  Name: SpecialHitBurnBuff
+  Comment: 버프용 스탯
+- Id: 11279
+  Name: SpecialResistanceBurnBuff
+  Comment: 버프용 스탯
+- Id: 61116
+  Name: SpecialHitPullResult
+  Comment: 합산 스탯
+- Id: 75288
+  Name: SpecialResistancePullResult
+  Comment: 합산 스탯
+- Id: 2067
+  Name: SpecialHitPoisonResult
+  Comment: 합산 스탯
+- Id: 57788
+  Name: SpecialResistancePoisonResult
+  Comment: 합산 스탯
+- Id: 45179
+  Name: SpecialHitBleedingResult
+  Comment: 합산 스탯
+- Id: 81659
+  Name: SpecialResistanceBleedingResult
+  Comment: 합산 스탯
+- Id: 2439
+  Name: SpecialHitBurnResult
+  Comment: 합산 스탯
+- Id: 83604
+  Name: SpecialResistanceBurnResult
+  Comment: 합산 스탯
+- Id: 30449
+  Name: QuestNpcInteraction
+  Comment: "퀘스트 NpcInteraction 목표 - NpcInteraction ID 저장, battle 공식 평가용"
+- Id: 30450
+  Name: AutoQuestNpcInteraction
+  Comment: "자동 퀘스트 NpcInteraction 목표 - NpcInteraction ID 저장, battle 공식 평가용"
+- Id: 30451
+  Name: BlockInteraction
+  Comment: 인터렉션 차단 - 이 property가 있는 NPC에게는 인터렉션 스킬을 사용할 수 없음
+- Id: 30461
+  Name: Friend
+  Comment: 스캔 필터 대상 계산용
+- Id: 30462
+  Name: Enemy
+  Comment: 스캔 필터 대상 계산용
+- Id: 69000
+  Name: Segment
+  Comment: 구간수치
+- Id: 68200
+  Name: CurrentSegment
+  Comment: 현재레벨구간
+- Id: 86639
+  Name: GrowthUnits
+  Comment: 계수구간
+- Id: 75676
+  Name: CoefficientAddedDamageByLevel
+  Comment: 공격력계수
+- Id: 57620
+  Name: CoefficientArmorClassByLevel
+  Comment: 방어력계수
+- Id: 90001
+  Name: PresetSaved
+  Type: boolean
+  Comment: 프리셋에 저장된 아이템 여부
+- Id: 91000
+  Name: FortressConstructionQueueCount
+  Comment: "[성소버프] 건설 대기열 추가"
+- Id: 91001
+  Name: FortressHelpMeCount
+  Comment: "[성소버프] 도움 요청 추가 횟수"
+- Id: 91002
+  Name: FortressHelpFromGuildCount
+  Comment: "[성소버프] 길드 도움 수신 추가 횟수"
+- Id: 92100
+  Name: FortressHarvestAcceleration_ALL
+  Comment: "[성소버프] 수확 가속 - 전체"
+- Id: 92101
+  Name: FortressHarvestAcceleration_Statue_Gold_Seongso
+  Comment: "[성소버프] 수확 가속 - 황금성물"
+- Id: 92102
+  Name: FortressHarvestAcceleration_Statue_Awakening_Seongso
+  Comment: "[성소버프] 수확 가속 - 각성성물"
+- Id: 43338
+  Name: PkPointScale
+  Comment: "[성향] 성향배율"
+- Id: 30464
+  Name: IsInteraction
+  Type: boolean
+  Comment: "타겟 변경 시 인터렉션 타겟 여부 전달, 공식에선 사용 못함."
+- Id: 10491
+  Name: FortressProductAmount_ALL
+  Comment: "[성소버프] 생산량 증가 - 전체"
+- Id: 86640
+  Name: FortressProductAmount_Statue_Gold_Seongso
+  Comment: "[성소버프] 생산량 증가 - 황금성물"
+- Id: 31036
+  Name: FortressProductAmount_Statue_Exp_Seongso
+  Comment: "[성소버프] 생산량 증가 - 경험의 성물"
+- Id: 38399
+  Name: FortressProductAmount_Statue_Polymorph_Seongso
+  Comment: "[성소버프] 생산량 증가 - 초월의 성물"
+- Id: 13880
+  Name: FortressProductAmount_Statue_WeaponPolymorph_Seongso
+  Comment: "[성소버프] 생산량 증가 - 외형의 성물"
+- Id: 76221
+  Name: FortressProductAmount_Statue_Awakening_Seongso
+  Comment: "[성소버프] 생산량 증가 - 각성의 성물"
+- Id: 95510
+  Name: FortressProductAmount_Statue_Awareness_Seongso
+  Comment: "[성소버프] 생산량 증가 - 자각의 성물"
+- Id: 49832
+  Name: FortressProductAmount_Statue_BuffItem_Seongso
+  Comment: "[성소버프] 생산량 증가 - 소모품 성물"
+- Id: 68333
+  Name: FortressProductAmount_Statue_Time_Seongso
+  Comment: "[성소버프] 생산량 증가 - 시간의 성물"
+- Id: 87509
+  Name: FortressProductionTime_ALL
+  Comment: "[성소버프] 생산시간 감소 - 전체"
+- Id: 50208
+  Name: FortressProductionTime_Statue_Gold_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 황금성물"
+- Id: 78
+  Name: FortressProductionTime_Statue_Exp_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 경험의 성물"
+- Id: 54125
+  Name: FortressProductionTime_Statue_Polymorph_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 초월의 성물"
+- Id: 12657
+  Name: FortressProductionTime_Statue_WeaponPolymorph_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 외형의 성물"
+- Id: 16600
+  Name: FortressProductionTime_Statue_Awakening_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 각성의 성물"
+- Id: 47026
+  Name: FortressProductionTime_Statue_Awareness_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 자각의 성물"
+- Id: 91588
+  Name: FortressProductionTime_Statue_BuffItem_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 소모품 성물"
+- Id: 67569
+  Name: FortressProductionTime_Statue_Time_Seongso
+  Comment: "[성소버프] 생산시간 감소 - 시간의 성물"
+- Id: 27817
+  Name: FortressConstructionTime_ALL
+  Comment: "[성소버프] 건설시간 감소 - 전체"
+- Id: 50171
+  Name: FortressConstructionTime_Statue_Gold_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 황금성물"
+- Id: 37069
+  Name: FortressConstructionTime_Statue_Exp_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 경험의 성물"
+- Id: 22027
+  Name: FortressConstructionTime_Statue_Polymorph_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 초월의 성물"
+- Id: 70724
+  Name: FortressConstructionTime_Statue_WeaponPolymorph_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 외형의 성물"
+- Id: 86972
+  Name: FortressConstructionTime_Statue_Awakening_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 각성의 성물"
+- Id: 13630
+  Name: FortressConstructionTime_Statue_Awareness_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 자각의 성물"
+- Id: 75360
+  Name: FortressConstructionTime_Statue_BuffItem_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 소모품 성물"
+- Id: 40708
+  Name: FortressConstructionTime_Statue_Time_Seongso
+  Comment: "[성소버프] 건설시간 감소 - 시간의 성물"
+- Id: 63471
+  Name: SpecialStunTargetDamageScale
+  DisplayProperty: SpecialStunTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 39049
+  Name: SpecialFearTargetDamageScale
+  DisplayProperty: SpecialFearTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 26745
+  Name: SpecialTauntTargetDamageScale
+  DisplayProperty: SpecialTauntTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 38000
+  Name: SpecialPullTargetDamageScale
+  DisplayProperty: SpecialPullTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 25007
+  Name: SpecialHoldTargetDamageScale
+  DisplayProperty: SpecialHoldTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 13542
+  Name: SpecialSlowTargetDamageScale
+  DisplayProperty: SpecialSlowTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 4648
+  Name: SpecialMuteTargetDamageScale
+  DisplayProperty: SpecialMuteTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 96623
+  Name: SpecialDarknessTargetDamageScale
+  DisplayProperty: SpecialDarknessTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 83088
+  Name: SpecialPoisonTargetDamageScale
+  DisplayProperty: SpecialPoisonTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 87915
+  Name: SpecialBleedingTargetDamageScale
+  DisplayProperty: SpecialBleedingTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 52040
+  Name: SpecialBurnTargetDamageScale
+  DisplayProperty: SpecialBurnTargetDamageScale
+  Comment: 전투력용 스탯
+- Id: 69486
+  Name: SpecialStunTargetDamageScaleBuff
+  DisplayProperty: SpecialStunTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 34585
+  Name: SpecialFearTargetDamageScaleBuff
+  DisplayProperty: SpecialFearTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 16286
+  Name: SpecialTauntTargetDamageScaleBuff
+  DisplayProperty: SpecialTauntTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 266
+  Name: SpecialPullTargetDamageScaleBuff
+  DisplayProperty: SpecialPullTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 849
+  Name: SpecialHoldTargetDamageScaleBuff
+  DisplayProperty: SpecialHoldTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 101634
+  Name: SpecialSlowTargetDamageScaleBuff
+  DisplayProperty: SpecialSlowTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 50129
+  Name: SpecialMuteTargetDamageScaleBuff
+  DisplayProperty: SpecialMuteTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 64149
+  Name: SpecialDarknessTargetDamageScaleBuff
+  DisplayProperty: SpecialDarknessTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 34603
+  Name: SpecialPoisonTargetDamageScaleBuff
+  DisplayProperty: SpecialPoisonTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 83039
+  Name: SpecialBleedingTargetDamageScaleBuff
+  DisplayProperty: SpecialBleedingTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 98603
+  Name: SpecialBurnTargetDamageScaleBuff
+  DisplayProperty: SpecialBurnTargetDamageScaleBuff
+  Comment: 버프용 스탯
+- Id: 52278
+  Name: SpecialStunTargetDamageScaleResult
+  DisplayProperty: SpecialStunTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 81219
+  Name: SpecialFearTargetDamageScaleResult
+  DisplayProperty: SpecialFearTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 71022
+  Name: SpecialTauntTargetDamageScaleResult
+  DisplayProperty: SpecialTauntTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 34572
+  Name: SpecialPullTargetDamageScaleResult
+  DisplayProperty: SpecialPullTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 52487
+  Name: SpecialHoldTargetDamageScaleResult
+  DisplayProperty: SpecialHoldTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 95543
+  Name: SpecialSlowTargetDamageScaleResult
+  DisplayProperty: SpecialSlowTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 51858
+  Name: SpecialMuteTargetDamageScaleResult
+  DisplayProperty: SpecialMuteTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 97360
+  Name: SpecialDarknessTargetDamageScaleResult
+  DisplayProperty: SpecialDarknessTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 25566
+  Name: SpecialPoisonTargetDamageScaleResult
+  DisplayProperty: SpecialPoisonTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 70875
+  Name: SpecialBleedingTargetDamageScaleResult
+  DisplayProperty: SpecialBleedingTargetDamageScaleResult
+  Comment: 합산 스탯
+- Id: 8145
+  Name: SpecialBurnTargetDamageScaleResult
+  DisplayProperty: SpecialBurnTargetDamageScaleResult
+  Comment: 합산 스탯

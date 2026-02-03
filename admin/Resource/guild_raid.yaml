@@ -1,0 +1,285 @@
+- Id: 1
+  Name: TEST_GUILD_RAID_1
+  DifficultyLevel: 1
+  Comment: TEST_GUILD_RAID_1
+  MainBoss: Boss_SharenaEvo_GuildRaid_Stage01
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_SharenaEvo_GuildRaid_Stage01
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 100
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 10000
+- Id: 2
+  Name: TEST_GUILD_RAID_2
+  DifficultyLevel: 2
+  Comment: TEST_GUILD_RAID_2
+  MainBoss: Boss_Venatoria_GuildRaid_Stage02
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Venatoria_GuildRaid_Stage02
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 20000
+- Id: 3
+  Name: TEST_GUILD_RAID_3
+  DifficultyLevel: 3
+  Comment: TEST_GUILD_RAID_3
+  MainBoss: Boss_SharenaEvo_GuildRaid_Stage03
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_SharenaEvo_GuildRaid_Stage03
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 30000
+- Id: 4
+  Name: TEST_GUILD_RAID_4
+  DifficultyLevel: 4
+  Comment: TEST_GUILD_RAID_4
+  MainBoss: Boss_Venatoria_GuildRaid_Stage04
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Venatoria_GuildRaid_Stage04
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 40000
+- Id: 5
+  Name: TEST_GUILD_RAID_5
+  DifficultyLevel: 5
+  Comment: TEST_GUILD_RAID_5
+  MainBoss: Boss_SharenaEvo_GuildRaid_Stage05
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_SharenaEvo_GuildRaid_Stage05
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 50000
+- Id: 6
+  Name: TEST_GUILD_RAID_6
+  DifficultyLevel: 6
+  Comment: TEST_GUILD_RAID_6
+  MainBoss: Boss_Venatoria_GuildRaid_Stage06
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Venatoria_GuildRaid_Stage06
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 60000
+- Id: 7
+  Name: TEST_GUILD_RAID_7
+  DifficultyLevel: 7
+  Comment: TEST_GUILD_RAID_7
+  MainBoss: Boss_Venatoria_GuildRaid_Stage07
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_SharenaEvo_GuildRaid_Stage07
+      Territory: Guild_Raid_Boss_Spawn_02
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+    - Npc: Boss_Venatoria_GuildRaid_Stage07
+      Territory: Guild_Raid_Boss_Spawn_03
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 70000
+- Id: 8
+  Name: TEST_GUILD_RAID_8
+  DifficultyLevel: 8
+  Comment: TEST_GUILD_RAID_8
+  MainBoss: Boss_Arkandar_GuildRaid_Stage08
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Arkandar_GuildRaid_Stage08
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 80000
+- Id: 9
+  Name: TEST_GUILD_RAID_9
+  DifficultyLevel: 9
+  Comment: TEST_GUILD_RAID_9
+  MainBoss: Boss_Gurigara_GuildRaid_Stage09
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Gurigara_GuildRaid_Stage09
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 90000
+- Id: 10
+  Name: TEST_GUILD_RAID_10
+  DifficultyLevel: 10
+  Comment: TEST_GUILD_RAID_10
+  MainBoss: Boss_Arkandar_GuildRaid_Stage10
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Arkandar_GuildRaid_Stage10
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 100000
+- Id: 11
+  Name: TEST_GUILD_RAID_11
+  DifficultyLevel: 11
+  Comment: TEST_GUILD_RAID_11
+  MainBoss: Boss_Gurigara_GuildRaid_Stage11
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Gurigara_GuildRaid_Stage11
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 110000
+- Id: 12
+  Name: TEST_GUILD_RAID_12
+  DifficultyLevel: 12
+  Comment: TEST_GUILD_RAID_12
+  MainBoss: Boss_Arkandar_GuildRaid_Stage12
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Arkandar_GuildRaid_Stage12
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 120000
+- Id: 13
+  Name: TEST_GUILD_RAID_13
+  DifficultyLevel: 13
+  Comment: TEST_GUILD_RAID_13
+  MainBoss: Boss_Gurigara_GuildRaid_Stage13
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Gurigara_GuildRaid_Stage13
+      Territory: Guild_Raid_Boss_Spawn_01
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 130000
+- Id: 14
+  Name: TEST_GUILD_RAID_14
+  DifficultyLevel: 14
+  Comment: TEST_GUILD_RAID_14
+  MainBoss: Boss_Gurigara_GuildRaid_Stage14
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_Arkandar_GuildRaid_Stage14
+      Territory: Guild_Raid_Boss_Spawn_02
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+    - Npc: Boss_Gurigara_GuildRaid_Stage14
+      Territory: Guild_Raid_Boss_Spawn_03
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 140000
+- Id: 15
+  Name: TEST_GUILD_RAID_15
+  DifficultyLevel: 15
+  Comment: TEST_GUILD_RAID_15
+  MainBoss: Boss_Gurigara_GuildRaid_Stage15
+  DisplayImage: /Game/UIIcon/MNGuildBoss/GuildBoss01.GuildBoss01
+  RolePlayer:
+    - Npc: Boss_SharenaEvo_GuildRaid_Stage15
+      Territory: Guild_Raid_Boss_Spawn_02
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+    - Npc: Boss_Venatoria_GuildRaid_Stage15
+      Territory: Guild_Raid_Boss_Spawn_03
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_1
+    - Npc: Boss_Arkandar_GuildRaid_Stage15
+      Territory: Guild_Raid_Boss_Spawn_04
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+    - Npc: Boss_Gurigara_GuildRaid_Stage15
+      Territory: Guild_Raid_Boss_Spawn_05
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_3
+  ParticipationRewards:
+    - Item: CurrencyGuildCoin
+      Amount: 200
+    - Item: CurrencyGold
+      Amount: 1000
+  TimeLimitFailure: 90
+  MaxTryCount: 2
+  RecommendCombatPower: 150000

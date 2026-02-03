@@ -1,0 +1,119 @@
+syntax = "proto3";
+package mail;
+import "Common/item_common.proto";
+import "Common/kafka_key_common.proto";
+import "Common/mail_common.proto";
+import "Common/property.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.mail";
+option java_outer_classname = "MailServiceProto";
+
+// kafka key = receiver_account_id
+message MailCommand {
+  optional bytes character_uuid = 1;
+  common.KafkaKey kafka_key = 5; // mail 서버 내부 통신용. 추후 헤더로 빼면 좋음
+
+  oneof command {
+    SendMail send_mail = 2;
+    ReceiveMail receive_mail = 3;
+    SendLetter send_letter = 4;
+    CheckLetterFee check_letter_fee = 6;
+
+    SendToClient send_to_client = 10;
+  }
+
+  message CheckLetterFee {
+    string character_name = 1;
+    string title = 2;
+    string body = 3;
+    int64 pc_level = 4;
+    bool is_blocked = 5;
+  }
+
+  message SendMail {
+    reserved 9;
+
+    message CharacterMail {
+      int64 account_id = 1;
+      string character_uuid = 2;
+    }
+
+    message CharacterMailByName {
+      int64 account_id = 1;
+      string character_name = 2;
+    }
+
+    message AccountMail {
+      int64 account_id = 1;
+    }
+
+    message ServerMail {
+      int64 account_id = 1;
+      string server_name = 2;
+    }
+
+    common.FormattedDescription title = 100;
+    common.FormattedDescription content = 102;
+    common.FormattedDescription sender = 104;
+
+    oneof recipient {
+      CharacterMail character_mail = 5;
+      CharacterMailByName character_mail_by_name = 6;
+      AccountMail account_mail = 7;
+      ServerMail server_mail = 8;
+    }
+
+    message Item {
+      optional string item_uuid = 1;
+      oneof item {
+        int64 item_id = 2;
+        string item_name = 3;
+      }
+      int64 amount = 4;
+      repeated common.Property properties = 5;
+      optional string inventory_name = 6;
+      google.protobuf.Timestamp expire_time = 7;
+      google.protobuf.Timestamp delete_time = 8;
+    }
+    repeated Item items = 10;
+    google.protobuf.Timestamp valid_until = 11;
+  }
+
+  message ReceiveMail {
+    reserved 1, 2;
+
+    message Attachment {
+      int64 item_id = 1;
+      int64 amount = 2;
+      repeated common.Property properties = 3;
+    }
+    message Mail {
+      bytes mail_id = 1;
+      common.MailType mail_type = 3;
+      string title = 4;
+      string content = 5;
+      string sender = 6;
+      repeated Attachment attachments = 2;
+    }
+    repeated Mail mails = 3;
+    repeated Mail bulk_mails = 4;
+    int64 pc_level = 5;
+  }
+
+  message SendLetter {
+    string title = 1;
+    string body = 2;
+    oneof to {
+      string character_name = 3;
+      string guild_name = 4;
+    }
+    optional string from = 5; // 특정 유저가 보낸게 아니라 서버가 보내는 경우 ex) 영토 관리인, 운영자, ...
+    int64 pc_level = 6;
+  }
+
+  message SendToClient {
+    bytes message = 1;
+  }
+}

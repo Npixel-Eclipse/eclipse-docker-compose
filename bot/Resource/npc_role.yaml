@@ -1,0 +1,172 @@
+- Id: 1
+  Name: Quest
+  Priority: 100
+  NamePlateTextStyle: NameNpcQuest
+  Comment: 퀘스트기능 (NPC 적용 X)
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Quest.MapSymbol_Quest
+  GenerateOnRuntime: true
+- Id: 2
+  Name: ArmorMerchant
+  Priority: 200
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 방어구상인기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Equip.MapSymbol_Equip
+  TitleDescription: UIWord_NPC_Merchant_Equip
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_EquipMerchant.NPC_EquipMerchant
+- Id: 3
+  Name: SkillBookMerchant
+  Priority: 300
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 스킬북 상인기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_SkillBook.MapSymbol_SkillBook
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconSkillbook_Sprite.HUDNpcBtnIconSkillbook_Sprite
+  HUDSortNum: 3
+  TitleDescription: UIWord_NPC_Merchant_Skillbooks
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_SkillBookMerchant.NPC_SkillBookMerchant
+- Id: 4
+  Name: GoodsMerchant
+  Priority: 400
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 잡화 상인 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Goods.MapSymbol_Goods
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconGoods_Sprite.HUDNpcBtnIconGoods_Sprite
+  HUDSortNum: 1
+  TitleDescription: UIWord_NPC_Merchant_Goods
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_GeneralMerchant.NPC_GeneralMerchant
+- Id: 5
+  Name: WeaponMerchant
+  Priority: 500
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 장비 상인 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Equip.MapSymbol_Equip
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconEquip_Sprite.HUDNpcBtnIconEquip_Sprite
+  HUDSortNum: 2
+  TitleDescription: UIWord_NPC_Merchant_Equip
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_EquipMerchant.NPC_EquipMerchant
+- Id: 6
+  Name: AccessoryMerchant
+  Priority: 600
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 액세서리 상인 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Accessory.MapSymbol_Accessory
+  TitleDescription: UIWord_NPC_Merchant_Equip
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_EquipMerchant.NPC_EquipMerchant
+- Id: 7
+  Name: SkillEnchantMerchant
+  Priority: 700
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 스킬 강화석 상인 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_SkillEnchant.MapSymbol_SkillEnchant
+  TitleDescription: UIWord_NPC_Merchant_SkillEnchant
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_SkillEnchantStoneMerchant.NPC_SkillEnchantStoneMerchant
+- Id: 10
+  Name: AccountStorage
+  Priority: 800
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 창고 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Storage.MapSymbol_Storage
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconStorage_Sprite.HUDNpcBtnIconStorage_Sprite
+  HUDSortNum: 4
+  TitleDescription: UIWord_NPC_AccountStorage
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_Storage.NPC_Storage
+- Id: 223
+  Name: GuildMerchant
+  Priority: 900
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 길드 상인
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_GuildShop.MapSymbol_GuildShop
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconGuild_Sprite.HUDNpcBtnIconGuild_Sprite
+  HUDSortNum: 8
+  TitleDescription: UIWord_NPC_Merchant_Guild
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_GuildMerchant.NPC_GuildMerchant
+- Id: 194
+  Name: ChallengeDungeonMerchant
+  Priority: 920
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 도전던전 상인
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_GuildShop.MapSymbol_GuildShop
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconDungeonChallenge_Sprite.HUDNpcBtnIconDungeonChallenge_Sprite
+  HUDSortNum: 7
+  TitleDescription: UIWord_NPC_ChallengeDungeon
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_GuildMerchant.NPC_GuildMerchant
+- Id: 963
+  Name: BattleGroundMerchant
+  Priority: 950
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 전장의 증표 상인
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Battleground.MapSymbol_Battleground
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconBattleground_Sprite.HUDNpcBtnIconBattleground_Sprite
+  HUDSortNum: 6
+  TitleDescription: UIWord_NPC_Merchant_BattleGround
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_BattlegroundMerchant.NPC_BattlegroundMerchant
+- Id: 374
+  Name: HuntingZoneMerchant
+  Priority: 350
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 사냥터 점유 상인
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol13.MapSymbol13
+- Id: 142
+  Name: DiaMerchant
+  Priority: 1000
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 다이아 상인 기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol_Goods.MapSymbol_Goods
+  PortraitIcon: /Game/UIIcon/NPCShop/NPC_EventMerchant.NPC_EventMerchant
+- Id: 590
+  Name: Portal_Enter
+  Priority: 1100
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcPortal
+  Comment: 포탈 입구
+  Icon: /Game/UI/WorldMap_SP/IconDungeonEntrance_Sprite.IconDungeonEntrance_Sprite
+- Id: 885
+  Name: Portal_Exit
+  Priority: 1200
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcPortal
+  Comment: 포탈 출구
+  Icon: /Game/UI/WorldMap_SP/IconDungeonExit_Sprite.IconDungeonExit_Sprite
+- Id: 8
+  Name: Conversation
+  Priority: 1300
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 대화기능
+  Icon: /Game/UITex/Tex_UIKitIcon/MapSymbol/MapSymbol06.MapSymbol06
+- Id: 769
+  Name: Monster
+  Priority: 50
+  Comment: 몬스터
+- Id: 974
+  Name: NonMerchant
+  Priority: 1
+  VisibleInNpcList: true
+  Comment: 미니맵_핫스팟 표시
+  Icon: /Game/UIIcon/MapSymbol/MapSymbol_HotSpot_Sprite.MapSymbol_HotSpot_Sprite
+- Id: 1155
+  Name: Fortress_Enter
+  Priority: 1400
+  VisibleInNpcList: true
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 성소 출입 NPC
+  Icon: /Game/UIIcon/MapSymbol/MapSymbol_Seongso_Sprite.MapSymbol_Seongso_Sprite
+  HUDIcon: /Game/UI/BattleHUD_SP/HUDNpcBtnIconFortress_Sprite.HUDNpcBtnIconFortress_Sprite
+  HUDSortNum: 5
+  TitleDescription: Portal_SeongsoTitle
+- Id: 1156
+  Name: Solidarity
+  Priority: 1500
+  NamePlateTextStyle: NameNpcMerchant
+  Comment: 결속
+  Icon: /Game/UIIcon/MapSymbol/MapSymbol_SeongsoSolidarity_Sprite.MapSymbol_SeongsoSolidarity_Sprite
+  TitleDescription: Portal_SeongsoTitle

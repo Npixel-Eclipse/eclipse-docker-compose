@@ -1,0 +1,4136 @@
+- Id: 1
+  Name: Collection_Polymorph_Card_Common
+  Comment: "[보유효과] [초월] 일반"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Common
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Common_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_Polymorph_Card_Common_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_Polymorph_Card_Common_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_Polymorph_Card_Common_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Polymorph_Card_Common_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_Polymorph_Card_Common_6
+- Id: 77
+  Name: Collection_Polymorph_Card_Uncommon
+  Comment: "[보유효과] [초월] 고급"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Uncommon
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Uncommon_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_Polymorph_Card_Uncommon_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_Polymorph_Card_Uncommon_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_Polymorph_Card_Uncommon_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Polymorph_Card_Uncommon_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_Polymorph_Card_Uncommon_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_Polymorph_Card_Uncommon_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_Polymorph_Card_Uncommon_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_Polymorph_Card_Uncommon_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Polymorph_Card_Uncommon_10
+- Id: 79
+  Name: Collection_Polymorph_Card_Rare
+  Comment: "[보유효과] [초월] 희귀"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Rare
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Rare_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_Polymorph_Card_Rare_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_Polymorph_Card_Rare_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_Polymorph_Card_Rare_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Polymorph_Card_Rare_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_Polymorph_Card_Rare_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_Polymorph_Card_Rare_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_Polymorph_Card_Rare_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_Polymorph_Card_Rare_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Polymorph_Card_Rare_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_Polymorph_Card_Rare_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_Polymorph_Card_Rare_12
+    - Id: 13
+      CumulativeMaxAmount: 26
+      RewardBuff: Collection_Polymorph_Card_Rare_13
+    - Id: 14
+      CumulativeMaxAmount: 28
+      RewardBuff: Collection_Polymorph_Card_Rare_14
+- Id: 206
+  Name: Collection_Polymorph_Card_Epic
+  Comment: "[보유효과] [초월] 영웅"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Epic
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Epic_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_Polymorph_Card_Epic_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_Polymorph_Card_Epic_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_Polymorph_Card_Epic_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Polymorph_Card_Epic_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_Polymorph_Card_Epic_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_Polymorph_Card_Epic_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_Polymorph_Card_Epic_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_Polymorph_Card_Epic_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Polymorph_Card_Epic_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_Polymorph_Card_Epic_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_Polymorph_Card_Epic_12
+    - Id: 13
+      CumulativeMaxAmount: 26
+      RewardBuff: Collection_Polymorph_Card_Epic_13
+    - Id: 14
+      CumulativeMaxAmount: 28
+      RewardBuff: Collection_Polymorph_Card_Epic_14
+    - Id: 15
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Polymorph_Card_Epic_15
+    - Id: 16
+      CumulativeMaxAmount: 32
+      RewardBuff: Collection_Polymorph_Card_Epic_16
+    - Id: 17
+      CumulativeMaxAmount: 34
+      RewardBuff: Collection_Polymorph_Card_Epic_17
+    - Id: 18
+      CumulativeMaxAmount: 36
+      RewardBuff: Collection_Polymorph_Card_Epic_18
+    - Id: 19
+      CumulativeMaxAmount: 38
+      RewardBuff: Collection_Polymorph_Card_Epic_19
+    - Id: 20
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Polymorph_Card_Epic_20
+- Id: 35
+  Name: Collection_Polymorph_Card_Legendary
+  Comment: "[보유효과] [초월] 전설"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Legendary
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Legendary_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_Polymorph_Card_Legendary_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_Polymorph_Card_Legendary_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_Polymorph_Card_Legendary_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Polymorph_Card_Legendary_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_Polymorph_Card_Legendary_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_Polymorph_Card_Legendary_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_Polymorph_Card_Legendary_8
+- Id: 296
+  Name: Collection_Polymorph_Card_Myth
+  Comment: "[보유효과] [초월] 신화"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Card
+  CollectionTarget: PolymorphCard_Myth
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 1
+      RewardBuff: Collection_Polymorph_Card_Myth_1
+    - Id: 2
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_Polymorph_Card_Myth_2
+- Id: 339
+  Name: Collection_WeaponPolymorph_Common
+  Comment: "[보유효과][무기외형] 일반"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Common
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Common_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Common_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Common_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Common_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_WeaponPolymorph_Common_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_WeaponPolymorph_Common_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_WeaponPolymorph_Common_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_WeaponPolymorph_Common_8
+- Id: 588
+  Name: Collection_WeaponPolymorph_Uncommon
+  Comment: "[보유효과][무기외형] 고급"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Uncommon
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_WeaponPolymorph_Uncommon_12
+- Id: 1062
+  Name: Collection_WeaponPolymorph_Rare
+  Comment: "[보유효과][무기외형] 희귀"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Rare
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Rare_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Rare_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Rare_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Rare_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_WeaponPolymorph_Rare_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_WeaponPolymorph_Rare_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_WeaponPolymorph_Rare_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_WeaponPolymorph_Rare_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_WeaponPolymorph_Rare_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_WeaponPolymorph_Rare_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_WeaponPolymorph_Rare_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_WeaponPolymorph_Rare_12
+    - Id: 13
+      CumulativeMaxAmount: 26
+      RewardBuff: Collection_WeaponPolymorph_Rare_13
+    - Id: 14
+      CumulativeMaxAmount: 28
+      RewardBuff: Collection_WeaponPolymorph_Rare_14
+    - Id: 15
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_WeaponPolymorph_Rare_15
+    - Id: 16
+      CumulativeMaxAmount: 32
+      RewardBuff: Collection_WeaponPolymorph_Rare_16
+- Id: 732
+  Name: Collection_WeaponPolymorph_Epic
+  Comment: "[보유효과][무기외형] 영웅"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Epic
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Epic_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Epic_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Epic_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Epic_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_WeaponPolymorph_Epic_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_WeaponPolymorph_Epic_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_WeaponPolymorph_Epic_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_WeaponPolymorph_Epic_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_WeaponPolymorph_Epic_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_WeaponPolymorph_Epic_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_WeaponPolymorph_Epic_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_WeaponPolymorph_Epic_12
+    - Id: 13
+      CumulativeMaxAmount: 26
+      RewardBuff: Collection_WeaponPolymorph_Epic_13
+    - Id: 14
+      CumulativeMaxAmount: 28
+      RewardBuff: Collection_WeaponPolymorph_Epic_14
+    - Id: 15
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_WeaponPolymorph_Epic_15
+    - Id: 16
+      CumulativeMaxAmount: 32
+      RewardBuff: Collection_WeaponPolymorph_Epic_16
+    - Id: 17
+      CumulativeMaxAmount: 34
+      RewardBuff: Collection_WeaponPolymorph_Epic_17
+    - Id: 18
+      CumulativeMaxAmount: 36
+      RewardBuff: Collection_WeaponPolymorph_Epic_18
+    - Id: 19
+      CumulativeMaxAmount: 38
+      RewardBuff: Collection_WeaponPolymorph_Epic_19
+    - Id: 20
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_WeaponPolymorph_Epic_20
+    - Id: 21
+      CumulativeMaxAmount: 42
+      RewardBuff: Collection_WeaponPolymorph_Epic_21
+    - Id: 22
+      CumulativeMaxAmount: 44
+      RewardBuff: Collection_WeaponPolymorph_Epic_22
+    - Id: 23
+      CumulativeMaxAmount: 46
+      RewardBuff: Collection_WeaponPolymorph_Epic_23
+    - Id: 24
+      CumulativeMaxAmount: 48
+      RewardBuff: Collection_WeaponPolymorph_Epic_24
+    - Id: 25
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_WeaponPolymorph_Epic_25
+    - Id: 26
+      CumulativeMaxAmount: 52
+      RewardBuff: Collection_WeaponPolymorph_Epic_26
+    - Id: 27
+      CumulativeMaxAmount: 54
+      RewardBuff: Collection_WeaponPolymorph_Epic_27
+    - Id: 28
+      CumulativeMaxAmount: 56
+      RewardBuff: Collection_WeaponPolymorph_Epic_28
+- Id: 1497
+  Name: Collection_WeaponPolymorph_Legendary
+  Comment: "[보유효과][무기외형] 전설"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Legendary
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Legendary_1
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Legendary_2
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Legendary_3
+    - Id: 4
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Legendary_4
+    - Id: 5
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_WeaponPolymorph_Legendary_5
+    - Id: 6
+      CumulativeMaxAmount: 12
+      RewardBuff: Collection_WeaponPolymorph_Legendary_6
+    - Id: 7
+      CumulativeMaxAmount: 14
+      RewardBuff: Collection_WeaponPolymorph_Legendary_7
+    - Id: 8
+      CumulativeMaxAmount: 16
+      RewardBuff: Collection_WeaponPolymorph_Legendary_8
+    - Id: 9
+      CumulativeMaxAmount: 18
+      RewardBuff: Collection_WeaponPolymorph_Legendary_9
+    - Id: 10
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_WeaponPolymorph_Legendary_10
+    - Id: 11
+      CumulativeMaxAmount: 22
+      RewardBuff: Collection_WeaponPolymorph_Legendary_11
+    - Id: 12
+      CumulativeMaxAmount: 24
+      RewardBuff: Collection_WeaponPolymorph_Legendary_12
+- Id: 3996
+  Name: Collection_WeaponPolymorph_Myth
+  Comment: "[보유효과][무기외형] 신화"
+  ContentType: Polymorph
+  CollectionType: Polymorph_Weapon
+  CollectionTarget: WeaponPolymorph_Myth
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 1
+      RewardBuff: Collection_WeaponPolymorph_Myth_1
+    - Id: 2
+      CumulativeMaxAmount: 2
+      RewardBuff: Collection_WeaponPolymorph_Myth_2
+    - Id: 3
+      CumulativeMaxAmount: 3
+      RewardBuff: Collection_WeaponPolymorph_Myth_3
+    - Id: 4
+      CumulativeMaxAmount: 4
+      RewardBuff: Collection_WeaponPolymorph_Myth_4
+    - Id: 5
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_WeaponPolymorph_Myth_5
+    - Id: 6
+      CumulativeMaxAmount: 6
+      RewardBuff: Collection_WeaponPolymorph_Myth_6
+    - Id: 7
+      CumulativeMaxAmount: 7
+      RewardBuff: Collection_WeaponPolymorph_Myth_7
+    - Id: 8
+      CumulativeMaxAmount: 8
+      RewardBuff: Collection_WeaponPolymorph_Myth_8
+- Id: 567
+  Name: ItemSet_Equip_Armor_G4_T11_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T11_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type1_S1_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type1_S1_6
+- Id: 2336
+  Name: ItemSet_Equip_Armor_G4_T12_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T12_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type1_S1_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type1_S1_6
+- Id: 1971
+  Name: ItemSet_Equip_Armor_G5_T07_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T07_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type1_S1_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type1_S1_6
+- Id: 6511
+  Name: ItemSet_Equip_Armor_G5_T08_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T08_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type1_S1_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type1_S1_6
+- Id: 5199
+  Name: ItemSet_Equip_Accessory_G4_T07_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T07_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type1_S1_4
+- Id: 2531
+  Name: ItemSet_Equip_Accessory_G4_T08_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T08_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type1_S1_4
+- Id: 5143
+  Name: ItemSet_Equip_Accessory_G5_T05_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T05_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type1_S1_4
+- Id: 8214
+  Name: ItemSet_Equip_Accessory_G5_T06_Type1_S1
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T06_Type1_S1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type1_S1_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type1_S1_4
+- Id: 6568
+  Name: ItemSet_Equip_Armor_G4_T11_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T11_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S2_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S2_6
+- Id: 6887
+  Name: ItemSet_Equip_Armor_G4_T12_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T12_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S2_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S2_6
+- Id: 4198
+  Name: ItemSet_Equip_Armor_G5_T07_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T07_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S2_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S2_6
+- Id: 9001
+  Name: ItemSet_Equip_Armor_G5_T08_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T08_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S2_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S2_6
+- Id: 3159
+  Name: ItemSet_Equip_Accessory_G4_T07_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T07_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type2_S2_4
+- Id: 1372
+  Name: ItemSet_Equip_Accessory_G4_T08_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T08_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type2_S2_4
+- Id: 7031
+  Name: ItemSet_Equip_Accessory_G5_T05_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T05_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type2_S2_4
+- Id: 4231
+  Name: ItemSet_Equip_Accessory_G5_T06_Type2_S2
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T06_Type2_S2
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type2_S2_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type2_S2_4
+- Id: 8701
+  Name: ItemSet_Equip_Armor_G4_T11_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T11_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type3_S3_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type3_S3_6
+- Id: 410
+  Name: ItemSet_Equip_Armor_G4_T12_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T12_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type3_S3_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type3_S3_6
+- Id: 3437
+  Name: ItemSet_Equip_Armor_G5_T07_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T07_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type3_S3_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type3_S3_6
+- Id: 1257
+  Name: ItemSet_Equip_Armor_G5_T08_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T08_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type3_S3_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type3_S3_6
+- Id: 8562
+  Name: ItemSet_Equip_Accessory_G4_T07_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T07_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type3_S3_4
+- Id: 331
+  Name: ItemSet_Equip_Accessory_G4_T08_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T08_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type3_S3_4
+- Id: 5117
+  Name: ItemSet_Equip_Accessory_G5_T05_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T05_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type3_S3_4
+- Id: 3144
+  Name: ItemSet_Equip_Accessory_G5_T06_Type3_S3
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T06_Type3_S3
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type3_S3_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type3_S3_4
+- Id: 5230
+  Name: ItemSet_Equip_Armor_G4_T11_Type2_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T11_Type2_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S4_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T11_Type2_S4_6
+- Id: 4882
+  Name: ItemSet_Equip_Armor_G4_T12_Type2_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G4_T12_Type2_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S4_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G4_T12_Type2_S4_6
+- Id: 7219
+  Name: ItemSet_Equip_Armor_G5_T07_Type2_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T07_Type2_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S4_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T07_Type2_S4_6
+- Id: 8058
+  Name: ItemSet_Equip_Armor_G5_T08_Type2_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Armor_G5_T08_Type2_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S4_4
+    - Id: 3
+      CumulativeMaxAmount: 6
+      RewardBuff: ItemSet_Equip_Armor_G5_T08_Type2_S4_6
+- Id: 7944
+  Name: ItemSet_Equip_Accessory_G4_T07_Type4_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T07_Type4_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type4_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T07_Type4_S4_4
+- Id: 5255
+  Name: ItemSet_Equip_Accessory_G4_T08_Type4_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G4_T08_Type4_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type4_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G4_T08_Type4_S4_4
+- Id: 3135
+  Name: ItemSet_Equip_Accessory_G5_T05_Type4_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T05_Type4_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type4_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T05_Type4_S4_4
+- Id: 2812
+  Name: ItemSet_Equip_Accessory_G5_T06_Type4_S4
+  Comment: 세트장비
+  ContentType: ItemSet
+  CollectionType: ItemSet
+  CollectionTarget: Item_Equip_Accessory_G5_T06_Type4_S4
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 2
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type4_S4_2
+    - Id: 2
+      CumulativeMaxAmount: 4
+      RewardBuff: ItemSet_Equip_Accessory_G5_T06_Type4_S4_4
+- Id: 1139
+  Name: Collection_Divinity_G1_T01_N1
+  Comment: 권능 세트 효과(일반 1세트)
+  ContentType: Divinity
+  CollectionType: DivinitySet
+  CollectionTarget: Divinity_G1_T01_N1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 9
+      RewardBuff: Collection_Divinity_G1_T01_N1_9
+- Id: 6088
+  Name: Collection_Divinity_G2_T01_N1
+  Comment: 권능 세트 효과(고급 1세트)
+  ContentType: Divinity
+  CollectionType: DivinitySet
+  CollectionTarget: Divinity_G2_T01_N1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 9
+      RewardBuff: Collection_Divinity_G2_T01_N1_9
+- Id: 1135
+  Name: Collection_Divinity_G3_T01_N1
+  Comment: 권능 세트 효과(희귀 1세트)
+  ContentType: Divinity
+  CollectionType: DivinitySet
+  CollectionTarget: Divinity_G3_T01_N1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 9
+      RewardBuff: Collection_Divinity_G3_T01_N1_9
+- Id: 2372
+  Name: Collection_Divinity_G4_T01_N1
+  Comment: 권능 세트 효과(영웅 1세트)
+  ContentType: Divinity
+  CollectionType: DivinitySet
+  CollectionTarget: Divinity_G4_T01_N1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 9
+      RewardBuff: Collection_Divinity_G4_T01_N1_9
+      RewardLearnedSkill: Learned_DivinitySkill_Passive
+- Id: 6879
+  Name: Collection_Divinity_G5_T01_N1
+  Comment: 권능 세트 효과(전설 1세트)
+  ContentType: Divinity
+  CollectionType: DivinitySet
+  CollectionTarget: Divinity_G5_T01_N1
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 9
+      RewardBuff: Collection_Divinity_G5_T01_N1_9
+      RewardLearnedSkill: Learned_DivinitySkill_Active
+- Id: 1638
+  Name: Collection_Solidarity_Gold_Rare
+  Comment: "[황금성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Gold_Rare
+  Registration:
+    - Id: 1
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Gold_Rare_1
+    - Id: 19
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Gold_Rare_2
+    - Id: 32
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Gold_Rare_3
+    - Id: 11
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Gold_Rare_4
+    - Id: 248
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Gold_Rare_5
+    - Id: 486
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Gold_Rare_6
+    - Id: 511
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Gold_Rare_7
+    - Id: 96
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Gold_Rare_8
+    - Id: 712
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Gold_Rare_9
+    - Id: 456
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Gold_Rare_10
+    - Id: 379
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Gold_Rare_11
+    - Id: 449
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Gold_Rare_12
+    - Id: 13
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Gold_Rare_13
+    - Id: 1161
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Gold_Rare_14
+    - Id: 1372
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Gold_Rare_15
+    - Id: 1402
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Gold_Rare_16
+    - Id: 361
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Gold_Rare_17
+    - Id: 1106
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Gold_Rare_18
+    - Id: 475
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Gold_Rare_19
+    - Id: 1478
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Gold_Rare_20
+    - Id: 324
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Gold_Rare_21
+    - Id: 232
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Gold_Rare_22
+    - Id: 403
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Gold_Rare_23
+    - Id: 854
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Gold_Rare_24
+    - Id: 1685
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Gold_Rare_25
+    - Id: 1238
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Gold_Rare_26
+    - Id: 1137
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Gold_Rare_27
+    - Id: 2626
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Gold_Rare_28
+    - Id: 2533
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Gold_Rare_29
+    - Id: 2144
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Gold_Rare_30
+- Id: 3468
+  Name: Collection_Solidarity_Gold_Epic
+  Comment: "[황금성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Gold_Epic
+  Registration:
+    - Id: 2218
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Gold_Epic_1
+    - Id: 1662
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Gold_Epic_2
+    - Id: 259
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Gold_Epic_3
+    - Id: 1623
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Gold_Epic_4
+    - Id: 102
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Gold_Epic_5
+    - Id: 469
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Gold_Epic_6
+    - Id: 3239
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Gold_Epic_7
+    - Id: 819
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Gold_Epic_8
+    - Id: 2028
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Gold_Epic_9
+    - Id: 142
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Gold_Epic_10
+    - Id: 241
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Gold_Epic_11
+    - Id: 89
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Gold_Epic_12
+    - Id: 3954
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Gold_Epic_13
+    - Id: 3004
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Gold_Epic_14
+    - Id: 3065
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Gold_Epic_15
+    - Id: 216
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Gold_Epic_16
+    - Id: 1674
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Gold_Epic_17
+    - Id: 1472
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Gold_Epic_18
+    - Id: 316
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Gold_Epic_19
+    - Id: 3121
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Gold_Epic_20
+    - Id: 1145
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Gold_Epic_21
+    - Id: 4270
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Gold_Epic_22
+    - Id: 2652
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Gold_Epic_23
+    - Id: 2077
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Gold_Epic_24
+    - Id: 4286
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Gold_Epic_25
+    - Id: 2832
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Gold_Epic_26
+    - Id: 717
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Gold_Epic_27
+    - Id: 1360
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Gold_Epic_28
+    - Id: 275
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Gold_Epic_29
+    - Id: 5419
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Gold_Epic_30
+- Id: 4975
+  Name: Collection_Solidarity_Gold_Legendary
+  Comment: "[황금성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Gold_Legendary
+  Registration:
+    - Id: 327
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Gold_Legendary_1
+    - Id: 2509
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Gold_Legendary_2
+    - Id: 2323
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Gold_Legendary_3
+    - Id: 3846
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Gold_Legendary_4
+    - Id: 2071
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Gold_Legendary_5
+    - Id: 2544
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Gold_Legendary_6
+    - Id: 6052
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Gold_Legendary_7
+    - Id: 3333
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Gold_Legendary_8
+    - Id: 6478
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Gold_Legendary_9
+    - Id: 5272
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Gold_Legendary_10
+    - Id: 1935
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Gold_Legendary_11
+    - Id: 512
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Gold_Legendary_12
+    - Id: 3569
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Gold_Legendary_13
+    - Id: 2138
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Gold_Legendary_14
+    - Id: 7221
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Gold_Legendary_15
+    - Id: 6903
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Gold_Legendary_16
+    - Id: 5803
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Gold_Legendary_17
+    - Id: 7696
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Gold_Legendary_18
+    - Id: 4797
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Gold_Legendary_19
+    - Id: 4091
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Gold_Legendary_20
+    - Id: 1888
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Gold_Legendary_21
+    - Id: 658
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Gold_Legendary_22
+    - Id: 4688
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Gold_Legendary_23
+    - Id: 221
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Gold_Legendary_24
+    - Id: 4035
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Gold_Legendary_25
+    - Id: 5564
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Gold_Legendary_26
+    - Id: 3280
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Gold_Legendary_27
+    - Id: 7592
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Gold_Legendary_28
+    - Id: 6819
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Gold_Legendary_29
+    - Id: 4435
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Gold_Legendary_30
+- Id: 4018
+  Name: Collection_Solidarity_Gold_Myth
+  Comment: "[황금성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Gold_Myth
+  Registration:
+    - Id: 8769
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Gold_Myth_1
+    - Id: 3241
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Gold_Myth_2
+    - Id: 3796
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Gold_Myth_3
+    - Id: 5854
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Gold_Myth_4
+    - Id: 389
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Gold_Myth_5
+    - Id: 9283
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Gold_Myth_6
+    - Id: 197
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Gold_Myth_7
+    - Id: 5327
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Gold_Myth_8
+    - Id: 6845
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Gold_Myth_9
+    - Id: 8828
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Gold_Myth_10
+    - Id: 5117
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Gold_Myth_11
+    - Id: 164
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Gold_Myth_12
+    - Id: 2395
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Gold_Myth_13
+    - Id: 1893
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Gold_Myth_14
+    - Id: 10290
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Gold_Myth_15
+    - Id: 5093
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Gold_Myth_16
+    - Id: 1936
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Gold_Myth_17
+    - Id: 4726
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Gold_Myth_18
+    - Id: 5052
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Gold_Myth_19
+    - Id: 10720
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Gold_Myth_20
+    - Id: 1326
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Gold_Myth_21
+    - Id: 3159
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Gold_Myth_22
+    - Id: 3685
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Gold_Myth_23
+    - Id: 9096
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Gold_Myth_24
+    - Id: 8088
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Gold_Myth_25
+    - Id: 8789
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Gold_Myth_26
+    - Id: 9042
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Gold_Myth_27
+    - Id: 2113
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Gold_Myth_28
+    - Id: 7049
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Gold_Myth_29
+    - Id: 6394
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Gold_Myth_30
+- Id: 5099
+  Name: Collection_Solidarity_Exp_Rare
+  Comment: "[경험성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Exp_Rare
+  Registration:
+    - Id: 8134
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Exp_Rare_1
+    - Id: 1280
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Exp_Rare_2
+    - Id: 3559
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Exp_Rare_3
+    - Id: 6748
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Exp_Rare_4
+    - Id: 869
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Exp_Rare_5
+    - Id: 7193
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Exp_Rare_6
+    - Id: 2990
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Exp_Rare_7
+    - Id: 10199
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Exp_Rare_8
+    - Id: 6664
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Exp_Rare_9
+    - Id: 9376
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Exp_Rare_10
+    - Id: 11493
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Exp_Rare_11
+    - Id: 8260
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Exp_Rare_12
+    - Id: 13100
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Exp_Rare_13
+    - Id: 12388
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Exp_Rare_14
+    - Id: 11036
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Exp_Rare_15
+    - Id: 9719
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Exp_Rare_16
+    - Id: 9499
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Exp_Rare_17
+    - Id: 5252
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Exp_Rare_18
+    - Id: 319
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Exp_Rare_19
+    - Id: 1744
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Exp_Rare_20
+    - Id: 7861
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Exp_Rare_21
+    - Id: 11526
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Exp_Rare_22
+    - Id: 2412
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Exp_Rare_23
+    - Id: 2087
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Exp_Rare_24
+    - Id: 8097
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Exp_Rare_25
+    - Id: 8782
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Exp_Rare_26
+    - Id: 13043
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Exp_Rare_27
+    - Id: 12755
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Exp_Rare_28
+    - Id: 2332
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Exp_Rare_29
+    - Id: 451
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Exp_Rare_30
+- Id: 159
+  Name: Collection_Solidarity_Exp_Epic
+  Comment: "[경험성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Exp_Epic
+  Registration:
+    - Id: 8302
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Exp_Epic_1
+    - Id: 679
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Exp_Epic_2
+    - Id: 10150
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Exp_Epic_3
+    - Id: 2759
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Exp_Epic_4
+    - Id: 11160
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Exp_Epic_5
+    - Id: 13913
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Exp_Epic_6
+    - Id: 7171
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Exp_Epic_7
+    - Id: 13778
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Exp_Epic_8
+    - Id: 7504
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Exp_Epic_9
+    - Id: 11731
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Exp_Epic_10
+    - Id: 12447
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Exp_Epic_11
+    - Id: 11033
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Exp_Epic_12
+    - Id: 14644
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Exp_Epic_13
+    - Id: 15421
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Exp_Epic_14
+    - Id: 13433
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Exp_Epic_15
+    - Id: 15876
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Exp_Epic_16
+    - Id: 5257
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Exp_Epic_17
+    - Id: 1400
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Exp_Epic_18
+    - Id: 1546
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Exp_Epic_19
+    - Id: 16062
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Exp_Epic_20
+    - Id: 6297
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Exp_Epic_21
+    - Id: 4109
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Exp_Epic_22
+    - Id: 7360
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Exp_Epic_23
+    - Id: 423
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Exp_Epic_24
+    - Id: 15680
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Exp_Epic_25
+    - Id: 1652
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Exp_Epic_26
+    - Id: 15063
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Exp_Epic_27
+    - Id: 6751
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Exp_Epic_28
+    - Id: 13733
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Exp_Epic_29
+    - Id: 9573
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Exp_Epic_30
+- Id: 5080
+  Name: Collection_Solidarity_Exp_Legendary
+  Comment: "[경험성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Exp_Legendary
+  Registration:
+    - Id: 11350
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Exp_Legendary_1
+    - Id: 15195
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Exp_Legendary_2
+    - Id: 5475
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Exp_Legendary_3
+    - Id: 10604
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Exp_Legendary_4
+    - Id: 3990
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Exp_Legendary_5
+    - Id: 13685
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Exp_Legendary_6
+    - Id: 11483
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Exp_Legendary_7
+    - Id: 11180
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Exp_Legendary_8
+    - Id: 15808
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Exp_Legendary_9
+    - Id: 8137
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Exp_Legendary_10
+    - Id: 12906
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Exp_Legendary_11
+    - Id: 12874
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Exp_Legendary_12
+    - Id: 10418
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Exp_Legendary_13
+    - Id: 8075
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Exp_Legendary_14
+    - Id: 10444
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Exp_Legendary_15
+    - Id: 14837
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Exp_Legendary_16
+    - Id: 4860
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Exp_Legendary_17
+    - Id: 14358
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Exp_Legendary_18
+    - Id: 4678
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Exp_Legendary_19
+    - Id: 8910
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Exp_Legendary_20
+    - Id: 10058
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Exp_Legendary_21
+    - Id: 15486
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Exp_Legendary_22
+    - Id: 18671
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Exp_Legendary_23
+    - Id: 15295
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Exp_Legendary_24
+    - Id: 19048
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Exp_Legendary_25
+    - Id: 7101
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Exp_Legendary_26
+    - Id: 4022
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Exp_Legendary_27
+    - Id: 4626
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Exp_Legendary_28
+    - Id: 16949
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Exp_Legendary_29
+    - Id: 7518
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Exp_Legendary_30
+- Id: 3580
+  Name: Collection_Solidarity_Exp_Myth
+  Comment: "[경험성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Exp_Myth
+  Registration:
+    - Id: 19262
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Exp_Myth_1
+    - Id: 7328
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Exp_Myth_2
+    - Id: 5445
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Exp_Myth_3
+    - Id: 18961
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Exp_Myth_4
+    - Id: 9294
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Exp_Myth_5
+    - Id: 187
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Exp_Myth_6
+    - Id: 13841
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Exp_Myth_7
+    - Id: 6251
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Exp_Myth_8
+    - Id: 10708
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Exp_Myth_9
+    - Id: 2868
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Exp_Myth_10
+    - Id: 3110
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Exp_Myth_11
+    - Id: 3987
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Exp_Myth_12
+    - Id: 17408
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Exp_Myth_13
+    - Id: 19755
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Exp_Myth_14
+    - Id: 5486
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Exp_Myth_15
+    - Id: 18792
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Exp_Myth_16
+    - Id: 19342
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Exp_Myth_17
+    - Id: 19150
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Exp_Myth_18
+    - Id: 19954
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Exp_Myth_19
+    - Id: 9967
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Exp_Myth_20
+    - Id: 11665
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Exp_Myth_21
+    - Id: 21596
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Exp_Myth_22
+    - Id: 21786
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Exp_Myth_23
+    - Id: 15628
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Exp_Myth_24
+    - Id: 9691
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Exp_Myth_25
+    - Id: 4649
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Exp_Myth_26
+    - Id: 68
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Exp_Myth_27
+    - Id: 8567
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Exp_Myth_28
+    - Id: 4175
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Exp_Myth_29
+    - Id: 12018
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Exp_Myth_30
+- Id: 2894
+  Name: Collection_Solidarity_Polymorph_Rare
+  Comment: "[초월성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Polymorph_Rare
+  Registration:
+    - Id: 4619
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_1
+    - Id: 17734
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_2
+    - Id: 10157
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_3
+    - Id: 14779
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_4
+    - Id: 3244
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_5
+    - Id: 20280
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_6
+    - Id: 20659
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_7
+    - Id: 22656
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_8
+    - Id: 18755
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_9
+    - Id: 23970
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_10
+    - Id: 9220
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_11
+    - Id: 17053
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_12
+    - Id: 7792
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_13
+    - Id: 17880
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_14
+    - Id: 23555
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_15
+    - Id: 8862
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_16
+    - Id: 1143
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_17
+    - Id: 7500
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_18
+    - Id: 25083
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_19
+    - Id: 11418
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_20
+    - Id: 19237
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_21
+    - Id: 7266
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_22
+    - Id: 22797
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_23
+    - Id: 3944
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_24
+    - Id: 17829
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_25
+    - Id: 24394
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_26
+    - Id: 24939
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_27
+    - Id: 16363
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_28
+    - Id: 97
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_29
+    - Id: 10062
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Polymorph_Rare_30
+- Id: 300
+  Name: Collection_Solidarity_Polymorph_Epic
+  Comment: "[초월성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Polymorph_Epic
+  Registration:
+    - Id: 3553
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_1
+    - Id: 21397
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_2
+    - Id: 15895
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_3
+    - Id: 16909
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_4
+    - Id: 10369
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_5
+    - Id: 11309
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_6
+    - Id: 18473
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_7
+    - Id: 22766
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_8
+    - Id: 9561
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_9
+    - Id: 5534
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_10
+    - Id: 12789
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_11
+    - Id: 4811
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_12
+    - Id: 4805
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_13
+    - Id: 9601
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_14
+    - Id: 9534
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_15
+    - Id: 6047
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_16
+    - Id: 8221
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_17
+    - Id: 20900
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_18
+    - Id: 21754
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_19
+    - Id: 4861
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_20
+    - Id: 1442
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_21
+    - Id: 20666
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_22
+    - Id: 27372
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_23
+    - Id: 20312
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_24
+    - Id: 20463
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_25
+    - Id: 13830
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_26
+    - Id: 16526
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_27
+    - Id: 28805
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_28
+    - Id: 9108
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_29
+    - Id: 1019
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Polymorph_Epic_30
+- Id: 4227
+  Name: Collection_Solidarity_Polymorph_Legendary
+  Comment: "[초월성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Polymorph_Legendary
+  Registration:
+    - Id: 22521
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_1
+    - Id: 26244
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_2
+    - Id: 17971
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_3
+    - Id: 6302
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_4
+    - Id: 18832
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_5
+    - Id: 17823
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_6
+    - Id: 7955
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_7
+    - Id: 6104
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_8
+    - Id: 17294
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_9
+    - Id: 250
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_10
+    - Id: 501
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_11
+    - Id: 5213
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_12
+    - Id: 15971
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_13
+    - Id: 12276
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_14
+    - Id: 31152
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_15
+    - Id: 13343
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_16
+    - Id: 21781
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_17
+    - Id: 4020
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_18
+    - Id: 18308
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_19
+    - Id: 29447
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_20
+    - Id: 8242
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_21
+    - Id: 12418
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_22
+    - Id: 15234
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_23
+    - Id: 4186
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_24
+    - Id: 4717
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_25
+    - Id: 23949
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_26
+    - Id: 10225
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_27
+    - Id: 13901
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_28
+    - Id: 8642
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_29
+    - Id: 8038
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Polymorph_Legendary_30
+- Id: 5564
+  Name: Collection_Solidarity_Polymorph_Myth
+  Comment: "[초월성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Polymorph_Myth
+  Registration:
+    - Id: 31126
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_1
+    - Id: 3470
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_2
+    - Id: 9356
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_3
+    - Id: 6330
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_4
+    - Id: 5969
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_5
+    - Id: 10348
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_6
+    - Id: 13000
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_7
+    - Id: 2549
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_8
+    - Id: 21620
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_9
+    - Id: 18673
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_10
+    - Id: 14138
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_11
+    - Id: 4211
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_12
+    - Id: 23563
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_13
+    - Id: 26226
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_14
+    - Id: 28371
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_15
+    - Id: 17390
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_16
+    - Id: 5196
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_17
+    - Id: 17642
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_18
+    - Id: 32151
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_19
+    - Id: 4530
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_20
+    - Id: 3306
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_21
+    - Id: 20604
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_22
+    - Id: 2709
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_23
+    - Id: 20869
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_24
+    - Id: 280
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_25
+    - Id: 13065
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_26
+    - Id: 21062
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_27
+    - Id: 33026
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_28
+    - Id: 28034
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_29
+    - Id: 21280
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Polymorph_Myth_30
+- Id: 5651
+  Name: Collection_Solidarity_WeaponPolymorph_Rare
+  Comment: "[외형성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_WeaponPolymorph_Rare
+  Registration:
+    - Id: 17684
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_1
+    - Id: 28401
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_2
+    - Id: 23720
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_3
+    - Id: 31505
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_4
+    - Id: 17352
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_5
+    - Id: 25539
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_6
+    - Id: 19218
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_7
+    - Id: 17177
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_8
+    - Id: 25260
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_9
+    - Id: 13719
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_10
+    - Id: 25182
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_11
+    - Id: 24665
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_12
+    - Id: 6470
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_13
+    - Id: 28343
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_14
+    - Id: 21157
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_15
+    - Id: 5677
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_16
+    - Id: 25257
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_17
+    - Id: 17545
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_18
+    - Id: 21151
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_19
+    - Id: 14247
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_20
+    - Id: 11670
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_21
+    - Id: 20057
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_22
+    - Id: 8891
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_23
+    - Id: 29204
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_24
+    - Id: 18915
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_25
+    - Id: 23947
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_26
+    - Id: 13743
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_27
+    - Id: 36780
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_28
+    - Id: 27294
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_29
+    - Id: 7853
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Rare_30
+- Id: 1461
+  Name: Collection_Solidarity_WeaponPolymorph_Epic
+  Comment: "[외형성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_WeaponPolymorph_Epic
+  Registration:
+    - Id: 30556
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_1
+    - Id: 5182
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_2
+    - Id: 2672
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_3
+    - Id: 35170
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_4
+    - Id: 30233
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_5
+    - Id: 8537
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_6
+    - Id: 1340
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_7
+    - Id: 7516
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_8
+    - Id: 33349
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_9
+    - Id: 30358
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_10
+    - Id: 10428
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_11
+    - Id: 6338
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_12
+    - Id: 19419
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_13
+    - Id: 31403
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_14
+    - Id: 25754
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_15
+    - Id: 3600
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_16
+    - Id: 30896
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_17
+    - Id: 39206
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_18
+    - Id: 9705
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_19
+    - Id: 4389
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_20
+    - Id: 30106
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_21
+    - Id: 19391
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_22
+    - Id: 14218
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_23
+    - Id: 31937
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_24
+    - Id: 1445
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_25
+    - Id: 36071
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_26
+    - Id: 14942
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_27
+    - Id: 33705
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_28
+    - Id: 39780
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_29
+    - Id: 6636
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Epic_30
+- Id: 2477
+  Name: Collection_Solidarity_WeaponPolymorph_Legendary
+  Comment: "[외형성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_WeaponPolymorph_Legendary
+  Registration:
+    - Id: 25642
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_1
+    - Id: 36195
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_2
+    - Id: 32624
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_3
+    - Id: 26698
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_4
+    - Id: 21053
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_5
+    - Id: 37434
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_6
+    - Id: 19678
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_7
+    - Id: 21056
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_8
+    - Id: 23764
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_9
+    - Id: 1270
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_10
+    - Id: 18975
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_11
+    - Id: 7159
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_12
+    - Id: 12582
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_13
+    - Id: 12808
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_14
+    - Id: 21376
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_15
+    - Id: 18778
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_16
+    - Id: 16582
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_17
+    - Id: 38407
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_18
+    - Id: 35259
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_19
+    - Id: 9231
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_20
+    - Id: 16713
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_21
+    - Id: 39138
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_22
+    - Id: 23162
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_23
+    - Id: 38700
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_24
+    - Id: 19826
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_25
+    - Id: 42415
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_26
+    - Id: 3739
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_27
+    - Id: 44017
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_28
+    - Id: 13645
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_29
+    - Id: 34917
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Legendary_30
+- Id: 6120
+  Name: Collection_Solidarity_WeaponPolymorph_Myth
+  Comment: "[외형성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_WeaponPolymorph_Myth
+  Registration:
+    - Id: 7119
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_1
+    - Id: 43264
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_2
+    - Id: 28603
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_3
+    - Id: 4571
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_4
+    - Id: 5494
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_5
+    - Id: 42260
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_6
+    - Id: 27993
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_7
+    - Id: 9666
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_8
+    - Id: 39407
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_9
+    - Id: 37419
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_10
+    - Id: 4907
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_11
+    - Id: 42706
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_12
+    - Id: 37286
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_13
+    - Id: 32683
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_14
+    - Id: 1411
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_15
+    - Id: 38555
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_16
+    - Id: 8765
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_17
+    - Id: 17193
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_18
+    - Id: 21661
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_19
+    - Id: 34668
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_20
+    - Id: 46614
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_21
+    - Id: 31610
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_22
+    - Id: 34890
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_23
+    - Id: 5920
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_24
+    - Id: 44746
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_25
+    - Id: 46339
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_26
+    - Id: 40083
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_27
+    - Id: 44802
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_28
+    - Id: 25104
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_29
+    - Id: 45320
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_WeaponPolymorph_Myth_30
+- Id: 541
+  Name: Collection_Solidarity_Awakening_Rare
+  Comment: "[각성성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awakening_Rare
+  Registration:
+    - Id: 22693
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awakening_Rare_1
+    - Id: 36484
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awakening_Rare_2
+    - Id: 15575
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awakening_Rare_3
+    - Id: 3586
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awakening_Rare_4
+    - Id: 21497
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awakening_Rare_5
+    - Id: 23809
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awakening_Rare_6
+    - Id: 17481
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awakening_Rare_7
+    - Id: 29182
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awakening_Rare_8
+    - Id: 1805
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awakening_Rare_9
+    - Id: 45425
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awakening_Rare_10
+    - Id: 19587
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awakening_Rare_11
+    - Id: 13436
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awakening_Rare_12
+    - Id: 34924
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awakening_Rare_13
+    - Id: 4587
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awakening_Rare_14
+    - Id: 39290
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awakening_Rare_15
+    - Id: 45679
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awakening_Rare_16
+    - Id: 11227
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awakening_Rare_17
+    - Id: 42124
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awakening_Rare_18
+    - Id: 44714
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awakening_Rare_19
+    - Id: 38383
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awakening_Rare_20
+    - Id: 21202
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awakening_Rare_21
+    - Id: 38436
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awakening_Rare_22
+    - Id: 32134
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awakening_Rare_23
+    - Id: 5259
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awakening_Rare_24
+    - Id: 22748
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awakening_Rare_25
+    - Id: 22599
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awakening_Rare_26
+    - Id: 31330
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awakening_Rare_27
+    - Id: 23519
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awakening_Rare_28
+    - Id: 21299
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awakening_Rare_29
+    - Id: 41265
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awakening_Rare_30
+- Id: 6366
+  Name: Collection_Solidarity_Awakening_Epic
+  Comment: "[각성성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awakening_Epic
+  Registration:
+    - Id: 26394
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awakening_Epic_1
+    - Id: 30178
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awakening_Epic_2
+    - Id: 25180
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awakening_Epic_3
+    - Id: 19938
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awakening_Epic_4
+    - Id: 2783
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awakening_Epic_5
+    - Id: 20437
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awakening_Epic_6
+    - Id: 13373
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awakening_Epic_7
+    - Id: 24111
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awakening_Epic_8
+    - Id: 45929
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awakening_Epic_9
+    - Id: 36081
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awakening_Epic_10
+    - Id: 39749
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awakening_Epic_11
+    - Id: 45103
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awakening_Epic_12
+    - Id: 39523
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awakening_Epic_13
+    - Id: 26119
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awakening_Epic_14
+    - Id: 41056
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awakening_Epic_15
+    - Id: 30677
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awakening_Epic_16
+    - Id: 26088
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awakening_Epic_17
+    - Id: 36960
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awakening_Epic_18
+    - Id: 28682
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awakening_Epic_19
+    - Id: 50836
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awakening_Epic_20
+    - Id: 37004
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awakening_Epic_21
+    - Id: 50889
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awakening_Epic_22
+    - Id: 48467
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awakening_Epic_23
+    - Id: 39271
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awakening_Epic_24
+    - Id: 17306
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awakening_Epic_25
+    - Id: 30487
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awakening_Epic_26
+    - Id: 32402
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awakening_Epic_27
+    - Id: 53495
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awakening_Epic_28
+    - Id: 32627
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awakening_Epic_29
+    - Id: 11736
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awakening_Epic_30
+- Id: 4912
+  Name: Collection_Solidarity_Awakening_Legendary
+  Comment: "[각성성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awakening_Legendary
+  Registration:
+    - Id: 13129
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_1
+    - Id: 53824
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_2
+    - Id: 5616
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_3
+    - Id: 11909
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_4
+    - Id: 34491
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_5
+    - Id: 40100
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_6
+    - Id: 33521
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_7
+    - Id: 34696
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_8
+    - Id: 6898
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_9
+    - Id: 22448
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_10
+    - Id: 52747
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_11
+    - Id: 26749
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_12
+    - Id: 51603
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_13
+    - Id: 39027
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_14
+    - Id: 24176
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_15
+    - Id: 46144
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_16
+    - Id: 52397
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_17
+    - Id: 31464
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_18
+    - Id: 17019
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_19
+    - Id: 47631
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_20
+    - Id: 29916
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_21
+    - Id: 22911
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_22
+    - Id: 54424
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_23
+    - Id: 51780
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_24
+    - Id: 7778
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_25
+    - Id: 4303
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_26
+    - Id: 48577
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_27
+    - Id: 24002
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_28
+    - Id: 12821
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_29
+    - Id: 14343
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awakening_Legendary_30
+- Id: 4677
+  Name: Collection_Solidarity_Awakening_Myth
+  Comment: "[각성성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awakening_Myth
+  Registration:
+    - Id: 51097
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awakening_Myth_1
+    - Id: 52221
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awakening_Myth_2
+    - Id: 35908
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awakening_Myth_3
+    - Id: 50894
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awakening_Myth_4
+    - Id: 17038
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awakening_Myth_5
+    - Id: 18842
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awakening_Myth_6
+    - Id: 48644
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awakening_Myth_7
+    - Id: 39134
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awakening_Myth_8
+    - Id: 36904
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awakening_Myth_9
+    - Id: 1650
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awakening_Myth_10
+    - Id: 13529
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awakening_Myth_11
+    - Id: 44555
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awakening_Myth_12
+    - Id: 33824
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awakening_Myth_13
+    - Id: 51284
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awakening_Myth_14
+    - Id: 50104
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awakening_Myth_15
+    - Id: 32094
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awakening_Myth_16
+    - Id: 51353
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awakening_Myth_17
+    - Id: 5605
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awakening_Myth_18
+    - Id: 17661
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awakening_Myth_19
+    - Id: 45559
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awakening_Myth_20
+    - Id: 50060
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awakening_Myth_21
+    - Id: 23790
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awakening_Myth_22
+    - Id: 1775
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awakening_Myth_23
+    - Id: 9385
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awakening_Myth_24
+    - Id: 35452
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awakening_Myth_25
+    - Id: 51763
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awakening_Myth_26
+    - Id: 39815
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awakening_Myth_27
+    - Id: 50679
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awakening_Myth_28
+    - Id: 27005
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awakening_Myth_29
+    - Id: 51950
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awakening_Myth_30
+- Id: 5811
+  Name: Collection_Solidarity_Awareness_Rare
+  Comment: "[자각성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awareness_Rare
+  Registration:
+    - Id: 24082
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awareness_Rare_1
+    - Id: 49564
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awareness_Rare_2
+    - Id: 4126
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awareness_Rare_3
+    - Id: 36416
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awareness_Rare_4
+    - Id: 24302
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awareness_Rare_5
+    - Id: 4259
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awareness_Rare_6
+    - Id: 10627
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awareness_Rare_7
+    - Id: 58167
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awareness_Rare_8
+    - Id: 54451
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awareness_Rare_9
+    - Id: 44
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awareness_Rare_10
+    - Id: 38938
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awareness_Rare_11
+    - Id: 43623
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awareness_Rare_12
+    - Id: 33326
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awareness_Rare_13
+    - Id: 45290
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awareness_Rare_14
+    - Id: 31593
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awareness_Rare_15
+    - Id: 52741
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awareness_Rare_16
+    - Id: 31944
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awareness_Rare_17
+    - Id: 53472
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awareness_Rare_18
+    - Id: 1091
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awareness_Rare_19
+    - Id: 21607
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awareness_Rare_20
+    - Id: 24578
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awareness_Rare_21
+    - Id: 3873
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awareness_Rare_22
+    - Id: 34573
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awareness_Rare_23
+    - Id: 50551
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awareness_Rare_24
+    - Id: 35294
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awareness_Rare_25
+    - Id: 12236
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awareness_Rare_26
+    - Id: 51462
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awareness_Rare_27
+    - Id: 41295
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awareness_Rare_28
+    - Id: 59342
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awareness_Rare_29
+    - Id: 15949
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awareness_Rare_30
+- Id: 1069
+  Name: Collection_Solidarity_Awareness_Epic
+  Comment: "[자각성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awareness_Epic
+  Registration:
+    - Id: 32398
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awareness_Epic_1
+    - Id: 36288
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awareness_Epic_2
+    - Id: 53861
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awareness_Epic_3
+    - Id: 30546
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awareness_Epic_4
+    - Id: 24241
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awareness_Epic_5
+    - Id: 58472
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awareness_Epic_6
+    - Id: 25529
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awareness_Epic_7
+    - Id: 51207
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awareness_Epic_8
+    - Id: 16152
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awareness_Epic_9
+    - Id: 62161
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awareness_Epic_10
+    - Id: 6248
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awareness_Epic_11
+    - Id: 53430
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awareness_Epic_12
+    - Id: 1063
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awareness_Epic_13
+    - Id: 6997
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awareness_Epic_14
+    - Id: 38422
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awareness_Epic_15
+    - Id: 46877
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awareness_Epic_16
+    - Id: 13477
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awareness_Epic_17
+    - Id: 4084
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awareness_Epic_18
+    - Id: 1279
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awareness_Epic_19
+    - Id: 30125
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awareness_Epic_20
+    - Id: 16625
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awareness_Epic_21
+    - Id: 61166
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awareness_Epic_22
+    - Id: 42819
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awareness_Epic_23
+    - Id: 47821
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awareness_Epic_24
+    - Id: 11662
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awareness_Epic_25
+    - Id: 49094
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awareness_Epic_26
+    - Id: 48423
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awareness_Epic_27
+    - Id: 62517
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awareness_Epic_28
+    - Id: 23228
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awareness_Epic_29
+    - Id: 52829
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awareness_Epic_30
+- Id: 3018
+  Name: Collection_Solidarity_Awareness_Legendary
+  Comment: "[자각성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awareness_Legendary
+  Registration:
+    - Id: 7219
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_1
+    - Id: 39508
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_2
+    - Id: 53634
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_3
+    - Id: 44455
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_4
+    - Id: 42113
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_5
+    - Id: 14388
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_6
+    - Id: 54825
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_7
+    - Id: 29837
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_8
+    - Id: 4518
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_9
+    - Id: 3757
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_10
+    - Id: 59096
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_11
+    - Id: 17121
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_12
+    - Id: 50974
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_13
+    - Id: 25799
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_14
+    - Id: 19835
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_15
+    - Id: 18069
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_16
+    - Id: 10777
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_17
+    - Id: 34888
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_18
+    - Id: 1529
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_19
+    - Id: 54042
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_20
+    - Id: 61721
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_21
+    - Id: 38215
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_22
+    - Id: 2224
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_23
+    - Id: 28149
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_24
+    - Id: 10799
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_25
+    - Id: 35091
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_26
+    - Id: 9421
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_27
+    - Id: 66359
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_28
+    - Id: 17479
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_29
+    - Id: 67346
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awareness_Legendary_30
+- Id: 471
+  Name: Collection_Solidarity_Awareness_Myth
+  Comment: "[자각성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_Awareness_Myth
+  Registration:
+    - Id: 49191
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_Awareness_Myth_1
+    - Id: 53786
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_Awareness_Myth_2
+    - Id: 23735
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_Awareness_Myth_3
+    - Id: 5982
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_Awareness_Myth_4
+    - Id: 9237
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_Awareness_Myth_5
+    - Id: 30020
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_Awareness_Myth_6
+    - Id: 24934
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_Awareness_Myth_7
+    - Id: 8051
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_Awareness_Myth_8
+    - Id: 10300
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_Awareness_Myth_9
+    - Id: 60
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_Awareness_Myth_10
+    - Id: 7074
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_Awareness_Myth_11
+    - Id: 66967
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_Awareness_Myth_12
+    - Id: 31048
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_Awareness_Myth_13
+    - Id: 33840
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_Awareness_Myth_14
+    - Id: 38720
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_Awareness_Myth_15
+    - Id: 10593
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_Awareness_Myth_16
+    - Id: 24418
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_Awareness_Myth_17
+    - Id: 56922
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_Awareness_Myth_18
+    - Id: 13304
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_Awareness_Myth_19
+    - Id: 7812
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_Awareness_Myth_20
+    - Id: 51124
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_Awareness_Myth_21
+    - Id: 56364
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_Awareness_Myth_22
+    - Id: 32190
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_Awareness_Myth_23
+    - Id: 60859
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_Awareness_Myth_24
+    - Id: 65322
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_Awareness_Myth_25
+    - Id: 20779
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_Awareness_Myth_26
+    - Id: 30663
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_Awareness_Myth_27
+    - Id: 1811
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_Awareness_Myth_28
+    - Id: 57871
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_Awareness_Myth_29
+    - Id: 10480
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_Awareness_Myth_30
+- Id: 6706
+  Name: Collection_Solidarity_BuffItem_Rare
+  Comment: "[신속성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_BuffItem_Rare
+  Registration:
+    - Id: 49122
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_1
+    - Id: 14552
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_2
+    - Id: 41917
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_3
+    - Id: 61411
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_4
+    - Id: 23002
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_5
+    - Id: 12905
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_6
+    - Id: 24514
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_7
+    - Id: 35686
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_8
+    - Id: 38460
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_9
+    - Id: 24114
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_10
+    - Id: 36298
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_11
+    - Id: 11117
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_12
+    - Id: 19746
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_13
+    - Id: 45386
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_14
+    - Id: 33592
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_15
+    - Id: 19085
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_16
+    - Id: 15512
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_17
+    - Id: 44298
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_18
+    - Id: 44578
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_19
+    - Id: 8234
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_20
+    - Id: 44878
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_21
+    - Id: 15910
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_22
+    - Id: 40439
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_23
+    - Id: 45997
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_24
+    - Id: 11043
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_25
+    - Id: 67028
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_26
+    - Id: 23624
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_27
+    - Id: 38593
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_28
+    - Id: 68706
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_29
+    - Id: 56293
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_BuffItem_Rare_30
+- Id: 3394
+  Name: Collection_Solidarity_BuffItem_Epic
+  Comment: "[신속성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_BuffItem_Epic
+  Registration:
+    - Id: 71794
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_1
+    - Id: 66980
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_2
+    - Id: 67224
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_3
+    - Id: 16417
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_4
+    - Id: 7723
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_5
+    - Id: 25092
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_6
+    - Id: 59419
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_7
+    - Id: 13846
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_8
+    - Id: 11155
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_9
+    - Id: 3264
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_10
+    - Id: 19712
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_11
+    - Id: 34741
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_12
+    - Id: 42238
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_13
+    - Id: 75204
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_14
+    - Id: 57198
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_15
+    - Id: 26471
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_16
+    - Id: 57403
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_17
+    - Id: 35532
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_18
+    - Id: 6741
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_19
+    - Id: 28146
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_20
+    - Id: 21553
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_21
+    - Id: 55613
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_22
+    - Id: 32727
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_23
+    - Id: 29059
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_24
+    - Id: 69701
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_25
+    - Id: 76446
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_26
+    - Id: 40044
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_27
+    - Id: 10852
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_28
+    - Id: 14720
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_29
+    - Id: 31692
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_BuffItem_Epic_30
+- Id: 3957
+  Name: Collection_Solidarity_BuffItem_Legendary
+  Comment: "[신속성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_BuffItem_Legendary
+  Registration:
+    - Id: 69814
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_1
+    - Id: 52402
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_2
+    - Id: 11157
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_3
+    - Id: 48395
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_4
+    - Id: 46181
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_5
+    - Id: 47310
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_6
+    - Id: 61564
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_7
+    - Id: 32989
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_8
+    - Id: 4697
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_9
+    - Id: 51739
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_10
+    - Id: 3956
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_11
+    - Id: 17374
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_12
+    - Id: 23773
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_13
+    - Id: 23875
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_14
+    - Id: 350
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_15
+    - Id: 48586
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_16
+    - Id: 78940
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_17
+    - Id: 65617
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_18
+    - Id: 41066
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_19
+    - Id: 77065
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_20
+    - Id: 77317
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_21
+    - Id: 75396
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_22
+    - Id: 26579
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_23
+    - Id: 67807
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_24
+    - Id: 26719
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_25
+    - Id: 67400
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_26
+    - Id: 70607
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_27
+    - Id: 11453
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_28
+    - Id: 4351
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_29
+    - Id: 43689
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_BuffItem_Legendary_30
+- Id: 4007
+  Name: Collection_Solidarity_BuffItem_Myth
+  Comment: "[신속성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_BuffItem_Myth
+  Registration:
+    - Id: 51891
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_1
+    - Id: 9864
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_2
+    - Id: 8213
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_3
+    - Id: 50491
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_4
+    - Id: 28588
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_5
+    - Id: 13744
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_6
+    - Id: 34224
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_7
+    - Id: 49130
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_8
+    - Id: 16125
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_9
+    - Id: 60349
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_10
+    - Id: 30618
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_11
+    - Id: 4261
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_12
+    - Id: 81088
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_13
+    - Id: 59450
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_14
+    - Id: 69979
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_15
+    - Id: 34286
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_16
+    - Id: 40500
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_17
+    - Id: 81655
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_18
+    - Id: 1102
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_19
+    - Id: 61772
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_20
+    - Id: 50979
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_21
+    - Id: 26728
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_22
+    - Id: 78166
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_23
+    - Id: 64491
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_24
+    - Id: 33345
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_25
+    - Id: 42112
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_26
+    - Id: 62154
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_27
+    - Id: 9969
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_28
+    - Id: 82714
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_29
+    - Id: 13511
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_BuffItem_Myth_30
+- Id: 7050
+  Name: Collection_Solidarity_DungeonItem_Rare
+  Comment: "[시간성물] 희귀 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_DungeonItem_Rare
+  Registration:
+    - Id: 54308
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_1
+    - Id: 58946
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_2
+    - Id: 79417
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_3
+    - Id: 22995
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_4
+    - Id: 60006
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_5
+    - Id: 21637
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_6
+    - Id: 67353
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_7
+    - Id: 31622
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_8
+    - Id: 54315
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_9
+    - Id: 63720
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_10
+    - Id: 44923
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_11
+    - Id: 54388
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_12
+    - Id: 11845
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_13
+    - Id: 63609
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_14
+    - Id: 43857
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_15
+    - Id: 63308
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_16
+    - Id: 80649
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_17
+    - Id: 35323
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_18
+    - Id: 44987
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_19
+    - Id: 82123
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_20
+    - Id: 75651
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_21
+    - Id: 77034
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_22
+    - Id: 49279
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_23
+    - Id: 17672
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_24
+    - Id: 42232
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_25
+    - Id: 9147
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_26
+    - Id: 49612
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_27
+    - Id: 16436
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_28
+    - Id: 60994
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_29
+    - Id: 5894
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_DungeonItem_Rare_30
+- Id: 5039
+  Name: Collection_Solidarity_DungeonItem_Epic
+  Comment: "[시간성물] 영웅 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_DungeonItem_Epic
+  Registration:
+    - Id: 29848
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_1
+    - Id: 32664
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_2
+    - Id: 74967
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_3
+    - Id: 43260
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_4
+    - Id: 67591
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_5
+    - Id: 17258
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_6
+    - Id: 3811
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_7
+    - Id: 16124
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_8
+    - Id: 84335
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_9
+    - Id: 9795
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_10
+    - Id: 3310
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_11
+    - Id: 63987
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_12
+    - Id: 63293
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_13
+    - Id: 53031
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_14
+    - Id: 45031
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_15
+    - Id: 61050
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_16
+    - Id: 67326
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_17
+    - Id: 86949
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_18
+    - Id: 81638
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_19
+    - Id: 40354
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_20
+    - Id: 76432
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_21
+    - Id: 2188
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_22
+    - Id: 22947
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_23
+    - Id: 68862
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_24
+    - Id: 18626
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_25
+    - Id: 26540
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_26
+    - Id: 65078
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_27
+    - Id: 42629
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_28
+    - Id: 35822
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_29
+    - Id: 27865
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_DungeonItem_Epic_30
+- Id: 7510
+  Name: Collection_Solidarity_DungeonItem_Legendary
+  Comment: "[시간성물] 전설 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_DungeonItem_Legendary
+  Registration:
+    - Id: 50201
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_1
+    - Id: 45211
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_2
+    - Id: 27338
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_3
+    - Id: 5043
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_4
+    - Id: 64107
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_5
+    - Id: 59836
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_6
+    - Id: 75226
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_7
+    - Id: 32413
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_8
+    - Id: 64212
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_9
+    - Id: 72618
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_10
+    - Id: 64181
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_11
+    - Id: 68836
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_12
+    - Id: 2794
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_13
+    - Id: 22083
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_14
+    - Id: 66272
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_15
+    - Id: 8630
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_16
+    - Id: 47202
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_17
+    - Id: 3651
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_18
+    - Id: 84668
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_19
+    - Id: 6906
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_20
+    - Id: 52023
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_21
+    - Id: 78625
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_22
+    - Id: 56658
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_23
+    - Id: 18900
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_24
+    - Id: 47284
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_25
+    - Id: 474
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_26
+    - Id: 84725
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_27
+    - Id: 37772
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_28
+    - Id: 62045
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_29
+    - Id: 52166
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_DungeonItem_Legendary_30
+- Id: 5345
+  Name: Collection_Solidarity_DungeonItem_Myth
+  Comment: "[시간성물] 신화 결속 조합"
+  ContentType: Solidarity
+  CollectionType: Solidarity_Enchant_Level
+  CollectionTarget: Solidarity_DungeonItem_Myth
+  Registration:
+    - Id: 92411
+      CumulativeMaxAmount: 5
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_1
+    - Id: 71800
+      CumulativeMaxAmount: 10
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_2
+    - Id: 32615
+      CumulativeMaxAmount: 15
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_3
+    - Id: 20042
+      CumulativeMaxAmount: 20
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_4
+    - Id: 30003
+      CumulativeMaxAmount: 25
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_5
+    - Id: 84722
+      CumulativeMaxAmount: 30
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_6
+    - Id: 38398
+      CumulativeMaxAmount: 35
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_7
+    - Id: 37050
+      CumulativeMaxAmount: 40
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_8
+    - Id: 33936
+      CumulativeMaxAmount: 45
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_9
+    - Id: 87371
+      CumulativeMaxAmount: 50
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_10
+    - Id: 66105
+      CumulativeMaxAmount: 55
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_11
+    - Id: 39712
+      CumulativeMaxAmount: 60
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_12
+    - Id: 67387
+      CumulativeMaxAmount: 65
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_13
+    - Id: 35841
+      CumulativeMaxAmount: 70
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_14
+    - Id: 82178
+      CumulativeMaxAmount: 75
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_15
+    - Id: 41221
+      CumulativeMaxAmount: 80
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_16
+    - Id: 30761
+      CumulativeMaxAmount: 85
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_17
+    - Id: 30476
+      CumulativeMaxAmount: 90
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_18
+    - Id: 29264
+      CumulativeMaxAmount: 95
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_19
+    - Id: 59162
+      CumulativeMaxAmount: 100
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_20
+    - Id: 64305
+      CumulativeMaxAmount: 105
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_21
+    - Id: 23857
+      CumulativeMaxAmount: 110
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_22
+    - Id: 11248
+      CumulativeMaxAmount: 115
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_23
+    - Id: 53440
+      CumulativeMaxAmount: 120
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_24
+    - Id: 80924
+      CumulativeMaxAmount: 125
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_25
+    - Id: 31891
+      CumulativeMaxAmount: 130
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_26
+    - Id: 91738
+      CumulativeMaxAmount: 135
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_27
+    - Id: 44753
+      CumulativeMaxAmount: 140
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_28
+    - Id: 23862
+      CumulativeMaxAmount: 145
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_29
+    - Id: 42235
+      CumulativeMaxAmount: 150
+      RewardBuff: Collection_Solidarity_DungeonItem_Myth_30

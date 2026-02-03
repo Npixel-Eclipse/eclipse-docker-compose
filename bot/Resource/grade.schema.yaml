@@ -1,0 +1,54 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Grade
+    - DescriptionName
+    - DefaultLootingDelay
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DescriptionName:
+      type: string
+      ref: description
+    Grade:
+      type: integer
+      minimum: 1
+    DefaultLootingDelay:
+      type: integer
+    DropEffect: # 아이템 드랍 시 출력되는 등급 별 빛기둥 이펙트
+      # 일반 /Game/EffectActions/VAE_Item_Drop_Common_A001.VAE_Item_Drop_Common_A001
+      # 고급 /Game/EffectActions/VAE_Item_Drop_Uncommon_A001.VAE_Item_Drop_Uncommon_A001
+      # 희귀 /Game/EffectActions/VAE_Item_Drop_Rare_A001.VAE_Item_Drop_Rare_A001
+      # 영웅 /Game/EffectActions/VAE_Item_Drop_Epic_A001.VAE_Item_Drop_Epic_A001
+      # 전설 /Game/EffectActions/VAE_Item_Drop_Legendary_A001.VAE_Item_Drop_Legendary_A001
+      # 신화 /Game/EffectActions/VAE_Item_Drop_Myth_A001.VAE_Item_Drop_Myth_A001
+      type: string
+    SetDropEffect: # 세트 아이템 드랍 시 출력되는 등급 별 빛기둥 이펙트
+      # 영웅 /Game/EffectActions/VAE_Item_Drop_Epic_Set_A001.VAE_Item_Drop_Epic_Set_A001
+      # 전설 /Game/EffectActions/VAE_Item_Drop_Legendary_Set_A001.VAE_Item_Drop_Legendary_Set_A001
+      # 신화 /Game/EffectActions/VAE_Item_Drop_Myth_Set_A001.VAE_Item_Drop_Myth_Set_A001
+      type: string
+    UniqueDropEffect: # 유니크 아이템 드랍 시 출력되는 등급 별 빛기둥 이펙트
+      # 영웅 /Game/EffectActions/VAE_Item_Drop_Epic_Unique_A001.VAE_Item_Drop_Epic_Unique_A001
+      # 전설 /Game/EffectActions/VAE_Item_Drop_Legendary_Unique_A001.VAE_Item_Drop_Legendary_Unique_A001
+      # 신화 /Game/EffectActions/VAE_Item_Drop_Myth_Unique_A001.VAE_Item_Drop_Myth_Unique_A001
+      type: string
+    TextStyleKey: #C
+      type: string 
+    IsBroadcast:
+      type: boolean
+      default: false
+    CardIcon:
+      type: string
+    NextGrade:
+      type: string
+      ref: grade

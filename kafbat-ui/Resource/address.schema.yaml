@@ -1,0 +1,163 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  staticProperties: true
+  required:
+    - Id
+    - Name
+    - Land
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Parent:
+      type: string
+      visible: true
+      ref: address
+    NavSource: # address를 복제해서 인스턴스 등에 활용할 때 사용. NavSource로 가르킨 address의 Id를 내부적으로 활용함.
+      type: string
+      ref: address
+    Comment:
+      type: string
+    Land:
+      type: string
+      ref: land
+    Description: # 지역명
+      type: string
+      ref: description
+      visible: true
+    ShowSpaceAlert: # 지역명 알럿 표기 여부
+      type: boolean
+      default: true
+    Color: # RRGGBBAA 색상값.
+      type: string
+      default: 000000FF
+    Server:
+      type: integer
+      default: 0
+    IsAutoOff:
+      type: boolean
+    # 캐릭터가 특정 Address에 입장할 때 실행할 스킬
+    # 일반적으로 버프를 부여할 용도로 사용
+    # 부모 주소에서 자식 주소로 이동하는 경우에는 스킬로 주어진 버프 삭제 안함
+    WelcomeSkill:
+      type: array
+      additionalProperties: false
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Skill
+        properties:
+          Skill:
+            type: string
+            ref: skill
+    ScheduledWelcomeSkill:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - WelcomeSkill
+        properties:
+          WelcomeSkill:
+            type: string
+            ref: skill
+          StartDate: # ex) 2024/09/09  ** StartDate는 EndDate보다 빠르게 설정해야 함
+            type: string
+          EndDate: # ex) 2024/09/09
+            type: string
+          Days:
+            type: array
+            items:
+              type: string
+              enum:
+                - Monday
+                - Tuesday
+                - Wednesday
+                - Thursday
+                - Friday
+                - Saturday
+                - Sunday
+          StartHour: # 시작 시간 (h) - 0H ~ 23H
+            type: integer
+            minimum: 0
+            maximum: 23
+          StartMinute: # 시작 시간 (min) - 0M ~ 59M
+            type: integer
+            minimum: 0
+            maximum: 59
+          StartSecond: # 시작 시간 (sec) - 0S ~ 59S
+            type: integer
+            minimum: 0
+            maximum: 59
+          EndHour: # 종료 시간 (h) - 0H ~ 23H
+            type: integer
+            minimum: 0
+            maximum: 23
+          EndMinute: # 종료 시간 (min) - 0M ~ 59M
+            type: integer
+            minimum: 0
+            maximum: 59
+          EndSecond: # 종료 시간 (sec) - 0S ~ 59S
+            type: integer
+            minimum: 0
+            maximum: 59
+    DiedSkill: # 사망 시 PC가 사용할 스킬 (디버프 적용)
+      type: string
+      ref: skill
+    DiedLoseGoldRatio: # 사망 시 손실할 골드 비율 결정(추후 다른 주화 설정 가능)
+      type: string
+      default: 0%
+      pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+    MaxDiedBreakEquipmentCount: # 사망 시 손상되는 최대 장비 개수
+      type: integer
+      minimum: 0
+    DisableDiedLoseExperience: # 사망 시 손실되는 최대 경험치 적용 비활성화
+      type: boolean
+      default: false
+    TeleportArea: # 해당 Address 와 연관된 텔레포트
+      type: string
+      ref: worldmap_area
+    TeleportAroundAddress: #텔레포트 시 입력한 Address에 종속되어 있는 모든 Address 내에서 랜덤 이동. ex)구리 불멸지 5층
+      type: string
+      ref: address         #값이 없는 경우 최하위단의 Address 내에서 이동
+    DistrictType: #월드맵에서 행정구역을 보여주기 위함
+      type: string
+      enum: # Continent > Realm > Province > County 순
+        - County
+        - Province
+        - Realm
+        - Continent
+    CanOpenWorldMap: #월드맵을 열 수 있는 Adress인지.
+      type: boolean
+      default: true
+    TextStyleKey:
+      type: string
+      default: WorldMapAreaRed
+    OfflineMode: # 무접속 플레이 가능 지역 여부 
+      type: string
+      default: None
+      enum:
+        - None
+        - Available
+        - Unavailable
+    Traceable: # 추적 가능 여부
+      type: boolean
+      default: false
+    LogAddress: # 로그 적재 기준이 되는 address. 자식에서 시작해서 부모로 따라 올라갈 때 LogAddress가 두 개면 안된다.
+      type: boolean
+    PopupMessageDescription:
+      type: string
+      ref: description
+    GetPkScore : # PkScore를 획득할 수 있는 Address인지
+      type: boolean
+      default: true
+    TutorialSequence: # 튜토리얼 인스턴스 귀환 규칙 적용 여부
+      type: boolean
+      default: false

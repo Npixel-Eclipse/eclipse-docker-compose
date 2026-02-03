@@ -1,0 +1,243 @@
+syntax = "proto3";
+
+package chat;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.chat";
+option java_outer_classname = "ChatProto";
+
+import "google/protobuf/timestamp.proto";
+import "Common/chat_message.proto";
+import "Common/websocket.proto";
+
+enum ChatCommandResultCode {
+  FAIL = 0;
+  SUCCESS = 1;
+
+  // 공통
+  FAIL_INVALID_REQUEST = 10;  // 잘못된 형식의 요청
+
+  // 채팅 메시지 관련
+  FAIL_INVALID_CHAT_TYPE = 20;
+  FAIL_SPAM_RESTRICTED = 21;
+  FAIL_RESTRICTED = 22;
+  FAIL_BLOCKED_USER = 23;
+  FAIL_BLOCKED_BY_USER = 24;
+  FAIL_USER_NOT_ONLINE = 25;
+
+  // 유저 관련
+  FAIL_USER_NOT_FOUND = 30;
+  FAIL_USER_NOT_IN_CHANNEL = 31;
+  FAIL_USER_NOT_IN_SERVER = 32;
+
+  // 채널 관련
+  FAIL_CHANNEL_NOT_FOUND = 40;
+
+  // 서버 관련
+  FAIL_SERVER_NOT_FOUND = 50;
+
+  // 세션 관련
+  FAIL_SESSION_KEY_NOT_FOUND = 60;
+}
+
+message Message {
+  repeated Content contents = 1;  // 채팅 내용
+
+  message Content {
+    oneof content {
+      string text = 1;            // 일반 텍스트 메시지
+      common.ChatMessage data = 2; // 사전 정의 채팅 메시지 (chat_message.proto 참조)
+    }
+  }
+}
+
+message ChatCommand {
+  oneof command {
+    ChatChannelCommand chat_channel_command = 1;           // 채널 관련 명령
+    ChatUserCommand chat_user_command = 2;                 // 유저 관련 명령
+  }
+}
+
+message ChatChannelCommand {
+  oneof command {
+    JoinChannel join_channel = 1;           // 채널 입장
+    LeaveChannel leave_channel = 2;         // 채널 퇴장
+    CreateChannel create_channel = 6;       // 채널 생성
+    DeleteChannel delete_channel = 7;       // 채널 삭제
+    CreateChannelWithHostUser create_channel_with_host_user = 8;
+    ReserveChannelMigration reserve_channel_migration = 9;  // 채널 마이그레이션 예약
+    CancelChannelMigration cancel_channel_migration = 10;   // 채널 마이그레이션 예약 취소
+  }
+
+  message JoinChannel {
+    string channel_name = 1;
+    string user_id = 2;
+  }
+
+  message LeaveChannel {
+    string channel_name = 1;
+    string user_id = 2;
+  }
+
+  message CreateChannel {
+    string server_name = 1;
+    string channel_name = 2;              // 채널 이름 {도메인 명}:{식별자} - ex) party:1, guild:4
+    int64 channel_type_id = 3;            // 채널 타입 ID (chat_channel_type.yaml)
+  }
+
+  message CreateChannelWithHostUser {
+    string host_user_id = 1;
+    string channel_name = 2;
+    int64 channel_type_id = 3;
+  }
+
+  message DeleteChannel {
+    string server_name = 1;
+    string channel_name = 2;
+  }
+
+  // 특정 채널의 유저를 다른 채널로 마이그레이션 예약
+  // 온라인 유저: 즉시 마이그레이션
+  // 오프라인 유저: DB에 예약 저장 후 접속 시 처리
+  message ReserveChannelMigration {
+    string from_channel = 1;        // 출발 채널 (예: "world:HomeBattleA")
+    string to_channel = 2;          // 도착 채널 (예: "world:DungeonInterC")
+    string filter_server_name = 3;  // 필터링할 서버명 (지정 시 해당 서버 유저만 마이그레이션)
+  }
+
+  // 예약된 채널 마이그레이션 취소
+  // 링크 해제 시 기존 예약을 삭제하여 오프라인 유저가 잘못된 채널로 이동하는 것을 방지
+  message CancelChannelMigration {
+    string from_channel = 1;  // 취소할 예약의 출발 채널
+    string to_channel = 2;    // 취소할 예약의 도착 채널
+  }
+}
+
+message ChatUserCommand {
+  oneof command {
+    KickUser kick_user = 4;
+    KickAllUser kick_all_user = 5;
+    BlockUser block_user = 6;
+    UnblockUser unblock_user = 7;
+  }
+
+  message BlockUser {
+    string server_name = 1;
+    string user_id = 2;             // 차단을 요청한 유저
+    string target_user_id = 3;      // 차단 요청 유저가 차단할 대상 유저
+  }
+
+  message UnblockUser {
+    string server_name = 1;
+    string user_id = 2;             // 차단 해제를 요청한 유저
+    string target_user_id = 3;
+  }
+
+  message RegisterUserSession {// Upsert
+    string session_key = 1;
+    int64 server_id = 2;
+    string user_id = 3;             // 유저 아이디(UUID)
+  }
+
+  message UnregisterUserSession {
+    string session_key = 1;
+  }
+
+  message KickUser {
+    string server_name = 1;
+    string user_id = 2;
+    common.WebSocketCloseCode close_code = 3;
+  }
+
+  message KickAllUser {
+    string server_name = 1;
+    common.WebSocketCloseCode close_code = 2;
+  }
+
+}
+
+message ChatMessageCommand {
+
+  oneof command {
+    SendMessage send_message = 1;                               // 채팅 전송
+    SendDirectMessage send_direct_message = 2;                  // 다이렉트 메시지 전송
+    SendMessageByChannelType send_message_by_channel_type = 3;  // 채널 타입 기반 메시지 전송
+    SendTargetedMessage send_targeted_message = 4;              // 타겟 유저에게 메시지 전송
+
+    ListUserChannel list_user_channel = 10;                      // 유저의 채널 리스트 목록 전송
+  }
+
+  message SendMessage {
+    string channel_id = 1; // 일반채팅일땐 비워도 된다.
+    optional string send_user_id = 2;  // character_uuid
+    Message message = 4;
+    google.protobuf.Timestamp send_at = 5;
+    int64 chat_type_id = 6;                           // 채팅 타입 ID (chat_type.yaml)
+  }
+
+  message SendDirectMessage {
+    optional string send_user_id = 1;                  // 발신자 유저 아이디 (시스템 메시지 전송시 null)
+    string receive_user_id = 2;
+    Message message = 3;
+    google.protobuf.Timestamp send_at = 4;
+    int64 chat_type_id = 5;                            // 채팅 타입 ID (resource yaml 참고)
+  }
+
+  message SendTargetedMessage {
+    optional string send_user_id = 1;                  // 발신자 유저 아이디 (시스템 메시지 전송시 null)
+    repeated string receive_user_ids = 2;
+    Message message = 3;
+    google.protobuf.Timestamp send_at = 4;
+    int64 chat_type_id = 5;                            // 채팅 타입 ID (resource yaml 참고)
+  }
+
+  /**
+    * 서버내 채널 타입과 일치하는 모든 채널에 메시지 전송 (시스템 메시지용)
+   */
+  message SendMessageByChannelType {
+    string server_name = 1;
+    int64 channel_type_id = 2;                         // 채널 타입 ID (chat_channel_type.yaml)
+    Message message = 3;
+    google.protobuf.Timestamp send_at = 4;
+    int64 chat_type_id = 5;                            // 채팅 타입 ID (resource yaml 참고)
+  }
+
+  message ListUserChannel {
+    string user_id = 1;
+  }
+
+}
+
+
+message ChatRedisDto {
+  Topic topic = 1;
+  string chat_type_id = 2;
+  ChatMessage chat_message = 3;
+  string send_user_id = 4;
+  google.protobuf.Timestamp send_at = 5;
+  bool list_user_channel = 6;
+  optional string trace_id = 7;
+  optional google.protobuf.Timestamp published_at = 8;
+  optional string receive_user_id = 9;
+
+  message Topic {
+    string id = 1;
+    string type = 2;
+  }
+
+  message ChatMessage {
+    repeated Content contents = 1;
+  }
+
+  message Content {
+    ContentType type = 1;
+    optional string text = 2;
+    optional bytes data = 3;
+  }
+
+  enum ContentType {
+    CONTENT_TYPE_UNSPECIFIED = 0;
+    TEXT = 1;
+    DATA = 2;
+  }
+}

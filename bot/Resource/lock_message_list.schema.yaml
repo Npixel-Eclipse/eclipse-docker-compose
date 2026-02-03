@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+
+    Name:
+      type: string
+
+    Comment:
+      type: string
+
+    ServiceType:
+      type: string 
+      enum: # EXNetworkServiceType 와 순서가 같아야 합니다.
+        - Front
+        - Lobby
+        - Battle
+        - Chat
+
+    MessageMainType:
+      type: integer
+      default: 0
+    MessageSubtype:
+      type: integer
+      default: 0
+
+    ShowLoadingUI:
+      type: boolean
+      default: false
+    
+  required:
+    - Id
+    - Name

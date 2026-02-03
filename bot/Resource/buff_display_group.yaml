@@ -1,0 +1,55 @@
+- Id: 1
+  Name: Buff_Display_Group_HuntingZone
+  Description: UIWord_HuntingZone_Buff
+  Summary: UIWord_HuntingZone_Buff
+  SubSummary: UIWord_HuntingZone_Buff
+  Icon: /Game/UIIcon/Buff/BUF_MPPotion.BUF_MPPotion
+  Comment: 사냥터 소유 버프
+- Id: 19
+  Name: Test_Item_PossessBuff
+  Description: ItemPossessBuff_Desc
+  Summary: ItemPossessBuff_Desc
+  SubSummary: ItemPossessBuff_Desc
+  Icon: /Game/UIIcon/Buff/BUF_MPPotion.BUF_MPPotion
+  Comment: 아이템 보유 효과 버프
+- Id: 2
+  Name: Guild_Basic_Buff
+  Description: GuildBasicBuff_Desc
+  Summary: GuildBasicBuff_Desc
+  SubSummary: GuildBasicBuff_Desc
+  Icon: /Game/UIIcon/Buff/GuildBUF_Basic.GuildBUF_Basic
+  Comment: 길드 기본 버프
+- Id: 331
+  Name: Guild_Tech_Buff
+  Description: GuildTechBuff_Desc
+  Summary: GuildCharacteristicBuff_Desc
+  SubSummary: GuildCharacteristicBuff_Desc
+  Icon: /Game/UIIcon/Buff/GuildBUF_Stat.GuildBUF_Stat
+  Comment: 길드 연구 버프
+- Id: 130
+  Name: Fighter_SkinRoll
+  Description: Fighter_SkinRoll
+  Summary: Fighter_SkinRoll_Buff_Summary
+  Icon: /Game/UIIcon/Buff/BUF_Retention_01.BUF_Retention_01
+  Comment: "[PC스킬] 파이터 최후의 저항 버프 중첩"
+- Id: 351
+  Name: Ranger_Rampage
+  Description: Ranger_Rampage
+  Summary: Ranger_Rampage_Buff_Summary
+  SubSummary: Ranger_Rampage_Buff_SubSummary
+  Icon: /Game/UIIcon/Buff/BUF_Retention_01.BUF_Retention_01
+  Comment: "[PC스킬] 레인저 폭주 버프 중첩"
+- Id: 182
+  Name: Special_Stun
+  Description: Npc_Special_Stun
+  Summary: Npc_Special_Stun_Summary
+  SubSummary: Npc_Special_Stun_SubSummary
+  Icon: /Game/UIIcon/Buff/DBUF_SM_Bash_01.DBUF_SM_Bash_01
+  Comment: 상태 이상 기절
+- Id: 333
+  Name: BM_Subscribe
+  Description: Item_Subscribe_Buff_Desc
+  Summary: Item_Subscribe_Buff_Desc
+  SubSummary: Item_Subscribe_Buff_Desc
+  Icon: /Game/UIIcon/Buff/BUF_MPPotion.BUF_MPPotion
+  Comment: 구독 패키지 버프 (테스트용)

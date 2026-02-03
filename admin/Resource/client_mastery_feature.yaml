@@ -1,0 +1,39 @@
+- Id: 1
+  Name: Mastery
+  DescriptionInfos:
+    - Type: PageOpenCondition_CharLevel
+      Description: UIWord_Condition_CharLevel
+    - Type: PageOpenCondition_MasteryLevel
+      Description: UIWord_Condition_MasteryLevel
+    - Type: PageOpenCondition_SpendPoint
+      Description: UIWord_Condition_SpendPoint
+    - Type: EssenceOpenFail_PointInsufficiention
+      Description: UIWord_SystemMsg_OpenEssence_Point_Fail
+    - Type: EssenceOpenFail_RequireEssenceUnOpened
+      Description: UIWord_SystemMsg_OpenEssence_PreviousNode_Fail
+    - Type: MasteryLevelUp
+      Description: UIWord_SystemMsg_MasteryLevel_Up
+    - Type: MasteryItemPointUp
+      Description: UIWord_SystemMsg_MasteryPoint_Added
+    - Type: MasteryItemExpUp
+      Description: UIWord_SystemMsg_MasteryExp_Added
+    - Type: EssenceResetFail_NextEssenceOpened
+      Description: UIWord_SystemMsg_EssenceNodeConnect_Fail
+    - Type: EssenceResetFail_NextPageOpened
+      Description: UIWord_SystemMsg_EssenceOpenNextPage_Fail
+    - Type: MasteryItemPointUp_Fail_MaxPoint
+      Description: UIWord_SystemMsg_MaxItemMasteryPoint_Fail
+    - Type: EssenceInfoTab_Ability
+      Description: UIWord_MasteryInfoTab_Ability
+    - Type: EssenceInfoTab_Skill
+      Description: UIWord_MasteryInfoTab_Skill
+    - Type: EssenceInfoTab_Fusion
+      Description: UIWord_MasteryInfoTab_Fusion
+    - Type: ActiveCondition_Level
+      Description: UIWord_Mastery_ActiveCondition_Level
+    - Type: ActiveCondition_PrevCondition
+      Description: UIWord_Mastery_ActiveCondition_PrevCondition
+    - Type: ActiveCondition_Node
+      Description: UIWord_Mastery_ActiveCondition_Node
+    - Type: ActiveCondition_Group
+      Description: UIWord_Mastery_ActiveCondition_Group

@@ -1,0 +1,71 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DescriptionName:
+      type: string
+      ref: description
+    # 정렬 순서 (오름차순으로 정렬, 동일 값일 경우 ID를 기준으로 2차 정렬)
+    OrderIndex:
+      type: integer
+      minimum: 1
+      default: 9999
+    ValueDivide:
+      type: integer
+      minimum: 1
+      default: 0
+    ShowPositiveSign: # 양수일 때에도 항상 부호(+)를 표시할지 여부를 설정
+      type: boolean
+      default: False
+    SuffixText:
+      type: string
+    UseGrouping: #숫자 그룹화(보통 천 단위 구분)를 사용할지 여부를 설정
+      type: boolean
+      default: True
+    MinimumFractionalDigits: #최소 소수점 이하 자릿수를 지정
+      type: integer
+      minimum: 0
+      default: 0
+    MaximumFractionalDigits: #최대 소수점 이하 자릿수를 지정
+      type: integer
+      minimum: 0
+      default: 3
+    Type:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+      enum:
+        - None
+        - Stat
+        - EntireStat
+    TextStyleKey:
+      type: string    
+      ref: richtext_display
+    GroupType:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+      enum:
+        - None
+        - Attack
+        - Defense
+        - PVE
+        - PVP
+        - StatusEffect
+        - Support
+        - Fortress
+        - Etc
+        - Skill
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - OrderIndex
+    - GroupType

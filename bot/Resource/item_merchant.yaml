@@ -1,0 +1,221 @@
+- Id: 1
+  Name: Merchant_Basic_Goods
+  Comment: 기본 잡화 상인
+  MerchandiseGroup:
+    - Basic_Goods_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  AutoSell: true
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 3
+  Name: Merchant_Basic_Armor
+  Comment: 기본 방어구 상인
+  MerchandiseGroup:
+    - Basic_Armor_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 4
+  Name: Merchant_Basic_Accessory
+  Comment: 기본 악세서리 상인
+  MerchandiseGroup:
+    - Basic_Accessory_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 5
+  Name: Merchant_Basic_SkillBook
+  Comment: 기본 스킬북 상인
+  MerchandiseGroup:
+    - Basic_SkillBook_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 6
+  Name: Merchant_Basic_Union
+  Comment: 기본 장비 통합 상인
+  MerchandiseGroup:
+    - Basic_Union_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 104
+  Name: Merchant_Basic_SkillEnchant
+  Comment: 스킬 강화석 상인
+  MerchandiseGroup:
+    - Basic_SkillEnchant_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 94
+  Name: Merchant_Basic_Dia
+  Comment: "다이아 상인 (임시)->임시 길드 상인"
+  MerchandiseGroup:
+    - Basic_Guild_Merchandises
+    - Basic_Guild_Merchandises_Fighter
+    - Basic_Guild_Merchandises_Ranger
+    - Basic_Guild_Merchandises_Sorcerer
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyGuildCoin
+- Id: 1763
+  Name: Merchant_Basic_Guild
+  Comment: 길드 상인
+  MerchandiseGroup:
+    - Basic_Guild_Merchandises
+  MerchantGroup: Merchant_Group_Guild
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyGuildCoin
+- Id: 1700
+  Name: Merchant_Basic_BattleGround
+  Comment: 전장의 증표 상인
+  MerchandiseGroup:
+    - Basic_BattleGround_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyBattleGroundToken
+- Id: 522
+  Name: Merchant_Basic_Weapon
+  Comment: 무기 상인
+  MerchandiseGroup:
+    - Basic_Weapon_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 526
+  Name: Merchant_Basic_Challenge
+  Comment: 도전 던전 상인
+  MerchandiseGroup:
+    - Basic_Challenge_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyChallengeToken
+- Id: 1810
+  Name: Merchant_HuntingZone_Owner_A
+  Comment: (테스트) 소유 상점_A 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_A_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_A
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1251
+  Name: Merchant_HuntingZone_Owner_B
+  Comment: (테스트) 소유 상점_B 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_B_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_B
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1327
+  Name: Merchant_HuntingZone_A
+  Comment: (테스트) 특산품 상점_A 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_A_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_A
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken
+- Id: 2175
+  Name: Merchant_HuntingZone_B
+  Comment: (테스트) 특산품 상점_B 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_B_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_B
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken
+- Id: 552
+  Name: Merchant_HuntingZone_Owner_1
+  Comment: (테스트) 소유 상점_1 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_1_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_1
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 844
+  Name: Merchant_HuntingZone_Owner_2
+  Comment: (테스트) 소유 상점_2 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_2_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_2
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 589
+  Name: Merchant_HuntingZone_1
+  Comment: (테스트) 특산품 상점_1 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_1_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_1
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken_Test_1
+- Id: 1022
+  Name: Merchant_HuntingZone_2
+  Comment: (테스트) 특산품 상점_2 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_2_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_2
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken_Test_1
+- Id: 1706
+  Name: Merchant_HuntingZone_Owner_3
+  Comment: (테스트) 소유 상점_3 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_3_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_3
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1488
+  Name: Merchant_HuntingZone_Owner_4
+  Comment: (테스트) 소유 상점_4 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_Owner_4_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_Owner_4
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1898
+  Name: Merchant_HuntingZone_3
+  Comment: (테스트) 특산품 상점_3 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_3_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_3
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken_Test_2
+- Id: 1699
+  Name: Merchant_HuntingZone_4
+  Comment: (테스트) 특산품 상점_4 세부 권역
+  MerchandiseGroup:
+    - HuntingZone_4_Merchandises
+  MerchantGroup: Merchant_Group_HuntingZone_4
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyHuntingZoneToken_Test_2

@@ -1,0 +1,1152 @@
+- Id: 1
+  Name: PotentialSlot1_1
+  Comment: 근원1_1
+  ManifestRule:
+    - Id: 1
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 2
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 3
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 19
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 20
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 21
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 37
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 38
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 39
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 55
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 56
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 57
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 73
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 74
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 75
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 2
+  Name: PotentialSlot1_2
+  Comment: 근원1_2
+  ManifestRule:
+    - Id: 4
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 5
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 6
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 22
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 23
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 24
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 40
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 41
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 42
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 58
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 59
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 60
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 76
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 77
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 78
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 3
+  Name: PotentialSlot1_3
+  Comment: 근원1_3
+  ManifestRule:
+    - Id: 7
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 8
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 9
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 25
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 26
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 27
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 43
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 44
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 45
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 61
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 62
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 63
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 79
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 80
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 81
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 4
+  Name: PotentialSlot1_4
+  Comment: 근원1_4
+  ManifestRule:
+    - Id: 10
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 11
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 12
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 28
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 29
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 30
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 46
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 47
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 48
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 64
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 65
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 66
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 82
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 83
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 84
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 5
+  Name: PotentialSlot1_5
+  Comment: 근원1_5
+  ManifestRule:
+    - Id: 13
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 14
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 15
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 31
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 32
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 33
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 49
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 50
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 51
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 67
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 68
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 69
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 85
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 86
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 87
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 6
+  Name: PotentialSlot1_6
+  Comment: 근원1_6
+  ManifestRule:
+    - Id: 16
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 17
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 18
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 34
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 35
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 36
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 52
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 53
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 54
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 70
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 71
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 72
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 88
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 89
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 90
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 7
+  Name: PotentialSlot2_1
+  Comment: 근원2_1
+  ManifestRule:
+    - Id: 91
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 92
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 93
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 109
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 110
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 111
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 127
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 128
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 129
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 145
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 146
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 147
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 163
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 164
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 165
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 8
+  Name: PotentialSlot2_2
+  Comment: 근원2_2
+  ManifestRule:
+    - Id: 94
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 95
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 96
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 112
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 113
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 114
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 130
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 131
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 132
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 148
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 149
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 150
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 166
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 167
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 168
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 9
+  Name: PotentialSlot2_3
+  Comment: 근원2_3
+  ManifestRule:
+    - Id: 97
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 98
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 99
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 115
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 116
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 117
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 133
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 134
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 135
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 151
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 152
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 153
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 169
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 170
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 171
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 10
+  Name: PotentialSlot2_4
+  Comment: 근원2_4
+  ManifestRule:
+    - Id: 100
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 101
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 102
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 118
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 119
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 120
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 136
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 137
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 138
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 154
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 155
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 156
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 172
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 173
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 174
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 11
+  Name: PotentialSlot2_5
+  Comment: 근원2_5
+  ManifestRule:
+    - Id: 103
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 104
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 105
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 121
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 122
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 123
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 139
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 140
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 141
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 157
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 158
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 159
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 175
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 176
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 177
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 12
+  Name: PotentialSlot2_6
+  Comment: 근원2_6
+  ManifestRule:
+    - Id: 106
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 107
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 108
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 124
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 125
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 126
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 142
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 143
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 144
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 160
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 161
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 162
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 178
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 179
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 180
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 13
+  Name: PotentialSlot3_1
+  Comment: 근원3_1
+  ManifestRule:
+    - Id: 181
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 182
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 183
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 199
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 200
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 201
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 217
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 218
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 219
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 235
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 236
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 237
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 253
+      TargetProperty: MeleeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 254
+      TargetProperty: RangeHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 255
+      TargetProperty: MagicHit
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 14
+  Name: PotentialSlot3_2
+  Comment: 근원3_2
+  ManifestRule:
+    - Id: 184
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 185
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 186
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 202
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 203
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 204
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 220
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 221
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 222
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 238
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 239
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 240
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 256
+      TargetProperty: MeleeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 257
+      TargetProperty: RangeDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 258
+      TargetProperty: MagicDodge
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 15
+  Name: PotentialSlot3_3
+  Comment: 근원3_3
+  ManifestRule:
+    - Id: 187
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 188
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 189
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 205
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 206
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 207
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 223
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 224
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 225
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 241
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 242
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 243
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 259
+      TargetProperty: MeleeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 260
+      TargetProperty: RangeCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 261
+      TargetProperty: MagicCriticalProbability
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 16
+  Name: PotentialSlot3_4
+  Comment: 근원3_4
+  ManifestRule:
+    - Id: 190
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 191
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 192
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 208
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 209
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 210
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 226
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 227
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 228
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 244
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 245
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 246
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 262
+      TargetProperty: MeleeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 263
+      TargetProperty: RangeCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 264
+      TargetProperty: MagicCriticalDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 17
+  Name: PotentialSlot3_5
+  Comment: 근원3_5
+  ManifestRule:
+    - Id: 193
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 194
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 195
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 211
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 212
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 213
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 229
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 230
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 231
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 247
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 248
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 249
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 265
+      TargetProperty: MeleeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 266
+      TargetProperty: RangeDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 267
+      TargetProperty: MagicDamage
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+- Id: 18
+  Name: PotentialSlot3_6
+  Comment: 근원3_6
+  ManifestRule:
+    - Id: 196
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "17%"
+    - Id: 197
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 198
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Common
+      Probability: "13%"
+    - Id: 214
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "11%"
+    - Id: 215
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 216
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Uncommon
+      Probability: "8%"
+    - Id: 232
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "7%"
+    - Id: 233
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 234
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Rare
+      Probability: "5%"
+    - Id: 250
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "4%"
+    - Id: 251
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 252
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Epic
+      Probability: "3%"
+    - Id: 268
+      TargetProperty: MeleeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 269
+      TargetProperty: RangeArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"
+    - Id: 270
+      TargetProperty: MagicArmorClass
+      TargetPropertyGrade: Legendary
+      Probability: "1%"

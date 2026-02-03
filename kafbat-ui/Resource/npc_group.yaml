@@ -1,0 +1,840 @@
+- Id: 1038
+  Name: Var_Wastes_MaregraWrecks
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_MaregraWrecks_Desc
+  Comment: 로스트윅
+- Id: 11
+  Name: Varitan
+  Parent: World
+  Description: Npc_Group_Varitan_Desc
+  Comment: 바리탄
+- Id: 21
+  Name: Eldar
+  Parent: World
+  Description: Npc_Group_Eldar_Desc
+  Comment: 엘다르
+- Id: 31
+  Name: Castia
+  Parent: World
+  Description: Npc_Group_Castia_Desc
+  Comment: 카스티아
+- Id: 101
+  Name: Rainwood
+  Parent: Varitan
+  Description: Npc_Group_Rainwood_Desc
+  Comment: 레인우드
+- Id: 102
+  Name: Varitan_Subjugate
+  Parent: Varitan
+  Description: Npc_Group_Varitan_Subjugate_Desc
+  Comment: 바리탄 침탈지대
+- Id: 103
+  Name: Varitan_Wastes
+  Parent: Varitan
+  Description: Npc_Group_Varitan_Wastes_Desc
+  Comment: 바리탄 패전지대
+- Id: 104
+  Name: West_Varitan
+  Parent: Varitan
+  Description: Npc_Group_West_Varitan_Desc
+  Comment: 바리탄 서부
+- Id: 105
+  Name: Varitan_Blightlands
+  Parent: Varitan
+  Description: Npc_Group_Varitan_Blightlands_Desc
+  Comment: 바리탄 잠식지대
+- Id: 201
+  Name: Eldar_Dawnbough
+  Parent: Eldar
+  Description: Npc_Group_Eldar_Dawnbough_Desc
+  Comment: 엘다르 여명지대
+- Id: 202
+  Name: Eldar_Heartwood
+  Parent: Eldar
+  Description: Npc_Group_Eldar_Heartwood_Desc
+  Comment: 엘다르 중심지대
+- Id: 203
+  Name: Eldar_Shadowbloom
+  Parent: Eldar
+  Description: Npc_Group_Eldar_Shadowbloom_Desc
+  Comment: 엘다르 그늘지대
+- Id: 301
+  Name: East_Castia
+  Parent: Castia
+  Description: Npc_Group_East_Castia_Desc
+  Comment: 동부 카스티아
+- Id: 302
+  Name: South_Castia
+  Parent: Castia
+  Description: Npc_Group_South_Castia_Desc
+  Comment: 남부 카스티아
+- Id: 303
+  Name: West_Castia
+  Parent: Castia
+  Description: Npc_Group_West_Castia_Desc
+  Comment: 서부 카스티아
+- Id: 304
+  Name: North_Castia
+  Parent: Castia
+  Description: Npc_Group_North_Castia_Desc
+  Comment: 북부 카스티아
+- Id: 305
+  Name: Central_Castia
+  Parent: Castia
+  Description: Npc_Group_Central_Castia_Desc
+  Comment: 중부 카스티아
+- Id: 1011
+  Name: Ele_Sacredforest_LakeOfRemembrance
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_LakeOfRemembrance_Desc
+  Comment: 이즈아 호수
+- Id: 1012
+  Name: Ele_Sacredforest_ElessirHeartlands
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_ElessirHeartlands_Desc
+  Comment: 홀룰루 동굴
+- Id: 1013
+  Name: Ele_Sacredforest_ArkesylOuterRim
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_ArkesylOuterRim_Desc
+  Comment: 스톤 헤드
+- Id: 1014
+  Name: Ele_Sacredforest_ArkesylLowerRuins
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_ArkesylLowerRuins_Desc
+  Comment: 난쟁이 도굴꾼 소굴
+- Id: 1015
+  Name: Ele_Sacredforest_GardenOfTheOath
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_GardenOfTheOath_Desc
+  Comment: 이즈아 정원
+- Id: 1016
+  Name: Ele_Sacredforest_ForestOutskirts
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_ForestOutskirts_Desc
+  Comment: 용개 사냥꾼 소굴
+- Id: 1017
+  Name: Ele_Sacredforest_CastiaSurveyPost
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_CastiaSurveyPost_Desc
+  Comment: 카스티아 제국군 초소
+- Id: 1021
+  Name: Var_Subjugate_VigiliPlain
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_VigiliPlain_Desc
+  Comment: 하이윙가드 동부 평원
+- Id: 1022
+  Name: Var_Subjugate_VigiliFarmlands
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_VigiliFarmlands_Desc
+  Comment: 골든 오크 농장
+- Id: 1023
+  Name: Var_Subjugate_RubroCartelPost
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_RubroCartelPost_Desc
+  Comment: 할란 용병단 전초기지
+- Id: 1024
+  Name: Var_Subjugate_MareliceHarbor
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_MareliceHarbor_Desc
+  Comment: 자유항
+- Id: 1025
+  Name: Var_Subjugate_TheForsakenBluffs
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_TheForsakenBluffs_Desc
+  Comment: 빌린 언덕
+- Id: 1026
+  Name: Var_Subjugate_ImperialQuarry
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_ImperialQuarry_Desc
+  Comment: 대발파회 토목공사 지구
+- Id: 1027
+  Name: Var_Subjugate_HolyOrderCheckpoint
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_HolyOrderCheckpoint_Desc
+  Comment: 바리탄 성서기사단 국경 수비대
+- Id: 1030
+  Name: Bloodshed
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Bloodshed_Desc
+  Comment: 블러드쉐드
+- Id: 8860
+  Name: Var_Subjugate_BloodSoakedSealAltar_1F
+  Parent: Bloodshed
+  Description: Npc_Group_Var_Subjugate_BloodSoakedSealAltar_1F_Desc
+  Comment: 블러드쉐드 1층
+- Id: 8974
+  Name: Var_Subjugate_BloodSoakedSealAltar_2F
+  Parent: Bloodshed
+  Description: Npc_Group_Var_Subjugate_BloodSoakedSealAltar_2F_Desc
+  Comment: 블러드쉐드 2층
+- Id: 1031
+  Name: Var_Wastes_CliffofPurity
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_CliffofPurity_Desc
+  Comment: 순결의 절벽
+- Id: 1032
+  Name: Varitan_Wastes_Screaming_Canyon
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Varitan_Wastes_Screaming_Canyon_Desc
+  Comment: 비명 협곡
+- Id: 1033
+  Name: Var_Wastes_KarsaPlains
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_KarsaPlains_Desc
+  Comment: 바리탄 전초기지
+- Id: 1034
+  Name: Var_Wastes_VaritanOuterWatchpost
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_VaritanOuterWatchpost_Desc
+  Comment: 바리탄 경비초소
+- Id: 1036
+  Name: Var_Wastes_CarmenoBanditDen
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_CarmenoBanditDen_Desc
+  Comment: 붉은 볼짝 도적단 소굴
+- Id: 1037
+  Name: Varitan_Wastes_Ruined_Village
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Varitan_Wastes_Ruined_Village_Desc
+  Comment: 폐허가 된 마을
+- Id: 8623
+  Name: Var_Wastes_HolyOrderForwardBase
+  Parent: Varitan_Wastes
+  Description: Address_Var_Wastes_HolyOrderForwardBase
+  Comment: 성위단 전초기지
+- Id: 6077
+  Name: Var_Wastes_PalleboRemnantsCamp
+  Parent: Varitan_Wastes
+  Description: Address_Var_Wastes_PalleboRemnantsCamp
+  Comment: 팔레보 잔류지
+- Id: 1
+  Name: World
+  Description: Npc_Group_World_Desc
+  Comment: 월드 전체
+- Id: 1039
+  Name: Var_Subjugate_EvoFamilyRuins
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_EvoFamilyRuins_Desc
+  Comment: 에보 가문의 핏줄
+- Id: 1051
+  Name: Var_Blightlands_ImperialLogging
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_ImperialLogging_Desc
+  Comment: 하이윙가드 벌목지구
+- Id: 1052
+  Name: Var_Blightlands_EscaronExcavation
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_EscaronExcavation_Desc
+  Comment: 대발파회 채광지
+- Id: 1053
+  Name: Var_Blightlands_CastiaLuminaryII
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_CastiaLuminaryII_Desc
+  Comment: 바리탄 성서 수도회
+- Id: 1054
+  Name: Var_Blightlands_CastianMercenaryPost
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_CastianMercenaryPost_Desc
+  Comment: 카스티아 용병단 국경 수비대
+- Id: 1055
+  Name: Var_Blightlands_SilentRotValley
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_SilentRotValley_Desc
+  Comment: 나무 계곡
+- Id: 5770
+  Name: Var_Blightlands_BlackRindWoods
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_BlackRindWoods_Desc
+  Comment: 검은 껍질의 숲
+- Id: 1056
+  Name: Var_Blightlands_CremisiMines
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_CremisiMines_Desc
+  Comment: 소이산맥 광산촌
+- Id: 1057
+  Name: Var_Blightlands_PortPalmir
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_PortPalmir_Desc
+  Comment: 팔미르 항
+- Id: 1058
+  Name: Var_Blightlands_MilanCitadel
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_MilanCitadel_Desc
+  Comment: 밀란의 성채
+- Id: 2010
+  Name: Kulika_Undying
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Kulika_Undying_Desc
+  Comment: 구리 불멸지
+- Id: 1375
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_1F
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Description: Npc_Group_Eld_Dawnbough_GorgeOfTheLeftBehind_1F_Desc
+  Comment: 구리 불멸지 1층
+- Id: 7271
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_2F
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Description: Npc_Group_Eld_Dawnbough_GorgeOfTheLeftBehind_2F_Desc
+  Comment: 구리 불멸지 2층
+- Id: 8626
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_3F
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Description: Npc_Group_Eld_Dawnbough_GorgeOfTheLeftBehind_3F_Desc
+  Comment: 구리 불멸지 3층
+- Id: 2547
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_4F
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Description: Npc_Group_Eld_Dawnbough_GorgeOfTheLeftBehind_4F_Desc
+  Comment: 구리 불멸지 4층
+- Id: 4319
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind_5F
+  Parent: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Description: Npc_Group_Eld_Dawnbough_GorgeOfTheLeftBehind_5F_Desc
+  Comment: 구리 불멸지 5층
+- Id: 2011
+  Name: Eld_Dawnbough_MirageVale
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_MirageVale_Desc
+  Comment: 신기루 계곡
+- Id: 2012
+  Name: Eld_Dawnbough_NasharOuterwardRuins
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_NasharOuterwardRuins_Desc
+  Comment: 나샤르의 보루
+- Id: 2013
+  Name: Eld_Dawnbough_EldarGarrison
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_EldarGarrison_Desc
+  Comment: 엘란 국경 수비대
+- Id: 2014
+  Name: Eld_Dawnbough_LakeofEncroachment
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_LakeofEncroachment_Desc
+  Comment: 갈고리 호수
+- Id: 2015
+  Name: Eld_Dawnbough_BelkarRockland
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_BelkarRockland_Desc
+  Comment: 발꼬 락
+- Id: 2016
+  Name: Eld_Dawnbough_LandofKarakan
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_LandofKarakan_Desc
+  Comment: 용족 카라칸의 땅
+- Id: 2017
+  Name: Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters_Desc
+  Comment: 야만족장 토우렌 자매
+- Id: 2018
+  Name: Eld_Dawnbough_BelkarSedimentField
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eld_Dawnbough_BelkarSedimentField_Desc
+  Comment: 검용의 흔적
+- Id: 13654
+  Name: Eld_Dawnbough_GorgeOfTheLeftBehind
+  Parent: Eldar_Dawnbough
+- Id: 4164
+  Name: Eld_Dawnbough_NasharRefuge
+  Parent: Eldar_Dawnbough
+- Id: 7475
+  Name: Eld_Dawnbough_BelkarDeepstrata
+  Parent: Eldar_Dawnbough
+- Id: 2021
+  Name: Eld_Heartwood_ForsakenElsarShrine
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_ForsakenElsarShrine_Desc
+  Comment: 아르칸다르 교단
+- Id: 2022
+  Name: Eld_Heartwood_BlackveilBasin
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_BlackveilBasin_Desc
+  Comment: 검은막 호수
+- Id: 2023
+  Name: Eld_Heartwood_EverslumberMarsh
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_EverslumberMarsh_Desc
+  Comment: 멧돼지 숲
+- Id: 2024
+  Name: Eld_Heartwood_SpiritCrossing
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_SpiritCrossing_Desc
+  Comment: 나비 혹 잠자리
+- Id: 2025
+  Name: Eld_Heartwood_AshenForestofLoss
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_AshenForestofLoss_Desc
+  Comment: 미로숲
+- Id: 2026
+  Name: Eldar_Heartwood_Slumbering_Sand_Beach
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eldar_Heartwood_Slumbering_Sand_Beach_Desc
+  Comment: 잠든모래 백사장
+- Id: 2027
+  Name: Eld_Heartwood_TheSlumberedShore
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_TheSlumberedShore_Desc
+  Comment: 잠든모래 선착장
+- Id: 2031
+  Name: Eld_Shadowbloom_NasharSepulcher
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_NasharSepulcher_Desc
+  Comment: 루아 총묘
+- Id: 2032
+  Name: Eld_Shadowbloom_WeepingMarsh
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_WeepingMarsh_Desc
+  Comment: 하프 습지
+- Id: 2033
+  Name: Eld_Shadowbloom_GorgeoftheLeftBehind
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_GorgeoftheLeftBehind_Desc
+  Comment: 시체 협곡
+- Id: 2034
+  Name: Eld_Shadowbloom_RuachRiverbank
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_RuachRiverbank_Desc
+  Comment: 루아흐 강변
+- Id: 2035
+  Name: Eld_Shadowbloom_SnikraHideout
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_SnikraHideout_Desc
+  Comment: 난쟁이 왕 두릉크 둥지
+- Id: 2036
+  Name: Eld_Shadowbloom_LandofBrokenVows
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_LandofBrokenVows_Desc
+  Comment: 추방자의 땅
+- Id: 2037
+  Name: Eld_Shadowbloom_GrunzarRotlands
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_GrunzarRotlands_Desc
+  Comment: 오물왕의 땅
+- Id: 2038
+  Name: Eld_Shadowbloom_SunkenLands
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_SunkenLands_Desc
+  Comment: 진흑왕의 땅
+- Id: 2324
+  Name: East_Castia_The_House_Persister
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_The_House_Persister_Desc
+  Comment: 퍼시스터 가문
+- Id: 1901
+  Name: West_Castia_Castia_First_Imperial_Legion_Mercenaries
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Castia_First_Imperial_Legion_Mercenaries_Desc
+  Comment: 카스티아 제국 제1군 소속 용병단
+- Id: 235
+  Name: East_Castia_Castle_Hornhill
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Castle_Hornhill_Desc
+  Comment: 호른힐 성채
+- Id: 4977
+  Name: East_Castia_Stone_Neck
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Stone_Neck_Desc
+  Comment: 스톤 넥
+- Id: 340
+  Name: East_Castia_The_Golden_Valley
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_The_Golden_Valley_Desc
+  Comment: 황금 계곡
+- Id: 1700
+  Name: East_Castia_Kagurock_Mining_City
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Kagurock_Mining_City_Desc
+  Comment: 카굴록 광산도시
+- Id: 5848
+  Name: East_Castia_Faceless_Sisterhood
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Faceless_Sisterhood_Desc
+  Comment: 얼굴 없는 자매단
+- Id: 5469
+  Name: East_Castia_Castia_Prison
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Castia_Prison_Desc
+  Comment: 카스티아 형무소
+- Id: 1746
+  Name: Abrion_Tower
+  Parent: East_Castia
+  Description: Npc_Group_Abrion_Tower_Desc
+  Comment: 아브리온 탑
+- Id: 4880
+  Name: East_Castia_Abrion_Tower_01
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_01_Desc
+  Comment: 아브리온 탑 1층
+- Id: 5041
+  Name: East_Castia_Abrion_Tower_02
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_02_Desc
+  Comment: 아브리온 탑 2층
+- Id: 5318
+  Name: East_Castia_Abrion_Tower_03
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_03_Desc
+  Comment: 아브리온 탑 3층
+- Id: 5412
+  Name: East_Castia_Abrion_Tower_04
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_04_Desc
+  Comment: 아브리온 탑 4층
+- Id: 4171
+  Name: East_Castia_Abrion_Tower_05
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_05_Desc
+  Comment: 아브리온 탑 5층
+- Id: 5767
+  Name: East_Castia_Abrion_Tower_06
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_06_Desc
+  Comment: 아브리온 탑 6층
+- Id: 8695
+  Name: East_Castia_Abrion_Tower_07
+  Parent: Abrion_Tower
+  Description: Npc_Group_East_Castia_Abrion_Tower_07_Desc
+  Comment: 아브리온 탑 7층
+- Id: 4637
+  Name: South_Castia_Vaellan_Parliament
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Vaellan_Parliament_Desc
+  Comment: 바엘란 의사당
+- Id: 7117
+  Name: South_Castia_Castia_Imperial_Frontline_Outpost
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Castia_Imperial_Frontline_Outpost_Desc
+  Comment: 카스티아 제국군 전진초소
+- Id: 5
+  Name: South_Castia_Castle_Astarote
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Castle_Astarote_Desc
+  Comment: 아스타로트 성채
+- Id: 6431
+  Name: South_Castia_Combustionists_Directors_Associate
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Combustionists_Directors_Associate_Desc
+  Comment: 대발파회 감독회
+- Id: 2166
+  Name: South_Castia_Undead_Haksan
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Undead_Haksan_Desc
+  Comment: 언데드 학산
+- Id: 5560
+  Name: South_Castia_Dacaroon_Ruins
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Dacaroon_Ruins_Desc
+  Comment: 다카룬 유적
+- Id: 2212
+  Name: South_Castia_Nest_of_the_Babil_Moth_Queen
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Nest_of_the_Babil_Moth_Queen_Desc
+  Comment: 바빌 나방 여왕 둥지
+- Id: 2077
+  Name: South_Castia_Gaia_Ondor
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Gaia_Ondor_Desc
+  Comment: 가이아 온도르
+- Id: 9497
+  Name: Breath_of_Gaia_Ondor
+  Parent: South_Castia
+  Description: Npc_Group_Breath_of_Gaia_Ondor_Desc
+  Comment: 가이아 온도르의 숨결
+- Id: 5916
+  Name: South_Castia_Breath_of_Gaia_Ondor_01
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_01_Desc
+  Comment: 가이아 온도르의 숨결 1층
+- Id: 6999
+  Name: South_Castia_Breath_of_Gaia_Ondor_02
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_02_Desc
+  Comment: 가이아 온도르의 숨결 2층
+- Id: 9094
+  Name: South_Castia_Breath_of_Gaia_Ondor_03
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_03_Desc
+  Comment: 가이아 온도르의 숨결 3층
+- Id: 2850
+  Name: South_Castia_Breath_of_Gaia_Ondor_04
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_04_Desc
+  Comment: 가이아 온도르의 숨결 4층
+- Id: 8290
+  Name: South_Castia_Breath_of_Gaia_Ondor_05
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_05_Desc
+  Comment: 가이아 온도르의 숨결 5층
+- Id: 5800
+  Name: South_Castia_Breath_of_Gaia_Ondor_06
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_06_Desc
+  Comment: 가이아 온도르의 숨결 6층
+- Id: 9378
+  Name: South_Castia_Breath_of_Gaia_Ondor_07
+  Parent: Breath_of_Gaia_Ondor
+  Description: Npc_Group_South_Castia_Breath_of_Gaia_Ondor_07_Desc
+  Comment: 가이아 온도르의 숨결 7층
+- Id: 1988
+  Name: Holy_Patria_Lesbos_Sanctum
+  Parent: South_Castia
+  Description: Npc_Group_Holy_Patria_Lesbos_Sanctum_Desc
+  Comment: 성녀 페트리아 레스보스 신단
+- Id: 4992
+  Name: South_Castia_Holy_Patria_Lesbos_Sanctum_01
+  Parent: Holy_Patria_Lesbos_Sanctum
+  Description: Npc_Group_South_Castia_Holy_Patria_Lesbos_Sanctum_01_Desc
+  Comment: 성녀 페트리아 레스보스 신단 1층
+- Id: 7588
+  Name: South_Castia_Holy_Patria_Lesbos_Sanctum_02
+  Parent: Holy_Patria_Lesbos_Sanctum
+  Description: Npc_Group_South_Castia_Holy_Patria_Lesbos_Sanctum_02_Desc
+  Comment: 성녀 페트리아 레스보스 신단 2층
+- Id: 3938
+  Name: West_Castia_Blessed_Bastion
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Blessed_Bastion_Desc
+  Comment: 축복 성채
+- Id: 6710
+  Name: West_Castia_Bat_Forest
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Bat_Forest_Desc
+  Comment: 박쥐 숲
+- Id: 2447
+  Name: West_Castia_Anna_Mining_Town
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Anna_Mining_Town_Desc
+  Comment: 안나 광산촌
+- Id: 1980
+  Name: West_Castia_Harpy_Hell
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Harpy_Hell_Desc
+  Comment: 하피 지옥
+- Id: 2492
+  Name: West_Castia_Millenium_Well
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Millenium_Well_Desc
+  Comment: 천년 우물
+- Id: 2918
+  Name: West_Castia_Sharans_Rift
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Sharans_Rift_Desc
+  Comment: 샤란의 균열
+- Id: 89
+  Name: West_Castia_Tower_of_Triumph
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Tower_of_Triumph_Desc
+  Comment: 승전의 탑
+- Id: 5051
+  Name: East_Castia_Golden_Road
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_Golden_Road_Desc
+  Comment: 골든 로드
+- Id: 10665
+  Name: Var_Wastes_LascanoFortress
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_LascanoFortress_Desc
+  Comment: 라스카노 저항군 요새
+- Id: 10433
+  Name: Daily_Dun_Ruined_Castle
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_Desc
+  Comment: 데일리 던전 무법성채
+- Id: 11882
+  Name: Daily_Dun_Undead_Temple
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Undead_Temple_Desc
+  Comment: 데일리 던전 언데드 신전
+- Id: 4111
+  Name: Daily_Dun_Mining_Area
+  Parent: World
+  Description: Npc_Group_Daily_Dun_Mining_Area_Desc
+  Comment: 데일리 던전 광산 지구
+- Id: 10456
+  Name: Daily_Dun_Ruined_Castle_01
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_01_Desc
+  Comment: 데일리 던전 무법성채 1층
+- Id: 4339
+  Name: Daily_Dun_Ruined_Castle_02
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_02_Desc
+  Comment: 데일리 던전 무법성채 2층
+- Id: 11857
+  Name: Daily_Dun_Ruined_Castle_03
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_03_Desc
+  Comment: 데일리 던전 무법성채 3층
+- Id: 4824
+  Name: Daily_Dun_Ruined_Castle_04
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_04_Desc
+  Comment: 데일리 던전 무법성채 4층
+- Id: 4845
+  Name: Daily_Dun_Ruined_Castle_05
+  Parent: Daily_Dun_Ruined_Castle
+  Description: Npc_Group_Daily_Dun_Ruined_Castle_05_Desc
+  Comment: 데일리 던전 무법성채 5층
+- Id: 2069
+  Name: Daily_Dun_Undead_Temple_01
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_01_Desc
+  Comment: 데일리 던전 언데드 신전 1층
+- Id: 2675
+  Name: Daily_Dun_Undead_Temple_02
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_02_Desc
+  Comment: 데일리 던전 언데드 신전 2층
+- Id: 2178
+  Name: Daily_Dun_Undead_Temple_03
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_03_Desc
+  Comment: 데일리 던전 언데드 신전 3층
+- Id: 2152
+  Name: Daily_Dun_Undead_Temple_04
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_04_Desc
+  Comment: 데일리 던전 언데드 신전 4층
+- Id: 889
+  Name: Daily_Dun_Undead_Temple_05
+  Parent: Daily_Dun_Undead_Temple
+  Description: Npc_Group_Daily_Dun_Undead_Temple_05_Desc
+  Comment: 데일리 던전 언데드 신전 5층
+- Id: 11532
+  Name: Daily_Dun_Mining_Area_01
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_01_Desc
+  Comment: 데일리 던전 버려진 채굴지 1층
+- Id: 726
+  Name: Daily_Dun_Mining_Area_02
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_02_Desc
+  Comment: 데일리 던전 버려진 채굴지 2층
+- Id: 7571
+  Name: Daily_Dun_Mining_Area_03
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_03_Desc
+  Comment: 데일리 던전 버려진 채굴지 3층
+- Id: 8271
+  Name: Daily_Dun_Mining_Area_04
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_04_Desc
+  Comment: 데일리 던전 버려진 채굴지 4층
+- Id: 7982
+  Name: Daily_Dun_Mining_Area_05
+  Parent: Daily_Dun_Mining_Area
+  Description: Npc_Group_Daily_Dun_Mining_Area_05_Desc
+  Comment: 데일리 던전 버려진 채굴지 5층
+- Id: 7692
+  Name: BattleGround_Faction_HighRiver
+  Parent: World
+  Description: Npc_Group_BattleGround_Faction_HighRiver_Desc
+  Comment: "[전장] 하이리버 전투"
+- Id: 12301
+  Name: BattleGround_Faction_HighRiver_Stun
+  Parent: BattleGround_Faction_HighRiver
+  Description: Npc_Group_BattleGround_Faction_HighRiver_Stun_Desc
+  Comment: "[전장] 하이리버 전투_기절"
+- Id: 2312
+  Name: Varitan_Wastes_Ch02_09_Instance_01
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_VaritanOuterWatchpost_instance_Desc
+  Comment: 인스턴스 Ch02_09
+- Id: 8111
+  Name: Varitan_Blightlands_Ch03_04_Instance_01
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Varitan_Wastes_Bloodshed02_instance_Desc
+  Comment: 인스턴스 Ch03_04
+- Id: 12996
+  Name: Var_Subjugate_EvoFamilyRuins_Ch04_10_Instance_01
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_EvoFamilyRuins_Desc
+  Comment: 인스턴스 Ch04_10
+- Id: 11606
+  Name: Var_Wastes_VaritanOuterWatchpost_instance
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_VaritanOuterWatchpost_instance_Desc
+  Comment: 인스턴스 바리탄 경비초소
+- Id: 9376
+  Name: Varitan_Wastes_Bloodshed02_instance
+  Parent: Bloodshed
+  Description: Npc_Group_Varitan_Wastes_Bloodshed02_instance_Desc
+  Comment: 인스턴스 블러드쉐드 2층
+- Id: 213
+  Name: Ele_Sacredforest_ElessirHeartlands_instance
+  Parent: Rainwood
+  Description: Npc_Group_Ele_Sacredforest_ElessirHeartlands_instance_Desc
+  Comment: 인스턴스 홀룰루 동굴
+- Id: 10018
+  Name: Ele_Sacredforest_ErmaelOuterwoods
+  Parent: Rainwood
+- Id: 1775
+  Name: Ele_Sacredforest_ArkesylMidlands
+  Parent: Rainwood
+- Id: 5276
+  Name: Eld_Shadowbloom_RuachRiverbank_instance
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_RuachRiverbank_instance_Desc
+  Comment: 인스턴스 루아흐 강변
+- Id: 10920
+  Name: Eld_Heartwood_ForsakenElsarShrine_instance
+  Parent: Eldar_Heartwood
+  Description: Npc_Group_Eld_Heartwood_ForsakenElsarShrine_instance_Desc
+  Comment: 인스턴스 아르칸다르 교단
+- Id: 8266
+  Name: Eld_Heartwood_SilentreachForest
+  Parent: Eldar_Heartwood
+- Id: 8721
+  Name: Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters_instance
+  Parent: Eldar_Dawnbough
+  Description: Npc_Group_Eldar_Dawnbough_Barbarian_Chief_Touren_Sisters_instance_Desc
+  Comment: 인스턴스 야만족장 토우렌 자매
+- Id: 1563
+  Name: Var_Blightlands_EscaronExcavation_instance
+  Parent: Varitan_Blightlands
+  Description: Npc_Group_Var_Blightlands_EscaronExcavation_instance_Desc
+  Comment: 인스턴스 대발파회 채광지
+- Id: 5402
+  Name: Eld_Shadowbloom_GorgeoftheLeftBehind_instance
+  Parent: Eldar_Shadowbloom
+  Description: Npc_Group_Eld_Shadowbloom_GorgeoftheLeftBehind_instance_Desc
+  Comment: 인스턴스 시체 협곡
+- Id: 12768
+  Name: Var_Wastes_CliffofPurity_instance
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Var_Wastes_CliffofPurity_instance_Desc
+  Comment: 인스턴스 순결의 절벽
+- Id: 13707
+  Name: Varitan_Wastes_Screaming_Canyon_instance
+  Parent: Varitan_Wastes
+  Description: Npc_Group_Varitan_Wastes_Screaming_Canyon_instance_Desc
+  Comment: 인스턴스 비명 협곡
+- Id: 10512
+  Name: Var_Subjugate_VaritanCitadel_instance
+  Parent: Varitan_Subjugate
+  Description: Npc_Group_Var_Subjugate_VaritanCitadel_instance_Desc
+  Comment: 인스턴스 바리탄 성채
+- Id: 13731
+  Name: Var_Subjugate_HolyOrderGarrison
+  Parent: Varitan_Subjugate
+- Id: 6801
+  Name: West_Castia_Tower_of_Triumph_instance
+  Parent: West_Castia
+  Description: Npc_Group_West_Castia_Tower_of_Triumph_instance_Desc
+  Comment: 인스턴스 승전의 탑
+- Id: 10102
+  Name: South_Castia_Castle_Astarote_instance
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Castle_Astarote_instance_Desc
+  Comment: 인스턴스 아스타로트 성채
+- Id: 3396
+  Name: South_Castia_Nest_of_the_Babil_Moth_Queen_instance
+  Parent: South_Castia
+  Description: Npc_Group_South_Castia_Nest_of_the_Babil_Moth_Queen_instance_Desc
+  Comment: 인스턴스 바빌 나방 여왕 둥지
+- Id: 2051
+  Name: East_Castia_The_Golden_Valley_instance
+  Parent: East_Castia
+  Description: Npc_Group_East_Castia_The_Golden_Valley_instance_Desc
+  Comment: 인스턴스 황금 계곡

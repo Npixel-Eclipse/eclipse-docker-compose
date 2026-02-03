@@ -1,0 +1,48 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Culture
+  properties:
+    Id:
+      type: integer
+    Culture:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+          LocalizeInfos:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Number
+                - Unit
+              properties:
+                Number: # 단위 (내림차순으로 작성)
+                  type: integer
+                  minimum: 1000
+                Unit:
+                  type: string
+    defaultLocalizeInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Number
+          - Unit
+        properties:
+          Number: # 단위 (내림차순으로 작성)
+            type: integer
+            minimum: 1000
+          Unit:
+            type: string

@@ -1,0 +1,270 @@
+- Id: 1
+  Name: Reroll_Polymorph_Epic
+  Comment: 영웅 초월 다시뽑기
+  RerollItem: RecipeReroll_Polymorph_Epic
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 10000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 13750
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 20625
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 27500
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 34375
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Epic_Polymorph_Fighter
+      DisplayCategory: Polymorph_Card_Fighter
+      Comment: 초월 다시뽑기 - 파이터
+    - RecipeOutput: Reroll_Epic_Polymorph_Ranger
+      DisplayCategory: Polymorph_Card_Ranger
+      Comment: 초월 다시뽑기 - 레인저
+    - RecipeOutput: Reroll_Epic_Polymorph_Sorcerer
+      DisplayCategory: Polymorph_Card_Sorcerer
+      Comment: 초월 다시뽑기 - 소서러
+    - RecipeOutput: Reroll_Epic_Polymorph_Assassin
+      DisplayCategory: Polymorph_Card_Assassin
+      Comment: 초월 다시뽑기 - 어쌔신
+- Id: 23
+  Name: Reroll_Polymorph_Legendary
+  Comment: 전설 초월 다시뽑기
+  RerollItem: RecipeReroll_Polymorph_Legendary
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 100000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 68750
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 103125
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 137500
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 171875
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Legendary_Polymorph_Fighter
+      DisplayCategory: Polymorph_Card_Fighter
+      Comment: 전설 초월 다시뽑기 - 파이터
+    - RecipeOutput: Reroll_Legendary_Polymorph_Ranger
+      DisplayCategory: Polymorph_Card_Ranger
+      Comment: 전설 초월 다시뽑기 - 레인저
+    - RecipeOutput: Reroll_Legendary_Polymorph_Sorcerer
+      DisplayCategory: Polymorph_Card_Sorcerer
+      Comment: 전설 초월 다시뽑기 - 소서러
+    - RecipeOutput: Reroll_Legendary_Polymorph_Assassin
+      DisplayCategory: Polymorph_Card_Assassin
+      Comment: 전설 초월 다시뽑기 - 어쌔신
+- Id: 369
+  Name: Reroll_Polymorph_Myth
+  Comment: 신화 초월 다시뽑기
+  RerollItem: RecipeReroll_Polymorph_Myth
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 1000000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 137500
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 206250
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 275000
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 343750
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Myth_Polymorph_Fighter
+      DisplayCategory: Polymorph_Card_Fighter
+      Comment: 신화 초월 다시뽑기 - 파이터
+    - RecipeOutput: Reroll_Myth_Polymorph_Ranger
+      DisplayCategory: Polymorph_Card_Ranger
+      Comment: 신화 초월 다시뽑기 - 레인저
+    - RecipeOutput: Reroll_Myth_Polymorph_Sorcerer
+      DisplayCategory: Polymorph_Card_Sorcerer
+      Comment: 신화 초월 다시뽑기 - 소서러
+    - RecipeOutput: Reroll_Myth_Polymorph_Assassin
+      DisplayCategory: Polymorph_Card_Assassin
+      Comment: 신화 초월 다시뽑기 - 어쌔신
+- Id: 199
+  Name: Reroll_WeaponPolymorph_Epic
+  Comment: 영웅 무기외형 다시뽑기
+  RerollItem: RecipeReroll_WeaponPolymorph_Epic
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 10000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 13750
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 20625
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 27500
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 34375
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_LSword
+      DisplayCategory: WeaponPolymorph_LSword
+      Comment: 다시뽑기 무기외형 - 대검
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Sword
+      DisplayCategory: WeaponPolymorph_Sword
+      Comment: 다시뽑기 무기외형 - 한손검
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Bow
+      DisplayCategory: WeaponPolymorph_Bow
+      Comment: 다시뽑기 무기외형 - 활
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Cbow
+      DisplayCategory: WeaponPolymorph_Cbow
+      Comment: 다시뽑기 무기외형 - 석궁
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Staff
+      DisplayCategory: WeaponPolymorph_Staff
+      Comment: 다시뽑기 무기외형 - 지팡이
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Orb
+      DisplayCategory: WeaponPolymorph_Orb
+      Comment: 다시뽑기 무기외형 - 오브
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_Katana
+      DisplayCategory: WeaponPolymorph_Katana
+      Comment: 다시뽑기 무기외형 - 카타나
+    - RecipeOutput: Reroll_Epic_WeaponPolymorph_TwinDaggers
+      DisplayCategory: WeaponPolymorph_TwinDaggers
+      Comment: 다시뽑기 무기외형 - 쌍단검
+- Id: 116
+  Name: Reroll_WeaponPolymorph_Legendary
+  Comment: 전설 무기외형 다시뽑기
+  RerollItem: RecipeReroll_WeaponPolymorph_Legendary
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 100000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 68750
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 103125
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 137500
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 171875
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_LSword
+      DisplayCategory: WeaponPolymorph_LSword
+      Comment: 다시뽑기 무기외형 - 대검
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Sword
+      DisplayCategory: WeaponPolymorph_Sword
+      Comment: 다시뽑기 무기외형 - 한손검
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Bow
+      DisplayCategory: WeaponPolymorph_Bow
+      Comment: 다시뽑기 무기외형 - 활
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Cbow
+      DisplayCategory: WeaponPolymorph_Cbow
+      Comment: 다시뽑기 무기외형 - 석궁
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Staff
+      DisplayCategory: WeaponPolymorph_Staff
+      Comment: 다시뽑기 무기외형 - 지팡이
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Orb
+      DisplayCategory: WeaponPolymorph_Orb
+      Comment: 다시뽑기 무기외형 - 오브
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_Katana
+      DisplayCategory: WeaponPolymorph_Katana
+      Comment: 다시뽑기 무기외형 - 카타나
+    - RecipeOutput: Reroll_Legendary_WeaponPolymorph_TwinDaggers
+      DisplayCategory: WeaponPolymorph_TwinDaggers
+      Comment: 다시뽑기 무기외형 - 쌍단검
+- Id: 188
+  Name: Reroll_WeaponPolymorph_Myth
+  Comment: 신화 무기외형 다시뽑기
+  RerollItem: RecipeReroll_WeaponPolymorph_Myth
+  Cost:
+    - Id: 1
+      RerollLevel: 1
+      Currency: CurrencyGold
+      Amount: 1000000
+    - Id: 23
+      RerollLevel: 2
+      Currency: CurrencyDiamond
+      Amount: 137500
+    - Id: 157
+      RerollLevel: 3
+      Currency: CurrencyDiamond
+      Amount: 206250
+    - Id: 72
+      RerollLevel: 4
+      Currency: CurrencyDiamond
+      Amount: 275000
+    - Id: 115
+      RerollLevel: 5
+      Currency: CurrencyDiamond
+      Amount: 343750
+  Duration: 10080
+  RecipeOutput:
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_LSword
+      DisplayCategory: WeaponPolymorph_LSword
+      Comment: 다시뽑기 무기외형 - 대검
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Sword
+      DisplayCategory: WeaponPolymorph_Sword
+      Comment: 다시뽑기 무기외형 - 한손검
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Bow
+      DisplayCategory: WeaponPolymorph_Bow
+      Comment: 다시뽑기 무기외형 - 활
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Cbow
+      DisplayCategory: WeaponPolymorph_Cbow
+      Comment: 다시뽑기 무기외형 - 석궁
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Staff
+      DisplayCategory: WeaponPolymorph_Staff
+      Comment: 다시뽑기 무기외형 - 지팡이
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Orb
+      DisplayCategory: WeaponPolymorph_Orb
+      Comment: 다시뽑기 무기외형 - 오브
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_Katana
+      DisplayCategory: WeaponPolymorph_Katana
+      Comment: 다시뽑기 무기외형 - 카타나
+    - RecipeOutput: Reroll_Myth_WeaponPolymorph_TwinDaggers
+      DisplayCategory: WeaponPolymorph_TwinDaggers
+      Comment: 다시뽑기 무기외형 - 쌍단검

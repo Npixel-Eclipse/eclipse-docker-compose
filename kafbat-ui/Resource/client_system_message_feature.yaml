@@ -1,0 +1,12 @@
+- Id: 1
+  Name: SystemMessage
+  IgnoreItemCategory:
+    - Name: Item_Misc_Healing
+    - Name: Potion_Mana_Template
+    - Name: RecipeReroll
+  MinimumGradeForCommonRewardPopup: Epic
+  ItemGradeRare: Rare
+  ItemGradeEpic: Epic
+  ItemGradeLegendary: Legendary
+  ErrorDebugInfo_Message: ErrorDebugInfo_Message
+  ErrorDebugInfo_ServerError: ErrorDebugInfo_ServerError

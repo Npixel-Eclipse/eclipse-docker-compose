@@ -1,0 +1,62 @@
+- Id: 66
+  Name: Request_South_Varitan
+  Comment: 남부 바리탄
+  QuestCategory: Request_South_Varitan
+  Description: UI_Request_South_Varitan
+  DefaultTabState: true
+  ShowInHudWhenInActive: false
+- Id: 226
+  Name: Request_North_Varitan
+  Comment: 북부 바리탄
+  QuestCategory: Request_North_Varitan
+  Description: UI_Request_North_Varitan
+  ShowInHudWhenInActive: false
+- Id: 969
+  Name: Request_Rainwood
+  Comment: 레인우드
+  QuestCategory: Request_Rainwood
+  Description: UI_Request_Rainwood
+  ShowInHudWhenInActive: false
+- Id: 841
+  Name: Request_East_Varitan
+  Comment: 동부 바리탄
+  QuestCategory: Request_East_Varitan
+  Description: UI_Request_East_Varitan
+  ShowInHudWhenInActive: false
+- Id: 81
+  Name: Request_Eldar_East
+  Comment: 동부 엘다르
+  QuestCategory: Request_Eldar_East
+  Description: UI_Request_Eldar_East
+  ShowInHudWhenInActive: false
+- Id: 541
+  Name: Request_Eldar_Central
+  Comment: 중부 엘다르
+  QuestCategory: Request_Eldar_Central
+  Description: UI_Request_Eldar_Central
+  ShowInHudWhenInActive: false
+- Id: 320
+  Name: Request_Eldar_North
+  Comment: 북부 엘다르
+  QuestCategory: Request_Eldar_North
+  Description: UI_Request_Eldar_North
+  ShowInHudWhenInActive: false
+- Id: 626
+  Name: Request_West_Rockhed
+  Comment: 서부 락헤드
+  QuestCategory: Request_West_Rockhed
+  Description: UI_Request_West_Rockhed
+  ShowInHudWhenInActive: false
+- Id: 653
+  Name: Request_East_Rockhed
+  Comment: 동부 락헤드
+  QuestCategory: Request_East_Rockhed
+  Description: UI_Request_East_Rockhed
+  ShowInHudWhenInActive: false
+- Id: 512
+  Name: Request_South_Rockhed
+  Comment: 남부 락헤드
+  QuestCategory: Request_South_Rockhed
+  Description: UI_Request_South_Rockhed
+  VisibleInTab: false
+  ShowInHudWhenInActive: false

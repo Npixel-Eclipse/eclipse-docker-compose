@@ -1,0 +1,22 @@
+syntax = "proto3";
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.mail";
+option java_outer_classname = "CommonMailProto";
+
+enum MailType {
+  CHARACTER = 0;
+  SERVER = 1;
+  ACCOUNT = 2;
+}
+
+message FormattedDescription {
+  string format = 1;
+  repeated Argument arguments = 2;
+
+  message Argument {
+    string key = 1; // placeholder
+    string value = 2; // value
+  }
+}

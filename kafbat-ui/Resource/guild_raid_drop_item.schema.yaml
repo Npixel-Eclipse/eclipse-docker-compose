@@ -1,0 +1,73 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - DropItems
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    DropItemGroupSetups:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Group
+        properties:
+          Group:
+            type: integer
+            minimum: 1
+          GroupProbability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true      
+    DropItems:
+      visible: true
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Item
+          - Category
+          - Amount
+        properties:
+          Item:
+            visible: true
+            type: string
+            ref: item
+          Group:
+            type: integer
+            minimum: 1
+            visible: true            
+          Category:
+            type: string
+            default: Participant
+            enum:
+              # - None
+              - GuildStorage
+              - Participant
+          Amount:
+            type:
+              - string
+              - integer
+            formula: true
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+          LootingDelayTime:
+            type: integer
+            default: 0

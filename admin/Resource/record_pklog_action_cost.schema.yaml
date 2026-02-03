@@ -1,0 +1,26 @@
+# pk 기록에 대해 수행할 수 있는 동작들의 비용을 정의함
+# pk log uuid 와 이 테이블의 id 한 쌍으로 만드는 튜플이 유효한 요청 하나가 된다
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Comment:
+      type: string
+    ConsumeItem: # 해당 액션을 수행할 때 소모하는 화폐
+      type: string
+      ref: item
+    Cost: # 해당 액션을 수행할 때 소모하는 화폐의 양
+      type: integer
+    Maximum: # 해당 액션을 수행할 수 있는 최대 횟수
+      type: integer
+  required:
+    - Id
+    - Name
+    - ConsumeItem

@@ -1,0 +1,36 @@
+syntax = "proto3";
+import "Common/property.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.popup";
+option java_outer_classname = "ClientPopupProto";
+
+package eclipse.client.popup;
+
+import "Common/item_common.proto";
+
+message PopupEvent {
+    oneof event {
+        Rewards rewards = 1;
+    }
+
+    message Rewards {
+        repeated Reward reward = 1;
+        int64 current_level = 2; // 획득 경험치를 퍼센트로 표현 할 때 기준이되는 레벨
+
+      message Reward {
+        common.Reason reason = 1;
+        repeated RewardItem reward_items = 2;
+        int64 support_count = 3;  // 길드 지원된 횟수
+        int64 npc_id = 4;         // 추가 보상 NPC ID
+        int64 experience_amount = 5;     // 획득 경험치
+        int64 quest_id = 6; // 퀘스트를 통해 보상을 받은 경우, 퀘스트 2개 이상 완료 시 퀘스트 아이디 미입력
+
+        message RewardItem {
+          int64 item_id = 1;
+          int64 changed_amount = 2;
+          repeated common.Property properties = 3;
+        }
+      }
+    }
+}

@@ -1,0 +1,27 @@
+- Id: 1
+  Name: Awakening
+  SummaryTabName: UIWordAll
+  SummaryTabIcon: /Game/UI/Awakening_SP/FIconSummary_Sprite.FIconSummary_Sprite
+  PropertyKey_AwakeningInfo: Awakening
+  PropertyKey_AwakeningCategoryTotalLevelInfo: TotalLevel
+  PropertyKeys_AwakeningItemTotalExpandCount: ExpandCount_Awakening
+  PropertyKeys_AwarenessItemTotalExpandCount: ExpandCount_Awareness
+  CurrentAwakeningInfoTabs:
+    - Type: AllEffect
+      Comment: 전체효과
+      Description: UIWord_Awakening_All_Effect
+      DefaultTab: true
+    - Type: EffectByLevel
+      Comment: 단계효과
+      Description: UIWord_Awakening_Step_Effect
+  ExpandCollectionRewardName: Collection_AwakeningExpand
+  FavoriteID: Awakening
+  AwakeningNotInConditionSystemMessage: UIWord_SystemMsg_Awakening_NoCondition
+  AwarenessSystemMessage:
+    - Name: NoMaterialItemSystemMessage
+      Desc: UIWord_SystemMsg_Awareness_NoLevelUpItem
+    - Name: NoExpandItemSystemMessage
+      Desc: UIWord_SystemMsg_Awareness_NoExpandItem
+    
+    
+

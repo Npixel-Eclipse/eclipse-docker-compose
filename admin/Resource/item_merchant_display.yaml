@@ -1,0 +1,20 @@
+- Id: 1
+  Name: DescriptionType_SelectedBuyableItem
+  Comment: 구매
+  Description: UIWord_merchant_buy
+  DescriptionType: SelectedBuyableItem
+- Id: 2
+  Name: DescriptionType_SelectedSellableItem
+  Comment: 판매
+  Description: UIWord_merchant_sell
+  DescriptionType: SelectedSellableItem
+- Id: 100
+  Name: TextStyleKeyType_DefaultCurrency
+  Comment: 기본 재화 TextStyleKey
+  TextStyleKey: ValueEnough
+  TextStyleKeyType: DefaultCurrency
+- Id: 101
+  Name: TextStyleKeyType_NotEnoughCurrency
+  Comment: 재화 부족 TextStyleKey
+  TextStyleKey: ValueNotEnough
+  TextStyleKeyType: NotEnoughCurrency

@@ -1,0 +1,65 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MaxRequestDisassembleItemCount
+          Value:
+            type: integer
+    CanNotDisassembleSystemMessage:
+      type: string
+      ref: system_message
+    OnlyInventorySystemMessage:
+      type: string
+      ref: system_message
+    CanNotDisassemble_EquipSystemMessage:
+      type: string
+      ref: system_message
+    CanNotDisassemble_LockSystemMessage:
+      type: string
+      ref: system_message
+    EnchantFilters:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+             type: string
+             enum:
+             - EnchantItem
+             - EngraveItem
+          Description:
+            type: string
+            ref: description
+    CollectionFilters:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+             type: string
+             enum:
+             - CollectionItem
+          Description:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name

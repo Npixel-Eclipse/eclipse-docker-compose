@@ -1,0 +1,130 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    SystemMessage_RefreshCoolTime:
+      type: string
+      ref: system_message
+    SystemMessage_CompleteCoolTime:
+      type: string
+      ref: system_message
+    SystemMessage_OutofStock:
+      type: string
+      ref: system_message
+    SystemMessage_BuySuccess:
+      type: string
+      ref: system_message
+    SystemMessage_NotEnough_Currency:
+      type: string
+      ref: system_message
+    SystemMessage_Sell_MinPrice:
+      type: string
+      ref: system_message
+    SystemMessage_BuyFail:
+      type: string
+      ref: system_message
+    SystemMessage_Redraw:
+      type: string
+      ref: system_message
+    SystemMessage_All_Redraw:
+      type: string
+      ref: system_message
+    SystemMessage_Settle:
+      type: string
+      ref: system_message
+    SystemMessage_FavoriteRegist_Success:
+      type: string
+      ref: system_message
+    SystemMessage_FavoriteRegist_Failed:
+      type: string
+      ref: system_message
+    SystemMessage_FavoriteRegist_LimitExceed:
+      type: string 
+      ref: system_message
+    SystemMessage_FavoriteRelease:
+      type: string 
+      ref: system_message
+    SystemMessage_NotEnoughInventorySlot:
+      type: string 
+      ref: system_message
+    SystemMessage_CanNotRegisterUser:
+      type: string 
+      ref: system_message
+    SystemMessage_CanNotRegisterPrivateItem:
+      type: string
+      ref: system_message
+    SystemMessage_ExceedPrivateBuyRequestLimit:
+      type: string
+      ref: system_message
+    SystemMessage_Expired:
+      type: string
+      ref: system_message
+    SystemMessage_CanNotSellExpiredItem:
+      type: string
+      ref: system_message
+    SystemMessage_InvalidPrivateItem:
+      type: string
+      ref: system_message
+    SystemMessage_TryBuyDeletedItem:
+      type: string
+      ref: system_message
+    SystemMessage_RedrawDeletedItem:
+      type: string
+      ref: system_message
+    Description_PrivateSearchTabAllUser:
+      type: string
+      ref: description
+    Description_PrivateSearchTabGuild:
+      type: string
+      ref: description
+    Description_PrivateSearchTabParty:
+      type: string
+      ref: description
+    FavoriteID:
+      type: string
+      ref: favorite
+    PurchaseMainFilterType:
+      type: string
+      ref: client_item_filter
+    PurchaseDetailFilterType:
+      type: string
+      ref: client_item_filter
+  required:
+    - Id
+    - Name
+    - FavoriteID
+    - PurchaseMainFilterType
+    - PurchaseDetailFilterType
+    - SystemMessage_RefreshCoolTime
+    - SystemMessage_CompleteCoolTime
+    - SystemMessage_OutofStock
+    - SystemMessage_BuySuccess
+    - SystemMessage_BuyFail
+    - SystemMessage_NotEnough_Currency
+    - SystemMessage_Sell_MinPrice
+    - SystemMessage_Redraw
+    - SystemMessage_All_Redraw
+    - SystemMessage_Settle
+    - SystemMessage_FavoriteRegist_Success
+    - SystemMessage_FavoriteRegist_Failed
+    - SystemMessage_FavoriteRegist_LimitExceed
+    - SystemMessage_FavoriteRelease
+    - SystemMessage_NotEnoughInventorySlot
+    - SystemMessage_CanNotRegisterUser
+    - SystemMessage_CanNotRegisterPrivateItem
+    - SystemMessage_ExceedPrivateBuyRequestLimit
+    - SystemMessage_Expired
+    - SystemMessage_InvalidPrivateItem
+    - SystemMessage_CanNotSellExpiredItem
+    - SystemMessage_TryBuyDeletedItem
+    - SystemMessage_RedrawDeletedItem
+    - Description_PrivateSearchTabAllUser
+    - Description_PrivateSearchTabGuild
+    - Description_PrivateSearchTabParty

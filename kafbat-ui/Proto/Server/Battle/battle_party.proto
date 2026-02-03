@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.party";
+option java_outer_classname = "BattlePartyProto";
+
+package party;
+
+import "Server/party.proto";
+import "Common/party_common.proto";
+
+message BattlePartyCommand {
+  oneof message {
+    PartyUpdateMember party_update_member = 1;
+    PartyChangeRule party_change_rule = 2;
+    PartyInfoRequest party_info_request = 3;
+  }
+}
+
+message PartyUpdateMember {
+  enum UpdateType {
+    JOIN = 0;
+    LEAVE = 1;
+    DELEGATE = 2;
+    DISBAND = 3;
+  }
+
+  string character_uuid = 1;
+  UpdateType update_type = 2;
+  bool is_join_host = 3;
+}
+
+message PartyChangeRule {
+  common.PartyRule rule = 1;
+}
+
+message PartyInfoRequest {
+  message User {
+    string character_uuid = 1;
+    int64 class_id = 2;
+  }
+
+  int64 timestamp = 1;
+  User inviter = 2;
+  string invitee = 3;
+  repeated User members = 4;
+  common.PartyInfoType info_type = 5;
+  int64 party_id_key = 6;
+}
+

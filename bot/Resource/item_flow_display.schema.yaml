@@ -1,0 +1,167 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties: 
+    Id: #item.yaml 아이템 Id
+      type: integer
+      minimum: 1
+    Name: #item.yaml 아이템 Name
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    GatheringArea: #획득처
+      type: object
+      properties:
+        Monster: #몬스터 처치
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties: 
+              Npc:
+                type: string
+                ref: npc
+              WorldMapArea:
+                type: string
+                ref: worldmap_area
+              Address:
+                type: string
+                ref: address
+        BasicMerchant: #마을 상인
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Merchant:
+                type: string
+                ref: item_merchant
+              WorldMapArea:
+                type: string
+                ref: worldmap_area               
+        EventMerchant: #이벤트 상인
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Merchant:
+                type: string
+                ref: item_merchant
+              WorldMapArea:
+                type: string
+                ref: worldmap_area
+        GuildMerchant: #길드 상인
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Merchant:
+                type: string
+                ref: item_merchant
+              WorldMapArea:
+                type: string
+                ref: worldmap_area
+        Craft: #제작
+          type: array
+          items:
+            type: string
+            ref: recipe_output
+        Disassemble: #분해
+          type: array
+          items:
+            type: string
+            ref: recipe_output
+        BmShop: #상점
+          type: array
+          items:
+            type: string
+            ref: bm_shop_product
+        HuntingZoneShop: #영토 점유 상점
+          type: array
+          items:
+            type: string
+            ref: hunting_zone_group
+        HuntingZoneGroupShop: #영토 특산품 상점
+          type: array
+          items:
+            type: string
+            ref: hunting_zone_group
+        GuildDonation: #길드 기부
+            type: array
+            items:
+              type: string
+              ref: quest
+        GuildQuest: #길드 퀘스트
+            type: array
+            items:
+              type: string
+              ref: quest        
+        Building: #성소
+            type: array
+            items:
+              type: string
+              ref: building
+        Achievement: #업적
+            type: array
+            items:
+              type: string
+              ref: quest
+    UsageArea: #사용처
+      type: object
+      properties:
+        Craft: #제작 재료
+          type: array
+          items:
+            type: string
+            ref: recipe_input
+        EventMerchant: #이벤트 상인
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Merchant:
+                type: string
+                ref: item_merchant
+              WorldMapArea:
+                type: string
+                ref: worldmap_area
+        GuildMerchant: #길드 상인
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Merchant:
+                type: string
+                ref: item_merchant
+              WorldMapArea:
+                type: string
+                ref: worldmap_area
+        HuntingZoneBid: #영토 입찰
+          type: array
+          items:
+            type: string
+            ref: hunting_zone
+        HuntingZoneBidCurrency: #창조석 주화
+          type: array
+          items:
+            type: string
+            ref: hunting_zone_group
+        Building: #성소
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              Building:
+                type: string
+                ref: building
+              BuildingLevel:
+                type: integer

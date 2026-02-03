@@ -1,0 +1,32 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    DisplayTerritory: #영토관리 맵에 지역 위치 표기용 territory
+      type: string
+      ref: territory
+    DescriptionName:
+      type: string
+      ref: description
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    RewardItem:
+      type: string
+      ref: hunting_zone_reward_item
+  required:
+    - Id
+    - Name
+    - DisplayTerritory
+    - Icon
+    - DescriptionName
+    - RewardItem

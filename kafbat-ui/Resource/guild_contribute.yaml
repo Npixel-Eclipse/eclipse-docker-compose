@@ -1,0 +1,40 @@
+- Id: 1
+  Name: Contribute
+  Cost:
+    - Item: CurrencyGold
+      Amount: 10000
+  CriticalMul: 3
+  Critical: "70%"
+  Rewards:
+    - RewardType: GuildItem
+      GuildItem: Contribution
+      Amount: 10
+    - RewardType: GuildItem
+      GuildItem: Experience
+      Amount: 10
+    - RewardType: Item
+      Item: CurrencyGuildCoin
+      Amount: 20
+    - RewardType: GuildItem
+      GuildItem: Point
+      Amount: 15
+- Id: 2
+  Name: AdditionalContribute
+  Cost:
+    - Item: Item_Grown_Guild_G1_T1_01
+      Amount: 1
+  CriticalMul: 3
+  Critical: "70%"
+  Rewards:
+    - RewardType: GuildItem
+      GuildItem: Contribution
+      Amount: 10
+    - RewardType: GuildItem
+      GuildItem: Experience
+      Amount: 10
+    - RewardType: Item
+      Item: CurrencyGuildCoin
+      Amount: 20
+    - RewardType: GuildItem
+      GuildItem: Point
+      Amount: 15

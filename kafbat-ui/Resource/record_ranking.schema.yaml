@@ -1,0 +1,59 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - RankingType
+    - StartRanking
+    - EndRanking
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    RankingType:
+      type: string
+      enum:
+        - Combat
+        - PvP
+        - Guild
+        - Challenge_Dungeon
+        - Level
+    StartRanking:
+      type: integer
+    EndRanking:
+      type: integer
+    RankingBuff:
+      type: string
+      ref: buff
+      visible : true
+    RankingGoods:
+      type: array
+      items:
+        type: object
+        additionalItems: false
+        properties:
+          Goods:
+            type: string
+            ref: bm_shop_product
+    RankingMark:
+      type: string
+      ref: buff
+      visible : true
+    RankingChattingMark:
+      type: string
+      ref : buff
+      visible : true
+    RankingTitle:
+      type: string
+      ref : buff
+      visible : true
+    Test:
+      type: boolean

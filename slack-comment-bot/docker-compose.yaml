@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  slack-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: slack-auto-comment
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    env_file:
+      - .env
+    volumes:
+      - ./comment_store.json:/app/comment_store.json
+

@@ -1,0 +1,191 @@
+- Id: 1
+  Name: Sequence
+  SequenceInfo:
+    - Type: CharacterCreationStart
+      LevelSequence: CharacterCreationStart
+    - Type: CharacterSelectionStart
+      LevelSequence: CharacterSelectionStart
+    - Type: CharacterSelectionLoop
+      LevelSequence: CharacterSelectionLoop
+    - Type: CharacterSelectionConfirm
+      LevelSequence: CharacterSelectionConfirm
+    - Type: AdvanceIntro
+      LevelSequence: MainTutorialChapter1
+    - Type: Opening
+      LevelSequence: Opening
+    - Type: CardMergeSelect
+      LevelSequence: CardMergeSelect
+      Comment: 합성 선택창 연출
+    - Type: CardMergeListView
+      LevelSequence: CardMergeListView
+      Comment: 합성 리스트뷰 연출
+    - Type: CardMergeTouch
+      LevelSequence: CardMergeTouch
+      Comment: 합성 터치 연출
+      ConditionInputGrade: Rare
+      ConditionInputGradeType: GreaterEqual
+      ConditionOutputGrade: Rare
+      ConditionOutputGradeType: GreaterEqual
+    - Type: CardMergeResult
+      LevelSequence: CardMergeLegendarySuccessResult
+      Comment: 합성 전설에서 상위 등급 결과 연출
+      ConditionInputGrade: Legendary
+      ConditionInputGradeType: GreaterEqual
+      ConditionOutputGrade: Legendary
+      ConditionOutputGradeType: Greater
+      AnimSubState: EpicToLegendaryResult
+    - Type: CardMergeResult
+      LevelSequence: CardMergeLegendaryFailureResult
+      Comment: 합성 전설에서 동일 등급 결과 연출
+      ConditionInputGrade: Legendary
+      ConditionInputGradeType: GreaterEqual
+      ConditionOutputGrade: Legendary
+      ConditionOutputGradeType: LessEqual
+      AnimSubState: EpicToLegendaryResult
+    - Type: CardMergeResult
+      LevelSequence: CardMergeEpicSuccessResult
+      Comment: 합성 영웅에서 상위 등급 결과 연출
+      ConditionInputGrade: Epic
+      ConditionOutputGrade: Epic
+      ConditionOutputGradeType: Greater
+      AnimSubState: RareToLegendaryResult
+    - Type: CardMergeResult
+      LevelSequence: CardMergeEpicFailureResult
+      Comment: 합성 영웅에서 동일 등급 결과 연출
+      ConditionInputGrade: Epic
+      ConditionOutputGrade: Epic
+      ConditionOutputGradeType: LessEqual
+      AnimSubState: EpicResult
+    - Type: CardMergeResult
+      LevelSequence: CardMergeRareSuccessResult
+      Comment: 합성 희귀에서 상위 등급 결과 연출
+      ConditionInputGrade: Rare
+      ConditionOutputGrade: Rare
+      ConditionOutputGradeType: Greater
+      AnimSubState: RareToEpicResult
+    - Type: CardMergeResult
+      LevelSequence: CardMergeRareFailureResult
+      Comment: 합성 희귀에서 동일 등급 결과 연출
+      ConditionInputGrade: Rare
+      ConditionOutputGrade: Rare
+      ConditionOutputGradeType: LessEqual
+      AnimSubState: RareToEpicResult
+    - Type: PolymorphCardGachaIntro
+      LevelSequence: PolymorphCardGachaIntro
+      Comment: 초월 카드 가챠 인트로 연출
+    - Type: SkinIntro
+      LevelSequence: SkinIntro
+      Comment: 스킨 소환 연출
+    - Type: SkinLoop
+      LevelSequence: SkinLoop
+      Comment: 스킨 소환 연출
+    - Type: PolymorphCardGachaListView
+      LevelSequence: PolymorphCardGachaListView
+      Comment: 초월 카드 가챠 리스트뷰 연출
+    - Type: PolymorphCardGachaTouch
+      LevelSequence: PolymorphCardGachaTouch
+      Comment: 초월 카드 가챠 터치 연출
+      ConditionOutputGrade: Rare
+      ConditionOutputGradeType: GreaterEqual
+    - Type: PolymorphCardGachaResult
+      LevelSequence: PolymorphCardGachaRareResult
+      Comment: 초월 카드 가챠 희귀 결과 연출
+      ConditionOutputGrade: Rare
+    - Type: PolymorphCardGachaResult
+      LevelSequence: PolymorphCardGachaEpicLegendaryResult
+      Comment: 초월 카드 가챠 에픽 이상 결과 연출
+      ConditionOutputGrade: Epic
+      ConditionOutputGradeType: GreaterEqual
+    - Type: WeaponCardGachaIntro
+      LevelSequence: WeaponCardGachaIntro
+      Comment: 무기 외형 가챠 인트로 연출
+    - Type: WeaponCardGachaListView
+      LevelSequence: WeaponCardGachaListView
+      Comment: 무기 외형 가챠 리스트뷰 연출
+    - Type: WeaponCardGachaTouch
+      LevelSequence: WeaponCardGachaTouch
+      Comment: 무기 외형 가챠 터치 연출
+      ConditionOutputGrade: Rare
+      ConditionOutputGradeType: GreaterEqual
+    - Type: WeaponCardGachaResult
+      LevelSequence: WeaponCardGachaRareResult
+      Comment: 무기 외형 가챠 희귀 결과 연출
+      ConditionOutputGrade: Rare
+    - Type: WeaponCardGachaResult
+      LevelSequence: WeaponCardGachaEpicLegendaryResult
+      Comment: 무기 외형 가챠 에픽 이상 결과 연출
+      ConditionOutputGrade: Epic
+      ConditionOutputGradeType: GreaterEqual
+    - Type: PolymorphCardResultItem
+      LevelSequence: PolymorphCardEpicResultItem
+      Comment: 초월 뽑기/합성 영웅 결과 등장 연출
+      ConditionOutputGrade: Epic
+    - Type: PolymorphCardResultItem
+      LevelSequence: PolymorphCardLegendaryMaleResultItem
+      Comment: 초월 뽑기/합성 전설 결과 등장 연출
+      ConditionOutputGrade: Legendary
+      ConditionOutputAppearanceType: Male
+    - Type: PolymorphCardResultItem
+      LevelSequence: PolymorphCardLegendaryFemaleResultItem
+      Comment: 초월 뽑기/합성 전설 결과 등장 연출
+      ConditionOutputGrade: Legendary
+      ConditionOutputAppearanceType: Female
+    - Type: PolymorphCardResultItem
+      LevelSequence: PolymorphCardMythResultItem
+      Comment: 초월 뽑기/합성 신화 결과 등장 연출
+      ConditionOutputGrade: Myth
+    - Type: WeaponCardResultItem
+      LevelSequence: WeaponCardEpicResultItem
+      Comment: 무기 외형 뽑기/합성 영웅 결과 등장 연출
+      ConditionOutputGrade: Epic
+    - Type: WeaponCardResultItem
+      LevelSequence: WeaponCardLegendaryResultItem
+      Comment: 무기 외형 뽑기/합성 전설 결과 등장 연출
+      ConditionOutputGrade: Legendary
+    - Type: PolymorphCardResultItem
+      LevelSequence: PolymorphCardMythResultItem
+      Comment: 초월 뽑기/합성 신화 결과 등장 연출
+      ConditionOutputGrade: Myth
+    - Type: Login
+      LevelSequence: Login
+    - Type: LoginToCharacterCreation
+      LevelSequence: LoginToCharacterCreation
+  SequenceDataAsset: /Game/Common/DA_Sequence.DA_Sequence
+  TouchInfo:
+    - Type: CardMergeTouch
+      TouchType: Drag
+      TouchCenterX: 0.5
+      TouchCenterY: 0.5
+      TouchRadiusY: 1.0
+      DragRange: 0.3
+      DragLeftToRight: true
+      DragRightToLeft: true
+      DragBottomToTop: true
+      DragTopToBottom: true
+      HoldTimeInSeconds: 1.5
+    - Type: PolymorphCardGachaTouch
+      TouchType: Drag
+      TouchCenterX: 0.5
+      TouchCenterY: 0.5
+      TouchRadiusY: 1.0
+      DragRange: 0.3
+      DragLeftToRight: true
+      DragRightToLeft: true
+      DragBottomToTop: true
+      DragTopToBottom: true
+      HoldTimeInSeconds: 1.5
+    - Type: WeaponCardGachaTouch
+      TouchType: Drag
+      TouchCenterX: 0.5
+      TouchCenterY: 0.5
+      TouchRadiusY: 1.0
+      DragRange: 0.3
+      DragLeftToRight: true
+      DragRightToLeft: true
+      DragBottomToTop: true
+      DragTopToBottom: true
+      HoldTimeInSeconds: 1.5
+  PolymorphInfo:
+    ResultActorTag: ResultActor
+  LegendaryGrade: Legendary
+  EpicGrade: Epic

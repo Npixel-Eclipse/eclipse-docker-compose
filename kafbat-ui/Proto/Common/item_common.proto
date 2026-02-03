@@ -1,0 +1,284 @@
+syntax = "proto3";
+package common;
+import "Common/property.proto";
+import "Common/kafka_key_common.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.item";
+option java_outer_classname = "CommonItemProto";
+
+// Kafka Message Header Key
+enum MessageHeaderKey {
+  ITEM_TRANSACTIONS = 0; // 아이템 증가 감소 시 사용 할 아이템 파라미터
+  RESERVED_INVENTORY_SLOTS = 1; // 아이템 인벤토리 슬롯 예약
+  ITEM_QUERIES = 2; // 아이템 존재 유무를 확인하는 아이템 파라미터
+  TRADE_UUID = 3; // TRADE_UUID 정보 키
+  EXPAND_INVENTORY_SLOTS = 4; // 인벤토리 슬롯 확장 파라미터 (ExpandInventorySlot 메세지 사용)
+}
+
+/// Reason 추가 시 GetItem, UseItem에 보함 되어야 하는지 확인 필요
+enum Reason {
+  reserved "OTHER"; // OTHER 사용 금지 - 적절한 Reason 사용 필요
+  UNSPECIFIED = 0;
+  CONSUME = 1;
+  PICK_UP = 2;
+  QUEST = 3;
+  RECIPE_LUCKY_BAG = 4;
+  RECIPE_CRAFT = 5;
+  RECIPE_MERGE = 6;
+  RECIPE_DISASSEMBLE = 7;
+  MERCHANT_BUY = 8;
+  RECIPE_CARD_PACK = 9;
+  EVENT = 10;
+
+  ACHIEVEMENT = 11;
+  MERCHANT_SELL = 12;
+  RECIPE_PAYBACK = 13;
+  CHEAT = 14;
+  DEATH_PENALTY = 16;
+  USER_REQUESTED_REMOVAL = 17;
+  ENCHANT = 18;
+  ENGRAVE = 19;
+  TRADE = 20;
+
+  GUILD_CREATE = 21;
+  TELEPORT_COST = 22;
+  PRE_DEDUCTION = 24; // 배틀 아이템 차감 전 선 차감이 필요할 때 사용
+  QUEST_CATEGORY_REFRESH = 25;
+  TRANSFER = 26; // 인벤토리 간 이동
+  LIST = 27;
+  RECIPE_GUILD_BONUS = 28;
+  GUILD_QUEST = 29;
+
+  ROLLBACK = 30;
+  FORTRESS_HARVEST = 31;
+  FORTRESS_UPGRADE = 32;
+  FORTRESS_UPGRADE_REDUCE_TIME = 34;
+  BATTLEGROUND_REWARD = 35;
+  GUILD_ATTEND = 36;
+  GUILD_DONATION = 37;
+  GUILD_LEAVE = 38;
+
+  TRADE_CANCEL = 40;
+  TRADE_BUY = 41;
+  TRADE_WITHDRAW = 42;
+  TRADE_SETTLE = 43;
+
+
+  HUNTING_ZONE_REWARD = 50;
+  HUNTING_ZONE_DISTRIBUTION = 51;
+  HUNTING_ZONE_BID = 52;
+  HUNTING_ZONE_OWNER = 53;
+
+  BM_SHOP_BUY = 60;
+  REFRESH_REWARD = 61;
+  BM_SHOP_COMPENSATION = 62;
+
+  RECIPE_DIVINITY_CRAFT = 70;
+
+  RECIPE_CONFIRM = 80; // 다시뽑기 확정
+  RECIPE_RE_ROLL = 81; // 다시뽑기
+  BASIC_GIVEN = 82; // class.yaml에 의해 레벨 달성시 아이템 지급
+  GUILD_MERCHANT_BUY = 83;
+  EVENT_MERCHANT_BUY = 84;
+  HUNTING_ZONE_MERCHANT_BUY = 85;
+
+  TIME_OVER_EXPIRE_TIME = 90;
+  TIME_OVER_DELETE_TIME = 91;
+
+  ADD_COMBINATION_COUNT = 110;
+  RESET_COMBINATION = 111;
+  UNLOCK_COMBINATION = 112;
+
+  AWAKEN = 120;
+  RESET_AWAKENING = 122;
+  EXPAND_AWAKENING = 123;
+  NOT_APPLY_ENGRAVE = 124;
+
+  HELP_REWARD = 130;
+
+  GIVE_BUILDING_BONUS = 150;
+
+  GUILD_ITEM = 160;
+  SEASON_PASS = 161;
+  DAILY_PASS = 162;
+  CHALLENGE_DUNGEON_WEEKLY = 163;
+  CONTENT_LIMIT_BY_QUEST = 164;
+  REQUEST_QUEST = 165;
+
+  MASTERY_ESSENCE_RESET = 170;
+  MASTERY_INCREASE_POINTS = 171;
+  MASTERY_EXP_TRANSFER = 172;
+  MASTERY_ESSENCE_ACTIVE = 173; // 숙련도 정수 활성화
+  MASTERY_PAGE_RESET = 174; // 숙련도 페이지 초기화
+  MASTERY_ALL_PAGE_RESET = 175; // 숙련도 전체 페이지 초기화
+  MASTERY_EXP_UPDATE = 176; // 숙련도 경험치 업데이트 특정 경험치로 변경 할 때 사용됨
+  MASTERY_EXP_INCREASE_BY_BATTLE = 177; // 무기 사용에 따른 숙련도 경험치 증가
+  MASTERY_EXP_INCREASE_BY_ITEM = 178; // 아이템에 의한 숙련도 경험치 증가
+  MASTERY_INITIALIZE = 179; // 숙련도 아이템이 없을 때 아이템 지급
+  MASTERY_ESSENCE_FUSION = 182;
+
+  MAIL_ATTACHMENT = 180;
+  LETTER_FEE = 181;
+
+  RECIPE_SKILL_LEARN = 190;
+  RECIPE_GUILD_QUEST_REWARD_BOX = 191;
+
+  GUILD_ACQUIRE_TRAIT = 201;
+  GUILD_CONTRIBUTE = 202; // 길드 연구 지원
+  GUILD_STORAGE_STORE = 203; // 길드 창고 아이템 보관
+  GUILD_STORAGE_EXPAND = 204; // 길드 창고 확장
+
+  EQUIP = 210; // 아이템 장착 시 사용
+  SEE_RED_DOT = 211; // 아이템에 NEW ITEM 표시를 확인 후 제거되었을 때 사용
+  WELCOME_ITEM_LIST = 212; // 배틀에 접속 시 캐시 구성을 위한 아이템 리스트를 보내줄 때 사용
+  RESERVE_INVENTORY_SLOT = 213; // 인벤토리 슬롯 예약 시 사용 -> ReservedInventorySlots 에서 reason을 추측할 방법이 없음 -> 방법이 생기면 다른 reason으로 대체 후 삭제
+  EXPAND_INVENTORY_SLOT = 214; // 인벤토리 슬롯 확장 시 사용
+  AUTO_TRANSFER = 215; // 자동으로 인벤토리 슬롯을 이동 시킬 때 사용
+
+  ITEM_COLLECTION_REGISTER = 230; // 아이템 수집 등록 시 사용
+
+  ADDITIONAL_REWARD_ITEM_LASTATTACKER = 250;
+  ADDITIONAL_REWARD_ITEM_PARTICIPANT = 251;
+  WORLD_BOSS_RANK_REWARD = 252; // 월드보스 랭킹 보상
+
+  FORTRESS_HARVEST_ALL = 301;
+  FORTRESS_UPGRADE_ALL = 302;
+  FORTRESS_INSTANT_HARVEST = 303; // 즉시 수확권 사용
+
+  LOCK = 320;
+  LOCK_PROPERTY = 321;
+  UNLOCK = 322;
+  UNLOCK_PROPERTY = 323;
+
+  RESTORATION = 400;
+
+  EXPAND_PRESET_SLOT = 500;
+
+  ENCHANT_DESTROYED = 501; // 강화 실패로 아이템 터져서 보상 아이템 받는 경우
+  EXPAND_ENCHANT = 502;
+  RESET_ENCHANT = 503; // 권능 - 각인 초기화
+  EXPAND_CHARACTER_SLOT = 504; // 캐릭터 슬롯 확장
+
+  // 분배
+  GUILD_DISTRIBUTION = 600;
+  GUILD_DISTRIBUTION_HUNTING_ZONE = 601;
+
+  PRESET_CHANGE = 700;
+
+  // 길드 경매
+  GUILD_AUCTION_REGISTER = 800; // 경매 등록 (길드 창고 차감)
+  GUILD_AUCTION_BID = 801; // 경매 입찰 (길드원 재화 차감)
+  GUILD_AUCTION_CANCEL = 803; // 경매 취소 (길드 창고 복구)
+  GUILD_AUCTION_FAILED = 804; // 경매 유찰 (길드 창고 복구)
+  GUILD_AUCTION_LOSE = 805; // 경매 입찰 회수 (길드원 재화 반환)
+  GUILD_AUCTION_WIN = 806; // 경매 낙찰 (길드원 우편 발송 및 길드 창고 다이아 적립)
+
+  // 길드 레이드
+  GUILD_RAID_REWARD = 810; // 길드 레이드 보상
+
+  TOGGLE_SKILL_RESET_ON_DEATH = 900; // PC 사망 시 토글 스킬 초기화
+  // 세트 효과 스킬
+  SET_EFFECT_GRANT = 1000; // 세트 효과로 스킬 부여
+  SET_EFFECT_REVOKE = 1001; // 세트 효과로 스킬 회수
+
+  SORT = 1100; // 인벤토리 정렬
+  // TODO: 삭제 예정
+  /// 퀘스트 완료팝업 필터링기능 지금 클라에서 questdislplay.yaml에 있는거랑
+  // quest.yaml CompleteNotification있는거 보고 필터링해주고있는데
+  // 이거 서버단에서 처리할수있는 걸로 통합하던지 할것
+  // 우선 클라에서 Reason을 추가해 처리 해달라고 요청을 주셨습니다.
+  // https://npixel.slack.com/archives/D05QNPH1G3W/p1766738718454939
+  SKIP_FLAG = 1101;
+}
+
+message Item {
+  string uuid = 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+  string equip_slot = 4;
+  repeated common.Property properties = 5;
+  google.protobuf.Timestamp create_time = 14;
+  google.protobuf.Timestamp update_time = 6;
+  google.protobuf.Timestamp expire_time = 7;
+  google.protobuf.Timestamp delete_time = 8;
+  google.protobuf.Timestamp acquire_time = 15;
+  int64 change_amount = 9;
+  bool locked = 10;
+  bool is_new = 11;
+  bool deactivated = 12;
+  int64 combat_point_gain = 13;
+  int64 target_object_id = 16;
+  bool fused = 17;  // 융합 여부 (deactivated=true 여도 융합되어 있으면 true)
+}
+
+message InventoryEvent {
+  message InventoryItems {
+    reserved 1;
+    int64 inventory_id = 3;
+    repeated Item items = 2;
+  }
+  repeated InventoryItems inventory_items = 1;
+  Reason reason = 2;
+  int64 correlation_id = 3;
+}
+
+message ItemTransactions {
+  repeated ItemTransaction transactions = 1;
+}
+
+message ItemTransaction {
+  string uuid = 1;
+  int64 item_id = 2;
+  int64 change_amount = 3;
+  repeated common.Property properties = 4;
+  google.protobuf.Timestamp create_time = 11;
+  google.protobuf.Timestamp expire_time = 5;
+  google.protobuf.Timestamp delete_time = 6;
+  google.protobuf.Timestamp acquire_time = 12;
+  string inventory_name = 7;
+  string character_uuid = 8;
+  common.KafkaKey owner = 9;
+  int64 previous_amount = 10;
+}
+
+message ItemQueries {
+  repeated ItemQuery queries = 1;
+}
+
+message ItemQuery {
+  string uuid = 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+  repeated common.Property properties = 4;
+  google.protobuf.Timestamp expire_time = 5;
+  google.protobuf.Timestamp delete_time = 6;
+  string inventory_name = 7;
+}
+
+message ReservedInventorySlots {
+  repeated string reserved_slot_uuids = 2;
+}
+
+message ExpandInventorySlot {
+  string inventory_name = 1;
+  int32 current_expand_level = 2;
+  int32 target_expand_level = 3;
+  repeated Cost expand_cost = 4;
+
+  message Cost {
+    string item_name = 1;
+    int64 amount = 2;
+  }
+}
+
+message BattleItem {
+  optional string item_uuid = 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+  repeated common.Property properties = 4;
+  string inventory = 5;
+  google.protobuf.Timestamp expire_time = 6;
+  google.protobuf.Timestamp delete_time = 7;
+}

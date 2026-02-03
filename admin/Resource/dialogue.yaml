@@ -1,0 +1,614 @@
+- Id: 2
+  Name: Test
+  DisplayTiming: Complete
+  Dialogues:
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Accessory_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Weapon_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Weapon_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 1
+  Name: EnterToTheEclipse
+  Dialogues:
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Accessory_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Weapon_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Armor_Cape_ArchersCloakDesc
+      PortraitIcon: /Game/UIIcon/NPCPortrait/NPCPortrait_Dummy.NPCPortrait_Dummy
+      Content: Item_Detail_Misc_Upgrade_Enchant_Weapon_Normal
+      PageEndTime: 10
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 86679
+  Name: Guide_Quest_Mastery_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_Mastery_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 68728
+  Name: Guide_Quest_SkillFusion_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_SkillFusion_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 76441
+  Name: Guide_Quest_Collection_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_Collection_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 60796
+  Name: Guide_Quest_Guild_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_Guild_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 83311
+  Name: Guide_Quest_RuneCombination_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_RuneCombination_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 762
+  Name: Guide_Quest_Achievement_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_Achievement_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 3041
+  Name: Guide_Quest_Awakening_Dialogue_01
+  DialogueType: Tutorial
+  Dialogues:
+    - SpeakerName: Que_Speaker_Guide
+      Content: Guide_Quest_Awakening_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 튜토리얼
+- Id: 10445
+  Name: Main_Ch01_01_01_Dialogue_Accept
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_01_Dialogue_01
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 75851
+  Name: Main_Ch01_01_02_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_02_Dialogue_01
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_02_Dialogue_02
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 75157
+  Name: Main_Ch01_01_03_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_03_Dialogue_01
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_03_Dialogue_02
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 34976
+  Name: Main_Ch01_01_05_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_05_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_05_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 80306
+  Name: Main_Ch01_01_07_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_07_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_07_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 25228
+  Name: Main_Ch01_01_08_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_08_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_08_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_08_Dialogue_03
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_08_Dialogue_04
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 38971
+  Name: Main_Ch01_01_10_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_10_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_10_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_10_Dialogue_03
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_01_10_Dialogue_04
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 2243
+  Name: Main_Ch01_02_03_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_03_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_03_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 71265
+  Name: Main_Ch01_02_04_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_04_Dialogue_01
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_04_Dialogue_02
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 43259
+  Name: Main_Ch01_02_06_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_06_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_02_06_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 31456
+  Name: Main_Ch01_04_02_Dialogue_Complete
+  DisplayTiming: Complete
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_04_02_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_04_02_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_04_02_Dialogue_03
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 15113
+  Name: Main_Ch01_08_02_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_VaritanSoldier
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_KalitanDisguisedResistance.Dialogue_KalitanDisguisedResistance
+      Content: Main_Ch01_08_02_Dialogue_01
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_VaritanSoldier
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_KalitanDisguisedResistance.Dialogue_KalitanDisguisedResistance
+      Content: Main_Ch01_08_02_Dialogue_02
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 68698
+  Name: Main_Ch01_09_01_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_09_01_Dialogue_01
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_09_01_Dialogue_02
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_09_01_Dialogue_03
+      PageEndTime: 3
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 51163
+  Name: Main_Ch01_09_02_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_09_02_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_09_02_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 14849
+  Name: Main_Ch01_12_01_Dialogue_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_12_01_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_12_01_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 63832
+  Name: Main_Ch01_12_02_Dialogue_Complete
+  DisplayTiming: Complete
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_12_02_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_12_02_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 46182
+  Name: Main_Ch01_13_01_Dialogue_Accept
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_01_Dialogue_01
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_01_Dialogue_02
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_01_Dialogue_03
+      PageEndTime: 4
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 22537
+  Name: Main_Ch01_13_03_Dialogue_Accept
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_03_Dialogue_01
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_03_Dialogue_02
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_13_03_Dialogue_03
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 35144
+  Name: Main_Ch01_14_01_Dialogue_Accept
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_14_01_Dialogue_01
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_14_01_Dialogue_02
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_14_01_Dialogue_03
+      PageEndTime: 5
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 44951
+  Name: Main_Ch01_02_01_Dialogue_Exit
+  DisplayTiming: Complete
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Ch01_03_01_Dialogue_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 78181
+  Name: Main_TestDialogue_Normal_Accept
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Test_dialogue_Normal
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 88666
+  Name: Main_TestDialogue_Mini_Accept
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Test_dialogue_Mini
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 52779
+  Name: Main_TestDialogue_Normal_Complete
+  DisplayTiming: Complete
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Test_dialogue_Normal
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 70690
+  Name: Main_TestDialogue_Mini_Complete
+  DisplayTiming: Complete
+  Dialogues:
+    - SpeakerName: Que_Speaker_Seraha
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_UsasetDaughter.Dialogue_UsasetDaughter
+      Content: Main_Test_dialogue_Mini
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+- Id: 3289
+  Name: Main_Ch02_09_03_C
+  DisplayTiming: Complete
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Test_Speaker_Quest_User
+      Content: Main_Ch02_09_03_C_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 5604
+  Name: Main_Ch02_09_08_A_01
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_08_A_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 63297
+  Name: Main_Ch02_09_08_A_02
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_08_A_02
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_08_A_03
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_08_A_04
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 32370
+  Name: Main_Ch02_09_09_A
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_09_A_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_09_A_02
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 12218
+  Name: Main_Ch02_09_10_A_01
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_10_A_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 35887
+  Name: Main_Ch02_09_10_A_02
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_10_A_02
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_10_A_03
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터
+- Id: 15078
+  Name: Main_Ch02_09_10_C
+  DisplayTiming: Complete
+  DialogueType: Normal
+  Dialogues:
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_11_C_01
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_11_C_02
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+    - SpeakerName: Que_Speaker_BishopHalivan
+      PortraitIcon: /Game/UIIcon/NPCPortrait/Dialogue_BishopHalivan.Dialogue_BishopHalivan
+      Content: Main_Ch02_09_11_C_03
+      PageEndTime: 2
+      PrintGuaranteeTime: 0
+      CanSkip: true
+  Comment: 임시 데이터

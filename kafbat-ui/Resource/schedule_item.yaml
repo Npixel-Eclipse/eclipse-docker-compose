@@ -1,0 +1,48 @@
+- Id: 101
+  Name: ScheduleItemQuestDaily
+  Comment: 일일 퀘스트 스케줄
+  Type: Quest
+  QuestCategoryAuto: Request_Daily
+  OrderSetting: ScheduleItemQuestDailyOrder
+  EnabledSetting: ScheduleItemQuestDailyEnabled
+- Id: 102
+  Name: ScheduleItemQuestWeekly
+  Comment: 주간 퀘스트 스케줄
+  Type: Quest
+  QuestCategoryAuto: Request_Weekly
+  OrderSetting: ScheduleItemQuestWeeklyOrder
+  EnabledSetting: ScheduleItemQuestWeeklyEnabled
+- Id: 201
+  Name: ScheduleItemRuinedCastle
+  Comment: 폐허의 성 던전 스케줄
+  Type: Dungeon
+  Dungeon: Daily_DailyDun_RuinedCastle
+  DungeonDurationSetting: ScheduleItemRuinedCastleDuration
+  DungeonFloorSetting: ScheduleItemRuinedCastle
+  OrderSetting: ScheduleItemRuinedCastleOrder
+  EnabledSetting: ScheduleItemRuinedCastleEnabled
+- Id: 202
+  Name: ScheduleItemMiningArea
+  Comment: 버려진 채굴지 던전 스케줄
+  Type: Dungeon
+  Dungeon: Daily_DailyDun_MiningArea
+  DungeonDurationSetting: ScheduleItemMiningAreaDuration
+  DungeonFloorSetting: ScheduleItemMiningArea
+  OrderSetting: ScheduleItemMiningAreaOrder
+  EnabledSetting: ScheduleItemMiningAreaEnabled
+- Id: 203
+  Name: ScheduleItemUndeadTemple
+  Comment: 언데드 신전 던전 스케줄
+  Type: Dungeon
+  Dungeon: Daily_DailyDun_UndeadTemple
+  DungeonDurationSetting: ScheduleItemUndeadTempleDuration
+  DungeonFloorSetting: ScheduleItemUndeadTemple
+  OrderSetting: ScheduleItemUndeadTempleOrder
+  EnabledSetting: ScheduleItemUndeadTempleEnabled
+- Id: 301
+  Name: ScheduleItemFallback
+  Comment: 위치 지정 스케줄
+  Type: Fallback
+  FallbackWorldMapAreaSetting: ScheduleItemFallback
+  OrderSetting: ScheduleItemFallbackOrder
+  EnabledSetting: ScheduleItemFallbackEnabled

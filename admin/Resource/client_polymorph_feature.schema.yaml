@@ -1,0 +1,235 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Inventory:
+      type: string
+      ref: inventory
+    WeaponInventory:
+      type: string
+      ref: inventory
+    EquipSlot:
+      type: string
+      ref: equip_slot
+    SkinEquipSlot:
+      type: string
+      ref: equip_slot
+    WeaponEquipSlot:
+      type: string
+      ref: equip_slot
+    Category:
+      type: string
+      ref: item_category
+    CardCategory:
+      type: string
+      ref: item_category
+    WeaponCategory:
+      type: string
+      ref: item_category
+    WeaponPreviewAsset:
+      type: string
+    PolymorphGradeItemFilter:
+      type: string
+      ref: client_item_filter
+    PolymorphItemFilter:
+      type: string
+      ref: client_item_filter
+    WeaponItemFilter:
+      type: string
+      ref: client_item_filter
+    PolymorphFavorite:
+      type: string
+      ref: favorite
+    WeaponFavorite:
+      type: string
+      ref: favorite
+    GradeAllIcon:
+      type: string
+    WeaponNotActivadedMessage:
+      type: string
+      ref: system_message
+    QuantityBonusCardAlert_Description:
+      type: string
+      ref: description
+    QuantityBonusSkinAlert_Description:
+      type: string
+      ref: description
+    QuantityBonusWeaponAlert_Description:
+      type: string
+      ref: description
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - PolymorphCardList
+              - WeaponCardList
+              - PolymorphSkin
+              - Solidarity
+          Locked:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          ContentLimit:
+            type: string
+            ref: content_limit
+          Comment:
+            type: string
+          UISubTab:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Group:
+                  type: string
+                  enum:
+                    - CardList
+                    - Merge
+                    - Enchant
+                    - Confirmed
+                    - QuantityBonus
+                Locked:
+                  type: boolean
+                  default: false
+                Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+                  type: string
+                Description:
+                  type: string
+                  ref: description
+                Comment:
+                  type: string
+              required:
+                - Group
+        required:
+          - Group
+    SystemMessageInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - NotAcquiredCard
+              - MaxLevelCard
+              - LockedCard
+              - NoneEnchantDataCard
+              - InsufficientMaterial
+          Value:
+            type: string
+            ref: system_message
+    EffectUpgradeEnchantLevel:
+      type: integer
+    CharacterEnchantLevelByGrade:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          EnchantLevelRangeRule:
+            type: string
+            ref: item_enchant
+    WeaponEnchantLevelByGrade:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          EnchantLevelRangeRule:
+            type: string
+            ref: item_enchant
+    CharacterEffectsByGrade:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          Size:
+            type: string
+            enum:
+              - Woman   # 기본 인간형(여성)
+              - Man     # 기본 인간형(남성)
+              - Medium  # 중형 고유 초월체
+              - Large   # 대형 고유 초월체
+              - XLarge  # 초대형 고유 초월체
+          DefaultAsset:
+            type: string
+            ref: effect
+          UpgradeAsset:
+            type: string
+            ref: effect
+    WeaponEffectsByGrade:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          Category:
+            type: string
+            ref: item_category
+          DefaultAsset:
+            type: string
+            ref: effect
+          UpgradeAsset:
+            type: string
+            ref: effect
+    BuffGroup_Polymorph:
+      type: string
+    BuffGroup_WeaponPolymorph:
+      type: string
+    PropertyKey_EnchantLevel:
+      type: string
+    EnchantSubTabGradeFilterMinValue:
+      type: string
+      ref: grade
+  required:
+    - Id
+    - Name
+    - Inventory
+    - WeaponInventory
+    - EquipSlot
+    - SkinEquipSlot
+    - WeaponEquipSlot
+    - Category
+    - CardCategory
+    - WeaponCategory
+    - WeaponPreviewAsset
+    - PolymorphItemFilter
+    - WeaponItemFilter
+    - PolymorphFavorite
+    - WeaponFavorite
+    - GradeAllIcon
+    - WeaponNotActivadedMessage
+    - QuantityBonusCardAlert_Description
+    - QuantityBonusSkinAlert_Description
+    - QuantityBonusWeaponAlert_Description
+    - SystemMessageInfo

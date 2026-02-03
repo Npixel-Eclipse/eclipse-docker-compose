@@ -1,0 +1,40 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - EnchantLevel
+          Value:
+            type: string
+    EnchantedItemNameDesc:
+      type: string
+      ref: description
+    EnchantedPolymorphNameDesc:
+      type: string
+      ref: description   
+    SkillInventory:
+      type: string
+      ref: inventory
+    QuickItemEquipPopupMaintainingTime:
+      type: number
+  required:
+    - Id
+    - Name
+    - EnchantedItemNameDesc
+    - EnchantedPolymorphNameDesc
+    - SkillInventory

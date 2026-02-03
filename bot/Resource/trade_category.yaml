@@ -1,0 +1,361 @@
+- Id: 1
+  Name: MainTab_Weapon
+  Comment: 상위 탭_무기
+  MainTab: Weapon
+  MainTabPriority: 2
+  MainTabDesc: TradeCategory_MainTab_Weapon
+- Id: 2
+  Name: SubTab_Weapon_All
+  Comment: 하위 탭_무기_전체
+  MainTab: Weapon
+  SubTab: All
+  SubTabPriority: 1
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Equip_WeaponBase_Weapon
+- Id: 207
+  Name: SubTab_Weapon_Melee_Sword
+  Comment: 하위 탭_무기_한손검
+  MainTab: Weapon
+  SubTab: Weapon_Sword
+  SubTabPriority: 2
+  SubTabDesc: TradeCategory_SubTab_Weapon_Melee_Sword
+  ItemCategory: Item_Equip_Weapon_Fighter_Sword
+- Id: 120
+  Name: SubTab_Weapon_Melee_TwohandSword
+  Comment: 하위 탭_무기_대검
+  MainTab: Weapon
+  SubTab: Weapon_TwohandSword
+  SubTabPriority: 3
+  SubTabDesc: TradeCategory_SubTab_Weapon_Melee_TwohandSword
+  ItemCategory: Item_Equip_Weapon_Fighter_Lsword
+- Id: 732
+  Name: SubTab_Weapon_Range_Bow
+  Comment: 하위 탭_무기_활
+  MainTab: Weapon
+  SubTab: Weapon_Bow
+  SubTabPriority: 4
+  SubTabDesc: TradeCategory_SubTab_Weapon_Range_Bow
+  ItemCategory: Item_Equip_Weapon_Ranger_Bow
+- Id: 2698
+  Name: SubTab_Weapon_Range_CrossBow
+  Comment: 하위 탭_무기_석궁
+  MainTab: Weapon
+  SubTab: Weapon_CrossBow
+  SubTabPriority: 5
+  SubTabDesc: TradeCategory_SubTab_Weapon_Range_CrossBow
+  ItemCategory: Item_Equip_Weapon_Ranger_Cbow
+- Id: 2680
+  Name: SubTab_Weapon_Magic_Staff
+  Comment: 하위 탭_무기_지팡이
+  MainTab: Weapon
+  SubTab: Weapon_Staff
+  SubTabPriority: 6
+  SubTabDesc: TradeCategory_SubTab_Weapon_Magic_Staff
+  ItemCategory: Item_Equip_Weapon_Sorcerer_Staff
+- Id: 2103
+  Name: SubTab_Weapon_Magic_Orb
+  Comment: 하위 탭_무기_마법구
+  MainTab: Weapon
+  SubTab: Weapon_Orb
+  SubTabPriority: 7
+  SubTabDesc: TradeCategory_SubTab_Weapon_Magic_Orb
+  ItemCategory: Item_Equip_Weapon_Sorcerer_Orb
+- Id: 7
+  Name: SubTab_Weapon_Melee_Katana
+  Comment: 하위 탭_무기_카타나
+  MainTab: Weapon
+  SubTab: Weapon_Katana
+  SubTabPriority: 8
+  SubTabDesc: TradeCategory_SubTab_Weapon_Melee_Katana
+  ItemCategory: Item_Equip_Weapon_Assassin_Katana
+- Id: 2212
+  Name: SubTab_Weapon_Melee_TwinDaggers
+  Comment: 하위 탭_무기_쌍단검
+  MainTab: Weapon
+  SubTab: Weapon_TwinDaggers
+  SubTabPriority: 9
+  SubTabDesc: TradeCategory_SubTab_Weapon_Melee_TwinDaggers
+  ItemCategory: Item_Equip_Weapon_Assassin_TwinDaggers
+- Id: 2420
+  Name: MainTab_Armor
+  Comment: 상위 탭_방어구
+  MainTab: Armor
+  MainTabPriority: 3
+  MainTabDesc: TradeCategory_MainTab_Armor
+- Id: 1119
+  Name: SubTab_Armor_All
+  Comment: 하위 탭_방어구_전체
+  MainTab: Armor
+  SubTab: All
+  SubTabPriority: 15
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Equip_Armor
+- Id: 265
+  Name: SubTab_Armor_Helm
+  Comment: 하위 탭_방어구_투구
+  MainTab: Armor
+  SubTab: Armor_Helm
+  SubTabPriority: 16
+  SubTabDesc: TradeCategory_SubTab_Armor_Helm
+  ItemCategory: Item_Equip_Armor_Helm
+- Id: 638
+  Name: SubTab_Armor_Suit
+  Comment: 하위 탭_방어구_상의
+  MainTab: Armor
+  SubTab: Armor_Suit
+  SubTabPriority: 17
+  SubTabDesc: TradeCategory_SubTab_Armor_Suit
+  ItemCategory: Item_Equip_Armor_Suit
+- Id: 1189
+  Name: SubTab_Armor_Gloves
+  Comment: 하위 탭_방어구_장갑
+  MainTab: Armor
+  SubTab: Armor_Gloves
+  SubTabPriority: 18
+  SubTabDesc: TradeCategory_SubTab_Armor_Gloves
+  ItemCategory: Item_Equip_Armor_Gloves
+- Id: 1204
+  Name: SubTab_Armor_Pants
+  Comment: 하위 탭_방어구_하의
+  MainTab: Armor
+  SubTab: Armor_Pants
+  SubTabPriority: 19
+  SubTabDesc: TradeCategory_SubTab_Armor_Pants
+  ItemCategory: Item_Equip_Armor_Pants
+- Id: 916
+  Name: SubTab_Armor_Boots
+  Comment: 하위 탭_방어구_신발
+  MainTab: Armor
+  SubTab: Armor_Boots
+  SubTabPriority: 20
+  SubTabDesc: TradeCategory_SubTab_Armor_Boots
+  ItemCategory: Item_Equip_Armor_Boots
+- Id: 1384
+  Name: SubTab_Armor_Cape
+  Comment: 하위 탭_방어구_망토
+  MainTab: Armor
+  SubTab: Armor_Cape
+  SubTabPriority: 21
+  SubTabDesc: TradeCategory_SubTab_Armor_Cape
+  ItemCategory: Item_Equip_Armor_Cape
+- Id: 2301
+  Name: MainTab_Accessory
+  Comment: 상위 탭_악세서리
+  MainTab: Accessory
+  MainTabPriority: 4
+  MainTabDesc: TradeCategory_MainTab_Accessory
+- Id: 877
+  Name: SubTab_Accessory_All
+  Comment: 하위 탭_악세서리_전체
+  MainTab: Accessory
+  SubTab: All
+  SubTabPriority: 22
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Equip_Accessory
+- Id: 1339
+  Name: SubTab_Accessory_Necklace
+  Comment: 하위 탭_악세서리_목걸이
+  MainTab: Accessory
+  SubTab: Accessory_Necklace
+  SubTabPriority: 23
+  SubTabDesc: TradeCategory_SubTab_Accessory_Necklace
+  ItemCategory: Item_Equip_Accessory_Necklace
+- Id: 1316
+  Name: SubTab_Accessory_Earring
+  Comment: 하위 탭_악세서리_귀걸이
+  MainTab: Accessory
+  SubTab: Accessory_Earring
+  SubTabPriority: 24
+  SubTabDesc: TradeCategory_SubTab_Accessory_Earring
+  ItemCategory: Item_Equip_Accessory_Earring
+- Id: 518
+  Name: SubTab_Accessory_Ring
+  Comment: 하위 탭_악세서리_반지
+  MainTab: Accessory
+  SubTab: Accessory_Ring
+  SubTabPriority: 25
+  SubTabDesc: TradeCategory_SubTab_Accessory_Ring
+  ItemCategory: Item_Equip_Accessory_Ring
+- Id: 590
+  Name: SubTab_Accessory_Belt
+  Comment: 하위 탭_악세서리_벨트
+  MainTab: Accessory
+  SubTab: Accessory_Belt
+  SubTabPriority: 26
+  SubTabDesc: TradeCategory_SubTab_Accessory_Belt
+  ItemCategory: Item_Equip_Accessory_Belt
+- Id: 215
+  Name: MainTab_SkillBook
+  Comment: 상위 탭_스킬북
+  MainTab: SkillBook
+  MainTabPriority: 5
+  MainTabDesc: TradeCategory_MainTab_SkillBook
+- Id: 1105
+  Name: SubTab_SkillBook_All
+  Comment: 하위 탭_스킬북_전체
+  MainTab: SkillBook
+  SubTab: All
+  SubTabPriority: 27
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Skill_Book
+- Id: 591
+  Name: SubTab_SkillBook_Fighter
+  Comment: 하위 탭_스킬북_파이터
+  MainTab: SkillBook
+  SubTab: SkillBook_Fighter
+  SubTabPriority: 28
+  SubTabDesc: TradeCategory_SubTab_SkillBook_Fighter
+  ItemCategory: Skill_Book_Fighter
+- Id: 456
+  Name: SubTab_SkillBook_Ranger
+  Comment: 하위 탭_스킬북_레인저
+  MainTab: SkillBook
+  SubTab: SkillBook_Ranger
+  SubTabPriority: 29
+  SubTabDesc: TradeCategory_SubTab_SkillBook_Ranger
+  ItemCategory: Skill_Book_Ranger
+- Id: 2824
+  Name: SubTab_SkillBook_Sorcerer
+  Comment: 하위 탭_스킬북_소서러
+  MainTab: SkillBook
+  SubTab: SkillBook_Sorcerer
+  SubTabPriority: 30
+  SubTabDesc: TradeCategory_SubTab_SkillBook_Sorcerer
+  ItemCategory: Skill_Book_Sorcerer
+- Id: 2929
+  Name: SubTab_SkillBook_Assassin
+  Comment: 하위 탭_스킬북_어쌔신
+  MainTab: SkillBook
+  SubTab: SkillBook_Assassin
+  SubTabPriority: 31
+  SubTabDesc: TradeCategory_SubTab_SkillBook_Assassin
+  ItemCategory: Skill_Book_Assassin
+- Id: 1812
+  Name: SubTab_SkillBook_Public
+  Comment: 하위 탭_스킬북_공용
+  MainTab: SkillBook
+  SubTab: SkillBook_Public
+  SubTabPriority: 32
+  SubTabDesc: TradeCategory_SubTab_SkillBook_Public
+  ItemCategory: Skill_Book_Public
+- Id: 440
+  Name: MainTab_Consume
+  Comment: 상위 탭_제작 재료
+  MainTab: Resource
+  MainTabPriority: 6
+  MainTabDesc: TradeCategory_MainTab_Craft
+- Id: 807
+  Name: SubTab_Craft_All
+  Comment: 하위 탭_제작재료_전체
+  MainTab: Resource
+  SubTab: All
+  SubTabPriority: 35
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Craft
+- Id: 1610
+  Name: SubTab_Craft_Material
+  Comment: 하위 탭_제작재료_일반 재료
+  MainTab: Resource
+  SubTab: Craft_Material
+  SubTabPriority: 36
+  SubTabDesc: TradeCategory_SubTab_Craft_Material
+  ItemCategory: Item_Craft_Material
+- Id: 56
+  Name: SubTab_Craft_SeongsoBuild
+  Comment: 하위 탭_제작재료_성소 재료
+  MainTab: Resource
+  SubTab: Craft_Special
+  SubTabPriority: 37
+  SubTabDesc: TradeCategory_SubTab_Craft_Special
+  ItemCategory: Item_Misc_SeongsoBuild
+- Id: 828
+  Name: MainTab_Misc
+  Comment: 상위 탭_기타 재료 및 소모품
+  MainTab: Misc
+  MainTabPriority: 7
+  MainTabDesc: TradeCategory_MainTab_Misc
+- Id: 2355
+  Name: SubTab_Misc_All
+  Comment: 하위 탭_기타_전체
+  MainTab: Misc
+  SubTab: All
+  SubTabPriority: 39
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Misc
+- Id: 3639
+  Name: SubTab_Misc_Upgrade
+  Comment: 하위 탭_기타_장비 강화
+  MainTab: Misc
+  SubTab: Misc_Upgrade
+  SubTabPriority: 41
+  SubTabDesc: TradeCategory_SubTab_Misc_ItemEnchant
+  ItemCategory: Item_Misc_Upgrade_Enchant
+- Id: 4271
+  Name: SubTab_Misc_Skill_Enchant
+  Comment: 하위 탭_기타_스킬 강화석
+  MainTab: Misc
+  SubTab: Misc_Skill_Enchant
+  SubTabPriority: 42
+  SubTabDesc: ItemCategory1Item_SkillEnchantDesc
+  ItemCategory: Item_Misc_Upgrade_Skill_Enchant
+- Id: 1427
+  Name: SubTab_Misc_Skill_EnchantMisc_CollectionMisc_MergeMisc_SlotOpen
+  Comment: 하위 탭_기타_슬롯 해금 재료
+  MainTab: Misc
+  SubTab: Misc_SlotOpen
+  SubTabPriority: 44
+  SubTabDesc: ItemCategory1Item_SlotOpen_Desc
+  ItemCategory: Item_Misc_Upgrade_Engrave
+- Id: 2211
+  Name: SubTab_Misc_Skill_EnchantMisc_CollectionMisc_MergeMisc_SlotOpenMisc_EmpowerMisc_TeleportScroll
+  Comment: 하위 탭_기타_이동 주문서
+  MainTab: Misc
+  SubTab: Misc_TeleportScroll
+  SubTabPriority: 47
+  SubTabDesc: ItemCategory1Item_TeleportScrollDesc
+  ItemCategory: Item_Misc_Consume
+- Id: 1242
+  Name: MainTab_Collect
+  Comment: 상위 탭_수집품
+  MainTab: Collection
+  MainTabPriority: 8
+  MainTabDesc: TradeCategory_MainTab_Collection
+  SubTabPriority: 100
+- Id: 677
+  Name: SubTab_Collect_All
+  Comment: 하위 탭_수집품_전체
+  MainTab: Collection
+  SubTab: All
+  SubTabPriority: 101
+  SubTabDesc: TradeCategory_SubTab_All
+  ItemCategory: Item_Misc_Collection
+- Id: 3402
+  Name: SubTab_Collect_Varitan
+  Comment: 하위 탭_수집품_바리탄
+  MainTab: Collection
+  SubTab: Misc_Collection_Varitan
+  SubTabPriority: 102
+  SubTabDesc: ItemCategory1Item_CollectionVaritanDesc
+  ItemCategory: Item_Misc_Collection_Varitan
+- Id: 942
+  Name: SubTab_Collect_Eldar
+  Comment: 하위 탭_수집품_엘다르
+  MainTab: Collection
+  SubTab: Misc_Collection_Eldar
+  SubTabPriority: 103
+  SubTabDesc: ItemCategory1Item_CollectionEldarDesc
+  ItemCategory: Item_Misc_Collection_Eldar
+- Id: 3015
+  Name: SubTab_Collect_Rockhed
+  Comment: 하위 탭_수집품_락헤드
+  MainTab: Collection
+  SubTab: Misc_Collection_Rockhed
+  SubTabPriority: 104
+  SubTabDesc: ItemCategory1Item_CollectionRockhedDesc
+  ItemCategory: Item_Misc_Collection_Rockhed
+- Id: 829
+  Name: MainTab_Favorite
+  Comment: 상위 탭_즐겨찾기
+  MainTab: Favorite
+  MainTabPriority: 1
+  MainTabDesc: UIWordCraft_BookMark

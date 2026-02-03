@@ -1,0 +1,15 @@
+- Id: 1
+  Name: Success
+  ProtoName: RECIPE_SUCCESS
+  Comment: 성공
+  Description: UIWord_Craft_ResultType_Success
+- Id: 2
+  Name: GreatSuccess
+  ProtoName: RECIPE_GREAT_SUCCESS
+  Comment: 대성공
+  Description: UIWord_Craft_ResultType_GreatSuccess
+- Id: 3
+  Name: Failure
+  ProtoName: RECIPE_FAILURE
+  Comment: 실패
+  Description: UIWord_Craft_ResultType_Failure

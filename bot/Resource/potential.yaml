@@ -1,0 +1,228 @@
+- Id: 1
+  Name: PotentialPage1
+  Comment: 1페이지
+  TargetItem: Item_Potential_Page1
+  ContentLimit: Potential_Page1
+  PotentialSlot:
+    - Slot: PotentialSlot1_1
+      SlotEnchant: Enchant_PotentialSlot1_1
+      Node: 0
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot1_1_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon01.PotentialSlotIcon01
+    - Slot: PotentialSlot1_2
+      SlotEnchant: Enchant_PotentialSlot1_2
+      Node: 2
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot1_2_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon02.PotentialSlotIcon02
+    - Slot: PotentialSlot1_3
+      SlotEnchant: Enchant_PotentialSlot1_3
+      Node: 0
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot1_3_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon03.PotentialSlotIcon03
+    - Slot: PotentialSlot1_4
+      SlotEnchant: Enchant_PotentialSlot1_4
+      Node: 1
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot1_4_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon04.PotentialSlotIcon04
+    - Slot: PotentialSlot1_5
+      SlotEnchant: Enchant_PotentialSlot1_5
+      Node: 2
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot1_5_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon05.PotentialSlotIcon05
+    - Slot: PotentialSlot1_6
+      SlotEnchant: Enchant_PotentialSlot1_6
+      Node: 0
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot1_6_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon06.PotentialSlotIcon06
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 10
+    - Grade: Uncommon
+      MaxLevel: 20
+    - Grade: Rare
+      MaxLevel: 30
+    - Grade: Epic
+      MaxLevel: 40
+    - Grade: Legendary
+      MaxLevel: 50
+  PageTitleDesc: UIWord_Potential_PageTitle_1
+- Id: 46
+  Name: PotentialPage2
+  Comment: 2페이지
+  TargetItem: Item_Potential_Page2
+  ContentLimit: Potential_Page2
+  PotentialSlot:
+    - Slot: PotentialSlot2_1
+      SlotEnchant: Enchant_PotentialSlot2_1
+      Node: 0
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot1_1_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon01.PotentialSlotIcon01
+    - Slot: PotentialSlot2_2
+      SlotEnchant: Enchant_PotentialSlot2_2
+      Node: 0
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot1_2_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon02.PotentialSlotIcon02
+    - Slot: PotentialSlot2_3
+      SlotEnchant: Enchant_PotentialSlot2_3
+      Node: 0
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot1_3_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon03.PotentialSlotIcon03
+    - Slot: PotentialSlot2_4
+      SlotEnchant: Enchant_PotentialSlot2_4
+      Node: 0
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot1_4_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon04.PotentialSlotIcon04
+    - Slot: PotentialSlot2_5
+      SlotEnchant: Enchant_PotentialSlot2_5
+      Node: 0
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot1_5_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon05.PotentialSlotIcon05
+    - Slot: PotentialSlot2_6
+      SlotEnchant: Enchant_PotentialSlot2_6
+      Node: 0
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot1_6_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon06.PotentialSlotIcon06
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 10
+    - Grade: Uncommon
+      MaxLevel: 20
+    - Grade: Rare
+      MaxLevel: 30
+    - Grade: Epic
+      MaxLevel: 40
+    - Grade: Legendary
+      MaxLevel: 50
+  PageTitleDesc: UIWord_Potential_PageTitle_2
+- Id: 103
+  Name: PotentialPage3
+  Comment: 3페이지
+  TargetItem: Item_Potential_Page3
+  ContentLimit: Potential_Page3
+  PotentialSlot:
+    - Slot: PotentialSlot3_1
+      SlotEnchant: Enchant_PotentialSlot3_1
+      Node: 0
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot1_1_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon01.PotentialSlotIcon01
+    - Slot: PotentialSlot3_2
+      SlotEnchant: Enchant_PotentialSlot3_2
+      Node: 0
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot1_2_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon02.PotentialSlotIcon02
+    - Slot: PotentialSlot3_3
+      SlotEnchant: Enchant_PotentialSlot3_3
+      Node: 0
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot1_3_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon03.PotentialSlotIcon03
+    - Slot: PotentialSlot3_4
+      SlotEnchant: Enchant_PotentialSlot3_4
+      Node: 0
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot1_4_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon04.PotentialSlotIcon04
+    - Slot: PotentialSlot3_5
+      SlotEnchant: Enchant_PotentialSlot3_5
+      Node: 0
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot1_5_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon05.PotentialSlotIcon05
+    - Slot: PotentialSlot3_6
+      SlotEnchant: Enchant_PotentialSlot3_6
+      Node: 0
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot1_6_Name
+      Icon: /Game/UIIcon/Potential/PotentialSlotIcon06.PotentialSlotIcon06
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 10
+    - Grade: Uncommon
+      MaxLevel: 20
+    - Grade: Rare
+      MaxLevel: 30
+    - Grade: Epic
+      MaxLevel: 40
+    - Grade: Legendary
+      MaxLevel: 50
+  PageTitleDesc: UIWord_Potential_PageTitle_3

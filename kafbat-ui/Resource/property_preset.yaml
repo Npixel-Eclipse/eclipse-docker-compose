@@ -1,0 +1,1948 @@
+- Id: 1
+  Name: God
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 99999
+    - PropertyName: MaxMp
+      PropertyValue: 99999
+    - PropertyName: Hp
+      PropertyValue: 99999
+    - PropertyName: Mp
+      PropertyValue: 99999
+    - PropertyName: AttackSpeedBonusResult
+      PropertyValue: 3000000
+    - PropertyName: MoveSpeedBonusResult
+      PropertyValue: 1000000
+    - PropertyName: MeleeHitResult
+      PropertyValue: 10000
+    - PropertyName: RangeHitResult
+      PropertyValue: 10000
+    - PropertyName: MagicHitResult
+      PropertyValue: 10000
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 10000
+    - PropertyName: RangeDamageResult
+      PropertyValue: 10000
+    - PropertyName: MagicDamageResult
+      PropertyValue: 10000
+    - PropertyName: DamageReductionResult
+      PropertyValue: 100000
+- Id: 14550
+  Name: Bot_AutoCombat_Super
+  Comment: 자동사냥 봇 (강함)
+  PresetProperties:
+    - PropertyName: MoveSpeedBonusResult
+      PropertyValue: 100000
+    - PropertyName: AttackSpeedBonusResult
+      PropertyValue: 500000
+    - PropertyName: MeleeHitResult
+      PropertyValue: 1000
+    - PropertyName: RangeHitResult
+      PropertyValue: 1000
+    - PropertyName: MagicHitResult
+      PropertyValue: 1000
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 500
+    - PropertyName: RangeDamageResult
+      PropertyValue: 500
+    - PropertyName: MagicDamageResult
+      PropertyValue: 500
+    - PropertyName: MaxHpResult
+      PropertyValue: 1000000
+    - PropertyName: Hp
+      PropertyValue: 1000000
+    - PropertyName: MaxMpResult
+      PropertyValue: 1000000
+    - PropertyName: Mp
+      PropertyValue: 1000000
+    - PropertyName: MpRegenResult
+      PropertyValue: 1000000
+    - PropertyName: DamageReductionResult
+      PropertyValue: 100000
+- Id: 6101
+  Name: Bot_AutoCombat_Normal
+  Comment: 자동사냥 봇 (일반)
+  PresetProperties:
+    - PropertyName: MoveSpeedBonusResult
+      PropertyValue: 300000
+    - PropertyName: AttackSpeedBonusResult
+      PropertyValue: 200000
+    - PropertyName: MeleeHitResult
+      PropertyValue: 200
+    - PropertyName: RangeHitResult
+      PropertyValue: 200
+    - PropertyName: MagicHitResult
+      PropertyValue: 200
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 100
+    - PropertyName: RangeDamageResult
+      PropertyValue: 100
+    - PropertyName: MagicDamageResult
+      PropertyValue: 100
+    - PropertyName: MaxHpResult
+      PropertyValue: 1000000
+    - PropertyName: Hp
+      PropertyValue: 1000000
+    - PropertyName: MaxMpResult
+      PropertyValue: 1000000
+    - PropertyName: Mp
+      PropertyValue: 1000000
+    - PropertyName: MpRegenResult
+      PropertyValue: 1000000
+    - PropertyName: DamageReductionResult
+      PropertyValue: 100000
+- Id: 17227
+  Name: Bot_Newbie
+  Comment: 유입 봇
+  PresetProperties:
+    - PropertyName: MeleeHitResult
+      PropertyValue: 10000
+    - PropertyName: RangeHitResult
+      PropertyValue: 10000
+    - PropertyName: MagicHitResult
+      PropertyValue: 10000
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 100
+    - PropertyName: RangeDamageResult
+      PropertyValue: 100
+    - PropertyName: MagicDamageResult
+      PropertyValue: 100
+    - PropertyName: DamageReductionResult
+      PropertyValue: 100000
+- Id: 11017
+  Name: Bot_Battleground
+  Comment: 전장 봇
+  PresetProperties:
+    - PropertyName: MeleeHitResult
+      PropertyValue: 10000
+    - PropertyName: RangeHitResult
+      PropertyValue: 10000
+    - PropertyName: MagicHitResult
+      PropertyValue: 10000
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 250
+    - PropertyName: RangeDamageResult
+      PropertyValue: 150
+    - PropertyName: MagicDamageResult
+      PropertyValue: 160
+- Id: 2914
+  Name: Bot_BossHunting
+  Comment: 보스 사냥 봇
+  PresetProperties:
+    - PropertyName: MeleeHitResult
+      PropertyValue: 10000
+    - PropertyName: RangeHitResult
+      PropertyValue: 10000
+    - PropertyName: MagicHitResult
+      PropertyValue: 10000
+    - PropertyName: MeleeDamageResult
+      PropertyValue: 100
+    - PropertyName: RangeDamageResult
+      PropertyValue: 100
+    - PropertyName: MagicDamageResult
+      PropertyValue: 100
+    - PropertyName: DamageReductionResult
+      PropertyValue: 100000
+- Id: 2098
+  Name: Class_Common_Base
+  Comment: 클래스 기본 프로퍼티
+  PresetProperties:
+    - PropertyName: BaseMasteryExperienceAmount
+      PropertyValue: 10
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 900000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstFinalMultiplier
+      PropertyValue: 100000
+    - PropertyName: ConstCriDmg
+      PropertyValue: 100000
+    - PropertyName: IsPc
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 250
+    - PropertyName: MinPkPoint
+      PropertyValue: -35000
+    - PropertyName: MaxPkPoint
+      PropertyValue: 35000
+    - PropertyName: SkillBuffDelay
+      PropertyValue: 1000
+    - PropertyName: DefaultMaxCarryAmount
+      PropertyValue: 1000
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: MaxStatPoint
+      PropertyValue: 35
+    - PropertyName: ConstPenetrationMin
+      PropertyValue: 2000
+- Id: 642
+  Name: Class_Fighter_Base
+  Comment: 파이터 초기 스탯
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 30
+    - PropertyName: MpRegen
+      PropertyValue: 5
+    - PropertyName: CoefficientMaxHpByLevel
+      PropertyValue: 2500
+    - PropertyName: CoefficientMaxMpByLevel
+      PropertyValue: 500
+    - PropertyName: CoefficientHpRegenByLevel
+      PropertyValue: 70
+    - PropertyName: CoefficientMpRegenByLevel
+      PropertyValue: 15
+    - PropertyName: PcClass
+      PropertyValue: 1
+    - PropertyName: MaxHpBase
+      PropertyValue: 500
+    - PropertyName: MaxMpBase
+      PropertyValue: 100
+    - PropertyName: CoefficientAddedDamageByLevel
+      PropertyValue: 130
+    - PropertyName: CoefficientArmorClassByLevel
+      PropertyValue: 130
+- Id: 2901
+  Name: Class_Ranger_Base
+  Comment: 레인저 초기 스탯
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 30
+    - PropertyName: MpRegen
+      PropertyValue: 5
+    - PropertyName: CoefficientMaxHpByLevel
+      PropertyValue: 2500
+    - PropertyName: CoefficientMaxMpByLevel
+      PropertyValue: 500
+    - PropertyName: CoefficientHpRegenByLevel
+      PropertyValue: 70
+    - PropertyName: CoefficientMpRegenByLevel
+      PropertyValue: 15
+    - PropertyName: PcClass
+      PropertyValue: 2
+    - PropertyName: MaxHpBase
+      PropertyValue: 500
+    - PropertyName: MaxMpBase
+      PropertyValue: 100
+    - PropertyName: CoefficientAddedDamageByLevel
+      PropertyValue: 130
+    - PropertyName: CoefficientArmorClassByLevel
+      PropertyValue: 130
+- Id: 4673
+  Name: Class_Sorcerer_Base
+  Comment: 소서러 초기 스탯
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 30
+    - PropertyName: MpRegen
+      PropertyValue: 5
+    - PropertyName: CoefficientMaxHpByLevel
+      PropertyValue: 2500
+    - PropertyName: CoefficientMaxMpByLevel
+      PropertyValue: 500
+    - PropertyName: CoefficientHpRegenByLevel
+      PropertyValue: 70
+    - PropertyName: CoefficientMpRegenByLevel
+      PropertyValue: 15
+    - PropertyName: PcClass
+      PropertyValue: 3
+    - PropertyName: MaxHpBase
+      PropertyValue: 500
+    - PropertyName: MaxMpBase
+      PropertyValue: 100
+    - PropertyName: CoefficientAddedDamageByLevel
+      PropertyValue: 130
+    - PropertyName: CoefficientArmorClassByLevel
+      PropertyValue: 130
+- Id: 6308
+  Name: Class_Assassin_Base
+  Comment: 어쌔신 초기 스탯
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 30
+    - PropertyName: MpRegen
+      PropertyValue: 5
+    - PropertyName: CoefficientMaxHpByLevel
+      PropertyValue: 2500
+    - PropertyName: CoefficientMaxMpByLevel
+      PropertyValue: 500
+    - PropertyName: CoefficientHpRegenByLevel
+      PropertyValue: 70
+    - PropertyName: CoefficientMpRegenByLevel
+      PropertyValue: 15
+    - PropertyName: PcClass
+      PropertyValue: 4
+    - PropertyName: MaxHpBase
+      PropertyValue: 500
+    - PropertyName: MaxMpBase
+      PropertyValue: 100
+    - PropertyName: CoefficientAddedDamageByLevel
+      PropertyValue: 130
+    - PropertyName: CoefficientArmorClassByLevel
+      PropertyValue: 130
+- Id: 101
+  Name: BattleGround_EntryPortal_01
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsSiegeObject
+      PropertyValue: 1
+    - PropertyName: SightRange
+      PropertyValue: 10
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 125
+  Name: BattleGround_EntryPortal_02_A
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsSiegeObject
+      PropertyValue: 1
+    - PropertyName: SightRange
+      PropertyValue: 10
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 84
+  Name: BattleGround_EntryPortal_02_B
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsSiegeObject
+      PropertyValue: 1
+    - PropertyName: SightRange
+      PropertyValue: 10
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 266
+  Name: Boss_BodyObject
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: IsBodyObject
+      PropertyValue: true
+    - PropertyName: Invincible
+      PropertyValue: true
+- Id: 669
+  Name: Boss_CharleBodyObject
+  PresetProperties:
+    - PropertyName: IsCharleBodyObject
+      PropertyValue: 1
+- Id: 1137
+  Name: Boss_Charle_SkillAttack_05_limpidity
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: CharleFifthBuff
+      PropertyValue: 1
+    - PropertyName: SightRange
+      PropertyValue: 15
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: IgnoreTerrainSight
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 1590
+  Name: Boss_Stat_AbyssLow
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 300
+- Id: 1411
+  Name: Boss_Stat_AbyssMiddle
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 420
+- Id: 1753
+  Name: Boss_Stat_BloodShed
+  PresetProperties:
+    - PropertyName: RasereneEvoDDstack
+      PropertyValue: 1
+    - PropertyName: RasereneEvoBuff
+      PropertyValue: 1
+- Id: 263
+  Name: Boss_Stat_Golem
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 310
+- Id: 927
+  Name: Boss_Stat_Gurigara
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 2
+- Id: 1150
+  Name: Boss_Stat_Remnant
+  PresetProperties:
+    - PropertyName: AttackSpeedBonus
+      PropertyValue: -300000
+- Id: 1891
+  Name: Boss_Stat_Kraka
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 3
+- Id: 712
+  Name: QuestBoss_Charle_01
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 3
+- Id: 4688
+  Name: Boss_Charle_05
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 3
+- Id: 1839
+  Name: Boss_Stat_Satyros
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 2
+- Id: 727
+  Name: Boss_Stats_Kalivrax
+  PresetProperties:
+    - PropertyName: HpRegen
+      PropertyValue: 510
+- Id: 4310
+  Name: Boss_Stat_WhiteDragon
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 4
+- Id: 466
+  Name: FieldBoss_Stat_Common
+  PresetProperties:
+    - PropertyName: SpecialResistanceAll
+      PropertyValue: 10000000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 40
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 15
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: IgnoreAttackedPenalty
+      PropertyValue: true
+- Id: 1945
+  Name: Boss_SummonMonster
+  PresetProperties:
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: IsBodyObject
+      PropertyValue: true
+- Id: 944
+  Name: CanPk_Buff
+  PresetProperties:
+    - PropertyName: CanPk
+      PropertyValue: true
+- Id: 1083
+  Name: DecoNPC_Dog_01
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: 900000
+- Id: 814
+  Name: DecoNPC_Pig_01
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: -450000
+- Id: 4073
+  Name: FixedNpc
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+- Id: 6588
+  Name: QuestBoss_Stat_Common
+  PresetProperties:
+    - PropertyName: SpecialResistanceAll
+      PropertyValue: 10000000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 40
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 15
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: IgnoreAttackedPenalty
+      PropertyValue: true
+- Id: 3115
+  Name: GhostNpc
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 31155
+  Name: WhiteDragonYungGhostNpc
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 3476
+  Name: GhostBuff
+  PresetProperties:
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 2256
+  Name: GhostPortalNpc
+  PresetProperties:
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+- Id: 1241
+  Name: IgnoreAttackedPenalty
+  PresetProperties:
+    - PropertyName: IgnoreAttackedPenalty
+      PropertyValue: true
+- Id: 3682
+  Name: InitialItemProperty
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 766
+  Name: InitialPortal
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 1
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsSiegeObject
+      PropertyValue: 1
+    - PropertyName: SightRange
+      PropertyValue: 10
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: ImmuneMainTargeted
+      PropertyValue: true
+- Id: 1267
+  Name: InitialPropertyDecoNPC
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: -450000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+- Id: 4544
+  Name: Invincible
+  PresetProperties:
+    - PropertyName: Invincible
+      PropertyValue: true
+- Id: 3079
+  Name: IsBossBuff
+  PresetProperties:
+    - PropertyName: IsBoss
+      PropertyValue: 1
+- Id: 3709
+  Name: IsNeutralNpcBuff
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+- Id: 37094
+  Name: Quest_MoveDeco_BaseBuff
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+    - PropertyName: SightRange
+      PropertyValue: 11
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 4708
+  Name: Monster_Challenge_MonkeyLeader
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: -100000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 1846
+  Name: Monster_Challenge_SmallMonkey
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: 300000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 3518
+  Name: Monster_Challenge_SmallMonkey_AttackBuff
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: 300000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 3806
+  Name: Monster_Challenge_SmallMonkey_MoveBuff
+  PresetProperties:
+    - PropertyName: MoveSpeedBonus
+      PropertyValue: 300000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 586
+  Name: Monster_Challenge_Undead_Buff
+  PresetProperties:
+    - PropertyName: AttackSpeedBonus
+      PropertyValue: -300000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 1465
+  Name: Monster_Challenge_Undead_Buff2
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 1925
+  Name: ChallengeBoss_Stat_Common
+  PresetProperties:
+    - PropertyName: SpecialResistanceAll
+      PropertyValue: 10000000
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsBoss
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 500
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: IgnoreAttackedPenalty
+      PropertyValue: true
+- Id: 5608
+  Name: Monster_Dungeon_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1500
+    - PropertyName: Attack02Delay
+      PropertyValue: 1500
+    - PropertyName: Attack03Delay
+      PropertyValue: 1500
+    - PropertyName: Attack04Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1500
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 541
+  Name: Monster_Dungeon_Common_Range
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 9
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1500
+    - PropertyName: Attack02Delay
+      PropertyValue: 1500
+    - PropertyName: Attack03Delay
+      PropertyValue: 1500
+    - PropertyName: Attack04Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1500
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 3442
+  Name: Boss_Stat_Zenus
+  PresetProperties:
+    - PropertyName: TargettedCastRange
+      PropertyValue: 3
+- Id: 5767
+  Name: Monster_Evo_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 12
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 5190
+  Name: Monster_Named_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsNamed
+      PropertyValue: 1
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 7143
+  Name: Monster_Normal_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1500
+    - PropertyName: Attack02Delay
+      PropertyValue: 1500
+    - PropertyName: Attack03Delay
+      PropertyValue: 1500
+    - PropertyName: Attack04Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1500
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 4780
+  Name: Monster_Normal_Common_Range
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 9
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1500
+    - PropertyName: Attack02Delay
+      PropertyValue: 1500
+    - PropertyName: Attack03Delay
+      PropertyValue: 1500
+    - PropertyName: Attack04Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1500
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 5655
+  Name: Monster_QuestMonster_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 11
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 2820
+  Name: Monster_Quest_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 15
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1500
+    - PropertyName: Attack02Delay
+      PropertyValue: 1500
+    - PropertyName: Attack03Delay
+      PropertyValue: 1500
+    - PropertyName: Attack04Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1500
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1500
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 12
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 1228
+  Name: Monster_Search_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 5642
+  Name: Monster_Summon_Common
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 50
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: IsSpawned
+      PropertyValue: true
+    - PropertyName: SightRange
+      PropertyValue: 20
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: IsSummonMonster
+      PropertyValue: 1
+- Id: 11619
+  Name: Trap_Stat
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: IsTrap
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 1
+    - PropertyName: CanPk
+      PropertyValue: true
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 4133
+  Name: Monster_Test_Sandbag1
+  PresetProperties:
+    - PropertyName: IsPc
+      PropertyValue: 1
+    - PropertyName: CanPk
+      PropertyValue: true
+- Id: 5690
+  Name: Monster_Test_TreasureGoblin
+  PresetProperties:
+    - PropertyName: MaxHp
+      PropertyValue: 10
+    - PropertyName: MaxMp
+      PropertyValue: 100
+- Id: 2183
+  Name: NotSearchTarget
+  PresetProperties:
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+- Id: 333
+  Name: NotTargeted
+  PresetProperties:
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+- Id: 6922
+  Name: NpcBaseFlare
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 11
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: IgnoreTerrainSight
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 3627
+  Name: PublicSkill_DetectAround_Npc_BaseBuff
+  PresetProperties:
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: IgnoreTerrainSight
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+    - PropertyName: NoClip
+      PropertyValue: true
+- Id: 2674
+  Name: QuestTalkNpc
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+- Id: 6735
+  Name: Quest_Magic_SoldierStaff_01_Buff
+  PresetProperties:
+    - PropertyName: QuestPropertyCheck
+      PropertyValue: 1
+    - PropertyName: QuestMagicSoldierStaff
+      PropertyValue: 1
+- Id: 4935
+  Name: Quest_Melee_ShroomSoldier_01_Buff
+  PresetProperties:
+    - PropertyName: QuestPropertyCheck
+      PropertyValue: 1
+    - PropertyName: QuestMagicShroomSoldier
+      PropertyValue: 1
+- Id: 6879
+  Name: Quest_VaritanGeneral01
+  PresetProperties:
+    - PropertyName: QuestPropertyCheck
+      PropertyValue: 1
+    - PropertyName: QuestVaritanGeneral01
+      PropertyValue: 1
+- Id: 8325
+  Name: SiegeObjectCommonSetting
+  PresetProperties:
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: IsSiegeObject
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+- Id: 4548
+  Name: TeleporterNpc
+  PresetProperties:
+    - PropertyName: IsNeutralNpc
+      PropertyValue: 1
+    - PropertyName: IsPortal
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetSearching
+      PropertyValue: 1
+    - PropertyName: IsNotIncludeTargetScanning
+      PropertyValue: 1
+    - PropertyName: Invincible
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+- Id: 553
+  Name: TutorialBoss_Charle_Spawn_limpidity_Npc_BaseBuff
+  PresetProperties:
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ChaseRange
+      PropertyValue: 3
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: SightRange
+      PropertyValue: 3
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: ImmuneTargeted
+      PropertyValue: true
+    - PropertyName: IgnoreTerrainSight
+      PropertyValue: true
+    - PropertyName: Ghost
+      PropertyValue: true
+    - PropertyName: NoClip
+      PropertyValue: true
+- Id: 3175
+  Name: Boss_Stat_Charle
+  PresetProperties:
+    - PropertyName: IsCharle
+      PropertyValue: 1
+    - PropertyName: TargettedCastRange
+      PropertyValue: 3
+- Id: 2554
+  Name: Tutorial_NPC_VaritanHighBishop_01_Buff
+  PresetProperties:
+    - PropertyName: TutorialNPCVaritanHighBishop01
+      PropertyValue: 1
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+- Id: 999999998
+  Name: Simulation_Class_Common_Base
+  PresetProperties:
+    - PropertyName: BaseMasteryExperienceAmount
+      PropertyValue: 10
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 900000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 100000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstFinalMultiplier
+      PropertyValue: 100000
+    - PropertyName: ConstCriDmg
+      PropertyValue: 100000
+    - PropertyName: IsPc
+      PropertyValue: 1
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff03Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff04Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 250
+    - PropertyName: MinPkPoint
+      PropertyValue: -35000
+    - PropertyName: MaxPkPoint
+      PropertyValue: 35000
+    - PropertyName: SkillBuffDelay
+      PropertyValue: 1000
+    - PropertyName: DefaultMaxCarryAmount
+      PropertyValue: 1000
+    - PropertyName: SightRange
+      PropertyValue: 16
+    - PropertyName: MaxStatPoint
+      PropertyValue: 35
+- Id: 999999999
+  Name: Simulation_Monster_Normal_Common
+  PresetProperties:
+    - PropertyName: ChaseRange
+      PropertyValue: 30
+    - PropertyName: IsMonster
+      PropertyValue: 1
+    - PropertyName: EquipWeaponId
+      PropertyValue: 112733
+    - PropertyName: AttackNormalDelay
+      PropertyValue: 1000
+    - PropertyName: Attack02Delay
+      PropertyValue: 1000
+    - PropertyName: Attack03Delay
+      PropertyValue: 1000
+    - PropertyName: Attack04Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillAtk02Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff01Delay
+      PropertyValue: 1000
+    - PropertyName: SkillBuff02Delay
+      PropertyValue: 1000
+    - PropertyName: MoveDelay
+      PropertyValue: 300
+    - PropertyName: ConstACHitMaxProb
+      PropertyValue: 950000
+    - PropertyName: ConstACHitMinProb
+      PropertyValue: 50000
+    - PropertyName: ConstMinAttackSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinCastSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: ConstMinMoveSpeedRatio
+      PropertyValue: -900000
+    - PropertyName: SightRange
+      PropertyValue: 11

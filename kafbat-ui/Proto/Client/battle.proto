@@ -1,0 +1,886 @@
+syntax = "proto3";
+package clientBattle;
+
+import "Common/battle_common.proto";
+import "Common/websocket.proto";
+import "Common/guild_common.proto";
+import "Common/item_common.proto";
+import "Common/property.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+enum BattleResultCode {
+  reserved 16; // 구 공령 메세지
+
+  FAIL = 0;
+  SUCCESS = 1;
+  SUCCESS_RESERVED = 2;
+  FAIL_HAS_BUFF = 3;
+  FAIL_BLOCKED = 4;
+  FAIL_COOL_TIME = 5;
+  FAIL_TARGET_DEAD = 6;
+  FAIL_MP_COST = 7;
+  FAIL_IMMUNE_TARGETED = 8;
+  FAIL_HP_COST = 9;
+  FAIL_MATERIAL = 10;
+  FAIL_NOT_ALLOWED_WEAPON = 11;
+  FAIL_CASTER_PK_NOT_ALLOWED_ZONE = 12;
+  FAIL_TARGET_PK_NOT_ALLOWED_ZONE = 13;
+  SUCCESS_MOVE_TO_QUEST_TERRITORY = 15;
+  FAIL_HEIGHT_GAP_TOO_SMALL = 17;
+  FAIL_HEIGHT_GAP_TOO_LARGE = 18;
+  FAIL_NO_SPACE_AVAILABLE = 19;
+  FAIL_SET_PARTY_TARGET = 21;
+  FAIL_TARGET_PARTY_TARGET = 22;
+  FAIL_INVALID_TARGET = 23;
+  FAIL_INVALID_TARGET_OUR_SIDE = 42;
+  FAIL_CAST_RANGE = 24;
+  FAIL_DISCONNECTED = 25;
+  FAIL_SAME_TEAM = 26;
+  FAIL_TELEPORT_NOT_ENOUGH_ITEM = 27;
+  FAIL_OFFLINE_MODE = 28;
+  CHEAT_OFFLINE_MODE = 29;
+  FAIL_WAIT = 30;
+  FAIL_NOT_ENOUGH_INVENTORY_SLOT = 31;
+  FAIL_PICK_UP_ITEM = 32;
+  FAIL_CAN_NOT_CARRY_MORE = 33; // MaxCarryAmount를 초과함
+  FAIL_EXECUTE_PROBABILITY = 34;
+  FAIL_NOT_ENOUGH_LEVEL = 40;
+  FAIL_NOT_ENOUGH_COMBAT_POINT = 41;
+  FAIL_UNREACHABLE = 14;
+  FAIL_UNREACHABLE_QUEST = 140;
+  SUCCESS_REACHABLE = 141;
+  FAIL_ALREADY_IN_DESTINATION = 142;
+  SUCCESS_QUEST_AUTOMOVE_WALKABLE = 143;
+  CANCEL_RESERVED_SKILL = 144;
+  FAIL_BLOCK_BY_TERRAIN = 146;
+  ANNOUNCE_PARTY_TARGET_CLEARED = 100;
+  FAIL_GUILD_FORTRESS_ENTER_NOT_NOW = 101;
+  FAIL_NOT_ALLOWED = 102;
+}
+
+// ResultEvent에서 관련 Param을 구분하기 위한 Code
+enum ParamTypeCode {
+  NONE = 0;
+  SKILL = 1;
+  ITEM = 2;
+  QUEST = 3;
+}
+
+enum Direction {
+  INVALID = 0;
+  UP = 1;
+  UP_RIGHT = 2;
+  RIGHT = 3;
+  DOWN_RIGHT = 4;
+  DOWN = 5;
+  DOWN_LEFT = 6;
+  LEFT = 7;
+  UP_LEFT = 8;
+}
+
+enum DirectionAdjustment {
+  NO_ADJUSTMENT = 0;
+  SLIGHT_LEFT = 1;
+  SLIGHT_RIGHT = 2;
+}
+
+enum MoveType {
+  SPAWN = 0;
+  WALK = 1;
+  TELEPORT = 2;
+  GRAB = 3;
+}
+
+enum BossResultCode {
+  ABYSS_ABOUT_TO_SPAWN = 0; // (공령 보스) 출현 시 월드 전체 얼럿 하는 보스
+  ADD_WORLD_MAP_ICON = 1;
+  REMOVE_WORLD_MAP_ICON = 2;
+  BOSS_SPAWNED = 3;
+  BOSS_KILLED = 4;
+  DUNGEON_CLOSE = 5;
+  DUNGEON_ENTER = 6;
+  DUNGEON_COMPLETE = 7;
+  LOCAL_BOSS_SPAWNED = 8; // 출현 시 소환된 지역에만 얼럿 하는 보스
+  GUILD_RAID_COMPLETE = 9;
+  GUILD_RAID_FAIL = 10;
+  WORLD_BOSS_UNAVAILABLE = 11;
+}
+
+enum KillerType {
+  PC = 0;
+  MONSTER = 1;
+}
+
+enum BattlegroundBossSpawnType {
+  BATTLEGROUND_BOSS_COMING = 0; // 잠시후 보스 출현
+  BATTLEGROUND_BOSS_SPAWNED = 1; // 보스 출현
+}
+
+enum BattlegroundPlayerUnRankType {
+  UN_RANK_NO_SCORE = 0; // 0점으로 인해 랭크 없음
+  UN_RANK_LEAVE = 1; // 탈주로 인해 랭크 없음
+}
+
+message Content {
+  string team = 1;
+  string role = 2;
+}
+
+message SkillTarget {
+  message DirectionInfo {
+    Direction direction = 1;
+    DirectionAdjustment adjustment = 2;
+  }
+
+  oneof OneOf {
+    int64 object_id = 1;
+    common.ProtoCoordinate coordinate = 2;
+    DirectionInfo direction_info = 3;
+    int64 world_map_area_id = 4;
+    int64 npc_id = 5;
+    common.ProtoPosition position = 6;
+  }
+}
+
+message SkillEventTarget {
+  int64 object_id = 1;
+  ProbabilityResult result = 2;
+  bool is_critical = 3;
+  bool is_perfect = 4;
+  optional int64 hp_delta = 5;
+  bool is_double = 6;
+  optional int64 mp_delta = 7;
+  common.ProtoCoordinate coordinate = 8; // 타겟이 시야 밖에 있어서 안보이는 경우에만 전송
+}
+
+message AreaOfEffect {
+  common.ProtoPosition position = 1;
+  double rotation = 2;
+  int64 id = 3; // 어떤 도형 데이터를 봐야 하는지 알려줌
+}
+
+message SkillEventCasterContext {
+  optional int64 hp_delta = 1;
+  optional int64 mp_delta = 2;
+}
+
+enum ProbabilityResult {
+  HIT = 0;
+  MISS = 1;
+  NA = 2;
+  IMMUNE = 3;
+  BLOCK = 4;
+}
+
+message BattleRequest {
+  reserved 10000; // transaction id
+  message Heartbeat {}
+
+  message Subscribe {
+    string name = 1;
+    string pc_class = 2;
+    Content content = 3;
+  }
+
+  message SkillCast {
+    reserved 2;
+    message Argument {
+      string key = 1;
+      string value = 2;
+    }
+    int64 skill_id = 1;
+    repeated SkillTarget targets = 4;
+    repeated Argument arguments = 3;
+  }
+
+  message Teleport {
+    reserved 4;
+    int64 skill_id = 1;
+    int64 world_map_area_id = 2;
+    bool should_close_ui = 3;
+    optional int64 quest_id = 5;
+  }
+
+  message AddressInfo {
+    int64 address_id = 1;
+  }
+
+  message QuestAutoMove {
+    int64 world_map_area_id = 1;
+    int64 quest_id = 2;
+  }
+
+  message SecurityCheck {
+    bytes checksum = 1;
+  }
+
+  // 퀵슬롯 등록 및 삭제 요청
+  message SetQuickSlot {
+    oneof content {
+        int64 skill_id = 1;
+        int64 base_item_id = 2;
+    }
+    int32 to_index = 3;
+    bool is_delete = 4;
+    optional int32 from_index = 5; // 기존 퀵슬롯 이동
+  }
+
+  // 퀵슬롯 및 스킬 창 자동 사용 설정 요청
+  message SetAutoCast {
+    oneof content {
+        int64 skill_id = 1;
+        int64 base_item_id = 2;
+    }
+    bool is_auto = 3;
+  }
+
+  // 스킬 우선순위 설정
+  message SetSkillPriority {
+    int64 skill_id = 1;
+    int32 index = 2;  // 0=해제
+  }
+
+  oneof request {
+    Heartbeat heartbeat = 5000;
+    Subscribe subscribe = 1;
+    SkillCast skill_cast = 2;
+    Teleport teleport = 3;
+    AddressInfo address_info = 4;
+    QuestAutoMove quest_auto_move = 6;
+    SecurityCheck security_check = 5;
+    SetQuickSlot set_quick_slot = 7;
+    SetAutoCast set_auto_cast = 8;
+    SetSkillPriority set_skill_priority = 9;
+  }
+}
+
+message BattleEvent {
+  message ConnectEvent {
+    google.protobuf.Timestamp timestamp = 1;
+    int64 local_time_offset = 2;
+  }
+  message HeartbeatReply {
+    google.protobuf.Timestamp timestamp = 1;
+  }
+  message BuffEvent {
+    message BuffProperty {
+      int64 key = 1;
+      oneof value {
+        int64 integer_value = 2;
+        string string_value = 3;
+      }
+    }
+
+    int64 buff_id = 1;
+    int64 object_id = 2;
+    repeated common.Property properties = 3;
+    google.protobuf.Duration valid_until = 4;
+    google.protobuf.Duration duration = 5;
+    int64 unique_id = 6;
+    int64 caster_id = 7;
+    repeated BuffProperty buff_properties = 8;
+    bool welcome = 9;
+  }
+  message CasterInfo {
+    common.ProtoCoordinate coordinate = 1;
+    int64 model_id = 2;
+    int64 object_id = 3;
+    bool pc = 4; // pc가 아니면 npc
+    int64 weapon_item_id = 5;
+  }
+  message SkillEvent {
+    // deprecated id
+    reserved 6, 7, 13;
+
+    int64 skill_id = 1;
+    oneof caster {
+      int64 object_id = 2;
+      CasterInfo caster_info = 11;
+    }
+    google.protobuf.Timestamp started = 12;
+    google.protobuf.Duration delay = 3;
+    repeated SkillEventTarget targets = 4;
+    // 스킬 캐스터한테만 전송함
+    optional SkillEventCasterContext caster_context = 5;
+    repeated AreaOfEffect area_of_effects = 8;
+    optional google.protobuf.Duration left_delay_until_result = 9;
+    optional bytes uuid = 10;
+
+    optional common.ProtoPosition projectile_start_position = 14;
+    optional common.ProtoPosition projectile_target_position = 15;
+    optional int64 projectile_index = 16;
+  }
+  // 후판정 스킬은 SkillEvent에 타겟에 관한 자세한 정보가 없는 대신 이게 추가로 나감
+  message SkillResultEvent {
+    // deprecated id
+    reserved 5, 6;
+
+    int64 skill_id = 1;
+    oneof caster {
+      int64 object_id = 2;
+      CasterInfo caster_info = 11;
+    }
+    repeated SkillEventTarget targets = 4;
+    repeated AreaOfEffect area_of_effects = 7;
+
+    optional bytes uuid = 10;
+
+    optional common.ProtoPosition projectile_start_position = 14;
+    optional common.ProtoPosition projectile_target_position = 15;
+    optional int64 projectile_index = 16;
+  }
+
+  // 클라이언트 UI 표시 이벤트
+  message ShowWindowEvent {
+    message SystemMessage {
+      // 기존 SkillResult를 ResultEvent로 변경
+      // 클라이언트로부터 request 없이 결과를 보내는 경우 (주로 ai 행동 결과)
+      int64 param_value = 1;
+      BattleResultCode result_code = 2;
+      ParamTypeCode param_type = 3;
+    }
+    message Popup {
+      message Teleport {
+        int64 world_map_area_id = 1;
+      }
+      message ChallengeDungeon {
+        int64 dungeon_id = 1;
+      }
+      oneof type {
+        Teleport teleport = 1;
+        ChallengeDungeon challenge_dungeon = 2;
+      }
+    }
+    oneof event {
+      SystemMessage system_message = 10;
+      Popup popup = 11;
+    }
+    string debug = 4;
+  }
+
+  // 클라로 쏘면 클라는 월드맵에 있는 아이콘들을 지우고 이 메세지에 담긴 것들로 갱신함
+  message WorldMapIconEvent {
+    // 월드맵의 해당 좌표에 어비스 아이콘을 출력함
+    message AbyssEvent {
+      int64 object_id = 1;
+      int64 npc_id = 2;
+      common.ProtoCoordinate coordinate = 3;
+      int64 address_id = 4;
+      int64 land_id = 5;
+    }
+
+    // 월드맵의 해당 좌표에 보스 아이콘을 출력함 (필드보스/던전보스 통합)
+    message BossEvent {
+      int64 object_id = 1;
+      int64 npc_id = 2;
+      common.ProtoCoordinate coordinate = 3;
+      int64 address_id = 4;
+      int64 land_id = 5;
+    }
+
+    repeated AbyssEvent abyss_events = 1;
+    repeated BossEvent boss_events = 2;
+  }
+
+  message BossEvent {
+    reserved 1;
+    reserved "result_code";
+
+    message BossInfo {
+      reserved 1, 2, 3, 4, 6;
+      reserved "npc_id", "territory_id", "entity_id", "abyss";
+
+      // 보스 얼럿용으로 사용, result_code 로 메세지 종류 분기
+      message World {
+        reserved 2;
+
+        int64 dungeon_id = 1;
+        optional int64 remain_time = 3;
+        // 월드보스 처치 결과 (BOSS_KILLED 시 사용)
+        optional int32 my_rank = 4;               // 내 순위
+        optional int64 my_contribution = 5;       // 내 기여도
+        optional int32 total_contributors = 6;    // 총 참여자 수
+        repeated RankingEntry top_rankings = 7;   // 상위 순위 (1~10위)
+        optional int64 npc_id = 8;                // 월드보스 NPC ID
+      }
+
+      // 월드보스 순위 정보
+      message RankingEntry {
+        string character_name = 1;    // 캐릭터 이름
+        int32 rank = 2;               // 순위
+        int64 contribution = 3;       // 기여도
+      }
+
+      message Challenge {
+        int64 dungeon_id = 1;
+      }
+
+      message GuildRaid {
+        int64 guild_raid_id = 1;
+        int64 total_npc_hp = 2;
+        int64 total_npc_max_hp = 3;
+      }
+
+      BossResultCode result_code = 5;
+      oneof Boss {
+        World world = 7;
+        Challenge challenge = 8;
+        GuildRaid guild_raid = 9;
+      }
+    }
+
+    repeated BossInfo boss_info = 2;
+  }
+
+  message DungeonEvent {// deprecated
+    // 현재 입장한 던전의 남은 시간.
+    // - 던전 입장하거나 남은 시간이 변경 될 경우 전달
+    google.protobuf.Duration remain_time = 4;
+    google.protobuf.Duration charging_time = 5;
+  }
+
+  message ScanEvent {
+    reserved 2;
+    message Pc {
+      string uuid = 1;
+      string name = 2;
+      common.GuildMark guild_mark = 3;
+    }
+    message Npc {
+      int64 npc_id = 1;
+    }
+    message Target {
+      int64 index = 1;
+      int64 object_id = 2;
+      oneof EntityType {
+        Pc pc = 11;
+        Npc npc = 12;
+      }
+    }
+    repeated Target targets = 1;
+    bool manual = 3;
+  }
+
+  message CoolTimeReductionEvent {
+    message CoolTimeReduction {
+      string cool_time_group = 1;
+      int64 reduction_time_as_millis = 2;
+    }
+    repeated CoolTimeReduction cool_time_reductions = 1;
+  }
+
+  message DeathPenaltyEvent {
+    message LoseItem {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+
+    repeated string broken_item_uuid = 1;// 손상된 아이템
+    repeated LoseItem lose_item = 2;// 손실된 아이템
+    int64 lose_exp = 3;// 손실된 경험치
+    google.protobuf.Timestamp die_date = 4;
+    string killer_name = 5;
+    KillerType killer_type = 6;
+    int64 victory_emoji_id = 7;
+    string victory_message = 8;
+  }
+
+  message CoolTimeEvent {
+    repeated CoolTimeDetail cool_time_details = 1;
+    message CoolTimeDetail{
+      oneof Id{
+        int64 cool_time_group_id = 1;
+        int64 skill_id = 2;
+      }
+      google.protobuf.Duration valid_until = 3;
+      google.protobuf.Duration duration = 4;
+    }
+  }
+
+  message DisconnectEvent {
+    enum Reason {
+      FAIL = 0;
+      CHANGE_CHARACTER = 1;
+      CHANGE_BATTLE_SERVER = 2;
+      LOGIN_DUPLICATED = 3;
+      KICKED_BY_ADMIN = 4;
+      SERVER_MAINTENANCE = 5;
+      SOCKET_TIMEOUT = 6;
+      UNCHEATER_FAILED = 7;
+      OFFLINE_MODE = 8;
+      SESSION_EXPIRED = 9;
+      IDLE_TIMEOUT = 10;
+    }
+    Reason reason = 1;
+    optional string next_battle_url = 2;
+    optional bool next_battle_tls = 3;
+  }
+
+  message SecurityCheckSum {
+    bytes checksum = 1;
+    BattleResultCode result_code = 2;
+  }
+
+  message BattlegroundEvent {
+    message TeamData {
+      int64 team_id = 1;
+      int64 score = 2;
+      bool boss_killed = 3; // 보스 처치 여부
+      bool win = 4; // 승리 여부. (전장이 플레이되는 동안에는 승리 여부가 없으므로 false)
+    }
+
+    message PlayerData {
+      int64 team_id = 1;
+      string character_name = 2;
+      optional int64 object_id = 3; // 오프라인(중도 퇴장)인 경우 null
+      repeated common.Property properties = 4; // todo : 4개 항목 필드로 변경 ScoreKey 참고
+      oneof ranking {// 순위 정보는 GameOver 프로토콜일때만 유효함.
+        int32 rank = 5; // 팀 내에서의 순위
+        BattlegroundPlayerUnRankType un_rank = 6;
+      }
+    }
+
+    message TimeData {
+      google.protobuf.Timestamp at_data = 1;
+      google.protobuf.Duration in_data = 2; // 현재 시간으로부터 at_data까지 남은 시간
+    }
+
+    message Welcome {
+      int64 battleground_id = 1;
+      int64 goal_score = 2;
+      repeated TeamData team = 3;
+      repeated PlayerData player = 4;
+      TimeData start_time = 5; // 전장 시작 시간 (이 시간보다 일찍 들어왔다면 N초 전부터 시작 카운트를 표시)
+      TimeData end_time = 6; // 전장 종료 시간
+      google.protobuf.Duration game_duration = 7; // 이 전장의 게임 시간 (ex. 30분)
+    }
+
+    message Item {
+      int64 item_id = 1;
+      int64 amount = 2;
+      optional int32 enchant_level = 3;
+    }
+
+    message GameOver {
+      int64 battleground_id = 1;
+      int64 goal_score = 2;
+      bool win = 3;
+      repeated TeamData team = 4;
+      repeated PlayerData player = 5;
+      repeated Item reward_item = 6;
+    }
+
+    message BattlegroundBossEvent {
+      message BossKilled {
+        int64 team_id = 1;
+        string character_name = 2;
+      }
+
+      oneof type {
+        BattlegroundBossSpawnType boss_spawn = 1; // 보스 등장 관련 알림
+        BossKilled boss_killed = 2; // 보스 사망 알림
+      }
+    }
+
+    oneof event {
+      // 전장에 입장했을때 전달할 전장 정보
+      Welcome welcome = 1;
+      // 특정 진영의 점수 변동 알림
+      TeamData team = 2;
+      // 특정 플레이어의 점수 변동 알림
+      PlayerData player = 3;
+      // 전장 종료 시간 변동 알림
+      TimeData refresh_remain_time = 4;
+      // 보스 알림
+      BattlegroundBossEvent boss_event = 7;
+      // 전장 결과 알림
+      GameOver game_over = 6;
+    }
+
+    reserved 5;
+  }
+
+  message CombatEvent {
+    // pc 살해당할 경우 킬러에게 발송
+    message Kill {}
+    // pc 살해당할 경우 어시에게 발송
+    message Assist {}
+    // 버프가 차단될 경우 시전자와 피격자에게 발송
+    message ImmuneBuff {
+      int64 buff_id = 1;
+      int64 target_id = 2; // object_id in BuffEvent
+      int64 caster_id = 3;
+    }
+
+    oneof event {
+      Kill kill = 1;
+      Assist assist = 2;
+      ImmuneBuff immune_buff = 3;
+    }
+  }
+
+  message TeleportArrivalEvent {
+    reserved 1;
+    bool should_close_ui = 2;
+    int64 world_map_area_id = 3;
+  }
+
+  message AddressInfoEvent {
+    int64 address_id = 1;
+    bool can_pk = 2; // 해당 지역에 `CanPk` 프로퍼티가 있을 경우
+    bool has_death_penalty = 3; // 해당 지역에 `HasPenalty` 프로퍼티가 있을 경우
+    bool team_type = 4; // 해당 지역에 `TeamType` 프로퍼티가 있을 경우
+    bool peace = 5; // 해당 지역에 `Peace` 프로퍼티가 있을 경우
+  }
+
+  message QuestTeleportRequiredEvent {
+    //int64 world_map_area_id = 1;
+    int64 quest_id = 2;
+  }
+
+  message PartyEvent {
+    message MemberCoordinate {
+      int32 x = 1;
+      int32 y = 2;
+      int64 instance_id = 3;
+    }
+
+    message MemberHp {
+      int64 max_hp = 1;
+      int64 hp = 2;
+    }
+
+    message MemberMp {
+      int64 max_mp = 1;
+      int64 mp = 2;
+    }
+
+    message MemberBuff {
+      int64 buff_id = 1;
+      int64 entire_time = 2; // millis
+      int64 remain_time = 3; // millis
+    }
+
+    message MemberDead {}
+
+    string name = 1;
+    int64 object_id = 7;
+    oneof event {
+      MemberCoordinate member_coordinate = 2;
+      MemberHp member_hp = 3;
+      MemberMp member_mp = 4;
+      MemberBuff member_buff = 5;
+      MemberDead member_dead = 6;
+    }
+  }
+
+  message MovementEvent  {
+    int64 object_id = 1;
+    common.ProtoCoordinate coordinate = 2;
+    MoveType move_type = 3;
+    google.protobuf.Duration delay = 4; // 0 when standing still
+    google.protobuf.Timestamp timestamp = 5; // server tick timestamp
+  }
+
+  message AutoModeEvent {
+    enum ModeType {
+      NONE = 0;
+      AUTO_COMBAT = 1;
+      AUTO_QUEST = 2;
+      AUTO_TOWN_NPC_WALK = 3;
+      AUTO_WORLD_MAP_WALK = 4;
+      AUTO_SCHEDULE = 5;
+    }
+    ModeType mode = 1;
+    int64 quest_id = 2;
+  }
+
+  // 스케줄 자동 보급 타입
+  enum ScheduleAutoSupplyType {
+    AUTO_SUPPLY_BUY = 0;
+    AUTO_SUPPLY_STORAGE = 1;
+  }
+
+  // 스케줄 자동 보급 이벤트
+  message ScheduleAutoSupplyEvent {
+    // 보급 결과
+    enum Result {
+      STARTED = 0;    // 시작됨
+      SUCCESS = 1;    // 완료 - 성공
+      FAILED = 2;     // 완료 - 실패
+      CANCELLED = 3;  // 취소됨
+    }
+
+    ScheduleAutoSupplyType type = 1;
+    Result result = 2;
+  }
+
+  // 스케줄 상태 이벤트
+  message ScheduleStateEvent {
+    bool is_running = 1;                        // 실행 중 여부
+    int64 remain_sec = 2;                       // 남은 시간 (초)
+    google.protobuf.Timestamp update_time = 3;  // 기준 시간
+  }
+
+  message ProjectileEvent {
+    int64 object_id = 1;
+    int64 caster_object_id = 2;
+    int64 skill_id = 3;
+    common.ProtoPosition current_position = 4;
+    common.ProtoPosition target_position = 5;
+    google.protobuf.Timestamp arrival_time = 6;
+    google.protobuf.Timestamp current_time = 7;
+    int64 id = 8;
+    bool self_movement = 9;
+  }
+
+  message ProjectileStateEvent {
+    message Collision {
+      SkillEvent skill_event = 1;
+    }
+    message Penetration {
+      SkillEvent skill_event = 2;
+    }
+    message Arrival {
+      reserved 1, 2;
+      optional SkillEvent skill_event = 3;
+    }
+
+    int64 object_id = 1; // 투사체의 object_id
+    oneof State {
+      Collision collision = 2;
+      Penetration penetration = 3;
+      Arrival arrival = 4;
+    }
+  }
+
+  message CombatPointChangedEvent {
+    message StatChange {
+      int64 property_id = 1;   // 스탯 ID (Resource/property.yaml 참조)
+      int64 delta = 2;         // 변화량 (+10, -5 등)
+    }
+
+    int64 combat_point_delta = 1;
+    repeated StatChange stat_changes = 2;  // 변화된 스탯 목록
+  }
+
+  // 퀵슬롯 정보
+  message QuickSlotEvent {
+    message QuickSlot {
+      oneof content {
+        int64 skill_id = 1;
+        int64 base_item_id = 2;
+      }
+      int32 index = 3;
+    }
+    repeated QuickSlot list = 1;
+  }
+
+  // 아이템 자동 사용 정보
+  message AutoCastItemEvent {
+    repeated int64 base_item_ids = 1;
+  }
+
+  message SetQuickSlotReply {
+    enum Result {
+      INVALID = 0;
+      SUCCESS = 1;
+      INVALID_SKILL_ID = 2;
+      INVALID_ITEM_ID = 3;
+      INVALID_INDEX = 4;
+    }
+     message QuickSlot {
+      oneof content {
+        int64 skill_id = 1;
+        int64 base_item_id = 2;
+      }
+      int32 index = 3;
+    }
+    Result result = 4;
+    repeated QuickSlot changes = 5;
+  }
+
+  // 퀵슬롯 및 스킬창 자동 사용 설정 응답
+  message SetAutoCastReply {
+    enum Result {
+      INVALID = 0;
+      SUCCESS = 1;
+      INVALID_SKILL_ID = 2;
+      INVALID_ITEM_ID = 3;
+      SKILL_NOT_LEARNED = 4;
+      NOT_SUPPORT_AUTO = 5;
+      NOT_FOUND = 6;  // Quick slot not registered
+    }
+    oneof content {
+      int64 skill_id = 1;
+      int64 base_item_id = 2;
+    }
+    bool is_auto = 3;
+    Result result = 4;
+  }
+
+  // 스킬 우선순위 설정 응답
+  message SetSkillPriorityReply {
+    enum Result {
+      INVALID = 0;
+      SUCCESS = 1;
+      INVALID_SKILL_ID = 2;
+      INVALID_INDEX = 3;
+      NOT_SUPPORT_AUTO = 4;
+    }
+    message SkillPriority {
+      int64 skill_id = 1;
+      int32 index = 2;
+    }
+    Result result = 3;
+    repeated SkillPriority changes = 4;
+  }
+
+  reserved 3, 18, 32; // deprecated
+  oneof event {
+    BuffEvent buff_event = 1;
+    SkillEvent skill_event = 2;
+    ShowWindowEvent show_window_event = 4;
+    DungeonEvent dungeon_event = 5;
+    common.InventoryEvent inventory_event = 6;
+    //    SettingEvent setting_event = 7 [deprecated = true];
+    BossEvent boss_event = 8;
+    ScanEvent scan_event = 9;
+    CoolTimeReductionEvent cool_time_reduction_event = 10;
+    DeathPenaltyEvent death_penalty_event = 11;
+    CoolTimeEvent cool_time_event = 14;
+    BattlegroundEvent battleground_event = 16;
+    CombatEvent combat_event = 17;
+    //    ForwardTeleportArgumentEvent forward_teleport_argument_event = 18; [deprecated = true];
+    AddressInfoEvent address_info_event = 19;
+    TeleportArrivalEvent teleport_arrival_event = 20;
+    QuestTeleportRequiredEvent quest_teleport_required_event = 30;
+    PartyEvent party_event = 21;
+    MovementEvent movement_event = 23;
+    AutoModeEvent auto_mode_event = 24;
+    ProjectileEvent projectile_event = 25;
+    ProjectileStateEvent projectile_state_event = 26;
+    SkillResultEvent skill_result_event = 27; // reserved 된 3을 쓸것인가?
+    WorldMapIconEvent world_map_icon_event = 28;
+
+    ConnectEvent connect_event = 101;
+    DisconnectEvent disconnect_event = 15;
+
+    SecurityCheckSum security_checksum = 22;
+
+    CombatPointChangedEvent combat_point_changed_event = 29;
+
+    QuickSlotEvent quick_slot_event = 31;
+    AutoCastItemEvent auto_cast_item_event = 36;
+    SetQuickSlotReply set_quick_slot_reply = 33;
+    SetAutoCastReply set_auto_cast_reply = 34;
+    SetSkillPriorityReply set_skill_priority_reply = 35;
+    ScheduleAutoSupplyEvent schedule_auto_supply_event = 38;
+    ScheduleStateEvent schedule_state_event = 39;
+
+    HeartbeatReply heartbeat_reply = 100;
+  }
+  uint32 message_main_type = 10000;
+  uint32 message_sub_type = 10001;
+}

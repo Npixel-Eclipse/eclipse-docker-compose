@@ -1,0 +1,71 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    SummaryTabName:
+      type: string
+      ref: description
+    SummaryTabIcon:
+      type: string
+    PropertyKey_AwakeningInfo:
+      type: string
+    PropertyKey_AwakeningCategoryTotalLevelInfo:
+      type: string
+    PropertyKeys_AwakeningItemTotalExpandCount:
+      type: string
+    PropertyKeys_AwarenessItemTotalExpandCount:
+      type: string
+    CurrentAwakeningInfoTabs: #아이템 인벤토리 탭 정보.
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:     
+          Type: #탭에 해당하는 아이템의 카테고리
+            type: string
+            enum:
+              - AllEffect
+              - EffectByLevel
+              - EffectByGrade
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+          DefaultTab:
+            type: boolean
+            default: false
+    ExpandCollectionRewardName: #각성 레벨에 따른 효과 데이터이름
+      type: string
+      ref: collection_reward
+    FavoriteID:
+      type: string
+      ref: favorite
+    AwakeningNotInConditionSystemMessage:
+      type: string
+      ref: description
+    AwarenessSystemMessage:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - NoMaterialItemSystemMessage
+              - NoExpandItemSystemMessage
+          Desc:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name
+    - FavoriteID

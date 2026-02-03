@@ -1,0 +1,55 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Order
+    - LimitMember
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - MASTER
+        - SUB_MASTER
+        - ROYAL
+        - NORMAL
+    Order: # 낮을수록 권한이 높아야함
+      type: integer
+      minimum: 1
+    LimitMember:
+      type: integer
+    Privileges:
+      type: array
+      visible: true
+      items:
+        type: object
+        required:
+          - Default
+        properties:
+          Privilege:
+            type: string
+            visible: true
+            enum:
+              - UpdateInfo
+              - ApproveGuildJoin
+              - UpdatePrivilege
+              - UpdateRole
+              - BanishGuild
+              - AcquireGuildTrait # 연구 추천 및 연구 레벨 상승에 대한 권한
+              - ManageGuildRelation
+              - InviteGuild
+              - StorageStore # 길드 창고 보관 권한
+              - SellAndWithdraw # 길드 창고 판매 및 회수 권한
+              - Distribute # 길드 창고 일반 분배 권한
+              - AuctionRegister # 길드 경매 등록/회수 권한
+              - SpawnGuildRaidSacrifice # 길드 레이드 소환 제물 생성 권한
+              - ManagePinPoint # 길드 핀 포인트 관리 권한
+          Default:
+            type: boolean
+            visible: true

@@ -1,0 +1,1166 @@
+- Id: 999999998
+  Name: Simulation_Target_Tax_Buff_20_Skill
+  Comment: Target의 TaxExperience를 20으로 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_20
+- Id: 999999999
+  Name: Simulation_Target_Tax_Buff_10_Skill
+  Comment: Target의 TaxExperience를 10으로 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000000
+  Name: Simulation_Transform_Tax_Buff_Skill
+  Comment: 활/석궁 장착 여부에 따라 타깃의 TaxExperience를 다르게 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 1
+  Target: TargetAll
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponLongBow
+      Skill: Simulation_Radius_Tax_Buff_10_Skill
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Radius_Tax_Buff_20_Skill
+- Id: 1000000001
+  Name: Simulation_Radius_Tax_Buff_10_Skill
+  Comment: 광역으로 타겟에게 TaxExperience를 10으로 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 1000
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+  Radius: 3
+  ObjectFilter: TargetAll
+- Id: 1000000002
+  Name: Simulation_Radius_Tax_Buff_20_Skill
+  Comment: 광역으로 타겟에게 TaxExperience를 20으로 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 1000
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_20
+  Radius: 3
+  ObjectFilter: TargetAll
+- Id: 1000000003
+  Name: Simulation_Recursive_Transform_Skill_1
+  Comment: TransformSkill 재귀 테스트
+  Category: System
+  Target: TargetAll
+  MotionDelay: 1
+  CastRange: 8
+  RotateToTarget: true
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponLongBow
+      Skill: Simulation_Recursive_Transform_Skill_LongBow_Middle
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Recursive_Transform_Skill_CrossBow_Middle
+  BaseCastRange: 8
+- Id: 1000000004
+  Name: Simulation_Recursive_Transform_Skill_LongBow_Middle
+  Comment: TransformSkill 재귀 테스트
+  Category: System
+  Target: TargetAll
+  MotionType: SkillAtk_02
+  MotionDelay: 500
+  CastRange: 8
+  ChangeHp: -50
+  RotateToTarget: true
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponLongBow
+      Skill: Simulation_Recursive_Transform_Skill_LongBow_Leaf
+  BaseCastRange: 8
+- Id: 1000000005
+  Name: Simulation_Recursive_Transform_Skill_CrossBow_Middle
+  Comment: TransformSkill 재귀 테스트
+  Category: System
+  Target: TargetAll
+  MotionDelay: 500
+  CastRange: 8
+  ChangeHp: -50
+  RotateToTarget: true
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Recursive_Transform_Skill_CrossBow_Leaf
+  BaseCastRange: 8
+- Id: 1000000006
+  Name: Simulation_Recursive_Transform_Skill_LongBow_Leaf
+  Comment: TransformSkill 재귀 테스트 leaf skill
+  Category: System
+  Target: TargetAll
+  MotionDelay: 500
+  CastRange: 8
+  ChangeHp: -20
+- Id: 1000000007
+  Name: Simulation_Recursive_Transform_Skill_CrossBow_Leaf
+  Comment: TransformSkill 재귀 테스트 leaf skill
+  Category: System
+  Target: TargetAll
+  MotionDelay: 500
+  CastRange: 8
+  ChangeHp: -20
+- Id: 1000000008
+  Name: Simulation_Transform_Skill_CastRange
+  Comment: TransformSkill 사거리 테스트 부모 스킬
+  Category: System
+  Target: TargetAll
+  MotionDelay: 1
+  CastRange: 5
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Transform_Skill_CastRange_CrossBow_Leaf
+- Id: 1000000009
+  Name: Simulation_Transform_Skill_CastRange_CrossBow_Leaf
+  Comment: TransformSkill 사거리 테스트 leaf 스킬
+  Category: System
+  Target: TargetAll
+  MotionDelay: 500
+  CastRange: 3
+  ChangeHp: -50
+- Id: 1000000010
+  Name: Simulation_Transform_Skill_By_BattleItem
+  Comment: BattleItem으로 사용하는 TransformSkill
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 1
+  CastRange: 8
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Self_Tax_Buff_10_Skill
+- Id: 1000000011
+  Name: Simulation_Self_Tax_Buff_10_Skill
+  Comment: Caster의 TaxExperience를 10으로 설정함
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000012
+  Name: Simulation_Self_Tax_Buff_TwoHandSword_Transform_Skill
+  Comment: 기본으로 TaxExperience 20을 획득하고 양손검을 가지고 있다면 TransformSkill로 10을 추가로 획득함
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 1
+  CastRange: 8
+  Buff:
+    - Buff: Simulation_Tax_Buff_20
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponTwoHandSword
+      Skill: Simulation_Self_Tax_Buff_10_Skill
+- Id: 1000000013
+  Name: Simulation_Self_Tax_Buff_10_Priority_1_Skill
+  Comment: Caster의 TaxExperience를 10으로 설정함 (우선 순위 1)
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Tax_Buff_10_Priority_1
+- Id: 1000000014
+  Name: Simulation_Self_Tax_Buff_20_Priority_2_Skill
+  Comment: Caster의 TaxExperience를 10으로 설정함 (우선 순위 2)
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Tax_Buff_20_Priority_2
+- Id: 1000000015
+  Name: Simulation_Self_Tax_Immune_Buff_Skill
+  Comment: BuffGroup이 Tax인 버프들을 막음
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Tax_Immune_Buff
+- Id: 1000000016
+  Name: Simulation_Rotate_Burst_Skill
+  Comment: 3명의 적들을 돌아가면서 TaxExperience를 10 적용시킴
+  Category: System
+  Target: TargetAll
+  MotionDelay: 100
+  CastRange: 4
+  ObjectFilter: TargetAll
+  RotateBurst:
+    - 4 # additional_range
+    - 4 # radius
+    - 3 # max_target
+    - 3 # repeat_count
+  CannotCancel: true
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000017
+  Name: Simulation_Tax_Buff_10_CoolTime_Skill
+  Comment: 적에게 TaxExperience를 10 적용시키는데 쿨타임 20초
+  Category: System
+  Target: TargetAll
+  MotionDelay: 300
+  CastRange: 8
+  CoolTime: 20000
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000018
+  Name: Simulation_Tax_Buff_10_Boomerang_Skill
+  Comment: 적에게 TaxExperience를 10 적용시키고 자신에게도 TaxExperience를 10를 적용시키는 스킬이 돌아옴
+  Category: System
+  Target: TargetAll
+  MotionDelay: 300
+  CastRange: 8
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+  CastAsBoomerang: Simulation_Target_Tax_Buff_10_Skill
+- Id: 1000000019
+  Name: Simulation_Tax_Buff_10_Boomerang_NoHit_Skill
+  Comment: 적에게 TaxExperience를 10 적용시키고 자신에게도 스킬이 돌아와야하지만 Probability를 0으로 설정
+  Category: System
+  Target: TargetAll
+  MotionDelay: 300
+  CastRange: 8
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+  CastAsBoomerang: Simulation_Target_Tax_Buff_10_NoHit_Skill
+- Id: 1000000020
+  Name: Simulation_Target_Tax_Buff_10_NoHit_Skill
+  Comment: Target의 TaxExperience를 10으로 설정해야하지만 확률이 0임
+  Category: System
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  Probability: 0
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000021
+  Name: Simulation_Target_Tax_Buff_10_Not_Learned_Skill
+  Comment: Target의 TaxExperience를 10으로 설정하지만 스킬을 배워야만 사용 가능
+  Category: System
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000023
+  Name: Simulation_Target_Tax_Buff_10_AttackSkill
+  Comment: Target의 TaxExperience를 10으로 설정함 (단 시전자가 무기를 끼고 있어야함)
+  Category: AttackSkill
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000024
+  Name: Simulation_Potion_Skill
+  Comment: 체력 물약 (+500)
+  Category: Item
+  Target: TargetSelf
+  QuickSlotUse: true
+  CanAuto: true
+  AutoConsumeCondition: IsHpBelowMax
+  ChangeHp: 500
+  CoolTime: 10000
+  CoolTimeGroup: HpPotion
+  HealthPotionCheck: 1
+  IsGood: true
+  LimitOnMaxHp: true
+- Id: 1000000025
+  Name: Simulation_Monster_Melee_NormalAttack
+  Category: AttackSkill
+  Target: TargetAll
+  MotionDelay: 1000
+  CastRange: 1
+  ChangeHp: 30
+- Id: 1000000026
+  Name: Simulation_Target_Tax_Buff_10_AutoCast_Skill
+  Comment: Target의 TaxExperience를 10으로 설정함 (자동 사용 추가 가능, 쿨타임 있음)
+  Category: System
+  CastRange: 8
+  MotionDelay: 200
+  Target: TargetAll
+  CoolTime: 10000
+  QuickSlotUse: true
+  CanAuto: true
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000027
+  Name: Simulation_Stack_Buff_Skill
+  Comment: 자신의 TaxExperience를 스택에 따라 10 또는 20으로 설정함
+  Category: System
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Stack_Buff
+    - Duration: 3000
+- Id: 1000000028
+  Name: Simulation_Must_Kill
+  Comment: 상대를 무조건 죽이는 스킬 (사거리 10)
+  CastRange: 10
+  Category: System
+  Target: TargetAll
+  ChangeHp: -10000
+- Id: 1000000029
+  Name: Simulation_Radius_Copy_Transform_Skill
+  Comment: 범위 내 타겟의 Property가 Fire = 1 이면 TaxExpeiernce 10을, Ice = 1 이면 TaxExperience 20을 적용시킴
+  Category: System
+  CastRange: 8
+  MotionDelay: 1000
+  Target: TargetAll
+  Radius: 3
+  IndividualInRange: true
+  ObjectFilter: TargetAll
+  TransformSkill:
+    - Condition: T_Fire == 1
+      Skill: Simulation_Target_Tax_Buff_10_Skill
+      TargetScope: AllTargets
+    - Condition: T_Ice == 1
+      Skill: Simulation_Target_Tax_Buff_20_Skill
+      TargetScope: AllTargets
+- Id: 1000000030
+  Name: Simulation_Dash_Skill
+  Comment: 3칸 이동 Dash
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 7
+  MoveSkill: Dash
+  ArriveRadius: 1
+- Id: 1000000031
+  Name: Simulation_Blink_Skill
+  Comment: 최대 4칸 이동 Blink
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 200
+  PassCastRange: true
+  MoveSkill: Blink
+  ArriveRadius: 4
+- Id: 1000000032
+  Name: Simulation_Transform_Transform_Cast_Range_Skill
+  Comment: 자식의 자식 사거리 테스트용 (부모 사거리 - 10, 첫째 자식 - 5, 둘째 자식 - 2)
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 10
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_First_Child_Cast_Range_Skill
+- Id: 1000000033
+  Name: Simulation_First_Child_Cast_Range_Skill
+  Comment: 자식의 자식 사거리 테스트용
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 5
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Last_Child_Cast_Range_Skill
+- Id: 1000000034
+  Name: Simulation_Last_Child_Cast_Range_Skill
+  Comment: 자식의 자식 사거리 테스트용
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 2
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000035
+  Name: Test_Fighter_Parent_skill_A
+  Comment: 파이터 부모 스킬 A
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 1
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponSword
+      Skill: Test_Fighter_Child_skill_A
+    - HasProperty: ItemEquippedWeaponTwoHandSword
+      Skill: Test_Fighter_Child_skill_B
+- Id: 1000000036
+  Name: Test_Fighter_Child_skill_A
+  Comment: 파이터 자식 스킬 A
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 1
+  MpCost: 1000
+- Id: 1000000037
+  Name: Test_Fighter_Child_skill_B
+  Comment: 파이터 자식 스킬 B
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 1
+  MpCost: 10
+- Id: 1000000038
+  Name: Simulation_Transform_Skill_Motion_Delay_Parent
+  Comment: TransformSkill 모션 딜레이 테스트용 부모
+  Category: System
+  Target: TargetAll
+  MotionDelay: 1
+  CastRange: 5
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Transform_Skill_Motion_Delay_Child
+- Id: 1000000039
+  Name: Simulation_Transform_Skill_Motion_Delay_Child
+  Comment: TransformSkill 모션 딜레이 테스트용 자식
+  Category: System
+  Target: TargetAll
+  MotionDelay: 7000
+  CastRange: 5
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000040
+  Name: Simulation_Pull_Skill
+  Comment: 최대 5칸 멀리있는 적 당겨옴
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 5
+  MoveSkill: Pull
+  ArriveRadius: 1
+- Id: 1000000041
+  Name: Simulation_History_Skill
+  Comment: HistoryContext 공식 테스트용
+  Category: System
+  Target: C_TaxAddressId_CurrentAddressId
+  MotionDelay: 200
+  CastRange: 5
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000042
+  Name: Simulation_History_Skill2
+  Comment: HistoryContext 공식 테스트용2
+  Category: System
+  Target: C_TaxAddressId_CurrentAddressId == 0
+  MotionDelay: 200
+  CastRange: 5
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000043
+  Name: Simulation_Dynamic_Transform_Skill
+  Comment: dynamic property로 조건 걸리는 TransformSkill
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  CastRange: 5
+  TransformSkill:
+    - Condition: DmgDiceSpot == 1
+      Skill: Simulation_Target_Tax_Buff_10_Skill
+      TargetScope: AllTargets
+- Id: 1000000044
+  Name: Simulation_IgnoreParentSkillTarget_Transform_Skill
+  Comment: 자식 스킬은 부모 타겟을 따라가지 않음
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  ChangeHp: -100
+  CastRange: 5
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Self_Tax_Buff_10_Ignore_ParentTarget_Skill
+- Id: 1000000045
+  Name: Simulation_Self_Tax_Buff_10_Ignore_ParentTarget_Skill
+  Comment: Caster의 TaxExperience를 10으로 설정함
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  IgnoreParentSkillTarget: true
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000046
+  Name: Simulation_SkillTarget_Transform_Skill
+  Comment: 자식 스킬은 부모 타겟 따라감
+  Category: System
+  Target: TargetAll
+  MotionDelay: 200
+  ChangeHp: -100
+  CastRange: 5
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Self_Tax_Buff_10_ParentTarget_Skill
+- Id: 1000000047
+  Name: Simulation_Self_Tax_Buff_10_ParentTarget_Skill
+  Comment: Caster의 TaxExperience를 10으로 설정함
+  Category: System
+  CastRange: 1
+  MotionDelay: 200
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Tax_Buff_10
+- Id: 1000000048
+  Name: Simulation_Tax_Buff_10_Chained_Skill
+  Comment: 상대 Hp 1000 깎고 5초 후에 TaxExperience 10 적용
+  Category: System
+  CastRange: 1
+  MotionDelay: 5000
+  ChangeHp: -1000
+  Target: TargetAll
+  ChainedSkill: Simulation_Target_Tax_Buff_10_Skill
+- Id: 1000000051
+  Name: Simulation_Erase_HuntingZone_Ticket_Skill
+  Comment: EraseOnCast 테스트용
+  Category: HuntingZone_Ticket
+  Target: TargetSelf
+  MotionDelay: 1
+- Id: 1000000052
+  Name: Simulation_HuntingZone_Ticket_Tax_Experience_10_Skill
+  Comment: EraseOnCast 테스트용
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 1
+  Buff:
+    - Buff: Simulation_Erase_On_HuntingZone_Ticket_Buff
+- Id: 1000000053
+  Name: Simulation_Target_HuntingZone_Ticket_Skill
+  Comment: 상대방에게 HuntingZone_Ticket 카테고리 스킬 사용
+  Category: HuntingZone_Ticket
+  Target: TargetAll
+  MotionDelay: 1
+- Id: 1000000054
+  Name: Simulation_Critical_Skill
+  Comment: 크리티컬 테스트용
+  Category: System
+  Target: TargetAll
+  MotionDelay: 1
+  Critical: CalcCriProb
+  ChangeHp: -1
+- Id: 1000000055
+  Name: Simulation_Spawn_Skill
+  Category: System
+  Target: TargetAllIncludeMe
+  MotionDelay: 1
+  SpawnNpcByRange:
+    - Npc: Simulation_No_Move_Npc
+      Range: 1
+- Id: 1000000056
+  Name: Simulation_Spawn_On_Target_Skill
+  Category: System
+  Target: TargetAllIncludeMe
+  MotionDelay: 1
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_No_Move_Npc
+      Range: 1
+- Id: 10000000561
+  Name: Simulation_Spawn_Front_2_Skill
+  Category: System
+  Target: TargetAllIncludeMe
+  MotionDelay: 1
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_No_Move_Npc
+      Range: 0
+      Polar:
+        Distance: 2
+- Id: 10000000562
+  Name: Simulation_Spawn_Left_2_Skill
+  Category: System
+  Target: TargetAllIncludeMe
+  MotionDelay: 1
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_No_Move_Npc
+      Range: 0
+      Polar:
+        Distance: 2
+        Angle: 90
+- Id: 1000000057
+  Name: Simulation_Weapon_Transform_Skill
+  Comment: 활/석궁 장착 여부에 따라 타깃의 TaxExperience를 다르게 설정함
+  Category: System
+  CastRange: 8
+  MotionDelay: 1
+  Target: TargetAll
+  TransformSkill:
+    - HasProperty: ItemEquippedWeaponLongBow
+      Skill: Simulation_Target_Tax_Buff_10_Skill
+    - HasProperty: ItemEquippedWeaponCrossBow
+      Skill: Simulation_Target_Tax_Buff_20_Skill
+- Id: 1000000058
+  Name: Simulation_DragIn_Skill
+  Comment: 충돌 체크를 고려해서 상대방을 당겨옴
+  Category: System
+  CastRange: 8
+  MotionDelay: 1
+  Target: TargetAll
+  DragIn: 2
+  PassTerrainCheck: true
+- Id: 1000000059
+  Name: Simulation_DragInWalk_Skill
+  Comment: 충돌 체크를 고려해서 상대방을 강제로 1칸 이동시킴 (나와 가까워질 수 있는 곳이 있다면)
+  Category: System
+  CastRange: 8
+  MotionDelay: 1
+  Target: TargetAll
+  DragInWalk: true
+- Id: 1000000060
+  Name: Simulation_Cast_On_Cast_HuntingZone_Ticket_Tax_Experience_10_Skill
+  Comment: CastOnCast 버프 주입 스킬
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 1
+  Buff:
+    - Buff: Simulation_Cast_On_Cast_Buff
+- Id: 1000000062
+  Name: Simulation_Stackable_Buff_Skill
+  Comment: 효과가 중첩되는 버프 스킬
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 1
+  PassCastRange: true
+  Buff:
+    - Buff: Simulation_Stackable_Buff
+- Id: 1000000063
+  Name: Simulation_Damage_Skill
+  Comment: 데미지를 1 가하는 스킬
+  Category: AttackSkill
+  Target: TargetAll
+  MotionDelay: 1
+  PassCastRange: true
+  ChangeHp: -1
+- Id: 1000000064
+  Name: Simulation_Missile_Skill
+  Comment: 논타겟 스킬 테스트
+  Category: AttackSkill
+  Target: TargetSelf
+  IsGood: true
+  NonTargetSkill:
+    - Id: 1
+      MaxDistance: 5
+      MoveDelay: 1000
+      CollisionSkill: Simulation_Missile_Skill_Damage
+      CollisionTargetCondition: TargetAll
+      CollisionRadius: 2
+      PenetrateEntity: true
+- Id: 1000000065
+  Name: Simulation_Missile_Skill_Damage
+  Category: AttackSkill
+  Target: TargetAll
+  PassCastRange: true
+  ChangeHp: -100
+  Buff:
+    - Buff: Simulation_Tax_Buff_20
+- Id: 1000000066
+  Name: Simulation_Formula_Stack_Buff_Skill
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  Buff:
+    - Buff: Simulation_Formula_Buff
+- Id: 1000000067
+  Name: Simulation_Stack_Buff_Skill_2
+  Comment: 3개 이상의 Stack 버프
+  Category: System
+  Target: TargetSelf
+  Buff:
+    - Buff: Simulation_Stack_Buff_2
+- Id: 1000000068
+  Name: Simulation_Missile_Skill_2
+  Comment: 논타겟 스킬 테스트2
+  Category: AttackSkill
+  Target: TargetSelf
+  IsGood: true
+  NonTargetSkill:
+    - Id: 1
+      MaxDistance: 5
+      MoveDelay: 1000
+      CollisionSkill: Simulation_Missile_Skill_Damage_2
+      CollisionTargetCondition: TargetAll
+      CollisionRadius: 2
+      PenetrateEntity: true
+- Id: 1000000069
+  Name: Simulation_Missile_Skill_Damage_2
+  Category: AttackSkill
+  Target: TargetAll
+  PassCastRange: true
+  ChangeHp: -(HolyMoly * 10)
+- Id: 1000000070
+  Name: UpdateAutoCombatBase_ChangeWalk
+  Comment: "AutoCombatBase 세팅"
+  Category: System
+  Target: TargetSelf
+  IsGood: true
+  UpdateAutoCombatBase: true
+- Id: 1000000071
+  Name: Simulation_Hp_Tax_Buff_10_Chained_Skill
+  Comment: 상대 TestHp(10) 적용 후 TaxExperience(10) 적용
+  Category: System
+  CastRange: 1
+  MotionDelay: 5000
+  ChangeHp: -1000
+  Target: TargetAll
+  Buff:
+    - Buff: Simulation_Hp_Buff_10  
+  ChainedSkill: Simulation_Target_Tax_Buff_10_Skill
+- Id: 1000000103
+  Name: Simulation_Summon_Servant_With_AI
+  Comment: Summons Simulation_Servant_NPC with AI (System category like other spawn skills)
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Servant_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000101
+  Name: Simulation_Servant_Attack
+  Comment: Servant attack skill that uses Master's AddedDamage in damage formula
+  Category: System
+  CastRange: 10
+  MotionDelay: 200
+  Target: TargetAll
+  ChangeHp: "-(100 + M_AddedDamage)"
+- Id: 1000000102
+  Name: Simulation_Servant_Target_Search
+  Comment: "[AI] Servant 테스트용 타겟"
+  DesignComment: 사용
+  Category: System
+  Target: "TargetPc && TargetMaster == 0"
+  ChangeTarget: Search
+  SearchTargetRadius: 10
+  IsGood: true
+- Id: 1000000107
+  Name: Simulation_Trap_Target_Search
+  Comment: "[AI] 덫 테스트용 타겟 검색 - Bora 속성이 있는 타겟만"
+  DesignComment: 사용
+  Category: System
+  Target: "TargetPc && TargetMaster == 0 && Bora > 0"
+  ChangeTarget: Search
+  SearchTargetRadius: 1
+  IsGood: true
+- Id: 1000000104
+  Name: Simulation_Trap_Damage_EnemyTarget
+  Comment: "[AI] 덫 데미지 스킬 - Bora 속성 체크"
+  DesignComment: 사용
+  Category: AttackSkill
+  Target: "T_Bora > 0"
+  CastRange: 1
+  MotionDelay: 0
+  ChangeHp: -100
+- Id: 1000000106
+  Name: Simulation_Trap_TrapBuff_Skill
+  Comment: "[AI] 덫 트랩 버프 적용 스킬 - 타겟이 없을 때 CastOnCoordinateEnter 버프 적용"
+  DesignComment: 사용
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  Buff:
+    - Buff: Simulation_Trap_TrapBuff
+      Duration: 40000
+- Id: 1000000105
+  Name: Simulation_Trap_Spawn
+  Comment: "[PC] 덫 소환 스킬 - EnemyTarget 테스트용"
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Trap_Npc_EnemyTarget
+      Range: 0
+      IncludeTargetCoordinate: true
+- Id: 1000000108
+  Name: Simulation_Servant_Attack_With_Trigger
+  Comment: Servant attack skill that applies trigger buff (uses Master's AddedDamage)
+  Category: System
+  CastRange: 10
+  MotionDelay: 200
+  Target: TargetAll
+  ChangeHp: "-(100 + M_AddedDamage)"
+  Buff:
+    - Buff: Simulation_Servant_Trigger_Buff
+      Duration: 30000
+- Id: 1000000109
+  Name: Simulation_Servant_Trigger_Damage
+  Comment: Trigger damage skill that uses Master's AddedDamage when target moves
+  Category: System
+  Target: TargetAll
+  PassCastRange: true
+  ChangeHp: "-(50 + M_AddedDamage)"
+- Id: 1000000110
+  Name: Simulation_Summon_Servant_With_Trigger_Skill
+  Comment: Summons Simulation_Servant_With_Trigger_NPC that uses trigger skills
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Servant_With_Trigger_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000112
+  Name: Simulation_Servant_Attack_With_OnHit_Trigger
+  Comment: Servant attack skill with CastOnHit trigger (uses Master's AddedDamage for both direct and trigger damage)
+  Category: AttackSkill
+  CastRange: 10
+  MotionDelay: 200
+  Target: TargetAll
+  ChangeHp: "-(100 + M_AddedDamage)"
+- Id: 1000000113
+  Name: Simulation_Summon_Servant_With_OnHit_Trigger_Skill
+  Comment: Summons servant that uses CastOnHit trigger skills
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Servant_With_OnHit_Trigger_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000114
+  Name: Simulation_Servant_Trigger_CastWhenHit_Damage
+  Comment: Counter-attack damage skill triggered when servant is hit (uses Master's AddedDamage)
+  Category: System
+  Target: TargetAll
+  PassCastRange: true
+  ChangeHp: "-(30 + M_AddedDamage)"
+- Id: 1000000115
+  Name: Simulation_Summon_Servant_With_CastWhenHit_Skill
+  Comment: Summons servant with CastWhenHit counter-attack buff
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Servant_With_CastWhenHit_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000116
+  Name: GainPkPoint
+  Comment: PkPoint 501 증가 테스트용
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  ChangePkPoint: 501
+- Id: 1000000117
+  Name: LosePkPoint
+  Comment: PkPoint 501 감소 테스트용
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  ChangePkPoint: -501
+- Id: 1000000118
+  Name: Simulation_Summon_Nested_Servant_Skill
+  Comment: Servant의 Servant 테스트 - Level1 Servant 소환
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Nested_Servant_Level1_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000119
+  Name: Simulation_Nested_Servant_Summon_Child_Skill
+  Comment: "[AI] Level1 Servant가 Level2 Servant 소환"
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Nested_Servant_Level2_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000120
+  Name: Simulation_Nested_Servant_Attack
+  Comment: Level2 Servant 공격 스킬 - 최상위 Master의 AddedDamage 사용
+  Category: System
+  CastRange: 10
+  MotionDelay: 200
+  Target: TargetAll
+  ChangeHp: "-(100 + M_AddedDamage)"
+- Id: 1000000121
+  Name: Simulation_Summon_Servant_Missing_Property_Skill
+  Comment: Master가 가지지 않은 property를 상속하는 Servant 소환
+  Category: System
+  Target: TargetSelf
+  MotionDelay: 0
+  CastRange: 10
+  SpawnNpcByRange:
+    - Npc: Simulation_Servant_Missing_Property_NPC
+      IncludeTargetCoordinate: true
+- Id: 1000000122
+  Name: Simulation_Servant_Attack_With_Missing_Property
+  Comment: Master(Ranger)에게 없는 M_MeleeDamage 사용 (0이어야 함)
+  Category: System
+  CastRange: 10
+  MotionDelay: 200
+  Target: TargetAll
+  ChangeHp: "-(100 + M_MeleeDamage)"
+- Id: 1000000123
+  Name: Simulation_Nested_Servant_Target_Search
+  Comment: "[AI] Nested Servant Level2 타겟 검색"
+  Category: System
+  Target: "TargetPc && TargetMaster == 0"
+  ChangeTarget: Search
+  SearchTargetRadius: 10
+  IsGood: true
+- Id: 1000000124
+  Name: Simulation_Servant_Missing_Property_Target_Search
+  Comment: "[AI] Missing Property Servant 타겟 검색"
+  Category: System
+  Target: "TargetPc && TargetMaster == 0"
+  ChangeTarget: Search
+  SearchTargetRadius: 10
+  IsGood: true
+################################################################################
+# Toggle Skill Test - ToggleSkillState 기반 토글 스킬 테스트
+################################################################################
+- Id: 1001
+  Name: Toggle_Stance
+  Comment: "Toggle Base 스킬 - Stance 순환 (Fire → Water → Wind)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  MotionDelay: 200
+  ToggleGroupSkills:
+    - Test_Toggle_Fire_Stance
+    - Test_Toggle_Water_Stance
+    - Test_Toggle_Wind_Stance
+
+- Id: 2001
+  Name: Toggle_Defense
+  Comment: "Toggle Base 스킬 - Defense Mode ON/OFF"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  MotionDelay: 200
+  ToggleGroupSkills:
+    - Test_Toggle_Defense_Mode_On
+    - Test_Toggle_Defense_Mode_Off
+
+# Toggle 실제 스킬들 (factory에서 변환될 대상)
+# ToggleGroupSkills를 통해 부모 스킬의 속성을 자동 상속받음
+# RemoveBuffGroup으로 같은 그룹 내 이전 버프 제거 후 새 버프 적용
+- Id: 1000000200
+  Name: Test_Toggle_Fire_Stance
+  Comment: "Toggle 스킬 - Fire Stance (자동 상속: Toggle_Stance)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - ToggleStance
+  Buff:
+    - Buff: Test_Toggle_HolyMoly_10
+- Id: 1000000201
+  Name: Test_Toggle_Water_Stance
+  Comment: "Toggle 스킬 - Water Stance (자동 상속: Toggle_Stance)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - ToggleStance
+  Buff:
+    - Buff: Test_Toggle_HolyMoly_20
+- Id: 1000000202
+  Name: Test_Toggle_Wind_Stance
+  Comment: "Toggle 스킬 - Wind Stance (자동 상속: Toggle_Stance)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - ToggleStance
+  Buff:
+    - Buff: Test_Toggle_HolyMoly_30
+- Id: 1000000203
+  Name: Test_Toggle_Defense_Mode_On
+  Comment: "Toggle 스킬 - Defense Mode ON (자동 상속: Toggle_Defense)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - ToggleDefense
+  Buff:
+    - Buff: Test_Toggle_HolyMoly_100
+- Id: 1000000204
+  Name: Test_Toggle_Defense_Mode_Off
+  Comment: "Toggle 스킬 - Defense Mode OFF (자동 상속: Toggle_Defense)"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  IsGood: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - ToggleDefense
+  Buff:
+    - Buff: Test_Toggle_HolyMoly_0
+- Id: 1000000205
+  Name: Test_Search_Farthest
+  Comment: "SearchFarthest 타겟 탐색 테스트 스킬 - 가장 먼 적을 타겟"
+  Category: System
+  Target: TargetAll
+  ChangeTarget: SearchFarthest
+  SearchTargetRadius: 20
+  PassCastRange: true
+- Id: 1000000206
+  Name: Test_Search_Nearest
+  Comment: "Search 타겟 탐색 테스트 스킬 - 가장 가까운 적을 타겟"
+  Category: System
+  Target: TargetAll
+  ChangeTarget: Search
+  SearchTargetRadius: 20
+  PassCastRange: true
+################################################################################
+# MaintainConditions Test - Toggle 스킬 유지 조건 테스트
+################################################################################
+- Id: 1000000207
+  Name: Test_MaintainCondition_Toggle
+  Comment: "[Test] MaintainCondition Toggle Base 스킬"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MotionDelay: 200
+  ToggleGroupSkills:
+    - Skill: Test_MaintainCondition_DefenseMode_ON
+    - Skill: Test_MaintainCondition_DefenseMode_OFF
+      OffSkill: true
+- Id: 1000000208
+  Name: Test_MaintainCondition_DefenseMode_ON
+  Comment: "[Test] 방어 모드 ON - MP 20% 이상 유지 필요"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MaintainConditions:
+    Checks:
+      - Property: Mp
+        Condition: AbovePercent
+        Value: 20
+    FallbackSkill: Test_MaintainCondition_DefenseMode_OFF
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - Dead
+  Buff:
+    - Buff: Test_MaintainCondition_DefenseMode_Buff
+- Id: 1000000209
+  Name: Test_MaintainCondition_DefenseMode_OFF
+  Comment: "[Test] 방어 모드 OFF - Buff 제거"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - Dead
+- Id: 1000000210
+  Name: Test_MaintainCondition_BerserkMode_Toggle
+  Comment: "[Test] 버서크 모드 Toggle - HP 범위 조건"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MotionDelay: 200
+  ToggleGroupSkills:
+    - Skill: Test_MaintainCondition_BerserkMode_ON
+    - Skill: Test_MaintainCondition_BerserkMode_OFF
+      OffSkill: true
+- Id: 1000000211
+  Name: Test_MaintainCondition_BerserkMode_ON
+  Comment: "[Test] 버서크 모드 ON - HP 30-70% 범위 유지"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MaintainConditions:
+    Checks:
+      - Property: Hp
+        Condition: AbovePercent
+        Value: 30
+      - Property: Hp
+        Condition: BelowPercent
+        Value: 70
+    Logic: And
+    FallbackSkill: Test_MaintainCondition_BerserkMode_OFF
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - TestMaintainBerserk
+  Buff:
+    - Buff: Test_MaintainCondition_BerserkMode_Buff
+- Id: 1000000212
+  Name: Test_MaintainCondition_BerserkMode_OFF
+  Comment: "[Test] 버서크 모드 OFF - Buff 제거"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - TestMaintainBerserk
+- Id: 1000000213
+  Name: Test_MaintainCondition_AbsoluteValue
+  Comment: "[Test] 절대값 조건 - HP > 1000"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  ToggleGroupSkills:
+    - Skill: Test_MaintainCondition_AbsoluteValue_ON
+    - Skill: Test_MaintainCondition_AbsoluteValue_OFF
+      OffSkill: true
+- Id: 1000000214
+  Name: Test_MaintainCondition_AbsoluteValue_ON
+  Comment: "[Test] 절대값 ON - HP 1000 이상 유지"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MaintainConditions:
+    Checks:
+      - Property: Hp
+        Condition: AboveAbsolute
+        Value: 1000
+    FallbackSkill: Test_MaintainCondition_AbsoluteValue_OFF
+  MotionDelay: 200
+  Buff:
+    - Buff: Test_MaintainCondition_AbsoluteValue_Buff
+- Id: 1000000215
+  Name: Test_MaintainCondition_AbsoluteValue_OFF
+  Comment: "[Test] 절대값 OFF"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  RemoveBuffs:
+    UnitType: Group
+    Units:
+      - TestMaintainAbsolute
+- Id: 1000000216
+  Name: Test_MaintainCondition_MpDrain
+  Comment: "[Test] MP 소모 스킬 - MP를 감소시켜 조건 위반 유도"
+  Category: System
+  Target: TargetSelf
+  PassCastRange: true
+  MpCost: 1700
+- Id: 900015
+  Name: ScheduleTeleportToHome
+  Comment: "[S] 시뮬레이션용 - 마을 귀환 텔레포트"
+  DesignComment: 시뮬레이션에서 SimulationTown Land로 텔레포트
+  Category: TeleportToHomeTeleport
+  Target: TargetSelf
+  MotionDelay: 300
+  CoolTime: 1000
+  CoolTimeGroup: Teleport
+  ChainedSkill: ScheduleTeleport_End
+  ResetWalkTarget: true
+  ArgumentOfHomeTeleport:
+    - FromTerritory: Simulation_Basic_Spawn_Territory
+      ToTerritory: SimulationTown_Territory
+    - FromTerritory: Simulation_Performance_Spawn_Territory
+      ToTerritory: SimulationTown_Territory
+    - FromTerritory: Simulation_Single_Spawn_Territory
+      ToTerritory: SimulationTown_Territory

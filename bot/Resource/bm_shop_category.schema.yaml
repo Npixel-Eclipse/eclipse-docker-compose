@@ -1,0 +1,75 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - MainTab
+    - Description
+    - DisplayItems
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    CategoryType:
+      type: string
+      enum:
+        - HotDeal
+        - Subscribe
+    MainTab:
+      type: string
+      default: None
+      enum:
+        - Product
+        - Gold
+        - SeasonPass
+        - Mileage
+        - Gacha
+    SubTab:
+      type: string
+      default: None
+      enum:
+        - None
+        - Package
+        - Weekly
+        - Monthly
+        - StarterKit
+        - GachaTest
+        - Limit
+        - GoldPackage
+        - MileageItem
+        - MileageRecharge
+        - Fortress
+        - Item
+        - Currency
+        - Charge
+        - SeasonPassSub
+        - Equipment
+        - Polymorph
+        - Normal
+        - Grow
+        - HotDeal
+        - Proposal
+        - Subscribe
+    TabDisplayOrder: # 0번부터
+      type: integer
+    Icon:
+      type: string
+    Description:
+      type: string      
+      ref: description
+    DisplayItems:
+      type: array
+      items:
+        type: object
+        properties:
+          Item:
+            type: string
+            ref: item
+        required:
+          - Item

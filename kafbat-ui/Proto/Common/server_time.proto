@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.common.server_time";
+option java_outer_classname = "CommonServerTimeProto";
+
+// battle server 시간
+
+message AmountTime {
+  int64 second = 1;
+}
+
+message AtTime {
+  int64 epoch = 1;
+}
+
+// 스케줄 시간. UTC.
+
+enum DayOfWeek {
+  SUNDAY = 0;
+  MONDAY = 1;
+  TUESDAY = 2;
+  WEDNESDAY = 3;
+  THURSDAY = 4;
+  FRIDAY = 5;
+  SATURDAY = 6;
+}
+
+message TimeOfDay {
+  int64 hour = 1;
+  int64 minute = 2;
+}
+
+message WeekdayTime {
+  DayOfWeek day_of_week = 3;
+  TimeOfDay time_of_day = 4;
+}

@@ -1,0 +1,28 @@
+- Id: 1
+  Name: SeasonPass
+  SeasonPassUITab:
+    - Group: SeasonPass
+      DefaultTab: true
+      Description: UIWord_BMShop_SeasonPass
+      Comment: 시즌패스
+    - Group: DailyPass
+      Description: UIWord_DailyPass_Title
+      Comment: 데일리패스
+  SeasonPassMissionUITab:
+    - Group: DailyMission
+      DefaultTab: true
+      Description: UIWord_SeasonPass_DailyTab
+      Comment: 일일미션
+    - Group: WeeklyMission
+      Description: UIWord_SeasonPass_WeeklyTab
+      Comment: 주간미션
+  SeasonPassLevelQuestCategoryName: SeasonPass_Level
+  QuestHoldItemGoalTypeName: HoldItem
+  QuestConsumeItemGoalTypeName: ConsumeItem
+  QuestAttendElapsedDaysGoalTypeName: AttendElapsedDays
+  QuestAttendGoalTypeName: Attend
+  DailyPassSpecialRewardQuests:
+    - Quest: DailyPass_Diamond_Premium_07
+    - Quest: DailyPass_Diamond_Premium_14
+    - Quest: DailyPass_Diamond_Premium_21
+    - Quest: DailyPass_Diamond_Premium_28

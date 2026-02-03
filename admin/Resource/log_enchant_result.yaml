@@ -1,0 +1,6 @@
+- Name: ENCHANT_SUCCESS
+  Value: 0
+- Name: ENCHANT_FAIL
+  Value: 1
+- Name: ENCHANT_VAPORIZE
+  Value: 2

@@ -1,0 +1,103 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MinCharacterNameLength
+              - MaxCharacterNameLength
+              - MaxAlnumCharacterNameLength
+              - MaxClassAbilityLevel
+              - MaxLobbyCharacterSlotCount
+              - CharacterDeleteDelayDays
+              - LastLogoutMaxDurationInDays
+          Value:
+            type: string
+            ref: constants
+    CharacterSlotExpansionSystemMessage:
+      type: string
+      ref: system_message
+    #C 로비 캐릭터 표시 정보 리스트
+    LobbyInfos:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type: 
+            type: string
+            enum:
+              - CombatPoint
+              - Polymorph
+              - Weapon
+              - Guild
+              - Disposition
+              - Location
+              - LastLogout
+          Description:
+            type: string
+            ref: description
+          #C Value값에 대한 디폴트 표시 값
+          DefaultValueDescription:
+            type: string
+            ref: description
+          #C 캐릭터 정보로 표시 여부
+          IsCharacterInfo:
+            type: boolean
+            default: true
+    #C 캐릭터 선택 로비 정보들
+    CharacterSelectionLobby:
+      type: object
+      additionalProperties: false
+      properties:
+        DataLayerName:
+          type: string
+        CharacterExtraActionType:
+          type: string
+        CustomViewTargetName:
+          type: string
+        PreviewActorName:
+          type: string      
+    #C 캐릭터 생성 로비 정보들
+    CharacterCreationLobby:
+      type: object
+      additionalProperties: false
+      properties:
+        DataLayerName:
+          type: string
+    ServerListUITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - RecommendedServerList
+              - ServerList
+              - OwnedChracterServerList
+          Description:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name
+    - Constants
+    - LobbyInfos
+    - CharacterSelectionLobby
+    - CharacterCreationLobby

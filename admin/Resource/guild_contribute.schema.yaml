@@ -1,0 +1,62 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Cost
+    - Rewards
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Cost:
+      visible: true
+      type: array
+      items:
+        type: object
+        required:
+          - Item
+          - Amount
+        properties:
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+    CriticalMul:
+      type: integer
+      default: 2
+    Critical:
+      type: string
+      default: 0%
+      pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+      visible: true
+    Rewards:
+      type: array
+      items:
+        type: object
+        properties:
+          RewardType:
+            type: string
+            enum:
+              - GuildItem
+              - Item
+          GuildItem:
+            visible: true
+            type: string
+            ref: guild_item
+          Item:
+            visible: true
+            type: string
+            ref: item
+          Amount:
+            visible: true
+            type: integer

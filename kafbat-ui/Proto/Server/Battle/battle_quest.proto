@@ -1,0 +1,72 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+package quest;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.quest";
+option java_outer_classname = "BattleQuestProto";
+
+message BattleQuestCommand {
+  oneof message {
+    SelectedAutoQuest selected_auto_quest = 1;
+    StoppedAutoQuest stopped_auto_quest = 2;
+    //AllowedQuestWorldMapArea allowed_quest_world_map_area = 3; // deprecated
+    ActiveQuestTargets active_quest_targets = 4;
+    ScheduleQuestSelectionFailed schedule_quest_selection_failed = 5;
+  }
+}
+
+// 스케줄 자동 퀘스트 선택 실패 시 콜백 메시지
+message ScheduleQuestSelectionFailed {
+  reserved 2;
+  string character_uuid = 1;
+  string quest_category_auto_name = 4;
+  int32 schedule_index = 3;
+}
+
+message NpcInteractionTarget {
+  repeated string npc_names = 1;
+  string npc_interaction = 2;  // npc_interaction.yaml name
+}
+
+message SelectedAutoQuest {
+  reserved 7, 13;
+  string character_uuid = 1;
+  int64 quest_id = 2;
+  string goal_type = 3;
+  repeated string goal_targets = 4;
+  string world_map_area = 5;
+  google.protobuf.Timestamp requested_at = 6;
+  //bool should_teleport = 7; 2025.01.07 deprecated
+  optional string target_address = 8;
+  repeated string npc_types = 9;
+  bool disable_offline_mode = 10;
+  bool require_teleport = 11;
+  optional NpcInteractionTarget npc_interaction_target = 12;  // NpcInteraction goal type 전용 (단일)
+  optional string quest_category_auto_name = 14;
+}
+
+// 자동 퀘스트 정지 이유
+enum AutoQuestStopReason {
+  QUEST_FAILED = 0;                         // 퀘스트 실패로 정지 (기본값)
+  NO_MORE_QUEST = 1;                        // 다음 퀘스트가 없어서 정지
+  USER_CANCELLED = 2;                       // 사용자 취소
+}
+
+message StoppedAutoQuest {
+  string character_uuid = 1;
+  //int64 quest_id = 2; 2025.10.21 deprecated
+  google.protobuf.Timestamp requested_at = 3;
+  AutoQuestStopReason reason = 4;          // 정지 이유
+}
+
+message ActiveQuestTargets {
+  string character_uuid = 1;
+  repeated string allowed_world_map_areas = 2;
+  repeated string quest_symbol_npc_names = 3;
+  repeated string quest_symbol_npc_groups = 4;
+  repeated string quest_symbol_npc_types = 5;
+  repeated NpcInteractionTarget quest_npc_interaction_targets = 6;  // 진행 중인 퀘스트의 NpcInteraction 목표들
+  repeated string quest_move_territory_names = 7;  // Move 퀘스트 Target Territory 이름 리스트
+}

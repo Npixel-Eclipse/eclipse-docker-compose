@@ -1,0 +1,188 @@
+- Id: 1
+  Name: InstantSword
+  NormalEffect: Hit_PC001_SD_Normal_02
+  CriticalEffect: Hit_PC001_SD_Critical_02
+  DoubleEffect: Hit_PC001_SD_DoubleAttack_02
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC001_SD_Normal_02
+      CriticalEffect: Hit_PC001_SD_Critical_02
+      DoubleEffect: Hit_PC001_SD_DoubleAttack_02
+    - Name: B
+      NormalEffect: Hit_PC001_SD_Normal_01
+      CriticalEffect: Hit_PC001_SD_Critical_01
+      DoubleEffect: Hit_PC001_SD_DoubleAttack_01
+- Id: 2
+  Name: InstantTwoHandSword
+  NormalEffect: Hit_PC001_SD_Normal_02
+  CriticalEffect: Hit_PC001_SD_Critical_02
+  DoubleEffect: Hit_PC001_SD_DoubleAttack_02
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC001_LS_Normal_02
+      CriticalEffect: Hit_PC001_LS_Critical_02
+      DoubleEffect: Hit_PC001_LS_DoubleAttack_02
+    - Name: B
+      NormalEffect: Hit_PC001_LS_Normal_01
+      CriticalEffect: Hit_PC001_LS_Critical_01
+      DoubleEffect: Hit_PC001_LS_DoubleAttack_01
+- Id: 62
+  Name: InstantLongBow
+  NormalEffect: Hit_PC002_Normal_01
+  CriticalEffect: Hit_PC002_Critical_01
+  DoubleEffect: Hit_PC002_DoubleAttack_01
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC002_Normal_01
+      CriticalEffect: Hit_PC002_Critical_01
+      DoubleEffect: Hit_PC002_DoubleAttack_01
+    - Name: B
+      NormalEffect: Hit_PC002_Normal_01
+      CriticalEffect: Hit_PC002_Critical_01
+      DoubleEffect: Hit_PC002_DoubleAttack_01
+- Id: 175
+  Name: InstantCrossBow
+  NormalEffect: Hit_PC002_Normal_01
+  CriticalEffect: Hit_PC002_Critical_01
+  DoubleEffect: Hit_PC002_DoubleAttack_01
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC002_Normal_01
+      CriticalEffect: Hit_PC002_Critical_01
+      DoubleEffect: Hit_PC002_DoubleAttack_01
+    - Name: B
+      NormalEffect: Hit_PC002_Normal_01
+      CriticalEffect: Hit_PC002_Critical_01
+      DoubleEffect: Hit_PC002_DoubleAttack_01
+- Id: 189
+  Name: InstantStaff
+  NormalEffect: Hit_PC003_Normal_01
+  CriticalEffect: Hit_PC003_Critical_01
+  DoubleEffect: Hit_PC003_DoubleAttack_01
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC003_Normal_01
+      CriticalEffect: Hit_PC003_Critical_01
+      DoubleEffect: Hit_PC003_DoubleAttack_01
+    - Name: B
+      NormalEffect: Hit_PC003_Normal_01
+      CriticalEffect: Hit_PC003_Critical_01
+      DoubleEffect: Hit_PC003_DoubleAttack_01
+- Id: 117
+  Name: InstantOrb
+  NormalEffect: Hit_PC003_Normal_01
+  CriticalEffect: Hit_PC003_Critical_01
+  DoubleEffect: Hit_PC003_DoubleAttack_01
+  MotionGroups:
+    - Name: A
+      NormalEffect: Hit_PC003_Normal_01
+      CriticalEffect: Hit_PC003_Critical_01
+      DoubleEffect: Hit_PC003_DoubleAttack_01
+    - Name: B
+      NormalEffect: Hit_PC003_Normal_01
+      CriticalEffect: Hit_PC003_Critical_01
+      DoubleEffect: Hit_PC003_DoubleAttack_01
+- Id: 1742
+  Name: InstantTwinDaggers01
+  NormalEffect: Hit_PC004_TD_Normal_01
+  CriticalEffect: Hit_PC004_TD_Critical_01
+- Id: 1015
+  Name: InstantTwinDaggers02
+  NormalEffect: Hit_PC004_TD_Normal_02
+  CriticalEffect: Hit_PC004_TD_Critical_01
+- Id: 1014
+  Name: InstantKatana
+  NormalEffect: Hit_PC004_KA_Normal_01
+  CriticalEffect: Hit_PC004_KA_Critical_01
+- Id: 457
+  Name: HitEffect_ChargeBind
+  NormalEffect: Hit_PC002_Ranger_HunterArrow01
+  CriticalEffect: Hit_PC002_Ranger_HunterArrow01
+- Id: 493
+  Name: HitEffect_ChargeBind_Level10
+  NormalEffect: Hit_PC002_Ranger_HunterArrow02
+  CriticalEffect: Hit_PC002_Ranger_HunterArrow02
+- Id: 193
+  Name: HitEffect_PowerAttack
+  NormalEffect: Hit_PC001_Fighter_PowerAttack00
+  CriticalEffect: Hit_PC001_Fighter_PowerAttack00
+- Id: 210
+  Name: HitEffect_PowerAttack_Level10
+  NormalEffect: Hit_PC001_Fighter_PowerAttack02
+  CriticalEffect: Hit_PC001_Fighter_PowerAttack02
+- Id: 1411
+  Name: HitEffect_GroundSlam
+  NormalEffect: Hit_PC001_Fighter_FuriousDash01
+  CriticalEffect: Hit_PC001_Fighter_FuriousDash01
+- Id: 334
+  Name: HitEffect_Pulling
+  NormalEffect: Hit_PC001_Fighter_Grab01
+  CriticalEffect: Hit_PC001_Fighter_Grab01
+- Id: 1219
+  Name: HitEffect_Pulling_Level10
+  NormalEffect: Hit_PC001_Fighter_Grab02
+  CriticalEffect: Hit_PC001_Fighter_Grab02
+- Id: 241
+  Name: HitEffect_Test
+  NormalEffect: Hit_PC001_Fighter_Excalibur01
+  CriticalEffect: Hit_PC001_Fighter_Excalibur01
+- Id: 373
+  Name: HitEffect_SlashWave
+  NormalEffect: Hit_PC001_Fighter_SlashWave01
+  CriticalEffect: Hit_PC001_Fighter_SlashWave01
+- Id: 372
+  Name: HitEffect_FlashArrow01
+  NormalEffect: Hit_PC002_Ranger_FlashArrow01
+  CriticalEffect: Hit_PC002_Ranger_FlashArrow01
+- Id: 221
+  Name: HitEffect_FlashArrow02
+  NormalEffect: Hit_PC002_Ranger_FlashArrow02
+  CriticalEffect: Hit_PC002_Ranger_FlashArrow02
+- Id: 1232
+  Name: HitEffect_Judgement
+  NormalEffect: Hit_PC002_Ranger_Judgement01
+  CriticalEffect: Hit_PC002_Ranger_Judgement01
+- Id: 1721
+  Name: HitEffect_Judgement_Level10
+  NormalEffect: Hit_PC002_Ranger_Judgement02
+  CriticalEffect: Hit_PC002_Ranger_Judgement02
+- Id: 803
+  Name: HitEffect_DivineArcher
+  NormalEffect: Hit_PC002_Ranger_DivineArcher01
+  CriticalEffect: Hit_PC002_Ranger_DivineArcher01
+- Id: 1802
+  Name: HitEffect_PiercingArrow
+  NormalEffect: Hit_PC002_Ranger_PiercingArrow01
+  CriticalEffect: Hit_PC002_Ranger_PiercingArrow01
+- Id: 542
+  Name: HitEffect_PiercingArrow_Level10
+  NormalEffect: Hit_PC002_Ranger_PiercingArrow02
+  CriticalEffect: Hit_PC002_Ranger_PiercingArrow02
+- Id: 236
+  Name: HitEffect_BindingArrow
+  NormalEffect: Hit_PC002_Ranger_BindingArrow01
+  CriticalEffect: Hit_PC002_Ranger_BindingArrow01
+- Id: 2686
+  Name: HitEffect_BindingArrow_Level10
+  NormalEffect: Hit_PC002_Ranger_BindingArrow02
+  CriticalEffect: Hit_PC002_Ranger_BindingArrow02
+- Id: 223
+  Name: Annihilation
+  NormalEffect: Hit_PC002_Ranger_Annihilation01
+  CriticalEffect: Hit_PC002_Ranger_Annihilation01
+- Id: 453
+  Name: HitEffect_SilentKill01
+  NormalEffect: Hit_PC001_Fighter_SilentKill01
+  CriticalEffect: Hit_PC001_Fighter_SilentKill01
+- Id: 794
+  Name: HitEffect_SilentKill02
+  NormalEffect: Hit_PC001_Fighter_SilentKill02
+  CriticalEffect: Hit_PC001_Fighter_SilentKill02
+- Id: 1237
+  Name: HitEffect_HorizontalSlash01
+  NormalEffect: Hit_PC001_Fighter_HorizontalSlash01
+  CriticalEffect: Hit_PC001_Fighter_HorizontalSlash01
+- Id: 1888
+  Name: HitEffect_WoundSlash01
+  NormalEffect: Hit_PC004_Assassin_WoundSlash01
+  CriticalEffect: Hit_PC004_Assassin_WoundSlash01

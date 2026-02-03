@@ -1,0 +1,22 @@
+- Id: 1
+  Name: LuckyBag
+  UITab:
+    - TabIndex: 0
+      Type: Select
+      Description: UIWordItemInfo_Select
+      Comment: 선택
+    - TabIndex: 1
+      Type: Confirmation
+      Description: UIWordItemInfo_Confirmation
+      Comment: 확정
+    - TabIndex: 2
+      Type: Probability
+      Description: UIWordItemInfo_Probability
+      Comment: 확률
+  UITitle:  
+    - TitleType: SelectablePopup
+      TitleDescription: UIWord_UsePopup_SelectReward_QuantityInfo
+    - TitleType: UnSelectablePopup
+      TitleDescription: UIWord_UsePopup_QuantityInfo
+  CardPackUseMinCount: 1
+  CardPackUseMaxCount: 10

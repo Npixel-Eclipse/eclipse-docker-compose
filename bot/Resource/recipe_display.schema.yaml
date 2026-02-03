@@ -1,0 +1,104 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - ContentType
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    ContentType:
+      type: string
+      enum:
+        - Craft
+        - Merge
+        - Gacha
+        - Skin
+    TabType:
+      type: string
+      enum:
+        - Craft
+    MainTab:
+      type: string
+      default: None
+      enum:
+        - None
+        - Favorite
+        - Weapon
+        - Armor
+        - SubArmor
+        - Accessory
+        - Consume
+        - Resource
+        - Discount
+        - Limited
+        - Secret
+        - Search
+    SubTab:
+      type: string
+      default: None
+      enum:
+        - None
+        - Food
+        - Potion
+        - Scroll
+        - Gotcha
+        - Box
+        - Chest
+        - Teleport
+        - Transform
+        - Currency
+        - Belt
+        - Earring
+        - Necklace
+        - Ring
+        - Cape
+        - Gloves
+        - Helm
+        - Pants
+        - Boots
+        - Suit
+        - Bow
+        - Sword
+        - TwohandSword
+        - Katana
+        - TwinDaggers
+        - Acc
+        - Skill
+        - Craftbook
+        - Craft
+        - CrossBow
+        - Favorite
+        - Event
+        - GrowthMaterial
+        - SkillEnchant
+        - MergeMaterial
+        - LuckyBox
+        - EclipseBelt
+        - BluePrint
+        - Skillbook
+        - PolymorphCard
+        - WeaponPolymorphCard
+        - Search
+    SubTabPriority:
+      type: integer
+    Icon:
+      type: string
+    Description:
+      type: string      
+      ref: description
+    ContentSubType:
+      type: string
+      default: None
+      enum:
+        - None
+        - PolymorphCardGacha
+        - WeaponCardGacha
+        - MergePoint

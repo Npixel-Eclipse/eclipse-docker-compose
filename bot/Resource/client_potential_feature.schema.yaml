@@ -1,0 +1,104 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Type:
+            type: string
+            enum:
+              - Manifest
+              - Enchant
+          Comment:
+            type: string
+          Description:
+            type: string
+            ref: description
+    Enchant_LowEnchantMaxLevel:
+      type: string
+      ref: system_message
+    AllEnchant_Complete:
+      type: string
+      ref: system_message
+    Enchant_Success:
+      type: string
+      ref: system_message
+    Enchant_Fail:
+      type: string
+      ref: system_message
+    AutoEnchant_AchieveTargetLevel:
+      type: string
+      ref: system_message
+    AutoEnchant_NoMaterial:
+      type: string
+      ref: system_message
+    AutoEnchant_Stop:
+      type: string
+      ref: system_message
+    Manifest_Complete:
+      type: string
+      ref: system_message
+    AutoManifest_Satisfy:
+      type: string
+      ref: system_message
+    AutoManifest_NoMaterial:
+      type: string
+      ref: system_message
+    AutoManifest_Stop:
+      type: string
+      ref: system_message
+    GradeMaxLevelGuideTextDesc:
+      type: string
+      ref: description
+    CautionGrade:
+      type: string
+      ref: grade
+    AllDescription:
+      type: string
+      ref: description
+    GradeDescriptionList:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Grade
+          - Description
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          Description:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name
+    - UITab
+    - Enchant_LowEnchantMaxLevel
+    - AllEnchant_Complete
+    - Enchant_Success
+    - Enchant_Fail
+    - AutoEnchant_AchieveTargetLevel
+    - AutoEnchant_NoMaterial
+    - AutoEnchant_Stop
+    - Manifest_Complete
+    - AutoManifest_Satisfy
+    - AutoManifest_NoMaterial
+    - AutoManifest_Stop
+    - GradeMaxLevelGuideTextDesc
+    - CautionGrade
+    - GradeDescriptionList
+    - AllDescription
+

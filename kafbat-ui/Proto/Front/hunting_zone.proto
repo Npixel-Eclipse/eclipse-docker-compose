@@ -1,0 +1,207 @@
+﻿syntax = "proto3";
+package eclipse.client.huntingzone;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.huntingzone";
+option java_outer_classname = "ClientHuntingZoneProto";
+
+
+enum ProcessStatus {
+  NONE = 0;
+  BIDDING = 1;
+  SETTLING = 2;
+  LAST_OWNER = 3;
+}
+
+enum HuntingZoneResultCode {
+  FAIL = 0;
+
+  SUCCESS = 1;
+  SUCCESS_BID = 2;
+  SUCCESS_BID_REQUEST = 3;
+
+  FAIL_INVALID_REQUEST_PARAMETER = 100;
+  FAIL_INVALID_OWNER = 101;
+  FAIL_INVALID_HUNTING_ZONE_ID = 102;
+  FAIL_GUILD_NOT_FOUND = 103;
+  FAIL_MAINTENANCE_TIME = 104;
+  FAIL_NOT_ENOUGH_BID_POINT = 105;
+  FAIL_BID_NOT_ENOUGH_ITEM = 106;
+}
+
+enum RankSeason {
+  CURRENT = 0;
+  PREVIOUS = 1;
+}
+
+message Guild {
+  string name = 1;
+  int64 frame = 2;
+  int64 symbol = 3;
+  string frame_color = 4;
+  string guild_master_name = 5;
+}
+
+message OwnerGuild {
+  int64 guild_id = 1;
+  Guild guild = 2;
+}
+
+message HuntingZoneRequest {
+
+  oneof request {
+    Subscribe subscribe = 1;
+    Bid bid = 2;
+    BidRequest bid_request = 3;
+    GetRankList get_rank_list = 4;
+    GetMemberRankList get_member_rank_list = 5;
+    GetTokenAmount get_token_amount = 6;
+    GetResource get_resource = 7;
+  }
+
+  message Subscribe {}
+
+  message Bid {
+    int64 hunting_zone_id = 1;
+    int64 amount = 2;
+  }
+
+  message BidRequest {
+    int64 hunting_zone_id = 1;
+  }
+
+  message GetRankList {
+    int64 hunting_zone_id = 1;
+    RankSeason rank_season = 2;
+  }
+
+  message GetMemberRankList {
+    int64 hunting_zone_id = 1;
+  }
+
+  message GetTokenAmount {}
+
+  message GetResource {
+    int64 hunting_zone_group_id = 1;
+  }
+}
+
+message HuntingZoneEvent {
+
+  oneof event {
+    SeasonEvent season_event = 1;
+    Phase phase = 2;
+    ResultEvent result_event = 3;
+    HuntingZoneAllSummary hunting_zone_all_summary = 4;
+    BidRequestEvent bid_request_event = 5;
+    RankListEvent rank_list_event = 6;
+    MemberRankListEvent member_rank_list_event = 7;
+    TokenAmountEvent token_amount_event = 8;
+    ResourceEvent resource_event = 9;
+    PreviousBidInfoEvent previous_bid_info_event = 10;
+    PreviousSubSeasonEvent previous_sub_season_event = 11;
+    OwnerGuildEvent owner_guild_event = 12;
+  }
+
+  message SeasonEvent {
+    // 첫번째 시즌 시작 시각
+    google.protobuf.Timestamp start_at = 1;
+    // 마지막 시즌 끝나는 시각
+    google.protobuf.Timestamp end_at = 2;
+  }
+
+  message Phase {
+    message NextPhase {
+      ProcessStatus status = 1;
+      google.protobuf.Timestamp start_at = 2;
+    }
+
+    ProcessStatus current_status = 1;
+    // 입찰 시간에는 current_end_at을 주고,
+    // 정산, 분배 시간에는 NextPhase에 다음 입찰이 언제 시작되는지 정보를 줌
+    // status가 None이고, 다음 시즌이 없는 경우에는 아래 필드는 비워서 보냄
+    oneof time_info {
+      google.protobuf.Timestamp current_end_at = 2;
+      NextPhase next_phase = 3;
+    }
+
+    int64 current_main_season = 4;
+    int64 current_sub_season = 5;
+  }
+
+  message ResultEvent {
+    HuntingZoneResultCode result_code = 1;
+    optional int64 hunting_zone_id = 2;
+  }
+
+  message HuntingZoneSummary {
+    message HuntingZone {
+      int64 hunting_zone_id = 1;
+      optional OwnerGuild owner_guild = 2;
+    }
+
+    int64 hunting_zone_group_id = 1;
+    int64 accumulated_gold = 2;
+    repeated HuntingZone hunting_zones = 3;
+  }
+
+  // 접속 했을 때 & 시즌 바뀔 때마다 서버에서 보냄
+  message HuntingZoneAllSummary {
+    repeated HuntingZoneSummary hunting_zone_summaries = 1;
+  }
+
+  message BidRequestEvent {
+    int64 hunting_zone_id = 1;
+  }
+
+  message RankListEvent {
+    message RankInfo {
+      int64 rank = 1;
+      Guild guild = 2;
+      int64 total_bid_amount = 3;
+    }
+
+    int64 hunting_zone_id = 1;
+    repeated RankInfo rank_infos = 2;
+    int64 sub_season = 3; // 현재 시즌 회차 정보
+  }
+
+  message MemberRankListEvent {
+    message RankInfo {
+      int64 rank = 1;
+      string character_name = 2;
+      int64 total_bid_amount = 3;
+    }
+
+    int64 hunting_zone_id = 1;
+    repeated RankInfo rank_infos = 2;
+  }
+
+  message TokenAmountEvent {
+    int64 total_amount = 1;
+    int64 remaining_amount = 2;
+  }
+
+  message ResourceEvent {
+    int64 hunting_zone_group_id = 1;
+    int64 accumulated_gold = 2;
+  }
+
+  message PreviousBidInfoEvent {
+    bool has_bid = 1;
+    int64 hunting_zone_id = 2;
+    int64 previous_guild_rank = 3;
+  }
+
+  message PreviousSubSeasonEvent {
+    google.protobuf.Timestamp start_at = 1;
+    google.protobuf.Timestamp end_at = 2;
+  }
+
+  message OwnerGuildEvent {
+    int64 hunting_zone_id = 1;
+    optional OwnerGuild owner_guild = 2;
+  }
+}

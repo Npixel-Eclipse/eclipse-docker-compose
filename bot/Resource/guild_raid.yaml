@@ -1,0 +1,22 @@
+- Id: 1
+  Name: TEST_GUILD_RAID_1
+  Comment: TEST_GUILD_RAID_1
+  MainBoss: Boss_Kraka
+  RolePlayer:
+    - Npc: Boss_Kraka
+  TimeLimitFailure: 15
+- Id: 2
+  Name: TEST_GUILD_RAID_2
+  Comment: TEST_GUILD_RAID_2
+  MainBoss: Magic_SoldierStaff_02
+  RolePlayer:
+    - Npc: Magic_SoldierStaff_02
+      Role: Enemy
+      Amount: 1
+      DropItemReward: TEST_GUILD_RAID_BOSS_DROP_ITEM_2
+  ParticipationRewards:
+    - Item: Item_Grown_Transcend_Pass_G2_T1_02
+      Amount: 1
+  TimeLimitFailure: 15
+  MaxTryCount: 2
+  MaxCompleteCount: 1

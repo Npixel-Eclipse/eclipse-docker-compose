@@ -1,0 +1,46 @@
+jobs:
+  - id: docker-all
+    name: Build-Server-Docker-All
+    jenkinsPath: job/Build-Server-Docker-All
+    displayName: Docker Build (All)
+    type: docker
+    description: Docker image build for all server components
+    parameters:
+      - BRANCH_TYPE
+      - TARGET
+      - BASE_VERSION
+      - NO_CACHE
+      - DEPLOY
+    tags:
+      display:
+        - BRANCH_TYPE
+        - TARGET
+        - NO_CACHE
+        - DEPLOY
+      filters:
+        - BRANCH_TYPE
+        - TARGET
+
+  - id: server-build
+    name: Build-Server
+    jenkinsPath: job/Build-Server
+    displayName: Server Build
+    type: server
+    description: Server build with Perforce integration
+    parameters:
+      - P4STREAM
+      - BUILD_TYPE
+      - AGENT
+      - NOTI_CHANNEL
+      - CLEANUP
+      - DoCodeQualityCheck
+      - DoTest
+    tags:
+      display:
+        - P4STREAM
+        - BUILD_TYPE
+        - AGENT
+        - CLEANUP
+      filters:
+        - P4STREAM
+        - BUILD_TYPE

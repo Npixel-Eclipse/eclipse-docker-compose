@@ -1,0 +1,39 @@
+- Id: 1
+  Name: NotificationTypeOnLowHp
+  Comment: 체력 부족 알림음
+  DelayDuration: 10000
+  VibrateIntensity: 80
+  VibrateDuration: 1000
+  VibrateRepeatWaitTime: 500
+  SoundSet:
+    - Index: 0
+      Asset: /Game/Sound/SFX/UI/System/Setting_LowHp_FemaleSound_MS.Setting_LowHp_FemaleSound_MS
+    - Index: 1
+      Asset: /Game/Sound/SFX/UI/System/Setting_LowHp_ManSound_MS.Setting_LowHp_ManSound_MS
+    - Index: 2
+      Asset: /Game/Sound/SFX/UI/System/Setting_LowHp_SystemSound_MS.Setting_LowHp_SystemSound_MS
+- Id: 2
+  Name: NotificationTypeOnDamagedByPc
+  Comment: 다른 PC에게 피격 알림음
+  VibrateIntensity: 100
+  VibrateDuration: 500
+  VibrateRepeatWaitTime: 300
+  SoundSet:
+    - Index: 0
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_FemaleSound_MS.Setting_DamagedByPc_FemaleSound_MS
+    - Index: 1
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_ManSound_MS.Setting_DamagedByPc_ManSound_MS
+    - Index: 2
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_SystemSound_MS.Setting_DamagedByPc_SystemSound_MS
+    - Index: 3
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_FemaleSoundOne_MS.Setting_DamagedByPc_FemaleSoundOne_MS
+    - Index: 4
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_ManSoundOne_MS.Setting_DamagedByPc_ManSoundOne_MS
+    - Index: 5
+      Asset: /Game/Sound/SFX/UI/System/Setting_DamagedByPc_SystemSoundOne_MS.Setting_DamagedByPc_SystemSoundOne_MS
+- Id: 3
+  Name: NotificationTypeSellItem
+  Comment: 거래소에 등록한 아이템 판매 시 알림
+  SoundSet:
+    - Index: 0
+      Asset: /Game/Sound/SFX/UI/System/Setting_SellItem_SystemSound_MS.Setting_SellItem_SystemSound_MS

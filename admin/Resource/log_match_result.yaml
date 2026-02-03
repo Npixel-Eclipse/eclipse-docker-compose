@@ -1,0 +1,12 @@
+- Name: WIN
+  Value: 0
+  Description: 승리
+- Name: LOSE
+  Value: 1
+  Description: 패배
+- Name: DRAW
+  Value: 1
+  Description: 무승부
+- Name: PENALTY
+  Value: 1
+  Description: 전장 이탈 (?)

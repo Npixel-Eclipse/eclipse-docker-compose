@@ -1,0 +1,460 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+    - Goal
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    
+    #카테고리_챕터명_수행권역_퀘스트순서
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    
+    DesignComment:
+      type: string
+
+    #내부 확인을 위한 코멘트
+    Comment:
+      type: string
+
+    #퀘스트의 카테고리를 정의
+    #Main(메인, M4현재) // M5에 개발 예정 -- Sub(서브), Daily(일일), Weekly(주간), Monthly(월간)
+    Category:
+      type: string
+      ref: quest_category
+
+    Grade:
+      type: string
+      default: None
+      enum:
+        - None
+        - Common
+        - Uncommon
+        - Rare
+        - Unique
+        - Legendary
+
+    #  퀘스트 시작 시 Inactive가 아니라 바로 Active 상태로 변경
+    QuestStartType:
+      type: string
+      enum:
+        - AutoAccept # 퀘스트 수령 시 Active 상태로 변경
+        - AutoQuestWhenPrevCompletedByAuto # AutoAccept + 퀘스트 수령 시 이전 퀘스트가 자동 퀘스트로 완료 되었을 때 해당 퀘스트도 자동 퀘스트로 변경
+
+    #해당 퀘스트 완료 시 연결되는 다음 퀘스트
+    NextQuest:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Quest
+        properties:
+          Quest:
+            type: string
+            ref: quest
+    
+    #퀘스트 제목
+    Title:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+      ref: description
+
+    #퀘스트 설명
+    Description:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+      ref: description
+
+    #최초 생성 시 지급되는 퀘스트 설정
+    # Account : 계정 생성 시 지급
+    # Guild : 길드 생성 시 지급
+    DefaultQuest:
+      type: string
+      enum:
+        - Account
+        - Guild
+
+    #완료 알림 팝업 노출 여부 
+    CompleteNotification:
+      type: boolean
+      default: false
+    
+    #퀘스트 추천레벨  
+    RecommandLevel:
+      type: integer
+
+    # 해당 퀘스트의 CompleteQuestCategory 처리를 무시할지 여부 (CompleteQuestCategory 시 카운팅이 되지 않게 하기 위함)
+    IgnoreCompleteQuestCategory:
+      type: boolean
+    
+    # 퀘스트 등장 활률
+    ExposureProb:
+      type: string
+      default: 100%
+      pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+
+    # 이벤트의 추가보상 퀘스트 전용 
+    AdditionalRewardEventQuest:
+      type: boolean
+      default: false
+
+    Goal:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          #내부 확인을 위한 코멘트
+          GoalComment:
+            type: string
+            visible: true
+          Description:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            ref: description
+
+          AutoTeleportWhenCompletedByAuto: # 이전 퀘스트가 자동 퀘스트로 완료되었을 때 자동 퀘스트로 전환 시 해당 골로 텔레포트
+            type: boolean
+
+          GoalGroup:
+            type: integer
+            minimum: 1
+
+          #퀘스트의 목표 타입 설정
+          #MonsterKill: 특정 몬스터 처치
+          #Move: 특정 Territory로 이동
+          #Level: 특정 레벨 달성
+          #Talk: 특정 npc와 대화
+          Type:
+            type: string
+            visible: true
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+            ref: quest_goal_type
+
+          #텔레포트 강제 블록 여부
+          DisableTeleport:
+            type: boolean
+            default: false
+
+          PortalName:
+            type: string
+            ref: npc
+
+          #정의된 목표 타입의 타겟을 설정
+          #MonsterKill: NpcName
+          #Talk: NpcName
+          #Move: TerritoryName
+          #Level: 입력 안함
+          #GetPolymophCompose : GradeName
+          #GetPolymoph : GradeName
+          #DisassembleItem : GradeName , CategoryName
+          #CraftItme : GradeName , CategoryName
+          #EnchantItem : GradeName , CategoryName
+          #특정 타입의 아이템 획득 횟수, 특정 부위 장비 획득 횟수: type: GetItemCategory,  target: Category Name
+          #특정 아이템 획득 횟수: type: GetItem , target: Item Name
+          #특정 등급 장비 획득 횟수: type : GetItem , target: 빈칸, TargetItemGrade: Grade name
+          #특정 타입의 아이템 소모 횟수: type : UseItemCategory ,  target: Category Name
+          #특정 아이템 소모 횟수: type : UseItem,  target: Item Name
+          #등급 별 초월 카드 획득 횟수: type: GetItemCategory, target: Category Name, TargetItemGrade: Grade name
+          #특정 강화 수치의 장비 강화 횟수: type: EnchantItem,  target: Item Name, TargetEnchantLevel: number
+          #등급별 장비 강화 횟수: type: EnchantItem, target: 빈칸, TargetItemGrade: Grade name
+          #특정 부위 장비 강화 횟수: type: EnchantItemCategory,  target: Category Name
+          #등급 별 장비 제작 횟수: type : CraftItem, target: item name, TargetItemGrade: Grade name
+          #특정 타입의 아이템 제작 횟수 , 특정 장비 부위 제작 횟수	type: CraftItemCategory, target: Category Name
+          #파티 가입: type: PartyJoin, target : 빈칸
+          #길드 가입: type: GuildJoin,  target :  빈칸
+          Target:
+            type: array
+            visible: true
+            items:
+              type: string
+              pattern: ^[A-Z][A-Za-z0-9_]*$
+
+          NpcType:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Id
+                - Name
+              properties:
+                Id:
+                  type: integer
+                  minimum: 1
+
+                Name:
+                  type: string
+                  ref: npc_type
+
+          #정의된 목표 타겟의 수량을 설정
+          #MonsterKill: int (몬스터 수량)
+          #Talk: 1 (대화)
+          #Move: 1 (이동)
+          #Level: int (목표 레벨)
+          Amount:
+            type: integer
+            minimum: 0
+            default: 0
+            visible: true
+
+          StepAmount:
+            type: integer
+            minimum: 1
+
+          # Goal의 Amount가 리소스 값보다 클 수 있도록 허용하는 플래그, 기본값: false
+          AllowExceedGoalAmount:
+            type: boolean
+
+          #정의된 목표를 수행할 때 확률적으로 완료 처리
+          #'몬스터를 처치하여 아이템을 획득'과 같은 퀘스트에서 사용. 실제로는 퀘스트 아이템을 획득하지 않고, 확률로 처리하여 카운트가 올라가도록 함
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+
+          TaskArea:
+            type: string
+            ref: worldmap_area
+
+          AdditionalTeleportedArea:
+            type: string
+            ref: worldmap_area
+
+          TargetAddress:
+            type: string
+            ref: address
+
+          #해당 퀘스트에 연결된 다이얼로그 정보. 테이블 셀
+          #Accept, SpecificAmount, Complete 조건만 설정 가능
+          #나머지 조건은 무시
+          DialogueGroup:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Id
+                - Name
+              properties:
+                Id:
+                  type: integer
+                  minimum: 1
+
+                #dialogueName 연결
+                Name:
+                  type: string
+                  ref: dialogue
+          Grade:
+            type: string
+            ref: grade
+
+          #정의된 조합식 등급이 처리
+          #combination_rule에 해당하는 경우 Grade에 정보 입력
+          #Common: 일반 조합식
+          #Uncommon: 고급 조합식
+          #이후 추가가 되면 추가 예정
+          CombinationGrade:
+            type: string
+            enum:
+              - Common
+              - Uncommon
+          
+          EnchantLevel:
+            type: integer
+            minimum: 0
+
+          RecipeResultType:
+            type: string
+            ref: recipe_result_type
+          
+          EnchantResultType:
+            type: string
+            enum:
+              - Success #성공
+              - Failure #실패
+
+          BuildingLevel:
+            type: integer
+
+          AllowedLand:
+            type: string
+            ref: land
+
+          #Land 이벤트 발생 시 goal 초기화 여부
+          ResetOnLandEvent:
+            type: boolean
+
+          #아이템 차감 수를 설정
+          ItemDeductionAmount:
+            type: integer
+            minimum: 1
+
+          #USE_ITEM, GET_ITEM, USE_ITEM_CATEGORY, GET_ITEM_CATEGORY에서 사용 할 아이템 ReasonFilter, 미입력 시 모든 Reason 허용
+          ItemReasonFilter:
+            type: string
+            enum:
+              - Merge
+              - Harvest
+              - BmShopBuy
+              - MerchantBuy
+              - HuntingZoneBid
+              - GuildMerchantBuy
+              - EventMerchantBuy
+              - HuntingZoneMerchantBuy
+
+          #DungeonRanking Goal Type일 때 사용, 미입력 시 순위를 신경 쓰지 않고 true로 처리 
+          RankThreshold:
+            type: integer
+
+          #BuyItem, BuyItemCategory Goal Type일 때 사용, 미입력 시 모든 상인을 허용
+          Merchant:
+            type: string
+            ref: item_merchant
+
+          #무한 반복 퀘스트를 설정 할 때 사용, 해당 값을 사용 할 때는 필수로 StepAmount를 설정해야 함
+          Infinite:
+            type: boolean
+
+          #목표 진행도가 특정 수치에 도달 시 스킬을 자동으로 실행하는 임계값
+          #TriggerSkill과 함께 사용해야 함. TriggerAmount에 도달하면 TriggerSkill이 한번 실행됨
+          TriggerAmount:
+            type: integer
+            minimum: 1
+
+          #목표 진행도가 TriggerAmount에 도달했을 때 실행할 스킬 이름
+          TriggerSkill:
+            type: string
+            ref: skill
+
+          #NpcInteraction Goal Type일 때 사용, npc_interaction.yaml name 입력
+          NpcInteraction:
+            type: string
+            ref: npc_interaction
+
+    #해당 퀘스트에 연결된 다이얼로그 정보. 테이블 셀
+    #Complete, CompleteReward만 설정 가능
+    #나머지 조건은 무시
+    DialogueGroup:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Name
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+
+          #dialogueName 연결
+          Name:
+            type: string
+            ref: dialogue
+
+    #자동 퀘스트가 가능한지 정의.
+    CannotAuto:
+      type: boolean
+    
+    # UI 상의 강조 여부
+    Highlight:
+      type: boolean
+
+    # 퀘스트 자동 완료 처리 타입
+    QuestCompleteType:
+      type: string
+      enum:
+        - AutoComplete # 해당 퀘스트의 골이 모두 완료 되었을 때 자동 완료
+        - AutoCompleteWhenCompletedByAuto # 자동 퀘스트로 해당 퀘스트의 모든 골이 모두 완료 되었을 때 자동 완료
+
+    # 해당 퀘스트 완료 시 다음 퀘스트의 같은 GoalType과 Target을 가진 Goal에 진행도를 이어받을지 여부,  default: false
+    InheritGoalProgress:
+      type: boolean
+
+    # CompleteQuestCategory Goal의 Amount를 올릴 점수 설정, 미입력 시 1로 처리
+    QuestCategoryClearPoint:
+      type: integer
+      default: 1
+
+    # 인벤토리 슬롯이 가득 차 Item 지급을 실패해도 퀘스트를 완료 처리
+    CompleteOnInventoryFull:
+      type: boolean
+
+    # 퀘스트 보상 이벤트 팝업을 띄우지 않음
+    IgnorePopupEvent:
+      type: boolean
+
+    # 완료 대기 상태인 퀘스트가 만료되었을 때 우편으로 보상을 보냄. 단 해당 값이 설정 되어 있으면 Reward는 Item만 설정 가능
+    # 기간 만료 설정은 quest_category.yaml에서 설정, StartDate, EndDate
+    SendMailOnExpire:
+      type: boolean
+
+    #퀘스트 보상 정의. 테이블 셀.
+    Reward:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Type
+          - Amount
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          
+          #보상의 타입 정의.
+          Type:
+            type: string
+            visible: true
+            enum:
+              - Item
+              - Experience
+              - GuildItem
+          
+          #보상이 아이템일 경우, 아이템을 정의.
+          #ItemName을 입력
+          Item:
+            type: string
+            ref: item
+            visible: true
+
+          GuildItem:
+            type: string
+            ref: guild_item
+            visible: true
+          
+          #보상 수량 설정. Exp라면 Exp 양을 설정.
+          Amount:
+            type: integer
+            minimum: 1
+            visible: true
+
+          PcClassFilter:
+            type: string
+            ref: class
+            
+          StepFilter:
+            type: integer
+            minimum: 1
+
+    # 해당 퀘스트가 Active 상태일 때, 지정된 퀘스트가 완료되어 있으면 스킵 가능
+    SkipWhenCompleted:
+      type: string
+      ref: quest

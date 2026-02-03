@@ -1,0 +1,64 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    NameDesc:
+      type: string
+      ref: description
+    Comment:
+      type: string
+    Grade:
+      type: string
+      ref: grade
+    Building:
+      type: string
+      ref: building
+    Combination:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Item
+          - EnchantLevel
+        properties:
+          Item:
+            type: string
+            ref: item
+          EnchantLevel:
+            type: integer
+            minimum: 1
+    CombinationBonus:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Grade
+          - Value
+        properties:
+          Grade:
+            type: string
+            ref: grade
+          Value:
+            type: integer
+    Order:
+      type: integer
+      minimum: 0
+  required:
+    - Id
+    - Name
+    - NameDesc
+    - Building
+    - Grade
+    - Combination
+    - CombinationBonus
+    - Order

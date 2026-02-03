@@ -1,0 +1,249 @@
+- Id: 1
+  Name: PotentialPage1
+  Comment: 1페이지
+  TargetItem: Item_Potential_Page1
+  ContentLimit: Potential_Page1
+  PotentialSlot:
+    - Slot: PotentialSlot1_1
+      SlotEnchant: Enchant_PotentialSlot1_1
+      Node: 1
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot1_1_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Instinct_Sprite.Potential_Slot_Instinct_Sprite'
+      Comment: 본능
+    - Slot: PotentialSlot1_2
+      SlotEnchant: Enchant_PotentialSlot1_2
+      Node: 0
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot1_2_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Intuition_Sprite.Potential_Slot_Intuition_Sprite'
+      Comment: 직감
+    - Slot: PotentialSlot1_3
+      SlotEnchant: Enchant_PotentialSlot1_3
+      Node: 2
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot1_3_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Sense_Sprite.Potential_Slot_Sense_Sprite'
+      Comment: 감각
+    - Slot: PotentialSlot1_4
+      SlotEnchant: Enchant_PotentialSlot1_4
+      Node: 1
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot1_4_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Surge_Sprite.Potential_Slot_Surge_Sprite'
+      Comment: 격앙
+    - Slot: PotentialSlot1_5
+      SlotEnchant: Enchant_PotentialSlot1_5
+      Node: 0
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot1_5_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Impulse_Sprite.Potential_Slot_Impulse_Sprite'
+      Comment: 충동
+    - Slot: PotentialSlot1_6
+      SlotEnchant: Enchant_PotentialSlot1_6
+      Node: 2
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot1_6_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Vigor_Sprite.Potential_Slot_Vigor_Sprite'
+      Comment: 기세
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 20
+    - Grade: Uncommon
+      MaxLevel: 40
+    - Grade: Rare
+      MaxLevel: 60
+    - Grade: Epic
+      MaxLevel: 80
+    - Grade: Legendary
+      MaxLevel: 100
+  PageTitleDesc: UIWord_Potential_PageTitle_1
+  PageTabDesc: UIWord_Potential_PageTab_1
+- Id: 46
+  Name: PotentialPage2
+  Comment: 2페이지
+  TargetItem: Item_Potential_Page2
+  ContentLimit: Potential_Page2
+  PotentialSlot:
+    - Slot: PotentialSlot2_1
+      SlotEnchant: Enchant_PotentialSlot2_1
+      Node: 0
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot2_1_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Adapt_Sprite.Potential_Slot_Adapt_Sprite'
+      Comment: 적응
+    - Slot: PotentialSlot2_2
+      SlotEnchant: Enchant_PotentialSlot2_2
+      Node: 2
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot2_2_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Flex_Sprite.Potential_Slot_Flex_Sprite'
+      Comment: 유연
+    - Slot: PotentialSlot2_3
+      SlotEnchant: Enchant_PotentialSlot2_3
+      Node: 0
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot2_3_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Accept_Sprite.Potential_Slot_Accept_Sprite'
+      Comment: 수용
+    - Slot: PotentialSlot2_4
+      SlotEnchant: Enchant_PotentialSlot2_4
+      Node: 2
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot2_4_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Variant_Sprite.Potential_Slot_Variant_Sprite'
+      Comment: 변주
+    - Slot: PotentialSlot2_5
+      SlotEnchant: Enchant_PotentialSlot2_5
+      Node: 2
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot2_5_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Omen_Sprite.Potential_Slot_Omen_Sprite'
+      Comment: 전조
+    - Slot: PotentialSlot2_6
+      SlotEnchant: Enchant_PotentialSlot2_6
+      Node: 1
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot2_6_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Balance_Sprite.Potential_Slot_Balance_Sprite'
+      Comment: 균형
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 20
+    - Grade: Uncommon
+      MaxLevel: 40
+    - Grade: Rare
+      MaxLevel: 60
+    - Grade: Epic
+      MaxLevel: 80
+    - Grade: Legendary
+      MaxLevel: 100
+  PageTitleDesc: UIWord_Potential_PageTitle_2
+  PageTabDesc: UIWord_Potential_PageTab_2
+- Id: 103
+  Name: PotentialPage3
+  Comment: 3페이지
+  TargetItem: Item_Potential_Page3
+  ContentLimit: Potential_Page3
+  PotentialSlot:
+    - Slot: PotentialSlot3_1
+      SlotEnchant: Enchant_PotentialSlot3_1
+      Node: 2
+      DisplayOrder: 1
+      LevelProperty: PotentialSlotLevel_1
+      NameDesc: UIWord_Potential_Slot3_1_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Judge_Sprite.Potential_Slot_Judge_Sprite'
+      Comment: 판단
+    - Slot: PotentialSlot3_2
+      SlotEnchant: Enchant_PotentialSlot3_2
+      Node: 1
+      DisplayOrder: 2
+      LevelProperty: PotentialSlotLevel_2
+      NameDesc: UIWord_Potential_Slot3_2_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Observe_Sprite.Potential_Slot_Observe_Sprite'
+      Comment: 관조
+    - Slot: PotentialSlot3_3
+      SlotEnchant: Enchant_PotentialSlot3_3
+      Node: 1
+      DisplayOrder: 3
+      LevelProperty: PotentialSlotLevel_3
+      NameDesc: UIWord_Potential_Slot3_3_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Ponder_Sprite.Potential_Slot_Ponder_Sprite'
+      Comment: 숙고
+    - Slot: PotentialSlot3_4
+      SlotEnchant: Enchant_PotentialSlot3_4
+      Node: 0
+      DisplayOrder: 4
+      LevelProperty: PotentialSlotLevel_4
+      NameDesc: UIWord_Potential_Slot3_4_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Restrain_Sprite.Potential_Slot_Restrain_Sprite'
+      Comment: 절제
+    - Slot: PotentialSlot3_5
+      SlotEnchant: Enchant_PotentialSlot3_5
+      Node: 1
+      DisplayOrder: 5
+      LevelProperty: PotentialSlotLevel_5
+      NameDesc: UIWord_Potential_Slot3_5_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Discern_Sprite.Potential_Slot_Discern_Sprite'
+      Comment: 분별
+    - Slot: PotentialSlot3_6
+      SlotEnchant: Enchant_PotentialSlot3_6
+      Node: 1
+      DisplayOrder: 6
+      LevelProperty: PotentialSlotLevel_6
+      NameDesc: UIWord_Potential_Slot3_6_Name
+      Icon: /Script/Paper2D.PaperSprite'/Game/UIIcon/Potential/Potential_Slot_Confront_Sprite.Potential_Slot_Confront_Sprite'
+      Comment: 직시
+  ManifestMaterial:
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 1
+      LockCount: 0
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 2
+      LockCount: 1
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 3
+      LockCount: 2
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 4
+      LockCount: 3
+    - Item: Item_Grown_Potential_G1_T1_01
+      Amount: 5
+      LockCount: 4
+  GradeMaxLevel:
+    - Grade: Common
+      MaxLevel: 20
+    - Grade: Uncommon
+      MaxLevel: 40
+    - Grade: Rare
+      MaxLevel: 60
+    - Grade: Epic
+      MaxLevel: 80
+    - Grade: Legendary
+      MaxLevel: 100
+  PageTitleDesc: UIWord_Potential_PageTitle_3
+  PageTabDesc: UIWord_Potential_PageTab_3

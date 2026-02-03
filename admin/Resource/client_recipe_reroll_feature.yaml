@@ -1,0 +1,25 @@
+- Id: 1
+  Name: RecipeReroll
+  Descriptions:
+    - Name: Confirmed_NoCategory
+      Value: UIWord_SystemMsg_Confirmed_NoCategory
+  InventoryInfo:
+    - Type: Polymorph
+      Inventory: RecipeReroll_Polymorph
+      Description: UIWordPolymorph
+    - Type: WeaponPolymorph
+      Inventory: RecipeReroll_WeaponPolymorph
+      Description: UIWordWeaponPolymorph
+  ItemPropertyInfo:
+    - Type: ItemId
+      Name: ItemId
+    - Type: ExpiredAt
+      Name: ExpiredAt
+    - Type: RerollCount
+      Name: RerollCount
+    - Type: PreviousItemId
+      Name: PreviousItemId
+    - Type: IsFreeSelect
+      Name: IsFreeSelect
+    - Type: CannotChange
+      Name: CannotChange

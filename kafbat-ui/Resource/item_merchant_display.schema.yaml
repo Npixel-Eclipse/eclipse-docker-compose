@@ -1,0 +1,33 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Description:
+      type: string
+      ref: description
+      visible: true
+    DescriptionType: #지정 여부에 따라 Info 정보로 사용.
+      type: string
+      enum:
+        - SelectedBuyableItem
+        - SelectedSellableItem
+    TextStyleKey:
+      type: string
+    TextStyleKeyType: #지정 여부에 따라 Info 정보로 사용.
+      type: string
+      enum:
+        - DefaultCurrency
+        - NotEnoughCurrency

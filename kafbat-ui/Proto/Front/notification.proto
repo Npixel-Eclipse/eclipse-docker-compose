@@ -1,0 +1,62 @@
+syntax = "proto3";
+package eclipse.client.notification;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.notification";
+option java_outer_classname = "ClientNotificationProto";
+
+message NotificationRequest {
+  oneof request {
+    List list = 1;
+    SeeRedDot see_red_dot = 2;
+  }
+
+  message Empty {}
+
+  // 레드닷 목록 조회
+  message List {}
+
+  // 레드닷 종료
+  message SeeRedDot {
+    // 레드닷 ID
+    int64 notification_id = 1;
+
+    // 레드닷 대상 특정 ID
+    oneof target {
+      Empty target_none = 2;
+      int64 target_id = 3;
+      string target_uuid = 4;
+      bytes target_bytes_uuid = 6;
+      bool target_all = 5; // 대상을 특정하지 않고 동일 레드닷 ID를 모두 종료.
+    }
+
+    // 자식의 레드닷도 종료할지 여부
+    bool with_child = 10;
+  }
+}
+
+message NotificationEvent {
+  oneof event {
+    RedDot red_dot = 1;
+  }
+
+  message Empty {}
+
+  message RedDot {
+    // 레드닷 ID
+    int64 notification_id = 1;
+
+    // 열람(삭제) 여부
+    // true: 열람(=레드닷 종료)
+    // false: 미열람(=레드닷 표시)
+    bool is_deleted = 2;
+
+    // 해당 레드닷을 표시할 특정 ID
+    oneof target {
+      Empty target_none = 10;
+      int64 target_id = 11;
+      string target_uuid = 12;
+      bytes target_bytes_uuid = 13;
+    }
+  }
+}

@@ -1,0 +1,3234 @@
+- Id: 1872
+  Name: Achievement_Adventure_PlayerDead
+  Comment: 사망 횟수 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8797
+  Name: SeasonPass_Level
+  Comment: 시즌 패스 레벨
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 5651
+  Name: Achievement_Adventure_PlayerKill
+  Comment: 타 유저 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13328
+  Name: SeasonPass_Mission
+  Comment: 시즌 패스 미션
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 6477
+  Name: SeasonPass_Diamond
+  Comment: 시즌 패스 다이아
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 8042
+  Name: SeasonPass_Common
+  Comment: 시즌 패스 무료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 11833
+  Name: SeasonPass_Premium
+  Comment: 시즌 패스 유료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 4409
+  Name: SeasonPass_Seongso_Level
+  Comment: 시즌 패스 성소 지원 레벨
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2025-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 15886
+  Name: SeasonPass_Seongso_Mission
+  Comment: 시즌 패스 성소 지원 미션
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2025-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 4392
+  Name: SeasonPass_Seongso_Diamond
+  Comment: 시즌 패스 성소 지원 다이아 해금
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2025-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 6913
+  Name: SeasonPass_Seongso_Common
+  Comment: 시즌 패스 성소 지원 무료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2025-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 13901
+  Name: SeasonPass_Seongso_Premium
+  Comment: 시즌 패스 성소 지원 유료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2025-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 1650
+  Name: SeasonPass_Growth_Level
+  Comment: 시즌 패스 성장 지원 레벨
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 16312
+  Name: SeasonPass_Growth_Mission
+  Comment: 시즌 패스 성장 지원 미션
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 13555
+  Name: SeasonPass_Growth_Diamond
+  Comment: 시즌 패스 성장 지원 다이아 해금
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 7434
+  Name: SeasonPass_Growth_Common
+  Comment: 시즌 패스 성장 지원 무료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 18951
+  Name: SeasonPass_Growth_Premium
+  Comment: 시즌 패스 성장 지원 유료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 1
+  Name: Main
+  ShowQuestSymbol: true
+  Description: QuestCategory_Main
+  CannotStop: true
+  QuestCategoryAuto: Main
+  ShowHud: true
+  Type: Quest
+  OwnerBound: Character
+- Id: 3
+  Name: Tutorial
+  Description: QuestCategory_Tutorial
+  CannotStop: true
+  QuestCategoryAuto: Tutorial
+  ShowHud: true
+  Type: Quest
+  OwnerBound: Account
+- Id: 5
+  Name: Sub
+  Description: QuestCategory_Sub
+  ShowHud: true
+  QuestCategoryLimit: Sub
+  Type: Quest
+- Id: 14043
+  Name: Request_Varitan_Subjugate
+  Comment: "[의뢰] 바리탄 침탈지대 "
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Subjugate
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 4701
+  Name: Request_Varitan_Wastes
+  Comment: "[의뢰]바리탄 패전지대"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Wastes
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 1655
+  Name: Request_Varitan_Blightlands
+  Comment: "[의뢰]바리탄 잠식지대"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Blightlands
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 7
+  Name: Request_Rainwood
+  Comment: "[의뢰] 레인 우드"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Rainwood
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 8659
+  Name: Request_Eldar_Dawnbough
+  Comment: "[의뢰]엘다르 여명지대"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Dawnbough
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 9514
+  Name: Request_Eldar_Heartwood
+  Comment: "[의뢰]엘다르 중심지대"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Heartwood
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 6997
+  Name: Request_Eldar_Shadowbloom
+  Comment: "[의뢰]엘다르 그늘지대"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Shadowbloom
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 10263
+  Name: Request_East_Castia
+  Comment: "[의뢰]동부 카스티아"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_East_Castia
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 10699
+  Name: Request_South_Castia
+  Comment: "[의뢰]남부 카스티아"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_South_Castia
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 3993
+  Name: Request_West_Castia
+  Comment: "[의뢰]서부 카스티아"
+  RefreshInterval: Daily
+  ShowQuestSymbol: true
+  Description: UI_Request_West_Castia
+  QuestCategoryAuto: Request_Daily
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 4
+  Name: Weekly
+  RefreshInterval: Daily
+  Description: QuestCategory_Mission
+  QuestCategoryLimit: Weekly
+  Type: Quest
+- Id: 2
+  Name: Story
+  Description: QuestCategory_Mission
+  CannotStop: true
+  ShowHud: true
+  Type: Quest
+- Id: 9
+  Name: Guild_Quest
+  Comment: 길드 퀘스트
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: Guild
+- Id: 12525
+  Name: Day
+  Comment: 일일 퀘스트
+  RefreshInterval: Daily
+  Description: QuestCategory_Day
+  Type: Quest
+- Id: 90
+  Name: GuildFame_Quest
+  Comment: 길드 명성
+  Description: QuestCategory_Main
+  Type: Guild
+- Id: 901
+  Name: GuildGoldDonation_Quest
+  Comment: 길드 골드 기부
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: GuildDonation
+  Override: true
+- Id: 902
+  Name: GuildDiamondDonation_Quest
+  Comment: 길드 다이아 기부
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: GuildDonation
+  Override: true
+- Id: 903
+  Name: GuildMedalDonation_Quest
+  Comment: 길드 아이템 기부
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: GuildDonation
+  Override: true
+- Id: 9770
+  Name: GuildDiamondDonation_Quest01
+  Comment: 길드 다이아 기부 (고급)
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: GuildDonation
+  Override: true
+- Id: 904
+  Name: ChallengeDungeon
+  Comment: 도전던전퀘스트
+  ShowQuestSymbol: true
+  Description: QuestCategory_Main
+  ShowHud: true
+  Type: ChallengeDungeon
+- Id: 42561
+  Name: GuildAttend
+  Comment: 출석 길드
+  RefreshInterval: Daily
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: GuildAttend
+- Id: 3153
+  Name: Achievement_Normal_GetPolymorphCommon
+  Comment: 일반 등급 초월 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3537
+  Name: Event_Quest_NewEclipseQuest
+  Comment: 이클립스의 세계 이벤트
+  StartDate: 2024-11-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: Event_Quest_NewEclipseQuest_Desc
+  Type: Event
+  OwnerBound: Account
+- Id: 3175
+  Name: Event_GrowthEvent
+  Comment: 레벨 달성 이벤트
+  StartDate: 2024-11-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: Event_GrowthEvent_Desc
+  Type: Event
+  OwnerBound: Account
+- Id: 2109
+  Name: Event_Attend
+  Comment: 7일 출석 이벤트
+  StartDate: 2024-11-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: Event
+  OwnerBound: Account
+- Id: 1820
+  Name: TEST_ChallengeDungeon
+  Comment: "[테스트] 도전 던전 퀘스트"
+  Description: Event_ChallengeDungeonEventDesc
+  Type: Quest
+- Id: 1821
+  Name: ChallengeDungeon_Week
+  Comment: "[테스트] 도전 던전 주간 보상"
+  RefreshInterval: Weekly
+  Description: Event_ChallengeDungeonEventDesc
+  Type: ChallengeDungeonWeekly
+- Id: 771
+  Name: Achievement_Growth_LVup
+  Comment: 레벨업 달성 업적 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1495
+  Name: Achievement_Growth_CombatPoint
+  Comment: 전투력 성장 업적 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5792
+  Name: Achievement_Growth_Str
+  Comment: 힘 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4566
+  Name: Achievement_Growth_Dex
+  Comment: 민첩 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3136
+  Name: Achievement_Growth_Con
+  Comment: 건강 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6900
+  Name: Achievement_Growth_Cha
+  Comment: 권위 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1463
+  Name: Achievement_Growth_Int
+  Comment: 지능 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4757
+  Name: Achievement_Growth_Wis
+  Comment: 지혜 성장 업적
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24
+  Name: Achievement_Item_GetWeapon
+  Comment: 무기 장비  획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 907
+  Name: Achievement_Item_GetArmor
+  Comment: 방어구 장비  획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 163
+  Name: Achievement_Item_GetAccessory
+  Comment: 악세서리 장비  획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1474
+  Name: Achievement_Item_GetCommon
+  Comment: 일반 등급 장비 획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 506
+  Name: Achievement_Item_GetUncommon
+  Comment: 고급 등급 장비 획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1656
+  Name: Achievement_Item_GetRare
+  Comment: 희귀 등급 장비 획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 152
+  Name: Achievement_Item_GetEpic
+  Comment: 영웅 등급 장비 획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2143
+  Name: Achievement_Adventure_UseHealthPotion
+  Comment: 체력 물약 반복 사용 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 604
+  Name: Achievement_Item_UseMaterial
+  Comment: 재료 아이템 반복 사용 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8913
+  Name: Achievement_Item_GetGrade
+  Comment: 등급별 장비 최초 획득 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9128
+  Name: Achievement_Normal_GetPolymorphUncommon
+  Comment: 고급 등급 초월 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2811
+  Name: Achievement_Normal_GetPolymorphRare
+  Comment: 희귀 등급 초월 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 683
+  Name: Achievement_Normal_GetPolymorphEpic
+  Comment: 영웅 등급 초월 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2154
+  Name: Achievement_Normal_GetPolymorphLegendary
+  Comment: 전설 등급 초월 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 141
+  Name: Achievement_Normal_GetPolymorphGrade
+  Comment: 등급별 초월 최초 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7320
+  Name: Achievement_Adventure_NorthVaritanMonsterKill
+  Comment: 바리탄 잠식지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1940
+  Name: Achievement_Adventure_EastEldarMonsterKill
+  Comment: 엘다르 여명지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7832
+  Name: Achievement_Adventure_EastVaritanMonsterKill
+  Comment: 바리탄 침탈지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 897
+  Name: Achievement_Normal_WeaponPolymorphLegendary
+  Comment: 전설 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9088
+  Name: Achievement_Item_EnchantCommonSuccess
+  Comment: 일반 등급 장비 강화 성공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10975
+  Name: Achievement_Item_EnchantUncommonSuccess
+  Comment: 고급 등급 장비 강화 성공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6835
+  Name: Achievement_Item_EnchantRareSuccess
+  Comment: 희귀 등급 장비 강화 성공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10081
+  Name: Achievement_Item_EnchantEpicSuccess
+  Comment: 영웅 등급 장비 강화 성공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11373
+  Name: Achievement_Item_EnchantCommonFail
+  Comment: 일반 등급 장비 강화 실패 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4026
+  Name: Achievement_Item_EnchantUncommonFail
+  Comment: 고급 등급 장비 강화 실패 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6090
+  Name: Achievement_Item_EnchantRareFail
+  Comment: 희귀 등급 장비 강화 실패 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1552
+  Name: Achievement_Item_EnchantEpicFail
+  Comment: 영웅 등급 장비 강화 실패 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10496
+  Name: Achievement_Item_EnchantUncommonWeapon
+  Comment: 고급 등급 무기 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5030
+  Name: Achievement_Item_EnchantRareWeapon
+  Comment: 희귀 등급 무기 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2524
+  Name: Achievement_Item_EnchantEpicWeapon
+  Comment: 영웅 등급 무기 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12080
+  Name: Achievement_Item_EnchantCommonArmor
+  Comment: 일반 등급 방어구 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7769
+  Name: Achievement_Item_EnchantUncommonArmor
+  Comment: 고급 등급 방어구 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1752
+  Name: Achievement_Item_EnchantRareArmor
+  Comment: 희귀 등급 방어구 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1471
+  Name: Achievement_Item_EnchantCommonAccessory
+  Comment: 일반 등급 악세서리 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11163
+  Name: Achievement_Item_EnchantUncommonAccessory
+  Comment: 고급 등급 악세서리 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10299
+  Name: Achievement_Item_EnchantRareAccessory
+  Comment: 희귀 등급 악세서리 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12854
+  Name: Achievement_Item_EnchantEpicAccessory
+  Comment: 영웅 등급 악세서리 강화 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2006
+  Name: Achievement_Item_CraftCommon
+  Comment: 일반 등급 장비 제작 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1901
+  Name: Achievement_Item_CraftUncommon
+  Comment: 고급 등급 장비 제작 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3692
+  Name: Achievement_Item_CraftRare
+  Comment: 희귀 등급 장비 제작 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4359
+  Name: Achievement_Item_CraftEpic
+  Comment: 영웅 등급 장비 제작 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2535
+  Name: Achievement_Normal_WeaponPolymorphCommon
+  Comment: 일반 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 401
+  Name: Achievement_Normal_WeaponPolymorphUncommon
+  Comment: 고급 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4213
+  Name: Achievement_Normal_WeaponPolymorphRare
+  Comment: 희귀 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4829
+  Name: Achievement_Normal_WeaponPolymorphEpic
+  Comment: 영웅 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2211
+  Name: Achievement_Item_EngravingAccessory
+  Comment: 악세서리 세공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2876
+  Name: Achievement_Item_EngravingArmor
+  Comment: 방어구 세공 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8820
+  Name: Achievement_Normal_GetPolymorphLegendary1st
+  Comment: 전설 등급 초월 최초 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9309
+  Name: Achievement_Normal_GetWeaponPolymorphGrade
+  Comment: 등급별 무기 외형 최초 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7954
+  Name: Achievement_Item_DisassembleEpic
+  Comment: 영웅 장비 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5929
+  Name: Achievement_Adventure_CenterEldarMonsterKill
+  Comment: 엘다르 중심지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1508
+  Name: Achievement_Adventure_GuildJoin
+  Comment: 길드 가입 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3119
+  Name: Achievement_Normal_PartyJoin
+  Comment: 파티 가입 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 705
+  Name: Achievement_Item_DisassembleRare
+  Comment: 희귀 장비 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2513
+  Name: Achievement_Adventure_SouthVaritanMonsterKill
+  Comment: 바리탄 패전지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4667
+  Name: Achievement_Adventure_RainwoodMonsterKill
+  Comment: 레인우드 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 562
+  Name: Achievement_Adventure_NorthEldarMonsterKill
+  Comment: 엘다르 그늘지대 사냥 반복 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2048
+  Name: Achievement_Item_EngravingWeapon
+  Comment: 무기 세공 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7067
+  Name: Achievement_Item_EngravingHelm
+  Comment: 업적 투구 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 16929
+  Name: Achievement_Item_EngravingSuit
+  Comment: 업적 상의 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 165
+  Name: Achievement_Item_EngravingPants
+  Comment: 업적 하의 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2692
+  Name: Achievement_Item_EngravingBoots
+  Comment: 업적 신발 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13744
+  Name: Achievement_Item_EngravingGloves
+  Comment: 업적 장갑 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5973
+  Name: Achievement_Item_EngravingCape
+  Comment: 업적 망토 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18348
+  Name: Achievement_Item_EngravingEarring
+  Comment: 업적 귀걸이 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14397
+  Name: Achievement_Item_EngravingNecklace
+  Comment: 업적 목걸이 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19269
+  Name: Achievement_Item_EngravingRing
+  Comment: 업적 반지 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7282
+  Name: Achievement_Item_EngravingBelt
+  Comment: 업적 벨트 N번 세공 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6462
+  Name: Achievement_Item_DisassembleUncommon
+  Comment: 고급 장비 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1092
+  Name: Achievement_Item_Disassemblecommon
+  Comment: 일반 장비 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3622
+  Name: Achievement_Item_DisassembleArmor
+  Comment: 방어구 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1055
+  Name: Achievement_Item_DisassembleWeapon
+  Comment: 무기 분해 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3561
+  Name: Achievement_Item_DisassembleAccessory
+  Comment: 악세서리 분해 업적
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8618
+  Name: Achievement_Item_DisassembleHelm
+  Comment: 업적 투구 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18278
+  Name: Achievement_Item_DisassembleSuit
+  Comment: 업적 상의 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3129
+  Name: Achievement_Item_DisassemblePants
+  Comment: 업적 하의 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11728
+  Name: Achievement_Item_DisassembleBoots
+  Comment: 업적 신발 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 20662
+  Name: Achievement_Item_DisassembleGloves
+  Comment: 업적 장갑 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18004
+  Name: Achievement_Item_DisassembleCape
+  Comment: 업적 망토 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13913
+  Name: Achievement_Item_DisassembleEarring
+  Comment: 업적 귀걸이 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17587
+  Name: Achievement_Item_DisassembleNecklace
+  Comment: 업적 목걸이 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19677
+  Name: Achievement_Item_DisassembleRing
+  Comment: 업적 반지 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6358
+  Name: Achievement_Item_DisassembleBelt
+  Comment: 업적 벨트 N개 분해 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10432
+  Name: Achievement_Normal_WeaponPolymorphLegendary1st
+  Comment: 전설 등급 무기 외형 획득 업적
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23437
+  Name: Achievement_Normal_GetHuntingZoneJewl
+  Comment: 업적 창조석 N개 획득하기 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23534
+  Name: Achievement_Normal_UseBattleGroundToken
+  Comment: 업적 전장증표 N개 소모 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22148
+  Name: Achievement_Normal_UseGuildCoin
+  Comment: 업적 길드증표 N개 소모 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14540
+  Name: Achievement_Adventure_WestCastiaMonsterKill
+  Comment: 카스티아 서부 사냥 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11532
+  Name: Achievement_Adventure_EastCastiaMonsterKill
+  Comment: 카스티아 동부 사냥 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10073
+  Name: Achievement_Adventure_WorldBossKill
+  Comment: 월드 보스 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17003
+  Name: Achievement_Adventure_NamedMonsterKill
+  Comment: 네임드 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8108
+  Name: Achievement_Adventure_AbyssMonsterKill
+  Comment: 어비스 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8712
+  Name: Achievement_Adventure_FieldBossKill
+  Comment: 필드 보스 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6110
+  Name: Achievement_Adventure_ChallengeBossKill
+  Comment: 도전 보스 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8402
+  Name: Achievement_Item_OverEnchantWeapon
+  Comment: 무기 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 100
+  Name: Achievement_Item_OverEnchantHelm
+  Comment: 투구 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9892
+  Name: Achievement_Item_OverEnchantSuit
+  Comment: 상의 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1505
+  Name: Achievement_Item_OverEnchantPants
+  Comment: 하의 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9656
+  Name: Achievement_Item_OverEnchantBoots
+  Comment: 신발 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4578
+  Name: Achievement_Item_OverEnchantGloves
+  Comment: 장갑 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11253
+  Name: Achievement_Item_OverEnchantEarring
+  Comment: 귀걸이 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6199
+  Name: Achievement_Item_OverEnchantNecklace
+  Comment: 목걸이 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13320
+  Name: Achievement_Item_OverEnchantRing
+  Comment: 반지 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5898
+  Name: Achievement_Fortress_Bulid
+  Comment: 요새 건설 업적
+  Description: Fortress_Achievement_Title01
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3853
+  Name: Achievement_Fortress_Harvest
+  Comment: 요새 수확 업적
+  Description: Fortress_Achievement_Title02
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1103
+  Name: Achievement_Fortress_Upgrade
+  Comment: 요새 업그레이드 업적
+  Description: Fortress_Achievement_Title03
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11634
+  Name: Achievement_Seongso_Statue_Main
+  Comment: 성좌 증축(완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13722
+  Name: Achievement_Seongso_Statue_Exp
+  Comment: 경험의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1287
+  Name: Achievement_Seongso_Statue_Gold
+  Comment: 황금의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1284
+  Name: Achievement_Seongso_Statue_Awareness
+  Comment: 자각의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 743
+  Name: Achievement_Seongso_Statue_Awakening
+  Comment: 각성의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14124
+  Name: Achievement_Seongso_Statue_WeaponPolymorph
+  Comment: 외형의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12384
+  Name: Achievement_Seongso_Statue_DungeonItem
+  Comment: 시간의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11887
+  Name: Achievement_Seongso_Statue_CardPack
+  Comment: 초월의 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5634
+  Name: Achievement_Seongso_Statue_BuffItem
+  Comment: 소모품 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15874
+  Name: Achievement_Seongso_Statue_BM01
+  Comment: BM01 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3784
+  Name: Achievement_Seongso_Statue_BM02
+  Comment: BM02 성물 증축 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9823
+  Name: Achievement_Adventure_ExpeditionCollection
+  Comment: 업적 토벌 리스트 N개 완성 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8611
+  Name: Achievement_Adventure_HuntingZoneCollection
+  Comment: 업적 사냥터 리스트 N개 완성 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10711
+  Name: DailyPass_Premium
+  Comment: 데일리 패스 유료
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: DailyPass
+  OwnerBound: Account
+- Id: 10712
+  Name: DailyPass_Free
+  Comment: 데일리 패스 무료
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: DailyPass
+  OwnerBound: Account
+- Id: 590
+  Name: ContentLimit
+  Comment: 컨탠츠 제한
+  Description: QuestCategory_Day
+  Type: ContentLimit
+- Id: 2274
+  Name: Guild_Daily_Mission
+  Comment: "[테스트] 길드 일일 임무"
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: Guild
+- Id: 15078
+  Name: Achievement_Adventure_RuinedCastleMonsterKill
+  Comment: 무법 성채 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7903
+  Name: Achievement_Adventure_MiningAreaMonsterKill
+  Comment: 버려진 채굴지 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9157
+  Name: Guild_Daily_Mission_Box
+  Comment: "[테스트] 길드 일일 임무 박스"
+  RefreshInterval: Daily
+  Description: QuestCategory_Main
+  Type: Guild
+  Override: true
+- Id: 7085
+  Name: Achievement_Adventure_UndeadTempleMonsterKill
+  Comment: 언데드 신전 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 57
+  Name: Guild_Repeatable_Mission
+  Comment: "[테스트] 길드 반복 임무"
+  Description: QuestCategory_Main
+  Type: Guild
+- Id: 1878
+  Name: Guild_Repeatable_Mission_Reward
+  Comment: "[테스트] 길드 반복 임무 보상"
+  Description: QuestCategory_Main
+  Type: Guild
+  RemoveOnGuildLeave: true
+- Id: 8934
+  Name: Achievement_Adventure_PvPDunMonsterKill
+  Comment: PVP던전 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15936
+  Name: Achievement_Adventure_ChallengeDunMonsterKill
+  Comment: 도전 던전 몬스터 처치 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8625
+  Name: Guild_Repeatable_Mission_Box
+  Comment: "[테스트] 길드 반복 임무 박스"
+  Description: QuestCategory_Main
+  Type: Guild
+- Id: 7669
+  Name: Achievement_Adventure_ChallengeDunComplete
+  Comment: 도전 던전 N회 플레이 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 16549
+  Name: Achievement_Adventure_UseScroll
+  Comment: 주문서 사용 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7733
+  Name: Achievement_Adventure_UseFood
+  Comment: 음식 사용 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4004
+  Name: Achievement_Adventure_UseTimeacceleration
+  Comment: 가속권 사용 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18185
+  Name: Achievement_Adventure_GuildAttend
+  Comment: 길드 출석 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11562
+  Name: Achievement_Adventure_GuildDonation
+  Comment: 길드 기부 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13474
+  Name: Achievement_Adventure_GuildQuestComplete
+  Comment: 길드 퀘스트 완료 업적 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9614
+  Name: Achievement_Item_EnchantWeaponNumber
+  Comment: 업적 무기 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3601
+  Name: Achievement_Item_EnchantHelmNumber
+  Comment: 업적 투구 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9980
+  Name: Achievement_Item_EnchantSuitNumber
+  Comment: 업적 상의 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2391
+  Name: Achievement_Item_EnchantPantsNumber
+  Comment: 업적 하의 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8082
+  Name: Achievement_Item_EnchantBootsNumber
+  Comment: 업적 신발 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17490
+  Name: Achievement_Item_EnchantGlovesNumber
+  Comment: 업적 장갑 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1683
+  Name: Achievement_Item_EnchantCapeNumber
+  Comment: 업적 망토 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3058
+  Name: Achievement_Item_EnchantEarringNumber
+  Comment: 업적 귀걸이 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14422
+  Name: Achievement_Item_EnchantNecklaceNumber
+  Comment: 업적 목걸이 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6782
+  Name: Achievement_Item_EnchantRingNumber
+  Comment: 업적 반지 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 20231
+  Name: Achievement_Item_EnchantBeltNumber
+  Comment: 업적 벨트 N번 강화 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 20506
+  Name: Achievement_Item_OverEnchantBelt
+  Comment: 벨트 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9121
+  Name: Achievement_Item_OverEnchantCape
+  Comment: 망토 안전 강화 초과 업적 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5185
+  Name: Achievement_Item_EnchantFailWeapon
+  Comment: 업적 무기 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8733
+  Name: Achievement_Item_EnchantFailHelm
+  Comment: 업적 투구 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9798
+  Name: Achievement_Item_EnchantFailSuit
+  Comment: 업적 상의 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21396
+  Name: Achievement_Item_EnchantFailPants
+  Comment: 업적 하의 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14116
+  Name: Achievement_Item_EnchantFailBoots
+  Comment: 업적 신발 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21429
+  Name: Achievement_Item_EnchantFailGloves
+  Comment: 업적 장갑 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10126
+  Name: Achievement_Item_EnchantFailCape
+  Comment: 업적 망토 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15803
+  Name: Achievement_Item_EnchantFailEarring
+  Comment: 업적 귀걸이 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9836
+  Name: Achievement_Item_EnchantFailNecklace
+  Comment: 업적 목걸이 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17524
+  Name: Achievement_Item_EnchantFailRing
+  Comment: 업적 반지 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13614
+  Name: Achievement_Item_EnchantFailBelt
+  Comment: 업적 벨트 강화 실패 (완)
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15926
+  Name: UIAchievement_Normal_CompleteMainQuest01
+  Comment: 업적 퀘스트 1장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18119
+  Name: UIAchievement_Normal_CompleteMainQuest02
+  Comment: 업적 퀘스트 2장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4024
+  Name: UIAchievement_Normal_CompleteMainQuest03
+  Comment: 업적 퀘스트 3장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9154
+  Name: UIAchievement_Normal_CompleteMainQuest04
+  Comment: 업적 퀘스트 4장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19205
+  Name: UIAchievement_Normal_CompleteMainQuest05
+  Comment: 업적 퀘스트 5장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17354
+  Name: UIAchievement_Normal_CompleteMainQuest06
+  Comment: 업적 퀘스트 6장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18133
+  Name: UIAchievement_Normal_CompleteMainQuest07
+  Comment: 업적 퀘스트 7장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13279
+  Name: UIAchievement_Normal_CompleteMainQuest08
+  Comment: 업적 퀘스트 8장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3118
+  Name: UIAchievement_Normal_CompleteMainQuest09
+  Comment: 업적 퀘스트 9장 진행 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 20882
+  Name: Achievement_Normal_CompleteDay
+  Comment: 업적 의뢰 N회 완료 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7891
+  Name: Achievement_Normal_Production_Statue_Awarenessa
+  Comment: 업적 자각의 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3548
+  Name: Achievement_Normal_Production_Statue_Awakeninga
+  Comment: 업적 각성의 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9394
+  Name: Achievement_Normal_Production_Statue_DungeonItema
+  Comment: 업적 시간의 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21418
+  Name: Achievement_Normal_Production_Statue_WeaponPolymorpha
+  Comment: 업적 외형의 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3883
+  Name: Achievement_Normal_Production_Statue_Polymorpha
+  Comment: 업적 초월의 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7600
+  Name: Achievement_Growth_GetPolymorph
+  Comment: 초월 획득 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1840
+  Name: Achievement_Growth_GetWeaponPolymorph
+  Comment: 무기 외형 획득 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3016
+  Name: Achievement_Growth_MergePolymorph
+  Comment: 업적 무기외형 합성 N회 시도 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17231
+  Name: Achievement_Growth_MergeWeaponPolymorph
+  Comment: 업적 초월 합성 N회 시도 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1290
+  Name: Achievement_Growth_Combination_Varitan
+  Comment: 업적 바리탄 봉인 해제하기 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11030
+  Name: Achievement_Growth_Combination_Eldar
+  Comment: 업적 엘다르 봉인 해제하기 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17966
+  Name: Achievement_Growth_Combination_Castia
+  Comment: 업적 카스티아 봉인 해제하기 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1393
+  Name: Achievement_Normal_Production_Statue_BuffItema
+  Comment: 업적 소모품 성물 아이템 N개 생산 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14988
+  Name: Achievement_Normal_GetBattleGroundToken
+  Comment: 업적 전장증표 N개 획득 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13103
+  Name: Achievement_Normal_GetGuildCoin
+  Comment: 업적 길드증표 N개 획득 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7924
+  Name: Achievement_Adventure_EquipmentCollection
+  Comment: 업적 장비 리스트 N개 완성 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14166
+  Name: Achievement_Adventure_MonsterCollection
+  Comment: 업적 몬스터 리스트 N개 완성 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14526
+  Name: Achievement_Adventure_SpecialtyCollection
+  Comment: 업적 특산품 리스트 N개 완성 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 277
+  Name: Achievement_Normal_BuyEquipment
+  Comment: 업적 NPC상점 장비상인 N개 상품구매 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22525
+  Name: Achievement_Normal_BuyHaberdashery
+  Comment: 업적 NPC상점 잡화상인 N개 상품구매 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18790
+  Name: Achievement_Normal_BuyBattleGround
+  Comment: 업적 NPC상점 전장의증표 N개 상품(완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5771
+  Name: Achievement_Normal_BuyGuild
+  Comment: 업적 NPC상점 길드강인 N개 상품(완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9287
+  Name: Achievement_Growth_Mastery01Open
+  Comment: 업적 1장 N개 정수 개방 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8018
+  Name: Achievement_Growth_Mastery02Open
+  Comment: 업적 2장 N개 정수 개방 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5772
+  Name: Achievement_Growth_Mastery03Open
+  Comment: 업적 3장 N개 정수 개방 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13835
+  Name: Achievement_Growth_Mastery04Open
+  Comment: 업적 4장 N개 정수 개방 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5849
+  Name: Achievement_Adventure_Attend
+  Comment: 업적 게임 접속 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21324
+  Name: Achievement_Normal_BuySpecialty
+  Comment: 업적 특산품 상점 N개 상품구매 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21867
+  Name: Achievement_Growth_GetMastery
+  Comment: 업적 숙련도 포인트 N개 획득 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19119
+  Name: Achievement_Growth_ActiveSkillEnchant
+  Comment: 업적 액티브 스킬 레벨업 N회 시도 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24742
+  Name: Achievement_Growth_PassiveSkillEnchant
+  Comment: 업적 패시브 스킬 레벨업 N회 시도 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12589
+  Name: Guild_Repeatable_Mission_Box_Reward
+  Comment: "[테스트] 길드 반복 임무 박스 보상"
+  Description: QuestCategory_Main
+  Type: Guild
+  Override: true
+  RemoveOnGuildLeave: true
+- Id: 24833
+  Name: Achievement_Adventure_BattleField_Victory
+  Comment: 업적 하이리버 전투 N회 승리 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22292
+  Name: Achievement_Adventure_BattleField_Participation
+  Comment: 업적 하이리버 전투 N회 참가 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18846
+  Name: Achievement_Adventure_ItemSale
+  Comment: 업적아이템 N개 판매 (완)
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18872
+  Name: Achievement_Growth_ExpandPolymorph
+  Comment: 업적 초월 카드 N회 돌파 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11851
+  Name: Achievement_Growth_ExpandWeaponPolymorph
+  Comment: 업적 무기외형 카드 N회 돌파 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11535
+  Name: Achievement_Growth_EnchanPolymorph
+  Comment: 업적 초월 카드 N회 레벨업 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4828
+  Name: Achievement_Growth_EnchanWeaponPolymorph
+  Comment: 업적 무기외형 카드 N회 레벨업 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21011
+  Name: Achievement_Growth_AwakeningLvUp
+  Comment: 업적 자각 Lv 단계 달성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 28364
+  Name: Achievement_Growth_AwakeningAttackExpansion
+  Comment: 업적 공격 각성의 불꽃 n개 단계확장 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17563
+  Name: Achievement_Growth_AwakeningDefenseExpansion
+  Comment: 업적 방어 각성의 불꽃 n개 단계확장 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7121
+  Name: Achievement_Growth_AwakeningSupportExpansion
+  Comment: 업적 지원 각성의 불꽃 n개 단계확장 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10133
+  Name: Achievement_Growth_AwakeningAttackLvUp
+  Comment: 업적 공격 각성의 불꽃 N단계 달성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23385
+  Name: Achievement_Growth_AwakeningDefenseLvUp
+  Comment: 업적 방어 각성의 불꽃 N단계 달성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6693
+  Name: Achievement_Growth_AwakeningSupportLvUp
+  Comment: 업적 지원 각성의 불꽃 N단계 달성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14675
+  Name: Achievement_Growth_CombinationTryVaritan
+  Comment: 업적 바리탄 서판 N회 심볼 변경 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3918
+  Name: Achievement_Growth_CombinationMatchVaritan
+  Comment: 업적 바리탄 서판 N회 조합식 완성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4507
+  Name: Achievement_Growth_CombinationTryEldar
+  Comment: 업적 엘다르 서판 N회 심볼 변경 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 27061
+  Name: Achievement_Growth_CombinationMatchEldar
+  Comment: 업적 엘다르 서판 N회 조합식 완성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9716
+  Name: Achievement_Growth_CombinationTryCastia
+  Comment: 업적 카스티아 서판 N회 심볼 변경 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21352
+  Name: Achievement_Growth_CombinationMatchCastia
+  Comment: 업적 카스티아 서판 N회 조합식 완성 (완)
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12921
+  Name: Achievement_Adventure_ContributeGuildCollection
+  Comment: 업적 길드 N회 연구 (완)
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2345
+  Name: TutorialRequire
+  Comment: 튜토리얼 지급 조건 퀘스트 카테고리
+  Description: QuestCategory_TutorialRequire
+  Type: Quest
+  OwnerBound: Account
+- Id: 3957
+  Name: SeasonPass_Eclipse_Level
+  Comment: 이클립스 패스 레벨
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 5827
+  Name: SeasonPass_Eclipse_Mission
+  Comment: 이클립스 패스 미션
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 16125
+  Name: SeasonPass_Eclipse_Diamond
+  Comment: 이클립스 패스 다이아
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 27479
+  Name: SeasonPass_Eclipse_Common
+  Comment: 이클립스 패스 무료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 14550
+  Name: SeasonPass_Eclipse_Premium
+  Comment: 이클립스 패스 유료
+  StartDate: 2025-07-01T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: QuestCategory_Day
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 28281
+  Name: AttendPass_AttendFreeQuest
+  Comment: 출석 패스 무료 매일 보상
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 9260
+  Name: AttendPass_AttendPremiumQuest
+  Comment: 출석 패스 유료 매일 보상
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  RefreshInterval: Daily
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 9851
+  Name: AttendPass_FreeQuest
+  Comment: 출석 패스 무료 출석(일반) 보상
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 7165
+  Name: AttendPass_PremiumQuest
+  Comment: 출석 패스 유료 출석(일반) 보상
+  StartDate: 2025-12-21T00:00:00
+  EndDate: 2026-12-31T14:00:00
+  Description: Event_14Days_Eclipse14Days_Desc
+  Type: SeasonPass
+  OwnerBound: Account
+- Id: 17634
+  Name: Request_Varitan_Subjugate_Weekly
+  Comment: "[의뢰] 바리탄 침탈지대 "
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Subjugate
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Daily
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 10282
+  Name: Request_Varitan_Wastes_Weekly
+  Comment: "[의뢰]바리탄 패전지대"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Wastes
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 24414
+  Name: Request_Varitan_Blightlands_Weekly
+  Comment: "[의뢰]바리탄 잠식지대"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Varitan_Blightlands
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 27283
+  Name: Request_Rainwood_Weekly
+  Comment: "[의뢰] 레인 우드"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Rainwood
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 27200
+  Name: Request_Eldar_Dawnbough_Weekly
+  Comment: "[의뢰]엘다르 여명지대"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Dawnbough
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 25023
+  Name: Request_Eldar_Heartwood_Weekly
+  Comment: "[의뢰]엘다르 중심지대"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Heartwood
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 18423
+  Name: Request_Eldar_Shadowbloom_Weekly
+  Comment: "[의뢰]엘다르 그늘지대"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_Eldar_Shadowbloom
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 11925
+  Name: Request_East_Castia_Weekly
+  Comment: "[의뢰]동부 카스티아"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_East_Castia
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 10807
+  Name: Request_South_Castia_Weekly
+  Comment: "[의뢰]남부 카스티아"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_South_Castia
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 29484
+  Name: Request_West_Castia_Weekly
+  Comment: "[의뢰]서부 카스티아"
+  RefreshInterval: Weekly
+  ShowQuestSymbol: true
+  Description: UI_Request_West_Castia
+  QuestCategoryAuto: Request_Weekly
+  ShowHud: true
+  QuestCategoryLimit: Weekly
+  Type: Request
+  Refreshable: true
+  ExposureQuestCount: 13
+  RefreshCost:
+    - Level: 1
+      Item: CurrencyGold
+      Amount: 10000
+    - Level: 2
+      Item: CurrencyGold
+      Amount: 20000
+    - Level: 3
+      Item: CurrencyGold
+      Amount: 30000
+    - Level: 4
+      Item: CurrencyGold
+      Amount: 40000
+    - Level: 5
+      Item: CurrencyGold
+      Amount: 50000
+    - Level: 6
+      Item: CurrencyDiamond
+      Amount: 30
+- Id: 294866
+  Name: SkipFlag
+  Comment: 퀘스트 스킵플래그용
+  Description: UI_Request_West_Castia
+  Type: SkipFlag
+  OwnerBound: Account
+- Id: 15678
+  Name: Achievement_Adventure_MonsterKill_All_01
+  Comment: 업적_몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11819
+  Name: Achievement_Adventure_MonsterKill_DungeonBoss_01
+  Comment: 업적_던전 보스 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23979
+  Name: Achievement_Adventure_MonsterKill_Named_01
+  Comment: 업적_네임드 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 25726
+  Name: Achievement_Adventure_MonsterKill_Abyss_01
+  Comment: 업적_어비스 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 25612
+  Name: Achievement_Adventure_MonsterKill_WorldBoss_01
+  Comment: 업적_월드 보스 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 28114
+  Name: Achievement_Adventure_MonsterKill_FieldBoss_01
+  Comment: 업적_필드 보스 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15064
+  Name: Achievement_Adventure_MonsterKill_Varitan_Wastes_01
+  Comment: 업적_바리탄 패전지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 26442
+  Name: Achievement_Adventure_MonsterKill_Varitan_Blightlands_01
+  Comment: 업적_바리탄 잠식지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14006
+  Name: Achievement_Adventure_MonsterKill_Varitan_Subjugate_01
+  Comment: 업적_바리탄 침탈지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1032
+  Name: Achievement_Adventure_MonsterKill_Rainwood_01
+  Comment: 업적_레인우드 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 5742
+  Name: Achievement_Adventure_MonsterKill_Eldar_Dawnbough_01
+  Comment: 업적_엘다르 여명지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24419
+  Name: Achievement_Adventure_MonsterKill_Eldar_Heartwood_01
+  Comment: 업적_엘다르 중심지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 25830
+  Name: Achievement_Adventure_MonsterKill_Eldar_Shadowbloom_01
+  Comment: 업적_엘다르 그늘지대 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14086
+  Name: Achievement_Adventure_MonsterKill_West_Castia_01
+  Comment: 업적_카스티아 서부 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 16333
+  Name: Achievement_Adventure_MonsterKill_East_Castia_01
+  Comment: 업적_카스티아 동부 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 27558
+  Name: Achievement_Adventure_MonsterKill_Daily_Dun_Ruined_Castle_01
+  Comment: 업적_무법 성채 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3780
+  Name: Achievement_Adventure_MonsterKill_Daily_Dun_Mining_Area_01
+  Comment: 업적_버려진 채굴지 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4264
+  Name: Achievement_Adventure_MonsterKill_Daily_Dun_Undead_Temple_01
+  Comment: 업적_언데드 신전 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 28784
+  Name: Achievement_Adventure_MonsterKill_Bloodshed_01
+  Comment: 업적_블러드쉐드 몬스터 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4239
+  Name: Achievement_Adventure_MonsterKill_Kulika_Undying_01
+  Comment: 업적_구리가라의 불멸지 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17316
+  Name: Achievement_Adventure_MonsterKill_Abrion_Tower_01
+  Comment: 업적_아브리온 탑 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11547
+  Name: Achievement_Adventure_DungeonComplete_Challenge_Dungeon_Polluted_Lake_01
+  Comment: 업적_오염된 호숫가 클리어 횟수
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22556
+  Name: Achievement_Adventure_DungeonComplete_Challenge_Dungeon_Monkey_Playground_01
+  Comment: 업적_원숭이 놀이터 클리어 횟수
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 16588
+  Name: Achievement_Adventure_DungeonComplete_Challenge_Dungeon_Undead_Mine_01
+  Comment: 업적_언데드 광산 클리어 횟수
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24936
+  Name: Achievement_Adventure_PlayerKill_PlayerKill_01
+  Comment: 업적_플레이어 처치
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2531
+  Name: Achievement_Adventure_PlayerDead_PlayerDead_01
+  Comment: 업적_플레이어 처치당함
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 26391
+  Name: Achievement_Adventure_Join_BattleGround_01
+  Comment: 업적_하이리버 전투 참여 횟수
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 30380
+  Name: Achievement_Adventure_UseItem_Gold_01
+  Comment: 업적_골드 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24165
+  Name: Achievement_Adventure_UseItem_Building_Haste_01
+  Comment: 업적_가속 축원 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22218
+  Name: Achievement_Adventure_UseItem_Enchant_Weapon_01
+  Comment: 업적_무기 강화 결정 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17286
+  Name: Achievement_Adventure_UseItem_Enchant_Armor_01
+  Comment: 업적_방어구 강화 결정 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31272
+  Name: Achievement_Adventure_UseItem_Enchant_Accessory_01
+  Comment: 업적_장신구 강화 결정 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 27919
+  Name: Achievement_Adventure_UseItem_SkillEnchant_Common_01
+  Comment: 업적_일반 스킬 강화석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31561
+  Name: Achievement_Adventure_UseItem_SkillEnchant_Uncommon_01
+  Comment: 업적_고급 스킬 강화석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9207
+  Name: Achievement_Adventure_UseItem_SkillEnchant_Rare_01
+  Comment: 업적_희귀 스킬 강화석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 222
+  Name: Achievement_Adventure_UseItem_SkillEnchant_Epic_01
+  Comment: 업적_영웅 스킬 강화석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13117
+  Name: Achievement_Adventure_UseItem_SkillEnchant_Legendary_01
+  Comment: 업적_전설 스킬 강화석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7968
+  Name: Achievement_Adventure_UseItem_BattleRune_01
+  Comment: 업적_전투 / 회복 / 신속의 룬 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 30221
+  Name: Achievement_Adventure_UseItem_GuildResearch_01
+  Comment: 업적_길드 연구 지원 증서 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3071
+  Name: Achievement_Adventure_UseItem_HealingPotion_01
+  Comment: 업적_일반 회복 물약 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21717
+  Name: Achievement_Adventure_UseItem_BattleScroll_01
+  Comment: 업적_돌격 / 방호의 주문서 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 26007
+  Name: Achievement_Adventure_UseItem_Teleport_01
+  Comment: 업적_순간 이동 주문서 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22766
+  Name: Achievement_Adventure_UseItem_Engrave_Weapon_01
+  Comment: 업적_무기 세공석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7494
+  Name: Achievement_Adventure_UseItem_Engrave_Armor_01
+  Comment: 업적_방어구 세공석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19302
+  Name: Achievement_Adventure_UseItem_Engrave_Accessory_01
+  Comment: 업적_장신구 세공석 사용
+  Description: UIAchievement_Adventure
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19544
+  Name: Achievement_Item_CraftItem_Weapon_Uncmmon_01
+  Comment: 업적_고급 무기 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4902
+  Name: Achievement_Item_CraftItem_Weapon_Rare_01
+  Comment: 업적_희귀 무기 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3614
+  Name: Achievement_Item_CraftItem_Weapon_Epic_01
+  Comment: 업적_영웅 무기 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 33391
+  Name: Achievement_Item_CraftItem_Weapon_Legendary_01
+  Comment: 업적_전설 무기 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17295
+  Name: Achievement_Item_CraftItem_Armor_Uncmmon_01
+  Comment: 업적_고급 방어구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9686
+  Name: Achievement_Item_CraftItem_Armor_Rare_01
+  Comment: 업적_희귀 방어구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31526
+  Name: Achievement_Item_CraftItem_Armor_Epic_01
+  Comment: 업적_영웅 방어구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 18196
+  Name: Achievement_Item_CraftItem_Armor_Legendary_01
+  Comment: 업적_전설 방어구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 347
+  Name: Achievement_Item_CraftItem_Accessory_Uncmmon_01
+  Comment: 업적_고급 장신구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 16273
+  Name: Achievement_Item_CraftItem_Accessory_Rare_01
+  Comment: 업적_희귀 장신구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 14803
+  Name: Achievement_Item_CraftItem_Accessory_Epic_01
+  Comment: 업적_영웅 장신구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 631
+  Name: Achievement_Item_CraftItem_Accessory_Legendary_01
+  Comment: 업적_전설 장신구 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 33136
+  Name: Achievement_Item_CraftItem_Material_Growth_01
+  Comment: 업적_성장 재료 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17458
+  Name: Achievement_Item_CraftItem_Material_Craft_01
+  Comment: 업적_제작 재료 제작
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 29277
+  Name: Achievement_Item_Engrave_Weapon_01
+  Comment: 업적_무기 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 33887
+  Name: Achievement_Item_Engrave_Helm_01
+  Comment: 업적_헬멧 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 4104
+  Name: Achievement_Item_Engrave_Suit_01
+  Comment: 업적_상의 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7103
+  Name: Achievement_Item_Engrave_Pants_01
+  Comment: 업적_하의 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19093
+  Name: Achievement_Item_Engrave_Boots_01
+  Comment: 업적_신발 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9847
+  Name: Achievement_Item_Engrave_Gloves_01
+  Comment: 업적_장갑 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 34546
+  Name: Achievement_Item_Engrave_Cape_01
+  Comment: 업적_망토 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23429
+  Name: Achievement_Item_Engrave_Earring_01
+  Comment: 업적_귀걸이 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12092
+  Name: Achievement_Item_Engrave_Necklace_01
+  Comment: 업적_목걸이 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 27173
+  Name: Achievement_Item_Engrave_Ring_01
+  Comment: 업적_반지 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 29697
+  Name: Achievement_Item_Engrave_Belt_01
+  Comment: 업적_벨트 세공 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31664
+  Name: Achievement_Item_Engrave_Weapon_02
+  Comment: 업적_무기 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8587
+  Name: Achievement_Item_Disassemble_Helm_01
+  Comment: 업적_헬멧 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36619
+  Name: Achievement_Item_Disassemble_Suit_01
+  Comment: 업적_상의 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8172
+  Name: Achievement_Item_Disassemble_Pants_01
+  Comment: 업적_하의 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 21204
+  Name: Achievement_Item_Disassemble_Boots_01
+  Comment: 업적_신발 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13876
+  Name: Achievement_Item_Disassemble_Gloves_01
+  Comment: 업적_장갑 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22777
+  Name: Achievement_Item_Disassemble_Cape_01
+  Comment: 업적_망토 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 24587
+  Name: Achievement_Item_Disassemble_Earring_01
+  Comment: 업적_귀걸이 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3707
+  Name: Achievement_Item_Disassemble_Necklace_01
+  Comment: 업적_목걸이 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 32060
+  Name: Achievement_Item_Disassemble_Ring_01
+  Comment: 업적_반지 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 33571
+  Name: Achievement_Item_Disassemble_Belt_01
+  Comment: 업적_벨트 분해 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8240
+  Name: Achievement_Item_Merge_PolymorphCard_01
+  Comment: 업적_초월 합성 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36167
+  Name: Achievement_Item_Merge_WeaponPolymorph_01
+  Comment: 업적_무기외형 합성 횟수
+  Description: UIAchievement_Equipment
+  Type: Achievement
+  OwnerBound: Account
+- Id: 37657
+  Name: Achievement_Normal_Attend_Guild_01
+  Comment: 업적_길드 출석
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1385
+  Name: Achievement_Normal_CompleteQuest_Daily_01
+  Comment: 업적_일일 의뢰 완료
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31086
+  Name: Achievement_Normal_CompleteQuest_Weekly_01
+  Comment: 업적_주간 의뢰 완료
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 3859
+  Name: Achievement_Growth_Combination_Varitan_01
+  Comment: 업적_바리탄 조합식 완성
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31551
+  Name: Achievement_Growth_Combination_Eldar_01
+  Comment: 업적_엘다르 조합식 완성
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9570
+  Name: Achievement_Growth_Combination_Castia_01
+  Comment: 업적_카스티아 조합식 완성
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11645
+  Name: Achievement_Normal_Harvest_Gold_01
+  Comment: 업적_성소 수확_황금
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10738
+  Name: Achievement_Normal_Harvest_Polymorph_01
+  Comment: 업적_성소 수확_초월
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22845
+  Name: Achievement_Normal_Harvest_WeaponPolymorph_01
+  Comment: 업적_성소 수확_외형
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 22635
+  Name: Achievement_Normal_Harvest_Awakening_01
+  Comment: 업적_성소 수확_각성
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10590
+  Name: Achievement_Normal_Harvest_BuffItem_01
+  Comment: 업적_성소 수확_소모품
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 28818
+  Name: Achievement_Normal_Harvest_DungeonItem_01
+  Comment: 업적_성소 수확_시간
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 1281
+  Name: Achievement_Adventure_Login_Day
+  Comment: 업적_게임 접속 (1)
+  Description: UIAchievement_Adventure
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11365
+  Name: Achievement_Growth_Get_Level
+  Comment: 업적_레벨 달성 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36414
+  Name: Achievement_Growth_Get_CombatPoint
+  Comment: 업적_전투력 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 9829
+  Name: Achievement_Item_Enchant_Weapon
+  Comment: 업적_무기 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 30814
+  Name: Achievement_Item_Enchant_Helm
+  Comment: 업적_헬멧 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11936
+  Name: Achievement_Item_Enchant_Suit
+  Comment: 업적_상의 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 17496
+  Name: Achievement_Item_Enchant_Pants
+  Comment: 업적_하의 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 30573
+  Name: Achievement_Item_Enchant_Boots
+  Comment: 업적_신발 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11150
+  Name: Achievement_Item_Enchant_Gloves
+  Comment: 업적_장갑 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15922
+  Name: Achievement_Item_Enchant_Cape
+  Comment: 업적_망토 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 35780
+  Name: Achievement_Item_Enchant_Earring
+  Comment: 업적_귀걸이 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31538
+  Name: Achievement_Item_Enchant_Necklace
+  Comment: 업적_목걸이 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6136
+  Name: Achievement_Item_Enchant_Ring
+  Comment: 업적_반지 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 12143
+  Name: Achievement_Item_Enchant_Belt
+  Comment: 업적_벨트 강화 (1)
+  Description: UIAchievement_Equipment
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36601
+  Name: Achievement_Growth_Get_Skill_G1_01
+  Comment: 업적_일반 스킬 획득
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 37064
+  Name: Achievement_Growth_Get_Skill_G2_01
+  Comment: 업적_고급 스킬 획득
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 19439
+  Name: Achievement_Growth_Get_Skill_G3_01
+  Comment: 업적_희귀 스킬 획득
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6168
+  Name: Achievement_Growth_Get_Skill_G4_01
+  Comment: 업적_영웅 스킬 획득
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 39480
+  Name: Achievement_Growth_Get_Skill_G5_01
+  Comment: 업적_전설 스킬 획득
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 8261
+  Name: Achievement_Normal_Join_Guild_01
+  Comment: 업적_길드 가입 또는 창설
+  Description: UIAchievement_Normal
+  Type: Achievement
+  OwnerBound: Account
+- Id: 34340
+  Name: Achievement_Growth_Unlock_Varitan_01
+  Comment: 업적_바리탄 봉인 해제
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 23004
+  Name: Achievement_Growth_Unlock_Eldar_01
+  Comment: 업적_엘다르 봉인 해제
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 2592
+  Name: Achievement_Growth_Unlock_Castia_01
+  Comment: 업적_카스티아 봉인 해제
+  Description: UIAchievement_Growth
+  Type: Achievement
+  OwnerBound: Account
+- Id: 11314
+  Name: Achievement_Growth_BuildingLevel_Main
+  Comment: 업적_성좌 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36988
+  Name: Achievement_Growth_BuildingLevel_Gold
+  Comment: 업적_시간의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 15777
+  Name: Achievement_Growth_BuildingLevel_Exp
+  Comment: 업적_자각의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 37548
+  Name: Achievement_Growth_BuildingLevel_Polymorph
+  Comment: 업적_각성의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36942
+  Name: Achievement_Growth_BuildingLevel_WeaponPolymorph
+  Comment: 업적_경험의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 10222
+  Name: Achievement_Growth_BuildingLevel_Awakening
+  Comment: 업적_초월의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 39108
+  Name: Achievement_Growth_BuildingLevel_Awareness
+  Comment: 업적_외형의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 7193
+  Name: Achievement_Growth_BuildingLevel_BuffItem
+  Comment: 업적_신속의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 27851
+  Name: Achievement_Growth_BuildingLevel_DungeonItem
+  Comment: 업적_황금의 성물 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 13595
+  Name: Achievement_Growth_BuildingLevel_BM01
+  Comment: 업적_질서의 성위 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 40573
+  Name: Achievement_Growth_BuildingLevel_BM02
+  Comment: 업적_심판의 성위 레벨 (1)
+  Description: UIAchievement_Growth
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 32975
+  Name: Achievement_Normal_Complete_MainQuest_01
+  Comment: 업적_1장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 20307
+  Name: Achievement_Normal_Complete_MainQuest_02
+  Comment: 업적_2장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 31030
+  Name: Achievement_Normal_Complete_MainQuest_03
+  Comment: 업적_3장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 39718
+  Name: Achievement_Normal_Complete_MainQuest_04
+  Comment: 업적_4장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 29330
+  Name: Achievement_Normal_Complete_MainQuest_05
+  Comment: 업적_5장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 6467
+  Name: Achievement_Normal_Complete_MainQuest_06
+  Comment: 업적_6장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 202
+  Name: Achievement_Normal_Complete_MainQuest_07
+  Comment: 업적_7장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account
+- Id: 36624
+  Name: Achievement_Normal_Complete_MainQuest_08
+  Comment: 업적_8장 완료
+  Description: UIAchievement_Normal
+  ChainComplete: true
+  Type: Achievement
+  OwnerBound: Account

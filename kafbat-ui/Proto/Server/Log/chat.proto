@@ -1,0 +1,45 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "ChatLogServiceProto";
+
+message CreateChatChannel {
+  string channel_name = 1;
+  int64 chat_channel_type_id = 2;
+}
+
+message DeleteChatChannel {
+  string channel_name = 1;
+  int64 chat_channel_type_id = 2;
+}
+
+message JoinChatChannel {
+  string channel_name = 1;
+}
+
+message LeaveChatChannel {
+  string channel_name = 1;
+}
+
+message SendChat {
+  string channel_name = 1;
+  int64 chat_channel_type_id = 2;
+  int64 chat_type_id = 3;
+  string message = 4;
+}
+
+message SendDirectChat {
+  string target_character_uuid = 1;
+  int64 chat_type_id = 2;
+  string message = 3;
+}
+
+message BlockChat {
+  string target_character_uuid = 1;
+}
+
+message UnblockChat {
+  string target_character_uuid = 1;
+}

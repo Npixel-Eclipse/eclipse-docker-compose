@@ -1,0 +1,439 @@
+syntax = "proto3";
+package log;
+import "Common/item_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "ItemLogServiceProto";
+
+enum EnchantResult {
+  ENCHANT_SUCCESS = 0;
+  ENCHANT_FAIL = 1;
+  ENCHANT_VAPORIZE = 2;
+}
+
+enum RecipeResultType {
+  RECIPE_SUCCESS = 0;
+  RECIPE_GREAT_SUCCESS = 1;
+  RECIPE_FAILURE = 2;
+}
+
+enum SortMethod {
+  DEFAULT = 0;
+  GRADE = 1;
+  DELETE_TIME = 2;
+  ACQUIRE_TIME = 3;
+}
+
+message Property {
+  string key = 1;
+  string value = 2;
+  int64 grade_id = 3;
+  bool locked = 4;
+  int64 symbol_id = 5;
+  int64 group_id = 6;
+  string category = 7;
+}
+
+message CreateItem {
+  string item_uuid = 1;
+  int64 item_id = 2;
+  int64 amount = 3;
+  int64 inventory_id = 4;
+  repeated Property properties = 5;
+  string delete_time = 6;
+  string expire_time = 7;
+  common.Reason reason = 8;
+}
+
+message UpdateItem {
+  string item_uuid = 1;
+  int64 item_id = 2;
+  int64 amount_before = 3;
+  int64 amount = 4;
+  int64 inventory_id_before = 5;
+  int64 inventory_id = 6;
+  repeated Property deleted_properties = 7;
+  repeated Property created_properties = 8;
+  common.Reason reason = 9;
+}
+
+message DeleteItem {
+  string item_uuid = 1;
+  int64 item_id = 2;
+  int64 inventory_id = 3;
+  common.Reason reason = 4;
+  int64 amount_before = 5;
+  int64 amount = 6;
+}
+
+message SortInventory {
+  int64 inventory_id = 1;
+  SortMethod sort_method = 2;
+}
+
+message ExpandInventory {
+  int64 inventory_id = 1;
+  int64 expand_level_before = 2;
+  int64 expand_level = 3;
+}
+
+message EquipItem {
+  int64 equip_slot_id = 1;
+  string from_item_uuid = 2;
+  int64 from_item_id = 3;
+  string to_item_uuid = 4;
+  int64 to_item_id = 5;
+}
+
+message EnchantItem {
+  message Material {
+    int64 item_id = 1;
+    int64 amount = 2;
+  }
+  int64 enchant_id = 1;
+  int64 material_item_id = 2;
+  repeated Material consumed_materials = 3;
+  string target_item_uuid = 4;
+  int64 target_item_id = 5;
+  string target_property = 6;
+  repeated int64 enchant_sequence = 7;
+  EnchantResult enchant_result = 8;
+}
+
+message EngraveItem {
+  message Material {
+    int64 item_id = 1;
+    int64 amount = 2;
+  }
+  int64 engrave_id = 1;
+  int64 material_item_id = 2;
+  repeated Material consumed_materials = 3;
+  int64 mastery_essence_id = 4;
+  string target_item_uuid = 5;
+  string property_category = 6;
+  repeated Property changed_properties = 7;
+}
+
+message LockItem {
+  int64 item_id = 1;
+  string item_uuid = 2;
+  bool locked = 3;
+}
+
+message LockProperty {
+  int64 item_id = 1;
+  string item_uuid = 2;
+  string key = 3;
+  bool locked = 4;
+}
+
+message ImposeDeathPenalty {
+  message BrokenItem {
+    string restoration_item_uuid = 1;
+    int64 restoration_item_id = 2;
+    string target_item_uuid = 3;
+    int64 target_item_id = 4;
+    int64 gold_cost = 5;
+    int64 diamond_cost = 6;
+  }
+
+  message LostExperience {
+    string restoration_item_uuid = 1;
+    int64 restoration_item_id = 2;
+    int64 experience = 3;
+    int64 gold_cost = 4;
+    int64 diamond_cost = 5;
+  }
+
+  repeated BrokenItem broken_items = 1;
+  repeated BrokenItem evicted_broken_items = 2;
+  repeated LostExperience lost_experiences = 3;
+  repeated LostExperience evicted_lost_experiences = 4;
+}
+
+message RestoreDeathPenaltyItem {
+  message BrokenItem {
+    string restoration_item_uuid = 1;
+    int64 restoration_item_id = 2;
+    string target_item_uuid = 3;
+    int64 target_item_id = 4;
+
+    bool free_restoration = 5;
+    int64 free_restoration_item_cost = 6;
+    int64 gold_cost = 7;
+    int64 diamond_cost = 8;
+  }
+
+  repeated BrokenItem broken_items = 1;
+  int64 free_restoration_count_before = 2;
+  int64 free_restoration_count = 3;
+  int64 gold_restoration_count_before = 4;
+  int64 gold_restoration_count = 5;
+}
+
+message RestoreDeathPenaltyExperience {
+  message LostExperience {
+    string restoration_item_uuid = 1;
+    int64 restoration_item_id = 2;
+    int64 experience = 3;
+
+    bool free_restoration = 4;
+    int64 free_restoration_item_cost = 5;
+    int64 gold_cost = 6;
+    int64 diamond_cost = 7;
+  }
+
+  repeated LostExperience lost_experiences = 1;
+  int64 free_restoration_count_before = 2;
+  int64 free_restoration_count = 3;
+  int64 gold_restoration_count_before = 4;
+  int64 gold_restoration_count = 5;
+}
+
+message BuyItem {
+  int64 item_merchant_id = 1;
+  int64 item_merchandise_id = 2;
+  int64 item_id = 3;
+  int64 count = 4;
+  int64 purchased_count_before = 5;
+  int64 purchased_count = 6;
+  int64 cost_item_id = 7;
+  int64 cost = 8;
+}
+
+message SellItem {
+  int64 item_merchant_id = 1;
+  int64 item_merchandise_id = 2;
+  int64 item_id = 3;
+  string item_uuid = 4;
+  int64 amount = 5;
+  int64 cost_item_id = 6;
+  int64 cost = 7;
+}
+
+message BuyBmShopProduct {
+  message ItemCost {
+    string item_name = 1;
+    int64 amount = 2;
+  }
+
+  message CurrencyCost {
+    string currency = 1;
+    string price = 2; // 소수점 표기가 있으므로 string 사용.
+  }
+
+  int64 bm_shop_product_id = 1;
+  int64 amount = 2;
+  int64 limit_before = 3;
+  int64 limit = 4;
+  int64 max_limit = 5;
+  repeated ItemCost item_cost = 6;
+  repeated CurrencyCost currency_cost = 7;
+  string tid = 8;
+  string product_uuid = 9;
+}
+
+message TakeBmShopProduct {
+  int64 bm_shop_product_id = 1;
+  string bm_shop_product_uuid = 2;
+  int64 amount = 3;
+}
+
+message GetRecipe {
+  message Output {
+    int64 id = 1;
+    RecipeResultType result_type = 2;
+    int64 item_id = 3;
+    int64 amount = 4;
+    repeated Property properties = 5;
+    int64 re_roll_item_id = 6;
+  }
+  message Outputs {
+    repeated Output output = 1;
+  }
+
+  int64 material_item_id = 1;
+  string material_item_uuid = 2;
+  repeated int64 selected_output_ids = 3;
+  int64 recipe_output_id = 4;
+  repeated Outputs outputs = 5;
+  int64 repeat = 6;
+  int64 requested_repeat = 7;
+}
+
+message ExecuteRecipe {
+  message Output {
+    int64 id = 1;
+    RecipeResultType result_type = 2;
+    int64 item_id = 3;
+    int64 amount = 4;
+    repeated Property properties = 5;
+    int64 re_roll_item_id = 6;
+  }
+
+  int64 recipe_input_id = 1;
+  int64 recipe_output_id = 2;
+  repeated Output outputs = 3;
+  int64 repeat = 4;
+}
+
+message CreateReRoleRecipe {
+  message Output {
+    int64 id = 1;
+    int64 item_id = 2;
+    int64 amount = 3;
+  }
+  int64 re_role_item_id = 1;
+  string re_role_item_uuid = 2;
+  int64 recipe_output_id = 3;
+  Output output = 4;
+}
+
+message ProceedReRoleRecipe {
+  message Output {
+    int64 id = 1;
+    int64 item_id = 2;
+    int64 amount = 3;
+  }
+  string re_role_item_uuid = 1;
+  int64 previous_recipe_output_id = 2;
+  int64 next_recipe_output_id = 3;
+  Output previous_output = 4;
+  Output next_output = 5;
+}
+
+message ConfirmReRoleRecipe {
+  message Output {
+    int64 id = 1;
+    int64 item_id = 2;
+    int64 amount = 3;
+  }
+  string re_role_item_uuid = 1;
+  int64 recipe_output_id = 2;
+  Output output = 3;
+}
+
+message DisassembleItem {
+  int64 item_id = 1;
+  string item_uuid = 2;
+  int64 amount = 3;
+  int64 recipe_output_id = 4;
+}
+
+message RegisterItemCollection {
+  int64 item_collection_point_id = 1;
+  int64 registration_id = 2;
+  int64 amount = 3;
+  int64 replacement_id = 4;
+}
+
+message SavePreset {
+  message Item {
+    int64 item_id = 1;
+    string item_uuid = 2;
+    int64 equip_slot_id = 3;
+  }
+  int64 preset_num = 1;
+  repeated Item items = 2;
+}
+
+message ApplyPreset {
+  message Item {
+    int64 item_id = 1;
+    string item_uuid = 2;
+    int64 equip_slot_id = 3;
+  }
+  int64 preset_num = 1;
+  repeated Item items = 2;
+}
+
+message ExpandPreset {
+  int64 count_before = 1;
+  int64 count = 2;
+  int64 slot_count_item_id = 3;
+  string slot_count_item_uuid = 4;
+}
+
+message UpdateMasteryExperience {
+  int64 item_category_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 amount_before = 4;
+  int64 amount = 5;
+}
+
+message UpdateMasteryLevel {
+  int64 item_category_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 level_before = 4;
+  int64 level = 5;
+}
+
+message ActivateMasteryEssence {
+  int64 item_category_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 mastery_essence_id = 4;
+}
+
+message ResetMasteryEssence {
+  int64 item_category_id = 1;
+  int64 item_id = 2;
+  string item_uuid = 3;
+  int64 mastery_essence_id = 4;
+}
+
+message TransferMasteryEssence {
+  int64 material_item_id = 1;
+  string material_item_uuid = 2;
+  int64 from_item_category_id = 3;
+  int64 from_experience_before = 4;
+  int64 from_experience = 5;
+  int64 to_item_category_id = 6;
+  int64 to_experience_before = 7;
+  int64 to_experience = 8;
+}
+
+message FusionMasteryEssence {
+  int64 mastery_essence_fusion_id = 1;
+  int64 enchant_level = 2;
+}
+
+message UnFusionMasteryEssence {
+  int64 mastery_essence_fusion_id = 1;
+}
+
+message AddCombinationCount {
+  int64 combination_item_id = 1;
+  string combination_item_uuid = 2;
+  int64 combination_add_count = 3;
+  int64 material_item_id = 4;
+  string material_item_uuid = 5;
+  int64 material_item_amount = 6;
+  int64 cost_base_item_id = 7;
+  int64 cost_item_amount = 8;
+}
+
+message ResetCombination {
+  int64 combination_item_id = 1;
+  string combination_item_uuid = 2;
+  int64 combination_engrave_id = 3;
+  int64 material_item_id = 4;
+  string material_item_uuid = 5;
+  int64 material_item_amount = 6;
+  int64 cost_base_item_id = 7;
+  int64 cost_item_amount = 8;
+}
+
+message UnlockCombination {
+  int64 combination_engrave_id = 1;
+  int64 combination_item_id = 2;
+  string combination_item_uuid = 3;
+  int64 material_item_id = 4;
+  string material_item_uuid = 5;
+  int64 material_item_amount = 6;
+  int64 cost_base_item_id = 7;
+  int64 cost_item_amount = 8;
+}

@@ -1,0 +1,13 @@
+- Id: 1
+  Name: EnchantSkill
+  EnoughAmountTextStyleKey: ValueEnough
+  NotEnoughAmountTextStyleKey: ValueNotEnough
+  KeepMaterialAchieveMaxLevel: Uncommon
+  DescriptionInfos:
+    - Type: ChoiceEnchantRelatedItem
+      Description: UIWord_SystemMsg_ChoiceEnchantRelatedSkill
+    - Type: NotEnoughCurrency
+      Description: UIWord_SystemMsg_NoCurrency
+    - Type: NotEnoughMaterialItem
+      Description: UIWord_SystemMsg_NoMaterialItem
+  EnchantFilter: SkillGrade

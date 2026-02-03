@@ -1,0 +1,77 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    ChatMacroMaxCount:
+      type: integer
+    DefaultMacro:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Text:
+            type: string
+    InputHintDescription:
+      type: string
+      ref: description
+    ChatTimeFormatDescription:
+      type: string
+      ref: description
+    ChatDaysTimeFormatDescription:
+      type: string
+      ref: description
+    ChatUserNameWithServerFormatDescription:
+      type: string
+      ref: description    
+    ChatTypeInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ChatType:
+            type: string
+            ref: chat_type
+          InputSenderUserNameHintDescription:
+            type: string
+            ref: description
+          SenderUserNameFormatDescription:
+            type: string
+            ref: description
+    EmojiInfo:
+      type: object
+      additionalProperties: false
+      properties:
+        DataTableAsset:
+          type: string
+        RowNameCondition:
+          type: string
+        ChatEmojiFormatDescription:
+          type: string
+          ref: description
+        ChatEmojiPrefix:
+          type: string
+    ItemInfo:
+      type: object
+      additionalProperties: false
+      properties:
+        ChatLinkedDisplayItemFormatDescription:
+          type: string
+          ref: description
+        ChatLinkedItemFormatDescription:
+          type: string
+          ref: description
+    UpdateChatDateTimeInterval: #업데이트 데이트타임 주기(초단위)
+      type: integer
+      default: 0
+  required:
+    - Id
+    - Name

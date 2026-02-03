@@ -1,0 +1,76 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Activate:
+      type: boolean
+    UIMainTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Comment:
+            type: string
+          Type:
+            type: string
+            enum:
+              - Friend
+              - Enemy
+              - Block
+          ValidDataType:
+            type: string
+            enum:
+              - UuID
+              - Name
+          TabDescription:
+            type: string
+            ref: description
+          UISubTab:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                Comment:
+                  type: string
+                SubTabDescription:
+                  type: string
+                  ref: description
+                SubTabType:
+                  type: string
+                  enum:
+                    - Default
+                    - ReceiveRequest
+                    - Request
+                MaxCount:
+                  type: string
+                  ref: constants
+          SearchTab:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                SearchTabType:
+                  type: string
+                  enum:
+                    - All
+                    - GuildMember
+                SearchTabDescription:
+                  type: string
+                  ref: description
+                SearchTabHintText:
+                  type: string
+                  ref: description
+                SearchTabEmptyText:
+                  type: string
+                  ref: description
+  required:
+    - Id
+    - UIMainTab

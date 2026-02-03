@@ -1,0 +1,128 @@
+- Id: 101
+  Name: Equip_Armor_G4_T11_Type1_S1
+  ItemSetNameDesc: Equip_Armor_G4_T11_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 102
+  Name: Equip_Armor_G4_T12_Type1_S1
+  ItemSetNameDesc: Equip_Armor_G4_T12_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 92
+  Name: Equip_Armor_G5_T07_Type1_S1
+  ItemSetNameDesc: Equip_Armor_G5_T07_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 133
+  Name: Equip_Armor_G5_T08_Type1_S1
+  ItemSetNameDesc: Equip_Armor_G5_T08_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 486
+  Name: Equip_Accessory_G4_T07_Type1_S1
+  ItemSetNameDesc: Equip_Accessory_G4_T07_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 136
+  Name: Equip_Accessory_G4_T08_Type1_S1
+  ItemSetNameDesc: Equip_Accessory_G4_T08_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 404
+  Name: Equip_Accessory_G5_T05_Type1_S1
+  ItemSetNameDesc: Equip_Accessory_G5_T05_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 743
+  Name: Equip_Accessory_G5_T06_Type1_S1
+  ItemSetNameDesc: Equip_Accessory_G5_T06_Type1_S1_Desc
+  Comment: 세트 장비
+- Id: 442
+  Name: Equip_Armor_G4_T11_Type2_S2
+  ItemSetNameDesc: Equip_Armor_G4_T11_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 626
+  Name: Equip_Armor_G4_T12_Type2_S2
+  ItemSetNameDesc: Equip_Armor_G4_T12_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 741
+  Name: Equip_Armor_G5_T07_Type2_S2
+  ItemSetNameDesc: Equip_Armor_G5_T07_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 524
+  Name: Equip_Armor_G5_T08_Type2_S2
+  ItemSetNameDesc: Equip_Armor_G5_T08_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 190
+  Name: Equip_Accessory_G4_T07_Type2_S2
+  ItemSetNameDesc: Equip_Accessory_G4_T07_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 19
+  Name: Equip_Accessory_G4_T08_Type2_S2
+  ItemSetNameDesc: Equip_Accessory_G4_T08_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 929
+  Name: Equip_Accessory_G5_T05_Type2_S2
+  ItemSetNameDesc: Equip_Accessory_G5_T05_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 1328
+  Name: Equip_Accessory_G5_T06_Type2_S2
+  ItemSetNameDesc: Equip_Accessory_G5_T06_Type2_S2_Desc
+  Comment: 세트 장비
+- Id: 1072
+  Name: Equip_Armor_G4_T11_Type3_S3
+  ItemSetNameDesc: Equip_Armor_G4_T11_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 1273
+  Name: Equip_Armor_G4_T12_Type3_S3
+  ItemSetNameDesc: Equip_Armor_G4_T12_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 1010
+  Name: Equip_Armor_G5_T07_Type3_S3
+  ItemSetNameDesc: Equip_Armor_G5_T07_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 1148
+  Name: Equip_Armor_G5_T08_Type3_S3
+  ItemSetNameDesc: Equip_Armor_G5_T08_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 617
+  Name: Equip_Accessory_G4_T07_Type3_S3
+  ItemSetNameDesc: Equip_Accessory_G4_T07_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 2178
+  Name: Equip_Accessory_G4_T08_Type3_S3
+  ItemSetNameDesc: Equip_Accessory_G4_T08_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 1011
+  Name: Equip_Accessory_G5_T05_Type3_S3
+  ItemSetNameDesc: Equip_Accessory_G5_T05_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 1232
+  Name: Equip_Accessory_G5_T06_Type3_S3
+  ItemSetNameDesc: Equip_Accessory_G5_T06_Type3_S3_Desc
+  Comment: 세트 장비
+- Id: 657
+  Name: Equip_Armor_G4_T11_Type2_S4
+  ItemSetNameDesc: Equip_Armor_G4_T11_Type2_S4_Desc
+  Comment: 세트 장비
+- Id: 705
+  Name: Equip_Armor_G4_T12_Type2_S4
+  ItemSetNameDesc: Equip_Armor_G4_T12_Type2_S4_Desc
+  Comment: 세트 장비
+- Id: 235
+  Name: Equip_Armor_G5_T07_Type2_S4
+  ItemSetNameDesc: Equip_Armor_G5_T07_Type2_S4_Desc
+  Comment: 세트 장비
+- Id: 1708
+  Name: Equip_Armor_G5_T08_Type2_S4
+  ItemSetNameDesc: Equip_Armor_G5_T08_Type2_S4_Desc
+  Comment: 세트 장비
+- Id: 262
+  Name: Equip_Accessory_G4_T07_Type4_S4
+  ItemSetNameDesc: Equip_Accessory_G4_T07_Type4_S4_Desc
+  Comment: 세트 장비
+- Id: 1541
+  Name: Equip_Accessory_G4_T08_Type4_S4
+  ItemSetNameDesc: Equip_Accessory_G4_T08_Type4_S4_Desc
+  Comment: 세트 장비
+- Id: 2995
+  Name: Equip_Accessory_G5_T05_Type4_S4
+  ItemSetNameDesc: Equip_Accessory_G5_T05_Type4_S4_Desc
+  Comment: 세트 장비
+- Id: 1324
+  Name: Equip_Accessory_G5_T06_Type4_S4
+  ItemSetNameDesc: Equip_Accessory_G5_T06_Type4_S4_Desc
+  Comment: 세트 장비

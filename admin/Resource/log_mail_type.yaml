@@ -1,0 +1,9 @@
+- Name: CHARACTER
+  Value: 0
+  Description: 특정 캐릭터만 받을 수 있음
+- Name: SERVER
+  Value: 1
+  Description: 특정 서버 내 모든 캐릭터 중 한 번만 받을 수 있음
+- Name: ACCOUNT
+  Value: 2
+  Description: 계정 내 모든 캐릭터 중 전체 서버에서 한 캐릭터만 받을 수 있음

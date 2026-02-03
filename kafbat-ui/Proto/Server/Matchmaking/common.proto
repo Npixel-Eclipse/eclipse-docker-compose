@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.matchmaking.common";
+option java_outer_classname = "ServerMatchmakingEnumProto";
+
+// .을 넣고 싶지만 rust tonic에서 지원을 안해줌.
+package matchmaking_common;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+enum TicketReason {
+  MATCHED = 0; // 매칭됨
+  USER_CANCEL = 1; // 유저가 매칭 취소함
+  PARTY_CHANGED = 2; // 파티 상태가 변경됨
+  IN_PARTY = 3; // 파티에 가입한 상태
+  NOT_IN_PARTY = 4; // 파티에 가입하지 않은 상태
+  IN_BLOCK_LAND = 5; // 매칭 불허 지역에 있음
+  PC_DEAD = 6; // 캐릭터가 사망함
+  OFFLINE = 7; // 접속 해제
+  MATCH_CLOSED = 8; // 매칭 시간 경과
+
+  UNKNOWN = 10000;
+  INVALID_MATCH = 10001;
+}

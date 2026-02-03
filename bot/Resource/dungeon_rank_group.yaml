@@ -1,0 +1,60 @@
+- Id: 1
+  Comment: 오염된 호숫가
+  Dungeon: Challenge_Dungeon_Polluted_Lake
+  DungeonName: Dungeon_Name_Challenge_01
+  RankReward:
+    - Rank: 1
+      Item: CurrencyGold
+      Amount: 100000
+    - Rank: 2
+      Item: CurrencyGold
+      Amount: 80000
+    - Rank: 3
+      Item: CurrencyGold
+      Amount: 70000
+    - Rank: 4
+      Item: CurrencyGold
+      Amount: 60000
+    - Rank: 5
+      Item: CurrencyGold
+      Amount: 50000
+- Id: 67
+  Comment: 원숭이 놀이터
+  Dungeon: Challenge_Dungeon_Monkey_Playground
+  DungeonName: Dungeon_Name_Challenge_02
+  RankReward:
+    - Rank: 1
+      Item: CurrencyGold
+      Amount: 150000
+    - Rank: 2
+      Item: CurrencyGold
+      Amount: 120000
+    - Rank: 3
+      Item: CurrencyGold
+      Amount: 105000
+    - Rank: 4
+      Item: CurrencyGold
+      Amount: 90000
+    - Rank: 5
+      Item: CurrencyGold
+      Amount: 75000
+- Id: 150
+  Comment: 언데드 광산
+  Dungeon: Challenge_Dungeon_Undead_Mine
+  DungeonName: Dungeon_Name_Challenge_03
+  RankReward:
+    - Rank: 1
+      Item: CurrencyGold
+      Amount: 250000
+    - Rank: 2
+      Item: CurrencyGold
+      Amount: 200000
+    - Rank: 3
+      Item: CurrencyGold
+      Amount: 175000
+    - Rank: 4
+      Item: CurrencyGold
+      Amount: 150000
+    - Rank: 5
+      Item: CurrencyGold
+      Amount: 125000

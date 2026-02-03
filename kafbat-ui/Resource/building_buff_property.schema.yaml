@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - BuffType
+    - BuffProperty
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9]*$
+    BuffType:
+      type: string
+      enum:
+        - HarvestAcceleration  # 수확 가속
+        - ProductAmount        # 생산량 증가
+        - ProductionTime       # 생산시간 감소
+        - ConstructionTime     # 건설시간 감소
+    BuffProperty:
+      type: string
+      ref: property
+    BuildingTarget:
+      type: object
+      additionalProperties: false
+      properties:
+        Type:
+          type: string
+          enum:
+            - ALL     # 모든 건물
+            - SINGLE  # 특정 건물
+        Building:
+          type: string
+          ref: building  # Type이 SINGLE일 때 사용

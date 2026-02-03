@@ -1,0 +1,19 @@
+syntax = "proto3";
+package process;
+
+import "Common/server_time.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.process";
+option java_outer_classname = "ProcessServiceProto";
+
+message ShutdownEvent {
+  common.AtTime shutdown_at = 2;
+  common.AmountTime shutdown_duration = 3;
+
+  google.protobuf.Timestamp shutdown_at_proto = 4;
+  google.protobuf.Duration shutdown_duration_proto = 5;
+  string msg_key = 100;
+}

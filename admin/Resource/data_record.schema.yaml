@@ -1,0 +1,38 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Classes:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ClassName:
+            type: string
+          RecordAllData:
+            type: boolean
+            default: false
+          Datas:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                DataName:
+                  type: string
+                Order:
+                  type: integer
+                  default: 0
+  required:
+    - Id
+    - Name
+    - Classes
+    

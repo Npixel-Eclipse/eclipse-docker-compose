@@ -1,0 +1,75 @@
+- Id: 88
+  Name: Season_1
+  Comment: (CCB) 시즌 1
+  Season: 1
+  ReleaseTime: 2025/07/09/23:00:00
+  StartTime: 2025/07/19/00:30:00
+  BidDuration: 1410
+  SettlementDuration: 30
+  BaseToken: Item_Grown_Huntingzone_G1_T1_01
+  TokenCurrency: CurrencyHuntingZoneToken
+  TokenAmount: 24000000
+  TokenDistribution:
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 10
+    - DistributionRate: 10
+- Id: 100
+  Name: Season_2
+  Comment: (CCB) 시즌 2
+  Season: 2
+  ReleaseTime: 2025/08/02/00:30:00
+  StartTime: 2025/08/02/00:30:00
+  BidDuration: 1410
+  SettlementDuration: 30
+  BaseToken: Item_Grown_Huntingzone_G1_T1_01_Test_1
+  TokenCurrency: CurrencyHuntingZoneToken_Test_1
+  TokenAmount: 30000000
+  TokenDistribution:
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 6
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+- Id: 177
+  Name: Season_3
+  Comment: (CCB) 시즌 3
+  Season: 3
+  ReleaseTime: 2025/08/19/00:30:00
+  StartTime: 2025/08/19/00:30:00
+  BidDuration: 1410
+  SettlementDuration: 30
+  BaseToken: Item_Grown_Huntingzone_G1_T1_01_Test_2
+  TokenCurrency: CurrencyHuntingZoneToken_Test_2
+  TokenAmount: 24000000
+  TokenDistribution:
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 8
+    - DistributionRate: 10
+    - DistributionRate: 10

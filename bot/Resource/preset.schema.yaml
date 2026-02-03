@@ -1,0 +1,68 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+      enum:
+        - ItemPreset
+        - MasteryPreset
+        - SkillPreset
+        - PotentialPreset
+        - MasterPreset
+    Comment:
+      type: string
+    SlotItem:
+      type: string
+      ref: item
+    DefaultSlotCount:
+      type: integer
+      minimum: 1
+    MaxSlotCount:
+      type: integer
+      minimum: 1
+    SlotSetting:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+            pattern: ^[A-Z][A-Za-z0-9_]*$
+          SlotNumber:
+            type: integer
+            minimum: 2
+          Comment:
+            type: string
+          CurrencyItem:
+            type: string
+            ref: item
+          CurrencyAmount:
+            type: integer
+      required:
+        - Name
+        - SlotNumber
+        - CurrencyItem
+        - CurrencyAmount
+    UseSave: # 클라에서 읽는 프로퍼티. 저장 기능이 있는지 구분
+      type: boolean
+      default: true
+    UseApplyCoolTime: # 클라에서 읽는 프로퍼티. 프리셋 변경 쿨타임
+      type: boolean
+      default: false
+    ApplyCoolTime:
+      type: integer
+  required:
+    - Id
+    - Name
+    - SlotItem
+    - DefaultSlotCount
+    - MaxSlotCount
+    - SlotSetting

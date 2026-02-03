@@ -1,0 +1,18 @@
+- Id: 1
+  Name: World
+  Comment: 전체
+  AllowedChatTypes:
+    - System
+    - World
+- Id: 2
+  Name: Party
+  Comment: 파티
+  AllowedChatTypes:
+    - System
+    - Party
+- Id: 3
+  Name: Guild
+  Comment: 길드
+  AllowedChatTypes:
+    - System
+    - Guild

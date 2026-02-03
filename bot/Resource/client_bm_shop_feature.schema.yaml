@@ -1,0 +1,110 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    ClientConstants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - BuyableMaxCount #s
+              - BuyableMinCount
+              - NotMeetLevelMessage
+              - ShortageStepUpMessage
+              - NotBuyableStepUpMessage
+              - PrevStepInStorageMessage
+              - ProposalTab
+          Value:
+            type: string
+          IntValue:
+            type: integer
+          DescValue:
+            type: string
+            ref: description
+          CategoryValue:
+            type: string
+            ref: bm_shop_category
+    ShortCutTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Item: 
+            type: string
+            ref: item
+          Category:
+            type: string
+            ref: bm_shop_category
+    BulkInBuyDisabedMessage:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          MessageType: 
+            type: string
+            enum:
+              - NotAllChecked
+              - Shortage
+          Message:
+            type: string
+            ref: description
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - BuyPopup
+          SubGroup:
+            type: string
+            enum:
+              - StepUp
+              - Compare
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+    CompareTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Item
+              - Product
+              - Trade
+          Description:
+            type: string
+            ref: description
+        required:
+          - Group
+          - Description
+  required:
+    - Id
+    - Name

@@ -1,0 +1,15 @@
+- Id: 1
+  Name: Popup
+  Activate: true
+  UIAnimations:
+    - Name: DefaultHideAnimation
+      Value: HideAuto
+  ManagedPopupType:
+    - UIType: SpaceHUD                    # 지역명
+      Unique: true
+    - UIType: LevelUpPopup                # 레벨업
+      Unique: true
+    - UIType: FieldBossAlert              # 어비스 출현
+      AllowFromLock: true
+    - UIType: WorldBossAlert              # 월드 보스 출현
+      AllowFromLock: true

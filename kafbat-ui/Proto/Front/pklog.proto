@@ -1,0 +1,205 @@
+syntax = "proto3";
+package eclipse.client.pklog;
+import "Common/property.proto";
+import "Common/guild_common.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.pklog";
+option java_outer_classname = "PkLogProto";
+
+enum Kda {
+  KILL = 0;
+  DEATH = 1;
+  ASSIST = 2;
+  EMPTY = 3;
+}
+
+enum CheckType {
+  MESSAGE = 0;
+  EMOJI = 1;
+}
+
+message PlayerInfo {
+  string name = 1;
+  optional string guild_name = 2;
+  optional common.GuildMark guild_mark = 3;
+  optional int64 guild_id = 4;
+}
+message PvpMessage{
+  string victory_message = 1;
+  string defeat_message = 2;
+}
+message PvpEmoji{
+  int64 victory_emoji_id = 1;
+  int64 defeat_emoji_id = 2;
+}
+// 길드 적대 요청은 guild.proto HostileProposal, 응답은 ConfirmHostileProposal
+// --- Request ---
+message PkLogRequest {
+  oneof request {
+    List list = 1;
+    Detail detail = 2;
+    Scorn scorn = 3;
+    Trace trace = 4;
+    Wanted wanted = 5;
+    SetPvpMessage setPvpMessage = 6;
+    LoadPvpMessage loadPvpMessage = 7;
+    LoadTrace loadTrace = 8;
+  }
+
+  message List {
+    int64 last_character_pklog_id = 1;
+    FilterType filter_type = 2;
+
+    enum FilterType {
+      ALL = 0;
+      ME = 1;
+      GUILD = 2;
+      WANTED = 3;
+    }
+  }
+  message Detail {
+    bytes id = 1; // record uuid
+  }
+  message Scorn {
+    bytes id = 1; // record uuid
+
+    optional string description = 2;
+    optional int64 emoji = 3;  // 21.11.05 기준 참조할 yaml 없음
+    optional int64 title = 4; // record_pklog_scorn.yaml
+  }
+  message Trace {
+    bytes id = 1; // record uuid
+  }
+  message Wanted {
+    bytes id = 1; // record uuid
+  }
+  message SetPvpMessage{
+    optional PvpMessage pvpMessage = 1;
+    optional PvpEmoji pvpEmoji = 2;
+    CheckType check_type = 3;
+  }
+  message LoadPvpMessage{}
+  message LoadTrace{
+    bytes id = 1; // record uuid
+  }
+}
+
+// --- Reply ---
+message PkLogEvent {
+  message PkLogList {
+    int64 last_character_pklog_id = 1;
+    repeated PkLog records = 2;
+    bool has_next = 3;
+
+    message PkLog {
+      reserved 7;
+
+      bytes id = 1;
+      google.protobuf.Timestamp timestamp = 2;
+      Kda kda_type = 3;
+      PlayerInfo victim = 4;
+      PlayerInfo killer = 5;
+      int32 left_trace = 6; // 남은 추적 횟수
+      Wanted wanted = 9; // 척살령 상태
+      int32 left_scorn = 8; // 남은 멸시 횟수
+
+      enum Wanted {
+        INACTIVE = 0; // 척살령이 내려지지 않음
+        ACTIVE = 1; // 척살령이 내려짐
+        COMPLETED = 2; // 척살령 완료
+      }
+    }
+  }
+
+  message PkLogDetail {
+    message Assailant {
+      PlayerInfo player = 1;
+      int64 damage = 2;
+      int64 score = 3;
+    }
+    message Victim {
+      PlayerInfo player = 1;
+      int64 score = 2;
+      int64 loss_experience = 3;
+      double loss_experience_ratio = 4;
+      repeated Item loss_items = 5;
+      int32 level_at_death = 6;
+    }
+    message Item{
+      int64 item_id = 1;
+      int64 amount = 2;
+      repeated common.Property properties = 3;
+    }
+
+    bytes id = 1;
+    Victim victim = 2;
+    Assailant killer = 3;
+    repeated Assailant assists = 4;
+  }
+
+
+  message Scorn {
+    optional string description = 1;
+    optional int64 emoji = 2;
+    optional int64 title = 3;
+    string killer_name = 4;
+    string victim_name = 5;
+    bool is_hostile = 6;
+  }
+
+  message Trace{
+    string target_name = 1;
+  }
+
+  message Wanted {
+    string target_name = 1;
+  }
+  message LoadPvpMessageEvent{
+    optional PvpMessage pvpMessage = 1;
+    optional PvpEmoji pvpEmoji = 2;
+    CheckType check_type = 3;
+  }
+  message LoadTraceEvent{
+    int32 left_trace = 1;
+    bytes id = 2; // record uuid
+  }
+
+  message PkLogResult{
+    Result result = 1;
+    repeated common.Property properties = 2;
+  }
+  message SetPvpMessageResult{
+    Result result = 1;
+    repeated common.Property properties = 2;
+  }
+
+  enum Result {
+    SUCCESS = 0;
+    FAIL = 1;
+    FAIL_COST_NOT_ENOUGH = 2; // 비용 부족
+    FAIL_COUNT_NOT_ENOUGH = 3; // 회수 부족
+    FAIL_TIMEOUT = 4; // [추적, 척살령] 시간 경과
+    FAIL_OFFLINE = 5; // 오프라인 상태
+    FAIL_BLOCK_ADDRESS = 6; // 불가 지역
+    FAIL_DESTINATION_NOT_FOUND = 7; // 도착지 없음 (도착지에 공간이 없는 것.)
+    FAIL_ALREADY_WANTED = 8; // [척살령] 이미 척살령이 내려짐
+    FAIL_INVALID_GUILD = 9; // [척살령] 잘못된 길드 (당시에 길드가 없거나, 현재 다른 길드인 경우)
+    FAIL_CONTAINS_FORBIDDEN_WORD = 10;  // PvP 메시지 금칙어 포함
+  }
+
+  oneof event {
+    PkLogList list = 1;
+    PkLogResult scorn_result = 2;
+    Scorn scorn = 4;
+    Result trace_result = 3;
+    Trace trace = 7;
+    PkLogDetail detail = 5;
+    Result wanted_result = 6;
+    Wanted wanted = 8;
+    LoadPvpMessageEvent loadPvpMessageEvent = 9;
+    LoadTraceEvent loadTraceEvent = 10;
+    SetPvpMessageResult setPvpMessageResult = 11;
+  }
+}

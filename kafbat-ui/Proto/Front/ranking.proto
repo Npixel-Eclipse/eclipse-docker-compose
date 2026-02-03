@@ -1,0 +1,123 @@
+syntax = "proto3";
+import "Common/guild_common.proto";
+import "Common/ranking_common.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "Common/property.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.ranking";
+option java_outer_classname = "ClientRankingProto";
+
+package eclipse.client.ranking;
+
+enum Result{
+  SUCCESS = 0;
+  FAIL = 1;
+  CHANGE_RANKING_TITLE_SUCCESS = 2;
+  CHANGE_RANKING_TITLE_FAIL = 3;
+}
+
+message RankingRequest{
+  reserved 1, 4;
+  oneof request{
+    RankingTitleChanged ranking_title_changed = 2;
+    RankingTitleList ranking_title_list = 3;
+    DungeonRankingLookUp dungeon_ranking_look_up = 5;
+    RankingList ranking_list = 6;
+  }
+  message RankingTitleChanged {
+    optional int64 new_title_id = 1; // buff.yaml의 id
+  }
+
+  message RankingTitleList{}
+
+  message DungeonRankingLookUp {
+    int64 dungeon_ranking_id = 1;
+  }
+
+  message RankingList{
+    common.RankingType ranking_type = 1;
+    int32 last_rank = 2;
+    bool all_server = 3; // 전체 서버인지?
+
+    common.Filter filter = 4;
+  }
+}
+
+message RankingEvent{
+  reserved 1, 4;
+  oneof event{
+    RankingTitleChangedEvent ranking_title_changed_event = 2;
+    RankingTitleListEvent ranking_title_list_event = 3;
+    DungeonRankingLookUpEvent dungeon_ranking_look_up_event = 5;
+    RankingListEvent ranking_list_event = 6;
+  }
+  // 랭킹 조회 결과(Reply)
+  message RankingTitleChangedEvent {
+    Result result = 1;
+  }
+
+  message RankingTitleListEvent{
+    repeated int64 ranking_title_ids = 1; // 랭킹 타이틀 아이디 리스트
+  }
+
+  message DungeonRankingLookUpEvent {// Ranking -> DungeonRankingLookUpEvent
+    int64 dungeon_ranking_id = 1;
+
+    // (랭킹 보상 정산 시간, 도전 던전 남은 랭킹 초기화 시간 표시용)
+    google.protobuf.Timestamp reward_renewal_timestamp = 2;// 랭킹 혜택 갱신 타임스탬프
+
+    // 상위 ChallengeDungeonTopRanking(constant.yaml)명 랭커, 오름 차순 정렬
+    repeated DungeonRankingInfo rankings = 3;
+  }
+
+  message DungeonRankingInfo {// Ranker -> DungeonRankingInfo
+    string character_name = 1;
+    optional string guild_name = 2;
+    optional common.GuildMark guild_mark = 3;
+    google.protobuf.Duration play_time = 4;
+  }
+
+  message RankingListEvent{
+    repeated RankingTuple rankings = 1;
+    RankingTuple my_ranking = 2;
+
+    bool has_next = 3;
+    google.protobuf.Timestamp ranking_renewal_timestamp = 4;
+  }
+
+  message RankingTuple{
+    oneof tuple{
+      CharacterRankingTuple character_ranking_tuple = 1;
+      GuildRankingTuple guild_ranking_tuple = 2;
+    }
+  }
+
+  message CharacterRankingTuple{
+    string character_name = 1;
+    optional string guild_name = 2;
+    optional common.GuildMark guild_mark = 3;
+    optional string server_name = 4;
+    RankingInfo ranking_info = 5;
+    int32 class_id = 6;
+  }
+
+  message GuildRankingTuple{
+    string guild_name = 1;
+    common.GuildMark guild_mark = 2;
+    string guild_master_name = 3;
+    int32 member_count = 4;
+    int32 max_member_count = 5;
+    RankingInfo ranking_info = 6;
+    optional string server_name = 7;
+    int32 guild_master_class_id = 8;
+  }
+
+  message RankingInfo{
+    reserved 4;
+    optional int64 point = 1;
+    optional int32 current_rank = 2; // 최대 표기 순위 밖이면 없음
+    optional int32 previous_rank = 3; // 이전 랭킹이 없다면 신규
+  }
+}

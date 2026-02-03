@@ -1,0 +1,10 @@
+- Id: 1
+  Name: Home
+#- Id: 2
+#  Name: Dungeon
+# 던전 배틀 타입 필요 시 (인터 던전 외 던전에 대한 배틀 분리 필요 시)
+# -> (1) 위 주석 해제, (2) land_group.yaml의 Dungeon 그룹의 BattleType을 Dungeon으로 설정, (3) 운영툴 배틀 타입 Dungeon 설정
+- Id: 3
+  Name: DungeonInter
+- Id: 4
+  Name: TutorialInstance

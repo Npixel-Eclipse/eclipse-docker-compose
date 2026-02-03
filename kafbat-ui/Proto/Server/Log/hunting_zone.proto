@@ -1,0 +1,61 @@
+syntax = "proto3";
+package log;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "HuntingZoneLogServiceProto";
+
+message BidRequestHuntingZone {
+  int64 current_main_season = 1;
+  int64 current_sub_season = 2;
+  string character_uuid = 3;
+  int64 hunting_zone_id = 4;
+}
+
+message BidHuntingZone {
+  int64 current_main_season = 1;
+  int64 current_sub_season = 2;
+  string character_uuid = 3;
+  int64 guild_id = 4;
+  int64 hunting_zone_id = 5;
+  int64 bid_amount = 6;
+}
+
+message UpdateHuntingZoneOwner {
+  int64 current_main_season = 1;
+  int64 current_sub_season = 2;
+  int64 owner_main_season = 3;
+  int64 owner_sub_season = 4;
+  // 필드 비워져있으면 길드 해산 등으로 소유 길드가 없어진 것
+  optional int64 owner_guild_id = 5;
+  int64 hunting_zone_id = 6;
+}
+
+// 권역 내 쌓인 자원을 보상 받을 때
+message RewardHuntingZoneGroupResource {
+  int64 current_main_season = 1;
+  int64 current_sub_season = 2;
+  int64 owner_main_season = 3;
+  int64 owner_sub_season = 4;
+  int64 owner_guild_id = 5;
+  int64 hunting_zone_id = 6;
+  int64 gold_amount = 7;
+  int64 gold_fee = 8;
+}
+
+// 사냥터 입찰 1등으로 소유하게 되는 길드에게 주는 아이템 보상
+message RewardHuntingZoneItem {
+  message Item {
+    int64 item_id = 1;
+    int64 amount = 2;
+  }
+
+  int64 current_main_season = 1;
+  int64 current_sub_season = 2;
+  int64 owner_main_season = 3;
+  int64 owner_sub_season = 4;
+  int64 owner_guild_id = 5;
+  int64 hunting_zone_id = 6;
+  repeated Item items = 7;
+  repeated string guild_members = 8; // character_uuid
+}

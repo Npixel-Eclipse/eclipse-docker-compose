@@ -1,0 +1,66 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          Type: 
+            type: string
+            enum:
+              - Select
+              - Confirmation
+              - Probability
+          DefaultTab:
+            type: boolean
+            default: false
+          Locked:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+        required:
+          - TabIndex
+          - Type
+    UITitle:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          TitleType:
+            type: string
+            enum: 
+              - SelectablePopup
+              - UnSelectablePopup
+          TitleDescription:
+            type: string
+            ref: description
+        required:
+          - TitleType
+          - TitleDescription
+    CardPackUseMinCount:
+      type: integer
+    CardPackUseMaxCount:
+      type: integer
+  required:
+    - Id
+    - Name

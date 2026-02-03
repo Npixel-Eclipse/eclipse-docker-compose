@@ -1,0 +1,84 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    Info: 
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          ListType:
+            type: string
+            enum:
+              - Custom
+              - Grade               # 아이템 등급
+              - Category            # 아이템 카테고리
+              - SolidarityStatus    # 결속 여부
+              - IntrinsicEffect     # 고유 효과
+              - Attribute           # 특성 (유니크/세트)
+              - DetailStat          # 공격/방어 등
+              - EnchantLevelRange
+              - Status              # 상태
+              - EquipItemGroup      # 장비 그룹
+          Required:
+            type: boolean
+            default: true
+          DescriptionName:
+            type: string
+            ref: description
+          ItemFilterList:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                FilterType:
+                  type: string
+                  enum:
+                    - Filter1
+                    - Filter2
+                    - Filter3
+                    - Filter4
+                    - Filter5
+                    - Filter6
+                    - Filter7
+                    - Filter8
+                    - Filter9
+                    - AllFilters
+                GradeFilter:
+                  type: string
+                  ref: grade
+                DescriptionName:
+                  type: string
+                  ref: description
+                CategoryFilter:
+                  type: string
+                  ref: item_category
+                TextStyleKey:
+                  type: string
+                  ref: richtext_display
+          Range:
+            type: object
+            additionalProperties: false
+            properties:
+              MinNum:
+                type: integer
+              MaxNum:
+                type: integer
+              StepSize:
+                type: number
+                default: 1.0
+  required:
+    - Id
+    - Name
+    - Info
+  
+    

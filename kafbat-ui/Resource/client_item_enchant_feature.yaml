@@ -1,0 +1,126 @@
+- Id: 1
+  Name: ItemEnchantFeature
+  Constants:
+    - Name: MaxEnchantEquipmentCount
+      Value: MaxEnchantEquipmentCount
+  UITabs:
+    - Type: Single
+      Comment: 단일 강화
+      Description: UIWordSingle
+    - Type: Multiple
+      Comment: 다중 강화
+      Description: UIWordMulti
+  UITargetItemTabs:
+    - Type: Item_Equip
+      Comment: 전체 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAll_Sprite.TabIconAll_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Enchant_Weapon_Normal
+        - Item_Misc_Upgrade_Enchant_Armor_Normal
+        - Item_Misc_Upgrade_Enchant_Accessory_Normal
+        - Item_Misc_Upgrade_Enchant_Weapon_Blessed
+        - Item_Misc_Upgrade_Enchant_Armor_Blessed
+        - Item_Misc_Upgrade_Enchant_Accessory_Blessed
+        - Item_Misc_Upgrade_Enchant_Weapon_Cursed
+        - Item_Misc_Upgrade_Enchant_Armor_Cursed
+        - Item_Misc_Upgrade_Enchant_Accessory_Cursed
+    - Type: Item_Equip_WeaponBase
+      Comment: 무기 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Enchant_Weapon_Normal
+        - Item_Misc_Upgrade_Enchant_Weapon_Blessed
+        - Item_Misc_Upgrade_Enchant_Weapon_Cursed
+    - Type: Item_Equip_Armor
+      Comment: 방어구 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconArmour_Sprite.TabIconArmour_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Enchant_Armor_Normal
+        - Item_Misc_Upgrade_Enchant_Armor_Blessed
+        - Item_Misc_Upgrade_Enchant_Armor_Cursed
+    - Type: Item_Equip_Accessory
+      Comment: 악세사리 아이템 카테고리
+      Icon: /Game/UI/Enchant_SP/TabIconAcc_Sprite.TabIconAcc_Sprite
+      MaterialItemCategories:
+        - Item_Misc_Upgrade_Enchant_Accessory_Normal
+        - Item_Misc_Upgrade_Enchant_Accessory_Blessed
+        - Item_Misc_Upgrade_Enchant_Accessory_Cursed
+  EnchantItemDisplayOrderInfo:
+    EquippedAcendingOrder: false
+    ItemCategoryOrder:
+      - Item_Equip_WeaponBase_Weapon
+      - Item_Equip_WeaponBase_SubWeapon
+      - Item_Equip_Armor_Helm
+      - Item_Equip_Armor_Suit
+      - Item_Equip_Armor_Gloves
+      - Item_Equip_Armor_Pants
+      - Item_Equip_Armor_Boots
+      - Item_Equip_Armor_Cape
+      - Item_Equip_Armor
+      - Item_Equip_Accessory_Necklace
+      - Item_Equip_Accessory_Earring
+      - Item_Equip_Accessory_Ring
+      - Item_Equip_Accessory_Belt
+      - Item_Equip_Accessory
+    GradeAcendingOrder: false
+    EquipBuffAcendingOrder: true
+    DeleteTimeAcendingOrder: false
+    TradeTypeOrder:
+      - Tradable
+      - Storable
+      - Bounded
+  ChoiceInfos:
+    - Type: ChoiceEnhanceRelated
+      Description: UIWord_ChoiceEnhanceRelated
+    - Type: ChoiceEnhanceMaterial
+      Description: UIWord_ChoiceEnhanceMaterial
+    - Type: ChoiceEnchaceEquip
+      Description: UIWordEquipEnchant_SelectEquipItem
+  ResultInfos:
+    - Type: Success
+      Description: UIWord_Growth
+      TextStyleKey: ResultSuccess
+    - Type: Fail_Maintain
+      Description: UIWord_Maintain
+      TextStyleKey: ResultDisappear
+    - Type: Fail_Vaporize
+      Description: UIWord_Destruction
+      TextStyleKey: ResultFailure
+  SafeEnchantInfo:
+    - TargetType: Item_Equip_Weapon_Fighter
+      ScrollItemName: Item_Grown_Enchant_G1_T1_01
+    - TargetType: Item_Equip_Weapon_Ranger
+      ScrollItemName: Item_Grown_Enchant_G1_T1_01
+    - TargetType: Item_Equip_Weapon_Sorcerer
+      ScrollItemName: Item_Grown_Enchant_G1_T1_01
+    - TargetType: Item_Equip_WeaponBase_SubWeapon
+      ScrollItemName: Item_Grown_Enchant_G1_T1_01
+    - TargetType: Item_Equip_Armor
+      ScrollItemName: Item_Grown_Enchant_G1_T1_02
+    - TargetType: Item_Equip_Accessory
+      ScrollItemName: Item_Grown_Enchant_G1_T1_03
+  ItemFilter: Enchant
+  ItemProbabilityInfos:
+    - Type: OptionMaintain
+      TextStyleKey: OptionDefaultValue
+    - Type: OptionUp
+      TextStyleKey: OptionAdd
+    - Type: OptionDown
+      TextStyleKey: OptionDown
+  DescriptionInfos:
+    - Type: CancelSelected
+      Description: UIWordCancel
+    - Type: NotEnoughCurrency
+      Description: UIWord_SystemMsg_NoCurrency
+    - Type: ChoiceEnchantRelatedItem
+      Description: UIWord_SystemMsg_ChoiceEnchantRelatedItem
+    - Type: NotEnoughMaterialItem
+      Description: UIWord_SystemMsg_NoMaterialItem
+    - Type: CannotRegisterOnSameEnchant
+      Description: UIFavorite_Regist_Fail_Limit
+    - Type: ImpossibleRegistrationOnSameEnchant
+      Description: UIWord_SystemMsg_EquipEnchantImpossibleRegistration
+    - Type: OverRegistrationOnSameEnchant
+      Description: UIWord_SystemMsg_EquipEnchantOverRegistration
+    - Type: ChoiceEquipItemOnSameEnchant
+      Description: UIWordEquipEnchant_SelectEquipItem

@@ -1,0 +1,171 @@
+syntax = "proto3";
+package dungeon;
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "Common/property.proto";
+import "Common/server_time.proto";
+import "Common/battle_common.proto";
+import "Common/callback.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.dungeon";
+option java_outer_classname = "DungeonServiceProto";
+
+// battle -> dungeon
+message DungeonCommand {
+  reserved 20;
+
+  string character_uuid = 1;
+
+  message Welcome {
+    bool is_content_unlock_welcome = 1;
+    string battle_identifier = 11;
+  }
+
+  message Cheat {
+    message UpdateDungeonTime {
+      int64 resource_id = 1;
+      optional common.AmountTime remain_time = 2;
+      optional common.AmountTime charging_time = 3;
+    }
+    message RefreshDungeon {
+      int64 resource_id = 1;
+    }
+    message Random {}
+
+    oneof command {
+      UpdateDungeonTime update_dungeon_time = 6;
+      RefreshDungeon refresh_dungeon = 7;
+      Random random = 8;
+    }
+  }
+
+  message List {
+    repeated int64 dungeon_ids = 1;
+    repeated int64 resource_ids = 2;
+  }
+
+  message InterInfo {
+    int64 dungeon_id = 1;
+    int64 floor = 2;
+  }
+
+  message Checkin {
+    reserved 6;
+    int64 dungeon_id = 2;
+
+    string battle_identifier = 10;
+
+    google.protobuf.Timestamp checkin_time = 100;
+  }
+
+  message Checkout {
+    reserved 4;
+
+    int64 label = 1;
+    int64 dungeon_id = 2;
+    bool disconnect = 5;
+
+    string battle_identifier = 10;
+
+    google.protobuf.Timestamp checkout_time = 100;
+  }
+
+  message Query {
+    repeated int64 dungeon_ids = 1;
+    common.CallbackCommand callback = 2;
+  }
+
+  message Ranking {
+    string dungeon_name = 1;
+    optional int64 rank = 2;
+    optional google.protobuf.Timestamp reward_renewal_timestamp = 3;
+  }
+
+  message UpdateResource {
+    int64 resource_id = 1;
+    optional common.AmountTime remain_time = 2; // null 인 경우 무한
+    optional common.AmountTime charging_time = 3;
+    optional int64 remain_count = 4;
+    optional int64 additional_count = 5;
+    optional int64 charging_count = 6;
+    optional google.protobuf.Timestamp refresh_at = 7;
+
+    string battle_identifier = 10;
+
+    google.protobuf.Timestamp last_activity_time = 100;
+  }
+
+  message ChallengeStart {
+    int64 dungeon_id = 1;
+  }
+
+  message ChallengeEnd {
+    enum Result {
+      COMPLETE = 0;
+      FAIL = 1;
+    }
+    int64 dungeon_id = 1;
+    int64 play_time_millis = 2;
+    Result result = 3;
+  }
+
+  message DungeonContentLimit {
+    message List {}
+    message Unlock {
+      reserved 1;
+      int64 content_id = 2;
+    }
+    oneof Command {
+      List list = 1;
+      Unlock unlock = 2;
+    }
+  }
+
+  oneof Command {
+    Welcome welcome = 2;
+    Cheat cheat = 5;
+    List list = 8;
+    Checkin checkin = 9;
+    Checkout checkout = 10;
+    Query query = 14;
+    Ranking ranking = 15;
+    UpdateResource update_resource = 17;
+    ChallengeStart challenge_start = 18;
+    ChallengeEnd challenge_end = 19;
+
+    InterInfo inter_info = 21;
+
+    // content limit
+    DungeonContentLimit dungeon_content_limit = 100;
+  }
+}
+
+message DungeonResponse {
+  message Query {
+    message Dungeon {
+      message Resource {
+        int64 resource_id = 1;
+        int64 remain_count = 2;
+      }
+
+      int64 dungeon_id = 1;
+      optional Resource dungeon_resource = 2;
+    }
+
+    repeated Dungeon dungeons = 1;
+  }
+
+  oneof response {
+    Query query = 1;
+  }
+}
+
+message ContentLimitMemCache {
+  string character_uuid = 1;
+  map<int64, ContentLimit> content_limit = 2; // key: content id
+  message ContentLimit {
+    int64 content_id = 2;
+    google.protobuf.Timestamp unlock_at = 4;
+  }
+}

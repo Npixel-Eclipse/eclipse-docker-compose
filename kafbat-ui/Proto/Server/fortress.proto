@@ -1,0 +1,374 @@
+syntax = "proto3";
+package fortress;
+
+import "Common/item_common.proto";
+import "Common/callback.proto";
+import "google/protobuf/timestamp.proto";
+import "Server/Battle/battle_fortress.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.fortress";
+option java_outer_classname = "FortressServiceProto";
+
+enum FortressResultCode {
+  FAIL = 0;
+  SUCCESS = 1;
+}
+
+enum HelpResultCode {
+  HELP_PROCESS = 0;
+  HELP_SUCCESS = 1;
+  HELP_FAIL = 11;
+  HELP_FAIL_UPGRADE_FINISHED = 12;
+}
+
+enum KafkaHeader {
+  HARVEST_SCHEDULE_RESULT = 0;
+}
+
+enum CommandResult {
+  COMMAND_SUCCESS = 0;
+  COMMAND_FAIL = 1;
+}
+
+message HarvestScheduleResult {
+  CommandResult result = 1;
+}
+
+message FortressCommand {
+  string server_name = 1001;
+  oneof command {
+    Save save = 1;
+    PayCostReply pay_cost_reply = 2;
+    Cheat cheat = 3;
+    HelpMeReply help_me_reply = 4;
+    HelpArrive help_arrive = 5;
+    ConnectedBattle connected_battle = 6;
+    GiveBuildingBonus give_building_bonus = 7;
+    ReserveInventorySlotReply reserve_inventory_slot_reply = 8;
+    RefreshFortress refresh_fortress = 9;
+
+    PayCostListReply pay_cost_list_reply = 10;
+    ReserveInventorySlotListReply reserve_inventory_slot_list_reply = 11;
+
+    ListUnlockedContentLimit list_unlocked_content_limit = 12;
+    UnlockContentLimit unlock_content_limit = 13;
+
+    UpsertFortressBuff upsert_fortress_buff = 14;  // Store -> Fortress 버프 적용
+    HarvestFinishAllBySchedule harvest_finish_all_by_schedule = 15;  // Battle -> Fortress 스케줄 일괄 수확
+  }
+
+  // 스케줄 시스템에서 성물 일괄 수확을 트리거하는 커맨드
+  message HarvestFinishAllBySchedule {
+    string character_uuid = 3;
+  }
+
+  // Battle -> Fortress 버프 적용 커맨드 (buff.yaml 의존성 제거)
+  // Battle이 property_name + property_value를 직접 전송
+  message UpsertFortressBuff {
+    repeated FortressBuff new_buffs = 1;  // 추가할 버프 목록 (property 포함)
+    repeated string old_buff_names = 2;          // 제거할 버프 이름 목록
+  }
+
+  message Save {}
+
+  message PayCostReply {
+    FortressResultCode result_code = 1;
+    int64 building_id = 2;
+    repeated Item paid_items = 3;
+    common.Reason reason = 4;
+    string paid_character_uuid = 5;
+
+    // from kafka header
+    common.ItemTransactions item_transactions = 6;
+
+    bool defence_failure = 7;  // BM 성물 실패 방지 옵션 사용 여부
+
+    message Item {
+      string item_name = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message Cheat {
+    string command = 1;
+  }
+
+  message HelpMeReply {
+    FortressResultCode result_code = 1;
+    repeated bytes help_uuids = 2;
+  }
+
+  message HelpArrive {
+    int64 current_help_account_index = 1;
+    repeated int64 account_ids_help_needed = 9; // 도와줘야하는 사람들
+    repeated Help helps = 3;
+    int64 additional_guild_help_count = 7; // 길드 특성에 의해서 추가 되는 횟수
+    int64 guild_id = 8;
+
+    int64 helper_account_id = 24;
+    bytes helper_character_uuid = 22;
+    string helper_character_name = 23;
+
+    common.ReservedInventorySlots reserved_inventory_slots = 31;
+
+    message Help {
+      bytes help_uuid = 1;
+      int64 account_id = 9;
+      bytes character_uuid = 3;
+      int64 building_id = 4;
+      int64 building_level = 5;
+      HelpResultCode result_code = 6;
+      repeated int64 helper_account_ids = 10; // 길드에서 유지되는 캐시와 같게 하기위해서 요새에 들렸을 때 리스트를 가져옴
+      bool is_completed = 8; // 지원이 완료 되었는지 확인
+    }
+  }
+
+  message ConnectedBattle {
+    string character_uuid = 1;
+    string current_battle = 2;
+    bool character_created = 3;
+  }
+
+  message GiveBuildingBonus {
+    string character_uuid = 1;
+    common.ItemTransaction item_transaction = 2;
+    string building_bonus = 3;
+    google.protobuf.Timestamp end_time = 4;
+  }
+
+  message ReserveInventorySlotReply {
+    FortressResultCode result = 1;
+    string character_uuid = 2;
+    int64 building_id = 3;
+    repeated Item rewards = 5;
+    common.Reason reason = 6;
+    google.protobuf.Timestamp request_at = 7;
+
+    // from kafka header
+    common.ReservedInventorySlots reserved_inventory_slots = 8;
+
+    google.protobuf.Timestamp harvest_end_time = 9;
+    bool is_schedule = 10;
+
+    message Item {
+      oneof item {
+        int64 item_id = 1;
+        string item_name = 2;
+      }
+      int64 amount = 3;
+    }
+  }
+
+  message RefreshFortress {
+    int64 account_id = 4;
+    string character_uuid = 2;
+    google.protobuf.Timestamp command_at = 3;
+  }
+
+  message ReserveInventorySlotListReply {
+    common.Reason reason = 1;
+    FortressResultCode result = 2;
+    common.ReservedInventorySlots reserved_inventory_slots = 8;
+
+    repeated ReserveInventorySlotReply reserve_inventory_slot_replies = 3;
+  }
+
+  message PayCostListReply {
+    repeated PayCostReply pay_cost_replies = 1;
+  }
+
+  message ListUnlockedContentLimit {}
+
+  message UnlockContentLimit {
+    string content_limit_name = 1;
+  }
+}
+
+// 요새 컨텐츠 캐시
+message FortressCache {
+  int64 account_id = 4;
+  string server_name = 1000;
+  string character_uuid = 3;
+  string current_battle = 31;
+  string current_front = 32;
+  repeated Fortress fortresses = 2;
+  repeated ContentLimit content_limits = 5;
+
+  repeated ConstructionQueue construction_queue = 6;
+
+  int64 current_help_me_count = 7;
+  repeated HelpInfo helps = 10;
+  HelpCount help_count = 13; // 지원 요청 관련 추가 횟수
+
+  reserved 21, 23, 26, 27; // deprecated
+  HarvestAccelerationLog harvest_acceleration_log = 22;
+  PendingInstantHarvest pending_instant_harvest = 25;  // 즉시 수확 대기 정보
+  repeated PropertyBuff property_buffs = 28;  // building_property_buff
+
+  // 프로퍼티 버프 저장 (Battle에서 직접 전송받은 버프 단위)
+  message PropertyBuff {
+    string buff_name = 1;                    // 버프 식별자 (키)
+    map<string, int64> properties = 2;       // 프로퍼티 맵 {FortressATK: 100, FortressDEF: 50}
+    optional google.protobuf.Timestamp valid_until = 3;  // 만료시간, 없으면 영구
+    int32 stack_count = 4;                   // 스택 수
+  }
+
+  message PendingInstantHarvest {
+    message Entry {
+      int64 building_id = 1;
+      int32 count = 2;
+    }
+    repeated Entry entries = 1;
+  }
+
+  message Fortress {
+    optional int64 database_id = 1;
+    int64 building_id = 2;
+    int64 building_level = 3;
+    google.protobuf.Timestamp harvest_start_at = 4;
+    google.protobuf.Timestamp upgrade_start_at = 5;
+    google.protobuf.Timestamp create_time = 6;
+    optional int64 upgrade_reduced_sec = 7;              // 축원서+도움으로 감소된 시간
+    optional int64 upgrading_reduced_sec_by_buff = 17;  // 버프로 감소된 시간 (건설 중일 때만 존재)
+    bool is_help_me_requested = 9;
+    repeated bytes help_uuids = 10;
+    ActiveHarvestAcceleration active_harvest_acceleration = 11;
+
+    bool isItemSlotReservedRequested = 13;
+
+    // 수확 시작 시점에 캡처된 활성 버프 목록 (다음 수확에 적용될 버프)
+    repeated CapturedBuff captured_buffs = 14;  // deprecated: captured_property_buffs 사용
+    repeated CapturedPropertyBuff captured_property_buffs = 16;  // 프로퍼티 버프 캡처
+
+    // 생산 버프 스케줄: 인터벌별로 적용되는 생산 버프 정보
+    ProductionBuffSchedule production_buff_schedule = 15;
+
+    // deprecated: 기존 buff_id 기반 캡처 (captured_property_buffs로 대체)
+    message CapturedBuff {
+      int64 buff_id = 1;   // FortressCache.BuildingBuff의 building_buff_id
+      int32 stack = 2;     // 스택 수
+    }
+
+    // 프로퍼티 버프 캡처 (Battle에서 직접 전송받은 property_name + property_value 저장)
+    message CapturedPropertyBuff {
+      string property_name = 1;    // 프로퍼티 이름
+      int64 property_value = 2;    // 프로퍼티 값
+      int32 stack_count = 3;       // 스택 수
+    }
+  }
+
+  message HarvestAccelerationLog {
+    optional int64 database_id = 1;
+    repeated Log logs = 2;
+
+    message Target {
+      oneof target {
+        All all = 1;
+        Single single = 2;
+      }
+
+      message All {}
+      message Single {
+        int64 building_id = 1;
+      }
+    }
+
+    message Log {
+      google.protobuf.Timestamp start_at = 1;
+      google.protobuf.Timestamp finish_at = 2;
+      int64 percent = 3; // ex) 20%, 30%
+      Target target = 4;
+    }
+  }
+
+  message ActiveHarvestAcceleration {
+    repeated Interval intervals = 1;
+
+    message Interval {
+      google.protobuf.Timestamp start_at = 1;
+      google.protobuf.Timestamp finish_at = 2;
+      double acceleration_rate = 3;
+    }
+  }
+
+  // 생산 버프 스케줄: 인터벌 시작 시점별로 적용되는 생산 버프 정보
+  // 버프가 적용되면 다음 인터벌 시작 시점부터 적용됨
+  message ProductionBuffSchedule {
+    repeated Interval intervals = 1;
+
+    message Interval {
+      google.protobuf.Timestamp effective_from = 1;  // 이 인터벌 시작 시점부터 적용
+      int64 product_amount_bonus = 2;                // 생산량 증가 (만분율, 10000 = 100%)
+      int64 production_time_reduction = 3;           // 생산 시간 감소 (만분율, 10000 = 100%)
+    }
+  }
+
+  message ConstructionQueue {
+    optional int64 database_id = 1;
+    bool is_idle = 2;
+    optional int64 building_id = 3;
+    optional google.protobuf.Timestamp end_time = 4;
+  }
+
+  message HelpInfo {
+    bytes help_uuid = 1;
+    int64 building_id = 2;
+    int64 building_level = 3;
+    google.protobuf.Timestamp help_me_requested_at = 4;
+
+    repeated int64 helper_account_ids = 9;
+    optional int64 database_id = 6;
+    repeated int64 bonus_ids = 7;
+    int64 additional_help_count = 8;
+  }
+
+  message HelpCount {
+    int64 database_id = 1;
+    int64 additional_help_me_count = 2; // 지원 요청할 수 있는 추가 횟수
+    int64 remaining_help_me_count = 3; // 남은 지원 요청 횟수
+    int64 additional_help_count = 4; // 지원 받을 수 있는 추가 횟수
+    int64 additional_reduce_time_by_help = 5; // 지원 받을 때 줄어드는 추가 시간
+    google.protobuf.Timestamp last_refreshed_at = 6;
+  }
+
+  message Bonus {
+    int64 database_id = 1;
+    int64 bonus_id = 2;
+    google.protobuf.Timestamp end_time = 3;
+  }
+
+  message ContentLimit {
+    optional int64 database_id = 1;
+    int64 content_limit_resource_id = 2;
+    google.protobuf.Timestamp unlocked_at = 3;
+  }
+}
+
+message BuildingNotification {
+  int64 account_id = 1;
+  int64 building_id = 2;
+  google.protobuf.Timestamp notify_at = 3;
+  Type type = 4;
+
+  enum Type {
+    HARVEST_FULL = 0;
+    UPGRADE_FINISH = 1;
+  }
+}
+
+message Ids {
+  repeated int64 ids = 1;
+}
+
+message BuildingInfo {
+  string character_uuid = 1;
+  repeated Building buildings = 2;
+
+  message Building {
+    string building_name = 1;
+    int64 building_level = 2;
+    int64 building_id = 3;
+    google.protobuf.Timestamp upgrade_finish_at = 4;
+  }
+}

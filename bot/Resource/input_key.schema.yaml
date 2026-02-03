@@ -1,0 +1,25 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - DefaultKey
+    - DefaultKeyDescription
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name: #이름을 변경하면 리소스 수정도 해야함
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DefaultKey:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DefaultKeyDescription:
+      type: string
+      ref: description
+    Comment:
+      type: string

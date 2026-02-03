@@ -1,0 +1,6 @@
+- Id: 1
+  Name: CharInfo
+  Icon: /Game/UI/CharInfo_SP/FIconCharInfo_Sprite.FIconCharInfo_Sprite
+- Id: 3
+  Name: Diposition
+  Icon: /Game/UI/CharInfo_SP/FIconDisposition_Sprite.FIconDisposition_Sprite

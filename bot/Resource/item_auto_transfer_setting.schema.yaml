@@ -1,0 +1,53 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Setting
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+      visible: true
+
+    # 설정된 세팅이 모두 On인 경우 자동보관 대상으로 설정됨.
+    ## [장비 On + 일반 On] 과 같이 복수로 입력하면 두 설정이 모두 켜져있을때만 자동보관 대상으로 인식됨.
+    Setting:
+      type: array
+      items:
+        type: string
+        ref: setting
+
+    # === 아래부터는 Setting이 해당할 때, 필터링 할 아이템의 속성들.
+    # === 여러 컬럼을 설정 시 And 조건으로 작동.
+    # === ※ 주의 : 아래 필터링할 속성을 아무것도 넣지 않으면, 걸러낼 조건이 없기 때문에 모든 아이템이 자동보관 대상이 됨.
+
+    # 대상 아이템 등급
+    Grade:
+      type: string
+      ref: grade
+      visible: true
+
+    # 보관 대상 아이템 카테고리
+    Category:
+      type: string
+      ref: item_category
+      visible: true
+
+    # 미완료된 수집 재료
+    IncompleteCollectionMaterial:
+      type: boolean
+      visible: true
+
+    # 완료된 수집 재료
+    CompleteCollectionMaterial:
+      type: boolean
+      visible: true

@@ -1,0 +1,50 @@
+- Id: 1
+  Name: DivinityCraftLevel
+  Category: DivinityCraft
+  CountItem: DivinityCraft_Count_01
+  RecipeInputs:
+    - Level: 1
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level1
+    - Level: 2
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level2
+    - Level: 3
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level3
+    - Level: 4
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level4
+    - Level: 5
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level5
+    - Level: 6
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level6
+    - Level: 7
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level7
+    - Level: 8
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level8
+    - Level: 9
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level9
+    - Level: 10
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level10
+    - Level: 11
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level11
+    - Level: 12
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level12
+    - Level: 13
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level13
+    - Level: 14
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level14
+    - Level: 15
+      CraftCount: 30
+      Input: Craft_Input_Divinity_Craft_Level15

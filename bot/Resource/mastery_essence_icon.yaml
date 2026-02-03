@@ -1,0 +1,3002 @@
+- Id: 248
+  Name: Fighter_Essence_0_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 15
+  Name: Fighter_Essence_2_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 337
+  Name: Fighter_Essence_2_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 99
+  Name: Fighter_Essence_2_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 429
+  Name: Fighter_Essence_4_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 524
+  Name: Fighter_Essence_4_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 209
+  Name: Fighter_Essence_4_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 572
+  Name: Fighter_Essence_4_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 791
+  Name: Fighter_Essence_4_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 532
+  Name: Fighter_Essence_6_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 770
+  Name: Fighter_Essence_6_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1390
+  Name: Fighter_Essence_6_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1478
+  Name: Fighter_Essence_6_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 1260
+  Name: Fighter_Essence_6_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 30171
+  Name: Fighter_Essence_8_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 585
+  Name: Fighter_Essence_8_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 19755
+  Name: Fighter_Essence_8_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 25021
+  Name: Fighter_Essence_10_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 20039
+  Name: Fighter_Essence_10_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 29540
+  Name: Fighter_Essence_10_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 596
+  Name: Fighter_Essence_12_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2062
+  Name: Fighter_Essence_12_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1066
+  Name: Fighter_Essence_12_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1057
+  Name: Fighter_Essence_12_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 111
+  Name: Fighter_Essence_12_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 141
+  Name: Fighter_Essence_14_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2378
+  Name: Fighter_Essence_14_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1719
+  Name: Fighter_Essence_14_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2551
+  Name: Fighter_Essence_14_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 898
+  Name: Fighter_Essence_14_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 1218
+  Name: Fighter_Essence_16_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1650
+  Name: Fighter_Essence_16_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 2479
+  Name: Fighter_Essence_16_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 2791
+  Name: Fighter_Essence_18_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 685
+  Name: Fighter_Essence_20_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 289
+  Name: Fighter_Essence_20_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1308
+  Name: Fighter_Essence_20_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 746
+  Name: Fighter_Essence_22_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 35917
+  Name: Fighter_Essence_22_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 19568
+  Name: Fighter_Essence_22_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3102
+  Name: Fighter_Essence_22_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2268
+  Name: Fighter_Essence_22_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3914
+  Name: Fighter_Essence_22_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 2239
+  Name: Fighter_Essence_22_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3793
+  Name: Fighter_Essence_24_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 1061
+  Name: Fighter_Essence_24_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4138
+  Name: Fighter_Essence_24_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2585
+  Name: Fighter_Essence_24_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 1176
+  Name: Fighter_Essence_24_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 2308
+  Name: Fighter_Essence_26_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 1858
+  Name: Fighter_Essence_26_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 1449
+  Name: Fighter_Essence_26_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 5136
+  Name: Fighter_Essence_28_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 223
+  Name: Fighter_Essence_28_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 3565
+  Name: Fighter_Essence_28_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 37309
+  Name: Fighter_Essence_30_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 7575
+  Name: Fighter_Essence_30_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 36792
+  Name: Fighter_Essence_30_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 27998
+  Name: Fighter_Essence_30_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 16627
+  Name: Fighter_Essence_30_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 281
+  Name: Fighter_Essence_32_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 688
+  Name: Fighter_Essence_32_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5496
+  Name: Fighter_Essence_32_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 3319
+  Name: Fighter_Essence_32_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2108
+  Name: Fighter_Essence_32_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 3423
+  Name: Fighter_Essence_32_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 2654
+  Name: Fighter_Essence_32_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3635
+  Name: Fighter_Essence_34_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5443
+  Name: Fighter_Essence_34_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 3478
+  Name: Fighter_Essence_34_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 560
+  Name: Fighter_Essence_36_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 6368
+  Name: Fighter_Essence_38_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5535
+  Name: Fighter_Essence_38_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5261
+  Name: Fighter_Essence_38_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2566
+  Name: Fighter_Essence_38_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5185
+  Name: Fighter_Essence_38_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 4200
+  Name: Fighter_Essence_40_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 7431
+  Name: Fighter_Essence_40_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 34514
+  Name: Fighter_Essence_40_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 19874
+  Name: Fighter_Essence_42_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 1658
+  Name: Fighter_Essence_42_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 5442
+  Name: Fighter_Essence_42_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3612
+  Name: Fighter_Essence_44_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 8055
+  Name: Fighter_Essence_44_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5686
+  Name: Fighter_Essence_44_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3547
+  Name: Fighter_Essence_44_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 6416
+  Name: Fighter_Essence_44_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5394
+  Name: Fighter_Essence_44_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3560
+  Name: Fighter_Essence_44_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 642
+  Name: Fighter_Essence_46_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3721
+  Name: Fighter_Essence_46_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2017
+  Name: Fighter_Essence_46_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2116
+  Name: Fighter_Essence_48_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4326
+  Name: Fighter_Essence_48_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 254
+  Name: Fighter_Essence_48_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 8735
+  Name: Fighter_Essence_48_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 20970
+  Name: Fighter_Essence_48_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14761
+  Name: Fighter_Essence_48_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 21841
+  Name: Fighter_Essence_48_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 21098
+  Name: Fighter_Essence_50_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3585
+  Name: Fighter_Essence_50_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2469
+  Name: Fighter_Essence_50_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 7777
+  Name: Fighter_Essence_50_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8971
+  Name: Fighter_Essence_50_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 10193
+  Name: Fighter_Essence_50_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 4386
+  Name: Fighter_Essence_50_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2075
+  Name: Fighter_Essence_52_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 9873
+  Name: Fighter_Essence_52_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 8501
+  Name: Fighter_Essence_52_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1165
+  Name: Fighter_Essence_52_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 2372
+  Name: Fighter_Essence_52_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 11095
+  Name: Fighter_Essence_54_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 9787
+  Name: Fighter_Essence_54_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 9716
+  Name: Fighter_Essence_54_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 3054
+  Name: Fighter_Essence_54_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 5650
+  Name: Fighter_Essence_54_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2900
+  Name: Fighter_Essence_56_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 11101
+  Name: Fighter_Essence_58_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 8394
+  Name: Fighter_Essence_58_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 20102
+  Name: Fighter_Essence_58_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 4782
+  Name: Fighter_Essence_58_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 1192
+  Name: Fighter_Essence_58_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3826
+  Name: Fighter_Essence_60_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4230
+  Name: Fighter_Essence_60_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 6988
+  Name: Fighter_Essence_60_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 2001
+  Name: Fighter_Essence_60_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 7026
+  Name: Fighter_Essence_60_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 3947
+  Name: Fighter_Essence_60_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 1083
+  Name: Fighter_Essence_60_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 4918
+  Name: Fighter_Essence_62_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 7965
+  Name: Fighter_Essence_62_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2467
+  Name: Fighter_Essence_62_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 13179
+  Name: Fighter_Essence_62_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1993
+  Name: Fighter_Essence_62_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 3643
+  Name: Fighter_Essence_62_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 6184
+  Name: Fighter_Essence_62_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 6244
+  Name: Fighter_Essence_64_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 37570
+  Name: Fighter_Essence_64_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 23599
+  Name: Fighter_Essence_64_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 27747
+  Name: Fighter_Essence_64_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 11297
+  Name: Fighter_Essence_64_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2767
+  Name: Fighter_Essence_66_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 6996
+  Name: Fighter_Essence_66_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 10309
+  Name: Fighter_Essence_66_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 479
+  Name: Fighter_Essence_66_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 8790
+  Name: Fighter_Essence_66_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2647
+  Name: Ranger_Essence_0_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 14699
+  Name: Ranger_Essence_2_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14105
+  Name: Ranger_Essence_2_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2833
+  Name: Ranger_Essence_2_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 12825
+  Name: Ranger_Essence_4_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 9786
+  Name: Ranger_Essence_4_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 14752
+  Name: Ranger_Essence_4_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 6617
+  Name: Ranger_Essence_4_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 12414
+  Name: Ranger_Essence_4_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 9168
+  Name: Ranger_Essence_6_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 1969
+  Name: Ranger_Essence_6_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 6956
+  Name: Ranger_Essence_6_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 14853
+  Name: Ranger_Essence_6_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 19705
+  Name: Ranger_Essence_6_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 6402
+  Name: Ranger_Essence_8_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 10736
+  Name: Ranger_Essence_8_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 4537
+  Name: Ranger_Essence_8_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 14750
+  Name: Ranger_Essence_10_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1077
+  Name: Ranger_Essence_10_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 15057
+  Name: Ranger_Essence_10_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 9760
+  Name: Ranger_Essence_12_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 6316
+  Name: Ranger_Essence_12_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 13364
+  Name: Ranger_Essence_12_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8548
+  Name: Ranger_Essence_12_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 15989
+  Name: Ranger_Essence_12_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 16130
+  Name: Ranger_Essence_14_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17059
+  Name: Ranger_Essence_14_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 3849
+  Name: Ranger_Essence_14_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8239
+  Name: Ranger_Essence_14_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 21924
+  Name: Ranger_Essence_14_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 40390
+  Name: Ranger_Essence_16_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 17662
+  Name: Ranger_Essence_16_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 24995
+  Name: Ranger_Essence_16_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 164
+  Name: Ranger_Essence_18_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2912
+  Name: Ranger_Essence_20_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3183
+  Name: Ranger_Essence_20_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 13936
+  Name: Ranger_Essence_20_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 614
+  Name: Ranger_Essence_22_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 6822
+  Name: Ranger_Essence_22_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13513
+  Name: Ranger_Essence_22_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 4265
+  Name: Ranger_Essence_22_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 10846
+  Name: Ranger_Essence_22_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 8518
+  Name: Ranger_Essence_22_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 15466
+  Name: Ranger_Essence_22_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5042
+  Name: Ranger_Essence_24_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 16947
+  Name: Ranger_Essence_24_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17387
+  Name: Ranger_Essence_24_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8926
+  Name: Ranger_Essence_24_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 10622
+  Name: Ranger_Essence_24_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 6710
+  Name: Ranger_Essence_26_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5189
+  Name: Ranger_Essence_26_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 17234
+  Name: Ranger_Essence_26_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 10114
+  Name: Ranger_Essence_28_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 31866
+  Name: Ranger_Essence_28_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 11554
+  Name: Ranger_Essence_28_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 17948
+  Name: Ranger_Essence_30_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13006
+  Name: Ranger_Essence_30_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4424
+  Name: Ranger_Essence_30_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 496
+  Name: Ranger_Essence_30_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 19412
+  Name: Ranger_Essence_30_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 13852
+  Name: Ranger_Essence_32_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2755
+  Name: Ranger_Essence_32_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4620
+  Name: Ranger_Essence_32_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 14072
+  Name: Ranger_Essence_32_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 6043
+  Name: Ranger_Essence_32_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 19199
+  Name: Ranger_Essence_32_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 4890
+  Name: Ranger_Essence_32_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 13827
+  Name: Ranger_Essence_34_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3832
+  Name: Ranger_Essence_34_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8017
+  Name: Ranger_Essence_34_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 39983
+  Name: Ranger_Essence_36_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2918
+  Name: Ranger_Essence_38_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 33551
+  Name: Ranger_Essence_38_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19462
+  Name: Ranger_Essence_38_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 17425
+  Name: Ranger_Essence_38_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19539
+  Name: Ranger_Essence_38_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 16178
+  Name: Ranger_Essence_40_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 11485
+  Name: Ranger_Essence_40_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 15044
+  Name: Ranger_Essence_40_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 14272
+  Name: Ranger_Essence_42_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 16566
+  Name: Ranger_Essence_42_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 905
+  Name: Ranger_Essence_42_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 6690
+  Name: Ranger_Essence_44_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 18709
+  Name: Ranger_Essence_44_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 20538
+  Name: Ranger_Essence_44_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19202
+  Name: Ranger_Essence_44_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8331
+  Name: Ranger_Essence_44_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 10928
+  Name: Ranger_Essence_44_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 11177
+  Name: Ranger_Essence_44_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 5218
+  Name: Ranger_Essence_46_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 10199
+  Name: Ranger_Essence_46_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 23860
+  Name: Ranger_Essence_46_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 29277
+  Name: Ranger_Essence_48_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 15776
+  Name: Ranger_Essence_48_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 6038
+  Name: Ranger_Essence_48_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14785
+  Name: Ranger_Essence_48_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 10518
+  Name: Ranger_Essence_48_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 11494
+  Name: Ranger_Essence_48_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14736
+  Name: Ranger_Essence_48_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 15408
+  Name: Ranger_Essence_50_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 20536
+  Name: Ranger_Essence_50_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13636
+  Name: Ranger_Essence_50_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 15184
+  Name: Ranger_Essence_50_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 842
+  Name: Ranger_Essence_50_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 14590
+  Name: Ranger_Essence_50_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 22587
+  Name: Ranger_Essence_50_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 13357
+  Name: Ranger_Essence_52_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5406
+  Name: Ranger_Essence_52_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 7956
+  Name: Ranger_Essence_52_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 11738
+  Name: Ranger_Essence_52_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 25287
+  Name: Ranger_Essence_52_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 13528
+  Name: Ranger_Essence_54_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 35252
+  Name: Ranger_Essence_54_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 37924
+  Name: Ranger_Essence_54_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 13104
+  Name: Ranger_Essence_54_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 3846
+  Name: Ranger_Essence_54_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 9971
+  Name: Ranger_Essence_56_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 13719
+  Name: Ranger_Essence_58_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 14398
+  Name: Ranger_Essence_58_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 16639
+  Name: Ranger_Essence_58_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 10228
+  Name: Ranger_Essence_58_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19533
+  Name: Ranger_Essence_58_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 16843
+  Name: Ranger_Essence_60_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 1604
+  Name: Ranger_Essence_60_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 18695
+  Name: Ranger_Essence_60_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14142
+  Name: Ranger_Essence_60_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 22877
+  Name: Ranger_Essence_60_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 17903
+  Name: Ranger_Essence_60_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 20366
+  Name: Ranger_Essence_60_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 17014
+  Name: Ranger_Essence_62_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 6587
+  Name: Ranger_Essence_62_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 20636
+  Name: Ranger_Essence_62_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 37896
+  Name: Ranger_Essence_62_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8663
+  Name: Ranger_Essence_62_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 25574
+  Name: Ranger_Essence_62_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 21702
+  Name: Ranger_Essence_62_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 23478
+  Name: Ranger_Essence_64_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 12094
+  Name: Ranger_Essence_64_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17547
+  Name: Ranger_Essence_64_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 18048
+  Name: Ranger_Essence_64_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 17546
+  Name: Ranger_Essence_64_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3802
+  Name: Ranger_Essence_66_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 7683
+  Name: Ranger_Essence_66_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 21949
+  Name: Ranger_Essence_66_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 28786
+  Name: Ranger_Essence_66_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 13468
+  Name: Ranger_Essence_66_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3262
+  Name: Sorcerer_Essence_0_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 412
+  Name: Sorcerer_Essence_2_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 13552
+  Name: Sorcerer_Essence_2_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 6117
+  Name: Sorcerer_Essence_2_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 39856
+  Name: Sorcerer_Essence_4_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 21791
+  Name: Sorcerer_Essence_4_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 22449
+  Name: Sorcerer_Essence_4_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 40838
+  Name: Sorcerer_Essence_4_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 2618
+  Name: Sorcerer_Essence_4_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 11538
+  Name: Sorcerer_Essence_6_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 8920
+  Name: Sorcerer_Essence_6_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 25112
+  Name: Sorcerer_Essence_6_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 5578
+  Name: Sorcerer_Essence_6_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 16054
+  Name: Sorcerer_Essence_6_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 21693
+  Name: Sorcerer_Essence_8_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 22388
+  Name: Sorcerer_Essence_8_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 20460
+  Name: Sorcerer_Essence_8_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 5382
+  Name: Sorcerer_Essence_10_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 8915
+  Name: Sorcerer_Essence_10_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 4731
+  Name: Sorcerer_Essence_10_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 250
+  Name: Sorcerer_Essence_12_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 23801
+  Name: Sorcerer_Essence_12_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 2339
+  Name: Sorcerer_Essence_12_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 9485
+  Name: Sorcerer_Essence_12_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 891
+  Name: Sorcerer_Essence_12_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 31333
+  Name: Sorcerer_Essence_14_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 9018
+  Name: Sorcerer_Essence_14_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 41776
+  Name: Sorcerer_Essence_14_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 16275
+  Name: Sorcerer_Essence_14_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 19192
+  Name: Sorcerer_Essence_14_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 20705
+  Name: Sorcerer_Essence_16_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 6317
+  Name: Sorcerer_Essence_16_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 27286
+  Name: Sorcerer_Essence_16_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 10842
+  Name: Sorcerer_Essence_18_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 10200
+  Name: Sorcerer_Essence_20_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4583
+  Name: Sorcerer_Essence_20_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8780
+  Name: Sorcerer_Essence_20_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 27602
+  Name: Sorcerer_Essence_22_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 16645
+  Name: Sorcerer_Essence_22_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13482
+  Name: Sorcerer_Essence_22_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 12161
+  Name: Sorcerer_Essence_22_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 23087
+  Name: Sorcerer_Essence_22_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14606
+  Name: Sorcerer_Essence_22_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 16626
+  Name: Sorcerer_Essence_22_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19292
+  Name: Sorcerer_Essence_24_0
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 41734
+  Name: Sorcerer_Essence_24_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 43076
+  Name: Sorcerer_Essence_24_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 40498
+  Name: Sorcerer_Essence_24_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 26978
+  Name: Sorcerer_Essence_24_12
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 19020
+  Name: Sorcerer_Essence_26_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 26094
+  Name: Sorcerer_Essence_26_6
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 1455
+  Name: Sorcerer_Essence_26_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 26870
+  Name: Sorcerer_Essence_28_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17028
+  Name: Sorcerer_Essence_28_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 13005
+  Name: Sorcerer_Essence_28_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 4548
+  Name: Sorcerer_Essence_30_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 5095
+  Name: Sorcerer_Essence_30_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17146
+  Name: Sorcerer_Essence_30_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 26805
+  Name: Sorcerer_Essence_30_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 16852
+  Name: Sorcerer_Essence_30_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 501
+  Name: Sorcerer_Essence_32_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 25496
+  Name: Sorcerer_Essence_32_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 25484
+  Name: Sorcerer_Essence_32_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 35257
+  Name: Sorcerer_Essence_32_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8452
+  Name: Sorcerer_Essence_32_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 6181
+  Name: Sorcerer_Essence_32_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 42608
+  Name: Sorcerer_Essence_32_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 38272
+  Name: Sorcerer_Essence_34_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 29495
+  Name: Sorcerer_Essence_34_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 21785
+  Name: Sorcerer_Essence_34_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 13494
+  Name: Sorcerer_Essence_36_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 29009
+  Name: Sorcerer_Essence_38_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 24298
+  Name: Sorcerer_Essence_38_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 28108
+  Name: Sorcerer_Essence_38_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2552
+  Name: Sorcerer_Essence_38_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 29918
+  Name: Sorcerer_Essence_38_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 28123
+  Name: Sorcerer_Essence_40_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 4232
+  Name: Sorcerer_Essence_40_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 2669
+  Name: Sorcerer_Essence_40_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 34507
+  Name: Sorcerer_Essence_42_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 27851
+  Name: Sorcerer_Essence_42_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 5112
+  Name: Sorcerer_Essence_42_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 32541
+  Name: Sorcerer_Essence_44_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 34915
+  Name: Sorcerer_Essence_44_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 38662
+  Name: Sorcerer_Essence_44_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 31157
+  Name: Sorcerer_Essence_44_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 29098
+  Name: Sorcerer_Essence_44_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 14696
+  Name: Sorcerer_Essence_44_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 1501
+  Name: Sorcerer_Essence_44_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 18406
+  Name: Sorcerer_Essence_46_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 28292
+  Name: Sorcerer_Essence_46_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 38554
+  Name: Sorcerer_Essence_46_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 9104
+  Name: Sorcerer_Essence_48_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 11881
+  Name: Sorcerer_Essence_48_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 504
+  Name: Sorcerer_Essence_48_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 9854
+  Name: Sorcerer_Essence_48_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 14484
+  Name: Sorcerer_Essence_48_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 5521
+  Name: Sorcerer_Essence_48_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 20642
+  Name: Sorcerer_Essence_48_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 11464
+  Name: Sorcerer_Essence_50_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13018
+  Name: Sorcerer_Essence_50_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 19851
+  Name: Sorcerer_Essence_50_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 13830
+  Name: Sorcerer_Essence_50_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 22090
+  Name: Sorcerer_Essence_50_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 34858
+  Name: Sorcerer_Essence_50_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 20146
+  Name: Sorcerer_Essence_50_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 41648
+  Name: Sorcerer_Essence_52_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 9953
+  Name: Sorcerer_Essence_52_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 17452
+  Name: Sorcerer_Essence_52_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 17436
+  Name: Sorcerer_Essence_52_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 36528
+  Name: Sorcerer_Essence_52_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 8326
+  Name: Sorcerer_Essence_54_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 2643
+  Name: Sorcerer_Essence_54_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 2314
+  Name: Sorcerer_Essence_54_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 39797
+  Name: Sorcerer_Essence_54_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 39659
+  Name: Sorcerer_Essence_54_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 22857
+  Name: Sorcerer_Essence_56_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 35148
+  Name: Sorcerer_Essence_58_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 33764
+  Name: Sorcerer_Essence_58_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 8485
+  Name: Sorcerer_Essence_58_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 38654
+  Name: Sorcerer_Essence_58_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 23533
+  Name: Sorcerer_Essence_58_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 31946
+  Name: Sorcerer_Essence_60_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 6082
+  Name: Sorcerer_Essence_60_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 15555
+  Name: Sorcerer_Essence_60_4
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 38634
+  Name: Sorcerer_Essence_60_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 25724
+  Name: Sorcerer_Essence_60_8
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 32776
+  Name: Sorcerer_Essence_60_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+  AbilityIcon: /Game/UI/Proficiency_SP/MasteryEssence_CoolTime_Sprite.MasteryEssence_CoolTime_Sprite
+- Id: 30984
+  Name: Sorcerer_Essence_60_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 39702
+  Name: Sorcerer_Essence_62_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 13681
+  Name: Sorcerer_Essence_62_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 33780
+  Name: Sorcerer_Essence_62_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 40555
+  Name: Sorcerer_Essence_62_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 22303
+  Name: Sorcerer_Essence_62_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 22511
+  Name: Sorcerer_Essence_62_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 14636
+  Name: Sorcerer_Essence_62_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 1093
+  Name: Sorcerer_Essence_64_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 151
+  Name: Sorcerer_Essence_64_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 8131
+  Name: Sorcerer_Essence_64_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 37813
+  Name: Sorcerer_Essence_64_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 22520
+  Name: Sorcerer_Essence_64_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 43016
+  Name: Sorcerer_Essence_66_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 7837
+  Name: Sorcerer_Essence_66_2
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 22653
+  Name: Sorcerer_Essence_66_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 10432
+  Name: Sorcerer_Essence_66_10
+  Icon:
+  IconBg: None
+  LockedIcon:
+- Id: 25025
+  Name: Sorcerer_Essence_66_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 31848
+  Name: Assassin_Essence_0_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 34835
+  Name: Assassin_Essence_2_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 2461
+  Name: Assassin_Essence_2_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 24466
+  Name: Assassin_Essence_2_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 26346
+  Name: Assassin_Essence_4_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 194
+  Name: Assassin_Essence_4_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 3861
+  Name: Assassin_Essence_4_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 27590
+  Name: Assassin_Essence_4_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 21122
+  Name: Assassin_Essence_4_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 8247
+  Name: Assassin_Essence_6_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 10328
+  Name: Assassin_Essence_6_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 40109
+  Name: Assassin_Essence_6_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 27866
+  Name: Assassin_Essence_6_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 12210
+  Name: Assassin_Essence_6_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 37730
+  Name: Assassin_Essence_8_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 30157
+  Name: Assassin_Essence_8_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 27019
+  Name: Assassin_Essence_8_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 42485
+  Name: Assassin_Essence_10_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 29028
+  Name: Assassin_Essence_10_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 38594
+  Name: Assassin_Essence_10_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 12083
+  Name: Assassin_Essence_12_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 33729
+  Name: Assassin_Essence_12_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 32871
+  Name: Assassin_Essence_12_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 39632
+  Name: Assassin_Essence_12_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 46114
+  Name: Assassin_Essence_12_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 41772
+  Name: Assassin_Essence_14_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 37944
+  Name: Assassin_Essence_14_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 20176
+  Name: Assassin_Essence_14_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 22314
+  Name: Assassin_Essence_14_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 34903
+  Name: Assassin_Essence_14_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 42476
+  Name: Assassin_Essence_16_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 43958
+  Name: Assassin_Essence_16_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 3533
+  Name: Assassin_Essence_16_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 34052
+  Name: Assassin_Essence_18_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 20471
+  Name: Assassin_Essence_20_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 35338
+  Name: Assassin_Essence_20_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 12867
+  Name: Assassin_Essence_20_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 34156
+  Name: Assassin_Essence_22_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 45592
+  Name: Assassin_Essence_22_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 9836
+  Name: Assassin_Essence_22_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 40496
+  Name: Assassin_Essence_22_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 16073
+  Name: Assassin_Essence_22_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 8057
+  Name: Assassin_Essence_22_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 25195
+  Name: Assassin_Essence_22_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 28192
+  Name: Assassin_Essence_24_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 19714
+  Name: Assassin_Essence_24_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 38610
+  Name: Assassin_Essence_24_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 25875
+  Name: Assassin_Essence_24_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 11015
+  Name: Assassin_Essence_24_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 15537
+  Name: Assassin_Essence_26_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 47842
+  Name: Assassin_Essence_26_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 33222
+  Name: Assassin_Essence_26_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 36829
+  Name: Assassin_Essence_28_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 24076
+  Name: Assassin_Essence_28_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 48155
+  Name: Assassin_Essence_28_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 4909
+  Name: Assassin_Essence_30_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 19443
+  Name: Assassin_Essence_30_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 45551
+  Name: Assassin_Essence_30_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 43155
+  Name: Assassin_Essence_30_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 8244
+  Name: Assassin_Essence_30_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 869
+  Name: Assassin_Essence_32_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 36547
+  Name: Assassin_Essence_32_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 36073
+  Name: Assassin_Essence_32_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 31194
+  Name: Assassin_Essence_32_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 19517
+  Name: Assassin_Essence_32_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 7682
+  Name: Assassin_Essence_32_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 1502
+  Name: Assassin_Essence_32_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 47074
+  Name: Assassin_Essence_34_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 20797
+  Name: Assassin_Essence_34_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 49723
+  Name: Assassin_Essence_34_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 60
+  Name: Assassin_Essence_36_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 41037
+  Name: Assassin_Essence_38_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 14721
+  Name: Assassin_Essence_38_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 24713
+  Name: Assassin_Essence_38_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 22278
+  Name: Assassin_Essence_38_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 10995
+  Name: Assassin_Essence_38_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3311
+  Name: Assassin_Essence_40_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 26462
+  Name: Assassin_Essence_40_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 16958
+  Name: Assassin_Essence_40_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 9897
+  Name: Assassin_Essence_42_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 32388
+  Name: Assassin_Essence_42_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 1688
+  Name: Assassin_Essence_42_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 30875
+  Name: Assassin_Essence_44_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 38160
+  Name: Assassin_Essence_44_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 17166
+  Name: Assassin_Essence_44_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 1379
+  Name: Assassin_Essence_44_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 3764
+  Name: Assassin_Essence_44_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 43487
+  Name: Assassin_Essence_44_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 50677
+  Name: Assassin_Essence_44_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2276
+  Name: Assassin_Essence_46_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 6610
+  Name: Assassin_Essence_46_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 8670
+  Name: Assassin_Essence_46_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 21497
+  Name: Assassin_Essence_48_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 22017
+  Name: Assassin_Essence_48_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 14271
+  Name: Assassin_Essence_48_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 15475
+  Name: Assassin_Essence_48_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 36575
+  Name: Assassin_Essence_48_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 334
+  Name: Assassin_Essence_48_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 42518
+  Name: Assassin_Essence_48_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 7709
+  Name: Assassin_Essence_50_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 53324
+  Name: Assassin_Essence_50_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 45323
+  Name: Assassin_Essence_50_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 32035
+  Name: Assassin_Essence_50_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 9206
+  Name: Assassin_Essence_50_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 35193
+  Name: Assassin_Essence_50_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 51394
+  Name: Assassin_Essence_50_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 2908
+  Name: Assassin_Essence_52_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 16435
+  Name: Assassin_Essence_52_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 12687
+  Name: Assassin_Essence_52_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 19457
+  Name: Assassin_Essence_52_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 38119
+  Name: Assassin_Essence_52_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 30769
+  Name: Assassin_Essence_54_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 29238
+  Name: Assassin_Essence_54_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 16987
+  Name: Assassin_Essence_54_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 43617
+  Name: Assassin_Essence_54_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 5916
+  Name: Assassin_Essence_54_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 7830
+  Name: Assassin_Essence_56_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 906
+  Name: Assassin_Essence_58_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 45696
+  Name: Assassin_Essence_58_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 11848
+  Name: Assassin_Essence_58_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 25335
+  Name: Assassin_Essence_58_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 52362
+  Name: Assassin_Essence_58_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 3056
+  Name: Assassin_Essence_60_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 54151
+  Name: Assassin_Essence_60_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3788
+  Name: Assassin_Essence_60_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 36338
+  Name: Assassin_Essence_60_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 50881
+  Name: Assassin_Essence_60_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 9413
+  Name: Assassin_Essence_60_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 30600
+  Name: Assassin_Essence_60_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 11649
+  Name: Assassin_Essence_62_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 55596
+  Name: Assassin_Essence_62_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 11984
+  Name: Assassin_Essence_62_4
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalDefence.Mastery_Stat_CriticalDefence
+  IconBg: Blue
+  LockedIcon:
+- Id: 33865
+  Name: Assassin_Essence_62_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 38158
+  Name: Assassin_Essence_62_8
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Regen.Mastery_Stat_Regen
+  IconBg: Green
+  LockedIcon:
+- Id: 26406
+  Name: Assassin_Essence_62_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 2458
+  Name: Assassin_Essence_62_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 46911
+  Name: Assassin_Essence_64_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 3745
+  Name: Assassin_Essence_64_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 1860
+  Name: Assassin_Essence_64_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 12922
+  Name: Assassin_Essence_64_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 12009
+  Name: Assassin_Essence_64_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:
+- Id: 47249
+  Name: Assassin_Essence_66_0
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Attack.Mastery_Stat_Attack
+  IconBg: Blue
+  LockedIcon:
+- Id: 1452
+  Name: Assassin_Essence_66_2
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_CriticalAttack.Mastery_Stat_CriticalAttack
+  IconBg: Blue
+  LockedIcon:
+- Id: 54748
+  Name: Assassin_Essence_66_6
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Defence.Mastery_Stat_Defence
+  IconBg: Red
+  LockedIcon:
+- Id: 40179
+  Name: Assassin_Essence_66_10
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_SkillCost.Mastery_Stat_SkillCost
+  IconBg: Green
+  LockedIcon:
+- Id: 42813
+  Name: Assassin_Essence_66_12
+  Icon: /Game/UIIcon/Mastery/Mastery_Stat_Special.Mastery_Stat_Special
+  IconBg: Green
+  LockedIcon:

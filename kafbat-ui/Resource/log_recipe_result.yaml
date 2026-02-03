@@ -1,0 +1,6 @@
+- Name: RECIPE_SUCCESS
+  Value: 0
+- Name: RECIPE_GREAT_SUCCESS
+  Value: 1
+- Name: RECIPE_FAILURE
+  Value: 2

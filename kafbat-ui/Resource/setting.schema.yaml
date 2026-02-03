@@ -1,0 +1,465 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - OwnerBound
+    - Type
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      enum:
+        - ScanFilterBoss
+        - ScanFilterSiege
+        - ScanFilterPc
+        - ScanFilterBattlePc
+        - ScanFilterAlertPc
+        - ScanFilterSameParty
+        - ScanFilterExternalServer
+        - ScanFilterHostilityGuild
+        - ScanFilterAllyGuild
+        - ScanFilterHostilityCharacter
+        - ScanFilterAllyCharacter
+        - ScanFilterEtcPc
+        - ScanFilterNpc
+        - ScanFilterBattleNpc
+        - ScanFilterQuest
+        - ScanFilterAggressive
+        - ScanFilterEtcNpc
+        - ScanFilterFriend
+        - ScanFilterEnemy
+        - ScanFilterOutlaw
+        - ScanOptionShareRecv
+        - ScanOptionShareSend
+        - ScanOptionAltitude
+        - ScanOptionScanEffect
+        - ScanOptionAccentTarget
+        - ScanOptionTablink
+        - ScanOptionAutoCycleIndex
+        - StealMode
+        - ShowHuntingzoneGuide
+        - HpPotionPlus
+        - LastDailyQuestTabOpenDate
+        - TargetHoldMode
+        - AutomaticallyAttackPartyTarget
+        - SetPartyTargetOnAttack
+        - DisassembleFilterGradeCommon
+        - DisassembleFilterGradeUncommon
+        - DisassembleFilterGradeRare
+        - DisassembleFilterGradeEpic
+        - DisassembleFilterGradeLegendary
+        - DisassembleFilterEnchant
+        - DisassembleFilterEngrave
+        - InGameShopSaveAutoBuyItems
+        - BmShopBuyInBulk
+        - ChattingTab
+        - ChattingMecro
+        - MasterPresetSlotNames
+        - SettingUIBegin
+        - SettingAcquisitionUIBegin
+        - bShowNameOfDropItem
+        - bAddChatOnAcquireItem
+        - ItemGradeOfNotifyWhenAcquireItem
+        - bFirstAcquireItemOnBattle
+        - ItemGradeOfAcquireItem
+        - ItemGradeOfAcquireMaterial
+        - bAcquireHpPotion
+        - SettingAcquisitionUIEnd
+        - SettingBattleUIBegin
+        - bAutoUseHpPotion
+        - SelectedHpPotionIndex
+        - NextHpPotion
+        - HpRateToUseHpPotionOnBattle
+        - bOffHpLimitOnPvp
+        - MpRateToMaintainOnBattle
+        - bOffMpLimitOnPvp
+        - bOffMpLimitOnUseBuffSkill
+        - bUseBuffSkillOnSafetyZone
+        - bUseMannerMode
+        - bUseMannerModeExcludeParty
+        - bUseMannerModeExcludeGuild
+        - bUseMannerModeExcludeFriendly
+        - bUseMannerModeExcludeHostile
+        - RangeOfSearchTarget
+        - SettingBattleUIEnd
+        - SettingConvenienceUIBegin
+        - bUseVirtualPad
+        - bKeepAutoBattleOnMoving
+        - bKeepTargetOnClickLand
+        - bKeepTargetOnMovingByUser
+        - bShowMyHpBar
+        - ShowPcNameState
+        - bShowNpcName
+        - ReceptionInvitePartyState
+        - PowerSavingModeTimeSconds
+        - bOffPowerSavingModeOnDamagedByPc
+        - bOffPowerSavingModeOnDeath
+        - bShowPopupOfUseTradableItemOnCraft
+        - bShowPopupOfEnchantItem
+        - bSkipMergeSequence
+        - bSkipSpawnPolymorphSequence
+        - bShowKeyboardKey
+        - bShowIndicatorDecal
+        - SettingConvenienceUIEnd
+        - SettingEnvironmentUIBegin
+        - GraphicQuality
+        - Upscale
+        - FrameRateLimit
+        - bShowOnlyEssencialEffect
+        - UISize
+        - ColorVisionDeficiency
+        - bFullScreenMode
+        - Resolution
+        - bMuteAllSound
+        - AllSoundVolume
+        - bMuteBackGroundSound
+        - BackGroundSoundVolume
+        - bMuteEffectSound
+        - EffectSoundVolume
+        - bMuteNotificationSound
+        - NotificationSoundVolume
+        - bMuteEnvironmentSound
+        - EnvironmentSoundVolume
+        - bMuteUISound
+        - UISoundVolume
+        - bUseSoundOnDisableGame
+        - CameraShakePlayType
+        - SettingEnvironmentUIEnd
+        - SettingNotificationUIBegin
+        - bNotifyOnLowHp
+        - bVibrateOnLowHp
+        - NotificationTypeOnLowHp
+        - HpRateToNotify
+        - bNotifyOnDamagedByPc
+        - bVibrateOnDamagedByPc
+        - NotificationTypeOnDamagedByPc
+        - bUseAppPushOnDaytime
+        - bUseAppPushOnNightTime
+        - bNotifyWhenSellItem
+        - SettingNotificationUIEnd
+        - ScanOnAttackTarget
+        - SettingAttackTargetUIBegin
+        - AttackingMePcOnAttackTarget
+        - HostilePcOnAttackTarget
+        - AroundPcAttackTarget
+        - AttackingMeMonsterOnAttackTarget
+        - QuestMonsterOnAttackTarget
+        - AggressiveMonsterOnAttackTarget
+        - NormalMonserOnAttackTarget
+        - SettingAttackTargetUIEnd
+        - SettingAutoBattleTargetUIBegin
+        - AttackingMeMonsterOnAutoBattle
+        - QuestMonsterOnAutoBattle
+        - AggressiveMonsterOnAutoBattle
+        - NormalMonsterOnAutoBattle
+        - SettingAutoBattleTargetUIEnd
+        - SettingSearchTargetUIBegin
+        - ScanOnSearchTarget
+        - ScanOnScanSearchTarget
+        - AttackingMePcOnSearchTarget
+        - HostilePcOnSearchTarget
+        - AroundPcOnSearchTarget
+        - AttackingMeMonsterOnSearchTarget
+        - QuestMonsterOnSearchTarget
+        - AggressiveMonsterOnSearchTarget        
+        - NormalMonsterOnSearchTarget
+        - SettingSearchTargetUIEnd
+        - MPMaintain
+        - PvPMPMaintainOnOff
+        - BuffMPMaintainOnOff
+        - SafetyMPMaintainOnOff
+        - MannerModeOnOff
+        - MannerModeParty
+        - MannerModeGuild
+        - MannerModeExceptFriendship
+        - MannerModeExceptHostile
+        - FindTargetRangeBorderless
+        - GetAutoEquipmentAll
+        - GetAutoEquipmentUncommon
+        - GetAutoEquipmentRare
+        - GetAutoIngredientAll
+        - GetAutoIngredientUncommon
+        - GetAutoIngredientRare
+        - GetAutoHealingPotionOnOff
+        - PriorityInstantlyAttackScanNumber
+        - PriorityInstantlyAttackAttackedCharacter
+        - PriorityInstantlyAttackExceptHostile
+        - PriorityInstantlyAttackAdjacencyCharacter
+        - PriorityInstantlyAttackAttackedMonster
+        - PriorityInstantlyAttackQuestMonster
+        - PriorityInstantlyAttackAggressiveMonster
+        - PriorityInstantlyAttackMonster
+        - PriorityAutoHuntingAttackedMonster
+        - PriorityAutoHuntingQuestMonster
+        - PriorityAutoHuntingAggressiveMonster
+        - PriorityTabChangeScanNumber
+        - PriorityTabChangeAttackedCharacter
+        - PriorityTabChangeExceptHostile
+        - PriorityTabChangeAdjacencyCharacter
+        - PriorityTabChangeAttackedMonster
+        - PriorityTabChangeQuestMonster
+        - PriorityTabChangeAggressiveMonster
+        - PriorityTabChangeMonster
+        - Relationship_AllowReceiveProposal
+        - SettingInputKeyStart  # 단축키 설정 시작
+                                # InputKey+@ 형식으로 추가, @는 client_input_action.yaml과 통일
+        - InputKeyMoveUp
+        - InputKeyMoveDown
+        - InputKeyMoveRight
+        - InputKeyMoveLeft
+        - InputKeyUseQuickSlot1
+        - InputKeyUseQuickSlot2
+        - InputKeyUseQuickSlot3
+        - InputKeyUseQuickSlot4
+        - InputKeyUseQuickSlot5
+        - InputKeyUseQuickSlot6
+        - InputKeyUseQuickSlot7
+        - InputKeyUseQuickSlot8
+        - InputKeyQuickSlotPageUp
+        - InputKeyQuickSlotPageDown
+        - InputKeyTogglePowerSaving
+        - InputKeyToggleSkill
+        - InputKeyToggleWorldMap
+        - InputKeyToggleQuest
+        - InputKeyToggleCharacterInfo
+        - InputKeyToggleInventory
+        - InputKeyToggleBattleGroundScoreBoard
+        - InputKeyToggleAutoCombat
+        - InputKeyAttack
+        - InputKeyCounterAttack
+        - InputKeyPickupItem
+        - InputKeyOpenChat
+        - InputKeyChangeTarget
+        - InputKeyResetTarget
+        - InputKeyActiveScan
+        - InputKeySelectScanTarget1
+        - InputKeySelectScanTarget2
+        - InputKeySelectScanTarget3
+        - InputKeySelectScanTarget4
+        - InputKeySelectScanTarget5
+        - InputKeySelectScanTarget6
+        - InputKeySelectScanTarget7
+        - InputKeySelectScanTarget8
+        - InputKeyTargetParty1
+        - InputKeyTargetParty2
+        - InputKeyTargetParty3
+        - InputKeyTargetParty4
+        - InputKeyTargetParty5
+        - InputKeyRequestPartyTarget
+        - InputKeyApplyPreset1
+        - InputKeyApplyPreset2
+        - InputKeyApplyPreset3
+        - InputKeyApplyPreset4
+        - InputKeyApplyPreset5
+        - InputKeyReturnToHome
+        - InputKeyToggleBMShop
+        - InputKeyToggleBuffList
+        - InputKeyToggleCamera
+        - InputKeyTogglePartyManagement
+        - InputKeySkinEmotion1
+        - SettingInputKeyEnd  # 단축키 설정 끝
+        - SettingUIEnd # 설정 관련 Setting 은 반드시 위로 추가 해주셔야 합니다.
+        - CollectionGuideFirst
+        - MergeGuideFirst
+        - MasteryGuideFirst
+        - HuntingZoneGuideFirst
+        - TradeGuideFirst
+        - BMShopGuideFirst       
+        - StorageBegin
+        - bStorageEquipCommon
+        - bStorageEquipUncommon
+        - bStorageEquipRare
+        - bStorageEquipEpic
+        - bStorageEquipLegendary
+        - bStorageSkillBookCommon
+        - bStorageSkillBookUncommon
+        - bStorageSkillBookRare
+        - bStorageSkillBookEpic
+        - bStorageSkillBookLegendary
+        - bStorageExpendablesHpPotion
+        - bStorageExpendablesBuff
+        - bStorageExpendablesTeleport
+        - bStorageExpendablesDungeonCharge
+        - bStorageExpendablesMerge
+        - bStorageGrowthEnchant
+        - bStorageGrowthEngrave
+        - bStorageGrowthSkillEnchant
+        - bStorageGrowthMastery
+        - bStorageGrowthAwakening
+        - bStorageCollectionComplete
+        - bStorageCollectionIncomplete
+        - bStorageCollectionEquipComplete
+        - bStorageCollectionEquipIncomplete
+        - bStorageCraftCommon
+        - bStorageCraftUncommon
+        - bStorageCraftRare
+        - bStorageCraftEpic
+        - bStorageCraftLegendary
+        - bStorageFortressFast
+        - StorageEnd
+        - CombinationAnimSkip
+        - CombinationSymbolChangeSkip
+        - GuildCollectionAddContributeSkip
+        - RequestContentUnlockViewed
+        - QuestChapterUnlockViewed
+        - InventorySortType
+        - AccountStorageSortType
+        - DisassembleFilterCollection
+        - PVPVictoryMessage
+        - PVPVictoryEmoji
+        - PVPDefeatMessage
+        - PVPDefeatEmoji
+        - FlameAwakeningGuideFirst
+        - RuneCombineGuideFirst
+        - PolymorphSkinMergeGuideFirst
+        - FirstEnterAfterGuildJoinFirst
+        - FirstEnterGuildResearchTabAfterUnlockFirst
+        - FirstClickFlameAbsorptionFirst
+        - FirstClickInventorySortFirst
+        - ConfirmedHZPrevGuildRank
+        # 튜토리얼
+        - Mastery_Tutorial                                 # 숙련도
+        - FlameAwakening_Tutorial                          # 각성의 불꽃
+        - RuneCombine_Tutorial                             # 서판 조합
+        - PolymorphSkinMerge_Tutorial                      # 초월/무기외형 합성
+        - PolymorphSkinEnchant_Tutorial                    # 초월/무기외형 성장
+        - FirstEnterAfterGuildJoin_Tutorial                # 길드 가입 후 최초로 길드 화면에 입장
+        - FirstEnterGuildResearchTabAfterUnlock_Tutorial   # 길드 연구 탭의 잠금이 풀리고 최초로 탭에 진입 했을 때
+        - FirstClickFlameAbsorptionFirst_Tutorial          # 자각의 불꽃 ‘흡수’ 버튼 최초 클릭
+        - FirstClickInventorySortFirst_Tutorial            # 인벤토리의 정렬 드랍다운 버튼 해금 시 최초 클릭 
+        - ItemRandomOption_Tutorial                        # 아이템 랜덤 옵션
+        - RequestRefresh_Tutorial                          # 의뢰 새로고침
+        - Achievement_Tutorial                             # 업적
+        - FusionSkill_Tutorial                             # 스킬 융합
+        - EclipseTime_Tutorial                             # 이클립스 타임
+        - Trade_Tutorial                                   # 거래소
+        - EngraveGuide_Tutorial                            # 세공
+        - Craft_Tutorial                                   # 제작
+        - BMShop_Tutorial                                  # 상점
+        - Collection_Tutorial                              # 수집
+        - Fortress_Tutorial                                # 성소
+        - CheckType                                        # PKLog
+        # 스킨
+        - SkinHideChangeModel
+        - SkinHideAttackEffect
+        - SkinHideDamageFont
+        # 캐릭터인포
+        - bShowFavoriteStat
+        # 잠재력
+        - PotentialAutoManifestSelectedGrade
+        - PotentialAutoManifestSelectedStats
+        - PotentialAutoManifestStopWhenAnyMatch
+        - PotentialGradeCautionPopupSkip
+        # 스킬
+        - SkillPriorityEnabled
+        # 퀘스트
+        - SkipDisableQuests
+        # 스케줄
+        - ScheduleItemQuestDaily
+        - ScheduleItemQuestDailyOrder
+        - ScheduleItemQuestDailyEnabled
+        - ScheduleItemQuestWeekly
+        - ScheduleItemQuestWeeklyOrder
+        - ScheduleItemQuestWeeklyEnabled
+        - ScheduleItemRuinedCastle
+        - ScheduleItemRuinedCastleOrder
+        - ScheduleItemRuinedCastleEnabled
+        - ScheduleItemRuinedCastleDuration
+        - ScheduleItemMiningArea
+        - ScheduleItemMiningAreaDuration
+        - ScheduleItemMiningAreaOrder
+        - ScheduleItemMiningAreaEnabled
+        - ScheduleItemUndeadTemple
+        - ScheduleItemUndeadTempleDuration
+        - ScheduleItemUndeadTempleOrder
+        - ScheduleItemUndeadTempleEnabled
+        - ScheduleItemFallback
+        - ScheduleItemFallbackOrder
+        - ScheduleItemFallbackEnabled
+        - ScheduleStopOnPkDeath
+        - ScheduleStopDeathCount
+        - SchedulePenaltyAutoRestoration
+        - SchedulePenaltyAutoFreeRestoration
+        - SchedulePenaltyAutoGoldRestoration
+        - SchedulePenaltyStopWithoutRestoration
+        - ScheduleAutoHarvest
+        - ScheduleAutoDisassemble
+        - ScheduleAutoDisassembleSlotCount
+        - ScheduleAutoItemBuy
+        - ScheduleAutoItemStore
+    Comment:
+      type:
+        - string
+        - number
+    Parent:
+      type: string
+      ref: setting
+    OwnerBound:
+      type: string
+      enum:
+        - Account
+        - Character
+        - Local
+    PropertyName:
+      type: string
+      ref: property
+    Type:
+      type: string
+      enum:
+        - Integer
+        - Boolean
+        - String
+        - Decimal
+        - Array
+    NoAck: # 이게 true면 서버 응답 없이 UI를 갱신해도 됨
+      type: boolean
+    IntegerDefault:
+      type: integer
+      visible: true
+    BooleanDefault:
+      type: boolean
+      visible: true
+    StringDefault:
+      type: string
+      visible: true
+    DecimalDefault: #10000 분율
+      type: integer
+      visible: true
+    ArrayDefault:
+      type: array
+      visible: true
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Key
+          - Type
+        properties:
+          Key:
+            type: string
+            visible: true
+          Type:
+            type: string
+            enum:
+              - Integer
+              - Boolean
+              - String
+              - Decimal
+          IntegerDefault:
+            type: integer
+            visible: true
+          BooleanDefault:
+            type: boolean
+            visible: true
+          StringDefault:
+            type: string
+            visible: true
+          DecimalDefault: #10000 분율
+            type: integer
+            visible: true

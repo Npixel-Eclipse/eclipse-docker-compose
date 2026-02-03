@@ -1,0 +1,159 @@
+syntax = "proto3";
+package eclipse.client.mail;
+import "google/protobuf/timestamp.proto";
+import "Common/guild_common.proto";
+import "Common/item_common.proto";
+import "Common/mail_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.mail";
+option java_outer_classname = "ClientMailProto";
+
+enum MailResultCode {
+  reserved 11;
+
+  SUCCESS = 0;
+  FAIL = 1;
+
+  SUCCESS_RECEIVE_MAIL = 2;
+  SUCCESS_SEND_LETTER = 3;
+  SUCCESS_READ_LETTER = 4;
+  SUCCESS_DELETE_LETTER = 5;
+
+  FAIL_RECEIVE_MAIL_SLOT_COUNT = 10;
+  FAIL_SEND_LETTER_NO_FEE = 12;
+  FAIL_SEND_LETTER_NO_CHARACTER = 13;
+  FAIL_SEND_LETTER_NO_GUILD = 14;
+  FAIL_SEND_LETTER_BANNED_WORD = 15;
+  FAIL_SEND_LETTER_SEND_LIMIT = 16;
+  FAIL_SEND_LETTER_TITLE_TOO_LONG = 17;
+  FAIL_SEND_LETTER_BODY_TOO_LONG = 18;
+}
+
+message MailRequest {
+  oneof request {
+    Ready ready = 2;
+    List list = 1;
+    History history = 3;
+
+    ReceiveMail receive_mail = 10;
+    ReceiveMails receive_mails = 11;
+
+    SendLetter send_letter = 20;
+    ReadLetter read_letter = 21;
+    ReadLetters read_letters = 22;
+    DeleteLetter delete_letter = 23;
+    DeleteLetters delete_letters = 24;
+  }
+
+  message Ready {}
+
+  message List {}
+
+  message History {
+    common.MailType mail_type = 1;
+  }
+
+  message ReceiveMail {
+    bytes mail_id = 1;
+  }
+
+  message ReceiveMails {
+    common.MailType mail_type = 1;
+  }
+
+  message SendLetter {
+    string title = 1;
+    string body = 2;
+    oneof to {
+      string character_name = 3;
+      string guild_name = 4;
+    }
+  }
+
+  message ReadLetter {
+    bytes letter_id = 1;
+  }
+
+  message ReadLetters {}
+
+  message DeleteLetter {
+    bytes letter_id = 1;
+  }
+
+  message DeleteLetters {}
+}
+
+message MailEvent {
+  oneof event {
+    List list = 1;
+    History history = 6;
+    Mail mail = 2;
+    Letter letter = 3;
+    RedDot red_dot = 4;
+    ClearRedDot clear_red_dot = 5;
+  }
+
+  message List {
+    repeated Mail mails = 1;
+    repeated Letter letters = 2;
+    Limit letter_send_limit = 3;
+
+    message Mail {
+      bytes mail_id = 1;
+      common.MailType mail_type = 2;
+      common.FormattedDescription title = 20;
+      common.FormattedDescription body = 21;
+      common.FormattedDescription sender = 22;
+      repeated common.Item items = 6;
+      google.protobuf.Timestamp delete_time = 7;
+    }
+
+    message Letter {
+      reserved 8;
+      bytes letter_id = 1;
+      common.FormattedDescription title = 20;
+      common.FormattedDescription body = 21;
+      string from_character_name = 4;
+      string from_guild_name = 5;
+      common.GuildMark from_guild_mark = 6;
+      google.protobuf.Timestamp sent_time = 7;
+      bool read = 9;
+      bool by_gm = 10;
+      bool to_guild = 11;
+    }
+
+    message Limit {
+      int64 count = 1;
+      int64 limit = 2;
+    }
+  }
+
+  message History {
+    repeated Mail Mails = 1;
+
+    message Mail {
+      bytes mail_id = 1;
+      common.MailType mail_type = 2;
+      common.FormattedDescription title = 20;
+      common.FormattedDescription body = 21;
+      common.FormattedDescription sender = 22;
+      repeated common.Item items = 6;
+      google.protobuf.Timestamp received_time = 7;
+    }
+  }
+
+  message Mail {
+    repeated bytes mail_ids = 1;
+    MailResultCode result = 2;
+  }
+
+  message Letter {
+    repeated bytes letter_ids = 1;
+    MailResultCode result = 2;
+  }
+
+  message RedDot {}
+
+  message ClearRedDot {}
+}

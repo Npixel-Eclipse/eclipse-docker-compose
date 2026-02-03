@@ -1,0 +1,128 @@
+- Id: 768
+  Name: Story_Chapter01
+  Quests:
+    - Name: Main_Ch01_01
+    - Name: Main_Ch01_02
+    - Name: Main_Ch01_03
+    - Name: Main_Ch01_04
+    - Name: Main_Ch01_05
+    - Name: Main_Ch01_06
+    - Name: Main_Ch01_07
+    - Name: Main_Ch01_08
+    - Name: Main_Ch01_09
+    - Name: Main_Ch01_10
+    - Name: Main_Ch01_11
+    - Name: Main_Ch01_12
+    - Name: Main_Ch01_13
+    - Name: Main_Ch01_14
+  Category: Main
+  Description: QuestCategory_Tutorial
+  Comment: 튜토리얼
+- Id: 1274
+  Name: Story_Chapter02
+  Quests:
+    - Name: Main_Ch02_01
+    - Name: Main_Ch02_02
+    - Name: Main_Ch02_03
+    - Name: Main_Ch02_04
+    - Name: Main_Ch02_05
+    - Name: Main_Ch02_06
+    - Name: Main_Ch02_07
+    - Name: Main_Ch02_08
+    - Name: Main_Ch02_09
+  Category: Main
+  Description: Main_CH02_Title
+  Comment: 메인 퀘스트 2
+- Id: 525
+  Name: Story_Chapter03
+  Quests:
+    - Name: Main_Ch03_01
+    - Name: Main_Ch03_02
+    - Name: Main_Ch03_03
+    - Name: Main_Ch03_04
+    - Name: Main_Ch03_05
+    - Name: Main_Ch03_06
+    - Name: Main_Ch03_07
+    - Name: Main_Ch03_08
+    - Name: Main_Ch03_09
+  Category: Main
+  Description: Main_CH03_Title
+  Comment: 메인 퀘스트 3
+- Id: 1437
+  Name: Story_Chapter04
+  Quests:
+    - Name: Main_Ch04_01
+    - Name: Main_Ch04_02
+    - Name: Main_Ch04_03
+    - Name: Main_Ch04_04
+    - Name: Main_Ch04_05
+    - Name: Main_Ch04_06
+    - Name: Main_Ch04_07
+    - Name: Main_Ch04_08
+    - Name: Main_Ch04_09
+    - Name: Main_Ch04_10
+  Category: Main
+  Description: Main_CH05_Title
+  Comment: 메인 퀘스트 4
+- Id: 1124
+  Name: Story_Chapter05
+  Quests:
+    - Name: Main_Ch05_01
+    - Name: Main_Ch05_02
+    - Name: Main_Ch05_03
+    - Name: Main_Ch05_04
+    - Name: Main_Ch05_05
+    - Name: Main_Ch05_06
+    - Name: Main_Ch05_07
+    - Name: Main_Ch05_08
+    - Name: Main_Ch05_09
+    - Name: Main_Ch05_10
+    - Name: Main_Ch05_11
+    - Name: Main_Ch05_12
+    - Name: Main_Ch05_13
+    - Name: Main_Ch05_14
+    - Name: Main_Ch05_15
+    - Name: Main_Ch05_16
+    - Name: Main_Ch05_17
+    - Name: Main_Ch05_18
+  Category: Main
+  Description: Main_CH04_Title
+  Comment: 메인 퀘스트 5
+- Id: 1793
+  Name: Story_Chapter06
+  Quests:
+    - Name: Main_Ch06_01
+    - Name: Main_Ch06_02
+    - Name: Main_Ch06_03
+    - Name: Main_Ch06_04
+    - Name: Main_Ch06_06
+    - Name: Main_Ch06_07
+    - Name: Main_Ch06_08
+  Category: Main
+  Description: Main_CH06_Title
+  Comment: 메인 퀘스트 6
+- Id: 1164
+  Name: Story_Chapter07
+  Quests:
+    - Name: Main_Ch07_01
+    - Name: Main_Ch07_02
+    - Name: Main_Ch07_03
+    - Name: Main_Ch07_04
+    - Name: Main_Ch07_05
+    - Name: Main_Ch07_06
+  Category: Main
+  Description: Main_CH07_Title
+  Comment: 메인 퀘스트 7
+- Id: 806
+  Name: Story_Chapter08
+  Quests:
+    - Name: Main_Ch08_01
+    - Name: Main_Ch08_02
+    - Name: Main_Ch08_03
+    - Name: Main_Ch08_05
+    - Name: Main_Ch08_06
+    - Name: Main_Ch08_07
+    - Name: Main_Ch08_08
+  Category: Main
+  Description: Main_CH08_Title
+  Comment: 메인 퀘스트 8

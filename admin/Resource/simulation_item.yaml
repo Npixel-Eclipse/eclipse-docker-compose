@@ -1,0 +1,31 @@
+- Id: 100000000000
+  Name: Simulation_Transform_Skill_Battle_Item
+  ItemNameDesc: Item_Name_Misc_Consume_Potion_ExpBoost_Extreme_Bounded
+  ItemSummaryDesc: Item_Detail_Misc_Consume_Potion_ExpBoost_Extreme_Bounded
+  Comment: TransformSkill이 ConsumeSkill인 아이템
+  Category: Item_Misc_Consume
+  Grade: Uncommon
+  Icon: /Game/UIIcon/Item/CSM_ExpBoostPotion01.CSM_ExpBoostPotion01
+  DropMesh: /Game/Datas/Drops/DA_SpeedPotion.DA_SpeedPotion
+  CanAuto: true
+  ConsumeSkill: Simulation_Transform_Skill_By_BattleItem
+  StandardCost: 10
+  QuickSlotUse: true
+  IsStackable: true
+  TradeType: Bounded
+- Id: 100000000001
+  Name: Simulation_Potion_Item
+  ItemNameDesc: Item_Name_Item_Use_Potion_G2_T2_02
+  ItemSummaryDesc: Potion_Health_LargeDesc
+  Comment: 최상급 회복 물약
+  Category: Item_Misc_Healing
+  Grade: Common
+  Icon: /Game/UIIcon/Item/CSM_HealthLargePotion_01.CSM_HealthLargePotion_01
+  DropMesh: /Game/Datas/Drops/DA_HealthPotion.DA_HealthPotion
+  CanAuto: true
+  AutoConsumeCondition: IsNotAFK
+  ConsumeSkill: Simulation_Potion_Skill
+  StandardCost: 300
+  QuickSlotUse: true
+  IsStackable: true
+  TradeType: Tradable

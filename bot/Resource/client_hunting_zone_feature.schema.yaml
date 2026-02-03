@@ -1,0 +1,140 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    ClientConstants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - RequestDetailDelayTime #s
+              - HuntingZonePointInfoReqInterval #s
+              - MinIconScale
+              - MaxIconScale
+              - DefaultZoomLevelIndex
+              - LimitContentGuildLevel
+              - PreviousRankCut
+              - ReddotHuntingZoneShop
+              - ReddotHuntingZoneGroupShop
+              - ReddotHuntingZoneBidRequest
+              - ReddotHuntingZoneBidActive
+          Value:
+            type: string
+          IntValue:
+            type: integer
+          DescValue:
+            type: string
+            ref: description
+    Constants:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - HuntingZoneBlindTime
+              - HuntingZonePointPerBidToken
+              - HuntingZoneCurrencyPerBidToken
+              - HuntingZoneTaxFee
+          Value:
+            type: string
+            ref: constants
+          IntValue:
+            type: integer
+    SystemMessage:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - SettlingPhase
+              - DistributingPhase
+              - NotBuyPermitNoOwnerGuild
+              - NoJoinGuild
+              - NoHasBidToken
+              - NoJoinGuildByShop
+              - NotHavePermission
+              - NoJoinGuildInBidding
+              - NoBiddingMembers
+              - CanNotBiddingArea
+              - EndSeason
+              - NextSeason
+              - NotBuyHuntingZonePermit
+              - SuccessTaxRate
+              - SuccessSetPermitCertificatePrice
+              - SuccessSetBuff
+              - SuccessSetTaxRateAndPermitCertificatePrice
+              - HuntingZone_MaxHuntingzone
+          Value:
+            type: string
+            ref: system_message
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Group:
+            type: string
+            enum:
+              - Main
+              - Bidding
+          SubGroup:
+            type: string
+            enum:
+              - Info
+              - Bidding
+              - Guild
+              - GuildMember
+          TabIndex: #위젯 스위쳐 인덱스
+            type: integer
+            minimum: 0
+          DefaultTab:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+        required:
+          - Group
+          - SubGroup
+          - TabIndex
+    BidEndAlert:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Value
+        properties:
+          Value:
+            type: integer
+    ShopType:
+      type: string
+      enum:
+        - HuntingZoneShop
+        - HuntingZoneGroupShop
+    BidTokenCategory:
+      type: string
+      ref: item_category
+  required:
+    - Id
+    - Name

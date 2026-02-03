@@ -1,0 +1,12 @@
+- Id: 1581
+  Name: Merchant_Group_Basic
+  Comment: 기본 상인 그룹
+  MerchantType: Basic
+- Id: 1301
+  Name: Merchant_Group_Guild
+  Comment: 길드 상인 그룹
+  MerchantType: Guild
+- Id: 1561
+  Name: Merchant_Group_Event
+  Comment: 이벤트 상인 그룹
+  MerchantType: Event

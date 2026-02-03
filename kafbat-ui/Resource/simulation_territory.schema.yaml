@@ -1,0 +1,48 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - StartX
+    - StartY
+    - EndX
+    - EndY
+    - Land
+    - IsClientSpawn
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    StartX:
+      type: integer
+    StartY:
+      type: integer
+    EndX:
+      type: integer
+    EndY:
+      type: integer
+    IsClientSpawn:
+      type: boolean
+    Land:
+      type: string
+      ref: land
+    Comment:
+      type: string
+    DescriptionName:
+      type: string
+      ref: description
+    DestinationTerritoryName:
+      type: string
+    Color: # RRGGBBAA 색상값.
+      type: string
+      default: FFFF00FF
+    ChangeName: # 삭제 예정
+      type: string    
+    DisplayGroup:
+      type: string

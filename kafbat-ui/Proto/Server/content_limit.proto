@@ -1,0 +1,12 @@
+
+syntax = "proto3";
+package content_limit;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.contentLimit";
+option java_outer_classname = "ContentLimitProto";
+
+message UnlockedContentEvent {
+    string character_uuid = 1;
+    string content_name = 2;
+}

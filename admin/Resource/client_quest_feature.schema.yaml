@@ -1,0 +1,99 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - FailMessage_InventoryFull
+    - RequestSubTabDaily
+    - RequestSubTabWeekly
+    - SkipFlagQuestCategory
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+
+    #RichText에서 찾을 키.
+    TextStyle:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+           Name: 
+              type: string
+              enum:
+                - QuestMainStyle
+                - QuestSubStyle
+                - QuestDailyStyle
+                - QuestWeeklyStyle
+                - QuestStoryStyle
+                - QuestTutorialStyle
+           Value:
+              type: string
+
+    #DescriptionTable에서 찾을 UniqueID. '눌러서 수락하세요' 같은 곳에 쓰임.
+    Descriptions:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - DailyQuestAcceptCountOver
+              - SubQuestAcceptCountOver
+              - TeleportFail_LackOfMoney
+              - QuestMainContentsTitle_Main
+              - QuestMainContentsTitle_Request
+              - QuestRefreshFailNotEnoughMoney
+              - QuestRefreshLevel_MaxLevel
+              - Request_GetAllRewardPopupTitle
+          Value:
+            type: string
+            ref: description
+    RequestSubTabDaily:
+      type: string
+      ref: description
+    RequestSubTabWeekly:
+      type: string
+      ref: description
+    FailMessage_InventoryFull:
+      type: string
+      ref : system_message
+    SystemMessage:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - QuestCannotActivateAutoMode
+              - TeleportFail_LackOfMoney
+              - Quest_RefreshNotice
+          Value:
+            type: string
+            ref: system_message
+    RefreshDayOfWeek:
+      type: string
+      enum:
+        - MONDAY
+        - TUESDAY
+        - WEDNESDAY
+        - THURSDAY
+        - FRIDAY
+        - SATURDAY
+        - SUNDAY
+    MainQuestCategory:
+      type: string
+      ref: quest_category
+    SkipFlagQuestCategory:
+      type: string
+      ref: quest_category

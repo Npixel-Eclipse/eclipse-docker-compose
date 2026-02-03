@@ -1,0 +1,46 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - OwnerBound
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name: #이름을 변경하면 리소스 수정도 해야함
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    TitleDescription:
+      type: string
+      ref: description
+    SummaryDescription:
+      type: string
+      ref: description
+    SystemMessage:
+      type: string
+      ref: system_message
+    ShowAlert:
+      type: boolean
+      default: true
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명    !!! UI 팀 문의 !!!
+      type: string
+    Quest:
+      type: string
+      ref: quest
+    OwnerBound:
+      type: string
+      enum:
+        - Account
+        - Character
+        - Guild
+        - Server
+    OnlyClientLimit: #클라이언트에서만 제한하는 경우 사용, OnlyClientLimit가 true인 경우 퀘스트 서버에서 해당 컨텐츠가 해금 되었는지 클라에게 전송함, 별도의 서버 제한 기능은 없음 
+      type: boolean
+    LimitGroup:
+      type: string

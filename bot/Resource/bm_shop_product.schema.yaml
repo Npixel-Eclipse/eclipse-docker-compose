@@ -1,0 +1,193 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Rewards:
+      type: array
+      items:
+        type: object
+        properties:
+          RewardType:
+            type: string
+            enum: 
+              - item
+              - recipe_output
+          RewardName:
+            type: string
+            selectable_ref: true
+            ref_column: RewardType
+          Amount:
+            type: integer
+          SubscribePayment:
+            type: boolean
+        required:
+          - RewardType
+          - RewardName
+          - Amount
+    Cost:
+      type: object
+      properties:
+        ItemName:
+            type: string
+            ref: item
+        Amount:
+          type: integer
+      required:
+        - ItemName
+        - Amount
+    Billing:
+      type: string
+      enum:
+        - STOVE
+      visible: true
+    DoNotStore: # 현금 상품은 기본적으로 보관함으로 가지만, 현금 상품임에도 보관함으로 가지 않아야 하는 경우에만 세팅
+      type: boolean
+    StartDate:
+      type: string
+      format: date-time
+    EndDate:
+      type: string
+      format: date-time
+    CompareItem:
+      type: array
+      items:
+        type: object
+        properties:
+          Item:
+            type: string
+            ref: item
+        required:
+          - Item
+    CompareProduct:
+      type: array
+      items:
+        type: object
+        properties:
+          Product:
+            type: string
+            ref: bm_shop_product
+        required:
+          - Product
+    GuildReward:
+      type: array
+      items:
+        type: object
+        properties:
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type: integer
+        required:
+          - Item
+          - Amount
+    LimitType:
+      type: string
+      enum:
+        - Character
+        - AccountServer
+        - AccountAllServer
+    LimitAmount:
+      type: integer
+    LimitRefreshType:
+      type: string
+      enum:
+        - None
+        - Daily
+        - Weekly
+        - Monthly
+        - Permanent
+        - Day28
+    MinLevel:
+      type: integer
+    MaxLevel:
+      type: integer
+    StepProperty:
+      type: object
+      properties:
+        StepIndex:
+          type: integer
+        StepGroup:
+          type: string
+      required:
+        - StepIndex
+        - StepGroup
+    MultiPurchasable:
+      type: boolean
+    Description:
+      type: string
+      ref: description
+    SlotType:
+      type: string
+      enum:
+        - Normal
+        - Special
+    SlotSize:
+      type: string
+      enum:
+        - Small
+        - Medium
+        - Large
+    SlotTag:
+      type: array
+      items:
+        type: string
+        enum:
+          - New
+          - Hot
+          - Event
+    DisplayImage:
+      type: string
+    DisplayTab:
+      type: string
+      ref: bm_shop_category
+    DisplayOrder:
+      type: integer
+    EventBannerImage:
+      type: string
+    LimitRank :
+      type: integer
+    LimitRankingType:
+      type: string
+      enum:
+        - Pvp
+        - Combat
+        - Guild
+        - Fortress
+    HotDealTime:
+      type: integer
+      minimum: 1
+    PurchaseTerms:
+      type: string
+      ref: quest
+    HotDealBackground:
+      type: string
+    HotDealDescription:
+      type: string
+      ref: description
+    Compensation:
+      type: string
+      ref: bm_shop_compensation
+    Comment:
+      type: string
+  required:
+    - Id
+    - Name
+    - Rewards
+    - Cost
+    - SlotType
+    - SlotSize
+    - DisplayImage
+    - DisplayTab
+    - DisplayOrder
+    - LimitRefreshType

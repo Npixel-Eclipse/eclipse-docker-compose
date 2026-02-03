@@ -1,0 +1,139 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    FavoriteID:
+      type: string
+      ref: favorite
+    UITypes:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          UIType: 
+            type: string
+            enum:
+              - PartyMemberInfo
+              - AbyssInfo
+              - BossInfo
+              - MapPinPoint
+              - WorldBossInfo
+          ZOrder:
+            type: integer
+          Value:
+            type: string
+    ConstantValue:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MinScale
+              - MaxScale
+              - ScaleStep
+              - DefaultIndex
+          Value:
+            type: string
+          IntValue:
+            type: integer
+    WorldmapRightTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+            enum:
+              - ItemInfo
+              - MonterInfo
+          Description:
+            type: string
+            ref: description
+    WorldmapAreaInfoTab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+            enum:
+              - All
+              - Saved
+          Description:
+            type: string
+            ref: description
+    WorldMapUIState:
+      type: array
+      items: 
+        type: object
+        additionalProperties: false
+        properties:
+          Index:
+            type: integer
+          ShowIconType:
+              type: array
+              items: 
+                additionalProperties: false
+                type: string
+                enum:
+                  - County
+                  - Province
+                  - Realm
+                  - Continent # 이 위에 순서는 바꾸지 말것
+                  - HotSpot
+                  - Abyss
+                  - Boss
+                  - MapPinPoint
+          ShowIcon:
+            type: boolean
+            default: true
+          ShowNameTag:
+            type: boolean
+            default: true
+    PositionSharedDescription:
+      type: string
+      ref: description
+    WorldMapClipping:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Left:
+            type: number
+          Right:
+            type: number
+          Top:
+            type: number
+          Bottom:
+            type: number
+    WorldMapTooltipText:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name:
+            type: string
+            enum:
+              - WorldBoss
+              - Abyss
+          Description:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name

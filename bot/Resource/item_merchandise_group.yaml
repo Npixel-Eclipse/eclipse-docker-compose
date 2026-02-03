@@ -1,0 +1,158 @@
+- Id: 1
+  Name: Basic_Goods_Merchandises
+  ItemCategories:
+    - Item_Currency
+    - Item_Misc_Healing
+    - Item_Misc
+    - Item_Craft
+  Comment: 기본 잡화 상품 리스트
+- Id: 2
+  Name: Basic_Armor_Merchandises
+  ItemCategories:
+    - Item_Equip_Armor
+  Comment: 기본 방어구 상품 리스트
+- Id: 3
+  Name: Basic_Accessory_Merchandises
+  ItemCategories:
+    - Item_Equip_Accessory
+  Comment: 기본 악세서리 상품 리스트
+- Id: 4
+  Name: Basic_SkillBook_Merchandises
+  ItemCategories:
+    - Skill_Book_Fighter
+    - Skill_Book_Ranger
+    - Skill_Book_Sorcerer
+  Comment: 기본 스킬북 상품 리스트
+- Id: 5804
+  Name: Basic_SkillBook_Fighter_Merchandises
+  Class: Fighter
+  Comment: 기본 스킬북(파이터) 상품 리스트
+- Id: 8271
+  Name: Basic_SkillBook_Ranger_Merchandises
+  Class: Ranger
+  Comment: 기본 스킬북(레인저) 상품 리스트
+- Id: 2668
+  Name: Basic_SkillBook_Sorcerer_Merchandises
+  Class: Sorcerer
+  Comment: 기본 스킬북(위자드) 상품 리스트
+- Id: 5
+  Name: Basic_Union_Merchandises
+  ItemCategories:
+    - Item_Equip
+  Comment: 기본 아이템 통합 상품 리스트
+- Id: 4046
+  Name: Basic_Guild_Merchandises
+  ItemCategories:
+    - Item
+  Comment: 길드 상인 상품 리스트
+- Id: 10195
+  Name: Basic_Guild_Merchandises_Fighter
+  Class: Fighter
+  Comment: 길드 상인 상품 리스트(파이터)
+- Id: 3591
+  Name: Basic_Guild_Merchandises_Ranger
+  Class: Ranger
+  Comment: 길드 상인 상품 리스트(레인저)
+- Id: 2210
+  Name: Basic_Guild_Merchandises_Sorcerer
+  Class: Sorcerer
+  Comment: 길드 상인 상품 리스트(위자드)
+- Id: 162
+  Name: Merchant_Guild_Trat
+  ItemCategories:
+    - Item
+  Comment: 길드 특성 상품 리스트
+- Id: 9265
+  Name: Merchant_Guild_Trait_01
+  ItemCategories:
+    - Item
+  Comment: 길드 특성 상품 리스트
+- Id: 6808
+  Name: Merchant_Guild_Trait_02
+  ItemCategories:
+    - Item
+  Comment: 길드 특성 상품 리스트
+- Id: 1090
+  Name: Merchant_Guild_Trait_03
+  ItemCategories:
+    - Item
+  Comment: 길드 특성 상품 리스트
+- Id: 7746
+  Name: Merchant_Guild_Trait_04
+  ItemCategories:
+    - Item
+  Comment: 길드 특성 상품 리스트
+- Id: 864
+  Name: Basic_BattleGround_Merchandises
+  ItemCategories:
+    - Item
+  Comment: 전장의 증표 상인 상품 리스트
+- Id: 9397
+  Name: Basic_BattleGround_Merchandises_Fighter
+  Class: Fighter
+  Comment: 전장의 증표 상인 상품 리스트(파이터)
+- Id: 1233
+  Name: Basic_BattleGround_Merchandises_Ranger
+  Class: Ranger
+  Comment: 전장의 증표 상인 상품 리스트(레인저)
+- Id: 8015
+  Name: Basic_BattleGround_Merchandises_Sorcerer
+  Class: Sorcerer
+  Comment: 전장의 증표 상인 상품 리스트(위자드)
+- Id: 6
+  Name: Basic_SkillEnchant_Merchandises
+  ItemCategories:
+    - Item_Misc_Upgrade_Skill_Enchant_All
+  Comment: 스킬 강화석 상품 리스트
+- Id: 7
+  Name: Basic_Dia_Merchandises
+  ItemCategories:
+    - Item_Misc_Consume
+    - Item_Craft
+  Comment: 다이아 상품 리스트 (임시)
+- Id: 16
+  Name: Basic_Weapon_Merchandises
+  ItemCategories:
+    - Item_Equip
+  Comment: 무기 상품 리스트
+- Id: 2007
+  Name: Basic_Challenge_Merchandises
+  ItemCategories:
+    - Item
+  Comment: 도전 던전 상인 상품 리스트
+- Id: 4881
+  Name: HuntingZone_Owner_A_Merchandises
+  Comment: (테스트) 영토 소유 상점_A 세부 권역
+- Id: 2460
+  Name: HuntingZone_Owner_B_Merchandises
+  Comment: (테스트) 영토 소유 상점_B 세부 권역
+- Id: 7794
+  Name: HuntingZone_A_Merchandises
+  Comment: (테스트) 특산품 상점_A 세부 권역
+- Id: 8814
+  Name: HuntingZone_B_Merchandises
+  Comment: (테스트) 특산품 상점_B 세부 권역
+- Id: 811
+  Name: HuntingZone_Owner_1_Merchandises
+  Comment: (테스트) 영토 소유 상점_1 세부 권역
+- Id: 1873
+  Name: HuntingZone_Owner_2_Merchandises
+  Comment: (테스트) 영토 소유 상점_2 세부 권역
+- Id: 1697
+  Name: HuntingZone_1_Merchandises
+  Comment: (테스트) 특산품 상점_1 세부 권역
+- Id: 1089
+  Name: HuntingZone_2_Merchandises
+  Comment: (테스트) 특산품 상점_2 세부 권역
+- Id: 2699
+  Name: HuntingZone_Owner_3_Merchandises
+  Comment: (테스트) 영토 소유 상점_3 세부 권역
+- Id: 1237
+  Name: HuntingZone_Owner_4_Merchandises
+  Comment: (테스트) 영토 소유 상점_4 세부 권역
+- Id: 2353
+  Name: HuntingZone_3_Merchandises
+  Comment: (테스트) 특산품 상점_3 세부 권역
+- Id: 2836
+  Name: HuntingZone_4_Merchandises
+  Comment: (테스트) 특산품 상점_4 세부 권역

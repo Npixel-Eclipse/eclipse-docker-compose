@@ -1,0 +1,701 @@
+- Id: 1
+  Name: Bag
+  Comment: 기본 가방
+  ItemCategories:
+    - Item
+    - Item_Equip
+    - Item_Currency
+    - Item_Misc_Healing
+    - Item_Misc
+    - Item_Craft
+    - Item_Misc_BidToken
+    - Item_Misc_Upgrade_Awakening
+    - Item_Misc_Upgrade_Awareness
+  AllowUseItem: true
+  AllowDelete: true
+  IsSortable: true
+  SlotCount: 100
+  SlotExpand:
+    - Id: 777
+      ExpandLevel: 1
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 50000
+    - Id: 101
+      ExpandLevel: 2
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 50000
+    - Id: 54
+      ExpandLevel: 3
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 50000
+    - Id: 59
+      ExpandLevel: 4
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 50000
+    - Id: 178
+      ExpandLevel: 5
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 50000
+    - Id: 243
+      ExpandLevel: 6
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 100000
+    - Id: 63
+      ExpandLevel: 7
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 100000
+    - Id: 449
+      ExpandLevel: 8
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 100000
+    - Id: 173
+      ExpandLevel: 9
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 100000
+    - Id: 88
+      ExpandLevel: 10
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 100000
+    - Id: 535
+      ExpandLevel: 11
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 150000
+    - Id: 964
+      ExpandLevel: 12
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 150000
+    - Id: 849
+      ExpandLevel: 13
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 150000
+    - Id: 730
+      ExpandLevel: 14
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 150000
+    - Id: 453
+      ExpandLevel: 15
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 150000
+    - Id: 389
+      ExpandLevel: 16
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 200000
+    - Id: 688
+      ExpandLevel: 17
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 200000
+    - Id: 1426
+      ExpandLevel: 18
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 200000
+    - Id: 1118
+      ExpandLevel: 19
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 200000
+    - Id: 65
+      ExpandLevel: 20
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 200000
+    - Id: 1050
+      ExpandLevel: 21
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 250000
+    - Id: 1651
+      ExpandLevel: 22
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 250000
+    - Id: 471
+      ExpandLevel: 23
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 250000
+    - Id: 848
+      ExpandLevel: 24
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 250000
+    - Id: 1109
+      ExpandLevel: 25
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 250000
+    - Id: 375
+      ExpandLevel: 26
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 300000
+    - Id: 742
+      ExpandLevel: 27
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 300000
+    - Id: 2002
+      ExpandLevel: 28
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 300000
+    - Id: 1351
+      ExpandLevel: 29
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 300000
+    - Id: 444
+      ExpandLevel: 30
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 300000
+    - Id: 693
+      ExpandLevel: 31
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 400000
+    - Id: 1392
+      ExpandLevel: 32
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 400000
+    - Id: 2565
+      ExpandLevel: 33
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 400000
+    - Id: 17
+      ExpandLevel: 34
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 400000
+    - Id: 2240
+      ExpandLevel: 35
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 400000
+    - Id: 397
+      ExpandLevel: 36
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 500000
+    - Id: 1631
+      ExpandLevel: 37
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 500000
+    - Id: 1654
+      ExpandLevel: 38
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 500000
+    - Id: 608
+      ExpandLevel: 39
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 500000
+    - Id: 1839
+      ExpandLevel: 40
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyGold
+      ExpandCost: 500000
+  BroadcastOnAcquire: true
+- Id: 26
+  Name: AccountStorage
+  Comment: 창고
+  OwnerType: Account
+  ItemCategories:
+    - Item
+  IsSortable: true
+  SlotCount: 50
+  SlotExpand:
+    - Id: 1
+      ExpandLevel: 1
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 25
+    - Id: 97
+      ExpandLevel: 2
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 25
+    - Id: 108
+      ExpandLevel: 3
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 25
+    - Id: 192
+      ExpandLevel: 4
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 25
+    - Id: 301
+      ExpandLevel: 5
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 25
+    - Id: 140
+      ExpandLevel: 6
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 50
+    - Id: 351
+      ExpandLevel: 7
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 50
+    - Id: 78
+      ExpandLevel: 8
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 50
+    - Id: 707
+      ExpandLevel: 9
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 50
+    - Id: 383
+      ExpandLevel: 10
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 50
+    - Id: 588
+      ExpandLevel: 11
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 75
+    - Id: 277
+      ExpandLevel: 12
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 75
+    - Id: 380
+      ExpandLevel: 13
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 75
+    - Id: 1170
+      ExpandLevel: 14
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 75
+    - Id: 184
+      ExpandLevel: 15
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 75
+    - Id: 213
+      ExpandLevel: 16
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 100
+    - Id: 1036
+      ExpandLevel: 17
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 100
+    - Id: 41
+      ExpandLevel: 18
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 100
+    - Id: 1255
+      ExpandLevel: 19
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 100
+    - Id: 666
+      ExpandLevel: 20
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 100
+    - Id: 1972
+      ExpandLevel: 21
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 125
+    - Id: 337
+      ExpandLevel: 22
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 125
+    - Id: 1108
+      ExpandLevel: 23
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 125
+    - Id: 1700
+      ExpandLevel: 24
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 125
+    - Id: 2296
+      ExpandLevel: 25
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 125
+    - Id: 362
+      ExpandLevel: 26
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 150
+    - Id: 1947
+      ExpandLevel: 27
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 150
+    - Id: 850
+      ExpandLevel: 28
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 150
+    - Id: 2468
+      ExpandLevel: 29
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 150
+    - Id: 256
+      ExpandLevel: 30
+      AdditionalSlot: 5
+      ExpandCurrency: CurrencyDiamond
+      ExpandCost: 150
+- Id: 362
+  Name: AccountWallet
+  Comment: "다이아, 마일리지 가방"
+  OwnerType: Account
+  ItemCategories:
+    - Item_Currency_Diamond
+    - Item_Currency_Mileage
+  BroadcastOnAcquire: true
+- Id: 169
+  Name: Polymorph
+  Comment: 초월 모음
+  OwnerType: Account
+  ItemCategories:
+    - Polymorph
+  RegisterItem: true
+  BroadcastOnAcquire: true
+- Id: 165
+  Name: Skill
+  Comment: 스킬 모음
+  ItemCategories:
+    - Skill
+  RegisterItem: true
+- Id: 210
+  Name: WeaponPolymorph
+  Comment: 무기 외형
+  OwnerType: Account
+  ItemCategories:
+    - WeaponPolymorph
+  RegisterItem: true
+  BroadcastOnAcquire: true
+- Id: 1768
+  Name: Skin
+  Comment: 스킨
+  OwnerType: Account
+  ItemCategories:
+    - Skin
+- Id: 292
+  Name: Independent
+  Comment: 무소속 아이템들
+  ItemCategories:
+    - Independent
+    - Item_Misc
+    - Penalty_Experience
+    - Penalty_Item
+    - HuntingZone_Owner
+  Evict: Oldest
+  SlotCount: 5
+- Id: 249
+  Name: LostExperience
+  Comment: 경험치 손실 복구 아이템들
+  ItemCategories:
+    - Item_Misc
+    - Penalty_Experience
+  Evict: Oldest
+  SpecialItem:
+    - Item: DailyGoldRestorationCount
+      Type: DailyGoldRestorationCount
+      MaxCount: 5
+    - Item: DailyFreeRestorationCount
+      Type: DailyFreeRestorationCount
+      MaxCount: 5
+    - Item: DieCount
+      Type: DieCount
+      MaxCount: 5
+  SlotCount: 10
+- Id: 291
+  Name: LostItem
+  Comment: 아이템 손실 복구 아이템들
+  ItemCategories:
+    - Item_Misc
+    - Penalty_Item
+  Evict: Oldest
+  SpecialItem:
+    - Item: DailyGoldRestorationCount
+      Type: DailyGoldRestorationCount
+      MaxCount: 5
+    - Item: DailyFreeRestorationCount
+      Type: DailyFreeRestorationCount
+      MaxCount: 5
+    - Item: DieCount
+      Type: DieCount
+      MaxCount: 5
+  SlotCount: 10
+- Id: 1655
+  Name: Mastery
+  Comment: 숙련도 모음
+  ItemCategories:
+    - Mastery
+- Id: 1656
+  Name: Mastery_Essence
+  Comment: 숙련도 정수 모음
+  ItemCategories:
+    - Mastery_Essence
+- Id: 781
+  Name: RecipeReroll_Polymorph
+  Comment: 초월 확정대기/다시뽑기
+  OwnerType: Account
+  ItemCategories:
+    - RecipeReroll_Polymorph
+- Id: 1066
+  Name: RecipeReroll_WeaponPolymorph
+  Comment: 무기외형 확정대기/다시뽑기
+  OwnerType: Account
+  ItemCategories:
+    - RecipeReroll_WeaponPolymorph
+- Id: 906
+  Name: MergePoint
+  Comment: 초월 실패 포인트
+  OwnerType: Account
+  ItemCategories:
+    - MergePoint
+- Id: 568
+  Name: Combination
+  Comment: 조합식
+  OwnerType: Account
+  ItemCategories:
+    - Combination
+- Id: 571
+  Name: Awakening
+  Comment: 각성
+  ItemCategories:
+    - Item_Misc_Upgrade_Awakening
+    - Item_Potential_Page
+- Id: 577
+  Name: Guild
+  Comment: 길드
+  ItemCategories:
+    - Guild
+- Id: 205
+  Name: Awareness
+  Comment: 자각
+  ItemCategories:
+    - Awareness
+- Id: 578
+  Name: GuildStorage
+  Comment: 길드 창고
+  OwnerType: Guild
+  ItemCategories:
+    - Guild
+  SlotCount: 30
+  SlotExpand:
+    - Id: 1
+      ExpandLevel: 1
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 1000
+    - Id: 97
+      ExpandLevel: 2
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 2000
+    - Id: 108
+      ExpandLevel: 3
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 3000
+    - Id: 192
+      ExpandLevel: 4
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 4000
+    - Id: 301
+      ExpandLevel: 5
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 5000
+    - Id: 140
+      ExpandLevel: 6
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 6000
+    - Id: 351
+      ExpandLevel: 7
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 7000
+    - Id: 78
+      ExpandLevel: 8
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 8000
+    - Id: 707
+      ExpandLevel: 9
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 9000
+    - Id: 383
+      ExpandLevel: 10
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 10000
+    - Id: 588
+      ExpandLevel: 11
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 11000
+    - Id: 277
+      ExpandLevel: 12
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 12000
+    - Id: 380
+      ExpandLevel: 13
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 13000
+    - Id: 1170
+      ExpandLevel: 14
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 14000
+    - Id: 184
+      ExpandLevel: 15
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 15000
+    - Id: 213
+      ExpandLevel: 16
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 16000
+    - Id: 1036
+      ExpandLevel: 17
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 17000
+    - Id: 41
+      ExpandLevel: 18
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 18000
+    - Id: 1255
+      ExpandLevel: 19
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 19000
+    - Id: 666
+      ExpandLevel: 20
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 20000
+    - Id: 1972
+      ExpandLevel: 21
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 21000
+    - Id: 337
+      ExpandLevel: 22
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 22000
+    - Id: 1108
+      ExpandLevel: 23
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 23000
+    - Id: 1700
+      ExpandLevel: 24
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 24000
+    - Id: 2296
+      ExpandLevel: 25
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 25000
+    - Id: 362
+      ExpandLevel: 26
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 26000
+    - Id: 1947
+      ExpandLevel: 27
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 27000
+    - Id: 850
+      ExpandLevel: 28
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 28000
+    - Id: 2468
+      ExpandLevel: 29
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 29000
+    - Id: 256
+      ExpandLevel: 30
+      AdditionalSlot: 5
+      ExpandCurrency: Guild_Point
+      ExpandCost: 30000
+- Id: 1038
+  Name: GuildQuestRewardBox
+  Comment: 길드 퀘스트 보상
+  ItemCategories:
+    - Guild_Quest_Reward_Box
+  AllowUseItem: true
+  AllowDelete: true
+  SlotCount: 10
+  ClearPolicy: OnGuildLeave
+- Id: 546
+  Name: GuildHuntingZoneDistribution
+  Comment: 길드 영토 소유 결과 분배
+  OwnerType: Guild
+  ItemCategories:
+    - Guild
+- Id: 1396
+  Name: Seasonpass
+  Comment: 시즌 패스 (테스트)
+  OwnerType: Account
+  ItemCategories:
+    - SeasonpassTicket
+- Id: 2178
+  Name: SubscribeCharacter
+  Comment: 구독권 및 구독아이템 보관함 (캐릭터)
+  ItemCategories:
+    - SubscribeTicket
+- Id: 221
+  Name: SubscribeAccount
+  Comment: 구독권 및 구독아이템 보관함 (계정)
+  OwnerType: Account
+  ItemCategories:
+    - SubscribeTicket

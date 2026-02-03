@@ -1,0 +1,26 @@
+- Id: 3
+  Name: Point
+  Comment: 길드 포인트
+  Type: Currency
+  LinkedItem: Guild_Point
+- Id: 4
+  Name: Experience
+  Comment: 길드 경험치
+  Type: None
+  LinkedItem: Guild_Experiece
+- Id: 5
+  Name: Contribution
+  Comment: 길드 기여도
+  Type: None
+  Weekly: true
+  LinkedItem: Guild_Contribution
+- Id: 6
+  Name: HuntingZonePoint
+  Comment: 영토 소유 포인트
+  Type: None
+  LinkedItem: Guild_HuntingZonePoint
+- Id: 7
+  Name: Guild_Raid_Contribution
+  Comment: 길드 레이드 기여도
+  Type: None
+  LinkedItem: Guild_Contribution

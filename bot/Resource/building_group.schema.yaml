@@ -1,0 +1,159 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - NameDesc
+    - Comment
+    - RepresentativeBuilding
+    - UpgradeCost
+    - Construction
+    - Effect
+    - WorldMapArea
+    - Icon
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    NameDesc:
+      type: string
+      ref: description
+    Comment:
+      type: string
+    ContentLimit:
+      type: string
+      ref: content_limit
+    RepresentativeBuilding:
+      type: string
+      ref: building
+    Harvest:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Item
+          - IntervalSecond
+          - Amount
+          - MaxStackCount
+          - IsAutoStart
+        properties:
+          Level:
+            type: integer
+            minimum: 1
+          Item:
+            type: string
+            ref: item
+          IntervalSecond:
+            type: integer # in seconds
+            minimum: 1
+          Amount:
+            type: integer
+            minimum: 1
+          MaxStackCount:
+            type: integer
+            minimum: 1
+          IsAutoStart:
+            type: boolean
+    HarvestCost:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Item
+          - Cost
+        properties:
+          Level:
+            type: integer
+          Item:
+            type: string
+            ref: item
+          Cost:
+            type: integer
+            minimum: 0
+    UpgradeCost:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Items
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Items:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - Item
+                - Cost
+              properties:
+                Item:
+                  type: string
+                  ref: item
+                Cost:
+                  type: integer
+                  minimum: 1
+    Construction:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - DurationSecond
+        properties:
+          Level:
+            type: integer
+          DurationSecond:
+            type: integer
+            minimum: 1
+    WorldMapArea:
+      type: string
+      ref: worldmap_area
+    Icon:
+      type: string      
+    Buffs:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - BuffList
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          BuffList:
+            type: array
+            items:
+              type: string
+              ref: buff
+    Effect:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Level
+          - Asset
+        properties:
+          Level:
+            type: integer
+            minimum: 0
+          Asset:
+            type: string

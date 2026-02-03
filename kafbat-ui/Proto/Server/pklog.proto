@@ -1,0 +1,190 @@
+syntax = "proto3";
+package pklog;
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.pklog";
+option java_outer_classname = "PkLogProto";
+
+import "Common/callback.proto";
+import "Common/item_common.proto";
+
+enum ResultCode {
+  SUCCESS = 0;
+  FAIL = 1;
+  FAIL_EXCEEDED_TRACE_COUNT = 2; // 추적 회수 부족
+}
+
+enum Reason {
+  ENOUGH_ITEM = 0;
+  NOT_ENOUGH_ITEM = 1;
+  NOT_EXIST_CHARACTER = 2;
+}
+
+// key: Account Id
+message PkLogAccountCommand {
+  message PayCostReply {
+    string character_uuid = 1;
+    ResultCode result_code = 2;
+    Reason reason = 3;
+    bytes pk_log_uuid = 4;
+    optional string description = 5;
+    optional int64 emoji = 6;
+    optional int64 title = 7;
+    string killer_name = 8;
+    string victim_name = 9;
+    string victim_character_uuid = 10;
+  }
+
+  message ConsumeTraceCostReply {
+    string pk_log_uuid = 1;
+    string character_uuid = 2;
+    bool success = 3;
+    int64 killer_account_id = 4;
+    string killer_character_uuid = 5;
+
+    repeated Coordinate coordinates = 6;
+    int64 channel_entity_id = 7;
+    int64 land_id = 8;
+
+    message Coordinate {
+      int32 x = 1;
+      int32 y = 2;
+    }
+  }
+
+  message ConsumeTraceCountReply {
+    string pk_log_uuid = 1;
+    string character_uuid = 2;
+    int64 killer_account_id = 3;
+    string killer_character_uuid = 4;
+  }
+
+  // key: killer account id
+  message ValidateTraceable {
+    string pk_log_uuid = 1;
+    int64 killer_account_id = 2;
+    string killer_character_uuid = 3;
+    int64 tracer_account_id = 4;
+    string tracer_character_uuid = 5;
+  }
+
+  message ForwardPkLogEvent {
+    string character_uuid = 1;
+    repeated bytes pk_log_event = 2;
+  }
+
+  // key: tracer account id
+  message ValidatePkLogTraceableReply {
+    Result result = 1;
+    repeated Coordinate coordinates = 2;
+    int64 channel_entity_id = 3;
+    int64 land_id = 4;
+
+    string pk_log_uuid = 10;
+    int64 killer_account_id = 11;
+    string killer_character_uuid = 12;
+    int64 tracer_account_id = 13;
+    string tracer_character_uuid = 14;
+
+    enum Result {
+      SUCCESS = 0;
+      FAIL = 1;
+      FAIL_CHARACTER_NOT_FOUND = 2;
+      FAIL_NOT_TRACEABLE_ADDRESS = 3; // 추적 금지 구역
+      FAIL_NOT_TRACEABLE_CONDITION = 4; // 추적이 불가능한 상황
+    }
+
+    message Coordinate {
+      int32 x = 1;
+      int32 y = 2;
+    }
+  }
+
+  message TraceTeleportReply {
+    string pk_log_uuid = 1;
+    string tracer_character_uuid = 2;
+    bool success = 3;
+    common.ItemTransactions item_transactions = 4; // 성공시에만 Complete 처리를 위해 존재.
+  }
+
+  message ForwardBattleCommand {
+    string character_uuid = 1;
+    repeated bytes battle_command = 2;
+  }
+
+  message ForwardBuffCommand {
+    string character_uuid = 1;
+    repeated bytes buff_command = 2;
+  }
+
+  oneof command {
+    PayCostReply pay_cost_reply = 1;
+    ConsumeTraceCostReply consume_trace_cost_reply = 2;
+    ConsumeTraceCountReply consume_trace_count_reply = 3;
+    ValidateTraceable validate_traceable = 4;
+    ForwardPkLogEvent forward_pk_log_event = 5;
+    ValidatePkLogTraceableReply validate_pk_log_traceable_reply = 6;
+    TraceTeleportReply trace_teleport_reply = 7;
+    ForwardBattleCommand forward_battle_command = 8;
+    ForwardBuffCommand forward_buff_command = 9;
+  }
+}
+
+// key: PkLog UUID String
+message PkLogCommand {
+  message ConsumeTraceCount {
+    int64 account_id = 1;
+    string character_uuid = 2;
+    common.CallbackCommand callback = 3;
+  }
+
+  message RollbackTraceCount {
+  }
+
+  message Wanted {
+    int64 requester_account_id = 1;
+    string requester_character_uuid = 2;
+  }
+
+  message ConsumeWantedCostReply {
+    string pk_log_uuid = 1;
+    int64 requester_account_id = 4;
+    string requester_character_uuid = 5;
+    bool success = 3;
+  }
+
+  message CheckReactTime {
+    string pk_log_uuid = 1;
+    int64 requester_account_id = 2;
+    string requester_character_uuid = 3;
+    int64 guild_id = 4;
+    int64 target_guild_id = 5;
+
+    common.CallbackCommand callback_command_on_success = 6;
+    common.CallbackCommand callback_command_on_failure = 7;
+  }
+  message TryCompleteWanted {
+    bytes pk_log_uuid = 1;
+    repeated bytes pk_log_uuid_candidates = 2; // pk_log_uuid가 유효하지 않을시 다음 후보 pk_lod_uuid들
+  }
+
+  oneof command {
+    ConsumeTraceCount consume_trace_count = 1;
+    RollbackTraceCount rollback_trace_count = 2;
+    Wanted wanted = 3;
+    ConsumeWantedCostReply consume_wanted_cost_reply = 4;
+    CheckReactTime check_react_time = 5;
+    TryCompleteWanted try_complete_wanted = 6;
+  }
+}
+
+message PkLogResponse {
+  message ConsumeTraceCount {
+    ResultCode result_code = 1;
+    int64 remain_trace_count = 2; // 잔여 추적 회수. (성공한 경우에만 유효함)
+  }
+
+  oneof response {
+    ConsumeTraceCount consume_trace_count = 1;
+  }
+}

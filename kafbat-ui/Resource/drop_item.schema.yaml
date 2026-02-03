@@ -1,0 +1,111 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - DropItems
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    Comment:
+      type: string
+    Npc:
+      type: string
+      ref: npc
+    Address:
+      type: string
+      ref: address
+    PreemptType:
+      type: string
+      default: Contribute
+      description: "Determines who can loot the dropped item based on contribution"
+      enum:
+        - Contribute  # 최고 기여도 (default)
+        - Participant # 참여자
+        - None        # 누구나 습득 가능
+    LootingDelayType:
+      type: string
+      default: None
+      description: "Determines the looting delay calculation method for dropped items"
+      enum:
+        - None
+        - Grade       # `grade.yaml`에 명시된 `DefaultLootingDelay` 컬럼 값 적용 (아이템 등급 별 기본 루팅 딜레이 값 선택)
+        - Forced      # 아이템 등급 별 루팅 딜레이 값에 따르지 않고 `ForcedLootingDelayTime`에 명시된 루팅 딜레이 값 선택
+    ForcedLootingDelayTime:
+      type: integer
+      default: 0
+    GroupProbability:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Group
+        properties:
+          Group:
+            type: integer
+            minimum: 1
+          GroupProbability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+    DropItems:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Item
+          - Amount
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Item:
+            type: string
+            ref: item
+          Amount:
+            type:
+              - string
+              - integer
+            formula: true
+          MinAmount:
+            type: integer
+          MaxAmount:
+            type: integer
+          Group:
+            type: integer
+            minimum: 1
+            visible: true
+          Probability:
+            type: string
+            default: 100%
+            pattern: ^[1-9]?[0-9](\.[0-9][0-9]*)?%$
+            visible: true
+          AutoRewardMethod:
+            type: string
+            default: None
+            enum:
+              - None          # 자동 보상 X
+              - LastAttacker  # 마지막 타격 보상
+              - Participant   # 참여 보상
+          DropRange:  
+            type: integer
+            default: 1
+          DropAmount:
+            type: integer
+            default: 1
+          IgnoreMainRewardDisplay: # 월드맵/던전의 아이템 정보에서 아이템을 표시하지 않고자 할 때 사용
+            type: boolean
+            visible: false

@@ -1,0 +1,65 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Path
+    - PathProperty
+    - Condition
+  properties: 
+    Id: 
+      type: integer
+      minimum: 1
+    Name: 
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Path: 
+      type: string
+    PathProperty: 
+      type: array
+      dynamic_property: true
+      items:
+        type: object
+        additionalProperties: false
+        properties: 
+          Class:
+            type: string
+            visible: true
+          Property:
+            type: string
+            visible: true
+    BindArrayClass: 
+      type: string
+      visible: true
+    BindArrayProperty: 
+      type: string
+      visible: true
+    Condition: 
+      type: array
+      dynamic_property: true
+      items:
+        type: object
+        additionalProperties: false
+        properties: 
+          Class:
+            type: string
+            visible: true
+          Property:
+            type: string
+            visible: true
+          ComparisonType:
+            type: string
+            visible: true
+            enum:
+              - None          # true/false
+              - Less          # <
+              - LessEqual     # <=
+              - Greater       # >
+              - GreaterEqual  # >=
+              - Equal         # ==
+              - NotEqual      # !=
+
+

@@ -1,0 +1,16 @@
+- Id: 1000000001
+  Name: Test_Servant_AddedDamage_Group
+  Comment: Test scenario servant copy group - AddedDamage only
+  Properties:
+    - AddedDamage
+- Id: 1000000002
+  Name: Test_Servant_Basic_Group
+  Comment: Test scenario servant copy group - AddedDamage + MaxHp
+  Properties:
+    - AddedDamage
+    - MaxHp
+- Id: 1000000003
+  Name: Test_Servant_MeleeDamage_Group
+  Comment: Test scenario servant copy group - MeleeDamage only
+  Properties:
+    - MeleeDamage

@@ -1,0 +1,20 @@
+- Id: 1
+  Name: OldEyes
+  comment: 노안이 와버린
+  Buff: Scorn_Buff_Test1
+  BuffDuration: 60
+- Id: 2
+  Name: FamilyCurse
+  comment: 3대가 망하는
+  Buff: Scorn_Buff_Test2
+  BuffDuration: 60
+- Id: 3
+  Name: NoPower
+  comment: 버튼 누를 힘도 없는
+  Buff: Scorn_Buff_Test3
+  BuffDuration: 60
+- Id: 4
+  Name: NoMoreLive
+  comment: 살 날이 얼마 남지 않아보이는
+  Buff: Scorn_Buff_Test4
+  BuffDuration: 60

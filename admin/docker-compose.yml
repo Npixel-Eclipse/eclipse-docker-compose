@@ -1,0 +1,21 @@
+version: '3'
+services:
+  admin:
+    image: admin
+    ports:
+      - 8888:8888
+    restart: always
+    working_dir: /app
+    environment:
+      ITEM_URL: 192.168.20.201:8081
+      SESSION_URL: 192.168.20.201:22322
+      MAIL_URL: 192.168.20.201:9012
+      TRADE_URL: 192.168.20.201:8090
+      LOBBY_URL: 192.168.20.201:8082
+      COMPUTERNAME: ECLIPSE
+      TZ: Asia/Seoul
+    volumes:
+      - ./Resource:/app/Resource
+      - ./logs:/app/logs
+      - ./aws_credentials:/root/.aws/credentials
+

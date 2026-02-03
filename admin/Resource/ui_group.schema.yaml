@@ -1,0 +1,16 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+    Type:
+      type: string        # UI Attach 될 때, 같은 그룹에 있는 UI 는 모두 Unload
+      enum:
+        - Group_MainHUD
+        - Group_Popup
+        - Group_ItemInfo
+  required:
+    - Id

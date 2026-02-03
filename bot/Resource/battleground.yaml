@@ -1,0 +1,64 @@
+- Id: 1
+  Name: Battleground_PvPvE_EncroachedUndergroundCastle
+  Comment: 하이리버 전투
+  MapInfo:
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon01.BattleGroundMapIcon01
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_01
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_01
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_01
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon04.BattleGroundMapIcon04
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_02
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_02
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_02
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon02.BattleGroundMapIcon02
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_03
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_03
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_03
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon03.BattleGroundMapIcon03
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_04
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_04
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_04
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon05.BattleGroundMapIcon05
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_05
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_05
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_05
+    - Icon: /Game/UITex/Tex_Dungeon/BattleGroundMapIcon06.BattleGroundMapIcon06
+      IconName: UIWord_BattleGround_HighRiver_MapInfo_IconName_06
+      Summary: UIWord_BattleGround_HighRiver_MapInfo_Summary_06
+      DisplayTerritory: BattleGround_HighRiver_MapInfo_Icon_06
+  GoalScore: 70
+  Duration: 10
+  ResurrectCoolTime: 10
+  Reward:
+    - Comment: 승리팀 전체 보상
+      Target: Win
+      Item: CurrencyBattleGroundToken
+      Amount: 200
+    - Comment: 패배팀 전체 보상
+      Target: Lose
+      Item: CurrencyBattleGroundToken
+      Amount: 100
+    - Comment: 승리팀 1위 보상
+      Target: Win
+      RankStart: 1
+      RankEnd: 1
+      Item: CurrencyBattleGroundToken
+      Amount: 60
+    - Comment: 승리팀 2위 보상
+      Target: Win
+      RankStart: 2
+      RankEnd: 2
+      Item: CurrencyBattleGroundToken
+      Amount: 40
+    - Comment: 승리팀 3위 보상
+      Target: Win
+      RankStart: 3
+      RankEnd: 3
+      Item: CurrencyBattleGroundToken
+      Amount: 20
+    - Comment: 패배팀 1위 보상
+      Target: Lose
+      RankStart: 1
+      RankEnd: 1
+      Item: CurrencyBattleGroundToken
+      Amount: 30

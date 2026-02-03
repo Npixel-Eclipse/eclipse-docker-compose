@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - TargetAwakeningCategory
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    TargetAwakeningCategory:
+      type: string
+      ref: awakening_category
+    TabIcon:
+      type: string
+    DisplayItemName:
+      type: string
+      ref: item
+    Description:
+      type: string
+      ref: description

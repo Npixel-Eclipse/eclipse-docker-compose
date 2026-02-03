@@ -1,0 +1,39 @@
+- Id: 1
+  Name: Quest
+  TextStyle:
+    - Name: QuestMainStyle
+      Value: QuestMain
+    - Name: QuestSubStyle
+      Value: QuestSub
+    - Name: QuestDailyStyle
+      Value: QuestDaily
+    - Name: QuestWeeklyStyle
+      Value: QuestWeekly
+    - Name: QuestStoryStyle
+      Value: QuestStory
+    - Name: QuestTutorialStyle
+      Value: QuestTutorial
+  Descriptions:
+    - Name: DailyQuestAcceptCountOver
+      Value: UIWord_SystemMsg_DailyQuestAcceptCountOver
+    - Name: SubQuestAcceptCountOver
+      Value: UIWord_SystemMsg_SubQuestAcceptCountOver
+    - Name: QuestMainContentsTitle_Main
+      Value: QuestCategory_Title
+    - Name: QuestMainContentsTitle_Request
+      Value: QuestCategory_Request
+    - Name: QuestRefreshFailNotEnoughMoney
+      Value: UIWord_Quest_RefreshFail
+    - Name: QuestRefreshLevel_MaxLevel
+      Value: UIWord_SystemMsg_RequestRefreshCountOver
+    - Name: Request_GetAllRewardPopupTitle
+      Value: UIWord_Request_CompleteAll
+  FailMessage_InventoryFull: QuestFail_Inventory
+  SystemMessage:
+    - Name: QuestCannotActivateAutoMode
+      Value: QuestCannotActivateAutoMode
+    - Name: TeleportFail_LackOfMoney
+      Value: TeleportFail_LackOfMoney
+    - Name: Quest_RefreshNotice
+      Value: Quest_RefreshNotice
+  MainQuestCategory: Main

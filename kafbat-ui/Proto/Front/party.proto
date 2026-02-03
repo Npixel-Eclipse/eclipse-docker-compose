@@ -1,0 +1,338 @@
+﻿syntax = "proto3";
+
+package eclipse.client.party;
+
+import "google/protobuf/timestamp.proto";
+import "Common/party_common.proto";
+import "Common/battle_common.proto";
+
+enum PartyResultCode {
+  FAIL = 0;
+
+  SUCCESS = 1;
+  SUCCESS_CONFIRM_REPLY_INVITATION_ACCEPT = 2;
+  SUCCESS_CONFIRM_REPLY_INVITATION_DENY = 3;
+  SUCCESS_CONFIRM_INVITATION = 4;
+  SUCCESS_CONFIRM_DISBAND = 5;
+  SUCCESS_CONFIRM_CREATE = 6;
+  SUCCESS_CONFIRM_DELEGATE_HOST = 7;
+  SUCCESS_CONFIRM_BANISH = 8;
+  SUCCESS_CONFIRM_CHANGE_RULE = 9;
+  SUCCESS_CONFIRM_LEAVE = 10;
+  SUCCESS_CONFIRM_REPLY_INVITATION = 11;
+  SUCCESS_CONFIRM_CANCEL_INVITATION = 12;
+  SUCCESS_LEAVE_EVENT = 13;
+  SUCCESS_DISBAND_EVENT = 14;
+  SUCCESS_DELEGATE_HOST_EVENT = 15;
+  SUCCESS_CHANGE_RULE_EVENT = 16;
+  SUCCESS_JOIN_EVENT = 17;
+  SUCCESS_BANISH_EVENT = 18;
+  SUCCESS_CANCEL_INVITATION_EVENT = 19;
+  SUCCESS_INVITE_MESSAGE = 20;
+  SUCCESS_BANISHED_EVENT = 21;
+  SUCCESS_CONFIRM_ADD_PIN_POINT = 22;
+  SUCCESS_CONFIRM_REMOVE_PIN_POINT = 23;
+
+  FAIL_INVALID_REQUEST = 30;
+  FAIL_NEED_TO_SUBSCRIBE = 31;
+  FAIL_PARTY_ALREADY_EXISTS = 32;
+  FAIL_PARTY_NOT_FOUND = 33;
+  FAIL_PARTY_IS_FULL = 35;
+  FAIL_INVALID_HOST = 36;
+  FAIL_INVITATION_TIME_OUT = 37;
+  FAIL_MEMBER_NOT_FOUND = 38;
+  FAIL_ALREADY_INVITATION_CANCELED = 39;
+  FAIL_EXCEED_INVITATION_COUNT = 40;
+  FAIL_TIMEOUT = 41;
+  FAIL_ALREADY_INVITING = 42;
+  FAIL_USER_NOT_FOUND = 43;
+  FAIL_PARTY_IS_EMPTY = 44;
+  FAIL_USER_NOT_FOUND_IN_BATTLE = 45;
+  FAIL_SAME_RULE = 46;
+  FAIL_USER_IN_BLOCK_LAND = 47;
+  FAIL_INVITEE_BLOCK_INVITATION = 48;
+  FAIL_PIN_POINT_NOT_FOUND = 53;
+}
+
+enum PartyRequestConfirmStatus {
+  UNSPECIFIED = 0;
+  DENY = 1;
+  ACCEPT = 2;
+}
+
+// 파티 핀 포인트
+message PartyPinPoint {
+  int64 pin_id = 1;
+  int64 address_id = 2;
+  common.ProtoCoordinate coordinate = 3;
+  int64 party_id = 4;
+  string sharer_name = 5;
+  google.protobuf.Timestamp created_at = 6;
+}
+
+message PartyRequest {
+  oneof request {
+    Subscribe subscribe = 1;
+    Create create = 2;
+    Invite invite = 3;
+    Leave leave = 4;
+    Disband disband = 5;
+    DelegateHost delegate_host = 6;
+    ConfirmMessage confirm_message = 7;
+    Banish banish = 8;
+    ChangeRule change_rule = 9;
+    CancelInvitation cancel_invitation = 10;
+
+    // 파티 핀 포인트
+    PinPointList pin_point_list = 11;
+    AddPinPoint add_pin_point = 12;
+    RemovePinPoint remove_pin_point = 13;
+  }
+
+  message Subscribe {}
+
+  message Create {
+    // 파티가 없는 채로 플레이어를 초대하는 경우
+    // 파티 생성과 동시에 초대를 보내기 위함
+    optional string invitee = 1;
+    // 아래 필드는 클라에서 채우더라도 서버에서 따로 생성하여 사용됨
+    int64 new_party_id = 2;
+  }
+
+  message Invite {
+    string name = 1; // 초대할 플레이어
+  }
+
+  message CancelInvitation {
+    string name = 1; // 파티 초대를 받았지만 아직 수락을 누르지 않은 플레이어에 대해 취소하는 경우
+  }
+
+  message Leave {
+    bool disconnected = 1;
+  }
+
+  message Disband {}
+
+  message DelegateHost {
+    string name = 1; // 새로운 호스트가 될 플레이어
+  }
+
+  message ConfirmMessage {
+    string inviter = 1; // 초대한 사람
+    PartyRequestConfirmStatus confirm_status = 2;
+  }
+
+  message Banish {
+    string name = 1; // 추방할 플레이어
+  }
+
+  message ChangeRule {
+    common.PartyRule rule = 1;
+  }
+
+  // 파티 핀 포인트 목록 조회
+  message PinPointList {}
+
+  // 파티 핀 포인트 등록
+  message AddPinPoint {
+    int64 address_id = 1;
+    common.ProtoCoordinate coordinate = 2;
+  }
+
+  // 파티 핀 포인트 삭제
+  message RemovePinPoint {
+    int64 pin_id = 1;
+  }
+}
+
+message PartyEvent {
+  optional PartyResultCode result_code = 526;
+
+  oneof event {
+    Info info = 1;
+    InviteMessage invite_message = 2;
+
+    JoinEvent join_event = 30;
+    LeaveEvent leave_event = 31;
+    DelegateHostEvent delegate_host_event = 32;
+    BanishEvent banish_event = 33;
+    DisbandEvent disband_event = 34;
+    InviteEvent invite_event = 35;
+    CancelInvitationEvent cancel_invitation_event = 36;
+    RejectInvitationEvent reject_invitation_event = 37;
+    ChangeRuleEvent change_rule_event = 38;
+
+    Invite invitation = 60;
+    Disband disband = 61;
+    Create create = 62;
+    DelegateHost delegate_host = 63;
+    Banish banish = 64;
+    ChangeRule change_rule = 65;
+    Leave leave = 66;
+    ReplyInvitation reply_invitation = 67;
+    CancelInvitation cancel_invitation = 68;
+
+    ConnectEvent connect_event = 90;
+    DisconnectEvent disconnect_event = 91;
+
+    MemberAddressEvent member_address_event = 93;
+
+    // 파티 핀 포인트 - 본인 응답
+    ConfirmPinPointList confirm_pin_point_list = 94;
+    ConfirmAddPinPoint confirm_add_pin_point = 95;
+    ConfirmRemovePinPoint confirm_remove_pin_point = 96;
+
+    // 파티 핀 포인트 - 파티원 브로드캐스트
+    PinPointAddEvent pin_point_add_event = 97;
+    PinPointRemoveEvent pin_point_remove_event = 98;
+  }
+
+  message Member {
+    reserved 12;
+    string name = 1;
+    string character_uuid = 14;
+
+    int32 x = 2;
+    int32 y = 3;
+    int64 max_hp = 4;
+    int64 hp = 5;
+    int64 max_mp = 6;
+    int64 mp = 7;
+    int32 class_id = 8;
+    int64 instance_id = 9;
+
+    // 초대를 받은 경우 초대 만료 시각
+    optional google.protobuf.Timestamp end_at = 10;
+
+    // 파티 내 번호
+    int64 sequence = 11;
+
+    optional google.protobuf.Timestamp disconnect_end_at = 13;
+  }
+
+  // ex) A가 파티에 초대되거나 파티를 생성한 경우 A에게 전체 파티원의 정보를 주어야함
+  message Info {
+    string host = 1;
+    repeated Member members = 2;
+    int64 party_id = 3;
+    common.PartyRule rule = 4;
+  }
+
+  message Invite {
+    Member invitee = 1; // 초대 받는 사람
+  }
+
+  message Disband {}
+
+  message Create {}
+
+  message DelegateHost {
+    string new_host = 1;
+  }
+
+  message Banish {
+    string target = 1;
+  }
+
+  message ChangeRule {
+    common.PartyRule rule = 1; // 변경된 룰
+  }
+
+  message Leave {}
+
+  message ReplyInvitation {
+    int64 party_id = 1;
+  }
+
+  message CancelInvitation {
+    string invitee = 1;
+  }
+
+  message InviteMessage {
+    Member inviter = 1; // 초대한 사람
+    int64 party_id = 2;
+    google.protobuf.Timestamp end_at = 3; // 초대 만료 시각
+  }
+
+  message JoinEvent {
+    Member target = 1;
+  }
+
+  message LeaveEvent {
+    string target = 1;
+  }
+
+  message DelegateHostEvent {
+    string prev_host = 1;
+    string target = 2;
+  }
+
+  message BanishEvent {
+    string target = 1;
+  }
+
+  message ChangeRuleEvent {
+    common.PartyRule rule = 1;
+  }
+
+  message DisbandEvent {}
+
+  // 기존 파티원들에게 초대 취소 가능한 멤버를 가르쳐주도록
+  message InviteEvent {
+    Member target = 1;
+  }
+
+  message CancelInvitationEvent {
+    string executor = 1;
+    string target = 2;
+  }
+
+  message RejectInvitationEvent {
+    string executor = 1;
+    int64 party_id = 2;
+  }
+
+  // 파티 탈퇴를 하지 않은 상태로
+  // 접속 종료했던 파티원이 다시 돌아왔을 때 알리기 위함
+  message ConnectEvent {
+    Member target = 1;
+  }
+
+  // 파티원이 탈퇴를 직접 하진 않았는데
+  // 접속 종료했을 때, n분 후에 자동 탈퇴된다고 타이머 돌리기 위함
+  message DisconnectEvent {
+    string target = 1;
+    google.protobuf.Timestamp end_at = 3;
+  }
+
+  message MemberAddressEvent {
+    int32 x = 1;
+    int32 y = 2;
+  }
+
+  // 파티 핀 포인트 목록 응답
+  message ConfirmPinPointList {
+    repeated PartyPinPoint pins = 1;
+  }
+
+  // 파티 핀 포인트 등록 응답
+  message ConfirmAddPinPoint {
+    PartyPinPoint pin = 1;
+  }
+
+  // 파티 핀 포인트 삭제 응답
+  message ConfirmRemovePinPoint {
+    int64 pin_id = 1;
+  }
+
+  // 파티 핀 포인트 등록 브로드캐스트
+  message PinPointAddEvent {
+    PartyPinPoint pin = 1;
+  }
+
+  // 파티 핀 포인트 삭제 브로드캐스트
+  message PinPointRemoveEvent {
+    int64 pin_id = 1;
+    string remover_name = 2;
+  }
+}

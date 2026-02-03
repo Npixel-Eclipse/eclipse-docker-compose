@@ -1,0 +1,74 @@
+- Id: 1
+  Name: Merchant_Basic_Goods
+  Comment: 기본 잡화 상인
+  MerchandiseGroup:
+    - Basic_Goods_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  AutoSell: true
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 5
+  Name: Merchant_Basic_SkillBook
+  Comment: 기본 스킬북 상인
+  MerchandiseGroup:
+    - Basic_SkillBook_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 6
+  Name: Merchant_Basic_Union
+  Comment: 기본 장비 통합 상인
+  MerchandiseGroup:
+    - Basic_Union_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+- Id: 1700
+  Name: Merchant_Basic_BattleGround
+  Comment: 전장의 증표 상인
+  MerchandiseGroup:
+    - Basic_BattleGround_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyBattleGroundToken
+- Id: 526
+  Name: Merchant_Basic_Challenge
+  Comment: 도전 던전 상인
+  MerchandiseGroup:
+    - Basic_Challenge_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyChallengeToken
+- Id: 284
+  Name: Merchant_Basic_Ancient
+  Comment: 고대 증표 상인
+  MerchandiseGroup:
+    - Basic_Ancient_Merchandises
+    - Basic_Sell_Merchandises
+  MerchantGroup: Merchant_Group_Basic
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyAncient
+- Id: 1763
+  Name: Merchant_Basic_Guild
+  Comment: 길드 상인
+  MerchandiseGroup:
+    - Guild_Merchandises
+  MerchantGroup: Merchant_Group_Guild
+  HUDCurrency:
+    - Item: CurrencyDiamond
+    - Item: CurrencyGold
+    - Item: CurrencyGuildCoin

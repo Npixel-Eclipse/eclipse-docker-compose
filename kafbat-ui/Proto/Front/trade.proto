@@ -1,0 +1,349 @@
+syntax = "proto3";
+package eclipse.client.trade;
+import "Common/property.proto";
+import "Common/guild_common.proto";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.trade";
+option java_outer_classname = "ClientTradeProto";
+
+enum TradeResultCode {
+  FAIL = 0;
+
+  SUCCESS = 1;
+  SUCCESS_SELL = 2; // 판매 등록
+  SUCCESS_CANCEL = 3;
+  SUCCESS_WITHDRAW = 4;
+  SUCCESS_RE_REGISTER = 5;
+  SUCCESS_SETTLE = 6;
+  SUCCESS_SELL_FINISHED = 7; // 판매 완료되었을 때 서버가 클라로 줌
+  SUCCESS_REJECT_PRIVATE_TRADE = 8;
+  SUCCESS_REJECT_PRIVATE_TRADE_TO_SELLER = 9; // 판매자에게 개인 거래 거절 당했다는걸 알리기 위함
+  SUCCESS_SELL_REGISTER = 10; // 판매 등록 완료되었을 때 알리기 위함
+
+  FAIL_NOT_ENOUGH_MONEY = 100;
+  FAIL_ITEM_NOT_FOUND = 101;
+  FAIL_EXCEED_SELL_LIMIT = 102;
+  FAIL_INVALID_PAGE_REQUEST = 103;
+  FAIL_INVALID_ITEM = 104;
+  FAIL_INVALID_ITEM_CATEGORY = 105;
+  FAIL_INVALID_CLASS = 106;
+  FAIL_INVALID_TRADE_STATUS = 107;
+  FAIL_INVALID_TRADE = 108;
+  FAIL_INVALID_ACCOUNT = 109;
+  FAIL_INVALID_AMOUNT = 110;
+  FAIL_ALREADY_REGISTERED = 111;
+  FAIL_NOT_ENOUGH_INVENTORY_SLOT = 112;
+  FAIL_INVALID_BUYER = 113; // 같은 계정으로 올린 물품을 사는 경우
+  FAIL_USER_NOT_FOUND = 114;
+  FAIL_EXCEED_PRIVATE_BUY_REQUEST_LIMIT = 115; // 개인 거래에서는 한 사람당 최대로 받을 수 있는 구매 요청 제한이 있음
+  FAIL_ITEM_EXCEED_EXPIRE_TIME = 116; // 기간제 아이템 시간초과
+  FAIL_PRIVATE_TRADE_NOT_ALLOWED = 117; // 개인 거래 해금이 안되어서 상대방에게 개인 거래 판매 등록 못하는 경우
+  FAIL_TARGET_PRIVATE_TRADE_NOT_ALLOWED = 118; // "상대방"이 개인 거래 해금이 안되어서 상대방에게 개인 거래 판매 등록 못하는 경우
+  FAIL_INVALID_PRICE = 119;
+  FAIL_LOCK_CONTENT_LIMIT = 120;
+}
+
+enum Command {
+  CANCEL = 0;
+  WITHDRAW = 1;
+  RE_REGISTER = 2;
+  SETTLE = 3;
+}
+
+enum TradeStatus {
+  PENDING = 0;
+  REGISTERED = 1;
+  SUCCEEDED = 2;
+  FAILED = 3;
+}
+
+enum TradeType {
+  BUY = 0;
+  SELL = 1;
+}
+
+message TradeRequest {
+
+  // item_category_id와 item_ids 둘 중에 하나로 요청
+  message ListItem {
+    optional int64 item_category_id = 1;
+    repeated int64 item_ids = 2;
+    int64 last_item_id = 3;
+    int64 last_item_grade = 4;
+    optional bool last_can_equip = 5;
+    optional int64 my_class_id = 6;
+    optional int64 last_class_id = 7;
+    optional int64 last_sub_tab_priority = 8;
+    int64 last_display_order = 9;
+    repeated int64 grade_filter = 10;
+    bool unique_item_filter = 11;
+    bool set_item_filter = 12;
+    bool non_attribute_item_filter = 13;
+  }
+
+  message SearchItem {
+    int64 item_id = 1;
+    int64 last_enchant_level = 2;
+    int64 last_engrave_cnt = 3;
+    int64 last_price = 4;
+    int64 last_cursor_id = 5;
+    repeated int64 item_properties_filter = 6;
+    int64 enchant_level_min_filter = 7;
+    int64 enchant_level_max_filter = 8;
+  }
+
+  message PlotItem {
+    message Item {
+      int64 item_id = 1;
+      int64 enchant_level = 2;
+    }
+
+    repeated Item items = 1;
+  }
+
+  message BuyItem {
+    repeated bytes trade_uuids = 1;
+  }
+
+  message ListMyItem {}
+
+  message ListMyHistory {
+    optional bytes cursor_token = 1;
+  }
+
+  message SellMyItem {
+    string item_uuid = 1;
+    int64 amount = 2;
+    int64 price = 3;
+    optional string target_character_name = 4; // 개인 거래 대상
+  }
+
+  // command가 cancel인 경우
+  // 등록 취소 성공시 아이템 서버가 ItemEvent를 보내서 인벤토리로 이동 시킬 예정
+  message ChangeMyItem {
+    // 모두 재등록시에는 개수가 2개 이상일 수 있고
+    // 나머지 요청은 개수가 1개만 올 수 있음
+    repeated bytes trade_uuids = 1;
+    Command command = 2;
+  }
+
+  // 응답으로 해당 강화 수치에 해당하는 min_unit_price 리스트를 반환
+  message ListMinUnitPriceItem {
+    message Item {
+      int64 item_id = 1;
+      int64 enchant_level = 2;
+    }
+
+    repeated Item items = 1;
+  }
+
+  // 응답으로 0강부터 해당 강화 수치 까지의 min_unit_price를 반환.
+  message ListMinUnitPriceItemByMaxEnchantLevel {
+    int64 item_id = 1;
+    int64 max_enchant_level = 2;
+  }
+
+  message SearchUser {
+    string character_name = 1;
+  }
+
+  message ListMyPrivateItem {}
+
+  message RejectPrivateTrade {
+    bytes trade_uuid = 1;
+  }
+
+  oneof request {
+    ListItem list_item = 1;
+    SearchItem search_item = 2;
+    PlotItem plot_item = 3;
+    BuyItem buy_item = 4;
+
+    ListMyItem list_my_item = 5;
+    ChangeMyItem change_my_item = 6;
+    SellMyItem sell_my_item = 7;
+    ListMyHistory list_my_history = 8;
+
+    ListMinUnitPriceItem list_min_unit_price_item = 9;
+    ListMinUnitPriceItemByMaxEnchantLevel list_min_unit_price_item_by_max_enchant_level = 10;
+
+    SearchUser search_user = 11;
+    ListMyPrivateItem list_my_private_item = 12;
+    RejectPrivateTrade reject_private_trade = 13;
+  }
+}
+
+message TradeEvent {
+
+  message ItemListEvent {
+    message Item {
+      int64 item_id = 1;
+      double min_price = 2;
+      int64 amount = 3;
+    }
+
+    repeated Item items = 1;
+    int64 last_item_grade = 2;
+    int64 last_item_id = 3;
+    optional bool last_can_equip = 4;
+    optional int64 last_class_id = 5;
+    optional int64 last_sub_tab_priority = 6;
+    int64 last_display_order = 7;
+    bool has_next_page = 10;
+    TradeResultCode result_code = 99;
+  }
+
+  message ItemSearchEvent {
+    message Item {
+      bytes trade_uuid = 1;
+      int64 item_id = 2;
+      int64 amount = 3;
+      int64 enchant_level = 4;
+      int64 price = 5;
+      repeated common.Property properties = 6;
+      google.protobuf.Timestamp delete_time = 7;
+    }
+
+    repeated Item items = 1;
+    int64 last_enchant_level = 2;
+    int64 last_engrave_cnt = 3;
+    int64 last_price = 4;
+    int64 last_cursor_id = 5;
+    bool has_next_page = 6;
+    TradeResultCode result_code = 99;
+  }
+
+  // 다중 구매 요청을 받아도 결과 완료된 것부터 하나씩 개별로 전송
+  message ItemBuyEvent {
+    bytes trade_uuid = 1;
+    int64 item_id = 2;
+    TradeResultCode result_code = 99;
+  }
+
+  message ItemPlotEvent {
+    message PlotInfo {
+      int64 item_id = 1;
+      double min_price = 2;
+      double max_price = 3;
+      double week_average_price = 4;
+      double latest_price = 5;
+      repeated double price_history = 6; // 어제 가격, 그제 가격, ...
+    }
+
+    repeated PlotInfo plot_info = 1;
+    TradeResultCode result_code = 99;
+  }
+
+  message MyItemEvent {
+    message Item {
+      bytes trade_uuid = 1;
+      int64 item_id = 2;
+      int64 amount = 3;
+      int64 price = 4;
+      google.protobuf.Timestamp valid_until = 5;
+      int64 enchant_level = 6;
+      repeated common.Property properties = 7;
+      TradeStatus trade_status = 8;
+      // 아이템을 거래소에 성공적으로 등록했을 때 + 개인 거래인 경우에만 필드 활성화
+      optional string target_character_name = 9;
+      google.protobuf.Timestamp delete_time = 10;
+    }
+
+    repeated Item items = 1;
+    TradeResultCode result_code = 99;
+  }
+
+  message MyHistoryEvent {
+    message TradeHistory {
+      TradeType transaction_type = 1;
+      int64 item_id = 2;
+      int64 amount = 3;
+      int64 trade_price = 4;
+      int64 settlement_price = 5;
+      int64 enchant_level = 6;
+      repeated common.Property properties = 7;
+      google.protobuf.Timestamp time = 8;
+      string target_character_name = 9; // empty가 아니면 개인 거래
+    }
+
+    repeated TradeHistory trade_histories = 1;
+    bytes cursor_token = 2;
+    bool has_next_page = 3;
+    TradeResultCode result_code = 99;
+  }
+
+  message MinUnitPriceItemEvent {
+    message Item {
+      int64 item_id = 1;
+      int64 enchant_level = 2;
+      double min_unit_price = 3;
+      int64 amount = 4;
+      bytes trade_uuid = 5;
+      repeated common.Property properties = 6;
+    }
+
+    repeated Item items = 1;
+    TradeResultCode result_code = 99;
+  }
+
+  message SearchUserEvent {
+    message GuildInfo {
+      string guild_name = 1;
+      common.GuildMark guild_mark = 2;
+    }
+
+    string character_name = 1;
+    bool is_online = 2;
+    optional google.protobuf.Timestamp last_login = 3;
+    optional GuildInfo guild_info = 4;
+    int64 class_id = 5;
+    TradeResultCode result_code = 99;
+  }
+
+  message MyPrivateItemListEvent {
+    message Item {
+      TradeType trade_type = 1;
+      // 구매할 때는 판매자의 캐릭터 이름
+      // 판매할 때는 구매자의 캐릭터 이름
+      string target_character_name = 2;
+      bytes trade_uuid = 3;
+      int64 item_id = 4;
+      int64 amount = 5;
+      int64 price = 6;
+      google.protobuf.Timestamp valid_until = 7;
+      int64 enchant_level = 8;
+      int64 grade = 9;
+      repeated common.Property properties = 10;
+      TradeStatus trade_status = 11;
+      google.protobuf.Timestamp delete_time = 12;
+    }
+
+    repeated Item items = 1;
+    int64 buy_count = 2; // 일일 구매 횟수
+    TradeResultCode result_code = 99;
+  }
+
+  message RejectPrivateTradeEvent {
+    bytes trade_uuid = 1;
+    TradeResultCode result_code = 99;
+  }
+
+
+  oneof event {
+    ItemListEvent item_list_event = 1;
+    ItemSearchEvent item_search_event = 2;
+    ItemBuyEvent item_buy_event = 3;
+    ItemPlotEvent item_plot_event = 4;
+
+    MyItemEvent my_item_event = 5;
+    MyHistoryEvent my_history_event = 6;
+
+    MinUnitPriceItemEvent min_unit_price_item_event = 7;
+
+    SearchUserEvent search_user_event = 8;
+    MyPrivateItemListEvent my_private_item_list_event = 9;
+    RejectPrivateTradeEvent reject_private_trade_event = 10;
+  }
+}

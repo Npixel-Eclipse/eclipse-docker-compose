@@ -1,0 +1,193 @@
+syntax = "proto3";
+
+import "Common/websocket.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.client.chat";
+option java_outer_classname = "ClientChatProtoV2";
+
+import "Common/chat_message.proto";
+
+package clientChat;
+
+enum ChatResultCode {
+  FAIL = 0;
+  SUCCESS = 1;
+
+  // 공통
+  FAIL_INVALID_REQUEST = 10;  // 잘못된 형식의 요청
+
+  // 채팅 메시지 관련
+  FAIL_INVALID_CHAT_TYPE = 20;
+  FAIL_SPAM_RESTRICTED = 21;
+  FAIL_RESTRICTED = 22;
+  FAIL_BLOCKED_USER = 23;
+  FAIL_BLOCKED_BY_USER = 24;
+  FAIL_USER_NOT_ONLINE = 25;
+
+  // 유저 관련
+  FAIL_USER_NOT_FOUND = 30;
+  FAIL_USER_NOT_IN_CHANNEL = 31;
+  FAIL_USER_NOT_IN_SERVER = 32;
+  FAIL_USER_ALREADY_BLOCKED = 33;
+
+  // 채널 관련
+  FAIL_CHANNEL_NOT_FOUND = 40;
+
+  // 서버 관련
+  FAIL_SERVER_NOT_FOUND = 50;
+
+  // 세션 관련
+  FAIL_SESSION_NOT_FOUND = 60;
+}
+
+message Message {
+  repeated Content contents = 1;  // 채팅 내용
+
+  message Content {
+    oneof content {
+      string text = 1;                     // 일반 텍스트 메시지
+      common.ChatMessage data = 2;         // 사전 정의 채팅 메시지 (chat_message.proto 참조)
+    }
+  }
+  optional int32 data_type_id = 100;      // 메시지 타입 id (chat_data_type.yaml 참조)
+}
+
+message ChatRequest {
+  oneof request {
+    Heartbeat heartbeat = 100;                    // 하트비트
+    Disconnect disconnect = 101;                  // 연결 해제
+
+    SendMessage send_message = 2;                 // 채팅 전송 요청
+    SendDirectMessage send_direct_message = 3;    // 귓속말 전송 요청
+    BlockUser block_user = 4;                     // 유저 차단 요청
+    UnblockUser unblock_user = 5;                 // 유저 차단 해제 요청
+    GetUserInfo get_user_info = 6;                // 유저 정보 요청
+  }
+
+  message Heartbeat {}
+  message Disconnect {}
+
+  message SendMessage {
+    optional string channel_id = 1;       // 채널 ID
+    int64 chat_type_id = 2;               // 채팅 타입 ID
+    Message message = 3;                  // 채팅 메시지
+  }
+
+  message SendDirectMessage {
+    string target_user_nickname = 1;      // 귓속말 대상 유저 이름
+    int64 chat_type_id = 2;               // 채팅 타입 ID
+    Message message = 3;                  // 채팅 메시지
+  }
+
+  message BlockUser {
+    string target_user_id = 2;            // 차단 대상 유저 ID
+  }
+
+  message UnblockUser {
+    string target_user_id = 2;          // 차단 해제 대상 유저 ID
+  }
+
+  message GetUserInfo {
+    string target_user_id = 1;                 // 유저 ID
+  }
+}
+
+message ChatEvent {
+  oneof event {
+    // Heartbeat
+    HeartbeatReply heartbeat_reply = 100;                        // 하트비트
+    DisconnectEvent disconnect_event = 101;
+
+    // Event
+    MessageEvent message_event = 1;                   // 채팅 메시지 이벤트
+    UserChannelListEvent user_channel_list_event = 2; // 유저 소속 채널 목록 이벤트
+    UserBlockListEvent user_block_list_event = 7;     // 유저 차단 목록 이벤트
+
+    // Response
+    SendMessageEvent send_message_event = 3;
+    SendDirectMessageEvent send_direct_message_event = 4;
+    UserBlockEvent user_blocked_event = 5;
+    UserUnblockEvent user_unblocked_event = 6;
+    GetUserInfoEvent get_user_info_event = 9;
+  }
+
+  message HeartbeatReply {
+    google.protobuf.Timestamp time_stamp = 1;          // 서버 시간
+  }
+
+  message DisconnectEvent {
+    google.protobuf.Timestamp timestamp = 1;
+    int64 local_time_offset = 2;
+    common.WebSocketCloseCode reason = 3;
+  }
+
+  message MessageEvent {
+    optional string channel_id = 1;                   // 채널 ID (귓속말 -> null)
+    int64 channel_type_id = 2;                        // 채널 타입 ID (월드, 채널, 파티, 등등)
+    int64 chat_type_id = 3;                           // 채팅 타입 ID (시스템, 파티, 등등)
+
+    optional string sender_user_id = 4;               // 보낸 유저 ID (시스템 메시지 -> null)
+    optional string sender_user_nickname = 5;         // 보낸 유저 이름 (시스템 메시지 -> null)
+    repeated UserProperty sender_user_properties = 10;  // 보낸 유저 속성 (시스템 메시지 -> null)
+    optional string sender_server_name = 11;            // 보낸 유저 서버 이름 (시스템 메시지 -> null)
+
+    optional string receive_user_id = 6;              // (귓속말) 대상 유저 ID
+    optional string receive_user_nickname = 7;        // (귓속말) 대상 유저 이름
+
+    Message message = 8;                              // 채팅 메시지
+    google.protobuf.Timestamp send_at = 9;            // 채팅 전송 시간
+  }
+
+  message UserChannelListEvent {
+    repeated ChannelInfo channel_infos = 1;           // 채널 정보 목록
+    message ChannelInfo {
+      string channel_id = 1;                          // 채널 ID (uuid)
+      int64 channel_type_id = 2;                      // 채널 타입 ID (long)
+    }
+  }
+
+  message SendMessageEvent {
+    ChatResultCode result_code = 1;
+  }
+
+  message SendDirectMessageEvent {
+    ChatResultCode result_code = 1;
+  }
+
+  message UserBlockEvent {
+    ChatResultCode result_code = 1;
+
+    repeated UserInfo blocked_user_infos = 2;
+    UserInfo blocked_user_info = 3;
+  }
+
+  message UserUnblockEvent {
+    ChatResultCode result_code = 1;
+
+    repeated UserInfo blocked_user_infos = 2;
+    UserInfo unblocked_user_info = 3;
+  }
+
+  message UserBlockListEvent {
+    repeated UserInfo blocked_user_infos = 1;
+  }
+
+  message GetUserInfoEvent {
+    ChatResultCode result_code = 1;
+    optional UserInfo user_info = 2;
+  }
+
+  message UserInfo {
+    string user_id = 1;
+    string user_nickname = 2;
+    repeated UserProperty user_properties = 3;
+  }
+
+  message UserProperty {
+    string key = 1;
+    string value = 2;
+  }
+}

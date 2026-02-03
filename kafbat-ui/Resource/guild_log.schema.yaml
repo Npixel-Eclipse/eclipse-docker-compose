@@ -1,0 +1,55 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Description
+    - Type
+    - Params
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    Description:
+      type: string
+      ref: description
+    Category:
+      type: string
+      enum:
+        - All
+        - Guild     #길드
+        - Relation  #관계
+        - Collection # 길드연구
+      default: Guild
+    Type:
+      type: string
+      enum:
+        - Join # 가입
+        - Leave # 탈퇴
+        - Banish # 추방
+        - ChangeRole # 직위 변경
+        - LevelUp # 길드 레벨업
+        - Hostile # 적대
+        - Dishostile # 적대 해제
+        - Ally # 우호
+        - Disally # 우호 해제
+        - CollectionLevelUp # 길드 연구 레벨업
+    Params:
+      type: array
+      items:
+        type: string
+        enum:
+          - Character
+          - Guild
+          - Role
+          - Level
+          - CollectionLevel
+          - CollectionName

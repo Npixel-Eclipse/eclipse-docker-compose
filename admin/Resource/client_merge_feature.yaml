@@ -1,0 +1,74 @@
+- Id: 1
+  Name: Merge
+  MergePointInventory: MergePoint
+  RequireItemEmptyMessage: MergeFail_RequireItemEmpty
+  MoreConditionMessage: MergeFail_MoreCondition
+  RequireAmountIncreaseMessage: UseCreationStoneFail_Increase
+  AutomaticRegistrationCardEmptyMessage: AutomaticRegistrationFail_CardEmpty
+  CardNoMoreDuplicatesMessage: MergeNoMoreDuplicates
+  EquipItemCategory: Item_Equip
+  MergePointProgressRate: 3
+  GradeItemFilter: PolymorphMergeGrade
+  UITab:
+    - Group: PolymorphCard
+      Icon: /Game/UI/Polymorph_SP/FIconTransform_Sprite.FIconTransform_Sprite
+      Description: UIWordPolymorph
+      Comment: 초월
+      InputItemCategory: Polymorph_Card
+      RecipeDisplayByGrade:
+        - Grade: Common
+          RecipeDisplay: MergePolymorphCardCommon
+        - Grade: Uncommon
+          RecipeDisplay: MergePolymorphCardUncommon
+        - Grade: Rare
+          RecipeDisplay: MergePolymorphCardRare
+        - Grade: Epic
+          RecipeDisplay: MergePolymorphCardEpic
+        - Grade: Legendary
+          RecipeDisplay: MergePolymorphCardLegendary
+      MergePoint:
+        - GradeType: Epic
+          Item: MergePoint_PolymorphCard_Epic
+          RecipeInput: Merge_Input_PolymorphCard_PointReward_Epic
+        - GradeType: Legendary
+          Item: MergePoint_PolymorphCard_Legendary
+          RecipeInput: Merge_Input_PolymorphCard_PointReward_Legendary
+        - GradeType: Myth
+          Item: MergePoint_PolymorphCard_Myth
+          RecipeInput: Merge_Input_PolymorphCard_PointReward_Myth
+    - Group: WeaponCard
+      Icon: /Game/UI/Polymorph_SP/FIconWeaponPolymorphSprite.FIconWeaponPolymorphSprite
+      Description: UIWord_WeaponPolymorph
+      Comment: 무기 외형
+      InputItemCategory: WeaponPolymorph
+      RecipeDisplayByGrade:
+        - Grade: Common
+          RecipeDisplay: MergeWeaponPolymorphCardCommon
+        - Grade: Uncommon
+          RecipeDisplay: MergeWeaponPolymorphCardUncommon
+        - Grade: Rare
+          RecipeDisplay: MergeWeaponPolymorphCardRare
+        - Grade: Epic
+          RecipeDisplay: MergeWeaponPolymorphCardEpic
+        - Grade: Legendary
+          RecipeDisplay: MergeWeaponPolymorphCardLegendary
+      MergePoint:
+        - GradeType: Epic
+          Item: MergePoint_WeaponPolymorph_Epic
+          RecipeInput: Merge_Input_WeaponPolymorph_PointReward_Epic
+        - GradeType: Legendary
+          Item: MergePoint_WeaponPolymorph_Legendary
+          RecipeInput: Merge_Input_WeaponPolymorph_PointReward_Legendary
+        - GradeType: Myth
+          Item: MergePoint_WeaponPolymorph_Myth
+          RecipeInput: Merge_Input_WeaponPolymorph_PointReward_Myth
+  TooltipInfo:
+    - Name: MergePoint
+      Title: UIWord_Merge_Point
+      Description: UIWord_Merge_Point_Guide
+    - Name: ResultUpItem
+      Title: UIWord_Merge_ResultUpItem
+      Description: UIWord_Merge_ResultUpItem_Guide
+    - Name: RequreItem
+      Title: UIWord_Merge_RequireItem
+      Description: UIWord_Merge_RequireItem_Guide

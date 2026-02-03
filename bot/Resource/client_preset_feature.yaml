@@ -1,0 +1,13 @@
+- Id: 1
+  Name: Preset
+  PresetSlotCount: PresetSlotCount
+  PresetMaxSlotCount: PresetMaxSlotCount
+  PresetSlotPrice: PresetSlotPrice
+  ExpandedPresetSlotCount: ExpandedPresetSlotCount
+  SuccessExpandMessage: Preset_SystemMsg_ExtendPreset
+  SuccessSaveMessage: Preset_SystemMsg_Preset_Save
+  SuccessApplyMessage: Preset_SystemMsg_ChangePreset
+  AppliedPresetMessage: Preset_SystemMsg_AppliedPreset
+  ApplyCoolTimeMessage: Preset_SystemMsg_ChangePresetCooltime
+  NotSavedMessage: Preset_SystemMsg_FailChangePreset
+  AlreadyAppliedMessage: Preset_SystemMsg_LockedPreset

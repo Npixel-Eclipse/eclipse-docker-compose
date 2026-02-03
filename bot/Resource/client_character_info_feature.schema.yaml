@@ -1,0 +1,57 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    EquipPage:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+          Icon:
+            type: string
+          Page:
+            type: integer
+            minimun: 0
+    DefaultSelectedEquipPage:
+      type: integer
+      minimum: 0
+    SystemMessage_LockedEquipSlotSelected:
+      type: string
+      ref: system_message
+    SystemMessage_StatBookmarkRegisterMax:
+      type: string
+      ref: system_message
+    ClassWeaponCategory:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Class:
+            type: string
+            ref: class
+          Category:
+            type: array
+            items:
+              type: string
+              ref: item_category
+    FavoriteID:
+      type: string
+      ref: favorite
+  required:
+    - Id
+    - Name
+    - SystemMessage_LockedEquipSlotSelected
+    - SystemMessage_StatBookmarkRegisterMax
+    - DefaultSelectedEquipPage
+    - FavoriteID

@@ -1,0 +1,356 @@
+syntax = "proto3";
+package eclipse.client.fortress;
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.front.fortress";
+option java_outer_classname = "ClientFortressProto";
+
+enum FortressResultCode {
+  SUCCESS = 0;
+  FAIL = 1;
+  FAIL_COST = 2;
+  FAIL_NOT_YET = 3;
+  FAIL_PLAYER_LEVEL = 4;
+  FAIL_BUILDING_PREQUISITE = 5;
+  FAIL_ALREADY_FINISHED = 6;
+  FAIL_NOT_ENOUGH_CONSTRUCTION_QUEUE = 7;
+  FAIL_NOT_ENOUGH_INSTANT_CONSTRUCTION_COUNT = 8;
+  FAIL_INVENTORY_SLOT_NOT_ENOUGH = 9;
+  FAIL_BUILDING_UPGRADE_PROBABILITY = 10; // BM 성물 증축 실패 (확률) - 레벨 하락
+  KEEP_BUILDING_UPGRADE_PROBABILITY = 11; // BM 성물 증축 유지 (확률) - 현재 레벨 유지
+  FAIL_INSTANT_HARVEST_NOT_SUPPORTED = 12; // 즉시 수확 미지원 건물
+  FAIL_INSTANT_HARVEST_INVALID_COUNT = 13; // 잘못된 즉시 수확 횟수
+}
+
+message FortressRequest {
+  message List {}
+
+  message HarvestStart {
+    int64 building_id = 1;
+  }
+
+  message HarvestFinish {
+    int64 building_id = 1;
+  }
+
+  message UpgradeStart {
+    int64 building_id = 1;
+    bool defence_failure = 2; // 실패방지 사용 여부 (BM 성물이 아닐 경우 무시됨)
+  }
+
+  message UpgradeFinish {
+    int64 building_id = 1;
+  }
+
+  message UpgradeReduceTime {
+    int64 building_id = 1;
+    repeated Item cost_items = 2;
+    bool is_auto_selected = 3;
+
+    message Item {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+  }
+
+  // 축원서 자동 선택
+  message GetAutoSelectedUpgradeReduceTimeItems {
+    int64 building_id = 1;
+    repeated Item candidate_items = 2;
+
+    message Item {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message HelpMe {
+    int64 building_id = 2;
+  }
+
+  message UpgradeSkipTime {
+    int64 building_id = 1;
+    Item cost_item = 2;
+
+    message Item {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message ListConstructionQueue {}
+
+  message UpgradeFinishAll {}
+  message HarvestFinishAll {}
+  message HelpMeAll {}
+
+  // 즉시 수확권 사용
+  message InstantHarvest {
+    message Entry {
+      int64 building_id = 1;
+      int32 count = 2;  // 수확 횟수 (1~N)
+    }
+    repeated Entry entries = 1;
+  }
+
+  oneof request {
+    List list = 1;
+    HarvestStart harvest_start = 2;
+    HarvestFinish harvest_finish = 3;
+    UpgradeStart upgrade_start = 4;
+    UpgradeFinish upgrade_finish = 5;
+    UpgradeReduceTime upgrade_reduce_time = 6;
+    UpgradeSkipTime upgrade_skip_time = 7;
+    ListConstructionQueue list_construction_queue = 9;
+    GetAutoSelectedUpgradeReduceTimeItems get_auto_selected_upgrade_reduce_time_items = 10;
+
+    HelpMe help_me = 21;
+
+    // 전체 성물 처리
+    UpgradeFinishAll upgrade_finish_all = 31;
+    HarvestFinishAll harvest_finish_all = 32;
+    HelpMeAll help_me_all = 33;
+
+    // 즉시 수확
+    InstantHarvest instant_harvest = 34;
+  }
+}
+
+message FortressEvent {
+  message HelpMeCount {
+    int64 max_help_me_count = 1; // additional_help_me_count까지 포함
+    int64 remaining_help_me_count = 2 ; // 원래 남은 도움 요청 횟수인데 착각해서 현재 도움 요청 횟수로 해서 변경
+    int64 additional_help_me_count = 3;
+  }
+
+  message HelpReduceTime {
+    int64 total_reduce_time = 1; // additional_reduce_time_when_help_once 포함
+    int64 additional_reduce_time = 2; // second
+  }
+
+  message HelpByGuildCount {
+    int64 max_help_by_guild_count = 1; // additional_help_by_guild_count까지 포함
+    int64 additional_help_by_guild_count = 2; // 유료 상품으로 추가된 도움 요청 횟수
+  }
+
+  message List {
+    message Building {
+      int64 building_id = 1;
+      int64 building_level = 2;
+      google.protobuf.Timestamp upgrade_start_at = 3;
+      google.protobuf.Timestamp harvest_start_at = 4;
+      int64 upgrade_reduced_sec = 5;
+      bool is_upgrade_skipped = 6;
+      bool support_requested = 7;
+      HarvestAccelerations harvest_accelerations = 8;
+
+      repeated HarvestableItems harvestable_items = 9;
+
+      ProductionBuffSchedule production_buff_schedule = 10;
+      int64 upgrading_reduced_sec_by_buff  = 11;  // 버프로 감소된 시간 (초)
+
+      message HarvestableItems {
+        int64 item_id = 1;
+        double amount = 2;
+      }
+    }
+
+
+    repeated Building buildings = 1;
+    HelpMeCount help_me_count = 2;
+    InstantConstructionCount instant_construction_count = 3;
+    HelpByGuildCount help_by_guild_count = 4;
+    HelpReduceTime help_reduce_time = 5;
+    google.protobuf.Timestamp server_time = 6;
+  }
+
+  message HarvestStart {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    google.protobuf.Timestamp harvest_start_at = 3;
+  }
+
+  message HarvestFinish {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    google.protobuf.Timestamp harvest_start_at = 3;
+  }
+
+  message UpgradeStart {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    google.protobuf.Timestamp upgrade_start_at = 3;
+    optional int64 start_construction_queue_number = 4;  // BM 타입 건물은 Construction Queue 미사용으로 null
+    int64 building_level = 5;
+    int64 upgrading_reduced_sec_by_buff = 6;  // 버프로 감소된 시간 (초)
+  }
+
+  message UpgradeFinish {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    int64 upgraded_level = 3;
+    google.protobuf.Timestamp harvest_start_at = 4;
+    optional int64 finished_construction_queue_number = 5;
+    optional HarvestAccelerations harvest_accelerations = 6;
+    optional ProductionBuffSchedule production_buff_schedule = 7;
+  }
+
+  message UpgradeReduceTime {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    double upgrade_reduced_sec = 3;
+
+    repeated UsedItem used_items = 4;
+
+    message UsedItem {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message GetAutoSelectedUpgradeReduceTimeItems {
+    repeated Item selected_items = 1;
+
+    message Item {
+      int64 item_id = 1;
+      int64 amount = 2;
+    }
+  }
+
+  message UpgradeReduceTimeByHelp {
+    int64 building_id = 1;
+    double upgrade_reduced_sec = 2;
+    string helper_character_name = 3;
+    HelpByGuildCount help_by_guild_count = 4;
+    int64 current_help_count = 5;
+  }
+
+  message UpgradeSkipTime {
+    int64 building_id = 1;
+    FortressResultCode result_code = 2;
+    InstantConstructionCount instant_construction_count = 3;
+    optional int64 finished_construction_queue_number = 4;
+  }
+
+  message HelpMe {
+    FortressResultCode result_code = 1;
+    int64 building_id = 2;
+    HelpMeCount help_me_count = 3;
+  }
+
+  message ListConstructionQueue {
+    repeated ConstructionQueue construction_queue = 1;
+
+    message ConstructionQueue {
+      bool is_idle = 1;                                           // 건설 대열 사용 가능 여부
+      optional int64 building_id = 2;                             // 건설 중인 건물 ID
+      optional google.protobuf.Timestamp end_time = 3;
+    }
+  }
+
+  message InstantConstructionCount {
+    int64 max_instant_complete_count = 1;
+    int64 current_instant_complete_count = 2;
+  }
+
+  message UpdateCount {
+    InstantConstructionCount instant_construction_count = 1;
+    HelpMeCount help_me_count = 2;
+    HelpByGuildCount help_by_guild_count = 3;
+    ListConstructionQueue list_construction_queue = 4;
+    HelpReduceTime help_reduce_time = 5;
+  }
+
+  message ResetFortress {}
+
+  message HarvestAccelerated {
+    repeated HarvestAcceleratedInfo infos = 1;
+
+    message HarvestAcceleratedInfo {
+      int64 building_id = 1;
+      HarvestAccelerations harvest_accelerations = 2;
+    }
+  }
+
+  message HarvestAccelerations {
+    repeated Interval intervals = 1;
+
+    message Interval {
+      google.protobuf.Timestamp start_at = 1;     // 가속 적용 시작 시간
+      google.protobuf.Timestamp finish_at = 2;    // 가속 적용 종료 시간
+      double acceleration_rate = 3;               // 가속 배율
+    }
+  }
+
+  // 생산 버프 스케줄: 인터벌 시작 시점별로 적용되는 생산 버프 정보
+  // 클라이언트가 프로그레스바 및 예상 수확량 계산에 사용
+  message ProductionBuffSchedule {
+    repeated Interval intervals = 1;
+
+    message Interval {
+      google.protobuf.Timestamp effective_from = 1;  // 이 인터벌 시작 시점부터 적용
+      int64 production_time_reduction = 2;           // 생산 시간 감소 (만분율, 3000 = 30%)
+      int64 product_amount_bonus = 3;                // 생산량 증가 (만분율, 5000 = 50%)
+    }
+  }
+
+  // 생산 버프 변경 알림: 생산량 증가, 생산 시간 감소 버프 적용 시
+  message ProductionBuffUpdated {
+    repeated BuildingProductionBuff buildings = 1;
+
+    message BuildingProductionBuff {
+      int64 building_id = 1;
+      ProductionBuffSchedule production_buff_schedule = 2;
+    }
+  }
+
+  message UpgradeFinishAll {
+    repeated UpgradeFinish upgrade_finishes = 1;
+  }
+
+  message HarvestFinishAll {
+    repeated HarvestFinish harvest_finishes = 1;
+  }
+
+  message HelpMeAll {
+    FortressResultCode result_code = 1;
+    repeated int64 building_ids = 2;
+    HelpMeCount help_me_count = 3;
+  }
+
+  // 즉시 수확권 사용 결과
+  message InstantHarvest {
+    FortressResultCode result_code = 1;
+  }
+
+  oneof event {
+    List list = 1;
+    HarvestStart harvest_start = 2;
+    HarvestFinish harvest_finish = 3;
+    UpgradeStart upgrade_start = 4;
+    UpgradeFinish upgrade_finish = 5;
+    UpgradeReduceTime upgrade_reduce_time = 6;
+    UpgradeSkipTime upgrade_skip_time = 7;
+    ListConstructionQueue list_construction_queue = 9;
+    GetAutoSelectedUpgradeReduceTimeItems get_auto_selected_upgrade_reduce_time_items = 10;
+
+    // 전체 성물 처리
+    UpgradeFinishAll upgrade_finish_all = 11;
+    HarvestFinishAll harvest_finish_all = 12;
+    HelpMeAll help_me_all = 13;
+
+    HelpMe help_me = 21;
+    UpgradeReduceTimeByHelp upgrade_reduce_time_by_help = 23;
+
+    UpdateCount update_count = 31;
+
+    // 즉시 수확
+    InstantHarvest instant_harvest = 34;
+
+    ResetFortress reset_fortress = 41;
+
+    HarvestAccelerated harvest_accelerated = 51;
+    ProductionBuffUpdated production_buff_updated = 52;
+  }
+}

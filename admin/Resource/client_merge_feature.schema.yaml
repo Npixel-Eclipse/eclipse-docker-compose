@@ -1,0 +1,137 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  staticProperties: true
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    MergePointInventory:
+      type: string
+      ref: inventory
+    RequireItemEmptyMessage:
+      type: string
+      ref: system_message
+    MoreConditionMessage:
+      type: string
+      ref: system_message
+    RequireAmountIncreaseMessage:
+      type: string
+      ref: system_message
+    AutomaticRegistrationCardEmptyMessage:
+      type: string
+      ref: system_message
+    CardNoMoreDuplicatesMessage:
+      type: string
+      ref: system_message
+    EquipItemCategory:
+      type: string
+      ref: item_category
+    MergePointProgressRate:
+      type: number
+      default: 1.0
+    GradeItemFilter:
+      type: string
+      ref: client_item_filter
+    UITab:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        staticProperties: true
+        properties:
+          Group:
+            type: string
+            enum:
+              - PolymorphCard
+              - WeaponCard
+              - Item
+          Locked:
+            type: boolean
+            default: false
+          Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+            type: string
+          Description:
+            type: string
+            ref: description
+          Comment:
+            type: string
+          InputItemCategory:
+            type: string
+            ref: item_category
+          RecipeDisplayByGrade:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              staticProperties: true
+              properties:
+                Grade:
+                  type: string
+                  ref: grade
+                RecipeDisplay:
+                  type: string
+                  ref: recipe_display
+              required:
+                - Grade
+                - RecipeDisplay            
+          MergePoint:
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              staticProperties: true
+              properties:
+                GradeType:
+                  type: string
+                  enum:
+                    - Epic
+                    - Legendary
+                    - Myth
+                Item:
+                  type: string
+                  ref: item
+                RecipeInput:
+                  type: string
+                  ref: recipe_input
+              required:
+                - GradeType
+                - Item
+                - RecipeInput
+        required:
+          - Group
+          - InputItemCategory
+          - RecipeDisplayByGrade
+          - MergePoint
+    TooltipInfo:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          Name: 
+            type: string
+            enum:
+              - MergePoint
+              - ResultUpItem
+              - RequreItem
+          Title:
+            type: string
+            ref: description
+          Description:
+            type: string
+            ref: description
+  required:
+    - Id
+    - Name
+    - MergePointInventory
+    - RequireItemEmptyMessage
+    - MoreConditionMessage
+    - RequireAmountIncreaseMessage
+    - AutomaticRegistrationCardEmptyMessage
+    - EquipItemCategory
+    - TooltipInfo

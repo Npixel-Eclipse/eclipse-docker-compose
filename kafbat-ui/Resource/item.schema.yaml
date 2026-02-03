@@ -1,0 +1,325 @@
+﻿$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Category
+    - Grade
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    DesignComment:
+      type: string
+    ItemNameDesc:
+      type: string
+      ref: description
+    ItemSummaryDesc:
+      type: string
+      ref: description
+    Comment:
+      type: string
+    Category:
+      type: string
+      ref: item_category
+    Grade:
+      type: string
+      ref: grade
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    DropMesh:
+      type: string
+    DropMeshFXUse:
+      type: boolean
+    ConsumeSkill:
+    # 던전 시간 충전 아이템은 ItemUse_Recharge_Dungeon 입력 필요
+    # 다중 사용 가능 아이템 설정: Item.yaml에 ConsumeSkill가 있어야 하고,skill.yaml에 CoolTime, MotionDelay 프로퍼티가 없어야 함
+      type: string
+      ref: skill
+    LearnedSkill:
+      type: string
+      ref: skill
+    EquipBuff: # 아이템 장착시 적용 되는 버프
+      type: string
+      ref: buff
+    PossessBuff: # 아이템 소유시 적용 되는 버프
+      type: string
+      ref: buff
+    UniqueBuff:
+      type: string
+      ref: buff
+    EquipSlot:
+      type: string
+      ref: equip_slot
+    StandardCost:
+      type: integer
+    IsStackable:
+      type: boolean
+      default: false
+    IsOnlyOne:
+      type: boolean
+      default: false
+    ItemPreset:
+      type: object
+      additionalProperties: false
+      required:
+        - Name
+        - Amount
+      properties:
+        Name:
+          type: string
+        Amount:
+          type: integer
+    ClassLimit:
+      type: array
+      items:
+        type: string
+        ref: class
+    # 아이템 사용 레벨 제한
+    # 다음 시스템에서 사용 레벨이 제한됨
+    #   - ConsumeSkill
+    #   - Equipment
+    #   - LuckyBag
+    LevelLimit:
+      type: integer
+    DataGenerateDate:
+      type: string
+      format: date-time
+    EquipParent:
+      type: string
+      ref: item
+    MaxResetEnchantCount:
+      type: integer
+    BlockUseIfOwns: #특정 아이템 보유 시 아이템 사용 불가
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - BaseItem
+        properties:
+          BaseItem:
+            type: string
+            ref: item
+    Enchant:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - EnchantGroup
+          - Enchant
+        properties:
+          EnchantGroup:
+            type: string
+            ref: item_enchant_group
+          Enchant:
+            type: string
+            ref: item_enchant
+    EnchantGroup:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - EnchantGroup
+          - EnchantType
+        properties:
+          EnchantGroup:
+            type: string
+            ref: item_enchant_group
+          EnchantType:
+            type: string
+            enum:
+              - Enhance # 강화
+              - MightSlot # 권능 부여 슬롯 해금
+              - EngraveSlot # 세공 슬롯 해금
+              - CarvingSlot # 각인 슬롯 해금
+    EnchantBonus:
+      type: string
+      ref: item_enchant_bonus
+    TargetEngrave:
+      type: string
+      ref: item_engrave
+    Engrave: #세공 재료 아이템에 사용
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - EngraveGroup
+          - Engrave
+        properties:
+          EngraveGroup:
+            type: string
+            ref: item_engrave_group
+          Engrave:
+            type: string
+            ref: item_engrave
+    EngraveGroup: #세공 또는 권능 부여할 장비 아이템에 사용
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - EngraveGroup
+          - EngraveType
+        properties:
+          EngraveGroup:
+            type: string
+            ref: item_engrave_group
+          EngraveType:
+            type: string
+            enum:
+              - Engrave # 세공
+              - Might # 권능부여
+    GivenOption:
+      type: string
+      ref: item_engrave
+    Set:
+      type: string
+      ref: item_set
+    RecipeOutput:
+      type: object
+      additionalProperties: false
+      required:
+        - Name
+      properties:
+        Name:
+          type: string
+          ref: recipe_output
+        Repeat:
+          type: integer
+          default: 1
+    Disassemble:
+      type: string
+      ref: recipe_output
+    CanGainOnMerge:
+      type: boolean
+    CannotDelete:
+      type: boolean
+    CannotDecrease:
+      type: boolean
+    DisplayOrder: #C 표시 순서로 작은 값일수록 이전에 표시되고 큰 값일수록 뒤에 표시
+      type: integer
+    TradeType: #미입력 시 기본 Bounded
+      type: string
+      enum:
+        - Bounded #캐릭터 귀속
+        - Storable #서버 내 계정 귀속 (창고 보관 가능)
+        - Tradable #거래 가능
+        - NonTradable #추후 거래 가능이 될수도 있는 Base 아이템 (거래소 미노출)
+    DeleteTime:
+      type: integer
+    DeleteDate:
+      type: string
+      format: date-time
+    Recharge:
+      type: object
+      additionalProperties: false
+      required:
+        - DungeonResource
+      properties:
+        DungeonResource:
+          type: string
+          ref: dungeon_resource
+        Second:
+          type: integer
+          default: 3600
+          maximum: 3600
+        Count:
+          type: integer
+          default: 1
+          maximum: 10
+    Refresh:
+      type: string
+      enum:
+        - Daily
+    Invisible:
+      type: boolean
+    Broken:
+      type: boolean      
+    DieDate:
+      type: integer
+    GoldCost:      # 아이템 소모를 위한 Gold 비용(ex: 복구권 사용시 비용)
+      type: integer  
+    DiamondCost:   # 아이템 소모를 위한 Diamond 비용(ex: 복구권 사용시 비용)
+      type: integer
+    PcLevel:
+      type: integer
+    Experience:
+      type: integer
+    TargetUUID:
+      type: string
+    TargetItemID:
+      type: integer
+    LoseAmount:
+      type: integer
+    Base:         # recipe_input 에 들어갈 베이스 아이템은 거래 가능 상태여야 합니다. 안들어가는 경우 귀속이어도 무방함.
+      type: string
+      ref: item
+    HuntingZoneId:
+      type: integer
+    Rank:
+      type: integer
+    InitialLimitAmount:
+      type: integer
+    InitialLimit:   # true로 설정하면 배틀 서버는 별다른 변화가 없으면 해당 아이템을 드랍하지 않습니다. 사냥터 소유 서버가 켜지기 전까지는 창조석을 드랍하면 안되기때문에 창조석마다 true 설정
+      type: boolean
+    Tier:
+      type: integer
+      default: 0
+    TargetItemCategory:
+      type: string
+      ref: item_category
+    MasteryPoints:
+      type: integer
+    MasteryExp:
+      type: integer
+    UsePresetItemId:  #프리셋에서 사라지지 않고, 다음 획득한 아이템으로 갱신되도록 하는 아이템 (기간제 아이템)
+      type: boolean
+    FortressUpgradeSkipMinutes:
+      type: integer    
+    Dummy:  #더미
+      type: boolean     
+      default: false
+    ExpandCharacterSlot:
+      type: boolean
+    FlowDisplay:
+      type: object
+      additionalProperties: false
+      properties:
+        HideGatheringArea: #획득처 표시 안함 여부
+          type: boolean
+          default: false
+        HideUsageArea: #사용처 표시 안함 여부
+          type: boolean
+          default: false
+    BuildingBonus:
+      # type: array
+      # items:
+      type: object
+      additionalProperties: false
+      required:
+        - BuildingBonus
+      properties:
+        BuildingBonus:
+          type: string
+          ref: building_bonus
+        ExpireTime:
+          type: integer
+          visible: true
+    DropAreaDesc: #스킨 UI에 출력되는 스킨 획득처
+      type: string
+      ref: description
+    AutoConsumeOnCreate:
+      type: boolean
+    EquipWeaponLimit:
+      type: string
+      ref: item_category

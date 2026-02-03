@@ -1,0 +1,10 @@
+version: '3'
+services:
+  admin-app:
+    image: admin-app
+    ports:
+      - 3000:3000 
+    restart: always
+    environment:
+      ADMIN: admin.eclipsestudio.co.kr:8888
+

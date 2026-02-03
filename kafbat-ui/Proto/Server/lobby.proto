@@ -1,0 +1,86 @@
+syntax = "proto3";
+package lobby;
+import "Common/property.proto";
+import "Common/battle_common.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.event.lobby";
+option java_outer_classname = "LobbyServiceProto";
+
+message LobbyCommand {
+  oneof command {
+    ExpandCharacterSlot expand_character_slot = 10;
+  }
+
+  message ExpandCharacterSlot {
+    int64 expected_slot_count = 1;
+    int64 slot_count_before = 2;
+  }
+}
+
+message CharacterNameUpdateEvent {
+  string character_uuid = 1;
+  string name = 2;
+  Type type = 3;
+
+  string name_before = 4; // 이전 닉네임
+
+  enum Type {
+    BY_ADMIN = 0; // 운영툴에 의한 변경
+  }
+}
+
+message CharacterEvent {
+  oneof event {
+    CharacterConnect connect = 1;
+    CharacterDisconnect disconnect = 2;
+  }
+}
+
+message CharacterConnect {
+  int64 account_id = 1;
+  string character_uuid = 2;
+  string battle_identifier = 3;
+}
+
+message CharacterDisconnect {
+  int64 account_id = 4;
+  string character_uuid = 2;
+  repeated common.Property properties = 3;
+}
+
+message Server {
+  string id = 1;
+  string url = 2;
+  int32 connections = 3;
+}
+
+message MasterCoordinatorCommand {
+  oneof command {
+    Competition competition = 1;
+  }
+
+  message Competition {
+
+  }
+}
+
+message QueryBuffReply {
+  string character_uuid = 1;
+  repeated common.BuffEvent buff_events = 2;
+}
+
+message LobbyInfo {
+  message ServerInfo {
+    string name = 1;
+    int64 current_influx_index = 2;
+    reserved 3;
+    int64 population = 4;
+  }
+  repeated ServerInfo server_infos = 1;
+}
+
+message WebSocketConnectEvent {
+  string websocket_session_id = 1;
+  optional string existing_websocket_session_id = 2;
+}

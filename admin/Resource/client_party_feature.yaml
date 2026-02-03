@@ -1,0 +1,9 @@
+- Id: 1
+  Name: Party
+  RuleDescriptions:
+    - Name: Default
+      Value: UIWord_Distribution_Default
+    - Name: Sequence
+      Value: UIWord_Distribution_Sequence
+    - Name: Random
+      Value: UIWord_Distribution_Random

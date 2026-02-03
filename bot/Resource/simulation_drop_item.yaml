@@ -1,0 +1,39 @@
+- Id: 10000000000
+  Name: Simulation_Passive_Monster_DropItem
+  Comment: PassiveMonster는 100% 확률로 물약을 하나 드랍함
+  Npc: Simulation_Passive_Monster
+  DropItems:
+    - Id: 1
+      Item: Simulation_Potion_Item
+      Amount: CalcDropItemAmount
+      MinAmount: 1
+      MaxAmount: 1
+      Probability: "100%"
+      DropRange: 3
+      DropAmount: 1
+- Id: 10000000001
+  Name: Simulation_Passive_Transform_Skill_Item_Monster_DropItem
+  Comment: 100% 확률로 Simulation_Transform_Skill_Battle_Item을 하나 드랍함
+  Npc: Simulation_Passive_Transform_Skill_Item_Monster
+  DropItems:
+    - Id: 1
+      Item: Simulation_Transform_Skill_Battle_Item
+      Amount: CalcDropItemAmount
+      MinAmount: 1
+      MaxAmount: 1
+      Probability: "100%"
+      DropRange: 3
+      DropAmount: 1
+- Id: 10000000002
+  Name: Simulation_Passive_Monster_Spawn_Interval_DropItem
+  Comment: PassiveMonster는 100% 확률로 물약을 하나 드랍함
+  Npc: Simulation_Passive_Monster_Spawn_Interval
+  DropItems:
+    - Id: 1
+      Item: Simulation_Potion_Item
+      Amount: CalcDropItemAmount
+      MinAmount: 1
+      MaxAmount: 1
+      Probability: "100%"
+      DropRange: 3
+      DropAmount: 1

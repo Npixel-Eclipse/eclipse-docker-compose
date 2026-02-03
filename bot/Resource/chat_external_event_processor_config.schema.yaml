@@ -1,0 +1,68 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Processor
+    - Protobuf
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      minLength: 1
+    Processor:
+      type: object
+      required:
+        - ApplicationId
+        - Topic
+        - Type
+      properties:
+        ApplicationId:
+          type: string
+        Topic:
+          type: string
+        Type:
+          type: string
+          enum:
+            - USER_PROPERTY
+    Protobuf:
+      type: object
+      additionalProperties: false
+      required:
+        - ProtoPath
+        - MessageType
+        - MappingKeys
+        - MappingProtoFields
+        - UserIdProtoField
+      properties:
+        ProtoPath:
+          type: string
+        MessageType:
+          type: string
+        MappingKeys:
+          type: array
+          items:
+            type: string
+        MappingProtoFields:
+          type: array
+          items:
+            type: string
+        UserIdProtoField:
+          type: string
+        UpsertWhenNoEventType:
+          type: boolean
+        UpdateEventTypeKey:
+          type: string
+        UpsertEventValues:
+          type: array
+          items:
+            type: string
+        DeleteEventValues:
+          type: array
+          items:
+            type: string

@@ -1,0 +1,7 @@
+- Id: 1
+  Name: ItemCombinationFeature
+  DescriptionInfos:
+    - Type: AddChanceFailReason_Cost
+      Description: UIWord_Combined_Popup_AddCount_Exception
+    - Type: AddChanceFailReason_Count
+      Description: UIWord_Combined_Popup_AddCount_Exception2

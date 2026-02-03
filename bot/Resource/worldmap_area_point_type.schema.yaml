@@ -1,0 +1,39 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+    PointType: #타입
+      type: string
+      enum:
+        - None
+        - Dungeon
+        - Field
+        - Field_PK
+        - Town
+        - HotSpot 
+    DisplayOnly: #클릭해서 정보 볼 수 있음.
+      type: boolean
+      default: false
+    Description:
+      type: string
+      ref: description
+    TextStyleKey:
+      type: string
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명 또는 /Game/UIIcon/Skill/파일명.파일명
+      type: string
+    comment: #코멘트
+      type: string
+    CanPK: #월드맵에서 PK 가능한 지역이라고 표기하기 위한 프로퍼티. Dungeon - Floor의 DefaultCanPK 프로퍼티도 함께 검토 필요.
+      type: boolean
+      default: false
+
+  required:
+    - Id
+    - Name

@@ -1,0 +1,325 @@
+- Id: 1
+  Name: Broadcast_Item_Craft_Material
+  ItemCategory: Item_Craft_Material
+  Grade: Rare
+  Enchant:
+    Level: 0
+- Id: 875
+  Name: Broadcast_Item_Craft_Special
+  ItemCategory: Item_Craft_Special
+  Grade: Rare
+  Enchant:
+    Level: 0
+- Id: 235
+  Name: Broadcast_Skill_Learned_Attack
+  ItemCategory: Skill_Learned_Attack
+  Grade: Epic
+  Enchant:
+    Level: 5
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1477
+  Name: Broadcast_Skill_Learned_Passive
+  ItemCategory: Skill_Learned_Passive
+  Grade: Epic
+  Enchant:
+    Level: 5
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1386
+  Name: Broadcast_Polymorph_Card_All
+  ItemCategory: Polymorph_Card_All
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 2353
+  Name: Broadcast_Polymorph_Card_Fighter
+  ItemCategory: Polymorph_Card_Fighter
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 164
+  Name: Broadcast_Polymorph_Card_Ranger
+  ItemCategory: Polymorph_Card_Ranger
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1340
+  Name: Broadcast_Polymorph_Card_Sorcerer
+  ItemCategory: Polymorph_Card_Sorcerer
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1223
+  Name: Broadcast_Polymorph_Card_Assassin
+  ItemCategory: Polymorph_Card_Assassin
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 52
+  Name: Broadcast_WeaponPolymorph_Sword
+  ItemCategory: WeaponPolymorph_Sword
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 2674
+  Name: Broadcast_WeaponPolymorph_LSword
+  ItemCategory: WeaponPolymorph_LSword
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 198
+  Name: Broadcast_WeaponPolymorph_Bow
+  ItemCategory: WeaponPolymorph_Bow
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 715
+  Name: Broadcast_WeaponPolymorph_Cbow
+  ItemCategory: WeaponPolymorph_Cbow
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1636
+  Name: Broadcast_WeaponPolymorph_Staff
+  ItemCategory: WeaponPolymorph_Staff
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 1075
+  Name: Broadcast_WeaponPolymorph_Orb
+  ItemCategory: WeaponPolymorph_Orb
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 3609
+  Name: Broadcast_WeaponPolymorph_Katana
+  ItemCategory: WeaponPolymorph_Katana
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 3528
+  Name: Broadcast_WeaponPolymorph_TwinDaggers
+  ItemCategory: WeaponPolymorph_TwinDaggers
+  Grade: Epic
+  Enchant:
+    Level: 20
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+- Id: 203
+  Name: Broadcast_Skill_Book_Fighter
+  ItemCategory: Skill_Book_Fighter
+  Grade: Epic
+  Enchant:
+    Level: 0
+- Id: 460
+  Name: Broadcast_Skill_Book_Ranger
+  ItemCategory: Skill_Book_Ranger
+  Grade: Epic
+  Enchant:
+    Level: 0
+- Id: 184
+  Name: Broadcast_Skill_Book_Sorcerer
+  ItemCategory: Skill_Book_Sorcerer
+  Grade: Epic
+  Enchant:
+    Level: 0
+- Id: 890
+  Name: Broadcast_Item_Equip_Accessory_Earring
+  ItemCategory: Item_Equip_Accessory_Earring
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 847
+  Name: Broadcast_Item_Equip_Accessory_Necklace
+  ItemCategory: Item_Equip_Accessory_Necklace
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1001
+  Name: Broadcast_Item_Equip_Accessory_Belt
+  ItemCategory: Item_Equip_Accessory_Belt
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 993
+  Name: Broadcast_Item_Equip_Accessory_Ring
+  ItemCategory: Item_Equip_Accessory_Ring
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 577
+  Name: Broadcast_Item_Equip_Accessory_Bracelet
+  ItemCategory: Item_Equip_Accessory_Bracelet
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1258
+  Name: Broadcast_Item_Equip_Armor_Helm
+  ItemCategory: Item_Equip_Armor_Helm
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 134
+  Name: Broadcast_Item_Equip_Armor_Suit
+  ItemCategory: Item_Equip_Armor_Suit
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 141
+  Name: Broadcast_Item_Equip_Armor_Cape
+  ItemCategory: Item_Equip_Armor_Cape
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 666
+  Name: Broadcast_Item_Equip_Armor_Gloves
+  ItemCategory: Item_Equip_Armor_Gloves
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 831
+  Name: Broadcast_Item_Equip_Armor_Pants
+  ItemCategory: Item_Equip_Armor_Pants
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 625
+  Name: Broadcast_Item_Equip_Armor_Boots
+  ItemCategory: Item_Equip_Armor_Boots
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1207
+  Name: Broadcast_Item_Equip_Weapon_Fighter_Lsword
+  ItemCategory: Item_Equip_Weapon_Fighter_Lsword
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1985
+  Name: Broadcast_Item_Equip_Weapon_Fighter_Sword
+  ItemCategory: Item_Equip_Weapon_Fighter_Sword
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1000
+  Name: Broadcast_Item_Equip_Weapon_Ranger_Bow
+  ItemCategory: Item_Equip_Weapon_Ranger_Bow
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 735
+  Name: Broadcast_Item_Equip_Weapon_Ranger_Cbow
+  ItemCategory: Item_Equip_Weapon_Ranger_Cbow
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1037
+  Name: Broadcast_Item_Equip_Weapon_Sorcerer_Orb
+  ItemCategory: Item_Equip_Weapon_Sorcerer_Orb
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 2287
+  Name: Broadcast_Item_Equip_Weapon_Sorcerer_Staff
+  ItemCategory: Item_Equip_Weapon_Sorcerer_Staff
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1078
+  Name: Broadcast_Item_Equip_Subweapon_Ranger_Cbow
+  ItemCategory: Item_Equip_Subweapon_Ranger_Cbow
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1002
+  Name: Broadcast_Item_Equip_Subweapon_Sorcerer_Staff
+  ItemCategory: Item_Equip_Subweapon_Sorcerer_Staff
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1222
+  Name: Broadcast_Item_Equip_Subweapon_Sorcerer_Orb
+  ItemCategory: Item_Equip_Subweapon_Sorcerer_Orb
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 1402
+  Name: Broadcast_Item_Equip_Subweapon_Ranger_Bow
+  ItemCategory: Item_Equip_Subweapon_Ranger_Bow
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 2418
+  Name: Broadcast_Item_Equip_Subweapon_Fighter_Lsword
+  ItemCategory: Item_Equip_Subweapon_Fighter_Lsword
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 2865
+  Name: Broadcast_Item_Equip_Subweapon_Fighter_Sword
+  ItemCategory: Item_Equip_Subweapon_Fighter_Sword
+  Grade: Rare
+  Enchant:
+    Level: 10
+    SuccessMessage: UIWord_SystemMsg_SkillEnchantBroadcast
+    FailureMessage: UIWord_SystemMsg_ItemDestoryBroadcast
+- Id: 3497
+  Name: Broadcast_Item_Polymorph_Skin
+  ItemCategory: Polymorph_Skin
+  Grade: Rare
+  Enchant:
+    Level: 0

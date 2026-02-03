@@ -1,0 +1,95 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Category:
+      type: string
+      ref: equip_slot_category
+      visible: true
+    LimitType:
+      type: string
+      enum:
+        - Character
+        - AccountServer
+        - AccountAllServer
+    SlotOrder:
+      type: integer
+      visible: true
+    SolidarityGrade:
+      type: string
+      ref: grade
+      visible: true
+    SolidarityBuildingUnlockLevel:
+      type: integer
+      default: 1
+      visible: true
+    Type:
+      type: string
+      default: None
+      visible: true
+      enum:
+        - Weapon
+        - SubWeapon
+        - Helmet
+        - Suit
+        - Pants
+        - Boots
+        - Cape
+        - Gloves
+        - Earring1
+        - Earring2
+        - Necklace
+        - Bracelet
+        - Ring1
+        - Ring2
+        - Belt
+        - Polymorph
+        - PolymorphSkin
+        - WeaponPolymorph
+        - WeaponPolymorph1 # 클라 처리용. 실제 데이터 입력X
+        - WeaponPolymorph2 # 클라 처리용. 실제 데이터 입력X
+        - Solidarity
+        - Divinity
+    Description:
+      type: string
+      ref: description
+    Icon: #빈 슬롯 리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    EquipMessage: #해당 슬롯에 아이템을 장착할 경우 출력될 시스템 메세지
+      type: string
+      ref: system_message
+    UnequipMessage: #해당 슬롯의 아이템을 장착 해제 할 경우 출력될 시스템 메세지
+      type: string
+      ref: system_message
+    Comment:
+      type: string
+    Breakable:
+      type: boolean
+      default: true
+    UseType:
+      type: string
+      enum:
+        - use
+        - unused
+      default: use
+    UnlockLevel:
+      type: integer
+    SlotNameDesc:
+      type: string
+    MultiEquipPolicy:
+      type: string
+      enum:
+          - ItemParent
+          - ItemCategoryParent
+  required:
+    - Id
+    - Name
+    - LimitType

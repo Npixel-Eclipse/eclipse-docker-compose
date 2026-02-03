@@ -1,0 +1,18 @@
+- Id: 1
+  Name: SampleNpcInteraction
+  Comment: 샘플 NPC 인터렉션
+  InteractionMotionSkill: TutorialBossSkill_Charle_NormalAttack
+  InteractionIcon: /Game/UI/Tex_Attack/AttackBtn_Talk.AttackBtn_Talk
+  ProgressBarDesc: UIWord_Scorn
+- Id: 40
+  Name: Test_Quest_Interaction
+  Comment: "[테스트] 퀘스트 인터렉션"
+  InteractionMotionSkill: Quest_Interaction_Skill
+  InteractionIcon: /Game/UI/Tex_Attack/AttackBtn_Get.AttackBtn_Get
+  ProgressBarDesc: UIWord_Scorn
+- Id: 18
+  Name: Test_Interaction
+  Comment: "[테스트] 테스트 NPC 인터렉션"
+  InteractionMotionSkill: Test_Interaction_Skill
+  InteractionIcon: /Game/UI/Tex_Attack/AttackBtn_Get.AttackBtn_Get
+  ProgressBarDesc: UIWord_Scorn

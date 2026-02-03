@@ -1,0 +1,36 @@
+- Id: 1
+  Name: PotentialFeature
+  UITab:
+    - Type: Manifest
+      Comment: 발현
+      Description: UIWord_Potential_Manifest
+    - Type: Enchant
+      Comment: 강화
+      Description: UIWord_Potential_Enchant
+  MaterialCategory: Item_Misc_Upgrade_Potential
+  PotentialPageInventory: Potential
+  Enchant_LowEnchantMaxLevel: UIWord_SystemMsg_Potential_Enchant_LowEnchantMaxLevel
+  AllEnchant_Complete: UIWord_SystemMsg_Potential_Enchant_Complete
+  Enchant_Success: UIWord_SystemMsg_Potential_Enchant_Success
+  Enchant_Fail: UIWord_SystemMsg_Potential_Enchant_Fail
+  AutoEnchant_AchieveTargetLevel: UIWord_SystemMsg_Potential_AutoEnchant_AchieveTargetLevel
+  AutoEnchant_NoMaterial: UIWord_SystemMsg_Potential_AutoEnchant_NoMaterial
+  AutoEnchant_Stop: UIWord_SystemMsg_Potential_AutoEnchant_Stop
+  Manifest_Complete: UIWord_SystemMsg_Potential_Manifest_Complete
+  AutoManifest_Satisfy: UIWord_SystemMsg_Potential_AutoManifest_Satisfy
+  AutoManifest_NoMaterial: UIWord_SystemMsg_Potential_AutoManifest_NoMaterial
+  AutoManifest_Stop: UIWord_SystemMsg_Potential_AutoManifest_Stop
+  GradeMaxLevelGuideTextDesc: UIWord_Potential_SlotInfo_PopUp_Desc02
+  CautionGrade: Rare
+  AllDescription: UIWordAll
+  GradeDescriptionList:
+    - Grade: Common
+      Description: UIWord_Potential_AutoManifest_PopUp_Common
+    - Grade: Uncommon
+      Description: UIWord_Potential_AutoManifest_PopUp_Uncommon
+    - Grade: Rare
+      Description: UIWord_Potential_AutoManifest_PopUp_Rare
+    - Grade: Epic
+      Description: UIWord_Potential_AutoManifest_PopUp_Epic
+    - Grade: Legendary
+      Description: UIWord_Potential_AutoManifest_PopUp_Legend

@@ -1,0 +1,86 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - SeasonPassCategoryType
+    - Description
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    #탭이름
+    Description:
+      type: string
+      ref: description
+    SubTitle:
+      type: string
+      ref: description
+    DefaultTab:
+      type: boolean
+      default: false
+    SeasonPassDescription:
+      type: string
+      ref: description
+    SeasonPassCategoryType: 
+      type: string
+      enum:
+        - SeasonPass
+        - DailyPass
+        - AttendancePass
+    SeasonPassLevelQuestCategory: #해당 시즌 패스의 레벨 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassDiamondQuestCategory: #해당 시즌 패스의 다이아 해금 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassMissionQuestCategory: #해당 시즌 패스의 일일 퀘스트 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassWeeklyMissionQuestCategory: #해당 시즌 패스의 주간 퀘스트 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassCommonQuestCategory: #해당 시즌 패스의 무료 보상 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassPremiumQuestCategory: #해당 시즌 패스의 유료 보상 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassDailyQuestCategory: #해당 데일리 패스의 유료 보상 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    SeasonPassDailyFreeQuestCategory: #해당 데일리 패스의 무료 보상 관련 퀘스트 카테고리 입력
+      type: string
+      ref: quest_category
+    AttendancePassCommonQuestCategory:
+      type: string
+      ref: quest_category
+    AttendancePassPremiumQuestCategory:
+      type: string
+      ref: quest_category
+    BackgroundIcon:
+      type: string
+
+    Comment:
+      type: string
+
+    #순서바꾸면 안됨. 데이터 선언 순서.
+    QuestType: 
+      type: string
+      enum:
+        - SeasonPass_Level
+        - SeasonPass_Diamond
+        - SeasonPass_Mission
+        - SeasonPass_WeeklyMission
+        - SeasonPass_Common
+        - SeasonPass_Premium
+        - SeasonPass_Daily
+        - SeasonPass_DailyFree
+        - AttendancePass_CommonQuestCategory
+        - AttendancePass_PremiumQuestCategory

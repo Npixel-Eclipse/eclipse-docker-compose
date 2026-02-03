@@ -1,0 +1,234 @@
+syntax = "proto3";
+package log;
+import "Server/Log/battle.proto";
+import "Server/Log/chat.proto";
+import "Server/Log/common.proto";
+import "Server/Log/dungeon.proto";
+import "Server/Log/fortress.proto";
+import "Server/Log/guild.proto";
+import "Server/Log/item.proto";
+import "Server/Log/lobby.proto";
+import "Server/Log/mail.proto";
+import "Server/Log/matchmaking.proto";
+import "Server/Log/party.proto";
+import "Server/Log/pklog.proto";
+import "Server/Log/quest.proto";
+import "Server/Log/ranking.proto";
+import "Server/Log/trade.proto";
+import "Server/Log/hunting_zone.proto";
+
+option java_multiple_files = true;
+option java_package = "eclipse.proto.server.log";
+option java_outer_classname = "LogServiceProto";
+
+message LogEvent {
+  reserved 10, 11, 1021, 1022, 1041, 8024, 9002;
+  string host_name = 1;
+
+  oneof log {
+    Probability probability = 51;
+    GameHealthCheck game_health_check = 52;
+    ItemChange item_change = 53;
+    CurrencyChange currency_change = 54;
+
+    // item
+    CreateItem create_item = 101;
+    UpdateItem update_item = 102;
+    DeleteItem delete_item = 103;
+
+    SortInventory sort_inventory = 111;
+    ExpandInventory expand_inventory = 112;
+
+    EquipItem equip_item = 121;
+    EnchantItem enchant_item = 122;
+    EngraveItem engrave_item = 123;
+    LockItem lock_item = 124;
+    LockProperty lock_property = 125;
+
+    ImposeDeathPenalty impose_death_penalty = 131;
+    RestoreDeathPenaltyItem restore_death_penalty_item = 132;
+    RestoreDeathPenaltyExperience restore_death_penalty_experience = 133;
+
+    BuyItem buy_item = 141;
+    SellItem sell_item = 142;
+    BuyBmShopProduct buy_bm_shop_product = 143;
+    TakeBmShopProduct take_bm_shop_product = 144;
+
+    GetRecipe get_recipe = 151;
+    ExecuteRecipe execute_recipe = 152;
+    CreateReRoleRecipe create_re_role_recipe = 153;
+    ProceedReRoleRecipe proceed_re_role_recipe = 154;
+    ConfirmReRoleRecipe confirm_re_role_recipe = 155;
+    DisassembleItem disassemble_item = 156;
+
+    RegisterItemCollection register_item_collection = 161;
+
+    SavePreset save_preset = 171;
+    ApplyPreset apply_preset = 172;
+    ExpandPreset expand_preset = 173;
+
+    UpdateMasteryExperience update_mastery_experience = 182;
+    UpdateMasteryLevel update_mastery_level = 181;
+    ActivateMasteryEssence activate_mastery_essence = 183;
+    ResetMasteryEssence reset_mastery_essence = 184;
+    TransferMasteryEssence transfer_mastery_essence = 185;
+    FusionMasteryEssence fusion_mastery_essence = 186;
+    UnFusionMasteryEssence un_fusion_mastery_essence = 187;
+
+    AddCombinationCount add_combination_count = 191;
+    ResetCombination reset_combination = 192; // 조합식 초기화
+    UnlockCombination unlock_combination = 193; // 조합식 아이템 지급
+
+    // battle
+    ReloadResource reload_resource = 1004;
+    Teleport teleport = 1001;
+    EnterLand enter_land = 1002;
+    LeaveLand leave_land = 1003;
+    MoveLand move_land = 1005;
+
+    Die die = 1011;
+    KillBoss kill_boss = 1012;
+    DropItem drop_item = 1013;
+    Revive revive = 1014;
+    GetExperience get_experience = 1015;
+    LoseExperience lose_experience = 1016;
+    ChangePkScore change_pk_score = 1017;
+
+    UpsertQuickSlot upsert_quick_slot = 1031;
+    ClearQuickSlot clear_quick_slot = 1032;
+
+    ChangeCombatPoint change_combat_point = 1042;
+    ChangePkPoint change_pk_point = 1043;
+
+    ScoreBattleground score_battleground = 1051;
+
+    AutoAttack auto_attack = 1061;
+    CounterAttack counter_attack = 1062;
+
+    WorldBossContribute world_boss_contribute = 1071;
+
+    // trade
+    SellTrade sell_trade = 2001;
+    BuyTrade buy_trade = 2002;
+    ReRegisterTrade re_register_trade = 2003;
+    WithdrawTrade withdraw_trade = 2004;
+    CancelTrade cancel_trade = 2005;
+    SettleTrade settle_trade = 2006;
+    RejectTrade reject_trade = 2007;
+
+    // mail
+    SendMail send_mail = 3001;
+    ReceiveMail receive_mail = 3002;
+    SendLetter send_letter = 3003;
+    ReadLetter read_letter = 3004;
+    DeleteLetter delete_letter = 3005;
+
+    // matchmaking
+    TryMatching try_matching = 4001;
+    SucceedMatching succeed_matching = 4002;
+    JoinMatching join_matching = 4003;
+    StartMatch start_match = 4004;
+    DeleteMatch delete_match = 4005;
+
+    // lobby
+    GameLogin game_login = 5006;
+    GameLogout game_logout = 5008;
+    GameGuidRegister game_guid_register = 5005;
+    GameCuidRegister game_cuid_register = 5001;
+    EnterCharacter enter_character = 5002;
+    ReserveCharacterDeletion reserve_character_deletion = 5003;
+    CancelDeleteCharacter cancel_delete_character = 5004;
+    ExpandCharacterSlot expand_character_slot = 5007;
+
+    // chat
+    CreateChatChannel create_chat_channel = 6001;
+    DeleteChatChannel delete_chat_channel = 6002;
+    JoinChatChannel join_chat_channel = 6003;
+    LeaveChatChannel leave_chat_channel = 6004;
+    SendChat send_chat = 6005;
+    SendDirectChat send_direct_chat = 6006;
+    BlockChat block_chat = 6007;
+    UnblockChat unblock_chat = 6008;
+
+    // fortress
+    UpgradeBuildingStarted upgrade_building_started = 7001;
+    UpgradeBuildingFinished upgrade_building_finished = 7002;
+    ReduceBuildingUpgrade reduce_building_upgrade = 7003;
+    HarvestBuilding harvest_building = 7004;
+    ExpandConstructionQueue expand_construction_queue = 7007;
+    HelpBuilding help_building = 7008;
+    InstantHarvestBuildingUse instant_harvest_building_use = 7009;
+    InstantHarvestBuildingReward instant_harvest_building_reward = 7010;
+
+    // guild
+    HelpMyBuilding help_my_building = 8001;
+    CreateGuild create_guild = 8002;
+    DisbandGuild disband_guild = 8003;
+    JoinGuild join_guild = 8004;
+    RequestJoinGuild request_join_guild = 8005;
+    ReplyJoinGuild reply_join_guild = 8006;
+    CancelRequestJoinGuild cancel_request_join_guild = 8007;
+    LeaveGuild leave_guild = 8008;
+    BanishGuild banish_guild = 8009;
+    ProposeAllyGuild propose_ally_guild = 8010;
+    CancelProposeAllyGuild cancel_propose_ally_guild = 8011;
+    ReplyAllyGuild reply_ally_guild = 8012;
+    DisAllyGuild dis_ally_guild = 8013;
+    AddHostileGuild add_hostile_guild = 8014;
+    ProposeHostileGuild propose_hostile_guild = 8015;
+    DeclineHostileGuildProposal decline_hostile_guild_proposal = 8016;
+    RemoveHostileGuild remove_hostile_guild = 8017;
+    UpdateGuildInfo update_guild_info = 8018;
+    UpdateGuildMemberRole update_guild_member_role = 8019;
+    DelegateGuildMaster delegate_guild_master = 8020;
+    UpdateGuildMemberIntroduction update_guild_member_introduction = 8021;
+    ContributeGuild contribute_guild = 8022;
+    ChangeGuildItem change_guild_item = 8023;
+    AcquireGuildCollection acquire_guild_collection = 8025;
+    ContributeGuildCollection contribute_guild_collection = 8026;
+    ContributeAdditionalGuildCollection contribute_additional_guild_collection = 8027;
+    PromoteContributeGuildCollection promote_contribute_guild_collection = 8028;
+    StoreToGuildStorage store_to_guild_storage = 8030;
+
+    // quest
+    StartQuest start_quest = 9001;
+    CompleteQuest complete_quest = 9003;
+    StopQuest stop_quest = 9004;
+    RefreshQuest refresh_quest = 9005;
+
+    // pklog
+    ScornCharacter scorn_character = 10002;
+    TraceCharacter trace_character = 10003;
+    WantCharacter want_character = 10004;
+
+    // ranking
+    ChangeRanking change_ranking = 11001;
+    ChangeGuildRanking change_guild_ranking = 11002;
+    ChangeRankingTitle change_ranking_title = 11003;
+    ChangeRankingBuffs change_ranking_buffs = 11004;
+
+    // dungeon
+    CheckInDungeon check_in_dungeon = 12001;
+    CheckOutDungeon check_out_dungeon = 12002;
+    StartChallenge start_challenge = 12003;
+    EndChallenge end_challenge = 12004;
+
+    // party
+    CreateParty create_party = 13001;
+    InviteParty invite_party = 13002;
+    ConfirmPartyInvitation confirm_party_invitation = 13003;
+    CancelPartyInvitation cancel_party_invitation = 13004;
+    LeaveParty leave_party = 13005;
+    DisbandParty disband_party = 13006;
+    DelegatePartyHost delegate_party_host = 13007;
+    BanishParty banish_party = 13008;
+    ChangePartyRule change_party_rule = 13009;
+
+    // hunting_zone
+    BidRequestHuntingZone bid_request_hunting_zone = 14001;
+    BidHuntingZone bid_hunting_zone = 14002;
+    UpdateHuntingZoneOwner update_hunting_zone_owner = 14003;
+    RewardHuntingZoneGroupResource reward_hunting_zone_group_resource = 14004;
+    RewardHuntingZoneItem reward_hunting_zone_item = 14005;
+  }
+}

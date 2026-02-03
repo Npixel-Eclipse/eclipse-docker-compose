@@ -1,0 +1,72 @@
+- Id: 1
+  Name: Achievement
+  Classes:
+    - ClassName: XAchievementRuntimeData
+      Datas:
+        - DataName: MainTabListSelectIndex
+          Order: 0
+        - DataName: AchievementListScrollOffset
+          Order: 1
+- Id: 2
+  Name: Craft
+  Classes:
+    - ClassName: XCraftRuntimeData
+      Datas:
+        - DataName: MainTabListSelectIndex
+          Order: 0
+- Id: 3
+  Name: Mail
+  Classes:
+    - ClassName: XMailRuntimeData
+      Datas:
+        - DataName: MainTabListSelectIndex
+          Order: 0
+        - DataName: MailListScrollOffset
+          Order: 1
+- Id: 4
+  Name: Storage
+  Classes:
+    - ClassName: XAccountStorageItemSlotListRuntimeData
+      Datas:
+        - DataName: CategoryTabListSelectIndex
+          Order: 0
+        - DataName: ItemSlotListScrollOffset
+          Order: 1
+        - DataName: bShowSortTab
+          Order: 2          
+    - ClassName: XStorableItemSlotListRuntimeData
+      Datas:
+        - DataName: CategoryTabListSelectIndex
+          Order: 0
+        - DataName: ItemSlotListScrollOffset
+          Order: 1
+- Id: 5
+  Name: Collection
+  Classes:
+    - ClassName: XCollectionRuntimeData
+      Datas:
+        - DataName: CategoryRuntimeDatasSelectIndex
+          Order: 0
+        - DataName: ItemGroupRuntimeDatasSelectIndex
+          Order: 1
+        - DataName: ItemGroupRuntimeDatasScrollOffset
+          Order: 2
+        - DataName: BuffGroupRuntimeDatasScrollOffset
+          Order: 3
+    - ClassName: XItemSearchRuntimeData
+      Datas:
+        - DataName: CommittedText
+          Order: 0
+- Id: 6
+  Name: DungeonMain
+  Classes:
+    - ClassName: XDungeonRuntimeData
+      Datas:
+        - DataName: TabListSelectIndex
+          Order: 0
+        - DataName: SelectedInfoListSelectIndex
+          Order: 1
+        - DataName: AddressListSelectIndex
+          Order: 2
+        - DataName: RewardListScrollOffset
+          Order: 3

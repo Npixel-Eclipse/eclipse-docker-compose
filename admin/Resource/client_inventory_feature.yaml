@@ -1,0 +1,175 @@
+- Id: 1
+  Name: SlotGroup0
+  Comment: 길드 창고
+  SlotGroup:
+    - Type: All
+      SlotCategory:
+        - ItemCategory: Item_Equip
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+    - Type: Equip
+      SlotCategory:
+        - ItemCategory: Item_Equip_WeaponBase
+        - ItemCategory: Item_Equip_Armor
+        - ItemCategory: Item_Equip_Accessory
+    - Type: ConsumeForBuff
+      SlotCategory:
+        - ItemCategory: Item_Misc_Healing
+        - ItemCategory: Item_Misc_Empower    
+        - ItemCategory: Item_Misc_Upgrade
+        - ItemCategory: Item_Misc_Food
+        - ItemCategory: Item_Misc_Admission
+        - ItemCategory: Item_Misc_Instialize
+        - ItemCategory: Item_Misc_TeleportScroll
+    - Type: Craft
+      SlotCategory:
+        - ItemCategory: Item_Craft_Special
+        - ItemCategory: Item_Misc_Collection
+    - Type: Etc
+      SlotCategory:
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+- Id: 2
+  Name: SlotGroup1
+  Comment: 창고
+  SlotGroup:
+    - Type: All
+      SlotCategory:
+        - ItemCategory: Item_Equip
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+    - Type: Equip
+      SlotCategory:
+        - ItemCategory: Item_Equip_WeaponBase
+        - ItemCategory: Item_Equip_Armor
+        - ItemCategory: Item_Equip_Accessory
+    - Type: ConsumeForBuff
+      SlotCategory:
+        - ItemCategory: Item_Misc_Healing
+        - ItemCategory: Item_Misc_Empower    
+        - ItemCategory: Item_Misc_Upgrade
+        - ItemCategory: Item_Misc_Food
+        - ItemCategory: Item_Misc_Admission
+        - ItemCategory: Item_Misc_Instialize
+        - ItemCategory: Item_Misc_TeleportScroll
+    - Type: Craft
+      SlotCategory:
+        - ItemCategory: Item_Craft_Special
+        - ItemCategory: Item_Misc_Collection
+    - Type: Etc
+      SlotCategory:
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+- Id: 3
+  Name: SlotGroup2
+  Comment: 거래소
+  SlotGroup:
+    - Type: All
+      SlotCategory:
+        - ItemCategory: Item_Equip
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+    - Type: Equip
+      SlotCategory:
+        - ItemCategory: Item_Equip_WeaponBase
+        - ItemCategory: Item_Equip_Armor
+        - ItemCategory: Item_Equip_Accessory
+    - Type: ConsumeForBuff
+      SlotCategory:
+        - ItemCategory: Item_Misc_Healing
+        - ItemCategory: Item_Misc_Empower    
+        - ItemCategory: Item_Misc_Upgrade
+        - ItemCategory: Item_Misc_Food
+        - ItemCategory: Item_Misc_Admission
+        - ItemCategory: Item_Misc_Instialize
+        - ItemCategory: Item_Misc_TeleportScroll
+    - Type: Craft
+      SlotCategory:
+        - ItemCategory: Item_Craft_Special
+        - ItemCategory: Item_Misc_Collection
+    - Type: Etc
+      SlotCategory:
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+- Id: 4
+  Name: SlotGroup3
+  Comment: 인벤토리
+  SlotGroup:
+    - Type: All
+      SlotCategory:
+        - ItemCategory: Item_Equip
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+    - Type: Equip
+      SlotCategory:
+        - ItemCategory: Item_Equip_WeaponBase
+        - ItemCategory: Item_Equip_Armor
+        - ItemCategory: Item_Equip_Accessory
+    - Type: ConsumeForBuff
+      SlotCategory:
+        - ItemCategory: Item_Misc_Healing
+        - ItemCategory: Item_Misc_Empower    
+        - ItemCategory: Item_Misc_Upgrade
+        - ItemCategory: Item_Misc_Food
+        - ItemCategory: Item_Misc_Admission
+        - ItemCategory: Item_Misc_Instialize
+        - ItemCategory: Item_Misc_TeleportScroll
+    - Type: Craft
+      SlotCategory:
+        - ItemCategory: Item_Craft_Special
+        - ItemCategory: Item_Misc_Collection
+    - Type: Etc
+      SlotCategory:
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+- Id: 5
+  Name: SlotGroup4
+  Comment: 판매 가능
+  SlotGroup:
+    - Type: All
+      SlotCategory:
+        - ItemCategory: Item_Equip
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc
+    - Type: Equip
+      SlotCategory:
+        - ItemCategory: Item_Equip_WeaponBase
+        - ItemCategory: Item_Equip_Armor
+        - ItemCategory: Item_Equip_Accessory
+    - Type: ConsumeForBuff
+      SlotCategory:
+        - ItemCategory: Item_Misc_Healing
+        - ItemCategory: Item_Misc_Empower    
+        - ItemCategory: Item_Misc_Upgrade
+        - ItemCategory: Item_Misc_Food
+        - ItemCategory: Item_Misc_Admission
+        - ItemCategory: Item_Misc_Instialize
+        - ItemCategory: Item_Misc_TeleportScroll
+    - Type: Craft
+      SlotCategory:
+        - ItemCategory: Item_Craft_Special
+        - ItemCategory: Item_Misc_Collection
+    - Type: Etc
+      SlotCategory:
+        - ItemCategory: Skill_Book
+        - ItemCategory: Item_Craft
+        - ItemCategory: Item_Currency  
+        - ItemCategory: Item_Misc

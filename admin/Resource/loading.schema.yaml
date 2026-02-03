@@ -1,0 +1,49 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    BG:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - Asset
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Asset:  #리소스 경로 가이드: /Game/UI/Loading_SP/Tex/파일명.파일명
+            type: string
+          MainDescription:
+            type: string
+            ref: description
+          SubDescription:
+            type: string
+            ref: description
+    Tooltip:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          Description:
+            type: string
+            ref: description

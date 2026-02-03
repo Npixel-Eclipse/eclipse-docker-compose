@@ -1,0 +1,217 @@
+- Id: 1
+  Name: ShowLevelUpPopup
+  Event:
+    Type: SkillEvent
+    Skill: LevelUp
+  Condition:
+    Type: CasterIsMyEntity
+  Action:
+    Type: ShowUI
+    UITypeName: LevelUpPopup
+    Duration: 4
+- Id: 2
+  Name: ShowCharacterInfoPopup
+  Event:
+    Type: SkillEvent
+    Skill: LevelUp
+  Condition:
+    Type: HasRemainStatPoint
+    ContentLimit: Statue_Awareness
+  Action:
+    Type: DispatchUIEvent
+    UIEvent: Open_CharacterInfoPopup
+- Id: 3
+  Name: UnloadWorldMapAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: WorldMap
+- Id: 4
+  Name: UnloadDungeonMainAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: DungeonMain
+- Id: 5
+  Name: UnloadDungeonMapAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: DungeonMap
+- Id: 6
+  Name: ResetUIHistoryAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: DispatchUIEvent
+    UIEvent: Reset_UIHistory
+- Id: 7
+  Name: ResetPopupLayer
+  Event:
+    Type: UIAddToViewportEvent
+    UITypeName: DeathPopup
+  Action:
+    Type: ResetWidgetLayer
+    WidgetLayerName: Popup
+- Id: 8
+  Name: UnequipSystemMessage
+  Event:
+    Type: RuntimeDataChangedEvent
+    RuntimeDataPath: PlayerRuntimeData.bEquippedWeapon
+  Condition:
+    Type: IsFalse
+    IgnoreAddress:
+      - Address: Tutorial_Instance_Bridge
+  Action:
+    Type: ShowSystemMessage
+    SystemMessage: NotEquippedWeapon
+- Id: 9
+  Name: EquippedBrokenWeaponSystemMessage
+  Event:
+    Type: RuntimeDataChangedEvent
+    RuntimeDataPath: PlayerRuntimeData.bEquippedBrokenWeapon
+  Action:
+    Type: ShowSystemMessage
+    SystemMessage: EquippedBrokenWeapon
+- Id: 10
+  Name: NotEquippedWeaponPolymorphSystemMessage
+  Event:
+    Type: RuntimeDataChangedEvent
+    RuntimeDataPath: PlayerRuntimeData.bEquippedNotAllowedWeapon
+  Action:
+    Type: ShowSystemMessage
+    SystemMessage: NotEquippedWeaponPolymorph
+- Id: 11
+  Name: UnloadQuestMainAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: QuestMain
+- Id: 12
+  Name: UnloadWorldBossHUDAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Action:
+    Type: UnloadUI
+    UITypeName: WorldBossHUD
+- Id: 13
+  Name: ShowStatContents
+  Event:
+    Type: SkillEvent
+    Skill: LevelUp
+  Condition:
+    Type: HasRemainStatPoint
+    ContentLimit: Statue_Awareness
+  Action:
+    Type: DispatchUIEvent
+    UIEvent: Open_StatContentPopup
+- Id: 15
+  Name: UnloadItemInfoHUDWeapon
+  Event:
+    Type: UIAddToViewportEvent
+    UITypeName: ItemInfoHUD_EquipSlot 
+  Action:
+    Type: UnloadUI
+    UITypeName: ItemInfoHUD_Weapon  
+- Id: 16
+  Name: UnloadItemInfoHUDEquipSlot
+  Event:
+    Type: UIAddToViewportEvent
+    UITypeName: ItemInfoHUD_Weapon 
+  Action:
+    Type: UnloadUI
+    UITypeName: ItemInfoHUD_EquipSlot     
+- Id: 17
+  Name: UnloadItemInfoEquipCompare
+  Event:
+    Type: UIAddToViewportEvent
+    UITypeName: ItemInfoHUD_EquipSlot 
+  Action:
+    Type: UnloadUI
+    UITypeName: ItemInfoHUD_Weapon 
+- Id: 18
+  Name: UnloadWorldMapAfterTeleport2
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: WorldmapTeleportPopup
+- Id: 19
+  Name: UnLoadInventoryByStorageOpen
+  Event:
+    Type: UIAddToViewportEvent
+    UITypeName: Storage 
+  Action:
+    Type: UnloadUI
+    UITypeName: InventoryHUD
+- Id: 21
+  Name: FortressTutorial
+  Event:
+    Type: LandChangedEvent
+    Land: Tutorial
+  Action:
+    Type: PlayQuestBehavior
+    QuestBehavior: Story_Quest_01_01
+- Id: 23
+  Name: UnloadRequestMainAfterTeleport
+  Event:
+    Type: TeleportArrivalEvent
+  Condition:
+    Type: ByFullScreenUI
+  Action:
+    Type: UnloadUI
+    UITypeName: RequestMain
+- Id: 24
+  Name: MainTutorialChapter01_BridgeBroken01
+  Event:
+    Type: LandChangedEvent
+    Land: TutorialInstance
+  Action:
+    Type: PlayLevelSequence
+    LevelSequence: MainTutorialChapter1_BridgeBroken1
+- Id: 25
+  Name: MainTutorialChapter01_BridgeBroken02
+  Event:
+    Type: TerritoryOverlappedEvent
+    Territory: Instance_Sequence_BridgeBroken1
+  Condition:
+    TriggerOnce: true
+  Action:
+    Type: PlayLevelSequence
+    LevelSequence: MainTutorialChapter1_BridgeBroken2
+- Id: 26
+  Name: MainTutorialChapter01_BridgeBroken03
+  Event:
+    Type: TerritoryOverlappedEvent
+    Territory: Instance_Sequence_BridgeBroken2
+  Condition:
+    TriggerOnce: true
+  Action:
+    Type: PlayLevelSequence
+    LevelSequence: MainTutorialChapter1_BridgeBroken3
+- Id: 27
+  Name: MainTutorialChapter01_BridgeBroken04
+  Event:
+    Type: TerritoryOverlappedEvent
+    Territory: Instance_Sequence_BridgeBroken3
+  Condition:
+    TriggerOnce: true
+  Action:
+    Type: PlayLevelSequence
+    LevelSequence: MainTutorialChapter1_BridgeBroken4

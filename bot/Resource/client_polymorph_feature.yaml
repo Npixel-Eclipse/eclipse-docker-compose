@@ -1,0 +1,291 @@
+- Id: 1
+  Name: Polymorph
+  Inventory: Polymorph
+  WeaponInventory: WeaponPolymorph
+  EquipSlot: Polymorph
+  SkinEquipSlot: PolymorphSkin
+  WeaponEquipSlot: WeaponPolymorph
+  Category: Polymorph
+  CardCategory: Polymorph_Card
+  WeaponCategory: WeaponPolymorph
+  WeaponPreviewAsset: /Game/Characters/DA_PM999.DA_PM999
+  PolymorphGradeItemFilter: PolymorphGrade
+  PolymorphItemFilter: Polymorph
+  WeaponItemFilter: WeaponPolymorph
+  PolymorphFavorite: Polymorph
+  WeaponFavorite: WeaponPolymorph
+  GradeAllIcon: /Game/UI/Polymorph_SP/IconGradeAll_Imtx_Sprite.IconGradeAll_Imtx_Sprite
+  WeaponNotActivadedMessage: NotAppliedWeaponPolymorph
+  QuantityBonusCardAlert_Description: UIWord_Polymorph_GetBonus_Polymorph
+  QuantityBonusSkinAlert_Description: UIWord_Polymorph_GetBonus_Skin
+  QuantityBonusWeaponAlert_Description: UIWord_Polymorph_GetBonus_WeaponPolymorph
+  UITab:
+    - Group: PolymorphCardList
+      Icon: /Game/UI/Polymorph_SP/FIconTransform_Sprite.FIconTransform_Sprite
+      ContentLimit: Polymorph
+      Description: UIWordPolymorph
+      Comment: 초월 리스트
+      UISubTab:
+        - Group: CardList
+          Comment: 리스트
+          Description: UIWord_Polymorph_List
+        - Group: Merge
+          Comment: 합성
+          Description: UIWord_Merge
+        - Group: Enchant
+          Comment: 강화
+          Description: UIWord_Polymorph_Enchant
+        - Group: Confirmed
+          Comment: 확정
+          Description: UIWord_Polymorph_Confirmed
+        - Group: QuantityBonus
+          Comment: 보유 효과
+          Description: UIWord_Polymorph_QuantityBonus
+    - Group: WeaponCardList
+      Icon: /Game/UI/Polymorph_SP/FIconWeaponPolymorphSprite.FIconWeaponPolymorphSprite
+      Description: UIWord_WeaponPolymorph
+      ContentLimit: WeaponPolymorph
+      Comment: 무기 외형 리스트
+      UISubTab:
+        - Group: CardList
+          Comment: 리스트
+          Description: UIWord_Polymorph_List
+        - Group: Merge
+          Comment: 합성
+          Description: UIWord_Merge
+        - Group: Enchant
+          Comment: 강화
+          Description: UIWord_Polymorph_Enchant
+        - Group: Confirmed
+          Comment: 확정
+          Description: UIWord_Polymorph_Confirmed
+        - Group: QuantityBonus
+          Comment: 보유 효과
+          Description: UIWord_Polymorph_QuantityBonus
+    - Group: PolymorphSkin
+      Icon: /Game/UI/Polymorph_SP/FIconSkinPolymorph_Sprite.FIconSkinPolymorph_Sprite
+      Description: UIWord_Menu_Skin
+      ContentLimit: Skin
+      Comment: 외형 스킨
+      UISubTab:
+        - Group: CardList
+          Comment: 리스트
+          Description: UIWord_Polymorph_List
+        - Group: QuantityBonus
+          Comment: 보유 효과
+          Description: UIWord_Polymorph_QuantityBonus
+    - Group: Solidarity
+      ContentLimit: Solidarity
+      Icon: /Game/UI/Polymorph_SP/FIconSolidarity_Sprite.FIconSolidarity_Sprite
+      Description: UIWord_Menu_Solidarity
+      Comment: 결속
+  SystemMessageInfo:
+    - Name: NotAcquiredCard
+      Value: NotAcquiredCard
+    - Name: MaxLevelCard
+      Value: CardMaxLevel
+    - Name: LockedCard
+      Value: LockedItemUse
+    - Name: NoneEnchantDataCard
+      Value: CanNotEnchantState
+  EffectUpgradeEnchantLevel: 5
+  CharacterEnchantLevelByGrade:
+    - Grade: Rare
+      EnchantLevelRangeRule: PolymorphRare
+    - Grade: Epic
+      EnchantLevelRangeRule: PolymorphEpic
+    - Grade: Legendary
+      EnchantLevelRangeRule: PolymorphLegendary
+    - Grade: Myth
+      EnchantLevelRangeRule: PolymorphMyth
+  WeaponEnchantLevelByGrade:
+    - Grade: Rare
+      EnchantLevelRangeRule: WeaponPolymorphRare
+    - Grade: Epic
+      EnchantLevelRangeRule: WeaponPolymorphEpic
+    - Grade: Legendary
+      EnchantLevelRangeRule: WeaponPolymorphLegendary
+    - Grade: Myth
+      EnchantLevelRangeRule: WeaponPolymorphMyth
+  CharacterEffectsByGrade:
+    - Grade: Rare
+      Size: Woman
+      DefaultAsset: PolymorphEffect_Rare_Woman_Default
+      UpgradeAsset: PolymorphEffect_Rare_Woman_Upgrade
+    - Grade: Rare
+      Size: Man
+      DefaultAsset: PolymorphEffect_Rare_Man_Default
+      UpgradeAsset: PolymorphEffect_Rare_Man_Upgrade
+    - Grade: Rare
+      Size: Medium
+      DefaultAsset: PolymorphEffect_Rare_Medium_Default
+      UpgradeAsset: PolymorphEffect_Rare_Medium_Upgrade
+    - Grade: Rare
+      Size: Large
+      DefaultAsset: PolymorphEffect_Rare_Large_Default
+      UpgradeAsset: PolymorphEffect_Rare_Large_Upgrade
+    - Grade: Epic
+      Size: Woman
+      DefaultAsset: PolymorphEffect_Epic_Woman_Default
+      UpgradeAsset: PolymorphEffect_Epic_Woman_Upgrade
+    - Grade: Epic
+      Size: Man
+      DefaultAsset: PolymorphEffect_Epic_Man_Default
+      UpgradeAsset: PolymorphEffect_Epic_Man_Upgrade
+    - Grade: Epic
+      Size: Medium
+      DefaultAsset: PolymorphEffect_Epic_Medium_Default
+      UpgradeAsset: PolymorphEffect_Epic_Medium_Upgrade
+    - Grade: Epic
+      Size: Large
+      DefaultAsset: PolymorphEffect_Epic_Large_Default
+      UpgradeAsset: PolymorphEffect_Epic_Large_Upgrade
+    - Grade: Epic
+      Size: XLarge
+      DefaultAsset: PolymorphEffect_Epic_XLarge_Default
+      UpgradeAsset: PolymorphEffect_Epic_XLarge_Upgrade
+    - Grade: Legendary
+      Size: Woman
+      DefaultAsset: PolymorphEffect_Legendary_Woman_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Woman_Upgrade
+    - Grade: Legendary
+      Size: Man
+      DefaultAsset: PolymorphEffect_Legendary_Man_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Man_Upgrade
+    - Grade: Legendary
+      Size: Large
+      DefaultAsset: PolymorphEffect_Legendary_Large_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Large_Upgrade
+  WeaponEffectsByGrade:
+    - Grade: Rare
+      Category: WeaponPolymorph_Sword
+      DefaultAsset: PolymorphEffect_Rare_Sword_Default
+      UpgradeAsset: PolymorphEffect_Rare_Sword_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_LSword
+      DefaultAsset: PolymorphEffect_Rare_LSword_Default
+      UpgradeAsset: PolymorphEffect_Rare_LSword_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_Bow
+      DefaultAsset: PolymorphEffect_Rare_Bow_Default
+      UpgradeAsset: PolymorphEffect_Rare_Bow_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_Cbow
+      DefaultAsset: PolymorphEffect_Rare_CBow_Default
+      UpgradeAsset: PolymorphEffect_Rare_CBow_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_Staff
+      DefaultAsset: PolymorphEffect_Rare_Staff_Default
+      UpgradeAsset: PolymorphEffect_Rare_Staff_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_Orb
+      DefaultAsset: PolymorphEffect_Rare_Orb_Default
+      UpgradeAsset: PolymorphEffect_Rare_Orb_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_Katana
+      DefaultAsset: PolymorphEffect_Rare_Katana_Default
+      UpgradeAsset: PolymorphEffect_Rare_Katana_Upgrade
+    - Grade: Rare
+      Category: WeaponPolymorph_TwinDaggers
+      DefaultAsset: PolymorphEffect_Rare_TwinDaggers_Default
+      UpgradeAsset: PolymorphEffect_Rare_TwinDaggers_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Sword
+      DefaultAsset: PolymorphEffect_Epic_Sword_Default
+      UpgradeAsset: PolymorphEffect_Epic_Sword_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_LSword
+      DefaultAsset: PolymorphEffect_Epic_LSword_Default
+      UpgradeAsset: PolymorphEffect_Epic_LSword_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Bow
+      DefaultAsset: PolymorphEffect_Epic_Bow_Default
+      UpgradeAsset: PolymorphEffect_Epic_Bow_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Cbow
+      DefaultAsset: PolymorphEffect_Epic_CBow_Default
+      UpgradeAsset: PolymorphEffect_Epic_CBow_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Staff
+      DefaultAsset: PolymorphEffect_Epic_Staff_Default
+      UpgradeAsset: PolymorphEffect_Epic_Staff_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Orb
+      DefaultAsset: PolymorphEffect_Epic_Orb_Default
+      UpgradeAsset: PolymorphEffect_Epic_Orb_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_Katana
+      DefaultAsset: PolymorphEffect_Epic_Katana_Default
+      UpgradeAsset: PolymorphEffect_Epic_Katana_Upgrade
+    - Grade: Epic
+      Category: WeaponPolymorph_TwinDaggers
+      DefaultAsset: PolymorphEffect_Epic_TwinDaggers_Default
+      UpgradeAsset: PolymorphEffect_Epic_TwinDaggers_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Sword
+      DefaultAsset: PolymorphEffect_Legendary_Sword_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Sword_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_LSword
+      DefaultAsset: PolymorphEffect_Legendary_LSword_Default
+      UpgradeAsset: PolymorphEffect_Legendary_LSword_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Bow
+      DefaultAsset: PolymorphEffect_Legendary_Bow_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Bow_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Cbow
+      DefaultAsset: PolymorphEffect_Legendary_CBow_Default
+      UpgradeAsset: PolymorphEffect_Legendary_CBow_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Staff
+      DefaultAsset: PolymorphEffect_Legendary_Staff_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Staff_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Orb
+      DefaultAsset: PolymorphEffect_Legendary_Orb_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Orb_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_Katana
+      DefaultAsset: PolymorphEffect_Legendary_Katana_Default
+      UpgradeAsset: PolymorphEffect_Legendary_Katana_Upgrade
+    - Grade: Legendary
+      Category: WeaponPolymorph_TwinDaggers
+      DefaultAsset: PolymorphEffect_Legendary_TwinDaggers_Default
+      UpgradeAsset: PolymorphEffect_Legendary_TwinDaggers_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Sword
+      DefaultAsset: PolymorphEffect_Myth_Sword_Default
+      UpgradeAsset: PolymorphEffect_Myth_Sword_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_LSword
+      DefaultAsset: PolymorphEffect_Myth_LSword_Default
+      UpgradeAsset: PolymorphEffect_Myth_LSword_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Bow
+      DefaultAsset: PolymorphEffect_Myth_Bow_Default
+      UpgradeAsset: PolymorphEffect_Myth_Bow_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Cbow
+      DefaultAsset: PolymorphEffect_Myth_CBow_Default
+      UpgradeAsset: PolymorphEffect_Myth_CBow_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Staff
+      DefaultAsset: PolymorphEffect_Myth_Staff_Default
+      UpgradeAsset: PolymorphEffect_Myth_Staff_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Orb
+      DefaultAsset: PolymorphEffect_Myth_Orb_Default
+      UpgradeAsset: PolymorphEffect_Myth_Orb_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_Katana
+      DefaultAsset: PolymorphEffect_Myth_Katana_Default
+      UpgradeAsset: PolymorphEffect_Myth_Katana_Upgrade
+    - Grade: Myth
+      Category: WeaponPolymorph_TwinDaggers
+      DefaultAsset: PolymorphEffect_Myth_TwinDaggers_Default
+      UpgradeAsset: PolymorphEffect_Myth_TwinDaggers_Upgrade
+  BuffGroup_Polymorph: Polymorph
+  BuffGroup_WeaponPolymorph: WeaponPolymorph
+  PropertyKey_EnchantLevel: EnchantLevel
+  EnchantSubTabGradeFilterMinValue: Rare

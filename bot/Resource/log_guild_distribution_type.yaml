@@ -1,0 +1,9 @@
+- Name: EQUAL
+  Comment: 균등 분배
+  Value: 0
+- Name: CONTRIBUTION
+  Comment: 기여도 비례 분배
+  Value: 1
+- Name: BOSS
+  Comment: 길드 보스 참여도 비례 분배
+  Value: 2

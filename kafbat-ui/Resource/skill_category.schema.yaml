@@ -1,0 +1,41 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    DisplayTab:
+      type: string 
+      enum:
+        - Active
+        - AutoActive
+        - Passive
+    BGColor:
+      type: string 
+      enum:
+        - None
+        - Red
+        - Green
+        - Blue
+    Description:
+      type: string
+      ref: description
+    Icon: #리소스 경로 가이드: /Game/UIIcon/Item/파일명.파일명
+      type: string
+    CheckPolymorphWeapon:
+      type: boolean
+      default: false
+    ApplyCoolTimeReduceByBuff:
+      type: boolean
+  required:
+    - Id
+    - Name
+    - CheckPolymorphWeapon

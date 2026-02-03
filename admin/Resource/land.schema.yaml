@@ -1,0 +1,54 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - LandGroup
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+    LandGroup:
+      type: string
+      ref: land_group
+    # Land 인구 제한
+    ## 전장에서 설정 금지
+    LimitPopulation:
+      type: integer
+      minimum: 1
+    UniqueChannel:
+      type: boolean
+      default: false
+    DeleteOnEmpty:
+      type: boolean
+    # 시야 관련 기능 사용 여부(SightWall, 고저차)
+    EnableSight:
+      type: boolean
+    # 전장 여부
+    Battleground:
+      type: boolean
+    # 서버 구동 시 기본 생성 여부
+    DefaultCreate:
+      type: boolean
+    # 서버 구동 시 미리 생성할 채널 수
+    PreCreateChannelCount:
+      type: integer
+      minimum: 0
+    # 채널 선택 방식 (hash=해시 분배, priority=순차 채우기)
+    ChannelSelectionMode:
+      type: string
+      enum: [hash, priority]
+    # 서버가 클라로 캐릭터들 알려줄 때, `ViewListRadius`로 인한 시야 거리 제한을 무시함.
+    # 따라서 일반적인 경우 해당 land의 모든 캐릭터들의 정보를 알려줌.
+    # 시야 거리 제한만 해제되는 것에 유의. 암흑 버프 같은거 당한 상태면 안알려줌.
+    # LimitPopulation이 1인 경우에만 동작함 (LimitPopulation != 1이면 무시됨)
+    BroadcastAll:
+      type: boolean

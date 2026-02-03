@@ -1,0 +1,292 @@
+- Id: 1
+  Name: RomanNumber1
+  Icon: /Game/UIIcon/RomaNumber/Roma01_Imtx_Sprite.Roma01_Imtx_Sprite
+  Comment: 로마 숫자 1
+- Id: 2
+  Name: RomanNumber2
+  Icon: /Game/UIIcon/RomaNumber/Roma02_Imtx_Sprite.Roma02_Imtx_Sprite
+  Comment: 로마 숫자 2
+- Id: 3
+  Name: RomanNumber3
+  Icon: /Game/UIIcon/RomaNumber/Roma03_Imtx_Sprite.Roma03_Imtx_Sprite
+  Comment: 로마 숫자 3
+- Id: 4
+  Name: RomanNumber4
+  Icon: /Game/UIIcon/RomaNumber/Roma04_Imtx_Sprite.Roma04_Imtx_Sprite
+  Comment: 로마 숫자 4
+- Id: 5
+  Name: RomanNumber5
+  Icon: /Game/UIIcon/RomaNumber/Roma05_Imtx_Sprite.Roma05_Imtx_Sprite
+  Comment: 로마 숫자 5
+- Id: 6
+  Name: RomanNumber6
+  Icon: /Game/UIIcon/RomaNumber/Roma06_Imtx_Sprite.Roma06_Imtx_Sprite
+  Comment: 로마 숫자 6
+- Id: 7
+  Name: RomanNumber7
+  Icon: /Game/UIIcon/RomaNumber/Roma07_Imtx_Sprite.Roma07_Imtx_Sprite
+  Comment: 로마 숫자 7
+- Id: 8
+  Name: RomanNumber8
+  Icon: /Game/UIIcon/RomaNumber/Roma08_Imtx_Sprite.Roma08_Imtx_Sprite
+  Comment: 로마 숫자 8
+- Id: 9
+  Name: RomanNumber9
+  Icon: /Game/UIIcon/RomaNumber/Roma09_Imtx_Sprite.Roma09_Imtx_Sprite
+  Comment: 로마 숫자 9
+- Id: 10
+  Name: RomanNumber10
+  Icon: /Game/UIIcon/RomaNumber/Roma10_Imtx_Sprite.Roma10_Imtx_Sprite
+  Comment: 로마 숫자 10
+- Id: 11
+  Name: RomanNumber11
+  Icon: /Game/UIIcon/RomaNumber/Roma11_Imtx_Sprite.Roma11_Imtx_Sprite
+  Comment: 로마 숫자 11
+- Id: 12
+  Name: RomanNumber12
+  Icon: /Game/UIIcon/RomaNumber/Roma12_Imtx_Sprite.Roma12_Imtx_Sprite
+  Comment: 로마 숫자 12
+- Id: 13
+  Name: RomanNumber13
+  Icon: /Game/UIIcon/RomaNumber/Roma13_Imtx_Sprite.Roma13_Imtx_Sprite
+  Comment: 로마 숫자 13
+- Id: 14
+  Name: RomanNumber14
+  Icon: /Game/UIIcon/RomaNumber/Roma14_Imtx_Sprite.Roma14_Imtx_Sprite
+  Comment: 로마 숫자 14
+- Id: 15
+  Name: RomanNumber15
+  Icon: /Game/UIIcon/RomaNumber/Roma15_Imtx_Sprite.Roma15_Imtx_Sprite
+  Comment: 로마 숫자 15
+- Id: 16
+  Name: RomanNumber16
+  Icon: /Game/UIIcon/RomaNumber/Roma16_Imtx_Sprite.Roma16_Imtx_Sprite
+  Comment: 로마 숫자 16
+- Id: 17
+  Name: RomanNumber17
+  Icon: /Game/UIIcon/RomaNumber/Roma17_Imtx_Sprite.Roma17_Imtx_Sprite
+  Comment: 로마 숫자 17
+- Id: 18
+  Name: RomanNumber18
+  Icon: /Game/UIIcon/RomaNumber/Roma18_Imtx_Sprite.Roma18_Imtx_Sprite
+  Comment: 로마 숫자 18
+- Id: 19
+  Name: RomanNumber19
+  Icon: /Game/UIIcon/RomaNumber/Roma19_Imtx_Sprite.Roma19_Imtx_Sprite
+  Comment: 로마 숫자 19
+- Id: 20
+  Name: RomanNumber20
+  Icon: /Game/UIIcon/RomaNumber/Roma20_Imtx_Sprite.Roma20_Imtx_Sprite
+  Comment: 로마 숫자 20
+- Id: 21
+  Name: BuffIconBackground
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G02.SKL_BG_G02
+- Id: 22
+  Name: DebuffIconBackground
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G04.SKL_BG_G04
+- Id: 23
+  Name: MpCost
+  Icon: /Game/UI/Skill_SP/IconMPMini_Sprite.IconMPMini_Sprite
+- Id: 24
+  Name: HpCost
+  Icon: /Game/UI/Skill_SP/IconHPMini_Sprite.IconHPMini_Sprite
+- Id: 25
+  Name: CoolTime
+  Icon: /Game/UI/Skill_SP/IconTime_Sprite.IconTime_Sprite
+- Id: 26
+  Name: UI_AttackBtn_Interaction
+  Icon: /Game/UI/Tex_Attack/AttackBtn_Interaction.AttackBtn_Interaction
+  Comment: (UI)(공격버튼) 조작
+- Id: 27
+  Name: ItemCategory1Item_Currency
+  Icon: /Game/UI/Inventory_SP/TabIconMoney_Sprite.TabIconMoney_Sprite
+- Id: 28
+  Name: ItemCategory1Item_Equip
+  Icon: /Game/UI/Inventory_SP/TabIconWeapon_Sprite.TabIconWeapon_Sprite
+- Id: 29
+  Name: ItemCategory1Item_Potion
+  Icon: /Game/UI/Inventory_SP/TabIconPotion_Sprite.TabIconPotion_Sprite
+- Id: 30
+  Name: ItemCategory1Item_Consume
+  Icon: /Game/UI/Inventory_SP/TabIconExpendables_Sprite.TabIconExpendables_Sprite
+- Id: 31
+  Name: ItemSlotB01
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB01.ItemSlotB01
+- Id: 32
+  Name: ItemSlotB02
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB02.ItemSlotB02
+- Id: 33
+  Name: ItemSlotB03
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB03.ItemSlotB03
+- Id: 34
+  Name: ItemSlotB04
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB04.ItemSlotB04
+- Id: 35
+  Name: ItemSlotB05
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB05.ItemSlotB05
+- Id: 36
+  Name: ItemSlotB06
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotB06.ItemSlotB06
+- Id: 37
+  Name: SKL_BG_G01
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G01.SKL_BG_G01
+- Id: 38
+  Name: SKL_BG_G02
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G02.SKL_BG_G02
+- Id: 39
+  Name: SKL_BG_G03
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G03.SKL_BG_G03
+- Id: 40
+  Name: SKL_BG_G04
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G04.SKL_BG_G04
+- Id: 41
+  Name: SKL_BG_G05
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G05.SKL_BG_G05
+- Id: 42
+  Name: SKL_BG_G06
+  Icon: /Game/UIIcon/SkillSlot/SKL_BG_G06.SKL_BG_G06
+- Id: 43
+  Name: UI_AttackBtn_ItemPickup
+  Icon: /Game/UI/Tex_Attack/AttackBtn_Get.AttackBtn_Get
+  Comment: (UI)(공격버튼) 드랍 아이템 선택
+- Id: 44
+  Name: UI_AttackBtn_Merchant
+  Icon: /Game/UI/Tex_Attack/AttackBtn_Talk.AttackBtn_Talk
+  Comment: (UI)(공격버튼) 기능성NPC 선택
+- Id: 45
+  Name: ItemSlotCircle01
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle01.ItemSlotCircle01
+- Id: 46
+  Name: ItemSlotCircle02
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle02.ItemSlotCircle02
+- Id: 47
+  Name: ItemSlotCircle03
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle03.ItemSlotCircle03
+- Id: 48
+  Name: ItemSlotCircle04
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle04.ItemSlotCircle04
+- Id: 49
+  Name: ItemSlotCircle05
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle05.ItemSlotCircle05
+- Id: 50
+  Name: ItemSlotCircle06
+  Icon: /Game/UIIcon/ItemSlot/ItemSlotCircle06.ItemSlotCircle06
+- Id: 51
+  Name: PolymorphCard01
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG01.PolymorphCardBG01
+- Id: 52
+  Name: PolymorphCard02
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG02.PolymorphCardBG02
+- Id: 53
+  Name: PolymorphCard03
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG03.PolymorphCardBG03
+- Id: 54
+  Name: PolymorphCard04
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG04.PolymorphCardBG04
+- Id: 55
+  Name: PolymorphCard05
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG05.PolymorphCardBG05
+- Id: 56
+  Name: PolymorphCard06
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBG06.PolymorphCardBG06
+- Id: 57
+  Name: PolymorphCardCircle01
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle01.PolymorphCardBGCircle01
+- Id: 58
+  Name: PolymorphCardCircle02
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle02.PolymorphCardBGCircle02
+- Id: 59
+  Name: PolymorphCardCircle03
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle03.PolymorphCardBGCircle03
+- Id: 60
+  Name: PolymorphCardCircle04
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle04.PolymorphCardBGCircle04
+- Id: 61
+  Name: PolymorphCardCircle05
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle05.PolymorphCardBGCircle05
+- Id: 62
+  Name: PolymorphCardCircle06
+  Icon: /Game/UIIcon/PolymorphCardBG/PolymorphCardBGCircle06.PolymorphCardBGCircle06
+- Id: 63
+  Name: PolymorphSkinDefault
+  Icon: /Game/UIIcon/PolymorphCard/Polymorph_PM_SkinDefault.Polymorph_PM_SkinDefault
+- Id: 64
+  Name: YellowNumber0
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_0_Sprite.NumberY_0_Sprite
+  Comment: 노란색 숫자 0
+- Id: 65
+  Name: YellowNumber1
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_1_Sprite.NumberY_1_Sprite
+  Comment: 노란색 숫자 1
+- Id: 66
+  Name: YellowNumber2
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_2_Sprite.NumberY_2_Sprite
+  Comment: 노란색 숫자 2
+- Id: 67
+  Name: YellowNumber3
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_3_Sprite.NumberY_3_Sprite
+  Comment: 노란색 숫자 3
+- Id: 68
+  Name: YellowNumber4
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_4_Sprite.NumberY_4_Sprite
+  Comment: 노란색 숫자 4
+- Id: 69
+  Name: YellowNumber5
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_5_Sprite.NumberY_5_Sprite
+  Comment: 노란색 숫자 5
+- Id: 70
+  Name: YellowNumber6
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_6_Sprite.NumberY_6_Sprite
+  Comment: 노란색 숫자 6
+- Id: 71
+  Name: YellowNumber7
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_7_Sprite.NumberY_7_Sprite
+  Comment: 노란색 숫자 7
+- Id: 72
+  Name: YellowNumber8
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_8_Sprite.NumberY_8_Sprite
+  Comment: 노란색 숫자 8
+- Id: 73
+  Name: YellowNumber9
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberY_9_Sprite.NumberY_9_Sprite
+  Comment: 노란색 숫자 9
+- Id: 74
+  Name: RedNumber0
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_0_Sprite.NumberR_0_Sprite
+  Comment: 빨간색 숫자 0
+- Id: 75
+  Name: RedNumber1
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_1_Sprite.NumberR_1_Sprite
+  Comment: 빨간색 숫자 1
+- Id: 76
+  Name: RedNumber2
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_2_Sprite.NumberR_2_Sprite
+  Comment: 빨간색 숫자 2
+- Id: 77
+  Name: RedNumber3
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_3_Sprite.NumberR_3_Sprite
+  Comment: 빨간색 숫자 3
+- Id: 78
+  Name: RedNumber4
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_4_Sprite.NumberR_4_Sprite
+  Comment: 빨간색 숫자 4
+- Id: 79
+  Name: RedNumber5
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_5_Sprite.NumberR_5_Sprite
+  Comment: 빨간색 숫자 5
+- Id: 80
+  Name: RedNumber6
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_6_Sprite.NumberR_6_Sprite
+  Comment: 빨간색 숫자 6
+- Id: 81
+  Name: RedNumber7
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_7_Sprite.NumberR_7_Sprite
+  Comment: 빨간색 숫자 7
+- Id: 82
+  Name: RedNumber8
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_8_Sprite.NumberR_8_Sprite
+  Comment: 빨간색 숫자 8
+- Id: 83
+  Name: RedNumber9
+  Icon: /Game/UI/Mastery_SP/Dummy/NumberR_9_Sprite.NumberR_9_Sprite
+  Comment: 빨간색 숫자 9

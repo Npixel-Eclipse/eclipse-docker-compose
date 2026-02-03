@@ -1,0 +1,12 @@
+- Id: 99999
+  Name: Simulation_Fallback
+  comment: 시뮬레이션 스케줄 Fallback 위치 (필드)
+  DisplayAddress: Simulation
+  ArrivalTerritory:
+    - Territory: SimulationTown_Territory
+- Id: 99998
+  Name: SimulationTown_Fallback
+  comment: 시뮬레이션 스케줄 Fallback 위치 (마을)
+  DisplayAddress: SimulationTown
+  ArrivalTerritory:
+    - Territory: SimulationTown_Territory

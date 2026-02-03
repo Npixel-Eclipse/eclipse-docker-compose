@@ -1,0 +1,175 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required:
+    - Id
+    - Name
+    - Type
+    - Team
+    - MatchRateProperty
+  properties:
+    Id:
+      type: integer
+      minimum: 1
+    Name:
+      type: string
+      pattern: ^[A-Z][A-Za-z0-9_]*$
+    Comment:
+      type: string
+      visible: true
+    # 매치메이킹 타입(컨텐츠/시스템)
+    Type:
+      type: string
+      enum:
+        - Battleground
+    # 매칭 오픈 시간
+    OpenTime:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Day
+        properties:
+          # 특정 요일 지정
+          ## EVERYDAY : 매일
+          ## 입력 유의사항: EVERYDAY와 다른 요일은 함께 설정할 수 없음.
+          Day:
+            type: string
+            enum:
+              - SUNDAY
+              - MONDAY
+              - TUESDAY
+              - WEDNESDAY
+              - THURSDAY
+              - FRIDAY
+              - SATURDAY
+              - EVERYDAY
+          # 오픈 시간
+          ## 오픈 시간과 종료 시간이 비어있다면 상시 오픈
+          OpenTime:
+            type: string
+            pattern: ^(0[0-9]|1[0-9]|2[0-3]):(0[1-9]|[0-5][0-9])$
+            visible: true
+          # 종료 시간
+          ## 오픈 시간과 종료 시간이 비어있다면 상시 오픈
+          CloseTime:
+            type: string
+            pattern: ^(0[0-9]|1[0-9]|2[0-3]):(0[1-9]|[0-5][0-9])$
+            visible: true
+      visible: true
+    # 파티 허용 여부
+    AllowParty:
+      type: boolean
+      default: false
+    # 매칭 불가 지역
+    BlockLand:
+      type: array
+      items:
+        type: string
+        ref: land
+    # 참가팀 설정
+    Team:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - Id
+          - MinimumPlayer
+          - MaximumPlayer
+          - StartSkill
+        properties:
+          Id:
+            type: integer
+            minimum: 1
+          # 최소 인원
+          MinimumPlayer:
+            type: integer
+            minimum: 1
+          # 최대 인원
+          MaximumPlayer:
+            type: integer
+            minimum: 1
+          # 시작 스킬
+          ## 시작 스킬은 다음 기능이 필요하다.
+          ### 1. 전장 팀 버프 부여
+          ### 2. 전장 시작 위치로 텔레포트
+          StartSkill:
+            type: string
+            ref: skill
+          # 버프 : 매칭되어 게임이 끝나기 전까지 아래 버프를 부여한다.
+          Buff:
+            type: array
+            visible: true
+            items:
+              type: string
+              ref: buff
+          # 종료 스킬 : 게임 결과가 발생했을 때 아래 스킬을 사용한다.
+          ResultSkill:
+            type: string
+            ref: skill
+            visible: true
+          # 종료 스킬 : 게임 지역에서 이탈할 때 아래 스킬을 사용한다.
+          EndSkill:
+            type: string
+            ref: skill
+            visible: true
+    # MMR로 설정할 Property 이름
+    ## buff.yaml 또는 stat.yaml의 이름을 사용
+    ## 예시) 전투력 => CombatPoint
+    MatchRateProperty:
+      type: string
+    # 기본 매칭 탐색 범위
+    ## 유저의 (MMR ± M)을 매칭시킴.
+    ## 예시) MMR이 전투력이고, 현재 전투력이 15000일때, 이 컬럼의 값을 1000으로 설정해두면 14000 ~ 16000을 매칭함.
+    SearchRange:
+      type: integer
+      default: 0
+      visible: true
+    # 매칭범위 확장 설정
+    ## 예시) 10초동안 매칭을 기다렸다면 SearchRange에서 ±N 범위로 확장하여 검색함.
+    Expansion:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - WaitSecond
+          - ExpansionValue
+        properties:
+          Comment:
+            type: string
+            visible: true
+          # 대기시간 (초)
+          WaitSecond:
+            type: integer
+            minimum: 1
+          # 확장 값
+          ## 각 시스템에서 사용할 MMR 수치를 고려하여 입력.
+          ExpansionValue:
+            type: integer
+            minimum: 1
+      visible: true
+    # 최대인원 이하 매칭 허용 대기 시간 (초)
+    ## 매칭 기준 후보들이 N초 이상 최대인원으로 매칭이 되지 않으면 팀 인원 수를 줄여서 매칭을 시도
+    ## 0: 기능 사용 안함
+    ##
+    ## 예시:
+    ### 팀: 10v10 ~ 20v20 설정
+    ### 매칭유저: 39명이 매칭 후보에 있을 때 (19명만 매칭을 돌린게 아니라, MMR이 비슷한 유저가 19명임.)
+    ### 설정값: 180초
+    ### => 39명이 모두 180초 이상 기다렸다면 19v19(38명)로 매칭을 시켜준다
+    ### => 만약, 매칭 후보가 31명이라면 15v15(30명)으로 매칭을 시켜준다
+    MinimumPlayerWaitTime:
+      type: integer
+      default: 0
+    # 퀘스트 비헤이비어 실행 중 전장이 매칭될 경우 비헤이비어 진행 스킵 허용 지역
+    # 전장을 벗어나면 다시 원래 퀘스트로 복귀.
+    BehaviorSkip:
+      type: array
+      items:
+        type: string
+        ref: land

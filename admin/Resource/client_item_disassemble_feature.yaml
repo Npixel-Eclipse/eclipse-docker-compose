@@ -1,0 +1,17 @@
+- Id: 1
+  Name: ItemDisassembleFeature
+  Constants:
+    - Name: MaxRequestDisassembleItemCount
+      Value: 500
+  EnchantFilters:
+    - Type: EnchantItem
+      Description: UIWordEnchant
+    - Type: EngraveItem
+      Description: UIWord_Disassemble_EnchantSelectOption_Engrave
+  CollectionFilters:
+    - Type: CollectionItem
+      Description: UIWordFilter_CollectionItem
+  CanNotDisassembleSystemMessage: ItemInfo_CanNotDisassemble
+  OnlyInventorySystemMessage: ItemInfo_Disassemble_OnlyInventory
+  CanNotDisassemble_EquipSystemMessage: ItemInfo_CanNotDisassemble_Equip
+  CanNotDisassemble_LockSystemMessage: ItemInfo_CanNotDisassemble_Lock

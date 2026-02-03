@@ -1,0 +1,204 @@
+- Id: 10102
+  Name: EclipseTime_South_Varitan_Bloodshed_02_EveryDay
+  Comment: 던전_블러드셰드 2층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Blood_Shed
+  TargetDungeonAddress: South_Varitan_Bloodshed_02
+  Title: UIWord_EclipseTime_South_Varitan_Bloodshed_02_EveryDay_Main
+  Description: UIWord_EclipseTime_South_Varitan_Bloodshed_02_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossBonus.EclipseTime_BossBonus
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 12
+      StartMinute: 30
+      EndHour: 19
+      EndMinute: 30
+- Id: 400
+  Name: EclipseTime_South_Varitan_Bloodshed_01_EveryDay
+  Comment: 던전_블러드셰드 1층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Blood_Shed
+  TargetDungeonAddress: South_Varitan_Bloodshed_01
+  Title: UIWord_EclipseTime_South_Varitan_Bloodshed_02_EveryDay_Main
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossSpawn.EclipseTime_BossSpawn
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 12
+      StartMinute: 30
+      EndHour: 19
+      EndMinute: 30
+- Id: 10201
+  Name: EclipseTime_Kulika_Undying_Lands_05_EveryDay
+  Comment: 던전_구리가라 불멸지_5층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Kulika_Undying_Lands_05
+  Title: UIWord_EclipseTime_Kulika_Undying_Lands_05_EveryDay_Main
+  Description: UIWord_EclipseTime_Kulika_Undying_Lands_05_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossBonus.EclipseTime_BossBonus
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 456
+  Name: EclipseTime_Kulika_Undying_Lands_04_EveryDay
+  Comment: 던전_구리가라 불멸지_4층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Kulika_Undying_Lands_04
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 129
+  Name: EclipseTime_Kulika_Undying_Lands_03_EveryDay
+  Comment: 던전_구리가라 불멸지_3층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Kulika_Undying_Lands_03
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 226
+  Name: EclipseTime_Kulika_Undying_Lands_02_EveryDay
+  Comment: 던전_구리가라 불멸지_2층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Kulika_Undying_Lands_02
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 327
+  Name: EclipseTime_Kulika_Undying_Lands_01_EveryDay
+  Comment: 던전_구리가라 불멸지_1층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Kulika_Undying_Lands
+  TargetDungeonAddress: Kulika_Undying_Lands_01
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 13
+      StartMinute: 30
+      EndHour: 14
+      EndMinute: 30
+- Id: 10301
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_07_EveryDay
+  Comment: 던전_아브리온 탑_7층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_07
+  Title: UIWord_EclipseTime_East_Rockhed_Abrion_Tower_07_EveryDay_Main
+  Description: UIWord_EclipseTime_East_Rockhed_Abrion_Tower_07_EveryDay_Sub
+  Icon: /Game/UIIcon/EclipseTime/EclipseTime_BossBonus.EclipseTime_BossBonus
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 111
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_06_EveryDay
+  Comment: 던전_아브리온 탑_6층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_06
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 1092
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_05_EveryDay
+  Comment: 던전_아브리온 탑_5층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_05
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 308
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_04_EveryDay
+  Comment: 던전_아브리온 탑_4층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_04
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 1214
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_03_EveryDay
+  Comment: 던전_아브리온 탑_3층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_03
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 37
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_02_EveryDay
+  Comment: 던전_아브리온 탑_2층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_02
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
+- Id: 294
+  Name: EclipseTime_East_Rockhed_Abrion_Tower_01_EveryDay
+  Comment: 던전_아브리온 탑_1층
+  ShowInSchedule: false
+  TargetDungeon: FieldDun_Abrion_Tower
+  TargetDungeonAddress: East_Rockhed_Abrion_Tower_01
+  Description: UIWord_EclipseTime_EveryDay_Sub
+  Schedule:
+    - Id: 1
+      DayOfWeek: None
+      StartHour: 14
+      StartMinute: 30
+      EndHour: 15
+      EndMinute: 30
