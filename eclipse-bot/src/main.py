@@ -409,14 +409,14 @@ async def lifespan(app: FastAPI):
                     messages.append(tool_msg)
                     
                     # Save tool result to database
-                    await conversation_store.add_message(
-                        channel_id=channel,
-                        thread_ts=thread_ts if is_mention else None,
-                        user_id="system",
-                        role="tool",
-                        content=json.dumps(tool_result, ensure_ascii=False),
                         tool_call_id=tool_call["id"],
                     )
+                    
+                    # Special Handling: If reset_session was called, suppress LLM's follow-up text
+                    # The tool itself posts markers ([SESSION_START]), which is sufficient.
+                    if tool_name == "reset_session":
+                        response_sent = True
+                        break
             
             if not response_text and not response_sent:
                 response_text = "워크플로우 실행을 완료했습니다."
