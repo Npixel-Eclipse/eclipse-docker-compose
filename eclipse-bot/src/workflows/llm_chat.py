@@ -23,6 +23,10 @@ class LLMChatWorkflow(BaseWorkflow):
         "reset_session", "llm_chat"
     ]
     
+    allowed_workflows = [
+        "code_review"
+    ]
+    
     async def execute(self, input_data: dict) -> dict:
         from src.main import get_llm_client
         from src.models import Message
@@ -38,8 +42,9 @@ class LLMChatWorkflow(BaseWorkflow):
             Message(role="user", content=message),
         ]
         
-        # Get allowed tools specs
-        tools = registry.get_tool_specs(self.allowed_tools)
+        # Get allowed tools specs (combine tools and workflows)
+        allowed_items = self.allowed_tools + getattr(self, "allowed_workflows", [])
+        tools = registry.get_tool_specs(allowed_items)
         
         response = await client.chat(messages, tools=tools)
         
