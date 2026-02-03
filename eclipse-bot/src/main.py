@@ -170,10 +170,11 @@ async def lifespan(app: FastAPI):
             return
 
         # Get conversation history from database
+        # User requested "almost no context limit". Increasing to 100 (Slack API default max per page).
         history = await conversation_store.get_conversation(
             channel_id=channel,
             thread_ts=thread_ts,
-            limit=20,
+            limit=100,
         )
 
         # [REMOVED] Automatic Session Start for DMs (User requested removal)
@@ -193,8 +194,9 @@ async def lifespan(app: FastAPI):
             
             intent_prompt_template = load_prompt("intent_check")
             
-            # 대화 이력을 텍스트로 구성하여 의도 분석에 활용 (최대 20개)
-            history_text = "\n".join([f"{m.role}: {m.content[:150]}" for m in history[-20:]])
+            # 대화 이력을 텍스트로 구성하여 의도 분석에 활용
+            # User requested to remove truncation ([:150]) and limits
+            history_text = "\n".join([f"{m.role}: {m.content}" for m in history])
             intent_prompt = f"이전 대화 맥락:\n{history_text}\n\n판단할 메시지: {clean_text}\n\n{intent_prompt_template}"
             
             intent_response = await llm_client.chat([
@@ -241,6 +243,39 @@ async def lifespan(app: FastAPI):
         
         registry = get_registry()
         
+        # [FORCED TRIGGER] Check for explicit Code Review request pattern
+        # User requested unconditional code enforcement for reviews
+        import re
+        review_pattern = r"(?:code\s*review|리뷰).*(?:cl|change)?\s*(\d+)|(?:cl|change)\s*(\d+).*(?:code\s*review|리뷰)"
+        if re.search(review_pattern, clean_text, re.IGNORECASE):
+            logger.info(f"Forced Code Review Trigger detected for text: {clean_text}")
+            
+            # Execute Code Review Workflow directly
+            try:
+                # Notify user that review is starting (since it might take a moment)
+                await say(text=f"🔍 CL 분석 및 리뷰를 시작합니다...", thread_ts=thread_ts)
+                
+                review_args = {
+                    "text": clean_text,
+                    "channel_id": channel,
+                    "thread_ts": thread_ts
+                }
+                
+                run = await registry.execute("code_review", review_args)
+                result_content = run.result if run.status == "completed" else f"리뷰 실패: {run.error}"
+                
+                # Send Result
+                if is_mention or channel.startswith("D"):
+                    await say(text=result_content, thread_ts=thread_ts)
+                else:
+                    await say(text=result_content)
+                return  # Exit function after forced review
+            except Exception as e:
+                logger.error(f"Forced review execution failed: {e}")
+                await say(text=f"죄송합니다. 리뷰 실행 중 오류가 발생했습니다: {e}", thread_ts=thread_ts)
+                return
+
+        
         max_iterations = 5
         iteration = 0
         response_sent = False
@@ -272,6 +307,8 @@ async def lifespan(app: FastAPI):
                                 recipient_user_id=event.get("user"),
                                 thread_ts=stream_thread_ts
                             )
+                            # Append debug prefix first -> Removed
+                            
                             async for chunk in llm_client.chat_stream(messages):
                                 response_text += chunk
                                 await streamer.append(markdown_text=chunk)
