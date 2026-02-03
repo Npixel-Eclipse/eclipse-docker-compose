@@ -222,14 +222,6 @@ async def lifespan(app: FastAPI):
         # Add current message
         messages.append(Message(role="user", content=clean_text))
 
-        # Save user message to database
-        await conversation_store.add_message(
-            channel_id=channel,
-            thread_ts=thread_ts if is_mention else None,
-            user_id=user,
-            role="user",
-            content=clean_text,
-        )
 
         # Agentic Loop (Function Calling)
         import json
@@ -301,7 +293,9 @@ async def lifespan(app: FastAPI):
                             response_sent = True
                         except Exception as stream_err:
                             logger.error(f"Streaming failed, falling back to standard post: {stream_err}")
-                            response_text = response.content or "죄송합니다. 응답 생성 중 오류가 발생했습니다."
+                            # Fallback: Get response via non-streaming API
+                            fallback_response = await llm_client.chat(messages)
+                            response_text = fallback_response.content or "죄송합니다. 응답 생성 중 오류가 발생했습니다."
                             await slack_integration.send_message(
                                 channel=channel,
                                 text=response_text,

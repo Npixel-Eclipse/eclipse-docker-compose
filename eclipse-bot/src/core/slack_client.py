@@ -2,7 +2,6 @@
 
 import asyncio
 import logging
-import time
 from typing import Callable, Optional, Any
 from slack_bolt.async_app import AsyncApp
 from slack_bolt.adapter.socket_mode.async_handler import AsyncSocketModeHandler
@@ -29,14 +28,14 @@ class SlackIntegration:
         # Register internal event handlers
         self._setup_handlers()
         
-        # Add global middleware to log ALL incoming events for debugging
+        # Add global middleware to log ALL incoming events for debugging (DEBUG level)
         @self.app.middleware
         async def log_all_events(body, next):
             try:
                 import json
-                logger.info(f"RAW PAYLOAD RECEIVED: {json.dumps(body, ensure_ascii=False)}")
+                logger.debug(f"RAW PAYLOAD RECEIVED: {json.dumps(body, ensure_ascii=False)}")
             except Exception as e:
-                logger.info(f"RAW PAYLOAD RECEIVED (not JSON): {body}")
+                logger.debug(f"RAW PAYLOAD RECEIVED (not JSON): {body}")
             return await next()
 
     async def get_bot_user_id(self) -> str:
@@ -67,15 +66,9 @@ class SlackIntegration:
                 except Exception as e:
                     logger.error(f"Mention handler error: {e}")
 
-        @self.app.message(re.compile(".*"))
-        async def handle_message(event: dict, say: Callable):
-            """Handle all messages that have text content."""
-            await self._internal_handle_message(event, say)
-
         @self.app.event("message")
-        async def handle_subtype_message(event: dict, say: Callable):
-            """Handle messages with subtypes (which might not have text or match the pattern)."""
-            # app.message catches many things, but some technical events need app.event("message")
+        async def handle_message(event: dict, say: Callable):
+            """Handle all message events (unified handler to prevent duplicates)."""
             await self._internal_handle_message(event, say)
 
     async def _internal_handle_message(self, event: dict, say: Callable):
