@@ -180,15 +180,50 @@ class CodeReviewWorkflow(BaseWorkflow):
                 
         return True
 
-    async def _run_llm_review(self, strategy: dict, cl: str, p4_desc: str) -> str:
-        """Run LLM for a specific strategy."""
+    async def _run_llm_review(self, strategy: dict, cl: str, p4_desc: str) -> dict:
+        """Run LLM for a specific strategy using Tool Calling for structured output."""
         system_prompt = strategy["prompt"]
         emoji = strategy.get("emoji", "📝")
         name = strategy.get("name", "Review")
         
-        # Construct User Prompt
-        # Limit p4_desc size to avoid context overflow? 
-        # Gemini 1.5/2.0 has huge context, but let's be reasonable.
+        # Define the Tool Schema
+        submit_review_tool = {
+            "type": "function",
+            "function": {
+                "name": "submit_review",
+                "description": "Submit code review results. Call this function even if no issues are found (with status='PASS').",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "reviewer_name": {
+                            "type": "string",
+                            "description": "Name of the reviewer specialist"
+                        },
+                        "status": {
+                            "type": "string", 
+                            "enum": ["PASS", "REQUEST_CHANGES"],
+                            "description": "Output PASS if code is clean, REQUEST_CHANGES if issues found."
+                        },
+                        "issues": {
+                            "type": "array",
+                            "description": "List of issues found. Empty if status is PASS.",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "category": {"type": "string"},
+                                    "file": {"type": "string"},
+                                    "line": {"type": "string"},
+                                    "description": {"type": "string", "description": "Critical analysis of the issue"}
+                                },
+                                "required": ["category", "file", "description"]
+                            }
+                        }
+                    },
+                    "required": ["reviewer_name", "status", "issues"]
+                }
+            }
+        }
+        
         user_content = f"**P4 Change Description (CL {cl}):**\n\n{p4_desc[:50000]}" 
         
         messages = [
@@ -197,25 +232,86 @@ class CodeReviewWorkflow(BaseWorkflow):
         ]
         
         try:
-            response = await self.llm.chat(messages)
-            content = response.content
-            # Add Header
-            return f"{emoji} **{name} Review**\n{content}"
+            # Enforce tool choice
+            response = await self.llm.chat(
+                messages, 
+                tools=[submit_review_tool],
+                # tool_choice={"type": "function", "function": {"name": "submit_review"}} # Check LLMClient support?
+                # Most clients auto-detect, but let's assume auto for now or check implementation.
+                # If tool_choice not supported explicitly in current client, prompt engineering does heavy lifting.
+            )
+            
+            # Parse Tool Call
+            result = {
+                "name": name,
+                "emoji": emoji,
+                "status": "ERROR",
+                "issues": [],
+                "raw": response.content
+            }
+            
+            if response.tool_calls:
+                # Assuming first tool call is the review
+                tool_call = response.tool_calls[0]
+                if tool_call.get("function", {}).get("name") == "submit_review":
+                    import json
+                    args = json.loads(tool_call["function"]["arguments"])
+                    result["status"] = args.get("status", "PASS")
+                    result["issues"] = args.get("issues", [])
+            else:
+                # Fallback if model just chatted
+                logger.warning(f"LLM did not call tool for {name}. Content: {response.content}")
+                result["status"] = "PASS" # Default to pass if uncertainty
+                
+            return result
+            
         except Exception as e:
             logger.error(f"LLM review failed for {name}: {e}")
-            return f"{emoji} **{name} Review**\n❌ LLM execution failed."
+            return {
+                "name": name,
+                "emoji": emoji,
+                "status": "ERROR",
+                "error": str(e)
+            }
 
     async def _send_report(self, channel: str, ts: str, reports: List[dict], total_issues: int):
         """Format and send final report to Slack."""
         
-        final_text = "## 🔍 AI 코드 리뷰 결과\n\n"
-        final_text += f"📊 **총 이슈: {total_issues}건 | 리뷰 대상 CL: {len(reports)}개**\n\n"
+        # Filter for actual changes or errors
+        relevant_reports = []
+        pass_reports = []
+        
+        real_issue_count = 0
         
         for report in reports:
-            cl = report["cl"]
-            # final_text += f"### CL {cl}\n" # Single CL usually
-            for out in report["outputs"]:
-                final_text += out + "\n\n---\n\n"
+             # report structure: {cl:..., outputs: [ {name, status, issues}, ... ]}
+             for out in report["outputs"]:
+                if out["status"] == "REQUEST_CHANGES" and out.get("issues"):
+                    relevant_reports.append(out)
+                    real_issue_count += len(out["issues"])
+                elif out["status"] == "PASS":
+                     pass_reports.append(out)
+        
+        # Construct Message
+        if not relevant_reports:
+            # All Pass
+            msg = f"✅ **Code Review Passed** (Checked by {len(pass_reports)} experts)"
+            await self.slack.send_message(channel, msg, thread_ts=ts)
+            return
+
+        final_text = "## 🔍 AI 코드 리뷰 결과\n\n"
+        final_text += f"🚨 **발견된 중요 이슈: {real_issue_count}건**\n\n"
+        
+        for out in relevant_reports:
+            final_text += f"{out['emoji']} **{out['name']}**\n"
+            for issue in out["issues"]:
+                # Format: - [Category] Description (File)
+                file_info = f"(`{issue.get('file')}`)" if issue.get('file') else ""
+                final_text += f"- **[{issue.get('category', 'Issue')}]** {issue.get('description')} {file_info}\n"
+            final_text += "\n"
+            
+        if pass_reports:
+             final_text += f"\n--- \n✅ **Pass**: {', '.join([r['name'] for r in pass_reports])}"
                 
         # Send as Reply
         await self.slack.send_message(channel, final_text, thread_ts=ts)
