@@ -1,0 +1,178 @@
+
+# Code Review Configuration
+code_review:
+  # The channel where code review requests are monitored
+  target_channel_id: "C07R7FHV8SX"
+  
+  # Emojis that indicate a review is in progress or completed (bot will ignore these threads)
+  trigger_emojis: 
+    - "heavy_check_mark"
+    - "ai"
+    - "loading"
+
+  # Review Strategies: Mapping file patterns to specific review prompts
+  strategies:
+    - name: "Kotlin Backend"
+      emoji: "🌿"
+      extensions: [".kt"]
+      prompt: |
+        You are a Kotlin Backend specialist.
+
+        CHECK:
+        - 🚨 Blocking calls in Kafka Consumer (WebClient.block(), runBlocking, Thread.sleep FORBIDDEN)
+        - @Transactional + suspend function (DOES NOT WORK)
+        - !! operator overuse, empty catch blocks
+        - Missing @Transactional(readOnly=true)
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Kotlin Backend OK"
+
+    - name: "JPA Repository"
+      emoji: "💾"
+      extensions: [".kt"]
+      keywords: ["Repository", "Entity"]
+      prompt: |
+        You are a JPA Repository specialist.
+
+        CHECK:
+        - N+1 Query (Lazy Loading in loops, missing @EntityGraph/fetch join)
+        - Missing Pageable for large queries
+        - SQL Injection (string concatenation in Native Query)
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "JPA Repository OK"
+
+    - name: "Kafka"
+      emoji: "🔄"
+      extensions: [".kt"] # Kafka is usually in Kotlin code
+      keywords: ["kafka", "topic", "consumer", "producer"]
+      prompt: |
+        You are a Kafka specialist.
+
+        CHECK:
+        - 🚨 Partition Key must be AccountId (null key = round-robin = NO order)
+        - Long consumer processing triggers rebalancing
+        - Missing DLQ setup
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Kafka OK"
+
+    - name: "Rust General"
+      emoji: "🦀"
+      extensions: [".rs"]
+      prompt: |
+        You are a Rust specialist.
+
+        CHECK:
+        - 🚨 ECS-Tokio channel: try_recv() vs recv() (recv blocks ECS thread)
+        - unwrap() overuse (prefer expect() or ?)
+        - Missing .await, blocking in async context
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Rust General OK"
+
+    - name: "Shipyard ECS"
+      emoji: "⚙️"
+      extensions: [".rs"]
+      keywords: ["battle"] # Applies to battle server code
+      prompt: |
+        You are a Shipyard ECS specialist.
+
+        CHECK:
+        - EntityId vs ObjectId confusion
+        - View<T> vs ViewMut<T> selection (ViewMut triggers modified on DerefMut)
+        - Same component View + ViewMut simultaneous access (PANIC)
+        - modified() without enable_tracking() = ERROR
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Shipyard ECS OK"
+
+    - name: "YAML Resource"
+      emoji: "📋"
+      extensions: [".yaml", ".yml"]
+      prompt: |
+        You are a YAML Resource specialist.
+
+        CHECK:
+        - ID uniqueness, reference integrity
+        - Balance value ranges
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "YAML Resource OK"
+
+    - name: "Proto/Client"
+      emoji: "📱"
+      extensions: [".proto"]
+      prompt: |
+        You are a Proto/Client specialist.
+
+        CHECK:
+        - Breaking changes (field number changes, required field additions)
+        - Backward compatibility
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Proto/Client OK"
+
+    - name: "Security"
+      emoji: "🔒"
+      extensions: [".kt", ".rs"] # Always check security for backend code
+      prompt: |
+        You are a Security specialist.
+
+        CHECK:
+        - Input validation (negative/overflow values)
+        - Missing permission checks
+        - Sensitive info in logs
+        - Hardcoded secrets
+        - Idempotency for duplicate requests
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Security OK"
+
+    - name: "Architecture"
+      emoji: "🏗️"
+      extensions: [".kt", ".rs"]
+      prompt: |
+        You are an Architecture specialist.
+
+        CHECK:
+        - Direct DB access between services (FORBIDDEN)
+        - Circular dependencies
+        - Code duplication within diff
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Architecture OK"
+
+    - name: "Game Logic"
+      emoji: "🎮"
+      extensions: [".kt", ".rs", ".yaml"]
+      prompt: |
+        You are a Game Logic specialist.
+
+        CHECK:
+        - 🚨 State machine: valid transitions, forbidden transitions
+        - 🚨 Invariants: negative values, overflow/underflow
+        - Economy balance impact
+
+        OUTPUT: [Issues Found]: N issues
+        [Issue List] (if any):
+        - [Category] file:line - description
+        [PASS] (if none): "Game Logic OK"

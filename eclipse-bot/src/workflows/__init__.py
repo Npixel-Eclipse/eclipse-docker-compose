@@ -9,11 +9,14 @@ from src.core.registry import (
     get_registry,
 )
 from .llm_chat import LLMChatWorkflow
+from .code_review import CodeReviewWorkflow
 
 
-def register_all_workflows():
+def register_all_workflows(llm_client=None):
     """Register all workflows to the global registry."""
     registry.register(LLMChatWorkflow())
+    if llm_client:
+        registry.register(CodeReviewWorkflow(llm_client))
 
 
 __all__ = [

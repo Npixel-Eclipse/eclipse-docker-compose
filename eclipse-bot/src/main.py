@@ -48,13 +48,6 @@ async def lifespan(app: FastAPI):
     await conversation_store.initialize()
     logger.info("Conversation store initialized")
 
-    # Register workflows and tools
-    from .workflows import register_all_workflows
-    from .tools import register_all_tools
-    register_all_workflows()
-    register_all_tools()
-    logger.info("Workflows and tools registered")
-
     # Initialize Slack Integration
     slack_integration = SlackIntegration(
         bot_token=settings.slack_bot_token,
@@ -64,6 +57,13 @@ async def lifespan(app: FastAPI):
     # Fetch bot user ID to avoid duplicate processing in on_message
     bot_user_id = await slack_integration.get_bot_user_id()
     logger.info(f"Slack Bot User ID: {bot_user_id}")
+
+    # Register workflows and tools
+    from .workflows import register_all_workflows
+    from .tools import register_all_tools
+    register_all_workflows(llm_client)
+    register_all_tools()
+    logger.info("Workflows and tools registered")
 
     # --- Register AI Interaction Handlers ---
     
@@ -103,6 +103,31 @@ async def lifespan(app: FastAPI):
         """Handler for messages (DMs and channel messages)."""
         channel = event.get("channel", "")
         thread_ts = event.get("thread_ts")
+        text = event.get("text", "")
+        ts = event.get("ts")
+        
+        # --- Code Review Trigger Check ---
+        from .core.config import get_config
+        from .workflows import get_registry
+        
+        config = get_config()
+        target_channel = config.get("code_review.target_channel_id")
+        
+        # If in target channel and NOT a thread reply (or handle threads too? Usually top-level)
+        if channel == target_channel and not thread_ts:
+            registry = get_registry()
+            # Run Code Review Workflow asynchronously
+            # We don't await it to block other processing, or we can await?
+            # Better to spawn task.
+            import asyncio
+            asyncio.create_task(registry.execute("code_review", {
+                "text": text,
+                "channel": channel,
+                "ts": ts
+            }))
+            # We rely on CodeReviewWorkflow to validate CLs. 
+            # If no CLs, it finishes quickly.
+        # ---------------------------------
         
         # 1. DM 처리
         if channel.startswith("D"):
@@ -113,7 +138,7 @@ async def lifespan(app: FastAPI):
             # 일반 message 핸들러에서는 중복 응답 방지를 위해 무시합니다.
             bot_id = await slack_integration.get_bot_user_id()
             if f"<@{bot_id}>" in event.get("text", ""):
-                return
+                return 
 
             # 멘션 이벤트가 아닌 일반 메시지 이벤트이므로 is_mention=False로 시작
             # (나중에 스레드/이력 분석을 통해 응답 여부 결정)

@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y wget && \
 COPY pyproject.toml README.md ./
 COPY src/ ./src/
 COPY prompts/ ./prompts/
+COPY config/ ./config/
 COPY .env.example ./.env.example
 
 # Install dependencies (not editable mode in container)
