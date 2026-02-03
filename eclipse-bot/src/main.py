@@ -181,6 +181,16 @@ async def lifespan(app: FastAPI):
             limit=20,
         )
 
+        # Automatic Session Start for DMs (if history is empty)
+        if channel.startswith("D") and not history:
+             import uuid
+             new_session_id = str(uuid.uuid4())
+             start_msg = f"🔄 [SESSION_START] ID: {new_session_id}\n새로운 세션이 시작되었습니다."
+             await say(start_msg)
+             # Add to history so LLM sees it immediately (context consistency)
+             history.append(Message(role="assistant", content=start_msg))
+             logger.info(f"Auto-started new session {new_session_id} for DM {channel}")
+
         # 응답 여부 판단 (Decision Logic)
         should_respond = False
         
