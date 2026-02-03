@@ -1,4 +1,4 @@
-"""Perforce client wrapper for AI Workflow Framework."""
+"""Perforce client wrapper for Eclipse Bot."""
 
 import os
 import logging

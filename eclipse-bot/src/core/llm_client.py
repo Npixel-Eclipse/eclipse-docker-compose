@@ -30,8 +30,8 @@ class LLMClient:
                 base_url=self.base_url,
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
-                    "HTTP-Referer": "https://ai-workflow-framework.local",
-                    "X-Title": "AI Workflow Framework",
+                    "HTTP-Referer": "https://eclipse-bot.local",
+                    "X-Title": "Eclipse Bot",
                     "Content-Type": "application/json",
                 },
                 timeout=httpx.Timeout(self.timeout),

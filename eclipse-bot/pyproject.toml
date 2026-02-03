@@ -1,7 +1,7 @@
 [project]
 name = "eclipse-bot"
 version = "0.1.0"
-description = "Reusable AI workflow framework with FastAPI, OpenRouter, Slack, and LangGraph"
+description = "Intelligent AI agent for workflow automation with Slack and OpenRouter"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

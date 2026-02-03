@@ -62,25 +62,7 @@ Errors are learning opportunities. When something breaks:
 
 **Key principle:** Local files are only for processing. Deliverables live in cloud services (Google Sheets, Slides, etc.) where the user can access them. Everything in `.tmp/` can be deleted and regenerated.
 
-## AI Workflow Framework
 
-AI 워크플로우가 필요할 때 `/data4/ai-workflow-framework` 프레임워크를 활용하세요.
-
-**핵심 구성요소:**
-- `src/core/llm_client.py` - OpenRouter API 클라이언트
-- `src/core/slack_client.py` - Slack Socket Mode 통합
-- `src/core/workflow_engine.py` - LangGraph 워크플로우 엔진
-
-**새 워크플로우 생성:** `directives/create_workflow.md` SOP를 참조하세요.
-
-**사용 예:**
-```python
-from src.workflows.base import BaseWorkflow
-from src.core.llm_client import LLMClient
-
-workflow = MyWorkflow(llm_client)
-result = await workflow.run({"input": "hello"})
-```
 
 ## Summary
 

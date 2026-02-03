@@ -284,12 +284,12 @@ async def lifespan(app: FastAPI):
 
     # Start Slack Socket Mode
     await slack_integration.start()
-    logger.info("Starting Eclipse Bot...")
+    logger.info("Starting AI Workflow Framework...")
 
     yield
 
     # Shutdown
-    logger.info("Shutting down Eclipse Bot...")
+    logger.info("Shutting down AI Workflow Framework...")
     if slack_integration:
         await slack_integration.stop()
     if llm_client:
@@ -300,7 +300,7 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI app
 app = FastAPI(
-    title="Eclipse Bot",
+    title="AI Workflow Framework",
     description="Reusable AI agent for workflow automation",
     version="0.1.0",
     lifespan=lifespan,

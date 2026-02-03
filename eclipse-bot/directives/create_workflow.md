@@ -2,15 +2,13 @@
 
 > AI 에이전트가 새 워크플로우를 개발할 때 참고하는 SOP입니다.
 
-## 개요
-
-이 프레임워크는 LangGraph 기반 워크플로우 엔진을 제공합니다. 새 워크플로우는 `BaseWorkflow`를 상속하여 구현합니다.
+이 지침은 Eclipse Bot의 워크플로우 엔진을 기반으로 설계되었습니다. 새 워크플로우는 `BaseWorkflow`를 상속하여 구현합니다.
 
 ## 실행 환경
 
-- **프레임워크 경로**: `/data4/ai-workflow-framework`
-- **워크플로우 위치**: `/data4/ai-workflow-framework/src/workflows/`
-- **환경 변수**: `/data4/ai-workflow-framework/.env`
+- **프로젝트 경로**: `/data4/docker-compose/eclipse-bot`
+- **워크플로우 위치**: `./src/workflows/`
+- **환경 변수**: `./.env`
 
 ## 워크플로우 생성 절차
 

@@ -1,13 +1,13 @@
-# AI Workflow Framework
+# Eclipse Bot
 
-FastAPI, OpenRouter, Slack, LangGraph, Docker 기반의 재사용 가능한 AI 워크플로우 프레임워크입니다.
+OpenRouter, Slack, LangGraph, Docker 기반의 지능형 워크플로우 에이전트입니다.
 
 ## 빠른 시작
 
 ### 1. 환경 설정
 
 ```bash
-cd /data4/ai-workflow-framework
+cd /data4/docker-compose/eclipse-bot
 cp .env.example .env
 # .env 파일에 실제 토큰 입력
 ```
@@ -15,7 +15,7 @@ cp .env.example .env
 ### 2. Docker로 실행
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 ### 3. 로컬에서 실행 (개발용)
@@ -29,14 +29,15 @@ python -m src.main
 
 | 모듈 | 설명 |
 |------|------|
-| `src/core/llm_client.py` | OpenRouter API 클라이언트 |
-| `src/core/slack_client.py` | Slack Socket Mode 통합 |
-| `src/core/workflow_engine.py` | LangGraph 워크플로우 엔진 |
+| `src/core/llm_client.py` | LLM 인터페이스 (OpenRouter) |
+| `src/core/slack_client.py` | Slack 통합 및 스트리밍 처리 |
+| `src/core/perforce_client.py` | Perforce(P4) 통합 로직 |
+| `src/workflows/` | 개별 워크플로우 및 에이전트 도구 |
 
-## 새 워크플로우 만들기
+## 새 워크플로우 만드기
 
 ```python
-from src.workflows.base import BaseWorkflow, WorkflowState
+from src.workflows.base import BaseWorkflow
 from src.core.llm_client import LLMClient
 from langgraph.graph import END
 
@@ -50,36 +51,23 @@ class MyWorkflow(BaseWorkflow):
     def build(self):
         @self.engine.node("process")
         async def process(state):
-            # 비즈니스 로직
             return {"output": state["input"].upper()}
         
         self.engine.set_entry_point("process")
         self.engine.add_edge("process", END)
-    
-    def get_state_schema(self):
-        return WorkflowState
-
-# 사용
-workflow = MyWorkflow(llm_client)
-result = await workflow.run({"input": "hello"})
 ```
-
-## API 엔드포인트
-
-- `GET /health` - 헬스체크
-- `POST /workflow/run` - 워크플로우 실행
 
 ## 디렉토리 구조
 
 ```
-ai-workflow-framework/
+eclipse-bot/
 ├── src/
-│   ├── main.py              # FastAPI 앱
-│   ├── config.py            # 설정 관리
-│   ├── core/                # 핵심 모듈
-│   ├── workflows/           # 워크플로우 정의
+│   ├── main.py              # 에이전트 진입점
+│   ├── core/                # 핵심 로직 (Slack, LLM, P4)
+│   ├── workflows/           # 워크플로우(도구) 구현체
 │   └── api/                 # API 라우트
-├── directives/              # 에이전트 SOP
+├── directives/              # 에이전트 행동 지침 (SOP)
+├── prompts/                 # LLM 프롬프트 템플릿
 ├── docker-compose.yml
 └── Dockerfile
 ```

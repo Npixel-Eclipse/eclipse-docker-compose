@@ -1,4 +1,4 @@
-"""Example workflows demonstrating framework usage."""
+"""Example workflows for Eclipse Bot."""
 
 from ..registry import BaseWorkflow
 

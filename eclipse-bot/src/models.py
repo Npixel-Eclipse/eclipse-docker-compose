@@ -1,4 +1,4 @@
-"""Shared data models for the AI Workflow Framework."""
+"""Shared data models for the Eclipse Bot."""
 
 from dataclasses import dataclass, field
 from datetime import datetime
