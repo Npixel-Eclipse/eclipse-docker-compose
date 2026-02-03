@@ -121,13 +121,19 @@ class SlackIntegration:
     async def get_streamer(
         self,
         channel: str,
-        thread_ts: str,
+        recipient_team_id: str,
+        recipient_user_id: str,
+        thread_ts: Optional[str] = None,
     ):
-        """Get a Slack chat_stream helper (forces threading)."""
-        return await self.app.client.chat_stream(
-            channel=channel,
-            thread_ts=thread_ts,
+        """Get an official Slack chat_stream helper."""
+        return SlackStreamer(
+            self.app.client, 
+            channel, 
+            recipient_team_id, 
+            recipient_user_id, 
+            thread_ts
         )
+
     async def start(self):
         """Start the Socket Mode handler (non-blocking)."""
         self._handler = AsyncSocketModeHandler(self.app, self.app_token)
@@ -140,3 +146,48 @@ class SlackIntegration:
         if self._handler:
             await self._handler.close_async()
             logger.info("Slack Socket Mode handler stopped")
+
+class SlackStreamer:
+    """Helper to stream responses to Slack using official chat.startStream API."""
+    
+    def __init__(
+        self, 
+        client, 
+        channel: str, 
+        recipient_team_id: str,
+        recipient_user_id: str,
+        thread_ts: Optional[str] = None
+    ):
+        self.client = client
+        self.channel = channel
+        self.recipient_team_id = recipient_team_id
+        self.recipient_user_id = recipient_user_id
+        self.thread_ts = thread_ts
+        self.stream_id = None
+
+    async def append(self, markdown_text: str):
+        """Add text to the ongoing stream."""
+        if not self.stream_id:
+            # Initialize the stream
+            response = await self.client.chat_startStream(
+                channel=self.channel,
+                thread_ts=self.thread_ts,
+                recipient_team_id=self.recipient_team_id,
+                recipient_user_id=self.recipient_user_id,
+            )
+            self.stream_id = response["stream_id"]
+
+        # Append to the stream
+        await self.client.chat_appendStream(
+            channel=self.channel,
+            stream_id=self.stream_id,
+            markdown_text=markdown_text
+        )
+
+    async def stop(self):
+        """Finalize the stream."""
+        if self.stream_id:
+            await self.client.chat_stopStream(
+                channel=self.channel,
+                stream_id=self.stream_id
+            )

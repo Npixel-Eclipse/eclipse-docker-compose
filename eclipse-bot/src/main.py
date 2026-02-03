@@ -185,11 +185,13 @@ async def lifespan(app: FastAPI):
                 if not response.tool_calls:
                     # Final response logic
                     if is_mention:
-                        # Mentions/Threads: Real-time streaming using new API
+                        # Mentions/Threads: Real-time streaming
                         response_text = ""
                         try:
                             streamer = await slack_integration.get_streamer(
                                 channel=channel,
+                                recipient_team_id=event.get("team"),
+                                recipient_user_id=event.get("user"),
                                 thread_ts=thread_ts
                             )
                             async for chunk in llm_client.chat_stream(messages):
@@ -198,11 +200,19 @@ async def lifespan(app: FastAPI):
                             await streamer.stop()
                             response_sent = True
                         except Exception as stream_err:
-                            logger.error(f"Streaming error: {stream_err}")
-                            response_text = response.content or ""
+                            logger.error(f"Streaming failed, falling back to standard post: {stream_err}")
+                            response_text = response.content or "죄송합니다. 응답 생성 중 오류가 발생했습니다."
+                            await slack_integration.send_message(
+                                channel=channel,
+                                text=response_text,
+                                thread_ts=thread_ts
+                            )
+                            response_sent = True
                     else:
-                        # DMs: Standard text output without streaming or threading
+                        # DMs: Standard text output
                         response_text = response.content or ""
+                        await say(text=response_text)
+                        response_sent = True
                     
                     # Add completed assistant response to history
                     assistant_msg = Message(role="assistant", content=response_text)
