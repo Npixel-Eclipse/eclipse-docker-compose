@@ -10,12 +10,15 @@ from .api import router
 from .core import LLMClient, SlackIntegration, ConversationStore
 from .models import Message
 from .utils import load_prompt
+import json
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    force=True, # Ensure this config overrides any existing settings
 )
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Global instances (initialized in lifespan)
@@ -55,6 +58,37 @@ async def lifespan(app: FastAPI):
         bot_token=settings.slack_bot_token,
         app_token=settings.slack_app_token,
     )
+    
+    # Fetch bot user ID to avoid duplicate processing in on_message
+    bot_user_id = await slack_integration.get_bot_user_id()
+    logger.info(f"Slack Bot User ID: {bot_user_id}")
+
+    # --- Register AI Interaction Handlers ---
+    
+    @slack_integration.app.action("feedback_buttons_action")
+    async def handle_feedback(ack, body, say):
+        await ack()
+        user_id = body["user"]["id"]
+        action_value = body["actions"][0]["value"]
+        logger.info(f"Feedback received from {user_id}: {action_value}")
+        # Optionally update the message or send a temporary response
+        # await say(f"<@{user_id}>님, 소중한 피드백 감사합니다! ({action_value})", thread_ts=body["message"]["ts"])
+
+    @slack_integration.app.action("delete_ai_response")
+    async def handle_delete(ack, body):
+        await ack()
+        channel_id = body["channel"]["id"]
+        message_ts = body["message"]["ts"]
+        try:
+            await slack_integration.app.client.chat_delete(
+                channel=channel_id,
+                ts=message_ts
+            )
+            logger.info(f"AI response deleted in {channel_id} (ts: {message_ts})")
+        except Exception as e:
+            logger.error(f"Failed to delete message: {e}")
+
+    # ----------------------------------------
 
     # Setup Slack handlers with conversation memory
     @slack_integration.on_mention
@@ -73,6 +107,12 @@ async def lifespan(app: FastAPI):
             await handle_message_with_context(event, say, is_mention=False)
         # 2. 채널 내 메시지 (스레드 포함)
         else:
+            # 봇이 명시적으로 멘션된 경우 app_mention 핸들러에서 처리하므로 
+            # 일반 message 핸들러에서는 중복 응답 방지를 위해 무시합니다.
+            bot_id = await slack_integration.get_bot_user_id()
+            if f"<@{bot_id}>" in event.get("text", ""):
+                return
+
             # 멘션 이벤트가 아닌 일반 메시지 이벤트이므로 is_mention=False로 시작
             # (나중에 스레드/이력 분석을 통해 응답 여부 결정)
             await handle_message_with_context(event, say, is_mention=False)
@@ -99,10 +139,11 @@ async def lifespan(app: FastAPI):
             clean_text = text.strip()
 
         if not clean_text:
-            await say(
-                text=f"안녕하세요 <@{user}>! 무엇을 도와드릴까요?",
-                thread_ts=thread_ts,
-            )
+            if is_mention:
+                await say(
+                    text=f"안녕하세요 <@{user}>! 무엇을 도와드릴까요?",
+                    thread_ts=thread_ts,
+                )
             return
 
         # Get conversation history from database
@@ -123,27 +164,45 @@ async def lifespan(app: FastAPI):
             should_respond = True
         # 3. 멘션 없는 스레드 답글인 경우 (AI 의도 분석 수행)
         elif thread_ts and history:
-            logger.info(f"Analyzing intent for threaded message. History len: {len(history)}")
-            logger.info(f"Checking text: {clean_text[:50]}...")
+            logger.info(f"Analyzing intent for threaded message in {channel}. History: {len(history)} messages.")
+            
             intent_prompt_template = load_prompt("intent_check")
-            intent_prompt = intent_prompt_template.replace("{{text}}", clean_text)
+            
+            # 대화 이력을 텍스트로 구성하여 의도 분석에 활용 (최대 20개)
+            history_text = "\n".join([f"{m.role}: {m.content[:150]}" for m in history[-20:]])
+            intent_prompt = f"이전 대화 맥락:\n{history_text}\n\n판단할 메시지: {clean_text}\n\n{intent_prompt_template}"
             
             intent_response = await llm_client.chat([
                 Message(role="user", content=intent_prompt)
             ])
+            intent_decision = intent_response.content.strip().upper()
+            logger.info(f"AI Intent Analysis Decision: [{intent_decision}] for text: '{clean_text[:50]}'")
             
-            if "YES" in intent_response.content.upper():
-                logger.info("AI Intent Analysis: YES (Bot-directed)")
+            if "YES" in intent_decision:
                 should_respond = True
-                # 스레드 내 대화이므로 스트리밍 모드 활성화를 위해 is_mention을 True로 설정
                 is_mention = True
             else:
-                logger.info("AI Intent Analysis: NO (User-to-user conversation)")
+                # 봇에게 한 말이 아니더라도 문맥 보존을 위해 DB에는 저장
+                await conversation_store.add_message(
+                    channel_id=channel,
+                    thread_ts=thread_ts,
+                    user_id=user,
+                    role="user",
+                    content=clean_text,
+                )
                 return
 
-        # 4. 그 외(일반 채널 메시지 등)는 무시
         if not should_respond:
             return
+
+        # Save the current user message to database for future context
+        await conversation_store.add_message(
+            channel_id=channel,
+            thread_ts=thread_ts if (is_mention or channel.startswith("C")) else None, # DM은 thread_ts 없이 저장
+            user_id=user,
+            role="user",
+            content=clean_text,
+        )
 
         # Build messages for LLM
         system_prompt = load_prompt("default")
@@ -196,17 +255,49 @@ async def lifespan(app: FastAPI):
                     if is_mention:
                         # Mentions/Threads: Real-time streaming
                         response_text = ""
+                        # 공식 SDK chat_stream은 thread_ts를 필수(required)로 요구합니다.
+                        # DM 등에서 thread_ts가 None인 경우, 현재 메시지의 ts를 사용합니다.
+                        stream_thread_ts = thread_ts or event.get("ts")
+                        
                         try:
                             streamer = await slack_integration.get_streamer(
                                 channel=channel,
                                 recipient_team_id=event.get("team"),
                                 recipient_user_id=event.get("user"),
-                                thread_ts=thread_ts
+                                thread_ts=stream_thread_ts
                             )
                             async for chunk in llm_client.chat_stream(messages):
                                 response_text += chunk
                                 await streamer.append(markdown_text=chunk)
-                            await streamer.stop()
+                            
+                            # Create AI interactive blocks (Feedback + Delete)
+                            interactive_blocks = [
+                                {
+                                    "type": "context_actions",
+                                    "elements": [
+                                        {
+                                            "type": "feedback_buttons",
+                                            "action_id": "feedback_buttons_action",
+                                            "positive_button": {
+                                                "text": {"type": "plain_text", "text": "👍"},
+                                                "value": "positive"
+                                            },
+                                            "negative_button": {
+                                                "text": {"type": "plain_text", "text": "👎"},
+                                                "value": "negative"
+                                            }
+                                        },
+                                        {
+                                            "type": "icon_button",
+                                            "icon": "trash",
+                                            "text": {"type": "plain_text", "text": "삭제"},
+                                            "action_id": "delete_ai_response",
+                                            "value": "delete"
+                                        }
+                                    ]
+                                }
+                            ]
+                            await streamer.stop(blocks=interactive_blocks)
                             response_sent = True
                         except Exception as stream_err:
                             logger.error(f"Streaming failed, falling back to standard post: {stream_err}")
