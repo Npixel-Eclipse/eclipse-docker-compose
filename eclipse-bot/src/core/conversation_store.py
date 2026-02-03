@@ -86,6 +86,20 @@ class ConversationStore:
                 
             bot_id = await self.slack_integration.get_bot_user_id()
 
+            # Filter messages based on [SESSION_END] marker
+            # We want to keep everything AFTER the last [SESSION_END].
+            # This allows the LLM to see multiple [SESSION_START] markers if no explicit reset happened,
+            # respecting the user's wish to let the LLM judge context relevance.
+            
+            cutoff_index = -1
+            for i, msg in enumerate(slack_messages):
+                if "[SESSION_END]" in msg.get("text", ""):
+                    cutoff_index = i
+            
+            # Keep only messages AFTER the last [SESSION_END]
+            if cutoff_index != -1:
+                slack_messages = slack_messages[cutoff_index+1:]
+
             for msg in slack_messages:
                 # Basic role mapping
                 msg_user = msg.get("user")
@@ -94,15 +108,6 @@ class ConversationStore:
                 role = "user"
                 if msg_user == bot_id:
                     role = "assistant"
-                
-                # Check for "Session Start" marker if in DM? 
-                # For now just return raw history.
-                # User requested specific DM parsing logic.
-                # "Scan for [SESSION_START] ... [SESSION_END]"
-                
-                # Handling System/Tool messages might be tricky with just Slack history 
-                # unless we format them specifically. 
-                # For now map text content.
                 
                 messages.append(Message(
                     role=role,
