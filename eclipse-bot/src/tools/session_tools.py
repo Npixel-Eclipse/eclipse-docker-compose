@@ -1,9 +1,9 @@
-"""Reset session workflow - clear conversation history."""
+"""Session management tools."""
 
 from src.core.registry import BaseWorkflow
 
 
-class ResetSessionWorkflow(BaseWorkflow):
+class ResetSessionTool(BaseWorkflow):
     """Reset the current session by clearing conversation history."""
     
     name = "reset_session"

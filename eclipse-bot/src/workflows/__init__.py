@@ -10,14 +10,12 @@ from src.core.registry import (
 )
 from .echo import EchoWorkflow
 from .llm_chat import LLMChatWorkflow
-from .reset_session import ResetSessionWorkflow
 
 
 def register_all_workflows():
     """Register all workflows to the global registry."""
     registry.register(EchoWorkflow())
     registry.register(LLMChatWorkflow())
-    registry.register(ResetSessionWorkflow())
 
 
 __all__ = [
@@ -29,6 +27,5 @@ __all__ = [
     "get_registry",
     "EchoWorkflow",
     "LLMChatWorkflow",
-    "ResetSessionWorkflow",
     "register_all_workflows",
 ]

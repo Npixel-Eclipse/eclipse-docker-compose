@@ -3,6 +3,7 @@
 from .file_tools import ReadFileTool, WriteFileTool, ListDirectoryTool
 from .code_tools import SearchCodeTool
 from .bash_tools import RunCommandTool
+from .session_tools import ResetSessionTool
 from .p4_tools import (
     P4SyncTool, P4DiffTool, P4GrepTool, 
     P4RevertTool, P4EditTool, P4StatusTool,
@@ -26,6 +27,9 @@ def register_all_tools():
     # Bash tools
     registry.register(RunCommandTool())
     
+    # Session tools
+    registry.register(ResetSessionTool())
+    
     # Perforce tools
     registry.register(P4SyncTool())
     registry.register(P4DiffTool())
@@ -44,6 +48,7 @@ def register_all_tools():
 __all__ = [
     "ReadFileTool", "WriteFileTool", "ListDirectoryTool",
     "SearchCodeTool", "RunCommandTool",
+    "ResetSessionTool",
     "P4SyncTool", "P4DiffTool", "P4GrepTool", 
     "P4RevertTool", "P4EditTool", "P4StatusTool",
     "P4FilelogTool", "P4DescribeTool", "P4ChangesTool",
