@@ -119,7 +119,6 @@ async def lifespan(app: FastAPI):
             intent_prompt_template = load_prompt("intent_check")
             intent_prompt = intent_prompt_template.replace("{{text}}", clean_text)
             
-            from .models import Message
             intent_response = await llm_client.chat([
                 Message(role="user", content=intent_prompt)
             ])

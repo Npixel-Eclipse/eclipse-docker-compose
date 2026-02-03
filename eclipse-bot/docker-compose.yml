@@ -1,3 +1,5 @@
+version: '3.3'
+
 services:
   ai-workflow:
     build:
@@ -10,7 +12,7 @@ services:
       - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
       - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      - DEFAULT_MODEL=${DEFAULT_MODEL:-google/gemini-3-flash-preview}
+      - DEFAULT_MODEL=${DEFAULT_MODEL}
       - DATABASE_URL=postgresql+asyncpg://eclipse:dlzmfflqtm@host.docker.internal:5432/ai_workflow
     env_file:
       - .env
@@ -25,4 +27,3 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 15s
