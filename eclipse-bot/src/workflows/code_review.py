@@ -19,6 +19,16 @@ class CodeReviewWorkflow(BaseWorkflow):
     """
     name = "code_review"
     description = "Automated code review based on P4 changelists"
+    parameters = {
+        "type": "object",
+        "properties": {
+            "text": {
+                "type": "string", 
+                "description": "Text containing the CL number(s) to review, e.g. 'CL 123456'"
+            }
+        },
+        "required": ["text"]
+    }
     
     def __init__(self, llm_client: LLMClient):
         super().__init__()
