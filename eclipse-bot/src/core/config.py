@@ -23,8 +23,6 @@ class Settings(BaseSettings):
     default_model: str = "google/gemini-3-flash-preview"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
 
-    # Database Configuration
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/ai_workflow"
 
     # Server Configuration
     host: str = "0.0.0.0"

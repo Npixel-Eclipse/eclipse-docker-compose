@@ -43,12 +43,7 @@ async def lifespan(app: FastAPI):
     )
     logger.info(f"LLM Client initialized with model: {settings.default_model}")
 
-    # Initialize Conversation Store
-    conversation_store = ConversationStore(settings.database_url)
-    await conversation_store.initialize()
-    logger.info("Conversation store initialized")
-
-    # Initialize Slack Integration
+    # Initialize Slack Integration (First, as Store depends on it)
     slack_integration = SlackIntegration(
         bot_token=settings.slack_bot_token,
         app_token=settings.slack_app_token,
@@ -57,6 +52,12 @@ async def lifespan(app: FastAPI):
     # Fetch bot user ID to avoid duplicate processing in on_message
     bot_user_id = await slack_integration.get_bot_user_id()
     logger.info(f"Slack Bot User ID: {bot_user_id}")
+    
+    # Initialize Conversation Store (Stateless)
+    conversation_store = ConversationStore()
+    conversation_store.set_slack_integration(slack_integration)
+    await conversation_store.initialize()
+    logger.info("Conversation store initialized (Stateless)")
 
     # Register workflows and tools
     from .workflows import register_all_workflows

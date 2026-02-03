@@ -13,7 +13,6 @@ services:
       - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
       - DEFAULT_MODEL=${DEFAULT_MODEL}
-      - DATABASE_URL=postgresql+asyncpg://eclipse:dlzmfflqtm@host.docker.internal:5432/ai_workflow
     env_file:
       - .env
     volumes:
