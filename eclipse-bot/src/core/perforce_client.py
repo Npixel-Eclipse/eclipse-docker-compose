@@ -9,12 +9,14 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 
+from src.config import get_settings
+
 @dataclass
 class P4Config:
-    """Perforce configuration from environment variables."""
-    user: str = field(default_factory=lambda: os.getenv("P4USER", "ecl_server"))
-    client: str = field(default_factory=lambda: os.getenv("P4CLIENT", "Server-Linux-Agent"))
-    port: str = field(default_factory=lambda: os.getenv("P4PORT", "ECL-P4D4:1666"))
+    """Perforce configuration."""
+    user: str = field(default_factory=lambda: get_settings().p4user)
+    client: str = field(default_factory=lambda: get_settings().p4client)
+    port: str = field(default_factory=lambda: get_settings().p4port)
 
 
 @dataclass
@@ -76,6 +78,11 @@ class PerforceClient:
             logger.error(f"P4 error: {result.stderr}")
             raise RuntimeError(f"P4 command failed: {result.stderr}")
         
+        # Log successful execution details for debugging transparency
+        logger.info(f"P4 Output ({cmd[0]}): {result.stdout[:500]}..." if result.stdout else "P4 Output: (empty)")
+        if result.stderr:
+            logger.warning(f"P4 Stderr: {result.stderr}")
+
         return result.stdout
 
     def run(self, *args: str, check: bool = True) -> str:

@@ -1,1 +1,1 @@
-"""AI Workflow Framework - Main Package."""
+"""Eclipse Bot - Perforce & Slack AI Assistant."""
