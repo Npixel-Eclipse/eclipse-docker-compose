@@ -61,8 +61,8 @@ async def code_review(cl: str) -> str:
     # Mapping extensions to agent names
     ext_map = {
         ".kt": ["kotlin-expert"],
-        ".rs": ["rust-expert"],
-        ".java": ["jpa-expert"], # Assuming JPA is Java/Kotlin
+        ".rs": ["rust-expert", "ecs-expert"], # ECS is Rust-based
+        ".java": ["jpa-expert"],
         ".yaml": ["yaml-expert"],
         ".yml": ["yaml-expert"],
         ".proto": ["proto-expert"],
@@ -77,6 +77,8 @@ async def code_review(cl: str) -> str:
                     
     # Always include core agents
     required_agents = {"architecture-expert", "security-expert", "game-logic-expert"}
+    # game-logic-expert checks math/state, ecs-expert checks storage/views. Both are useful.
+    
     final_agents_set = detected_specialists.union(required_agents)
     
     # Filter subagent definitions
@@ -101,61 +103,68 @@ async def code_review(cl: str) -> str:
         [{"text": item, "done": False} for item in checklist_items[1:]]
     )
     
-    # 4. Ralph Loop: Run agents sequentially
-    full_report = [f"## 🕵️‍♂️ Code Review Report for CL {cl}\n"]
+    # 4. Ralph Loop: Real-time Streaming
+    # Instead of building a string, we stream directly to Slack
+    streamer = await ctx.slack.get_streamer(channel, ctx.current_request.user_id, ctx.current_request.user_id, thread_ts)
     
-    for idx, agent_spec in enumerate(agents_to_run):
-        agent_name = agent_spec["name"]
-        
-        # Update Status: Running
-        await ctx.slack.set_assistant_status(
-            channel, thread_ts, 
-            loading_messages=[
-                f"Agent 리뷰 중: {agent_name}...",
-                "코드 품질을 정밀 분석하고 있습니다.",
-                "기술 부채 및 리팩토링 포인트를 찾는 중..",
-                "보안 및 성능 이슈 검토 중..."
-            ]
-        )
-        
-        # Update checklist (offset by 1 for analysis step)
-        await execute_update_checklist(
-            channel, checklist_ts, 
-            [{"text": checklist_items[0], "done": True}] +
-            [{"text": item, "done": i <= idx} for i, item in enumerate(checklist_items[1:-1])] +
-            [{"text": checklist_items[-1], "done": False}]
-        )
-        
-        # Create dedicated agent instance
-        sub_agent = create_deep_agent(
-            model=agent_spec["model"],
-            system_prompt=agent_spec["system_prompt"],
-            tools=agent_spec["tools"],
-            backend=StateBackend,
-            checkpointer=MemorySaver(),
-        )
-        
-        # Invoke Agent
-        try:
-            response = await sub_agent.ainvoke(
-                {
-                    "messages": [
-                        {"role": "user", "content": f"Review CL {cl} in Korean. Focus on your specialty. If you see specific issues like blocking calls or security flaws, point them out with examples."}
-                    ]
-                },
-                config={"configurable": {"thread_id": f"review_{cl}_{agent_name}"}}
+    header = f"## 🕵️‍♂️ Code Review Report for CL {cl}\n\n"
+    await streamer.append(markdown_text=header) # Start stream
+    
+    try:
+        for idx, agent_spec in enumerate(agents_to_run):
+            agent_name = agent_spec["name"]
+            
+            # Update Status: Running (will be visible via status bar)
+            # Note: We rely on main.py for status, but inside tool we can also hint
+            await ctx.slack.set_assistant_status(
+                channel, thread_ts, 
+                loading_messages=[
+                    f"Agent 리뷰 중: {agent_name}...",
+                    f"{agent_name}가 코드를 분석하고 있습니다."
+                ]
             )
             
-            result_text = response["messages"][-1].content
+            # Update checklist
+            await execute_update_checklist(
+                channel, checklist_ts, 
+                [{"text": checklist_items[0], "done": True}] +
+                [{"text": item, "done": i <= idx} for i, item in enumerate(checklist_items[1:-1])] +
+                [{"text": checklist_items[-1], "done": False}]
+            )
             
-            # Append findings
-            full_report.append(f"### 🤖 {agent_name}")
-            full_report.append(result_text)
-            full_report.append("\n---\n")
+            # Create dedicated agent instance
+            sub_agent = create_deep_agent(
+                model=agent_spec["model"],
+                system_prompt=agent_spec["system_prompt"],
+                tools=agent_spec["tools"],
+                backend=StateBackend,
+                checkpointer=MemorySaver(),
+            )
             
-        except Exception as e:
-            logger.error(f"Agent {agent_name} failed: {e}")
-            full_report.append(f"### ❌ {agent_name}\nFailed to execute: {e}\n")
+            title_sep = f"\n\n---\n### 🤖 {agent_name}\n"
+            await streamer.append(markdown_text=title_sep)
+
+            # Invoke Agent
+            try:
+                response = await sub_agent.ainvoke(
+                    {
+                        "messages": [
+                            {"role": "user", "content": f"Review CL {cl} in Korean. Focus on your specialty. If you see specific issues like blocking calls or security flaws, point them out with examples."}
+                        ]
+                    },
+                    config={"configurable": {"thread_id": f"review_{cl}_{agent_name}"}}
+                )
+                
+                result_text = response["messages"][-1].content
+                await streamer.append(markdown_text=result_text)
+                
+            except Exception as e:
+                logger.error(f"Agent {agent_name} failed: {e}")
+                error_msg = f"\n❌ **Review Failed**: {str(e)}\n"
+                await streamer.append(markdown_text=error_msg)
+
+    finally:
+        await streamer.stop() # Ensure stream is closed
 
     # 5. Final Checklist Update (All Done)
     await execute_update_checklist(
@@ -163,4 +172,5 @@ async def code_review(cl: str) -> str:
         [{"text": item, "done": True} for item in checklist_items]
     )
     
-    return "\n".join(full_report)
+    # Return empty string or summary so main agent knows we are done
+    return ""
