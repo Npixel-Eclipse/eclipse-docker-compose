@@ -39,7 +39,7 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
     # 0. Set Initial Assistant Status IMMEDIATELY for UX
     await ctx.slack.set_assistant_status(
         channel, status_anchor, 
-        loading_messages=["요청을 확인하고 있습니다...", "잠시만 기다려 주세요.", "생각 중..."]
+        loading_messages=["요청하신 내용을 내용 분석 중입니다...", "최적의 답변을 생성하고 있습니다...", "컨텍스트를 파악하는 중입니다..."]
     )
 
     try:
@@ -89,7 +89,8 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
                     )
                 elif kind == "on_chain_start" and not response_started:
                     name = event_chunk.get("name", "")
-                    if name and name not in ["LangGraph", "agent"]:
+                    # Only show status for actual Specialist Agents (which all end in '-expert')
+                    if name and "-expert" in name:
                              await ctx.slack.set_assistant_status(
                                  channel, status_anchor, 
                                  loading_messages=[f"Agent 협업 중: {name}", "기술 검토를 요청했습니다.", "분석 결과를 기다리는 중..."]
