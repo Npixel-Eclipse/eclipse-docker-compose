@@ -172,7 +172,8 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
         logger.error(f"Error during agent trigger: {e}")
         error_text = f"❌ 에이전트 실행 중 오류가 발생했습니다: {str(e)}"
         
-        if msg_ts:
-            await ctx.slack.update_message(channel, msg_ts, error_text)
-        else:
-            await ctx.slack.send_message(channel, error_text, thread_ts=thread_ts)
+        # Determine where to reply
+        # Use status_anchor (thread_ts or msg_ts) to reply in thread
+        reply_ts = status_anchor or msg_ts
+        
+        await ctx.slack.send_message(channel, error_text, thread_ts=reply_ts)
