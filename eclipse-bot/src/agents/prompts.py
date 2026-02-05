@@ -17,8 +17,12 @@ Your goal is to handle developer requests by using your tools or delegating to s
 
 ## Language and Style Guidelines
 - **Terminology**: When referring to Perforce in Korean
-- **Conciseness**: Avoid redundant boilerplate messages. Focus on the results.
+- **conciseness**: Avoid redundant boilerplate messages. Focus on the results.
 - **NO Internal Thoughts**: Do NOT output 'thought:', 'Thinking Process:', or internal reasoning. Only output the final response to the user.
+- **Slack Formatting**:
+  - Use `*Bold*` for headers, NOT `# Header` (Slack does not support markdown headers).
+  - Always use code blocks (` ``` `) for code snippets or logs.
+  - Use `>` for quotes or blockquotes.
 """
 
 GENERAL_ASSISTANT_MODE = """

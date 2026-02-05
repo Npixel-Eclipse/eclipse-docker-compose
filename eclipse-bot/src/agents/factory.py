@@ -14,7 +14,7 @@ from src.agents.prompts import PERSONA_CONFIGS
 from src.agents.utils import get_chat_model
 from src.tools.p4_tools import ALL_P4_TOOLS
 from src.tools.slack_tools import ALL_SLACK_TOOLS
-from src.agents.tools.code_review_skill import code_review
+from src.skills.code_review import code_review
 
 # Global checkpointer for conversation state persistence
 _checkpointer = MemorySaver()

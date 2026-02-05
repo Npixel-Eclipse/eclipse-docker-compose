@@ -36,16 +36,18 @@ async def lifespan(app: FastAPI):
     )
     ctx.p4 = PerforceClient()
     
+from src.common.enums import TriggerType
+
     # Slack Event Registration
     @ctx.slack.on_mention
     async def handle_mention(event: dict, say):
-        await handle_event_trigger(event, say, trigger_type="mention")
+        await handle_event_trigger(event, say, trigger_type=TriggerType.MENTION)
 
     @ctx.slack.on_message
     async def handle_any_message(event: dict, say):
         channel = event.get("channel", "")
         if channel.startswith("D"): # Handle DMs
-            await handle_event_trigger(event, say, trigger_type="dm")
+            await handle_event_trigger(event, say, trigger_type=TriggerType.DM)
 
     await ctx.slack.start()
     yield

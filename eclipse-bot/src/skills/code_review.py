@@ -105,9 +105,12 @@ async def code_review(cl: str) -> str:
     # 4. Ralph Loop: Parallel Aggregation (Centralized)
     # We collect results from all agents and return a single report.
     logger.info(f"Starting parallel execution for: {[a['name'] for a in agents_to_run]}")
-    await __send_status(context, channel, thread_ts, "⏳ 전문가들의 분석을 취합하고 있습니다...")
+    await ctx.slack.set_assistant_status(
+        channel, thread_ts, 
+        loading_messages=["⏳ 전문가들의 분석을 취합하고 있습니다..."]
+    )
 
-    import asyncio
+    # import asyncio (Removed: asyncio is already imported at top level)
     
     async def run_single_agent(idx, agent_spec):
         agent_name = agent_spec["name"]
@@ -154,8 +157,12 @@ async def code_review(cl: str) -> str:
     tasks = [run_single_agent(i, a) for i, a in enumerate(agents_to_run)]
     results = await asyncio.gather(*tasks)
     
+    # Log results for debugging
+    logger.info(f"Sub-agent results: {results}")
+
     # 5. Final Consolidation
     consolidated_report = "\n\n".join(results)
+    logger.info(f"Final Report Length: {len(consolidated_report)}")
     
     await execute_update_checklist(
         channel, checklist_ts, 
