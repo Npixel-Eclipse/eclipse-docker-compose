@@ -103,12 +103,9 @@ async def code_review(cl: str) -> str:
         [{"text": item, "done": False} for item in checklist_items[1:]]
     )
     
-    # 4. Ralph Loop: Real-time Streaming
-    # Instead of building a string, we stream directly to Slack
-    streamer = await ctx.slack.get_streamer(channel, ctx.current_request.user_id, ctx.current_request.user_id, thread_ts)
-    
-    header = f"## 🕵️‍♂️ Code Review Report for CL {cl}\n\n"
-    await streamer.append(markdown_text=header) # Start stream
+    # 4. Ralph Loop: Real-time Streaming (Per-Agent Messages)
+    # We will create a separate stream/message for each agent to avoid formatting collision
+    await ctx.slack.send_message(channel, f"## 🕵️‍♂️ Code Review Report for CL {cl}", thread_ts=thread_ts)
     
     try:
         for idx, agent_spec in enumerate(agents_to_run):
@@ -141,30 +138,56 @@ async def code_review(cl: str) -> str:
                 checkpointer=MemorySaver(),
             )
             
-            title_sep = f"\n\n---\n### 🤖 {agent_name}\n"
-            await streamer.append(markdown_text=title_sep)
-
+            # Create dedicated message for this agent
+            initial_msg = await ctx.slack.send_message(
+                channel=channel, 
+                text=f"### 🤖 {agent_name}\n(분석 중... ⏳)", 
+                thread_ts=thread_ts
+            )
+            msg_ts = initial_msg["ts"]
+            
             # Invoke Agent
+            title_sep = f"### 🤖 {agent_name}\n"
+            full_content = title_sep
+            chunk_count = 0
+            
             try:
-                response = await sub_agent.ainvoke(
+                buffer = ""
+                async for event in sub_agent.astream_events(
                     {
                         "messages": [
                             {"role": "user", "content": f"Review CL {cl} in Korean. Focus on your specialty. If you see specific issues like blocking calls or security flaws, point them out with examples."}
                         ]
                     },
-                    config={"configurable": {"thread_id": f"review_{cl}_{agent_name}"}}
-                )
+                    config={"configurable": {"thread_id": f"review_{cl}_{agent_name}"}},
+                    version="v2"
+                ):
+                    kind = event["event"]
+                    if kind == "on_chat_model_stream":
+                        content = event["data"]["chunk"].content
+                        if content:
+                            full_content += content
+                            chunk_count += 1
+                            
+                            # Throttle updates (every 20 chunks ~ 50-100 chars) to prevent Rate Limits
+                            if chunk_count % 20 == 0:
+                                await ctx.slack.update_message(
+                                    channel=channel,
+                                    ts=msg_ts,
+                                    text=full_content
+                                )
                 
-                result_text = response["messages"][-1].content
-                await streamer.append(markdown_text=result_text)
+                # Final update to ensure everything is flushed
+                await ctx.slack.update_message(channel, ts=msg_ts, text=full_content)
                 
             except Exception as e:
                 logger.error(f"Agent {agent_name} failed: {e}")
-                error_msg = f"\n❌ **Review Failed**: {str(e)}\n"
-                await streamer.append(markdown_text=error_msg)
+                error_msg = f"{full_content}\n\n❌ **Review Failed**: {str(e)}\n"
+                await ctx.slack.update_message(channel, ts=msg_ts, text=error_msg)
 
-    finally:
-        await streamer.stop() # Ensure stream is closed
+    except Exception as e:
+        logger.error(f"Ralph Loop failed: {e}")
+        return f"Error during code review: {e}"
 
     # 5. Final Checklist Update (All Done)
     await execute_update_checklist(

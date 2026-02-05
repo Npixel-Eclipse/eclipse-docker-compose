@@ -16,6 +16,7 @@ class RequestContext:
     channel: str
     thread_ts: str
     user_id: Optional[str] = None
+    team_id: Optional[str] = None
 
 # ContextVar for request-scoped data
 _request_context = contextvars.ContextVar("request_context", default=None)
@@ -38,8 +39,8 @@ class AppContext:
     def current_request(self) -> Optional[RequestContext]:
         return _request_context.get()
 
-    def set_request_context(self, channel: str, thread_ts: str, user_id: str = None):
-        _request_context.set(RequestContext(channel, thread_ts, user_id))
+    def set_request_context(self, channel: str, thread_ts: str, user_id: str = None, team_id: str = None):
+        _request_context.set(RequestContext(channel, thread_ts, user_id, team_id))
 
 
 def get_context() -> AppContext:

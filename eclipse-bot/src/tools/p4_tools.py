@@ -101,6 +101,8 @@ async def p4_print(path: str, mode: str = "snippet") -> str:
         path: Depot path, optionally with revision/changelist.
         mode: 'snippet' (default) - shows first 500 lines.
               'full' - shows all content.
+
+    ⚠️ WARNING: Do NOT use this to fetch entire source files (1GB+). Use p4_annotate or grep instead.
     """
     logger.info(f"Tool invoked: p4_print(path={path}, mode={mode})")
     try:
@@ -127,6 +129,8 @@ async def p4_grep(pattern: str, path: str = "//...", case_insensitive: bool = Fa
         pattern: The regex pattern to search for.
         path: Depot path to search in (e.g., '//Eclipse_Studio/Main/...').
         case_insensitive: If True, uses -i for case-insensitive matching.
+
+    ⚠️ WARNING: Avoid running on root //... if possible. Use specific paths to prevent timeouts.
     """
     logger.info(f"Tool invoked: p4_grep(pattern={pattern}, path={path}, case_insensitive={case_insensitive})")
     try:
@@ -228,6 +232,8 @@ async def p4_changes(path: str = "//...", user: str = None, max_results: int = 2
         path: Limit to changelists affecting files in this path.
         user: Limit to changelists created by this user.
         status: 'pending', 'submitted', or 'shelved'.
+
+    ⚠️ WARNING: Do NOT search by time/date (e.g. @2024/01/01). Use CL numbers or Revisions (#head) only.
     """
     try:
         p4 = get_context().p4

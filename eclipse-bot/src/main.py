@@ -79,7 +79,7 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
     status_anchor = thread_ts or msg_ts
     
     # Global request context for tools (e.g. code_review)
-    ctx.set_request_context(channel, status_anchor, user_id=event.get("user"))
+    ctx.set_request_context(channel, status_anchor, user_id=event.get("user"), team_id=event.get("team"))
     
     # 0. Set Initial Assistant Status IMMEDIATELY for UX
     await ctx.slack.set_assistant_status(
