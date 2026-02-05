@@ -90,8 +90,7 @@ async def code_review(cl: str) -> str:
     # 3. Post Checklist to Slack
     checklist_items = [
         "변경 사항 분석 (CL Analysis)",
-        *[f"Agent 리뷰: {agent['name']}" for agent in agents_to_run],
-        "리뷰 결과 취합 및 종합 리포트 생성"
+        *[f"Agent 리뷰: {agent['name']}" for agent in agents_to_run]
     ]
     checklist_resp = await execute_post_checklist(channel, thread_ts, checklist_items)
     checklist_ts = checklist_resp["ts"]
@@ -105,14 +104,13 @@ async def code_review(cl: str) -> str:
     
     # 4. Ralph Loop: Real-time Streaming (Per-Agent Messages)
     # We will create a separate stream/message for each agent to avoid formatting collision
-    await ctx.slack.send_message(channel, f"## 🕵️‍♂️ Code Review Report for CL {cl}", thread_ts=thread_ts)
+    await ctx.slack.send_message(channel, f"*🕵️‍♂️ Code Review Report for CL {cl}*", thread_ts=thread_ts)
     
     try:
         for idx, agent_spec in enumerate(agents_to_run):
             agent_name = agent_spec["name"]
             
             # Update Status: Running (will be visible via status bar)
-            # Note: We rely on main.py for status, but inside tool we can also hint
             await ctx.slack.set_assistant_status(
                 channel, thread_ts, 
                 loading_messages=[
@@ -125,8 +123,7 @@ async def code_review(cl: str) -> str:
             await execute_update_checklist(
                 channel, checklist_ts, 
                 [{"text": checklist_items[0], "done": True}] +
-                [{"text": item, "done": i <= idx} for i, item in enumerate(checklist_items[1:-1])] +
-                [{"text": checklist_items[-1], "done": False}]
+                [{"text": item, "done": i <= idx} for i, item in enumerate(checklist_items[1:])]
             )
             
             # Create dedicated agent instance
@@ -141,13 +138,13 @@ async def code_review(cl: str) -> str:
             # Create dedicated message for this agent
             initial_msg = await ctx.slack.send_message(
                 channel=channel, 
-                text=f"### 🤖 {agent_name}\n(분석 중... ⏳)", 
+                text=f"*🤖 {agent_name}*\n(분석 중... ⏳)", 
                 thread_ts=thread_ts
             )
             msg_ts = initial_msg["ts"]
             
             # Invoke Agent
-            title_sep = f"### 🤖 {agent_name}\n"
+            title_sep = f"*🤖 {agent_name}*\n"
             full_content = title_sep
             chunk_count = 0
             

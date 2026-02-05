@@ -118,28 +118,49 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
                              last_status_update_time = current_time
                          continue
 
+
                     # 2. Main Response Streaming
                     if content:
                         buffer += content
                         
                         # Only mark response started (and clear status) if we have meaningful content
+                        # And ensure that content is NOT just a thought block
                         if not response_started and content.strip():
-                            await ctx.slack.set_assistant_status(channel, status_anchor, "")
-                            response_started = True
+                             # Quick check: if the very first thing is "thought:", don't start yet
+                             if not buffer.lower().strip().startswith("thought:"):
+                                await ctx.slack.set_assistant_status(channel, status_anchor, "")
+                                response_started = True
                         
                         # Throttle Slack updates
                         current_time = time.time()
                         if current_time - last_update_time > settings.streaming_throttle_interval:
                             try:
-                                await streamer.append(markdown_text=buffer)
-                                buffer = "" 
-                                last_update_time = current_time
+                                # Code-Level Suppression: Regex filter
+                                import re
+                                
+                                # Only strip the "thought:" prefix (one or more times), NOT the whole line.
+                                # Reason: Sometimes the model puts the actual answer immediately after "thought:".
+                                # Also handles stuttering "thought:thought:"
+                                clean_text = re.sub(r'(?im)^(\s*thought:\s*)+', '', buffer)
+                                
+                                if clean_text:
+                                    await streamer.append(markdown_text=clean_text)
+                                    buffer = "" # Clear buffer only if we sent something
+                                    last_update_time = current_time
+                                else:
+                                    # If cleaning made it empty, it was purely "thought:" with no content.
+                                    # Keep buffer to wait for more content (or more thought stutters)
+                                    pass
+
                             except Exception as e:
                                 logger.warning(f"Error appending stream: {e}")
             
             # Final append
             if buffer:
-                await streamer.append(markdown_text=buffer)
+                import re
+                clean_text = re.sub(r'(?im)^(\s*thought:\s*)+', '', buffer).strip()
+                if clean_text:
+                    await streamer.append(markdown_text=clean_text)
                 
             await ctx.slack.set_assistant_status(channel, status_anchor, "")
                 
