@@ -155,18 +155,26 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
                             except Exception as e:
                                 logger.warning(f"Error appending stream: {e}")
             
-            # Final append
-            if buffer:
-                import re
-                clean_text = re.sub(r'(?im)^(\s*thought:\s*)+', '', buffer).strip()
-                if clean_text:
-                    await streamer.append(markdown_text=clean_text)
-                
-            await ctx.slack.set_assistant_status(channel, status_anchor, "")
-                
         finally:
-            await streamer.stop()
-            await ctx.slack.set_assistant_status(channel, status_anchor, "")
+            # Final append and cleanup
+            try:
+                if buffer:
+                    import re
+                    clean_text = re.sub(r'(?im)^(\s*thought:\s*)+', '', buffer).strip()
+                    if clean_text:
+                        await streamer.append(markdown_text=clean_text)
+                    
+                await ctx.slack.set_assistant_status(channel, status_anchor, "")
+                await streamer.stop()
+            except Exception as e:
+                # If error is 'channel_not_found', it's likely a transient/finalization issue 
+                # We suppress this specific error to avoid false positive crash reports.
+                if "channel_not_found" in str(e):
+                    logger.warning(f"Suppressed channel_not_found during final stream cleanup: {e}")
+                else:
+                    logger.warning(f"Error during stream cleanup: {e}")
+                    # We do NOT re-raise here to ensure the outer handler doesn't catch a cleanup error as a crash
+                    pass
             
     except Exception as e:
         logger.error(f"Error during agent trigger: {e}")
