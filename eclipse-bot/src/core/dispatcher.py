@@ -74,7 +74,7 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
                 },
                 config={
                     "configurable": {"thread_id": session_id},
-                    "recursion_limit": 50,
+                    "recursion_limit": 100,
                 },
                 version="v2"
             ):
