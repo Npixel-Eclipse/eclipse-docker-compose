@@ -140,7 +140,7 @@ async def p4_grep(pattern: str, path: str = "//...", case_insensitive: bool = Fa
             args.append("-i")
         args.extend(["-e", pattern, path])
         
-        output = await asyncio.to_thread(p4._run, *args, check=False)
+        output = await asyncio.to_thread(p4._run, *args, check=False, timeout=120)
         
         lines = output.strip().split("\n")[:30]
         return "\n".join(lines) + f"\n[{len(lines)} matches shown]"
@@ -156,7 +156,8 @@ async def p4_sync(path: str = "//...") -> str:
     """
     try:
         p4 = get_context().p4
-        output = await asyncio.to_thread(p4.sync, path)
+        # Syncing can take a while
+        output = await asyncio.to_thread(p4._run, "sync", path, timeout=300)
         lines = [l for l in output.strip().split("\n") if l]
         return f"{output[:2000]}\n... [truncated]" if len(output) > 2000 else output
     except Exception as e:

@@ -57,7 +57,7 @@ class PerforceClient:
         self.config = config or P4Config()
         logger.info(f"P4 client initialized: {self.config.client}@{self.config.port}")
     
-    def _run(self, *args: str, check: bool = True) -> str:
+    def _run(self, *args: str, check: bool = True, timeout: int = 60) -> str:
         """Run a p4 command."""
         cmd = [
             "p4",
@@ -68,11 +68,16 @@ class PerforceClient:
         ]
         logger.debug(f"Running: {' '.join(cmd)}")
         
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-        )
+        try:
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                timeout=timeout
+            )
+        except subprocess.TimeoutExpired as e:
+            logger.error(f"P4 command timed out after {timeout}s: {' '.join(cmd)}")
+            raise RuntimeError(f"P4 command timed out after {timeout}s")
         
         if check and result.returncode != 0:
             logger.error(f"P4 error: {result.stderr}")

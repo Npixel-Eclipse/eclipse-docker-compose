@@ -118,12 +118,13 @@ async def handle_event_trigger(event: dict, say, trigger_type: str):
                          continue
 
                     # 2. Main Response Streaming
-                    if not response_started:
-                        await ctx.slack.set_assistant_status(channel, status_anchor, "")
-                        response_started = True
-                        
                     if content:
                         buffer += content
+                        
+                        # Only mark response started (and clear status) if we have meaningful content
+                        if not response_started and content.strip():
+                            await ctx.slack.set_assistant_status(channel, status_anchor, "")
+                            response_started = True
                         
                         # Throttle Slack updates
                         current_time = time.time()
