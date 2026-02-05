@@ -102,95 +102,68 @@ async def code_review(cl: str) -> str:
         [{"text": item, "done": False} for item in checklist_items[1:]]
     )
     
-    # 4. Ralph Loop: Real-time Streaming (Per-Agent Messages)
-    # We will create a separate stream/message for each agent to avoid formatting collision
-    await ctx.slack.send_message(channel, f"*🕵️‍♂️ Code Review Report for CL {cl}*", thread_ts=thread_ts)
-    
-    try:
-        for idx, agent_spec in enumerate(agents_to_run):
+        # 4. Ralph Loop: Parallel Aggregation (Centralized)
+        # We collect results from all agents and return a single report.
+        logger.info(f"Starting parallel execution for: {[a['name'] for a in agents_to_run]}")
+        await __send_status(context, channel, thread_ts, "⏳ 전문가들의 분석을 취합하고 있습니다...")
+
+        import asyncio
+        
+        async def run_single_agent(idx, agent_spec):
             agent_name = agent_spec["name"]
-            
-            # Update Status: Running (will be visible via status bar)
-            await ctx.slack.set_assistant_status(
-                channel, thread_ts, 
-                loading_messages=[
-                    f"Agent 리뷰 중: {agent_name}...",
-                    f"{agent_name}가 코드를 분석하고 있습니다."
-                ]
-            )
-            
-            # Update checklist
-            await execute_update_checklist(
-                channel, checklist_ts, 
-                [{"text": checklist_items[0], "done": True}] +
-                [{"text": item, "done": i <= idx} for i, item in enumerate(checklist_items[1:])]
-            )
-            
-            # Create dedicated agent instance
-            sub_agent = create_deep_agent(
-                model=agent_spec["model"],
-                system_prompt=agent_spec["system_prompt"],
-                tools=agent_spec["tools"],
-                backend=StateBackend,
-                checkpointer=MemorySaver(),
-            )
-            
-            # Create dedicated message for this agent
-            initial_msg = await ctx.slack.send_message(
-                channel=channel, 
-                text=f"*🤖 {agent_name}*\n(분석 중... ⏳)", 
-                thread_ts=thread_ts
-            )
-            msg_ts = initial_msg["ts"]
-            
-            # Invoke Agent
-            title_sep = f"*🤖 {agent_name}*\n"
-            full_content = title_sep
-            chunk_count = 0
-            
             try:
-                buffer = ""
-                async for event in sub_agent.astream_events(
-                    {
-                        "messages": [
-                            {"role": "user", "content": f"Review CL {cl} in Korean. Focus on your specialty. If you see specific issues like blocking calls or security flaws, point them out with examples."}
-                        ]
-                    },
-                    config={"configurable": {"thread_id": f"review_{cl}_{agent_name}"}},
-                    version="v2"
-                ):
-                    kind = event["event"]
-                    if kind == "on_chat_model_stream":
-                        content = event["data"]["chunk"].content
-                        if content:
-                            full_content += content
-                            chunk_count += 1
-                            
-                            # Throttle updates (every 20 chunks ~ 50-100 chars) to prevent Rate Limits
-                            if chunk_count % 20 == 0:
-                                await ctx.slack.update_message(
-                                    channel=channel,
-                                    ts=msg_ts,
-                                    text=full_content
-                                )
+                # Create dedicated agent instance
+                sub_agent = create_deep_agent(
+                    model=agent_spec["model"],
+                    system_prompt=agent_spec["system_prompt"],
+                    tools=agent_spec["tools"],
+                    backend=StateBackend,
+                    checkpointer=MemorySaver(),
+                )
                 
-                # Final update to ensure everything is flushed
-                await ctx.slack.update_message(channel, ts=msg_ts, text=full_content)
+                # Invoke Agent
+                config = {"configurable": {"thread_id": f"review_{cl}_{agent_name}"}}
+                inputs = {"messages": [{"role": "user", "content": f"Review CL {cl} in Korean. Focus on your specialty. If you see specific issues like blocking calls or security flaws, point them out with examples."}]}
                 
+                # Capture output
+                result_text = ""
+                async for event in sub_agent.astream_events(inputs, config=config, version="v2"):
+                    if event["event"] == "on_chat_model_stream":
+                        chunk = event["data"]["chunk"]
+                        if chunk.content:
+                            result_text += chunk.content
+                
+                # Filter 'thought:'
+                import re
+                # Simple strip of leading 'thought:' blocks if any remain
+                clean_text = re.sub(r'(?im)^(\s*thought:\s*)+', '', result_text).strip()
+                
+                # Update checklist
+                await execute_update_checklist(
+                    channel, checklist_ts, 
+                    [{"text": checklist_items[idx+1], "done": True}]
+                )
+                
+                return f"*🤖 {agent_name}*\n{clean_text}"
+
             except Exception as e:
                 logger.error(f"Agent {agent_name} failed: {e}")
-                error_msg = f"{full_content}\n\n❌ **Review Failed**: {str(e)}\n"
-                await ctx.slack.update_message(channel, ts=msg_ts, text=error_msg)
+                return f"*🤖 {agent_name}*\n❌ Error: {str(e)}"
+
+        # Run all agents
+        tasks = [run_single_agent(i, a) for i, a in enumerate(agents_to_run)]
+        results = await asyncio.gather(*tasks)
+        
+        # 5. Final Consolidation
+        consolidated_report = "\n\n".join(results)
+        
+        await execute_update_checklist(
+            channel, checklist_ts, 
+            [{"text": item, "done": True} for item in checklist_items]
+        )
+        
+        return consolidated_report
 
     except Exception as e:
         logger.error(f"Ralph Loop failed: {e}")
         return f"Error during code review: {e}"
-
-    # 5. Final Checklist Update (All Done)
-    await execute_update_checklist(
-        channel, checklist_ts, 
-        [{"text": item, "done": True} for item in checklist_items]
-    )
-    
-    # Return empty string or summary so main agent knows we are done
-    return ""
