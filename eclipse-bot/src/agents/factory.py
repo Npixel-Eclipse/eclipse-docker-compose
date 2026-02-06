@@ -10,29 +10,35 @@ from deepagents.backends import StateBackend
 from src.core.checkpointer import CustomSqliteSaver
 import sqlite3
 import os
-
-# Global checkpointer for conversation state persistence
-try:
-    os.makedirs("/data4/db", exist_ok=True)
-    db_path = "/data4/db/eclipse_bot.db"
-    _conn = sqlite3.connect(db_path, check_same_thread=False)
-except PermissionError:
-    import logging
-    logging.getLogger(__name__).error("Permission denied for /data4/db. Falling back to /tmp/db.")
-    os.makedirs("/tmp/db", exist_ok=True)
-    db_path = "/tmp/db/eclipse_bot.db"
-    _conn = sqlite3.connect(db_path, check_same_thread=False)
-
-logging.getLogger(__name__).info(f"Using persistence DB at: {db_path}")
-_checkpointer = CustomSqliteSaver(_conn)
-
+import logging
+from src.core.model_registry import get_context_window
 from src.config import get_settings
 from src.agents.subagents import get_subagents
 from src.agents.prompts import PERSONA_CONFIGS
 from src.agents.utils import get_chat_model
 from src.tools.p4_tools import ALL_P4_TOOLS
 from src.tools.slack_tools import ALL_SLACK_TOOLS
+from src.tools.opensearch_tools import ALL_OPENSEARCH_TOOLS
 from src.skills.code_review import code_review
+
+# Global checkpointer for conversation state persistence
+try:
+    settings = get_settings()
+    db_dir = os.path.dirname(settings.persistence_db_path)
+    os.makedirs(db_dir, exist_ok=True)
+    db_path = settings.persistence_db_path
+    _conn = sqlite3.connect(db_path, check_same_thread=False)
+except PermissionError:
+    settings = get_settings() # Re-fetch to be safe
+    logging.getLogger(__name__).error(f"Permission denied for {settings.persistence_db_path}. Falling back to {settings.persistence_fallback_path}.")
+    
+    db_dir = os.path.dirname(settings.persistence_fallback_path)
+    os.makedirs(db_dir, exist_ok=True)
+    db_path = settings.persistence_fallback_path
+    _conn = sqlite3.connect(db_path, check_same_thread=False)
+
+logging.getLogger(__name__).info(f"Using persistence DB at: {db_path}")
+_checkpointer = CustomSqliteSaver(_conn)
 
 
 def create_agent(persona_type: str = "general"):
@@ -53,7 +59,6 @@ def create_agent(persona_type: str = "general"):
     
     from langchain_core.messages import trim_messages
     from src.core.model_registry import get_context_window
-    import logging
     
     # Dynamic Context Management
     # 1. Fetch actual limit from OpenRouter
@@ -65,22 +70,26 @@ def create_agent(persona_type: str = "general"):
     
     logging.getLogger(__name__).info(f"Dynamic Context: Model={model_name}, Limit={limit}, Trimming_At={safe_limit}")
 
-    # Context Management: Keep last ~safe_limit tokens
-    trimmer = trim_messages(
+    # Context Management Strategy
+    # User Request: "Auto Compact" instead of simple Trimming
+    from src.core.compactor import AutoCompactor
+    
+    # We use a secondary model instance (or the same one) for summarization
+    # Ideally, use a cheaper/faster model for summary if possible, but reusing main model is fine for consistency.
+    compactor = AutoCompactor(
+        model=model_instance,
         max_tokens=safe_limit,
-        strategy="last",
-        token_counter=model_instance,
-        include_system=True,
-        allow_partial=False,
-        start_on="human",
+        recent_messages_buffer=20  # Keep last 20 messages intact
     )
+
+    # Pass compactor to checkpointer for load-time optimization
+    checkpointer_instance = CustomSqliteSaver(_conn, context_manager=compactor)
 
     return create_deep_agent(
         model=model_instance,
         system_prompt=cfg["prompt"],
         subagents=get_subagents(),
-        tools=ALL_P4_TOOLS + ALL_SLACK_TOOLS + [code_review],
+        tools=ALL_P4_TOOLS + ALL_SLACK_TOOLS + ALL_OPENSEARCH_TOOLS + [code_review],
         backend=StateBackend,
-        checkpointer=_checkpointer,
-        state_modifier=trimmer, 
+        checkpointer=checkpointer_instance,
     )

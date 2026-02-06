@@ -133,6 +133,11 @@ async def p4_grep(pattern: str, path: str = "//...", case_insensitive: bool = Fa
     ⚠️ WARNING: Avoid running on root //... if possible. Use specific paths to prevent timeouts.
     """
     logger.info(f"Tool invoked: p4_grep(pattern={pattern}, path={path}, case_insensitive={case_insensitive})")
+    
+    # Security: Prevent ReDoS or overly expensive searches
+    if len(pattern) > 50:
+        return "Error: Regex pattern is too long (max 50 chars). Please use a simpler pattern."
+    
     try:
         p4 = get_context().p4
         args = ["grep", "-n"]

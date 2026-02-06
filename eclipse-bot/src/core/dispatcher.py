@@ -109,7 +109,11 @@ async def handle_event_trigger(event: dict, say, trigger_type: TriggerType = Tri
             await streamer.stop()
             
     except Exception as e:
-        logger.error(f"Error during agent trigger: {e}")
+        import traceback
+        logger.error(f"Error during agent trigger: {e}\n{traceback.format_exc()}")
+        # Check if it is a rate limit error
+        if "429" in str(e):
+             await ctx.slack.send_message(ctx.channel, "⏳ *잠시만 기다려주세요* (Rate Limit Reached)\nAPI 요청이 너무 많아 잠시 대기 중입니다...")
         error_text = f"❌ 에이전트 실행 중 오류가 발생했습니다: {str(e)}"
         # Determine where to reply
         # Use status_anchor (thread_ts or msg_ts) to reply in thread

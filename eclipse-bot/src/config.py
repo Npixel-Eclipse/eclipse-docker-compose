@@ -22,8 +22,18 @@ class Settings(BaseSettings):
     openrouter_api_key: str
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
     
+    # Persistence Configuration
+    persistence_db_path: str = "/data4/db/eclipse_bot.db"
+    persistence_fallback_path: str = "/tmp/db/eclipse_bot.db"
+    
     # Models
     default_model: str = "moonshotai/kimi-k2.5" 
+    
+    # OpenSearch Configuration
+    opensearch_url: str = ""
+    opensearch_username: str = ""
+    opensearch_password: str = ""
+    opensearch_index_pattern: str = "fluent-bit-*"
 # Default OpenRouter model
     main_agent_model: str = "" # Fallback to default_model in code
     subagent_model: str = ""   # Fallback to default_model in code
