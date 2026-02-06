@@ -153,15 +153,36 @@ async def code_review(cl: str) -> str:
             logger.error(f"Agent {agent_name} failed: {e}")
             return f"*🤖 {agent_name}*\n❌ Error: {str(e)}"
 
-    # Run all agents
+    # Run all agents with safety (Timeout & Exception Isolation)
     tasks = [run_single_agent(i, a) for i, a in enumerate(agents_to_run)]
-    results = await asyncio.gather(*tasks)
+    
+    try:
+        # Global Timeout: 5 minutes max for all reviews
+        # return_exceptions=True ensures one crash doesn't kill others
+        results = await asyncio.wait_for(
+            asyncio.gather(*tasks, return_exceptions=True), 
+            timeout=300
+        )
+    except asyncio.TimeoutError:
+        logger.error(f"Ralph Loop timed out for CL {cl}")
+        results = [f"⚠️ Timeout: {a['name']} analysis took too long." for a in agents_to_run]
+    except Exception as e:
+        logger.critical(f"Ralph Loop Critical Failure: {e}")
+        return f"Critical System Error during review: {e}"
+
+    # Process results (Handle exceptions from gather)
+    clean_results = []
+    for r in results:
+        if isinstance(r, Exception):
+            clean_results.append(f"❌ Internal Agent Error: {str(r)}")
+        else:
+            clean_results.append(str(r))
     
     # Log results for debugging
-    logger.info(f"Sub-agent results: {results}")
+    logger.info(f"Sub-agent results: {clean_results}")
 
     # 5. Final Consolidation
-    consolidated_report = "\n\n".join(results)
+    consolidated_report = "\n\n".join(clean_results)
     logger.info(f"Final Report Length: {len(consolidated_report)}")
     
     await execute_update_checklist(

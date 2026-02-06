@@ -11,6 +11,7 @@ from src.core.context import get_context
 from src.core.dispatcher import handle_event_trigger
 # Import API Router
 from src.api.routes import router as api_router
+from src.common.enums import TriggerType
 
 # Configure logging
 logging.basicConfig(
@@ -36,8 +37,6 @@ async def lifespan(app: FastAPI):
     )
     ctx.p4 = PerforceClient()
     
-from src.common.enums import TriggerType
-
     # Slack Event Registration
     @ctx.slack.on_mention
     async def handle_mention(event: dict, say):

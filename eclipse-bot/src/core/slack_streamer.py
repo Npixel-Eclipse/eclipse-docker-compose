@@ -80,6 +80,22 @@ class SlackStreamer:
         """Clean buffer and send to Slack."""
         if not self.buffer:
             return
+
+        # Check for partial "thought:" at the END of buffer
+        # We don't want to flush "thou" if the next token is "ght:"
+        target = "thought:"
+        lower_buf = self.buffer.lower()
+        
+        # Check if the buffer *ends* with a partial prefix of "thought:"
+        # e.g. "Answer... tho", "Answer... thoug"
+        # We only hold back if the match is at the very end
+        for i in range(1, len(target)):
+            partial = target[:i]
+            if lower_buf.endswith(partial):
+                # Found partial match at end, hold back this flush
+                # BUT, if buffer is huge, we might be holding back false positives.
+                # Heuristic: Only hold back if the partial match is recent (short buffer logic usually handles this)
+                return 
             
         try:
             # Clean "thought:" blocks

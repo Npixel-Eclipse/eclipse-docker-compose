@@ -14,6 +14,17 @@ async def detect_persona(trigger_type: TriggerType) -> PersonaType:
         return PersonaType.AUTOMATION
     return PersonaType.GENERAL
 
+def create_event_payload(channel: str, text: str, user: str = None, ts: str = None, thread_ts: str = None, team: str = None) -> dict:
+    """Standardize event payload creation for API/Test triggers."""
+    return {
+        "channel": channel,
+        "text": text,
+        "user": user,
+        "ts": ts,
+        "thread_ts": thread_ts,
+        "team": team
+    }
+
 async def handle_event_trigger(event: dict, say, trigger_type: TriggerType = TriggerType.MENTION):
     """Unified handler that instantiates a dynamic agent based on context."""
     settings = get_settings()
@@ -100,5 +111,11 @@ async def handle_event_trigger(event: dict, say, trigger_type: TriggerType = Tri
     except Exception as e:
         logger.error(f"Error during agent trigger: {e}")
         error_text = f"❌ 에이전트 실행 중 오류가 발생했습니다: {str(e)}"
+        # Determine where to reply
+        # Use status_anchor (thread_ts or msg_ts) to reply in thread
         reply_ts = status_anchor or msg_ts
-        await ctx.slack.send_message(channel, error_text, thread_ts=reply_ts)
+        
+        try:
+            await ctx.slack.send_message(channel, error_text, thread_ts=reply_ts)
+        except Exception as send_err:
+            logger.error(f"Failed to send error message to Slack: {send_err}")

@@ -22,15 +22,16 @@ async def trigger_workflow(req: TriggerRequest, background_tasks: BackgroundTask
     ctx = get_context()
     
     # Construct a mock event object compatible with handle_event_trigger
-    # We need to ensure 'text' contains the instruction
-    mock_event = {
-        "channel": req.channel,
-        "text": f"{req.summary}\n{req.description or ''}",
-        "user": req.context.get("user_id", "API_TRIGGER"),
-        "ts": req.context.get("ts", None),
-        "thread_ts": req.context.get("thread_ts", None),
-        "team": req.context.get("team_id", None)
-    }
+    from src.core.dispatcher import create_event_payload
+    
+    mock_event = create_event_payload(
+        channel=req.channel,
+        text=f"{req.summary}\n{req.description or ''}",
+        user=req.context.get("user_id", "API_TRIGGER"),
+        ts=req.context.get("ts"),
+        thread_ts=req.context.get("thread_ts"),
+        team=req.context.get("team_id")
+    )
     
     # Wrapper to inject context before running
     # Note: handle_event_trigger sets context internally, so we just call it.
