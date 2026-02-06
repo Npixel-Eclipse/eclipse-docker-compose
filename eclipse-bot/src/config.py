@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     opensearch_url: str = ""
     opensearch_username: str = ""
     opensearch_password: str = ""
-    opensearch_index_pattern: str = "fluent-bit-*"
+    opensearch_index_pattern: str = "logstash-*"
 # Default OpenRouter model
     main_agent_model: str = "" # Fallback to default_model in code
     subagent_model: str = ""   # Fallback to default_model in code
