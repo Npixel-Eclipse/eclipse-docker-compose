@@ -47,7 +47,7 @@ async def search_logs(query: str, time_range: str = "1h", limit: int = 20) -> st
     Use this tool to investigate errors, check system status, or trace transaction IDs.
     
     Args:
-        query: Lucene query string (e.g., 'level:ERROR AND service:login', 'trace_id:abc-123').
+        query: Lucene query string (e.g., 'level:ERROR AND service:login', 'kubernetes.host:ip-10-*').
         time_range: Lookback period. Supported values: '15m', '1h', '6h', '24h', '7d'.
         limit: Maximum number of log entries to return (default 20, max 50).
     """
@@ -113,13 +113,15 @@ async def search_logs(query: str, time_range: str = "1h", limit: int = 20) -> st
             ts = source.get("@timestamp", "N/A")
             level = source.get("level", "INFO")
             msg = source.get("log", source.get("message", ""))
-            service = source.get("kubernetes", {}).get("labels", {}).get("app", "unknown")
+            k8s = source.get("kubernetes", {})
+            service = k8s.get("labels", {}).get("app", "unknown")
+            host = k8s.get("host", "unknown-host")
             
             # Truncate long messages
             if len(msg) > 300:
                 msg = msg[:300] + "..."
                 
-            result_lines.append(f"[{ts}] {level} ({service}): {msg}")
+            result_lines.append(f"[{ts}] {level} (@{host} / {service}): {msg}")
             
         return "\n".join(result_lines)
         
