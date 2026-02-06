@@ -23,6 +23,9 @@ class CustomSqliteSaver(BaseCheckpointSaver):
 
     def _setup(self):
         with self.conn:
+            # Enable WAL mode for better concurrency (Readers don't block Writers)
+            self.conn.execute("PRAGMA journal_mode=WAL;")
+            
             self.conn.execute(
                 """
                 CREATE TABLE IF NOT EXISTS checkpoints (
