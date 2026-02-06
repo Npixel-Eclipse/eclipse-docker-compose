@@ -16,7 +16,7 @@ from src.config import get_settings
 from src.agents.subagents import get_subagents
 from src.agents.prompts import PERSONA_CONFIGS
 from src.agents.utils import get_chat_model
-from src.tools.p4_tools import ALL_P4_TOOLS
+from src.tools.p4_tools import READ_ONLY_P4_TOOLS
 from src.tools.slack_tools import ALL_SLACK_TOOLS
 from src.tools.opensearch_tools import ALL_OPENSEARCH_TOOLS
 from src.skills.code_review import code_review
@@ -89,7 +89,7 @@ def create_agent(persona_type: str = "general"):
         model=model_instance,
         system_prompt=cfg["prompt"],
         subagents=get_subagents(),
-        tools=ALL_P4_TOOLS + ALL_SLACK_TOOLS + ALL_OPENSEARCH_TOOLS + [code_review],
+        tools=READ_ONLY_P4_TOOLS + ALL_SLACK_TOOLS + ALL_OPENSEARCH_TOOLS + [code_review],
         backend=StateBackend,
         checkpointer=checkpointer_instance,
     )

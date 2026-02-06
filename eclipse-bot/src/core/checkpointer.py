@@ -7,6 +7,7 @@ It avoids dependency issues with missing 'langgraph.checkpoint.sqlite'.
 
 import pickle
 import sqlite3
+import asyncio
 from typing import Any, Optional, Iterator, AsyncIterator
 from contextlib import contextmanager
 

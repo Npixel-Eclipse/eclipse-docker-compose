@@ -262,8 +262,12 @@ async def p4_fstat(path: str) -> str:
         return f"Error: {e}"
 
 # Export all P4 tools
-ALL_P4_TOOLS = [
+# Export all P4 tools
+READ_ONLY_P4_TOOLS = [
     p4_describe, p4_annotate, p4_filelog, p4_print, 
-    p4_grep, p4_sync, p4_diff, p4_revert, 
-    p4_edit, p4_status, p4_changes, p4_fstat,
+    p4_grep, p4_diff, p4_status, p4_changes, p4_fstat,
+]
+
+ALL_P4_TOOLS = READ_ONLY_P4_TOOLS + [
+    p4_sync, p4_revert, p4_edit
 ]
